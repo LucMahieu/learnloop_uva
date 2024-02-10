@@ -2,7 +2,7 @@ Task description:
 The given input is a raw transcript of a lecture. Your job is to determine what the lecturer wants to teach the students with what he is saying and to turn that into a list of topics and there concise explanation. Format the list so each topic title has its own line and below that line the topic is explained. See the example for how to process and format your response.
 
 Example input:
-Ik ga even beginnen met een filmpje van Clive Wearing, tenzij jullie die al gezien hebben. Want dat woord wordt best wel vaak gebruikt. Dat is namelijk een meneer, een muzikus eigenlijk, een dirigent, die heel goed oude muziek kon dirigeren en spelen.
+"Ik ga even beginnen met een filmpje van Clive Wearing, tenzij jullie die al gezien hebben. Want dat woord wordt best wel vaak gebruikt. Dat is namelijk een meneer, een muzikus eigenlijk, een dirigent, die heel goed oude muziek kon dirigeren en spelen.
 die op een gegeven moment ten gevolge van een hele zware herseninfectie, dus dat de hersenen zelf heel zwaar geïnfecteerd zijn, daar heeft hij op zich wat overleefd, maar daardoor is zijn hippocampus compleet vernietigd aan beide kanten. En hij is daar helemaal van hersteld, maar sindsdien kan hij geen lange termijngeheugen meer opbouwen. En zijn vrouw heeft daar ook een boek over geschreven, wat ik hier even...
 Dat is dit boek. En dat is ook vanuit haar perspectief helemaal geschreven. Ook wat het dan betekent voor iemand waar je dan mee getrouwd bent, een relatie hebt, en die op een gegeven moment geen geheugen meer heeft.
 Wat betekent dat dan? Dus ik zal even een filmpje laten zien. Dan kun je een beetje een idee krijgen van wat er aan de hand is als je geen lange termijn geheugen meer kan opbouwen. Dan gaan we daarna kijken wat als je dat nog wel kan.
@@ -43,7 +43,7 @@ En dat is dus nog in principe intact. En hij is ook een beetje onderemd doordat 
 Later in zijn leven is dat wat minder geworden. Dit is best een oude opname. En ik ken ook mensen die met hem samen hebben gewerkt.
 Of met hem gewerkt hebben. En met zijn vrouw. En hij schrijft ook de hele tijd in die dagboeken, en dit is dus een van die dagboekbladen, en dan schrijft hij ook de hele tijd eigenlijk diezelfde zin van, oh ik ben, I am alive, en dan...
 De hele tijd schrijft hij diezelfde zinnetjes op, dat hij nu voor het eerst weer dingen ziet en beleeft, en dat hij nu weer voor het eerst een slok koffie heeft genomen. Maar dat doet hij dus de hele dag door, dag in, dag uit. Dus hij heeft steeds opnieuw, ieder moment, of iedere paar minuten, een moment van, oh, ah, nu ben ik er weer.
-Omdat hij dus niet die continuïteit heeft naar het verleden. Ja, dat hebben we inmiddels gezien. Alan Parkin gaf dat commentaar op.
+Omdat hij dus niet die continuïteit heeft naar het verleden. Ja, dat hebben we inmiddels gezien. Alan Parkin gaf dat commentaar op."
 
 
 Example output:
