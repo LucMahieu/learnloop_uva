@@ -121,8 +121,6 @@ class Module:
 
 
 if __name__ == "__main__":
-    # transcript_path = "./raw_materials/lecture_1_transcript.txt"
-    # transcript_path = "./raw_materials/test_slide_chemie.txt"
     module_name = "test_slide_transcript_chemie"
     transcript_path = f"./raw_materials/{module_name}.txt"
     glossary_path = f"./glossaries/{module_name}.txt"

@@ -9,16 +9,18 @@ from openai import OpenAI
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
+# Create openai instance
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+client = OpenAI()
+
+# Connect database
 mongo_host = os.getenv('MONGO_HOST')
 mongo_username = os.getenv('MONGO_USERNAME')
 mongo_password = os.getenv('MONGO_PASSWORD')
 
 db_client = database.init_connection(host=mongo_host, username=mongo_username, password=mongo_password)
 db = db_client.LearnLoop
-
-client = OpenAI()
 
 
 def upload_progress():
@@ -93,46 +95,6 @@ def score_to_percentage():
         return  # Early exit on error
     
     return score_percentage
-
-
-# def render_feedback():
-#     """Renders the feedback box with the score and feedback."""
-#     # Calculate the score percentage
-#     score_percentage = score_to_percentage()
-
-#     # Determine color of box based on score percentage
-#     if score_percentage > 75:
-#         color = 'rgba(0, 128, 0, 0.2)'  # Green
-#     elif score_percentage > 49:
-#         color = 'rgba(255, 165, 0, 0.2)'  # Orange
-#     else:
-#         color = 'rgba(255, 0, 0, 0.2)'  # Red
-
-#     # Display disclaimer
-#     disclaimer_text = "Let op: de scores worden automatisch gegenereerd en kunnen soms afwijken."
-
-#     # Generate feedback paragraphs
-#     disclaimer = f"<p style='font-size: 17px; margin 10px 0;'>{disclaimer_text}</p>"
-
-#     feedback_html = ''.join(
-#         f"<p style='font-size: 17px; margin: 10px 0;'>{line}</p>" for line in st.session_state.feedback if
-#         line.strip())
-
-#     result_html = f"""
-#     <div style='background-color: {color}; padding: 25px; margin-bottom: 20px; border-radius: 8px;'>
-#         {disclaimer}
-#         <h1 style='font-size: 30px; margin-bottom: 15px;'>{st.session_state.score}</h1>
-#         {feedback_html}
-#     </div>
-#     """
-
-#     st.markdown(result_html, unsafe_allow_html=True)
-
-
-# def make_scores_bold(text):
-#     """Wraps score patterns in the text with strong tags."""
-#     # This regex looks for patterns like **(0/1 punten)** or **(1/1 punten)**
-#     return re.sub(r'(\*\*(\(\d+/\d+ punten\))\*\*)', r'<strong>\2</strong>', text)
 
 
 def render_feedback():
