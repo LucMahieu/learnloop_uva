@@ -8,12 +8,11 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class Module:
-    def __init__(self, module_name, transcript_path, glossary_path, content_path, batch_size):
+    def __init__(self, module_name, transcript_path, glossary_path, content_path):
         self.module_name = module_name
         self.transcript_path = transcript_path
         self.glossary_path = glossary_path
         self.content_path = content_path
-        self.batch_size = batch_size
 
 
     def openai_call(self, system_message, user_message, formatting="text", model='gpt-3.5-turbo-1106', temp=0.0):
@@ -27,15 +26,15 @@ class Module:
         return response.choices[0].message.content
 
 
-    def batch_generator(self, glossary):
+    def batch_generator(self, text, batch_size):
         lines = ""
         # Strip all blank lines from the glossary
-        glossary = "\n".join([line for line in glossary.split("\n") if line.strip() != ""])
+        text = "\n".join([line for line in text.split("\n") if line.strip() != ""])
 
-        glossary_lines = glossary.split("\n")
-        for i, line in enumerate(glossary_lines):
+        text_lines = text.split("\n")
+        for i, line in enumerate(text_lines):
             lines += line
-            if (i + 1) % self.batch_size == 0 and i != 0: # i plus 1 because of zero indexing
+            if (i + 1) % batch_size == 0 and i != 0: # i plus 1 because of zero indexing
                 yield lines
                 lines = ""
 
@@ -71,8 +70,8 @@ class Module:
 
     def generate_glossary(self):
         """Generates a glossary of topics from the lecture transcript and stores 
-        them as attribute for further processing."""
-        print("Generating glossary")
+        them in a text file for further processing."""
+
         with open("./prompts/transcript_to_glossary.txt", "r") as f:
             system_message = f.read()
         
@@ -80,17 +79,19 @@ class Module:
         with open(f"{self.transcript_path}", "r") as f:
             transcript = f.read()
         
-        user_message = f"""
-            Input:
-            {transcript}
-            
-            Output:
-        """
-        response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
+        for i, batch in enumerate(self.batch_generator(transcript, batch_size=10)):
+            print(f"Generating glossary {i + 1}")
+            user_message = f"""
+                Input:
+                {batch}
+                
+                Output:
+            """
+            response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
 
-        # Export the glossary to a file
-        with open(self.glossary_path, "w") as f:
-            f.write(response)
+            # Append the new glossary to the existing glossary
+            with open(self.glossary_path, "a") as f:
+                f.write(response)
 
 
     def generate_content(self):
@@ -100,7 +101,7 @@ class Module:
         with open(f"{self.glossary_path}", "r") as f:
             glossary = f.read()
 
-        for i, batch in enumerate(self.batch_generator(glossary)):
+        for i, batch in enumerate(self.batch_generator(glossary, batch_size=2)):
             print(f"Generating content for batch {i + 1}")
             # Load instructions for content generator
             with open("./prompts/generate_content.txt", "r") as f:
@@ -121,11 +122,11 @@ class Module:
 
 
 if __name__ == "__main__":
-    module_name = "test_slide_transcript_chemie"
+    module_name = "bio-organische_chemie_college_2"
     transcript_path = f"./raw_materials/{module_name}.txt"
     glossary_path = f"./glossaries/{module_name}.txt"
     content_path = f"./modules/{module_name}.json"
 
-    new_module = Module(module_name, transcript_path, glossary_path, content_path, batch_size=2)
+    new_module = Module(module_name, transcript_path, glossary_path, content_path)
     new_module.generate_glossary()
     new_module.generate_content()

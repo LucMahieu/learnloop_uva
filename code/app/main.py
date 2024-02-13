@@ -19,7 +19,13 @@ mongo_host = os.getenv('MONGO_HOST')
 mongo_username = os.getenv('MONGO_USERNAME')
 mongo_password = os.getenv('MONGO_PASSWORD')
 
-db_client = database.init_connection(host=mongo_host, username=mongo_username, password=mongo_password)
+try:
+    db_client = database.init_connection(host=mongo_host, username=mongo_username, password=mongo_password)
+    print('Succesfully initialised db connection')
+except Exception as e:
+    print(f"Kan db_client niet initialiseren: {e}")
+    db_client = None
+
 db = db_client.LearnLoop
 
 
@@ -597,7 +603,8 @@ def initialise_database():
 
 def determine_if_to_initialise_database():
     """
-    Determine if currently testing and if so, reset db when reloading webapp.
+    Determine if currently testing, if the progress is saved, or if all modules are included
+    and if so, reset db when reloading webapp.
     """
     user = db.users.find_one({"username": st.session_state.username})
 
@@ -608,9 +615,16 @@ def determine_if_to_initialise_database():
         if st.session_state.reset_db:
             st.session_state.reset_db = False
             initialise_database()
-    else:
-        if "progress" not in user:
+            return
+            
+    if "progress" not in user:
             initialise_database()
+            return
+    
+    for module in st.session_state.modules:
+        if module not in user["progress"]:
+            initialise_database()
+            return
 
 
 if __name__ == "__main__":

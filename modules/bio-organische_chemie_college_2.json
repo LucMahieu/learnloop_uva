@@ -1,0 +1,245 @@
+{
+    "module_name": "bio-organische_chemie_college_2",
+    "segments": [
+        {
+            "type": "info",
+            "title": "Toegang tot Lesmateriaal",
+            "text": "De slides van de colleges zijn beschikbaar op Canvas onder de modulesectie, afgekort met PPT voor PowerPoint. De presentaties zijn beschikbaar voor studenten om te downloaden en te bestuderen."
+        },
+        {
+            "type": "question",
+            "question": "Waar vind je de slides van de colleges en hoe zijn ze beschikbaar gesteld voor de studenten?",
+            "answer": "De slides van de colleges zijn beschikbaar op Canvas onder de modulesectie (1 point), afgekort met PPT voor PowerPoint (1 point). Ze zijn beschikbaar om te downloaden (1 point) en te bestuderen (1 point) voor studenten."
+        },
+        {
+            "type": "info",
+            "title": "Invloed van Taal op Onderwijs",
+            "text": "De invloed van taal op onderwijs wordt ge\u00efllustreerd door het fenomeen waarbij sommige onderwijsinstellingen terugkeren naar het Nederlands voor hun studies, na eerder overwogen te hebben alles in het Engels te onderwijzen. Dit heeft consequenties voor de presentatie van lesmateriaal en de voorkeur van docenten met betrekking tot de taal van instructie."
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00efnvloedt de keuze van instructietaal het onderwijs?",
+            "answer": "De keuze van instructietaal be\u00efnvloedt de manier waarop lesmateriaal wordt gepresenteerd (1 point) en kan de voorkeur van docenten voor een bepaalde taal van instructie weerspiegelen, zoals de keuze tussen Nederlands en Engels (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Belang van Functionele Groepen in de Chemie",
+            "text": "Functionele groepen zijn specifieke groeperingen van atomen binnen moleculen die de chemische eigenschappen en reacties van deze moleculen be\u00efnvloeden. Ze zijn vooral belangrijk omdat ze bepalen hoe moleculen met elkaar reageren. In de context van aminozuren zijn de functionele groepen van de 20 zijketens die door DNA en RNA gecodeerd worden, cruciaal voor de structuur en functie van eiwitten."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn functionele groepen belangrijk in de chemie?",
+            "answer": "Functionele groepen zijn belangrijk omdat ze specifieke groeperingen van atomen zijn (1 point) die de chemische eigenschappen en reacties van moleculen be\u00efnvloeden (1 point), en bepalend zijn voor hoe moleculen met elkaar reageren (1 point), vooral in aminozuren en eiwitten (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Betrokkenheid van de Natuur bij Selectie van Functionele Groepen",
+            "text": "De natuur heeft gedurende 3,8 miljard jaar functionele groepen geselecteerd die essentieel zijn voor alle leven. Deze functionele groepen zijn specifieke groeperingen van atomen binnen moleculen die de chemische reacties en eigenschappen van die moleculen bepalen."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn functionele groepen belangrijk in de natuur?",
+            "answer": "Functionele groepen zijn belangrijk omdat ze essentieel zijn voor alle leven (1 point) en zijn geselecteerd door de natuur gedurende 3,8 miljard jaar (1 point), waarbij ze specifieke chemische reacties en eigenschappen van moleculen bepalen (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Zuurbasetheorie in de Context van Psychobiologie",
+            "text": "De zuurbasetheorie beschrijft hoe moleculen zich gedragen bij verschillende pH-waarden, wat van bijzonder belang is in de psychobiologie omdat de pH van de menselijke hersenen rond de waarde van 7 ligt. Een goede kennis van deze theorie helpt te begrijpen hoe chemische processen in de hersenen be\u00efnvloed worden door veranderingen in zuurheid of alkaliteit."
+        },
+        {
+            "type": "question",
+            "question": "Waarom is de zuurbasetheorie belangrijk in de context van psychobiologie?",
+            "answer": "De zuurbasetheorie is belangrijk in psychobiologie omdat het helpt te begrijpen (1 punt) hoe moleculen zich gedragen bij een pH van 7 (1 punt), wat relevant is voor de hersenen aangezien hun pH rond deze waarde ligt (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Herkennen van Functionele Groepen",
+            "text": "Het is essentieel voor studenten om specifieke functionele groepen te kunnen herkennen en te weten hoe deze eruitzien. Voorbeelden van functionele groepen zijn carboxylzuren, amides, alcoholen en amines. Dit herkennen is belangrijk om de eigenschappen en reacties van moleculen te begrijpen, zelfs als de namen van complexe moleculen vaak niet systematisch zijn."
+        },
+        {
+            "type": "question",
+            "question": "Waarom is het belangrijk voor studenten om functionele groepen te kunnen herkennen?",
+            "answer": "Het herkennen van functionele groepen is belangrijk om de eigenschappen en reacties van moleculen te begrijpen (1 point), en dit is belangrijk ondanks dat de namen van complexe moleculen vaak niet systematisch zijn (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Gebruik van Moderne Zoekmethoden voor Moleculen",
+            "text": "Moderne zoekmethoden, zoals het tekenen van structuren en het gebruik van internet, hebben de behoefte aan het kennen van systematische namen voor moleculen verminderd."
+        },
+        {
+            "type": "question",
+            "question": "Hoe hebben moderne zoekmethoden de behoefte aan het kennen van systematische namen voor moleculen be\u00efnvloed?",
+            "answer": "Moderne zoekmethoden (1 point) hebben de behoefte aan het kennen van systematische namen voor moleculen verminderd (1 point), door het mogelijk maken van het zoeken via tekenen van structuren (1 point) en het gebruik van internet (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Belang van Alcoholgroepen",
+            "text": "Alcoholgroepen, ook bekend als hydroxylgroepen, zijn cruciaal in de levenswetenschappen vanwege hun polariteit en het vermogen om waterstofbruggen te vormen. Dit draagt bij aan de wateroplosbaarheid van moleculen, wat essentieel is voor biologische processen."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn alcoholgroepen belangrijk in de levenswetenschappen?",
+            "answer": "Alcoholgroepen zijn belangrijk vanwege hun polariteit (1 punt) en hun vermogen om waterstofbruggen te vormen (1 punt), wat bijdraagt aan de wateroplosbaarheid van moleculen (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Organisatie van het Collegemateriaal",
+            "text": "De presentatieslides van de colleges worden beschikbaar gesteld op het online platform Canvas onder de sectie 'Modules', met een afkorting PPT voor PowerPoint. De docent benadrukt dat zowel de slides van het eerste college als de huidige presentatie al zijn ge\u00fcpload voor studenten om te raadplegen."
+        },
+        {
+            "type": "question",
+            "question": "Waar kun je de presentatieslides van de colleges vinden?",
+            "answer": "De presentatieslides kunnen gevonden worden op Canvas onder de sectie 'Modules' (1 point) en zijn aangeduid met de afkorting PPT voor PowerPoint (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Taalkeuze voor Studiemateriaal",
+            "text": "De taalkeuze voor studiemateriaal verwijst naar de beslissing over welke taal gebruikt wordt voor onderwijsmateriaal. Er is een trend ge\u00efdentificeerd waarbij, na een periode waarin Engels dominant leek te worden, studies nu soms terugschakelen naar het Nederlands. Docenten zoals beschreven, geven de voorkeur aan lesgeven in hun moedertaal vanwege een uitgebreider vocabulaire en mogelijk een groter gemak in communicatie."
+        },
+        {
+            "type": "question",
+            "question": "Wat houdt de trend in taalkeuze voor studiemateriaal in die recent is waargenomen?",
+            "answer": "De recent waargenomen trend in taalkeuze voor studiemateriaal is dat na een periode waarin Engels dominant leek (1 point), sommige studies nu terugschakelen naar het Nederlands (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Voorbereiding op het College",
+            "text": "Voorbereiding op het College verwijst naar de acties die studenten ondernemen om zich klaar te maken voor de lessen. Dit kan het bestuderen van materiaal omvatten, zoals een reader over hybridisatie, en actieve deelname aan werkcolleges. Positieve feedback van docenten over de werkcolleges kan een indicatie zijn van goede studentbetrokkenheid."
+        },
+        {
+            "type": "question",
+            "question": "Wat houdt 'Voorbereiding op het College' in?",
+            "answer": "Voorbereiding op het College omvat studieactiviteiten zoals het bestuderen van een reader (1 point) en actieve deelname aan werkcolleges (1 point), wat een positieve betrokkenheid van de studenten aangeeft (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Functionele Groepen in de Chemie",
+            "text": "Functionele groepen in de chemie zijn specifieke groeperingen van atomen binnen moleculen die bepaalde reactieve eigenschappen aan die moleculen verlenen. Deze groepen zijn cruciaal voor het bepalen van de chemische gedragingen van de moleculen. In de context van aminozuren worden 20 verschillende zijketens gecodeerd door DNA en RNA, welke essentieel zijn voor leven, aangezien ze zijn geoptimaliseerd door miljarden jaren van natuurlijke selectie."
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn functionele groepen en waarom zijn ze belangrijk in de chemie?",
+            "answer": "Functionele groepen zijn specifieke groeperingen van atomen binnen moleculen (1 point) die bepaalde reactieve eigenschappen aan die moleculen verlenen (1 point). Ze zijn belangrijk omdat ze de chemische gedragingen van moleculen bepalen (1 point) en essentieel zijn voor leven, zoals aangetoond door de geoptimaliseerde zijketens van aminozuren door natuurlijke selectie (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Theoretische Chemie",
+            "text": "Theoretische Chemie is een deelgebied van de chemie dat zich bezighoudt met de theoretische grondslagen van chemische systemen en processen. Het maakt vaak gebruik van wiskunde en fysica om chemische fenomenen te verklaren en te voorspellen."
+        },
+        {
+            "type": "question",
+            "question": "Wat is Theoretische Chemie?",
+            "answer": "Theoretische Chemie is een deelgebied van de chemie (1 point) dat zich richt op de theoretische grondslagen (1 point) en vaak wiskunde en fysica gebruikt (1 point) om chemische fenomenen te verklaren en te voorspellen (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Organisatie van het Collegemateriaal",
+            "text": "De organisatie van het collegemateriaal verwijst naar de manier waarop lesstof en lesmaterialen worden gestructureerd en gepresenteerd aan de studenten. Een goede organisatie kan helpen om de lesstof beter te begrijpen en te onthouden."
+        },
+        {
+            "type": "question",
+            "question": "Wat wordt bedoeld met de organisatie van het collegemateriaal?",
+            "answer": "De organisatie van het collegemateriaal verwijst naar de structurering en presentatie van lesstof en lesmaterialen (1 point), wat helpt bij het begrijpen en onthouden van de lesstof (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "De presentatieslides op Canvas",
+            "text": "De presentatieslides van de colleges worden beschikbaar gesteld op het online platform Canvas onder de sectie 'Modules'. Ze worden aangeduid met de afkorting PPT, wat staat voor PowerPoint. De docent heeft aangegeven dat de slides van zowel het eerste college als de huidige presentatie al beschikbaar zijn gemaakt voor studenten om te gebruiken als studiemateriaal."
+        },
+        {
+            "type": "question",
+            "question": "Waar kun je de presentatieslides van de colleges vinden en hoe zijn ze aangeduid?",
+            "answer": "De presentatieslides zijn te vinden op Canvas onder de sectie 'Modules' (1 point) en zijn aangeduid met de afkorting PPT, wat staat voor PowerPoint (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Taalkeuze voor Studiemateriaal",
+            "text": "Bij het kiezen van studiemateriaal is het belangrijk om te overwegen in welke taal het materiaal wordt aangeboden. Dit kan invloed hebben op de toegankelijkheid en het begrip van de stof voor studenten met verschillende taalachtergronden."
+        },
+        {
+            "type": "question",
+            "question": "Waarom is de taalkeuze voor studiemateriaal belangrijk?",
+            "answer": "De taalkeuze is belangrijk omdat het invloed heeft op de toegankelijkheid en het begrip van de stof (1 point) voor studenten met verschillende taalachtergronden (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Reflectie op taalkeuze in studiemateriaal",
+            "text": "De docent reflecteert op de taalkeuze van het studiemateriaal en merkt op dat er, ondanks eerdere verwachtingen van een verschuiving naar het Engels, een trend is waarbij studies weer terugschakelen naar het Nederlands. De docent geeft de voorkeur aan lesgeven in het Nederlands en erkent dat zijn vocabulaire in het Nederlands uitgebreider is."
+        },
+        {
+            "type": "question",
+            "question": "Waarom heeft de docent een voorkeur voor het lesgeven in het Nederlands?",
+            "answer": "De docent heeft een voorkeur voor lesgeven in het Nederlands omdat zijn vocabulaire in die taal groter is (1 point) en hij vindt het prettiger (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Functionele Groepen in de Chemie",
+            "text": "Functionele groepen zijn specifieke groeperingen van atomen binnen moleculen die verantwoordelijk zijn voor de karakteristieke chemische reacties van die moleculen."
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn functionele groepen in de chemie?",
+            "answer": "Functionele groepen zijn specifieke groeperingen van atomen (1 point) binnen moleculen die verantwoordelijk zijn voor de karakteristieke chemische reacties (1 point) van die moleculen."
+        },
+        {
+            "type": "info",
+            "title": "Functionele groepen in de chemie",
+            "text": "Functionele groepen zijn specifieke groeperingen van atomen binnen moleculen die hun chemische reacties bepalen. Deze groepen zijn verantwoordelijk voor de essenti\u00eble functies die moleculen kunnen uitvoeren."
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn functionele groepen in de chemie?",
+            "answer": "Functionele groepen zijn specifieke groeperingen van atomen binnen moleculen (1 point) die de chemische reacties van die moleculen bepalen (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Zijketens van aminozuren gecodeerd door DNA en RNA",
+            "text": "De 20 zijketens van aminozuren die gecodeerd worden door DNA en RNA zijn cruciaal voor eiwitstructuren. Ze bepalen de unieke eigenschappen van eiwitten en zijn geoptimaliseerd door natuurlijke selectie gedurende 3,8 miljard jaar."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn de zijketens van aminozuren belangrijk?",
+            "answer": "De zijketens van aminozuren zijn belangrijk omdat ze de unieke eigenschappen van eiwitten bepalen (1 point) en zijn geoptimaliseerd door natuurlijke selectie gedurende 3,8 miljard jaar (1 point), essentieel voor het leven (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Theoretische Chemie",
+            "text": "Theoretische chemie is een discipline binnen de chemie die zich bezighoudt met het gebruik van wiskunde en natuurkunde om de principes achter chemische processen en systemen te begrijpen."
+        },
+        {
+            "type": "question",
+            "question": "Wat is theoretische chemie?",
+            "answer": "Theoretische chemie is een discipline binnen de chemie (1 point) die wiskunde en natuurkunde gebruikt (1 point) om de principes achter chemische processen en systemen te begrijpen (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Zuurbasetheorie en Relevantie voor Psychobiologie",
+            "text": "De zuurbasetheorie is cruciaal voor studenten psychobiologie, omdat het inzicht biedt in het gedrag van zure en basische moleculen bij een pH van 7, de pH-waarde van de hersenen. Dit is belangrijk voor het begrijpen van de interacties van vele geest-be\u00efnvloedende stoffen die bij deze pH-waarde functioneren."
+        },
+        {
+            "type": "question",
+            "question": "Waarom is de zuurbasetheorie belangrijk voor studenten psychobiologie?",
+            "answer": "De zuurbasetheorie is belangrijk voor studenten psychobiologie omdat het inzicht geeft in het gedrag van zure en basische moleculen bij een pH van 7 (1 point), wat de pH-waarde van de hersenen is (1 point), en essentieel is voor het begrijpen van interacties van geest-be\u00efnvloedende stoffen (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Functionele Groepen in Moleculen",
+            "text": "Voor psychobiologen is het belangrijk om bekend te zijn met functionele groepen in moleculen, zoals carboxylzuren, amiden, alcoholen en aminen. Het herkennen van deze structuren is belangrijker dan het memoriseren van de systematische namen van complexe moleculen, die vaak niet eens een systematische naam hebben vanwege hun complexiteit."
+        },
+        {
+            "type": "question",
+            "question": "Waarom is het belangrijk voor psychobiologen om functionele groepen in moleculen te herkennen?",
+            "answer": "Het herkennen van functionele groepen zoals carboxylzuren, amiden, alcoholen en aminen is belangrijk (1 point) omdat dit inzicht geeft in de eigenschappen en het gedrag van moleculen (1 point), meer dan het memoriseren van systematische namen van complexe moleculen, die vaak niet eens een systematische naam hebben (1 point)."
+        },
+        {
+            "type": "info",
+            "title": "Complexiteit van Natuurstoffen in Scheikunde",
+            "text": "In het veld van de scheikunde, en meer specifiek bij het werken met natuurstoffen, zijn systematische namen vaak niet toepasbaar vanwege de complexiteit van deze moleculen. Dit illustreert waarom het herkennen van functionele groepen in moleculen relevanter is dan het onthouden van hun systematische namen."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn systematische namen vaak niet toepasbaar bij het werken met natuurstoffen in de scheikunde?",
+            "answer": "Omdat de moleculen vaak te complex zijn (1 point), waardoor het herkennen van functionele groepen (1 point) relevanter is dan het onthouden van hun systematische namen (1 point)."
+        }
+    ]
+}
