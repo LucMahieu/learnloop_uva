@@ -20,7 +20,7 @@ class Module:
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
         ]
-        
+
         response = client.chat.completions.create(model=model, temperature=temp, messages=message, response_format={"type": formatting})
         
         return response.choices[0].message.content
@@ -71,16 +71,17 @@ class Module:
     def generate_glossary(self):
         """Generates a glossary of topics from the lecture transcript and stores 
         them in a text file for further processing."""
+        # Open the transcript file and use it as input for the user message
+        with open(f"{self.transcript_path}", "r") as f:
+            transcript = f.read()
 
         with open("./prompts/transcript_to_glossary.txt", "r") as f:
             system_message = f.read()
         
-        # Open the transcript file and use it as input for the user message
-        with open(f"{self.transcript_path}", "r") as f:
-            transcript = f.read()
-        
-        for i, batch in enumerate(self.batch_generator(transcript, batch_size=10)):
+        for i, batch in enumerate(self.batch_generator(transcript, batch_size=5)):
             print(f"Generating glossary {i + 1}")
+
+
             user_message = f"""
                 Input:
                 {batch}
@@ -89,23 +90,23 @@ class Module:
             """
             response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
 
-            # Append the new glossary to the existing glossary
-            with open(self.glossary_path, "a") as f:
-                f.write(response)
+            self.append_to_txt(response, f"./glossaries/{self.module_name}")
+
 
 
     def generate_content(self):
         """Generates content for the module based on the generated glossary."""
-
         # Load glossary from lecture path txt file
         with open(f"{self.glossary_path}", "r") as f:
             glossary = f.read()
 
+        # Load instructions for content generator
+        with open("./prompts/generate_content.txt", "r") as f:
+            system_message = f.read()
+
         for i, batch in enumerate(self.batch_generator(glossary, batch_size=2)):
             print(f"Generating content for batch {i + 1}")
-            # Load instructions for content generator
-            with open("./prompts/generate_content.txt", "r") as f:
-                system_message = f.read()
+
             
             # Input study materials
             user_message = f""" 
@@ -121,12 +122,69 @@ class Module:
             self.add_response_to_json_file(json_response, export_path=content_path, module_name=self.module_name) #TODO: Change module name to be variable
 
 
+    def read_txt(self, file_path):
+        with open(f"{file_path}.txt", "r") as f:
+            return f.read()
+    
+
+    def append_to_txt(self, string, file_path):
+        """Appends a string to a txt file."""
+        with open(f"{file_path}.txt", "a") as f:
+            f.write(f"\n\n{string}")
+
+
+    def create_user_message(self, input):
+        user_message = f"""
+        Input:
+        {input}
+
+        Output:
+        """
+        return user_message
+    
+
+    def clean_transcript(self):
+        """Removes irrelevant information from the transcript and turns
+        the information into a textbook like format."""
+
+        system_message = self.read_txt("./prompts/clean_transcript")
+        # raw_transcript = self.read_txt(f"./raw_materials/{self.module_name}")
+        raw_transcript = self.read_txt(f"./clean_materials/results/{self.module_name}_v4") #TODO: Make universal
+
+        # Divides the raw transcript into batches because of limited context window of GPT models
+        for i, batch in enumerate(self.batch_generator(raw_transcript, batch_size=10)):
+            print(f"Cleaning transcript for batch {i + 1}")
+
+            user_message = self.create_user_message(batch)
+            response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
+            self.append_to_txt(response, f"./clean_materials/{self.module_name}")
+
+
+    def remove_practical_info_from_transcript(self):
+        """Removes practical information from the transcript and turns
+        the information."""
+
+        system_message = self.read_txt("./prompts/remove_practical_info")
+        raw_transcript = self.read_txt(f"./raw_materials/{self.module_name}")
+
+        # Divides the raw transcript into batches because of limited context window of GPT models
+        for i, batch in enumerate(self.batch_generator(raw_transcript, batch_size=10)):
+            print(f"Removing practical info from transcript for batch {i + 1}")
+
+            user_message = self.create_user_message(batch)
+            response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
+            self.append_to_txt(response, f"./clean_materials/{self.module_name}")
+
+
+
 if __name__ == "__main__":
-    module_name = "bio-organische_chemie_college_2"
-    transcript_path = f"./raw_materials/{module_name}.txt"
+    module_name = "celbio_college_1"
+    transcript_path = f"./clean_materials/{module_name}.txt"
     glossary_path = f"./glossaries/{module_name}.txt"
     content_path = f"./modules/{module_name}.json"
 
     new_module = Module(module_name, transcript_path, glossary_path, content_path)
-    new_module.generate_glossary()
+    # new_module.remove_practical_info_from_transcript()
+    # new_module.clean_transcript()
+    # new_module.generate_glossary()
     new_module.generate_content()

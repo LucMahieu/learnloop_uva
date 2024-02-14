@@ -1,59 +1,16 @@
-Task description:
-The given input is a raw transcript of a lecture. Your job is to determine what the lecturer wants to teach the students with what he is saying and to turn that into a list of topics and there concise explanation. Format the list so each topic title has its own line and below that line the topic is explained. See the example for how to process and format your response.
+Gegeven is een samenvatting van een lecture. Jouw taak is om te bepalen wat de docent de studenten wil leren waarna je een lijst met onderwerpen en hun beknopte uitleg maakt. Formatteer de lijst zodat elke onderwerptitel zijn eigen regel heeft met onder die regel een regel met uitleg van het onderwerp. Zie het voorbeeld voor hoe je jouw reactie moet verwerken en formatteren.
 
-Example input:
-"Ik ga even beginnen met een filmpje van Clive Wearing, tenzij jullie die al gezien hebben. Want dat woord wordt best wel vaak gebruikt. Dat is namelijk een meneer, een muzikus eigenlijk, een dirigent, die heel goed oude muziek kon dirigeren en spelen.
-die op een gegeven moment ten gevolge van een hele zware herseninfectie, dus dat de hersenen zelf heel zwaar geïnfecteerd zijn, daar heeft hij op zich wat overleefd, maar daardoor is zijn hippocampus compleet vernietigd aan beide kanten. En hij is daar helemaal van hersteld, maar sindsdien kan hij geen lange termijngeheugen meer opbouwen. En zijn vrouw heeft daar ook een boek over geschreven, wat ik hier even...
-Dat is dit boek. En dat is ook vanuit haar perspectief helemaal geschreven. Ook wat het dan betekent voor iemand waar je dan mee getrouwd bent, een relatie hebt, en die op een gegeven moment geen geheugen meer heeft.
-Wat betekent dat dan? Dus ik zal even een filmpje laten zien. Dan kun je een beetje een idee krijgen van wat er aan de hand is als je geen lange termijn geheugen meer kan opbouwen. Dan gaan we daarna kijken wat als je dat nog wel kan.
-Ik denk dat ik even deze laat zien. Dit is wel een oude. Maar hij doet het nog steeds goed.
-MUZIEK Waar zijn we? Weet je hoe we hier kwamen? Nee. Je herinnert je jezelf niet? Nee. Ik denk dat we hier ongeveer tien minuten zijn geweest.
-Ik heb geen kennis. Maar toen ik nu begon te werken, en alles wat ik de hele tijd heb gezien, is dat. En voel je je absoluut normaal? Niet absoluut normaal, nee.
-Helemaal. Ik ben helemaal verkeerd. Verkeerd? Ja.
-Ik heb nooit iets gegeten, nooit iets gevraagd, nooit iets toegevoegd, niets gesmeurd of zo. Waarom zou je me zo zien? Maar je bent er. Uiteindelijk, ja.
-Maar ik wil weten wat de hel is er aan de hand. Clive was een uitstekende muzikant. Hij neemde zijn werk heel erg ernstig.
-Tegelijkertijd liep hij de muziek zo graag dat hij zich er helemaal in stierf. Clive was een muzikant met een enorme integriteit. Hij was de werelds-expert op Lassus, een van de drie of vier grote componisten van de Renaissance.
-Hij werkte ook veel in contemporaine muziek. Hij was chorus-master van de Lansinger Sinfonietta, Europa's voorste groep. Muziek kwam uit hem, zowel als hij zong, speelde of deed.
-Clive Waring, door een kruisende twijfel van geluk... ...laat ons zien hoe fundamenteel bewustzijn en herinnering zijn voor ons leven.
-Dus hij doet nou net alsof hij haar heel lang niet gezien heeft. Maar zij was alleen maar even de deur uit gegaan om een klein dingetje te doen. En dit is dus letterlijk vijf minuten later.
-En iedere keer begroet hij haar weer alsof hij haar dus weken niet gezien heeft. Wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw, wauw. Ik weet het niet.
-Heb je me nog nooit gezien? Nee. Dit is de eerste keer. Als hij me ziet? Oh, dat zou ik wel willen.
-Er is niemand anders die zich er voor zorgt, hè? Ja. Oh, sorry. Dus hoe was het vanmorgen? Ik ben voor het eerst bewust.
-Dit is de eerste keer dat ik iemand heb gezien. Je bent nog nooit bewust geweest? Nee. Ik ben hier al een keer geweest.
-Ik heb je nog nooit gezien. Nee, dat heb je niet. Ik heb nog nooit iets gezien.
-Ik was helemaal blind de hele tijd. Geen smaak. Dit is de eerste smaak.
-Dit is de eerste koffie die je hebt gehad? Ja. Proost. Proost.
-En hoe zie je dingen? Absoluut normaal. Dit is de eerste keer. Geen kleur? Ja.
-Ik heb nog nooit iets gezien. De hele tijd. Geen zwart of wit.
-Niets. Herinner je je mijn toekomst? Nee. Ik herinner me geen toekomst, dus ik herinner me geen schrijving van dat soort dingen.
-Wat ben je hier aan het doen? Ik weet niet of er patiënten zijn, maar dit is de eerste keer dat ik een kaart heb gezien. Is dat zo? Ja. Herinner je je het begin van de wedstrijd? Ja.
-Het begon allemaal met een horeca. Clive kwam een dag thuis en zei dat hij een erg slechte horeca had. De horeca liefde niet, het reageerde niet op analgesie.
-Op de vierde dag ontwikkelde hij een behoorlijk hoog gevoel. En op de avond van de vierde dag, voor een tijdje, vergat hij zijn dochter zijn naam. Op de vijfde dag was hij erg delirieus.
-Clijf suffer from viral encephalitis, which has led to the damage of the left and the right temporal lobes plus a good portion of the left frontal lobe. The temporal lobes contain a structure called the hippocampus, which we know is implicated in memory function. And in Clive it has almost certainly been completely destroyed in both sides of his brain.
-Het is dit dat voornamelijk verantwoordelijk is voor zijn zware herinneringsbeschadiging. Daarnaast veroorzaakt de schade aan zijn frontale loben ook een aantal meer herinneringsproblemen... ...die
-voornamelijk worden uitgevoerd door hem zich vaak opnieuw te herinneren... ...en overal emotionele gedrag te laten zien.
-Clive's wereld bestaat nu uit een moment. met geen verleden om het op te hangen en geen toekomst om naar voren te kijken. Het is een geblinkerd moment.
-Hij ziet wat er voor hem is. Maar zodra die informatie in zijn brein valt, vervalt het. Niets maakt een indruk, niets registreert zich.
-Alles gaat er goed in, omdat hij alle vakanties heeft. Zijn intellect is virtueel intact en hij begrijpt zijn wereld zoals jij of ik. Maar als hij het begrijpt en wegkijkt, is het weg voor hem.
-Dus het is een moment-na-moment-bewustzijn. Een tijd-vacuum. En alles voor dat moment is volledig vuil.
-En hij voelt alsof hij de hele tijd opnieuw wakker wordt. Ik stop hier. Dus hij ziet...
-Ik ga even terug. Dus hij heeft eigenlijk alleen korte termijngeheugen of werkgeheugen, dat is nog gewoon intact. Daar gaan we de volgende keer over praten.
-Maar geen enkele herinnering of geen enkele impressie blijft in het lange termijngeheugen hangen. Dat kun je heel simpel zeggen. En het was en is een hele intelligente man.
-En dat is dus nog in principe intact. En hij is ook een beetje onderemd doordat hij ook frontale beschadigingen heeft. Dat zag je ook een beetje.
-Later in zijn leven is dat wat minder geworden. Dit is best een oude opname. En ik ken ook mensen die met hem samen hebben gewerkt.
-Of met hem gewerkt hebben. En met zijn vrouw. En hij schrijft ook de hele tijd in die dagboeken, en dit is dus een van die dagboekbladen, en dan schrijft hij ook de hele tijd eigenlijk diezelfde zin van, oh ik ben, I am alive, en dan...
-De hele tijd schrijft hij diezelfde zinnetjes op, dat hij nu voor het eerst weer dingen ziet en beleeft, en dat hij nu weer voor het eerst een slok koffie heeft genomen. Maar dat doet hij dus de hele dag door, dag in, dag uit. Dus hij heeft steeds opnieuw, ieder moment, of iedere paar minuten, een moment van, oh, ah, nu ben ik er weer.
-Omdat hij dus niet die continuïteit heeft naar het verleden. Ja, dat hebben we inmiddels gezien. Alan Parkin gaf dat commentaar op."
-
+Voorbeeld:
+Gegeven: We beginnen met een video over Clive Wearing, een dirigent en muzikant die uniek is vanwege zijn onvermogen om lange termijnherinneringen op te bouwen na een ernstige herseninfectie die zijn hippocampus vernietigde. Zijn situatie wordt verder belicht door een boek geschreven door zijn vrouw, die de persoonlijke gevolgen van zijn aandoening beschrijft. Wearing, bekend om zijn expertise in oude muziek en zijn werk met de Lansinger Sinfonietta, leeft nu in een constante staat van heden zonder verleden of toekomst. Zijn ervaringen, waaronder herhaalde ontmoetingen met zijn vrouw alsof het de eerste keer is na slechts korte momenten van afwezigheid, illustreren de diepe impact van geheugen op identiteit en relaties. De video en het boek onthullen niet alleen Wearings strijd maar ook de bredere implicaties van geheugenverlies voor het menselijk bewustzijn.
 
 Example output:
-Clive Wearing's Achtergrond en Herseninfectie
-Clive Wearing was een bekwaam dirigent en muzikant gespecialiseerd in oude muziek. Hij leed aan een ernstige herseninfectie die ernstige schade toebracht aan zijn hersenen, met name aan de hippocampus aan beide kanten. Dit leidde tot een aanzienlijke verandering in zijn geheugencapaciteit.
-Impact op Langtermijngeheugen
-Als gevolg van de schade aan zijn hippocampus kan Wearing geen langtermijngeheugen meer opbouwen. Dit heeft een diepgaande impact op zijn dagelijks leven en interacties, zoals geïllustreerd door de reactie op zijn vrouw na haar korte afwezigheid, waarbij hij haar begroet alsof hij haar weken niet heeft gezien.
-Het Behoud van Korte Termijngeheugen en Intellect
+Clive Wearing's achtergrond en herseninfectie
+Clive Wearing leed aan een ernstige herseninfectie die ernstige schade toebracht aan zijn hersenen, met name aan de hippocampus aan beide kanten. Dit leidde tot een aanzienlijke verandering in zijn geheugencapaciteit.
+Impact op lLangtermijngeheugen
+Als gevolg van de schade aan zijn hippocampus kan Wearing geen langtermijngeheugen meer opbouwen. Dit heeft een diepgaande impact op zijn dagelijks leven en interacties. Zo groet hij zijn vrouw al na haar korte afwezigheid alsof hij haar al jaren niet meer gezien heeft.
+Het behoud van korte termijngeheugen en intellect
 Ondanks zijn ernstige geheugenverlies, is Wearing's korte termijn- of werkgeheugen nog steeds intact. Zijn intellectuele capaciteiten lijken ook grotendeels onaangetast. Hij blijft muzikaal bekwaam en intellectueel bewust van zijn omgeving.
-Bewustzijn en Tijdsperceptie
+Bewustzijn en tijdsperceptie
 Wearing's bewustzijn is beperkt tot moment-na-moment, zonder vermogen om herinneringen uit het verleden vast te houden of naar de toekomst te kijken. Zijn wereld bestaat uit een constant heden zonder continuïteit.
-Rol van de Hippocampus en Herinnering
+Rol van de hippocampus en herinnering
 De casus van Wearing benadrukt het belang van de hippocampus in het geheugen en illustreert hoe schade aan dit gebied het vermogen om nieuwe langetermijnherinneringen te vormen kan beïnvloeden.

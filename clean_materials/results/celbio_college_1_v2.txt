@@ -1,0 +1,51 @@
+
+
+ Moleculaire Biologie van de Cel: Module 3
+
+Inleiding tot Celmechanismen
+
+Welkom bij de studie van moleculaire biologie van de cel. In de komende weken zullen we ons concentreren op de moleculaire mechanismen die essentieel zijn voor de werking van cellen. Onze focus zal voornamelijk liggen op de moleculaire aspecten van cellulaire processen, gezien cellen op fundamenteel niveau bestaan uit moleculen.
+
+Celmechanismen en Eiwitlokalisatie
+
+Een kernconcept dat we zullen onderzoeken, is hoe cellen hun eiwitten naar de juiste locatie transporteren en hoe deze eiwitten functioneren. Begrip van deze mechanismen is cruciaal, niet alleen voor een fundamenteel begrip van cellulaire processen, maar ook voor het begrijpen van bepaalde ziektebeelden die voortkomen uit verstoringen in deze processen.
+
+Studieboek en Cursusinhoud
+
+Voor deze cursus maken we gebruik van het studieboek "De Cel". We zullen ons richten op de hoofdstukken 11, 12, 13 en 15, die een aanzienlijke hoeveelheid materiaal bevatten en mogelijk nieuwe concepten introduceren die u nog niet eerder bent tegengekomen.
+
+Conclusie
+
+Deze cursus biedt een diepgaande kijk op de moleculaire basis van cellulaire functies. Terwijl we door de specifieke hoofdstukken gaan, zullen we de cruciale processen onderzoeken die cellen in staat stellen te functioneren en de relevantie van deze processen in medische contexten bespreken. Het doel is om een gedegen begrip te ontwikkelen van de moleculaire mechanismen die ten grondslag liggen aan celbiologie.
+
+ Voor het tentamen van de cursus "Molecular Biology of the Cell" is het essentieel om vertrouwd te zijn met de aangeboden PowerPoint-presentaties en de inhoud grondig te bestuderen, aangezien deze mogelijk examenvragen bevatten. Het wordt sterk aanbevolen om notities te maken tijdens de lezingen en belangrijke punten te markeren die de docent benadrukt.
+
+In de komende colleges zullen de PowerPoint-presentaties beschikbaar zijn op Canvas, waardoor studenten de inhoud op hun gemak kunnen bekijken. Deze presentaties vormen de basis voor het afsluiten van de module, waarbij studenten vragen kunnen stellen om hun begrip van het materiaal te verifiëren.
+
+Een specifiek onderdeel van de cursus is de introductie van een databasetool genaamd Gene Cards. Deze online bron bevat uitgebreide informatie over eiwitten en genen en zal worden gebruikt om de studenten te helpen bij het integreren van kennis over eiwitlokalisatie en -functie. Het werken met dergelijke databases zal in de toekomst een belangrijk onderdeel van het veld worden. De Gene Cards-opdracht is bedoeld om de studenten te laten zien hoe de theorie uit de colleges van toepassing is op specifieke eiwitten en hun rol in de cel.
+
+Het is belangrijk op te merken dat, hoewel het gebruikte tekstboek mogelijk tot tien jaar achterloopt op de huidige wetenschappelijke ontdekkingen, websites zoals Gene Cards meestal slechts een paar jaar achterlopen, en daardoor een bron zijn die dichter bij de huidige wetenschappelijke realiteit staat. Hoewel deze bronnen ingewikkelder kunnen zijn dan de tekstboeken, is het doel om studenten te helpen de context van de aangeboden informatie te begrijpen en toe te passen.
+
+Tot slot zal de cursus zich richten op een relevant thema, namelijk Alzheimer, dat waarschijnlijk aansluit bij de interesse van studenten in psychobiologie. Het is van belang dat studenten zich verdiepen in dit onderwerp, aangezien het in verband staat met de onderwerpen die in de colleges behandeld worden.
+
+ De post-mortem bevindingen bij Alzheimerpatiënten wijzen op significante structurele veranderingen in de hersenen. Deze veranderingen omvatten de accumulatie van specifieke eiwitten, wat leidt tot verstoringen in de cellulaire communicatie en uiteindelijk tot cellulaire veranderingen. Dergelijke eiwitophopingen en cellulaire modificaties zijn belangrijke factoren in de pathogenese van Alzheimer.
+
+In het kader van de cursus "Molecular Biology of the Cell" is het belangrijk om te begrijpen dat eiwittransport cruciaal is voor de normale werking van cellen. Een verstoring in dit proces kan bijdragen aan neurodegeneratieve ziekten zoals Alzheimer. Het is essentieel voor studenten om de link te kunnen leggen tussen fundamentele cellulaire processen en de gevolgen wanneer deze verstoord zijn.
+
+Een diepgaande kennis van eiwitten, waaronder membraaneiwitten en uitgescheiden eiwitten, is van belang, aangezien deze frequent genoemd worden in de context van Alzheimer. Vooral de eiwitten alpha en beta, en de peptiden met lengtes van 40 en 42 aminozuren, zijn relevant in de context van Alzheimer-onderzoek. Deze eiwitten en peptiden spelen een regulerende rol op membraaneiwitten in synapsen en zijn betrokken bij het ziekteproces.
+
+Bovendien wordt in de cursus aandacht besteed aan de ontwikkeling van geneesmiddelen als mogelijke behandelingen voor Alzheimer. Een voorbeeld hiervan is het antilichaam Aducanumab, dat ontwikkeld werd om de amyloïde plaques, kenmerkend voor Alzheimer, te verminderen. Dit zou potentieel de cognitieve achteruitgang kunnen remmen. Hoewel dit antilichaam in 2016 veelbelovend leek, leidde verder onderzoek in 2019 tot twijfels over de effectiviteit ervan, en in 2021 was het niet langer beschikbaar in Europa.
+
+Het is van cruciaal belang dat studenten inzicht krijgen in de moleculaire doelwitten van dergelijke therapieën en de onderliggende mechanismen waardoor ze het ziekteproces zouden kunnen beïnvloeden. Door het bestuderen van de werking van dergelijke medicijnen, kunnen studenten de praktische toepassingen van moleculaire biologie in medisch onderzoek en behandelingen begrijpen.
+
+ In de context van de ontwikkeling van medicijnen, is kennis van cellulaire processen essentieel om te begrijpen hoe nieuwe geneesmiddelen kunnen ingrijpen in de complexe mechanismen van de cel. Een specifiek voorbeeld dat relevant is voor de studie van moleculaire biologie van de cel is de rol van het tau-eiwit en de interactie met microtubuli.
+
+Microtubuli fungeren als transportkanalen binnen de cel, waarlangs vesikels, kleine membraangebonden blaasjes, worden vervoerd. Dit transport is essentieel voor de correcte distributie van moleculen en organellen binnen de cel. Het tau-eiwit is een microtubulus-geassocieerd eiwit dat betrokken is bij de stabilisatie van microtubuli. Wanneer er defecten optreden in het tau-eiwit, kan dit leiden tot verstoringen in het vesikeltransport, wat kan bijdragen aan de ontwikkeling van neurodegeneratieve aandoeningen zoals Alzheimer.
+
+De beweging van vesikels langs microtubuli wordt aangedreven door motorproteïnen, die ATP (adenosinetrifosfaat) gebruiken als energiebron. Het begrijpen van deze interacties tussen motorproteïnen, ATP en microtubuli is cruciaal om inzicht te krijgen in de cellulaire dynamiek en de pathogenese van ziekten die verband houden met verstoringen in eiwittransport en lokalisatie.
+
+De moleculaire biologie van de cel omvat verschillende concepten, beginnend met genetica, waarbij kennis van genen, DNA, RNA en splicing van belang is. Eiwittranslatie, vouwing en de rol van chaperone-eiwitten zijn ook fundamentele aspecten die in de opleiding aan bod komen. De module bouwt voort op deze kennis door zich te richten op eiwitlokalisatie en het transport van vesikels, ook bekend als membraanblaasjes.
+
+In het verdere verloop van de module zal de focus liggen op eiwittransport over het celmembraan, wat van cruciaal belang is in neurobiologie. Er zal aandacht besteed worden aan transporters en ionkanalen, die in meerdere vormen bestaan en essentieel zijn voor de functie van cellen. Studenten dienen bekend te raken met verschillende typen kanalen en transporters en de specifieke rollen die zij vervullen binnen de cel.
+
+In de cursus "Molecular Biology of the Cell" wordt verwacht dat studenten deze concepten begrijpen en de verbinding kunnen leggen tussen de moleculaire mechanismen en ziektebeelden. Om dit te bereiken, is het van belang om de terminologie, zoals het gebruik van Engelse termen voor specifieke processen en structuren, eigen te maken en te kunnen toepassen in een wetenschappelijke context.

@@ -1,0 +1,855 @@
+{
+    "module_name": "celbio_college_1",
+    "segments": [
+    {
+        "type": "info",
+        "title": "Introductie tot Moleculaire Biologie van de Cel",
+        "text": "Dit vakgebied wordt begeleid door docent Michel Haring, die studenten door de verschillende hoofdstukken van Moleculaire Biologie van de Cel zal leiden. Het doel van deze cursus is om studenten enthousiast te maken over en inzicht te geven in de moleculaire mechanismen die cellulaire functies mogelijk maken."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het doel van de cursus 'Introductie tot Moleculaire Biologie van de Cel'?",
+        "answer": "Het doel van de cursus is om studenten enthousiast te maken (1 point) en inzicht te geven (1 point) in de moleculaire mechanismen (1 point) die het functioneren van onze cellen mogelijk maken (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Moleculaire Mechanismen in Celbiologie",
+        "text": "De cursus 'Belang van Moleculaire Mechanismen in Celbiologie' richt zich op het begrijpen van de fundamentele moleculaire mechanismen die de werking van cellen ondersteunen. Studenten zullen inzicht verkrijgen in hoe cellen leven, groeien en reageren op hun omgeving."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het belangrijk om moleculaire mechanismen in celbiologie te begrijpen?",
+        "answer": "Het is belangrijk om moleculaire mechanismen te begrijpen (1 point) omdat ze de basis vormen voor de werking van cellen (1 point), en inzicht geven in hoe cellen leven, groeien en reageren op hun omgeving (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Kennismaking met de Docent",
+        "text": "Michel Haring introduceert zichzelf als de docent verantwoordelijk voor het onderwijzen van de cursus. Hij legt de nadruk op het belang van de cursusinhoud en zijn rol in het stimuleren van interesse en begrip bij de studenten."
+    },
+    {
+        "type": "question",
+        "question": "Wie is Michel Haring en wat benadrukt hij over de cursus?",
+        "answer": "Michel Haring is de docent verantwoordelijk voor het onderwijzen van de cursus (1 point). Hij benadrukt het belang van de cursusinhoud (1 point) en zijn rol in het stimuleren van interesse en begrip bij de studenten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Het Wekken van Enthousiasme voor Celbiologie",
+        "text": "Een van de doelen van de docent is het wekken van enthousiasme bij de studenten voor de complexiteit en schoonheid van de moleculaire processen die plaatsvinden in cellen. Dit enthousiasme is essentieel voor de betrokkenheid en de motivatie van de studenten gedurende de cursus."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het wekken van enthousiasme voor celbiologie belangrijk volgens de docent?",
+        "answer": "Het wekken van enthousiasme is belangrijk omdat het essentieel is voor de betrokkenheid (1 point) en de motivatie (1 point) van de studenten gedurende de cursus (1 point), en hen interesseert in de complexiteit en schoonheid van moleculaire processen in cellen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Module 3: Basale Celprocessen en Moleculaire Mechanismen",
+        "text": "Module 3 richt zich op de fundamentele processen en moleculaire mechanismen die plaatsvinden in cellen, en is een belangrijk onderdeel van de cursus celbiologie."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het onderwerp van Module 3 in de cursus celbiologie?",
+        "answer": "Module 3 gaat over de basale celprocessen (1 point) en moleculaire mechanismen (1 point) die plaatsvinden in cellen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitlokalisatie in Cellen",
+        "text": "In module 3 van de cursus leren studenten over de basale processen die essentieel zijn voor de werking van cellen, met een focus op de moleculaire aspecten. Deze kennis is fundamenteel voor het begrijpen hoe cellen functioneren op een moleculair niveau. Eiwitlokalisatie in cellen verwijst naar de specifieke plaatsen waar eiwitten zich binnen de cel bevinden, wat van cruciaal belang is voor de functies die ze uitvoeren."
+    },
+    {
+        "type": "question",
+        "question": "Wat leren studenten over eiwitlokalisatie in cellen in module 3 van de cursus?",
+        "answer": "Studenten leren over de specifieke plaatsen waar eiwitten zich binnen de cel bevinden (1 point) en hoe dit essentieel is voor de werking van cellen, vooral op moleculair niveau (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Functie van Eiwitten in Cellen",
+        "text": "De belangrijkste leerdoelstelling is het begrijpen van de mechanismen die cellen gebruiken om eiwitten naar de juiste locatie te transporteren. Dit omvat kennis over hoe eiwitten worden gemaakt, gevouwen en vervoerd binnen de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de belangrijkste leerdoelstelling met betrekking tot de functie van eiwitten in cellen?",
+        "answer": "Het begrijpen van de mechanismen die cellen gebruiken om eiwitten naar de juiste locatie te transporteren (1 point), wat kennis over hoe eiwitten worden gemaakt (1 point), gevouwen (1 point) en vervoerd binnen de cel omvat (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Cellulaire Processen en Eiwitten",
+        "text": "Studenten leren over de functies van verschillende eiwitten en hoe deze bijdragen aan de werking van de cel. Dit inzicht is cruciaal voor het begrijpen van celbiologie en de complexiteit van cellulaire processen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is kennis over de functies van eiwitten belangrijk voor het begrijpen van celbiologie?",
+        "answer": "Kennis over de functies van eiwitten is belangrijk omdat eiwitten bijdragen aan de werking van de cel (1 point), wat cruciaal is voor het begrijpen van celbiologie en de complexiteit van cellulaire processen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Koppeling met Ziektebeelden",
+        "text": "Het inzicht in hoe verschillende eiwitten functioneren binnen cellulaire processen helpt bij het begrijpen van verschillende ziektebeelden, aangezien afwijkingen in deze processen vaak tot ziekten leiden."
+    },
+    {
+        "type": "question",
+        "question": "Hoe draagt kennis over eiwitfuncties bij aan het begrijpen van ziektebeelden?",
+        "answer": "Kennis over eiwitfuncties draagt bij aan het begrijpen van ziektebeelden doordat afwijkingen in de functies van eiwitten (1 point) vaak leiden tot ziekten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Introductie tot Moleculaire Biologie van de Cel",
+        "text": "De cursus 'Introductie tot Moleculaire Biologie van de Cel', gegeven door docent Michel Haring, is een educatieve reis die studenten meeneemt door de verschillende hoofdstukken van de Moleculaire Biologie van de Cel. Gedurende enkele weken zullen studenten kennismaken met de moleculaire mechanismen die ten grondslag liggen aan de werking van onze cellen. Het doel van de cursus is om studenten enthousiast te maken en te informeren over de complexe en fascinerende processen die cellulaire functies mogelijk maken."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het doel van de cursus 'Introductie tot Moleculaire Biologie van de Cel'?",
+        "answer": "Het doel van de cursus is om studenten enthousiast te maken (1 point) over de moleculaire mechanismen (1 point) die het mogelijk maken dat onze cellen functioneren (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Moleculaire Mechanismen in Celbiologie",
+        "text": "De cursus 'Belang van Moleculaire Mechanismen in Celbiologie' focust op het begrip van essenti\u00eble moleculaire processen die cruciaal zijn voor de werking van cellen. Door deze kennis zullen studenten inzicht verkrijgen in de manieren waarop cellen leven, zich ontwikkelen en hoe ze reageren op hun omgeving."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het belangrijk om moleculaire mechanismen in celbiologie te begrijpen?",
+        "answer": "Het is belangrijk om moleculaire mechanismen in celbiologie te begrijpen omdat dit inzicht geeft in hoe cellen functioneren (1 point), leven (1 point), groeien (1 point) en reageren op hun omgeving (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Kennismaking met de Docent",
+        "text": "Michel Haring introduceert zichzelf als de docent die verantwoordelijk is voor het onderwijzen van de cursus. Hij benadrukt het belang van de cursusinhoud en zijn rol in het stimuleren van interesse en begrip bij de studenten."
+    },
+    {
+        "type": "question",
+        "question": "Wie is Michel Haring en wat benadrukt hij over de cursus?",
+        "answer": "Michel Haring is de docent verantwoordelijk voor het onderwijzen van de cursus (1 point). Hij benadrukt het belang van de cursusinhoud (1 point) en zijn rol in het stimuleren van interesse en begrip bij de studenten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Het Wekken van Enthousiasme voor Celbiologie",
+        "text": "Een van de doelen van de docent is het wekken van enthousiasme bij de studenten voor de complexiteit en schoonheid van de moleculaire processen die plaatsvinden in cellen. Dit enthousiasme is essentieel voor de betrokkenheid en de motivatie van de studenten gedurende de cursus."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het wekken van enthousiasme voor celbiologie belangrijk in een cursus?",
+        "answer": "Het wekken van enthousiasme is belangrijk voor de betrokkenheid (1 point) en motivatie (1 point) van studenten, en helpt hen om de complexiteit (1 point) en schoonheid (1 point) van moleculaire processen in cellen te waarderen."
+    },
+    {
+        "type": "info",
+        "title": "Module 3: Basale Celprocessen en Moleculaire Mechanismen",
+        "text": "Module 3 richt zich op de fundamentele processen en mechanismen die op moleculair niveau in cellen voorkomen. De kennis van deze basale celprocessen is cruciaal voor het begrijpen van de meer complexe biologische systemen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het belang van het leren over basale celprocessen en moleculaire mechanismen?",
+        "answer": "Het leren over basale celprocessen (1 point) en moleculaire mechanismen (1 point) is cruciaal voor het begrijpen van complexe biologische systemen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitlokalisatie in Cellen",
+        "text": "In module 3 van de cursus leren studenten over de basale processen die essentieel zijn voor de werking van cellen, met een focus op de moleculaire aspecten. Deze kennis is fundamenteel voor het begrijpen van hoe cellen functioneren op een moleculair niveau. Eiwitlokalisatie in cellen verwijst naar de specifieke plaatsen waar eiwitten zich binnen een cel bevinden, wat belangrijk is voor de functie van de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat leren studenten over eiwitlokalisatie in cellen in module 3 van de cursus?",
+        "answer": "Studenten leren over de basale processen essentieel voor celwerking (1 point), met een focus op moleculaire aspecten (1 point). Ze leren hoe eiwitlokalisatie binnen cellen belangrijk is voor de cel functie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Functie van Eiwitten in Cellen",
+        "text": "De belangrijkste leerdoelstelling is het begrijpen van de mechanismen die cellen gebruiken om eiwitten naar de juiste locatie te transporteren. Dit omvat kennis over hoe eiwitten worden gemaakt, gevouwen en vervoerd binnen de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de belangrijkste leerdoelstelling betreffende de functie van eiwitten in cellen?",
+        "answer": "De leerdoelstelling is het begrijpen van mechanismen voor eiwittransport naar de juiste locatie in de cel (1 point), inclusief hoe eiwitten worden gemaakt (1 point), gevouwen (1 point) en vervoerd binnen de cel (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Cellular Protein Functions",
+        "text": "Students learn about the functions of various proteins and how these contribute to the operation of the cell. Understanding this is crucial for grasping cell biology and the complexity of cellular processes."
+    },
+    {
+        "type": "question",
+        "question": "Why is understanding the functions of various proteins important in cell biology?",
+        "answer": "Understanding protein functions is important because it contributes to the operation of the cell (1 point) and helps in grasping the complexity of cellular processes (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Linking with Disease Pathology",
+        "text": "The knowledge of protein functions and cellular processes is also linked with understanding disease pathology, which can provide insights into how diseases affect cellular functions and contribute to the development of medical treatments."
+    },
+    {
+        "type": "question",
+        "question": "How does knowledge of protein functions and cellular processes relate to disease pathology?",
+        "answer": "Knowledge of protein functions and cellular processes relates to disease pathology by providing insights (1 point) into how diseases affect cellular functions (1 point) and contributes to the development of medical treatments (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Verband tussen moleculaire processen en ziektebeelden",
+        "text": "Er wordt een verband gelegd tussen moleculaire processen en specifieke ziektebeelden. Dit helpt studenten om de relevantie van deze moleculaire mechanismen in de medische praktijk te begrijpen en waarom deze kennis van belang is. De gebruikte studiematerialen ondersteunen deze leerdoelen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het leggen van een verband tussen moleculaire processen en ziektebeelden belangrijk voor medische studenten?",
+        "answer": "Het helpt studenten de relevantie begrijpen van moleculaire mechanismen in de medische praktijk (1 point) en waarom deze kennis van belang is (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Studiemateriaal voor de module",
+        "text": "Het boek 'De Cel' wordt gebruikt als studiemateriaal voor deze module. Daarnaast is het boek 'Neuroscience' van Purves ook relevant, vooral voor studenten die het tweedejaarscollege ontwikkelingsbiologie volgen."
+    },
+    {
+        "type": "question",
+        "question": "Welke boeken worden er gebruikt als studiemateriaal voor deze module en voor wie is specifiek het boek 'Neuroscience' van Purves relevant?",
+        "answer": "Het boek 'De Cel' wordt gebruikt als studiemateriaal voor de module (1 point). Het boek 'Neuroscience' van Purves is relevant voor studenten die het tweedejaarscollege ontwikkelingsbiologie volgen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Omvang van de Cursus",
+        "text": "De input geeft geen specifieke informatie over de omvang van de cursus. Dus, er is geen aanvullende uitleg beschikbaar."
+    },
+    {
+        "type": "question",
+        "question": "Geef een beschrijving van de omvang van de cursus.",
+        "answer": "De input verstrekt geen details over de omvang van de cursus (1 point), dus er kan geen beschrijving gegeven worden zonder verdere informatie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Studiemateriaal Hoofdstukken",
+        "text": "De cursus omvat de hoofdstukken 11, 12, 13 en 15 uit het gekozen studiemateriaal. Deze hoofdstukken bevatten belangrijke informatie die essentieel is voor een dieper begrip van celbiologie en aanverwante wetenschappelijke disciplines."
+    },
+    {
+        "type": "question",
+        "question": "Welke hoofdstukken van het studiemateriaal maken deel uit van de cursus?",
+        "answer": "Hoofdstukken 11, 12, 13 en 15 maken deel uit van de cursus (1 point per correct hoofdstuk)."
+    },
+    {
+        "type": "info",
+        "title": "Voorbereiding voor Hoorcolleges",
+        "text": "Om studenten te helpen de complexe stof van de hoorcolleges beter te begrijpen, wordt aangeraden dat zij de PowerPoints van tevoren doornemen. Dit voorbereidingswerk kan hen assisteren bij het aantekenen en het identificeren van kernpunten die de docent benadrukt en die relevant kunnen zijn voor tentamenvragen."
+    },
+    {
+        "type": "question",
+        "question": "Hoe kunnen studenten zich het beste voorbereiden op de hoorcolleges?",
+        "answer": "Studenten kunnen zich voorbereiden door de PowerPoints van tevoren door te nemen (1 point), wat helpt bij het maken van aantekeningen tijdens de lezing (1 point) en het herkennen van belangrijke punten die de docent benadrukt (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Gebruik van Canvas als Studieplatform",
+        "text": "Canvas is een online platform dat gebruikt wordt door onderwijsinstellingen om studiematerialen, zoals PowerPoints voor hoorcolleges, beschikbaar te stellen aan studenten. Studenten kunnen deze materialen raadplegen en gebruiken als voorbereiding op colleges en voor de afronding van hun modules."
+    },
+    {
+        "type": "question",
+        "question": "Waarvoor kunnen studenten Canvas gebruiken in relatie tot hoorcolleges?",
+        "answer": "Studenten kunnen Canvas gebruiken om PowerPoints te raadplegen (1 point) en deze te gebruiken als voorbereiding op hoorcolleges (1 point) en voor de afsluiting van de module (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Interactie en Verheldering van Lesmateriaal",
+        "text": "Aan het einde van de module hebben studenten de mogelijkheid om vragen te stellen. Dit interactieve deel is bedoeld om te verzekeren dat de stof goed begrepen is en om eventuele onduidelijkheden op te helderen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is interactie en verheldering van lesmateriaal belangrijk aan het einde van de module?",
+        "answer": "Het is belangrijk om te verzekeren dat de stof goed begrepen is (1 point) en om eventuele onduidelijkheden op te helderen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Introductie van Gene Cards",
+        "text": "Gene Cards is een database die uitgebreide informatie biedt over genen. Tijdens een specifieke opdracht worden studenten gevraagd om deze website te gebruiken om genetische informatie te verkennen en te begrijpen. Dit dient als een introductie tot een praktische opdracht gericht op het werken met genetische databanken."
+    },
+    {
+        "type": "question",
+        "question": "Waarom wordt Gene Cards gebruikt in de opdracht?",
+        "answer": "Gene Cards wordt gebruikt om studenten te helpen bij het verkennen en begrijpen van genetische informatie (1 point) als onderdeel van een praktische opdracht gericht op het werken met genetische databanken (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Databanken voor Eiwitten en Genen",
+        "text": "Databanken bevatten een uitgebreide hoeveelheid informatie over eiwitten en genen. Deze databases zijn een waardevol hulpmiddel voor studenten en onderzoekers omdat ze actuelere informatie bieden dan tekstboeken. Ze helpen bij het begrijpen van de lokalisatie en functie van eiwitten door alle verkregen informatie te integreren en te analyseren."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn databanken over eiwitten en genen nuttig voor studenten en onderzoekers?",
+        "answer": "Databanken zijn nuttig omdat ze een uitgebreide hoeveelheid informatie bevatten (1 point), actuelere informatie bieden dan tekstboeken (1 point), en helpen bij het begrijpen van de lokalisatie en functie van eiwitten (1 point) door informatie te integreren en te analyseren (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Lokalisatie en Functie van Eiwitten",
+        "text": "Het begrijpen van de lokalisatie en functie van eiwitten is essentieel in de biomedische wetenschappen. Lokalisatie verwijst naar waar in een cel of organisme een eiwit zich bevindt, terwijl de functie betrekking heeft op de rol die het eiwit speelt in biologische processen."
+    },
+    {
+        "type": "question",
+        "question": "Wat wordt verstaan onder de lokalisatie en functie van eiwitten?",
+        "answer": "Lokalisatie verwijst naar de plaats in een cel of organisme waar een eiwit zich bevindt (1 point), en functie duidt op de rol die het eiwit heeft in biologische processen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Het Onderzoeken van een Enkel Eiwit",
+        "text": "Bij het onderzoeken van een enkel eiwit concentreren wetenschappers zich op verschillende aspecten zoals de structuur, functie en locatie in het lichaam. Dit onderzoek helpt studenten om de rol en het belang van eiwitten in biologische en biochemische processen te begrijpen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het belangrijk om verschillende aspecten van een eiwit te onderzoeken?",
+        "answer": "Het is belangrijk om de structuur (1 point), functie (1 point) en locatie (1 point) van een eiwit te onderzoeken om de context van deze informatie te begrijpen (1 point) en deze toe te passen in een bredere biologische en biochemische context (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Actualiteit en Relevantie van Online Informatie",
+        "text": "De actualiteit en relevantie van online informatie verwijst naar hoe recent en toepasselijk de informatie is die men op het internet vindt. Dit is cruciaal voor onderzoek en educatie, omdat actuele en relevante informatie zorgt voor nauwkeurige kennis en inzichten."
+    },
+    {
+        "type": "question",
+        "question": "Wat betekent de actualiteit en relevantie van online informatie?",
+        "answer": "Actualiteit refereert naar hoe recent (1 point) de informatie is, terwijl relevantie gaat over hoe toepasselijk (1 point) de informatie is voor een bepaalde context of behoefte."
+    },
+    {
+        "type": "info",
+        "title": "Online bronnen",
+        "text": "Online bronnen zijn digitale informatiebronnen die vaak meer recente informatie bevatten dan traditionele tekstboeken. Tekstboeken kunnen vijf tot tien jaar achterlopen op de meest actuele kennis."
+    },
+    {
+        "type": "question",
+        "question": "Waarom worden online bronnen als meer actueel beschouwd dan traditionele tekstboeken?",
+        "answer": "Online bronnen bevatten vaak meer recente informatie (1 point) omdat traditionele tekstboeken vijf tot tien jaar achter kunnen lopen op de meest actuele kennis (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Complexiteit van websites",
+        "text": "Websites kunnen complexer en soms meer verwarrend zijn dan traditionele leermiddelen. Desondanks is het doel van deze online bronnen om studenten te helpen de context van informatie te begrijpen en deze toe te passen in hun studies."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het doel van de complexiteit van websites in educatieve context?",
+        "answer": "Het doel is om studenten te helpen de context van informatie te begrijpen (1 point) en deze toe te passen in hun studies (1 point), ondanks de mogelijke complexiteit en verwarring."
+    },
+    {
+        "type": "info",
+        "title": "GeneGuards Opdracht",
+        "text": "De 'GeneGuards Opdracht' is niet gedefinieerd in de gegeven context. Meer informatie is nodig om deze term te beschrijven."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de 'GeneGuards Opdracht'?",
+        "answer": "De 'GeneGuards Opdracht' is niet gedefinieerd in de gegeven context (1 point). Meer informatie is nodig om deze term te beschrijven (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "De GeneGuards Opdracht",
+        "text": "De GeneGuards opdracht is een onderwijsactiviteit die studenten helpt te leren hoe ze informatie over eiwitten kunnen verwerken en integreren, om zo een concreet en realistisch begrip te krijgen van de functie en interacties van eiwitten in biologische systemen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het doel van de GeneGuards opdracht?",
+        "answer": "Het doel van de GeneGuards opdracht is om studenten te leren hoe ze informatie over eiwitten kunnen verwerken (1 point) en in een samenhangend geheel kunnen plaatsen (1 point), met als resultaat een tastbaar en realistisch beeld van eiwitfunctie en -interactie in biologische systemen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Alzheimer als Specifiek Thema",
+        "text": "Het specifieke thema van Alzheimer binnen de GeneGuards opdracht richt zich op het begrijpen van eiwitten gerelateerd aan de ziekte van Alzheimer, wat kan leiden tot een dieper inzicht in de moleculaire mechanismen achter deze aandoening."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is Alzheimer een specifiek thema binnen de GeneGuards opdracht?",
+        "answer": "Alzheimer is een specifiek thema binnen de GeneGuards opdracht om studenten in staat te stellen de moleculaire mechanismen (1 point) achter de ziekte van Alzheimer (1 point) te begrijpen door te focussen op de gerelateerde eiwitten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Alzheimer",
+        "text": "Alzheimer is een ziekte die relevant is voor studenten met interesse in psychobiologie. Het biedt een praktische toepassing van kennis over eiwitten en genen om de ziekte en de onderliggende biologische processen te begrijpen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is Alzheimer een relevant onderwerp voor studenten met interesse in psychobiologie?",
+        "answer": "Alzheimer is relevant omdat het studenten in staat stelt hun kennis van eiwitten en genen praktisch toe te passen (1 point) voor een beter begrip van de ziekte en de biologische processen die eraan ten grondslag liggen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Structurele Veranderingen in de Hersenen en Alzheimer",
+        "text": "Post mortem onderzoeken hebben aangetoond dat de hersenstructuur significant kan veranderen bij Alzheimer, inclusief de ophoping van eiwitten die de cellulaire communicatie verstoren. Deze eiwitophopingen en cellulaire veranderingen kunnen tot verschillende vormen van Alzheimer leiden."
+    },
+    {
+        "type": "question",
+        "question": "Welke structurele veranderingen in de hersenen worden waargenomen bij Alzheimer?",
+        "answer": "Bij Alzheimer worden significante veranderingen in de hersenstructuur waargenomen, waaronder ophoping van eiwitten (1 point) die de cellulaire communicatie verstoren (1 point), en deze veranderingen kunnen leiden tot verschillende vormen van Alzheimer (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitophoping en Eiwittransport",
+        "text": "Bij Alzheimer is er een verstoring in het transport van eiwitten, wat cruciaal is voor de normale werking van de hersenen. Wanneer dit transportproces verstoord raakt, kan dit bijdragen aan de ontwikkeling van de ziekte."
+    },
+    {
+        "type": "question",
+        "question": "Hoe draagt een verstoring in eiwittransport bij aan de ontwikkeling van Alzheimer?",
+        "answer": "Een verstoring in het transport van eiwitten (1 point) is cruciaal voor de normale werking van de hersenen (1 point) en kan bijdragen aan de ontwikkeling van Alzheimer (1 point) als het transportproces verstoord raakt (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Verbanden met Ziektebeelden zoals Alzheimer",
+        "text": "De veranderingen in neurodegeneratieve processen zijn niet alleen kenmerkend voor Alzheimer, maar kunnen ook optreden bij andere ziektebeelden. Het is belangrijk voor studenten om bewust te worden van deze processen en te leren hoe deze verband houden met verschillende neurodegeneratieve aandoeningen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is het belangrijk voor studenten om verbanden te leggen tussen neurodegeneratieve processen en ziektebeelden zoals Alzheimer?",
+        "answer": "Het is belangrijk zodat studenten bewust worden van de neurodegeneratieve processen (1 point) en hoe deze samenhangen met verschillende aandoeningen (1 point), waaronder Alzheimer (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Eiwitkennis",
+        "text": "Het begrijpen van de rol van eiwitten, zoals membraaneiwitten en uitgescheiden eiwitten, is essentieel in de studie van Alzheimer. Specifieke eiwitten, zoals alpha en beta amylo\u00efden (40, 42), zijn vaak onderwerp van studie en tekst over Alzheimer. Kennis van deze eiwitten is belangrijk voor het begrijpen van de onderliggende mechanismen van de ziekte."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is kennis van eiwitten belangrijk in de studie van Alzheimer?",
+        "answer": "Kennis van eiwitten is belangrijk omdat het helpt bij het begrijpen van de rol van membraaneiwitten en uitgescheiden eiwitten (1 point), en van specifieke eiwitten zoals alpha en beta amylo\u00efden (1 point), die essentieel zijn voor het begrijpen van de onderliggende mechanismen van Alzheimer (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Regulatie van Membraaneiwitten in Synapsen",
+        "text": "Membraaneiwitten spelen een cruciale rol in de functie van synapsen in het zenuwstelsel. Ze zijn betrokken bij het ontvangen en doorgeven van signalen tussen neuronen en zijn dus essentieel voor de regulatie van neuronale communicatie."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de rol van membraaneiwitten in synapsen?",
+        "answer": "Membraaneiwitten zijn cruciaal voor de functie van synapsen (1 point) omdat ze betrokken zijn bij het ontvangen en doorgeven van signalen tussen neuronen (1 point), wat essentieel is voor de regulatie van neuronale communicatie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "De rol van membraaneiwitten in synapsen",
+        "text": "De lezing zal zich richten op de rol van membraaneiwitten in synapsen, die een regulerende functie hebben. Membraaneiwitten zijn belangrijk voor de communicatie tussen neuronen en spelen een cruciale rol in het functioneren van het zenuwstelsel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de rol van membraaneiwitten in synapsen?",
+        "answer": "De rol van membraaneiwitten in synapsen is dat ze een regulerende functie hebben (1 point), wat belangrijk is voor neuroncommunicatie en het functioneren van het zenuwstelsel (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Het belang van membraaneiwitten voor het begrijpen van neurologische aandoeningen",
+        "text": "Het begrijpen van de functie van membraaneiwitten is van cruciaal belang voor inzicht in het ziekteproces bij neurologische aandoeningen. Kennis over hoe deze eiwitten functioneren kan helpen bij het ontwikkelen van interventies en behandelingen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn membraaneiwitten belangrijk voor het begrijpen van neurologische aandoeningen?",
+        "answer": "Membraaneiwitten zijn belangrijk voor het begrijpen van neurologische aandoeningen omdat ze inzicht geven in het ziekteproces (1 point) en kunnen helpen bij het ontwikkelen van behandelingen en interventies (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Ziekteprocessen en Interventies",
+        "text": "De lezing zal ook aandacht besteden aan de verschillende ziekteprocessen bij neurologische aandoeningen en de mogelijke interventies die kunnen worden ingezet. Dit omvat een discussie over hoe verstoringen in membraaneiwitten tot ziekte kunnen leiden en hoe gerichte therapie\u00ebn deze kunnen aanpakken."
+    },
+    {
+        "type": "question",
+        "question": "Wat zal er besproken worden met betrekking tot ziekteprocessen en interventies tijdens de lezing?",
+        "answer": "Er zal besproken worden hoe verstoringen in membraaneiwitten tot neurologische aandoeningen kunnen leiden (1 point) en welke mogelijke interventies of therapie\u00ebn ingezet kunnen worden om deze aan te pakken (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Het doel van de lezing",
+        "text": "De lezing heeft als doel studenten inzicht te geven in de bijdrage van bepaalde onderdelen aan neurologische ziekteprocessen, en hoe deze kennis kan bijdragen aan het ontwikkelen van mogelijke interventies of behandelmethoden."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het doel van de lezing over neurologische aandoeningen?",
+        "answer": "Het doel van de lezing is om studenten inzicht te geven in hoe bepaalde onderdelen bijdragen aan neurologische ziekteprocessen (1 point) en hoe deze kennis kan leiden tot mogelijke interventies of behandelmethoden (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Geneesmiddelen tegen Neurologische Aandoeningen",
+        "text": "Deze component van de lezing zal zich richten op de verschillende geneesmiddelen die gebruikt worden voor de behandeling van neurologische aandoeningen, en hoe deze bijdragen aan het verminderen van symptomen of het vertragen van de ziekteprogressie."
+    },
+    {
+        "type": "question",
+        "question": "Waar zal de component 'Geneesmiddelen tegen Neurologische Aandoeningen' zich op richten tijdens de lezing?",
+        "answer": "De component zal zich richten op de verschillende geneesmiddelen die gebruikt worden voor de behandeling van neurologische aandoeningen (1 point), en hoe deze bijdragen aan het verminderen van symptomen of het vertragen van de ziekteprogressie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Ontwikkeling en Beschikbaarheid van Aducanumab",
+        "text": "Aducanumab is een antilichaam dat is ontwikkeld als medicijn tegen neurologische aandoeningen, zoals Alzheimer. Het is bedoeld om de vorming van plaques, die typisch zijn voor Alzheimer, in de hersenen te verminderen. De ontdekking en onderzoeksresultaten van Aducanumab hebben tot controverses geleid."
+    },
+    {
+        "type": "question",
+        "question": "Wat is Aducanumab en waarom is het controversieel?",
+        "answer": "Aducanumab is een antilichaam ontwikkeld tegen Alzheimer (1 point) om plaques in de hersenen te verminderen (1 point). Het is controversieel vanwege de onderzoeksresultaten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "De geschiedenis van Aducanumab",
+        "text": "Aducanumab is een antilichaam dat oorspronkelijk werd geprezen na zijn ontdekking in 2016. Echter, in 2019 ontstonden er twijfels over de effectiviteit ervan, wat uiteindelijk leidde tot de terugtrekking van het medicijn van de Europese markt in 2021. Studenten zullen de werking van het antilichaam en de invloed op het ziekteproces leren begrijpen."
+    },
+    {
+        "type": "question",
+        "question": "Wat was de ontwikkelingsgeschiedenis van Aducanumab en wat gebeurde er uiteindelijk in 2021?",
+        "answer": "Aducanumab werd aanvankelijk geprezen na ontdekking in 2016 (1 point), maar in 2019 rezen er twijfels over de effectiviteit (1 point), wat leidde tot de terugtrekking van het medicijn van de Europese markt in 2021 (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Ontwikkeling van Medicijnen en het Belang van Proceskennis",
+        "text": "Voor de ontwikkeling van medicijnen is het begrijpen van eiwitophoping en cellulaire mechanismen essentieel. Deze kennis is nodig om interventies te ontwerpen die kunnen helpen de progressie van ziekten te voorkomen of te vertragen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is kennis van eiwitophoping en cellulaire mechanismen belangrijk voor de ontwikkeling van medicijnen?",
+        "answer": "Kennis van eiwitophoping en cellulaire mechanismen is belangrijk (1 point) omdat het helpt bij het ontwerpen van interventies (1 point) die ziekteprogressie kunnen voorkomen of vertragen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitophoping en Microtubuli Transport",
+        "text": "Eiwitophoping kan problemen veroorzaken in cellulaire processen bij bepaalde ziektes. Een voorbeeld is het touw-eiwit, dat betrokken is bij het transport van blaasjes langs microtubuli in de cel. Fouten in dit proces kunnen leiden tot verstoringen in de normale werking van de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het gevolg van een abnormale ophoping van eiwitten zoals het touw-eiwit in cellen?",
+        "answer": "Een abnormale ophoping van eiwitten zoals het touw-eiwit kan leiden tot problemen in cellulaire processen (1 point), vooral in het transport van blaasjes langs microtubuli (1 point), wat verstoringen in de cel kan veroorzaken (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Rol van Motoreiwitten en Energievoorziening",
+        "text": "Motoreiwitten zijn verantwoordelijk voor het transport langs de microtubuli en gebruiken ATP als energiebron. Hun goede werking is cruciaal voor het in stand houden van gezonde cellulaire activiteit en het voorkomen van ziektes."
+    },
+    {
+        "type": "question",
+        "question": "Waarvoor zijn motoreiwitten verantwoordelijk en welke energiebron gebruiken ze?",
+        "answer": "Motoreiwitten zijn verantwoordelijk voor het transport langs de microtubuli (1 punt) en gebruiken ATP als energiebron (1 punt). Hun goede werking is essentieel voor het behoud van gezonde cellulaire activiteit (1 punt) en het voorkomen van ziektes (1 punt)."
+    },
+    {
+        "type": "info",
+        "title": "Verband Tussen Cellulaire Mechanismen en Ziektebeelden",
+        "text": "De colleges van Rob Schuurding hebben de relatie tussen cellulaire transportmechanismen en ziektebeelden benadrukt. Het inzicht in deze mechanismen is belangrijk voor het begrijpen van hoe ziektes ontstaan en hoe ze behandeld kunnen worden."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is inzicht in cellulaire mechanismen belangrijk volgens de colleges van Rob Schuurding?",
+        "answer": "Inzicht in cellulaire mechanismen is belangrijk voor het begrijpen van hoe ziektes ontstaan (1 point) en hoe ze behandeld kunnen worden (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitlocalisatie en Zijn Betekenis",
+        "text": "Eiwitlocalisatie verwijst naar de locatie van een eiwit binnen een cel, wat belangrijk is voor het begrijpen van de functie en interacties van het eiwit met andere cellulaire componenten. Als een eiwit niet op de juiste locatie is, kan dit leiden tot disfunctionele cellulaire processen en de ontwikkeling van ziekten."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is eiwitlocalisatie belangrijk?",
+        "answer": "Eiwitlocalisatie is belangrijk omdat het de functie en interacties van een eiwit be\u00efnvloedt (1 point). Fouten in de localisatie kunnen disfunctionele cellulaire processen veroorzaken en bijdragen aan ziekteontwikkeling (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwittransport en Celprocessen",
+        "text": "Eiwittransport is het proces waarbij eiwitten naar verschillende locaties binnen de cel worden verplaatst. Dit transport is cruciaal voor de regulering van celprocessen, omdat eiwitten zo op de juiste plaats hun specifieke functies kunnen uitvoeren."
+    },
+    {
+        "type": "question",
+        "question": "Wat is eiwittransport en waarom is het belangrijk?",
+        "answer": "Eiwittransport is het proces waarbij eiwitten naar verschillende locaties binnen de cel worden verplaatst (1 point). Het is belangrijk omdat het ervoor zorgt dat eiwitten hun functies op de juiste plaats kunnen uitvoeren, wat essentieel is voor de regulering van celprocessen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwittransport",
+        "text": "Eiwittransport is een cruciaal proces in cellen dat betrokken is bij het verplaatsen van eiwitten naar verschillende delen binnen en buiten de cel. Dit proces is essentieel voor de celbiologie en draagt bij aan de functie en regulatie van cellulaire activiteiten. Het bouwt voort op het begrip van genetica, DNA, RNA, splicing, translatie en eiwitvouwing, met bijzondere aandacht voor ionenkanalen, eiwitlokalisatie en het transport van vesicles."
+    },
+    {
+        "type": "question",
+        "question": "Wat is eiwittransport en waarom is het belangrijk?",
+        "answer": "Eiwittransport is het proces van het verplaatsen van eiwitten binnen en buiten de cel (1 point). Het is belangrijk omdat het bijdraagt aan de celbiologie en de regulatie van cellulaire functies (1 point), en het volgt op de kennis van genetica, DNA, RNA, en eiwitvouwing (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Translatie",
+        "text": "Translatie is het proces waarbij cellulaire ribosomen eiwitketens synthetiseren vanuit messenger RNA (mRNA) sequenties. Dit is een cruciale stap in het gebruik van genetische informatie uit DNA om functionele eiwitten te maken."
+    },
+    {
+        "type": "question",
+        "question": "Wat is translatie in de context van genexpressie?",
+        "answer": "Translatie is het proces (1 punt) waarbij eiwitketens worden gesynthetiseerd (1 punt) door ribosomen (1 punt) uit messenger RNA (mRNA) sequenties (1 punt)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitvouwing",
+        "text": "Eiwitvouwing is het proces waarbij een polypeptideketen zijn driedimensionale structuur aanneemt, die essentieel is voor zijn functionele activiteit. Onjuiste vouwing kan leiden tot ziekten zoals Alzheimer en cystische fibrose."
+    },
+    {
+        "type": "question",
+        "question": "Wat is eiwitvouwing en waarom is het belangrijk?",
+        "answer": "Eiwitvouwing is het proces (1 punt) waarbij een polypeptideketen zijn driedimensionale structuur aanneemt (1 punt), wat essentieel is voor zijn functionele activiteit (1 punt). Onjuiste vouwing kan leiden tot ziekten (1 punt)."
+    },
+    {
+        "type": "info",
+        "title": "Translatie van eiwitten",
+        "text": "Translatie van eiwitten is het proces waarbij cellulaire ribosomen aminozuurketens assembleren in een specifieke volgorde, zoals gedicteerd door de genetische informatie in een mRNA-molecuul, om een eiwit te vormen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de translatie van eiwitten?",
+        "answer": "De translatie van eiwitten is het proces (1 point) waarbij ribosomen aminozuurketens assembleren (1 point) gebaseerd op de volgorde in een mRNA-molecuul (1 point) om een eiwit te vormen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitvouwing",
+        "text": "Eiwitvouwing is het proces waarbij een eiwit zijn driedimensionale structuur aanneemt, welke essentieel is voor zijn functie. Chaperone-eiwitten helpen bij het correct vouwen van eiwitten om functionele misvorming te voorkomen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is eiwitvouwing en welke rol spelen chaperone-eiwitten?",
+        "answer": "Eiwitvouwing is het proces (1 point) waarbij een eiwit zijn driedimensionale structuur aanneemt (1 point), essentieel voor zijn functie (1 point). Chaperone-eiwitten helpen (1 point) bij het correct vouwen van eiwitten (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Ionenkanalen",
+        "text": "Ionenkanalen zijn eiwitten die specifieke pori\u00ebn vormen in de celmembranen en het transport van ionen tussen het intra- en extracellulaire milieu reguleren, wat cruciaal is voor verschillende cellulaire processen."
+    },
+    {
+        "type": "question",
+        "question": "Wat zijn ionenkanalen?",
+        "answer": "Ionenkanalen zijn eiwitten (1 point) die pori\u00ebn vormen in celmembranen (1 point) en het transport van ionen reguleren (1 point) tussen intra- en extracellulair milieu (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwitlokalisatie",
+        "text": "Eiwitlokalisatie is het proces waarbij eiwitten worden getransporteerd naar en geconcentreerd in specifieke delen van de cel, waar ze hun functies vervullen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is eiwitlokalisatie?",
+        "answer": "Eiwitlokalisatie is het proces (1 point) waarbij eiwitten worden getransporteerd naar (1 point) en geconcentreerd in specifieke delen van de cel (1 point), waar ze hun functies vervullen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Transporters en Ionenkanalen",
+        "text": "Transporters en ionenkanalen zijn cruciale structuren in de celmembranen die helpen bij het reguleren van het transport van stoffen de cel in en uit. Deze eiwitten zijn vooral belangrijk in de neurobiologie, waar ze een sleutelrol spelen in het transport over neuronale celmembranen en bijdragen aan de elektrische signalering in het zenuwstelsel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is het belang van transporters en ionenkanalen in de neurobiologie?",
+        "answer": "Transporters en ionenkanalen zijn belangrijk omdat ze het transport van stoffen over celmembranen reguleren (1 point), cruciaal zijn voor de elektrische signalering in het zenuwstelsel (1 point), en een sleutelrol spelen in neuronale celmembranen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Transporters en Ionenkanalen",
+        "text": "Transporters en ionenkanalen zijn eiwitten die het transport over celmembranen mogelijk maken. Ze zijn essentieel voor de cellulaire homeostase en signaaloverdracht, en komen in vele vormen voor."
+    },
+    {
+        "type": "question",
+        "question": "Wat zijn transporters en ionenkanalen en waarom zijn ze belangrijk?",
+        "answer": "Transporters en ionenkanalen zijn eiwitten (1 point) die transport over celmembranen mogelijk maken (1 point). Ze zijn van groot belang voor cellulaire homeostase (1 point) en signaaloverdracht (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Eiwittransport",
+        "text": "Eiwittransport is cruciaal voor het functioneren van cellen, omdat het zorgt voor de noodzakelijke verplaatsing van moleculen en ionen door celmembranen heen, wat belangrijk is voor processen zoals voedingsopname, afvalverwijdering en signaaloverdracht."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is eiwittransport belangrijk voor cellen?",
+        "answer": "Eiwittransport is belangrijk voor het verplaatsen van moleculen en ionen door celmembranen (1 point), wat noodzakelijk is voor voedingsopname (1 point), afvalverwijdering (1 point) en signaaloverdracht (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Eiwittransport",
+        "text": "Eiwittransport is van groot belang voor het begrijpen van fundamentele processen in cellen en heeft implicaties in de biomedische wetenschappen. Het is essentieel voor de ontwikkeling van nieuwe therapie\u00ebn en medicijnen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is eiwittransport belangrijk?",
+        "answer": "Eiwittransport is belangrijk voor het begrijpen van basale celprocessen (1 point) en heeft implicaties in de biomedische wetenschappen (1 point), wat essentieel is voor de ontwikkeling van nieuwe therapie\u00ebn en geneesmiddelen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Celmembranen en Transportmechanismen",
+        "text": "Cellen gebruiken diverse mechanismen om stoffen over hun membranen te transporteren, wat cruciaal is voor het behouden van de juiste homeostase en functie van de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat is de functie van transportmechanismen in celmembranen?",
+        "answer": "Transportmechanismen in celmembranen zijn cruciaal voor het transporteren van stoffen (1 point) wat nodig is voor het behouden van de juiste celhomeostase (1 point) en functie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Transporters",
+        "text": "Transporters are proteins that move specific molecules or ions across the cell membrane. They can function as pumps that use energy to transport substances against their concentration gradient, which is essential for cellular processes."
+    },
+    {
+        "type": "question",
+        "question": "What are transporters and what role do they play in cells?",
+        "answer": "Transporters are proteins (1 point) that move specific molecules or ions (1 point) across the cell membrane (1 point). They can function as pumps using energy (1 point) to transport substances against their concentration gradient (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Kanalen",
+        "text": "Kanalen zijn structuren in het celmembraan die als pori\u00ebn functioneren waardoor ionen en moleculen kunnen diffunderen. Deze kanalen kunnen gereguleerd worden en spelen een rol in het handhaven van de ionenbalans binnen en buiten de cel."
+    },
+    {
+        "type": "question",
+        "question": "Wat zijn kanalen in de context van celmembranen?",
+        "answer": "Kanalen zijn structuren in het celmembraan (1 point) die als pori\u00ebn functioneren (1 point) waardoor ionen en moleculen kunnen diffunderen (1 point). Ze kunnen gereguleerd worden (1 point) en zijn belangrijk voor de ionenbalans binnen en buiten de cel (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Exchange Eiwitten (Exchangers)",
+        "text": "Exchange eiwitten, bekend als exchangers, zoals het natrium-kaliumpompmolecuul, zijn gespecialiseerd in het uitwisselen van \u00e9\u00e9n type ion voor een ander over het celmembraan. Dit proces is cruciaal voor het behouden van de elektrochemische gradi\u00ebnt over de celmembraan."
+    },
+    {
+        "type": "question",
+        "question": "Wat doen exchange eiwitten?",
+        "answer": "Exchange eiwitten zijn gespecialiseerd in het uitwisselen van \u00e9\u00e9n type ion voor een ander over het celmembraan (1 point), wat essentieel is voor het behouden van de elektrochemische gradi\u00ebnt (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Ionen in Cellen",
+        "text": "Ionen zoals natrium, kalium, calcium en chloride zijn cruciaal voor de werking van cellen. Ze zijn essentieel voor het genereren van actiepotentialen, het reguleren van het celvolume en bij signaaltransductie. De concentratie van deze ionen in en buiten de cel heeft een grote invloed op de activiteit en functie van de cel."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn ionen belangrijk voor cellulaire fysiologie?",
+        "answer": "Ionen zijn belangrijk voor cellulaire fysiologie omdat ze een rol spelen in het genereren van actiepotentialen (1 point), celvolume-regulatie (1 point) en signaaltransductie (1 point). Hun concentratie be\u00efnvloedt de celactiviteit en -functie (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Natriumionen (Na+)",
+        "text": "Cellen hebben een specifieke ionische samenstelling waarbij de concentraties van bepaalde ionen binnen en buiten de cel verschillen. Natriumionen (Na+) zijn een voorbeeld van dergelijke ionen die essentieel zijn voor diverse cellulaire processen en worden vaak onderzocht in de biologie."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn natriumionen (Na+) belangrijk voor cellen?",
+        "answer": "Natriumionen (Na+) zijn belangrijk omdat ze deel uitmaken van de specifieke ionische samenstelling van cellen (1 point) en essentieel zijn voor diverse cellulaire processen (1 point), zoals het handhaven van het celmembraanpotentiaal en het aandrijven van de natrium-kaliumpomp (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Natriumionen",
+        "text": "Natriumionen zijn in lage concentraties aanwezig in het cytoplasma van cellen, maar in hoge concentraties buiten de cel. Dit ion speelt een cruciale rol in de transportfuncties van cellen."
+    },
+    {
+        "type": "question",
+        "question": "Waar zijn natriumionen voornamelijk geconcentreerd in relatie tot cellen, en welke rol spelen ze?",
+        "answer": "Natriumionen zijn in hoge concentraties buiten de cel (1 point) en in lage concentraties in het cytoplasma (1 point). Ze spelen een cruciale rol in de transportfuncties van cellen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Kaliumionen",
+        "text": "Kaliumionen bevinden zich in hoge concentraties in het cytoplasma en in lage concentraties buiten de cel. Kalium is essentieel voor het handhaven van de celmembraanpotentiaal."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn kaliumionen belangrijk voor cellen?",
+        "answer": "Kaliumionen zijn belangrijk omdat ze in hoge concentraties in het cytoplasma aanwezig zijn (1 point) en essentieel zijn voor het handhaven van de celmembraanpotentiaal (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Chloride Ions",
+        "text": "Chloride ions, similar to sodium ions, are more concentrated outside the cell than inside. They play a role in maintaining the osmotic pressure and electrical balance of the cell."
+    },
+    {
+        "type": "question",
+        "question": "What role do chloride ions play in cells?",
+        "answer": "Chloride ions are involved in maintaining the osmotic pressure (1 point) and the electrical balance (1 point) of the cell, and they are more concentrated outside the cell than inside (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Calcium Ions (Ca2+) and Magnesium Ions (Mg2+)",
+        "text": "Calcium ions (Ca2+) and magnesium ions (Mg2+) are essential minerals found within the body that have various functions including muscle contraction, nerve function, and bone strength."
+    },
+    {
+        "type": "question",
+        "question": "What are the functions of calcium ions (Ca2+) and magnesium ions (Mg2+) in the body?",
+        "answer": "Calcium ions (Ca2+) are important for muscle contraction (1 point), nerve function (1 point), and bone strength (1 point). Magnesium ions (Mg2+) also contribute to these functions and are essential for overall cellular metabolism (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Calcium and Magnesium as Ions for Cellular Functions",
+        "text": "Calcium and magnesium are important ions that play crucial roles in cellular functions. While their exact concentrations are not detailed, their presence in cells is essential for various physiological processes."
+    },
+    {
+        "type": "question",
+        "question": "Why are calcium and magnesium important for cells?",
+        "answer": "Calcium and magnesium are important because they are ions (1 point) that play crucial roles in cellular functions (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Negatively Charged Ions in the Cell",
+        "text": "Negatively charged ions within a cell, often referred to as anions, are essential for maintaining the cell's electrical balance and are involved in various cellular activities such as nutrient transport and enzyme activity."
+    },
+    {
+        "type": "question",
+        "question": "What is the role of negatively charged ions in the cell?",
+        "answer": "Negatively charged ions, or anions, help maintain the cell's electrical balance (1 point) and are involved in activities like nutrient transport and enzyme activity (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Ionisch Onderzoek",
+        "text": "Ionisch onderzoek is van groot belang omdat de cellen negatief geladen bouwstoffen en andere stoffen bevatten die essentieel zijn voor de cellulaire chemie en stofwisseling. Deze negatief geladen ionen spelen een significante rol in de processen die continu binnen de cel plaatsvinden."
+    },
+    {
+        "type": "question",
+        "question": "Waarom is ionisch onderzoek belangrijk voor cellen?",
+        "answer": "Ionisch onderzoek is belangrijk omdat het inzicht geeft in de rol van negatief geladen ionen (1 point) die essentieel zijn voor de cellulaire chemie en stofwisseling (1 point) en die voortdurend veranderen binnen de celprocessen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Belang van Protonen in Cellulaire Processen",
+        "text": "Protonen spelen een cruciale rol in de cel door het reguleren van de lading binnen en buiten de cel, wat direct invloed heeft op de pH-waarde. Door de pH te reguleren, be\u00efnvloeden protonen een veelvoud aan biologische processen die essentieel zijn voor het functioneren van de cel."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn protonen belangrijk voor cellulaire processen?",
+        "answer": "Protonen zijn belangrijk omdat ze de lading binnen en buiten de cel reguleren (1 punt), wat invloed heeft op de pH-waarde (1 punt). Dit be\u00efnvloedt vervolgens vele biologische processen die essentieel zijn voor het functioneren van de cel (1 punt)."
+    },
+    {
+        "type": "info",
+        "title": "Noodzaak van Transporters",
+        "text": "Transporters zijn noodzakelijk omdat niet alle stoffen van nature door het celmembraan kunnen diffunderen. Sommige stoffen kunnen niet vrijelijk door het membraan bewegen vanwege concentratieverschillen binnen en buiten de cel, die niet alleen door diffusie opgeheven kunnen worden. Transporters helpen bij het verplaatsen van deze stoffen."
+    },
+    {
+        "type": "question",
+        "question": "Waarom zijn transporters noodzakelijk voor cellen?",
+        "answer": "Transporters zijn noodzakelijk omdat niet alle stoffen natuurlijk kunnen diffunderen door het celmembraan (1 point) en er concentratieverschillen zijn die niet alleen door diffusie opgeheven kunnen worden (1 point). Ze helpen bij het verplaatsen van stoffen die niet vrijelijk door het membraan kunnen bewegen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Diffusie door het Cel Membraan",
+        "text": "De celmembraan, bestaande uit een lipide bilayer, staat slechts bepaalde stoffen toe om erdoorheen te diffunderen. Hydrofobe moleculen zoals zuurstof (O2), koolstofdioxide (CO2) en stikstof (N2), ondanks dat ze gasvormig zijn, kunnen relatief eenvoudig door de lipide membraan diffunderen vanwege hun hydrofobe eigenschappen."
+    },
+    {
+        "type": "question",
+        "question": "Hoe kunnen hydrofobe moleculen zoals O2, CO2, en N2 door het celmembraan diffunderen?",
+        "answer": "Hydrofobe moleculen zoals O2, CO2, en N2 kunnen door het celmembraan diffunderen omdat ze (1 point) relatief eenvoudig door de lipide bilayer kunnen gaan (1 point) vanwege hun hydrofobe eigenschappen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Doorgang van Hormonen",
+        "text": "Stero\u00efde hormonen, die hydrofoob zijn, kunnen gemakkelijk de celmembraan binnendringen en verlaten. Dit toont aan dat de celmembraan selectief permeabel is, wat betekent dat het bepaalde moleculen toestaat om op natuurlijke wijze binnen te komen en de cel te verlaten."
+    },
+    {
+        "type": "question",
+        "question": "Hoe kunnen stero\u00efde hormonen de celmembraan binnendringen en verlaten?",
+        "answer": "Stero\u00efde hormonen kunnen gemakkelijk de celmembraan binnendringen en verlaten omdat ze hydrofoob zijn (1 point) en omdat de celmembraan selectief permeabel is (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Permeabiliteit van Membraan voor Verschillende Stoffen",
+        "text": "De permeabiliteit van de celmembraan staat bepaalde moleculen toe om op natuurlijke wijze binnen te komen en de cel te verlaten. Dit is een illustratie van de selectieve permeabiliteit, waarbij de membraan sommige stoffen doorlaat en andere niet, afhankelijk van verschillende factoren zoals grootte, lading en oplosbaarheid."
+    },
+    {
+        "type": "question",
+        "question": "Wat betekent de selectieve permeabiliteit van de celmembraan?",
+        "answer": "De selectieve permeabiliteit van de celmembraan betekent dat de membraan sommige moleculen wel doorlaat (1 point) en andere niet (1 point), gebaseerd op eigenschappen zoals grootte, lading en oplosbaarheid (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "De permeabiliteit van een membraan",
+        "text": "De permeabiliteit van een membraan verwijst naar het vermogen van verschillende stoffen om door het membraan te passeren zonder hulp. In een synthetische lipidenbilaag kunnen sommige moleculen zoals water en glycerol door het membraan heen, terwijl grotere moleculen zoals suiker en sucrose dit slechts in zeer beperkte mate kunnen. Geladen ionen kunnen in principe niet door een dergelijk lipide-alleen membraan heen."
+    },
+    {
+        "type": "question",
+        "question": "Wat betekent de permeabiliteit van een membraan?",
+        "answer": "De permeabiliteit van een membraan betekent het vermogen van stoffen om door het membraan te passeren zonder hulp (1 point). Kleine moleculen zoals water en glycerol kunnen door een synthetische lipidenbilaag heen (0.5 point), terwijl grotere moleculen zoals suiker en sucrose dit slechts beperkt kunnen (0.5 point). Geladen ionen kunnen niet door een lipide-alleen membraan heen (1 point)."
+    },
+    {
+        "type": "info",
+        "title": "Vergelijking tussen Synthetische en Biologische Membranen",
+        "text": "Synthetische en biologische membranen kunnen verschillen in hun permeabiliteit. Biologische membranen bevatten vaak extra structuren zoals eiwitkanalen en pompen die de doorlaatbaarheid van bepaalde stoffen be\u00efnvloeden, terwijl synthetische membranen dit meestal niet hebben. Hierdoor kunnen synthetische membranen minder selectief zijn in het toelaten van stoffen."
+    },
+    {
+        "type": "question",
+        "question": "Wat is een verschil tussen synthetische en biologische membranen?",
+        "answer": "Biologische membranen hebben structuren zoals eiwitkanalen en pompen die hun permeabiliteit be\u00efnvloeden (1 point), terwijl synthetische membranen deze meestal niet hebben en daardoor minder selectief kunnen zijn in het toelaten van stoffen (1 point)."
+    }
+    ]
+}
