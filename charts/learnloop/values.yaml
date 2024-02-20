@@ -1,0 +1,15 @@
+hostname: learnloop.local
+ingressClass: nginx
+image: learnloop
+tag: latest
+
+azure:
+  keyvaultName: keyvaultName
+  resourceGroup: resourceGroupName
+  subscriptionId: subscriptionId
+  tenantId: tenantId
+  clientId: clientId
+  identityName: identityName
+  secrets:
+    - name: learnloop-connection-string
+      key: CONNECTIONSTRING # TODO: check this and add other secrets
