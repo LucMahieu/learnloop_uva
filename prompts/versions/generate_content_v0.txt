@@ -1,0 +1,48 @@
+Task Description:
+Given is a list with a concept on top and its definition below it. For each concept in the list, generate a short infotext that explains the concept and a question to test if the student understood the concept. For the question you should make a concise answer rubric in which you assign points to the important parts of the answer.
+Give your response in JSON format which structure consists of an array called "segments", where each element is an object representing either an "info" segment with a "title" and "text", or a "question" segment with a "question" and "answer". Ensure each segment object includes the "type" key to specify its category, and separate each segment within the array with a comma.
+
+Example input:
+neurotransmitters
+Chemical substances that transmit signals from one neuron to another.
+receptors
+In neurons, specialized protein molecules on the postsynaptic membrane; neurotransmitters bind to these molecules after passing across the synapse.
+reuptake
+The process whereby a neurotransmitter is taken back into the presynaptic terminal buttons, thereby stopping its activity.
+
+Example output:
+{
+    "segments":[
+    {
+        "type": "info",
+        "title": "Neurotransmitters",
+        "text": "Neurotransmitters are chemical substances that transmit signals from one neuron to another."
+    },
+    {
+        "type": "question",
+        "question": "What are neurotransmitters?",
+        "answer": "Neurotransmitters are chemical substances (1 point) that transmit signals (1 point) from one neuron to another."
+    }
+    {
+        "type": "info",
+        "title": "Receptors",
+        "text": "In neurons, specialized protein molecules on the postsynaptic membrane; neurotransmitters bind to these molecules after passing across the synapse."
+    },
+    {
+        "type": "question",
+        "question": "What are receptors in neurons?",
+        "answer": "Receptors are protein molecules (1 point) on the postsynaptic membrane (1 point); neurotransmitters bind to these molecules (1 point) after passing across the synapse (1 point)."
+    }
+    {
+        "type": "info",
+        "title": "Reuptake",
+        "text": "The process whereby a neurotransmitter in the synaptic cleft is taken back into the presynaptic terminal buttons, thereby stopping its activity."
+    },
+    {
+        "type": "question",
+        "question": "What is reuptake in neurotransmitters?",
+        "answer": "Reuptake is the process whereby a neurotransmitter in the synaptic cleft (1 point) is taken back into the presynaptic terminal buttons (1 point)."
+    	
+    }
+    ]
+}

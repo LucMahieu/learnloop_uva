@@ -7,7 +7,7 @@ Interacties tussen moleculen die leiden tot specifieke functionele uitkomsten bi
 Moleculaire biologie
 De tak van de biologie die zich bezighoudt met de structuur, functie en interacties van biologische macromoleculen.
 
-Eiwitten 
+Eiwitten
 Grote, complexe moleculen die essenti�le functies in de cel uitvoeren, zoals katalyseren van chemische reacties (enzymen), signaaloverdracht en transport.
 
 Eiwitlokalisatie

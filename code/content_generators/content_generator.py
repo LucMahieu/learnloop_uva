@@ -68,6 +68,27 @@ class Module:
             json.dump(content, f, indent=4)
 
 
+    def read_txt(self, file_path):
+        with open(f"{file_path}.txt", "r") as f:
+            return f.read()
+    
+
+    def append_to_txt(self, string, file_path):
+        """Appends a string to a txt file."""
+        with open(f"{file_path}.txt", "a") as f:
+            f.write(f"\n\n{string}")
+
+
+    def create_user_message(self, input):
+        user_message = f"""
+        Input:
+        {input}
+
+        Output:
+        """
+        return user_message
+
+
     def generate_glossary(self):
         """Generates a glossary of topics from the lecture transcript and stores 
         them in a text file for further processing."""
@@ -120,27 +141,6 @@ class Module:
 
             # Export the json response to a json file
             self.add_response_to_json_file(json_response, export_path=content_path, module_name=self.module_name) #TODO: Change module name to be variable
-
-
-    def read_txt(self, file_path):
-        with open(f"{file_path}.txt", "r") as f:
-            return f.read()
-    
-
-    def append_to_txt(self, string, file_path):
-        """Appends a string to a txt file."""
-        with open(f"{file_path}.txt", "a") as f:
-            f.write(f"\n\n{string}")
-
-
-    def create_user_message(self, input):
-        user_message = f"""
-        Input:
-        {input}
-
-        Output:
-        """
-        return user_message
     
 
     def clean_transcript(self):
@@ -148,7 +148,6 @@ class Module:
         the information into a textbook like format."""
 
         system_message = self.read_txt("./prompts/clean_transcript")
-        # raw_transcript = self.read_txt(f"./raw_materials/{self.module_name}")
         raw_transcript = self.read_txt(f"./clean_materials/results/{self.module_name}_v4") #TODO: Make universal
 
         # Divides the raw transcript into batches because of limited context window of GPT models
@@ -164,6 +163,7 @@ class Module:
         """Removes practical information from the transcript and turns
         the information."""
 
+        # Load prompt and materials
         system_message = self.read_txt("./prompts/remove_practical_info")
         raw_transcript = self.read_txt(f"./raw_materials/{self.module_name}")
 
@@ -171,6 +171,7 @@ class Module:
         for i, batch in enumerate(self.batch_generator(raw_transcript, batch_size=10)):
             print(f"Removing practical info from transcript for batch {i + 1}")
 
+            # Format material batch as user message
             user_message = self.create_user_message(batch)
             response = self.openai_call(system_message, user_message, model='gpt-4-1106-preview', temp=0.7)
             self.append_to_txt(response, f"./clean_materials/{self.module_name}")

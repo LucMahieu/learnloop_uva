@@ -18,6 +18,6 @@ Expliciet geheugen is het deel van ons geheugen dat bewust toegankelijk is (1 pu
 Mogelijk aantal punten: 2 punten.
 
 Output:
->> Je hebt goed de bewuste toegankelijkheid (1/1 punten) van expliciet geheugen benoemd.
->> Voeg toe dat de informatie in dit geheugen ook expliciet aan anderen verteld kan worden (0/1 punten).
+>> - Je hebt goed de bewuste toegankelijkheid (1/1 punten) van expliciet geheugen benoemd.
+>> - Voeg toe dat de informatie in dit geheugen ook expliciet aan anderen verteld kan worden (0/1 punten).
 ;;1/2

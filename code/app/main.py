@@ -60,7 +60,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./prompts/system_role_prompt.txt", "r") as f:
+        with open("./prompts/feedback_prompt.txt", "r") as f:
             role_prompt = f.read()
 
         response = client.chat.completions.create(
