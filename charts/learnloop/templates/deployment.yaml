@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learnloop
+  namespace: "{{ .Release.Namespace }}"
+spec:
+  selector:
+    matchLabels:
+      app: learnloop
+  replicas: 1
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        app: learnloop
+    spec:
+      containers:
+        - name: learnloop
+          image: "{{ .Values.image }}:{{ .Values.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+            - secretRef:
+                name: learnloop-secret
+          {{- if .Values.azure }}
+          volumeMounts:
+            - name: secrets-store-inline
+              mountPath: "/etc/secrets"
+              readOnly: true
+          {{- end }}
+
+      {{- if .Values.azure }}
+      volumes:
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "learnloop-secretproviderclass"
+      {{- end }}
