@@ -475,6 +475,9 @@ def select_page_type():
 
 
 def initialise_session_states():
+    if 'username' not in st.session_state:
+        st.session_state.username = None
+    
     if 'old_page' not in st.session_state:
         st.session_state.old_page = None
 
@@ -636,6 +639,10 @@ def fetch_username():
     st.session_state.username = user_doc['username']
 
 
+def invalidate_nonce():
+    db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
+
+
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
@@ -648,8 +655,9 @@ if __name__ == "__main__":
     if nonce is None: # TODO: refactor all these if statements into more modular design
         st.markdown("Klik [hier](http://localhost:3000/) om in te loggen.")
     else:
-
-        fetch_username()
+        if st.session_state.username is None:
+            fetch_username()
+            invalidate_nonce()
 
         # Determine the modules of the current course
         if st.session_state.modules == []:
