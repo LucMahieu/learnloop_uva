@@ -5,13 +5,17 @@ import streamlit as st
 
 @st.cache_resource
 def init_connection(username, password, host):
-    uri = f"mongodb+srv://{username}:{password}@{host}/?retryWrites=true&w=majority"
-    # Create a new client and connect to the server
+    # Aangepast om SSL en andere CosmosDB-specifieke parameters te gebruiken
+    uri = (f"mongodb://{username}:{password}@{host}/?ssl=true"
+           "&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000"
+           "&appName=@learnloop-test@")
+    
+    print(f"This is the URI: {uri}")
+    
     client = MongoClient(uri, server_api=ServerApi('1'))
     
-    # Send a ping to confirm a successful connection
     try:
-        client.admin.command('Ping')
+        client.admin.command('ping')
         print("Pinged your deployment. You successfully connected to MongoDB!")
         return client
     except Exception as e:

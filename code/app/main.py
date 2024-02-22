@@ -5,6 +5,8 @@ import os
 import database as database
 import json
 from openai import OpenAI
+from pymongo import MongoClient
+import certifi
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -14,19 +16,11 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 client = OpenAI()
 
-# Connect database
-mongo_host = os.getenv('MONGO_HOST')
-mongo_username = os.getenv('MONGO_USERNAME')
-mongo_password = os.getenv('MONGO_PASSWORD')
+COSMOS_URI = os.getenv('COSMOS_URI')
+client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 
-try:
-    db_client = database.init_connection(host=mongo_host, username=mongo_username, password=mongo_password)
-    print('Succesfully initialised db connection')
-except Exception as e:
-    print(f"Kan db_client niet initialiseren: {e}")
-    db_client = None
-
-db = db_client.LearnLoop
+db = client.LearnLoop
+user_doc = db.users.find_one({"username": "flower2960"})
 
 
 def upload_progress():
@@ -588,11 +582,16 @@ def initialise_database():
     """
     Initialise the progress object with the modules and phases in the database.
     """
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$set": {"authenticated": True}}
+    )
+
     for module in st.session_state.modules:
         db.users.update_one(
             {"username": st.session_state.username},
-            {"$set": {
-                f"progress.{module}": {
+            {"$set":
+             {f"progress.{module}": {
                     "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
                     "practice": {"segment_index": -1,
                                  "ordered_segment_sequence": [],
@@ -606,7 +605,10 @@ def determine_if_to_initialise_database():
     Determine if currently testing, if the progress is saved, or if all modules are included
     and if so, reset db when reloading webapp.
     """
-    user = db.users.find_one({"username": st.session_state.username})
+    user_exists = db.users.find_one({"username": st.session_state.username})
+
+    if not user_exists:
+        db.users.insert_one({"username": st.session_state.username})
 
     if st.session_state.currently_testing:
         if 'reset_db' not in st.session_state:
@@ -617,6 +619,8 @@ def determine_if_to_initialise_database():
             initialise_database()
             return
             
+    user = db.users.find_one({"username": st.session_state.username})
+    
     if "progress" not in user:
             initialise_database()
             return
@@ -627,34 +631,45 @@ def determine_if_to_initialise_database():
             return
 
 
+def fetch_username():
+    user_doc = db.users.find_one({'nonce': st.query_params.nonce})
+    st.session_state.username = user_doc['username']
+
+
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 6, 1])
     
     initialise_session_states()
-    
-    # Determine the modules of the current course
-    if st.session_state.modules == []:
-        determine_modules()    
-    
-    render_sidebar()
 
-    st.session_state.username = "flower2960" # TODO: Hardcoded username should be replaced with ID system of SURFconext
-
-    if st.session_state.selected_module is None:         
-        # Automatically start the first module if no module is selected           
-        st.session_state.selected_module = st.session_state.modules[0] # TODO: this should start at the module where the student left off instead of the first module
-        st.session_state.selected_phase = 'learning'
-        
-        # Rerun to make sure the page is displayed directly after start button is clicked
-        st.rerun()
+    # Check if user is logged in and if not, go to surfconext log on
+    nonce = st.query_params.get('nonce', None)
+    if nonce is None: # TODO: refactor all these if statements into more modular design
+        st.markdown("Klik [hier](http://localhost:3000/) om in te loggen.")
     else:
-        # Turn on to reset db every time the webapp is loaded
-        # and to prevent openai calls (reduce cost & time to develop)
-        st.session_state.currently_testing = False
 
-        # Only (re-)initialise if user is new or when testing is on
-        determine_if_to_initialise_database()
+        fetch_username()
 
-        select_page_type()
+        # Determine the modules of the current course
+        if st.session_state.modules == []:
+            determine_modules()
+        
+        render_sidebar()
+
+        if st.session_state.selected_module is None:         
+            # Automatically start the first module if no module is selected           
+            st.session_state.selected_module = st.session_state.modules[0] # TODO: this should start at the module where the student left off instead of the first module
+            st.session_state.selected_phase = 'learning'
+            
+            # Rerun to make sure the page is displayed directly after start button is clicked
+            st.rerun()
+        else:
+            # Turn on to reset db every time the webapp is loaded
+            # and to prevent openai calls (reduce cost & time to develop)
+            st.session_state.currently_testing = False
+
+            # Only (re-)initialise if user is new or when testing is on
+            determine_if_to_initialise_database()
+
+            select_page_type()
