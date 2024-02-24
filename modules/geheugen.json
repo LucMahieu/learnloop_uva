@@ -29,14 +29,38 @@
         },
         {
             "type": "question",
+            "question": "Test vraag over geheugen zonder image",
+            "answer": "Antwoord over geheugen..."
+        },
+        {
+            "type": "question",
             "question": "Test vraag over geheugen met image",
             "answer": "Antwoord over geheugen...",
             "image": "images/hoorcollege_2_tumbnail.jpg"
         },
         {
             "type": "question",
-            "question": "Test vraag over geheugen zonder image",
-            "answer": "Antwoord over geheugen..."
+            "question": "Example multiple choice question",
+            "answers": {
+                "correct_answer": "correct1",
+                "wrong_answers": [
+                    "wrong1",
+                    "wrong2",
+                    "wrong3"
+                ]
+            }
+        },
+        {
+            "type": "question",
+            "question": "Example multiple choice question 2",
+            "answers": {
+                "correct_answer": "correct1",
+                "wrong_answers": [
+                    "WRONG",
+                    "FOUT",
+                    "FAUX"
+                ]
+            }
         }
     ]
 }
