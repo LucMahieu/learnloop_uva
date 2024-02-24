@@ -16,8 +16,11 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
 openai_client = OpenAI()
 
-COSMOS_URI = os.getenv('COSMOS_URI')
-db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+# COSMOS_URI = os.getenv('COSMOS_URI')
+# db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+
+MONGO_URI = os.getenv('MONGO_DB')
+db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 db = db_client.LearnLoop
 user_doc = db.users.find_one({"username": "flower2960"})
@@ -650,34 +653,37 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
+    st.session_state.username = "flower2960"
+
+    # Put back to redirect user to login page
     # Check if user is logged in and if not, go to surfconext log on
-    nonce = st.query_params.get('nonce', None)
-    if nonce is None: # TODO: refactor all these if statements into more modular design
-        st.markdown("Klik [hier](http://localhost:3000/) om in te loggen.")
-    else:
-        if st.session_state.username is None:
-            fetch_username()
-            invalidate_nonce()
+    # nonce = st.query_params.get('nonce', None)
+    # if nonce is None: # TODO: refactor all these if statements into more modular design
+    #     st.markdown("Klik [hier](http://localhost:3000/) om in te loggen.")
+    # else:
+    #     if st.session_state.username is None:
+    # fetch_username()
+    # invalidate_nonce()
 
-        # Determine the modules of the current course
-        if st.session_state.modules == []:
-            determine_modules()
+    # Determine the modules of the current course
+    if st.session_state.modules == []:
+        determine_modules()
+    
+    render_sidebar()
+
+    if st.session_state.selected_module is None:         
+        # Automatically start the first module if no module is selected           
+        st.session_state.selected_module = st.session_state.modules[0] # TODO: this should start at the module where the student left off instead of the first module
+        st.session_state.selected_phase = 'learning'
         
-        render_sidebar()
+        # Rerun to make sure the page is displayed directly after start button is clicked
+        st.rerun()
+    else:
+        # Turn on to reset db every time the webapp is loaded
+        # and to prevent openai calls (reduce cost & time to develop)
+        st.session_state.currently_testing = False
 
-        if st.session_state.selected_module is None:         
-            # Automatically start the first module if no module is selected           
-            st.session_state.selected_module = st.session_state.modules[0] # TODO: this should start at the module where the student left off instead of the first module
-            st.session_state.selected_phase = 'learning'
-            
-            # Rerun to make sure the page is displayed directly after start button is clicked
-            st.rerun()
-        else:
-            # Turn on to reset db every time the webapp is loaded
-            # and to prevent openai calls (reduce cost & time to develop)
-            st.session_state.currently_testing = False
+        # Only (re-)initialise if user is new or when testing is on
+        determine_if_to_initialise_database()
 
-            # Only (re-)initialise if user is new or when testing is on
-            determine_if_to_initialise_database()
-
-            select_page_type()
+        select_page_type()
