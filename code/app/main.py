@@ -13,13 +13,13 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Create openai instance
 load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-client = OpenAI()
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
+openai_client = OpenAI()
 
 COSMOS_URI = os.getenv('COSMOS_URI')
-client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 
-db = client.LearnLoop
+db = db_client.LearnLoop
 user_doc = db.users.find_one({"username": "flower2960"})
 
 
@@ -57,7 +57,7 @@ def evaluate_answer():
         with open("./prompts/feedback_prompt.txt", "r") as f:
             role_prompt = f.read()
 
-        response = client.chat.completions.create(
+        response = openai_client.chat.completions.create(
             model="gpt-4-1106-preview",
             messages=[
                 {"role": "system", "content": role_prompt},
