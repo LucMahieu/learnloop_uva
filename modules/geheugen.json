@@ -20,6 +20,23 @@
             "type": "info",
             "title": "Episodisch geheugen",
             "text": "Episodisch geheugen is het geheugen voor persoonlijke ervaringen. Het is een van de twee belangrijkste soorten geheugen, naast semantisch geheugen, dat gaat over feitenkennis. Episodisch geheugen is een van de eerste soorten geheugen die we verliezen bij dementie."
+        },
+        {
+            "type": "info",
+            "title": "Test info with image",
+            "text": "Text die erbij hoort.",
+            "image": "images/hoorcollege_2_tumbnail.jpg"
+        },
+        {
+            "type": "question",
+            "question": "Test vraag over geheugen met image",
+            "answer": "Antwoord over geheugen...",
+            "image": "images/hoorcollege_2_tumbnail.jpg"
+        },
+        {
+            "type": "question",
+            "question": "Test vraag over geheugen zonder image",
+            "answer": "Antwoord over geheugen..."
         }
     ]
 }

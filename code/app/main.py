@@ -1,3 +1,4 @@
+import time
 import streamlit as st
 import re
 from dotenv import load_dotenv
@@ -194,6 +195,9 @@ def render_SR_nav_buttons():
 
 
 def render_explanation():
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path)
     with st.expander("Explanation"):
         st.markdown(st.session_state.segment_content['answer'])
 
@@ -252,11 +256,20 @@ def render_check_and_nav_buttons():
 def render_info():
     """Renders the info segment with title and text."""
     st.subheader(st.session_state.segment_content['title'])
+
+    # if the image directory is present in the JSON for this segment, then display the image
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path)
     st.write(st.session_state.segment_content['text'])
 
-
 def render_answerbox():
-    """Render a textbox in which the student can type their answer."""
+    # if the image directory is present in the JSON for this segment, then display the image
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path)
+
+    # Render a textbox in which the student can type their answer.
     st.text_area(label='Your answer', label_visibility='hidden', 
                 placeholder="Type your answer",
                 key='student_answer'
@@ -266,7 +279,9 @@ def render_answerbox():
 def render_question():
     """Function to render the question and textbox for the students answer."""
     st.subheader(st.session_state.segment_content['question'])
-
+    # if 'image' in st.session_state.segment_content:
+    #     image_path = st.session_state.segment_content['image']
+    #     st.image(image_path)
 
 def fetch_ordered_segment_sequence():
     """Fetches the practice segments from the database."""
