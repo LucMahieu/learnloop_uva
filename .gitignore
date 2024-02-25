@@ -1,5 +1,6 @@
 .env
 .streamlit/secrets.toml
+.vscode/launch.json
 **.py[cod]
 __pycache__/
 __pycache__/database.cpython-311.pyc
