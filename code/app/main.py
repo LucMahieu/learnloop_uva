@@ -299,14 +299,16 @@ def update_ordered_segment_sequence(ordered_segment_sequence):
 
 
 def add_to_practice_phase():
-    """Adds the current segment to the practice phase in the database if the score is lower than 100."""
-    # Store in variable for clarity
-    segment_index = st.session_state.segment_index
+    """
+    Adds the current segment to the practice phase in the database if the score is lower than 100.
+
+    """
     
     if score_to_percentage() < 100:
         fetch_ordered_segment_sequence()
         # Store in variable for clarity
         ordered_segment_sequence = st.session_state.ordered_segment_sequence
+        segment_index = st.session_state.segment_index
 
         if segment_index not in ordered_segment_sequence:
             ordered_segment_sequence.append(segment_index)
@@ -384,11 +386,11 @@ def render_learning_page():
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
                 with st.spinner("Een Large Language Model checkt je antwoord met het antwoordmodel. Twijfel je? Check de 'explanation' voor de juiste vergelijking."): 
-                    # evaluate_answer()
+                    evaluate_answer()
                     time.sleep(3)
-                # render_student_answer()
-                # render_feedback()
-                # add_to_practice_phase()
+                render_student_answer()
+                render_feedback()
+                add_to_practice_phase()
                 render_explanation()
                 render_navigation_buttons()
             else:
@@ -423,9 +425,13 @@ def render_learning_page():
             
             if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
                 st.success("✅ Correct!")
+                st.session_state.score = '1/1'
+            # if the score is not correct, the questions is added to the practice phase
             elif st.session_state.submitted:
                 st.error("❌ Incorrect. Try again.")
-            
+                st.session_state.score = '0/1'
+                add_to_practice_phase()
+
             # If no answer has been submitted, display a message
             if st.session_state.submitted == False:
                 st.write("Please select an answer above.")
@@ -497,11 +503,14 @@ def render_practice_page():
         render_progress_bar()
 
         # Determine what type of segment to display and render interface accordingly
+        # info_question
         if st.session_state.segment_content['type'] == 'info':
             render_info()
             render_navigation_buttons()
 
-        elif st.session_state.segment_content['type'] == 'question':
+        # open question
+        if (st.session_state.segment_content['type'] == 'question' and 
+        'answer' in st.session_state.segment_content):
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
@@ -518,6 +527,42 @@ def render_practice_page():
                     set_submitted_true()
                     st.rerun()
                 render_check_and_nav_buttons()
+
+        # MC Question
+        if (st.session_state.segment_content['type'] == 'question' and
+             'answers' in st.session_state.segment_content):
+            render_question()
+
+            correct_answer = st.session_state.segment_content['answers']['correct_answer']
+            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
+            
+            # Check if the answers have already been shuffled and stored
+            if st.session_state.shuffled_answers == None:
+                answers = [correct_answer] + wrong_answers
+                random.shuffle(answers)
+                st.session_state.shuffled_answers = answers
+            else:
+                answers = st.session_state.shuffled_answers
+                
+            if 'choosen_answer' not in st.session_state:
+                st.session_state.choosen_answer = None
+                
+            # Create a button for each answer
+            for i, answer in enumerate(answers):
+                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
+            
+            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
+                st.success("✅ Correct!")
+            # if the score is not correct, the questions is added to the practice phase
+            elif st.session_state.submitted:
+                st.error("❌ Incorrect. Try again.")
+
+            # If no answer has been submitted, display a message
+            if st.session_state.submitted == False:
+                st.write("Please select an answer above.")
+
+            #render the nav buttons
+            render_navigation_buttons()
 
 
 def select_page_type():
