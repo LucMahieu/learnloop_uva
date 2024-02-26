@@ -69,7 +69,6 @@ def evaluate_answer():
 
         response = openai_client.chat.completions.create(
             model="gpt-4-1106-preview",
-            # model='gpt-3.5-turbo',
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
@@ -220,10 +219,12 @@ def change_segment_index(step_direction):
     """Change the segment index based on the direction of step (previous or next)."""
     # Determine total length of module
     phase_length = determine_phase_length()
+    # 
     if st.session_state.segment_index + step_direction in range(phase_length):
         st.session_state.segment_index += step_direction
+    # If we are at the last page, we need to go to the final screen.
     elif st.session_state.segment_index == phase_length - 1:
-        st.session_state.segment_index = 0
+        st.session_state.segment_index = 100_000
     else:
         st.session_state.segment_index = phase_length - 1
 
@@ -355,11 +356,28 @@ def initialise_learning_page():
 
     if st.session_state.segment_index == -1: # If user never started this phase
         render_learning_explanation()
+    elif st.session_state.segment_index == 100_000: # if we are at the final screen
+        render_final_page()
     else:
         # Select the segment (with contents) that corresponds to the saved index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
         reset_submitted_if_page_changed()
 
+
+def reset_segment_index():
+    st.session_state.segment_index = 0
+    upload_progress()
+
+# render the page at the end of the learning phase (after the last question)
+# this page corresponds with 
+def render_final_page():
+    if st.session_state.selected_phase == 'learning':
+        st.write("This is the last page of the LEARNING PHASE")
+    else:
+        st.write("This is the last page of the PRACTICE PHASE")
+    st.button("Back to beginning", on_click=reset_segment_index)
+    # otherwise the progress bar and everything will get rendered
+    exit()
 
 def render_learning_page():
     """
@@ -477,6 +495,8 @@ def initialise_practice_page():
     if st.session_state.segment_index == -1:
         fetch_ordered_segment_sequence()
         render_practice_explanation()
+    elif st.session_state.segment_index == 100_000:
+        render_final_page()
     else:
         fetch_ordered_segment_sequence()
 
