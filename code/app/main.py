@@ -126,8 +126,8 @@ def render_feedback():
     feedback_html = f"<ul style='padding-left: 20px;'>{''.join(feedback_items)}</ul>"
 
     result_html = f"""
-    <div style='background-color: {color}; padding: 25px; margin-bottom: 15px; border-radius: 8px;'>
-        <h1 style='font-size: 40px; margin: 10px;'>{st.session_state.score}</h1>
+    <div style='background-color: {color}; padding: 15px; margin-bottom: 15px; border-radius: 8px;'>
+        <h1 style='font-size: 28px; margin: 7px; padding-top: 0; padding-bottom: 0;'>{st.session_state.score}</h1>
         {feedback_html}
     </div>
     """
@@ -220,7 +220,6 @@ def change_segment_index(step_direction):
     """Change the segment index based on the direction of step (previous or next)."""
     # Determine total length of module
     phase_length = determine_phase_length()
-
     if st.session_state.segment_index + step_direction in range(phase_length):
         st.session_state.segment_index += step_direction
     elif st.session_state.segment_index == phase_length - 1:
@@ -324,10 +323,7 @@ def add_to_practice_phase():
 
 
 def render_student_answer():
-    """Renders the student's answer."""
-    st.write('Your answer:')
-    st.write(st.session_state.student_answer)
-
+    st.info(f"Jouw antwoord: {st.session_state.student_answer}")
 
 def fetch_segment_index():
     """Fetch the last segment index from db"""
@@ -363,8 +359,6 @@ def initialise_learning_page():
         # Select the segment (with contents) that corresponds to the saved index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
         reset_submitted_if_page_changed()
-
-
 
 
 def render_learning_page():
