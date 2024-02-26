@@ -1,5 +1,6 @@
 import random
 import time
+import openai
 import streamlit as st
 import re
 from dotenv import load_dotenv
@@ -13,10 +14,14 @@ import certifi
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
+st.cache_data.clear()
+
 # Create openai instance
 load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
-openai_client = OpenAI()
+
+OPENAI_API_KEY = os.getenv('OPENAI_API')
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
+
 
 # COSMOS_URI = os.getenv('COSMOS_URI')
 # db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
@@ -64,6 +69,7 @@ def evaluate_answer():
 
         response = openai_client.chat.completions.create(
             model="gpt-4-1106-preview",
+            # model='gpt-3.5-turbo',
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
