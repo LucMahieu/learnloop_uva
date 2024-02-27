@@ -16,6 +16,11 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
 on_premise_testing = True # Set to true if IP adres is allowed by Gerrit
 
+# Settings
+st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
+on_premise_testing = True # Set to true if IP adres is allowed by Gerrit
+
+#trigger workflow
 # Create openai instance
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
