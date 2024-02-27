@@ -701,6 +701,7 @@ if __name__ == "__main__":
     elif st.session_state.username is None:
         fetch_username()
         invalidate_nonce()
+        st.rerun() # Needed, else it seems to get stuck here
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
