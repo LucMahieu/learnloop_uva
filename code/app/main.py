@@ -11,6 +11,7 @@ import certifi
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
+#trigger workflow
 # Create openai instance
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
