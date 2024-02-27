@@ -1,10 +1,11 @@
+import random
+import string
 from authlib.integrations.flask_client import OAuth
 from flask import Flask, url_for, redirect
 from dotenv import load_dotenv
 import os
 from pymongo import MongoClient
 import certifi
-import secrets
 
 load_dotenv()
 
@@ -56,9 +57,14 @@ def save_id_to_db(user_id):
     if not user:
         db.users.insert_one({"username": user_id})
     
+def generate_nonce(length=16):
+    """Generates a random sequence of values."""
+    characters = string.ascii_letters + string.digits
+    nonce = ''.join(random.choice(characters) for _ in range(length))
+    return nonce
 
 def save_nonce_to_db(user_id):
-    nonce = secrets.token_urlsafe(16)
+    nonce = generate_nonce(16)
     db.users.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
     return nonce
 
