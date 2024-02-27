@@ -7,17 +7,27 @@ import json
 from openai import OpenAI
 from pymongo import MongoClient
 import certifi
+import base64
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
+
+# Settings
+st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
+on_premise_testing = True # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
 openai_client = OpenAI()
 
-COSMOS_URI = os.getenv('COSMOS_URI')
-db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+# Database connection
+if on_premise_testing:
+    COSMOS_URI = os.getenv('COSMOS_URI')
+    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+else:
+    MONGO_URI = os.getenv('MONGO_DB')
+    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 db = db_client.LearnLoop
 user_doc = db.users.find_one({"username": "flower2960"})
@@ -214,7 +224,7 @@ def change_segment_index(step_direction):
     else:
         st.session_state.segment_index = phase_length - 1
 
-    # Prevent evaluating aswer when navigating to the next or previous segment 
+    # Prevent evaluating aswer when navigating to the next or previous segment
     st.session_state.submitted = False
     
     # Update database with new index
@@ -510,7 +520,7 @@ def initialise_session_states():
 
     if 'selected_module' not in st.session_state:
         st.session_state.selected_module = None
-
+    
     if 'modules' not in st.session_state:
         st.session_state.modules = []
 
@@ -537,12 +547,7 @@ def initialise_session_states():
 
 
 def render_logo():
-    """
-    Place logo in horizontal centre of sidebar with spacer column
-    """
-    spacer, image_col = st.columns([0.4, 1])
-    with image_col:
-        st.image('./images/logo.png', width=100)
+    st.image('./images/logo.png', width=100)
 
 
 def determine_modules(): #TODO: change the way the sequence of the modules is determined so it corresponds to the sequence of the course
@@ -566,7 +571,9 @@ def render_sidebar():
     Function to render the sidebar with the modules and login module.	
     """
     with st.sidebar:
-        render_logo()
+        spacer, image_col = st.columns([0.4, 1])
+        with image_col:
+            render_logo()
         st.sidebar.title("Modules")
 
         # Display the modules in expanders in the sidebar
@@ -643,6 +650,34 @@ def invalidate_nonce():
     db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
 
 
+def convert_image_base64(image_path):
+    """Converts image in working dir to base64 format so it is 
+    compatible with html."""
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+
+def render_login_page():
+    """This is the first page the user sees when visiting the website and 
+    prompts the user to login via SURFconext."""
+    columns = st.columns([1, 0.9, 1])
+    with columns[1]:
+        welcome_title = "Celbiologie - deel 2"
+        logo_base64 = convert_image_base64("./images/logo.png")
+        html_content = f"""
+        <div style='text-align: center; margin: 20px;'>
+            <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
+            <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
+            <a href="http://localhost:3000/" style="text-decoration: none;">
+                <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
+                text-align: center; text-decoration: none; display: block; width: 100%; margin: \
+                4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
+            </a>
+        </div>"""
+
+        st.markdown(html_content, unsafe_allow_html=True)
+
+
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
@@ -650,15 +685,19 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    # Check if user is logged in and if not, go to surfconext log on
-    nonce = st.query_params.get('nonce', None)
-    if nonce is None: # TODO: refactor all these if statements into more modular design
-        st.markdown("Klik [hier](http://localhost:3000/) om in te loggen.")
-    else:
-        if st.session_state.username is None:
-            fetch_username()
-            invalidate_nonce()
+    st.session_state.username = "flower2960"
 
+    # Put back to redirect user to login page
+    # Check if user is logged in and if not, go to surfconext log on
+    if 'nonce' not in st.session_state:
+        st.session_state.nonce = st.query_params.get('nonce', None)
+    
+    if st.session_state.nonce is None:
+        render_login_page()
+    elif st.session_state.username is None:
+        fetch_username()
+        invalidate_nonce()
+    else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
             determine_modules()
@@ -673,10 +712,6 @@ if __name__ == "__main__":
             # Rerun to make sure the page is displayed directly after start button is clicked
             st.rerun()
         else:
-            # Turn on to reset db every time the webapp is loaded
-            # and to prevent openai calls (reduce cost & time to develop)
-            st.session_state.currently_testing = False
-
             # Only (re-)initialise if user is new or when testing is on
             determine_if_to_initialise_database()
 

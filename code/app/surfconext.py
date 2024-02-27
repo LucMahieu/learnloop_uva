@@ -1,11 +1,10 @@
-import random
-import string
 from authlib.integrations.flask_client import OAuth
 from flask import Flask, url_for, redirect
 from dotenv import load_dotenv
 import os
 from pymongo import MongoClient
 import certifi
+import secrets
 
 load_dotenv()
 
@@ -30,23 +29,6 @@ auth.register(
 
 
 @login_page.route('/')
-def home():
-    return '''
-    <html>
-        <head>
-            <title>Login Page</title>
-        </head>
-        <body>
-            <h1>Login Page</h1>
-            <form action="/login">
-                <input type="submit" value="Login with SURFconext">
-            </form>
-        </body>
-    </html>
-    '''
-
-
-@login_page.route('/login')
 def login():
     redirect_uri = url_for('authorize', _external=True)
     return auth.surfconext.authorize_redirect(redirect_uri)
@@ -57,14 +39,9 @@ def save_id_to_db(user_id):
     if not user:
         db.users.insert_one({"username": user_id})
     
-def generate_nonce(length=16):
-    """Generates a random sequence of values."""
-    characters = string.ascii_letters + string.digits
-    nonce = ''.join(random.choice(characters) for _ in range(length))
-    return nonce
 
 def save_nonce_to_db(user_id):
-    nonce = generate_nonce(16)
+    nonce = secrets.token_urlsafe(16)
     db.users.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
     return nonce
 
