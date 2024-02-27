@@ -9,8 +9,6 @@ load_dotenv()
 MONGO_URI = os.getenv('MONGO_DB')
 db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
-print(f"MONGO_URI: {MONGO_URI}")
-
 # Access the specific database and collection
 db = db_client.LearnLoop
 users_collection = db.users
@@ -23,4 +21,4 @@ if user_doc and 'progress' in user_doc:
     users_collection.update_one({"username": "flower2960"}, {"$unset": {"progress": ""}})
     print("Progress field removed.")
 else:
-    print("User field does not exist")
+    print("Progress field does not exist")
