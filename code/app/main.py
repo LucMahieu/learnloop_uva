@@ -69,7 +69,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./prompts/feedback_prompt.txt", "r") as f:
+        with open("./prompts/direct_feedback_prompt.txt", "r") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
