@@ -690,14 +690,13 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    st.session_state.username = "flower2960"
+    if not on_premise_testing:
+        st.session_state.username = "flower2960"
 
-    # Put back to redirect user to login page
-    # Check if user is logged in and if not, go to surfconext log on
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
     
-    if st.session_state.nonce is None:
+    if st.session_state.nonce is None and on_premise_testing:
         render_login_page()
     elif st.session_state.username is None:
         fetch_username()
