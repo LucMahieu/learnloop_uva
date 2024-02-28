@@ -1,3 +1,6 @@
+import random
+import time
+import openai
 import streamlit as st
 import re
 from dotenv import load_dotenv
@@ -23,8 +26,6 @@ on_premise_testing = True # Set to true if IP adres is allowed by Gerrit
 #trigger workflow
 # Create openai instance
 load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') # TODO: Clear the streamlit cache because currently the old api key is used
-openai_client = OpenAI()
 
 # Database connection
 if on_premise_testing:
@@ -33,6 +34,9 @@ if on_premise_testing:
 else:
     MONGO_URI = os.getenv('MONGO_DB')
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+
+OPENAI_API_KEY = os.getenv('OPENAI_API')
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 db = db_client.LearnLoop
 user_doc = db.users.find_one({"username": "flower2960"})
@@ -130,8 +134,8 @@ def render_feedback():
     feedback_html = f"<ul style='padding-left: 20px;'>{''.join(feedback_items)}</ul>"
 
     result_html = f"""
-    <div style='background-color: {color}; padding: 25px; margin-bottom: 15px; border-radius: 8px;'>
-        <h1 style='font-size: 40px; margin: 10px;'>{st.session_state.score}</h1>
+    <div style='background-color: {color}; padding: 15px; margin-bottom: 15px; border-radius: 8px;'>
+        <h1 style='font-size: 28px; margin: 7px; padding-top: 0; padding-bottom: 0;'>{st.session_state.score}</h1>
         {feedback_html}
     </div>
     """
@@ -206,6 +210,9 @@ def render_SR_nav_buttons():
 
 
 def render_explanation():
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path, use_column_width=True)
     with st.expander("Explanation"):
         st.markdown(st.session_state.segment_content['answer'])
 
@@ -221,17 +228,21 @@ def change_segment_index(step_direction):
     """Change the segment index based on the direction of step (previous or next)."""
     # Determine total length of module
     phase_length = determine_phase_length()
-
+    # 
     if st.session_state.segment_index + step_direction in range(phase_length):
         st.session_state.segment_index += step_direction
+    # If we are at the last page, we need to go to the final screen.
     elif st.session_state.segment_index == phase_length - 1:
-        st.session_state.segment_index = 0
+        st.session_state.segment_index = 100_000
     else:
         st.session_state.segment_index = phase_length - 1
 
     # Prevent evaluating aswer when navigating to the next or previous segment
     st.session_state.submitted = False
     
+    # Set the shuffled answers to None in case a new multiple choice question comes up
+    st.session_state.shuffled_answers = None
+
     # Update database with new index
     upload_progress()
 
@@ -264,11 +275,20 @@ def render_check_and_nav_buttons():
 def render_info():
     """Renders the info segment with title and text."""
     st.subheader(st.session_state.segment_content['title'])
+
+    # if the image directory is present in the JSON for this segment, then display the image
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path, use_column_width=True)
     st.write(st.session_state.segment_content['text'])
 
-
 def render_answerbox():
-    """Render a textbox in which the student can type their answer."""
+    # if the image directory is present in the JSON for this segment, then display the image
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        st.image(image_path, use_column_width=True)
+
+    # Render a textbox in which the student can type their answer.
     st.text_area(label='Your answer', label_visibility='hidden', 
                 placeholder="Type your answer",
                 key='student_answer'
@@ -278,7 +298,6 @@ def render_answerbox():
 def render_question():
     """Function to render the question and textbox for the students answer."""
     st.subheader(st.session_state.segment_content['question'])
-
 
 def fetch_ordered_segment_sequence():
     """Fetches the practice segments from the database."""
@@ -295,14 +314,16 @@ def update_ordered_segment_sequence(ordered_segment_sequence):
 
 
 def add_to_practice_phase():
-    """Adds the current segment to the practice phase in the database if the score is lower than 100."""
-    # Store in variable for clarity
-    segment_index = st.session_state.segment_index
+    """
+    Adds the current segment to the practice phase in the database if the score is lower than 100.
+
+    """
     
     if score_to_percentage() < 100:
         fetch_ordered_segment_sequence()
         # Store in variable for clarity
         ordered_segment_sequence = st.session_state.ordered_segment_sequence
+        segment_index = st.session_state.segment_index
 
         if segment_index not in ordered_segment_sequence:
             ordered_segment_sequence.append(segment_index)
@@ -312,10 +333,7 @@ def add_to_practice_phase():
 
 
 def render_student_answer():
-    """Renders the student's answer."""
-    st.write('Your answer:')
-    st.write(st.session_state.student_answer)
-
+    st.info(f"Jouw antwoord: {st.session_state.student_answer}")
 
 def fetch_segment_index():
     """Fetch the last segment index from db"""
@@ -339,17 +357,36 @@ def render_learning_explanation():
 
 
 def initialise_learning_page():
-    """Sets all session states to correspond with database."""
+    """
+    Sets all session states to correspond with database.
+    """
     # Fetch the last segment index from db
     st.session_state.segment_index = fetch_segment_index()
 
     if st.session_state.segment_index == -1: # If user never started this phase
         render_learning_explanation()
+    elif st.session_state.segment_index == 100_000: # if we are at the final screen
+        render_final_page()
     else:
         # Select the segment (with contents) that corresponds to the saved index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
         reset_submitted_if_page_changed()
 
+
+def reset_segment_index():
+    st.session_state.segment_index = 0
+    upload_progress()
+
+# render the page at the end of the learning phase (after the last question)
+# this page corresponds with 
+def render_final_page():
+    if st.session_state.selected_phase == 'learning':
+        st.write("This is the last page of the LEARNING PHASE")
+    else:
+        st.write("This is the last page of the PRACTICE PHASE")
+    st.button("Back to beginning", on_click=reset_segment_index)
+    # otherwise the progress bar and everything will get rendered
+    exit()
 
 def render_learning_page():
     """
@@ -369,12 +406,15 @@ def render_learning_page():
             render_info()
             render_navigation_buttons()
 
-        if st.session_state.segment_content['type'] == 'question':
+        # Open question
+        if (st.session_state.segment_content['type'] == 'question' and 
+        'answer' in st.session_state.segment_content):
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
                 with st.spinner("Een Large Language Model checkt je antwoord met het antwoordmodel. Twijfel je? Check de 'explanation' voor de juiste vergelijking."): 
                     evaluate_answer()
+                    time.sleep(3)
                 render_student_answer()
                 render_feedback()
                 add_to_practice_phase()
@@ -386,8 +426,52 @@ def render_learning_page():
                     set_submitted_true()
                     st.rerun()
                 render_check_and_nav_buttons()
+        
+        # Multiple choice question
+        if (st.session_state.segment_content['type'] == 'question' and
+             'answers' in st.session_state.segment_content):
+            render_question()
 
+            correct_answer = st.session_state.segment_content['answers']['correct_answer']
+            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
+            
+            # Check if the answers have already been shuffled and stored
+            if st.session_state.shuffled_answers == None:
+                answers = [correct_answer] + wrong_answers
+                random.shuffle(answers)
+                st.session_state.shuffled_answers = answers
+            else:
+                answers = st.session_state.shuffled_answers
+                
+            if 'choosen_answer' not in st.session_state:
+                st.session_state.choosen_answer = None
+                
+            # Create a button for each answer
+            for i, answer in enumerate(answers):
+                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
+            
+            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
+                st.success("✅ Correct!")
+                st.session_state.score = '1/1'
+            # if the score is not correct, the questions is added to the practice phase
+            elif st.session_state.submitted:
+                st.error("❌ Incorrect. Try again.")
+                st.session_state.score = '0/1'
+                add_to_practice_phase()
 
+            # If no answer has been submitted, display a message
+            if st.session_state.submitted == False:
+                st.write("Please select an answer above.")
+
+            #render the nav buttons
+            render_navigation_buttons()
+
+def set_submitted_answer(answer):
+    st.session_state.submitted = True
+    st.session_state.choosen_answer = answer
+    return
+
+    
 def reset_submitted_if_page_changed():
     """Checks if the page changed and if so, resets submitted to false in 
     order to prevent the question from being evaluated directly when opening
@@ -420,6 +504,8 @@ def initialise_practice_page():
     if st.session_state.segment_index == -1:
         fetch_ordered_segment_sequence()
         render_practice_explanation()
+    elif st.session_state.segment_index == 100_000:
+        render_final_page()
     else:
         fetch_ordered_segment_sequence()
 
@@ -429,6 +515,7 @@ def initialise_practice_page():
         # Select the segment (with contents) that corresponds to the saved json index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
         reset_submitted_if_page_changed()
+
 
 
 def render_practice_page():
@@ -445,11 +532,14 @@ def render_practice_page():
         render_progress_bar()
 
         # Determine what type of segment to display and render interface accordingly
+        # info_question
         if st.session_state.segment_content['type'] == 'info':
             render_info()
             render_navigation_buttons()
 
-        elif st.session_state.segment_content['type'] == 'question':
+        # open question
+        if (st.session_state.segment_content['type'] == 'question' and 
+        'answer' in st.session_state.segment_content):
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
@@ -466,6 +556,42 @@ def render_practice_page():
                     set_submitted_true()
                     st.rerun()
                 render_check_and_nav_buttons()
+
+        # MC Question
+        if (st.session_state.segment_content['type'] == 'question' and
+             'answers' in st.session_state.segment_content):
+            render_question()
+
+            correct_answer = st.session_state.segment_content['answers']['correct_answer']
+            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
+            
+            # Check if the answers have already been shuffled and stored
+            if st.session_state.shuffled_answers == None:
+                answers = [correct_answer] + wrong_answers
+                random.shuffle(answers)
+                st.session_state.shuffled_answers = answers
+            else:
+                answers = st.session_state.shuffled_answers
+                
+            if 'choosen_answer' not in st.session_state:
+                st.session_state.choosen_answer = None
+                
+            # Create a button for each answer
+            for i, answer in enumerate(answers):
+                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
+            
+            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
+                st.success("✅ Correct!")
+            # if the score is not correct, the questions is added to the practice phase
+            elif st.session_state.submitted:
+                st.error("❌ Incorrect. Try again.")
+
+            # If no answer has been submitted, display a message
+            if st.session_state.submitted == False:
+                st.write("Please select an answer above.")
+
+            #render the nav buttons
+            render_navigation_buttons()
 
 
 def select_page_type():
@@ -549,6 +675,9 @@ def initialise_session_states():
 
     if 'difficulty' not in st.session_state:
         st.session_state.difficulty = ""
+
+    if 'shuffled_answers' not in st.session_state:
+        st.session_state.shuffled_answers = None
 
 
 def render_logo():
