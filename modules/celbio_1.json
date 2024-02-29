@@ -75,13 +75,18 @@
         {
             "type": "info",
             "title": "Myelineschede en saltatoire geleiding",
-            "text": "De myelineschede is een isolerende laag rondom de axonen van sommige neuronen die de transductiesnelheid van actiepotentialen verhoogt door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt.",
+            "text": "De myelineschede is een isolerende laag rondom de axonen van sommige neuronen die de transductiesnelheid van actiepotentialen verhoogt door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt. Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie.",
             "image": "images/saltatoire_geleiding.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van de myelineschede in signaaltransductie?",
             "answer": "De myelineschede versnelt de signaaltransductie (1 punt) door het mogelijk maken van saltatoire geleiding, waarbij actiepotentialen van de ene knoop van Ranvier naar de andere 'springen' (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00EFnvloedt beschadiging van myeline de signaaltransductie?",
+            "answer": "Beschadiging van myeline, zoals bij aandoeningen zoals multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen in de zenuwsignalering (1 punt)."
         },
         {
             "type": "info",
@@ -144,7 +149,8 @@
         {
             "type": "info",
             "title": "Neuromusculaire overdracht",
-            "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gestuurde natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol."
+            "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gestuurde natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol.",
+            "image": "images/neuromusculaire_junctie.png"
         },
         {
             "type": "question",
@@ -153,8 +159,9 @@
         },
         {
             "type": "info",
-            "title": "Role van Kanalen in Neuromusculaire Overdracht",
-            "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gestuurde natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie."
+            "title": "Role van kanalen in neuromusculaire Overdracht",
+            "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gestuurde natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie.",
+            "image": "images/neuromusculaire_overdracht.png"
         },
         {
             "type": "question",
@@ -164,7 +171,8 @@
         {
             "type": "info",
             "title": "Be\u00EBindiging van neurotransmittersignalen",
-            "text": "Om de communicatie tussen neuronen effici\u00EBnt te houden, moeten signalen nauwkeurig worden gestart en gestopt. Een van de manieren waarop dit gebeurt, is door de afbraak van neurotransmitters. Bijvoorbeeld, acetylcholinesterase is een enzym dat acetylcholine afbreekt. Dit proces is cruciaal voor het be\u00ebindigen van de signaaltransductie en het voorkomen van overstimulatie van de neuronen."
+            "text": "Om de communicatie tussen neuronen effici\u00EBnt te houden, moeten signalen nauwkeurig worden gestart en gestopt. Een van de manieren waarop dit gebeurt, is door de afbraak van neurotransmitters. Bijvoorbeeld, acetylcholinesterase is een enzym dat acetylcholine afbreekt. Dit proces is cruciaal voor het be\u00ebindigen van de signaaltransductie en het voorkomen van overstimulatie van de neuronen.",
+            "image": "images/acetylcholinesterase.png"
         },
         {
             "type": "question",
@@ -173,8 +181,9 @@
         },
         {
             "type": "info",
-            "title": "Werking van Antidepressiva",
-            "text": "Antidepressiva zijn medicijnen die de heropname van neurotransmitters zoals serotonine kunnen remmen. Dit verhoogt de concentratie van deze neurotransmitters in de synaptische spleet, wat kan bijdragen aan het verbeteren van de stemming en het verlichten van depressieve symptomen."
+            "title": "Werking van antidepressiva",
+            "text": "Antidepressiva zijn medicijnen die de heropname van neurotransmitters zoals serotonine kunnen remmen. Dit verhoogt de concentratie van deze neurotransmitters in de synaptische spleet, wat kan bijdragen aan het verbeteren van de stemming en het verlichten van depressieve symptomen.",
+            "image": "images/werking_antidepressiva.png"
         },
         {
             "type": "question",
@@ -193,28 +202,9 @@
         },
         {
             "type": "info",
-            "title": "Myelineschede en snelle signaaltransductie",
-            "text": "Myelineschedes isoleren axonen en laten actiepotentialen 'springen' tussen de knopen van Ranvier voor snellere transmissie."
-        },
-        {
-            "type": "info",
-            "title": "Impact van Myeline Beschadiging",
-            "text": "Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie."
-        },
-        {
-            "type": "question",
-            "question": "Hoe be\u00EFnvloedt beschadiging van myeline de signaaltransductie?",
-            "answer": "Beschadiging van myeline, zoals bij aandoeningen zoals multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen in de zenuwsignalering (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Neurotransmitters",
-            "text": "Neurotransmitters zijn chemische boodschappers die signalen overdragen tussen neuronen door interactie met specifieke receptoren op postsynaptische cellen. Ze kunnen een activerend (excitatoir) of remmend (inhibitoir) effect hebben op deze cellen, wat essentieel is voor de verwerking van informatie in de hersenen."
-        },
-        {
-            "type": "info",
-            "title": "Synaptische Transmissie",
-            "text": "Synaptische transmissie is het proces waarbij neurotransmitters vrijkomen uit de presynaptische neuron en zich binden aan receptoren op de postsynaptische neuron, wat resulteert in de activering of remming van de postsynaptische cel. Verschillende neurotransmitters, zoals glutamaat en gamma-aminoboterzuur (GABA), hebben tegenovergestelde effecten, waarbij glutamaat overwegend excitatoire en GABA overwegend inhibitoire reacties veroorzaakt."
+            "title": "Synaptische transmissie",
+            "text": "Synaptische transmissie is het proces waarbij neurotransmitters vrijkomen uit de presynaptische neuron en zich binden aan receptoren op de postsynaptische neuron, wat resulteert in de activering of remming van de postsynaptische cel. Verschillende neurotransmitters, zoals glutamaat en gamma-aminoboterzuur (GABA), hebben tegenovergestelde effecten, waarbij glutamaat overwegend excitatoire en GABA overwegend inhibitoire reacties veroorzaakt.",
+            "image": "images/synaps_in_rust_en_actief.png"
         },
         {
             "type": "question",
@@ -228,13 +218,14 @@
         },
         {
             "type": "info",
-            "title": "Ionentransport in Neuronen",
+            "title": "Ionentransport in neuronen",
             "text": "Ionentransport is cruciaal in de werking van neuronen en omvat processen zoals de activering van calciumkanalen in presynaptische cellen door actiepotentialen, wat uiteindelijk leidt tot de afgifte van neurotransmitters."
         },
         {
             "type": "info",
-            "title": "Receptoractiviteit en Actiepotentialen",
-            "text": "Postsynaptische acetylcholine-receptoren zijn essentieel voor neuronale communicatie. Wanneer deze receptoren geactiveerd worden, laten ze natriumionen de cel binnen, wat kan resulteren in het genereren van een nieuwe actiepotentiaal in de postsynaptische cel."
+            "title": "Receptoractiviteit en actiepotentialen",
+            "text": "Postsynaptische acetylcholine-receptoren zijn essentieel voor neuronale communicatie. Wanneer deze receptoren geactiveerd worden, laten ze natriumionen de cel binnen, wat kan resulteren in het genereren van een nieuwe actiepotentiaal in de postsynaptische cel.",
+            "image": "images/synaptische_calcium_kanalen.png"
         },
         {
             "type": "question",
@@ -265,8 +256,8 @@
         {
             "type": "info",
             "title": "Belang van ionenkanalen",
-            "text": "Ionenkanalen zijn essentieel voor de functie van neuronen en spiercellen en zijn betrokken bij diverse ziektebeelden zoals epilepsie en migraine."
-        },
+            "text": "Ionenkanalen spelen een sleutelrol in de werking van neuronen en spiercellen door de in- en uitstroom van ionen zoals natrium, kalium, en calcium te reguleren. Deze processen zijn essentieel voor het opwekken van elektrische signalen die zorgen voor communicatie tussen neuronen en het aanspannen van spieren. Fouten in deze kanalen kunnen leiden tot verstoringen in deze signalen, wat de basis is voor aandoeningen als epilepsie en migraine."
+        }
         {
             "type": "question",
             "question": "Waarom zijn ionenkanalen belangrijk voor neuronen en spiercellen?",
