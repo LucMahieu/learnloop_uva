@@ -86,7 +86,7 @@
         {
             "type": "question",
             "question": "Hoe be\u00EFnvloedt beschadiging van myeline de signaaltransductie?",
-            "answer": "Beschadiging van myeline, zoals bij aandoeningen zoals multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen in de zenuwsignalering (1 punt)."
+            "answer": "Beschadiging van myeline verstoort de signaaltransductie (1 punt) en kan leiden tot vertraging of andere problemen met zenuwsignalen (1 punt)."
         },
         {
             "type": "info",
@@ -126,30 +126,41 @@
             "answer": "Mutaties in natriumkanalen kunnen leiden tot veranderingen in actiepotentialen, wat invloed kan hebben op belangrijke lichaamsfuncties zoals hartritme (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Voltage-gated calciumkanalen en neurotransmitterafgifte",
+            "text": "Voltage-gated calciumkanalen reageren op veranderingen in de elektrische lading over het celmembraan, zoals die optreden wanneer een actiepotentiaal aankomt bij de terminus van een neuron. Wanneer deze kanalen openen, stromen calciumionen de cel binnen. Dit proces leidt tot de afgifte van neurotransmitters doordat calcium bindt aan eiwitten die de vesikels met neurotransmitters naar de celmembraan leiden, waar ze hun inhoud vrijgeven in de synaptische spleet.",
+            "image": "images/synaptische_calcium_kanalen.png"
+        },
+        {
             "type": "question",
             "question": "Hoe activeren voltage-gated calciumkanalen neurotransmitterafgifte?",
             "answer": "Wanneer een actiepotentiaal de presynaptische terminus bereikt, openen voltage-gated calciumkanalen, waardoor calciumionen de cel binnenstromen, wat de afgifte van neurotransmitters uit vesikels stimuleert (1 punt)."
         },
         {
             "type": "info",
-            "title": "Acetylcholine receptor structuur",
-            "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om een functioneel kanaal te vormen, dat essentieel is voor het doorgeven van signalen in het zenuwstelsel.",
-            "image": "images/acetylcholine_receptor.png"
-        },
-        {
-            "type": "info",
-            "title": "Acetylcholine receptor functionaliteit",
-            "text": "Deze receptor fungeert als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is. Dit proces is cruciaal voor de overdracht van zenuwimpulsen."
+            "title": "Acetylcholine receptor structuur & functionaliteit",
+            "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om te fungeren als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is.",
+            "image": "images/acetylcholine_receptor_ligand.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van de acetylcholine receptor?",
-            "answer": "De acetylcholine receptor fungeert als een natriumkanaal dat opent wanneer acetylcholine gebonden is, om zo zenuwsignalen door te geven (1 punt)."
+            "answer": "De acetylcholine receptor fungeert als een natriumkanaal dat opent wanneer acetylcholine gebonden is (1 punt), om zo een actiepotentiaal door te geven (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Belang van ionenkanalen",
+            "text": "Ionenkanalen spelen een sleutelrol in de werking van neuronen en spiercellen door de in- en uitstroom van ionen zoals natrium, kalium, en calcium te reguleren. Deze processen zijn essentieel voor het opwekken van elektrische signalen die zorgen voor communicatie tussen neuronen en het aanspannen van spieren. Fouten in deze kanalen kunnen leiden tot verstoringen in deze signalen, wat de basis is voor aandoeningen als epilepsie en migraine."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn ionenkanalen belangrijk voor neuronen en spiercellen?",
+            "answer": "Ionenkanalen reguleren de elektrische activiteit in neuronen en spiercellen (1 punt)."
         },
         {
             "type": "info",
             "title": "Neuromusculaire overdracht",
-            "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gestuurde natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol.",
+            "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gated natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol.",
             "image": "images/neuromusculaire_junctie.png"
         },
         {
@@ -159,14 +170,14 @@
         },
         {
             "type": "info",
-            "title": "Role van kanalen in neuromusculaire Overdracht",
-            "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gestuurde natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie.",
+            "title": "Rol van kanalen in neuromusculaire overdracht",
+            "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gated natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie.",
             "image": "images/neuromusculaire_overdracht.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van ionen kanalen bij neuromusculaire overdracht?",
-            "answer": "De kanalen faciliteren de ionenstroom van natrium en calcium (1 punt), wat essentieel is voor de vrijgave van neurotransmitters en het opwekken van een spiercontractie (1 punt)."
+            "answer": "Ionenkanalen faciliteren de instroom van natrium en calcium in de presynaptische neuron (1 punt), wat essentieel is voor de vrijgave van neurotransmitters en het opwekken van een spiercontractie (1 punt)."
         },
         {
             "type": "info",
@@ -177,7 +188,7 @@
         {
             "type": "question",
             "question": "Wat is de rol van acetylcholinesterase bij de be\u00EBindiging van neurotransmittersignalen?",
-            "answer": "Acetylcholinesterase breekt acetylcholine af (1 punt), wat essentieel is voor het stoppen van signaaltransductie tussen neuronen (1 punt)."
+            "answer": "Acetylcholinesterase breekt acetylcholine af in de synaptische spleet (1 punt), waardoor het postsynaptisch neuron niet meer gestimuleerd wordt (1 punt) en de signaaltransductie stopt."
         },
         {
             "type": "info",
@@ -198,7 +209,7 @@
         {
             "type": "question",
             "question": "Wat veroorzaakt de negatieve rustpotentiaal van een neuron?",
-            "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van Natrium en Kalium ionen binnen en buiten de cel."
+            "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van natrium en kalium ionen binnen en buiten de cel."
         },
         {
             "type": "info",
@@ -218,22 +229,6 @@
         },
         {
             "type": "info",
-            "title": "Ionentransport in neuronen",
-            "text": "Ionentransport is cruciaal in de werking van neuronen en omvat processen zoals de activering van calciumkanalen in presynaptische cellen door actiepotentialen, wat uiteindelijk leidt tot de afgifte van neurotransmitters."
-        },
-        {
-            "type": "info",
-            "title": "Receptoractiviteit en actiepotentialen",
-            "text": "Postsynaptische acetylcholine-receptoren zijn essentieel voor neuronale communicatie. Wanneer deze receptoren geactiveerd worden, laten ze natriumionen de cel binnen, wat kan resulteren in het genereren van een nieuwe actiepotentiaal in de postsynaptische cel.",
-            "image": "images/synaptische_calcium_kanalen.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van postsynaptische acetylcholine-receptoren?",
-            "answer": "Postsynaptische acetylcholine-receptoren laten natriumionen de cel binnenstromen als ze geactiveerd worden, wat kan resulteren in het ontstaan van een nieuwe actiepotentiaal (1 punt)."
-        },
-        {
-            "type": "info",
             "title": "Patch clamp techniek",
             "text": "De patch clamp techniek wordt gebruikt om de specificiteit en werking van ionenkanalen te karakteriseren. Deze methode maakt het mogelijk om de elektrische activiteit van individuele ionenkanalen te meten, waardoor inzicht wordt verkregen in de manier waarop specifieke ionen door celmembranen stromen.",
             "image": "images/patch_clamp.png"
@@ -241,27 +236,17 @@
         {
             "type": "question",
             "question": "Wat is het doel van de patch clamp techniek?",
-            "answer": "Het doel van de patch clamp techniek is om de specificiteit en werking van ionenkanalen te karakteriseren door de elektrische potentiaal over een membraan te meten (1 punt)."
+            "answer": "Het doel van de patch clamp techniek is om de specificiteit en werking van ionenkanalen te karakteriseren (1 punt) door de elektrische potentiaal over een membraan te meten (1 punt)."
         },
         {
             "type": "info",
-            "title": "Specifiek gebruik van patch plamp techniek",
+            "title": "Specifiek gebruik van patch clamp techniek",
             "text": "Door gebruik te maken van de patch clamp techniek kunnen wetenschappers de eigenschappen van verschillende soorten ionenkanalen bestuderen, zoals hun geleidingssnelheid, selectiviteit voor bepaalde ionen, en de mechanismen die hun opening en sluiting regelen."
         },
         {
             "type": "question",
             "question": "Welke aspecten van ionenkanalen kunnen bestudeerd worden met de patch clamp techniek?",
             "answer": "Met de patch clamp techniek kunnen eigenschappen zoals geleidingssnelheid (0.5 punt), ionenselectiviteit (0.5 punt), en de mechanismen van opening en sluiting (1 punt) van ionenkanalen bestudeerd worden."
-        },
-        {
-            "type": "info",
-            "title": "Belang van ionenkanalen",
-            "text": "Ionenkanalen spelen een sleutelrol in de werking van neuronen en spiercellen door de in- en uitstroom van ionen zoals natrium, kalium, en calcium te reguleren. Deze processen zijn essentieel voor het opwekken van elektrische signalen die zorgen voor communicatie tussen neuronen en het aanspannen van spieren. Fouten in deze kanalen kunnen leiden tot verstoringen in deze signalen, wat de basis is voor aandoeningen als epilepsie en migraine."
-        }
-        {
-            "type": "question",
-            "question": "Waarom zijn ionenkanalen belangrijk voor neuronen en spiercellen?",
-            "answer": "Ionenkanalen zijn belangrijk voor het reguleren van de elektrische activiteit in neuronen en spiercellen (1 punt) en zijn betrokken bij de pathofysiologie van ziekten zoals epilepsie en migraine (1 punt)."
         }
     ]
 }

@@ -19,8 +19,8 @@ Expliciet geheugen is het deel van ons geheugen dat bewust toegankelijk is (1 pu
 Mogelijk aantal punten: 2 punten.
 
 Jouw reactie:
->> • Correct: bewuste toegankelijkheid (1/1 punten).
->> • Voeg toe: informatie in dit geheugen kan expliciet aan anderen verteld worden (0/1 punten).
+>> ✅ Correct: <strong>bewuste toegankelijkheid</strong> (1/1 punten).
+>> ❌ Voeg toe: informatie in dit geheugen kan <strong>expliciet aan anderen verteld worden</strong> (0/1 punten).
 ;;1/2
 
 Voorbeeld 2:
@@ -37,7 +37,7 @@ Beoordelingsrubriek:
 Mogelijk aantal punten: 3 punten.
 
 Jouw reactie:
-• Correct: uitleg dat fotosynthese een proces is waarbij planten zonlicht gebruiken (1/1 punten).
-• Ontbreekt: vermelding dat koolstofdioxide en water worden omgezet in glucose en zuurstof (0/1 punten).
-• Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de chloroplasten gebeurt (0.5/1 punten).
+>> ✅ Correct: uitleg dat fotosynthese een <strong>proces is waarbij planten zonlicht gebruiken</strong> (1/1 punten).
+>> ❌ Ontbreekt: vermelding dat <strong>koolstofdioxide en water worden omgezet in glucose en zuurstof</strong> (0/1 punten).
+>> 🤏🏽 Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de <strong>chloroplasten</strong> gebeurt (0.5/1 punten).
 ;;1.5/3

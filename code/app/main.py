@@ -17,17 +17,18 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
 
 # Database connection
 if running_on_premise:
-    print("Running on premise")
+    print("Running on-premise")
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
+    print("Running off-premise")
     MONGO_URI = os.getenv('MONGO_DB')
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
@@ -69,7 +70,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./code/app/direct_feedback_prompt.txt", "r") as f:
+        with open("./code/app/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -125,20 +126,18 @@ def render_feedback():
     else:
         color = 'rgba(255, 0, 0, 0.2)'  # Red
 
-    # Feedback with bullet points and bold scores
-    feedback_items = [f"<li style='font-size: 17px; margin: 15px 0;'>{line}</li>" for line in st.session_state.feedback if line.strip()]
-    feedback_html = f"<ul style='padding-left: 20px;'>{''.join(feedback_items)}</ul>"
+    feedback_items = [f"<li style='font-size: 17px; margin: 5px 0; margin-top: 10px'>{feedback}</li>" for feedback in st.session_state.feedback]
+    feedback_html = f"<ul style='padding-left: 0px; list-style-type: none;'>{''.join(feedback_items)}</ul>"
 
     result_html = f"""
-    <div style='background-color: {color}; padding: 15px; margin-bottom: 15px; border-radius: 8px;'>
-        <h1 style='font-size: 28px; margin: 7px; padding-top: 0; padding-bottom: 0;'>{st.session_state.score}</h1>
-        {feedback_html}
+    <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
+    {feedback_html}
+    <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
+        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {st.session_state.score}</h1>
+        <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
     </div>
     """
-
     st.markdown(result_html, unsafe_allow_html=True)
-
-    st.warning("Let op: de scores worden automatisch gegenereerd en kunnen soms afwijken.")
 
 
 def render_progress_bar():
@@ -208,8 +207,8 @@ def render_SR_nav_buttons():
 def render_explanation():
     if 'image' in st.session_state.segment_content:
         image_path = st.session_state.segment_content['image']
-        st.image(image_path, use_column_width=True)
-    with st.expander("Explanation"):
+        render_image(image_path)
+    with st.expander("Antwoordmodel"):
         st.markdown(st.session_state.segment_content['answer'])
 
 
@@ -247,9 +246,9 @@ def render_navigation_buttons():
     """Render the navigation buttons that allows users to move between segments."""
     prev_col, next_col = st.columns(2)
     with prev_col:
-        st.button("Previous", on_click=change_segment_index, args=(-1,), use_container_width=True)
+        st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
     with next_col:
-        st.button("Next", on_click=change_segment_index, args=(1,), use_container_width=True)
+        st.button("Volgende", on_click=change_segment_index, args=(1,), use_container_width=True)
 
 
 def set_submitted_true():
@@ -268,21 +267,31 @@ def render_check_and_nav_buttons():
         st.button('Next', use_container_width=True, on_click=change_segment_index, args=(1,))
 
 
+def render_image(image_path):
+    image_base64 = convert_image_base64(image_path)
+    image_html = f"""
+    <div style='text-align: center; margin: 10px;'>
+        <img src='data:image/png;base64,{image_base64}' alt='image can't load' style='max-width: 100%; max-height: 500px'>
+    </div>"""
+    st.markdown(image_html, unsafe_allow_html=True)
+
+
 def render_info():
     """Renders the info segment with title and text."""
-    st.subheader(st.session_state.segment_content['title'])
-
     # if the image directory is present in the JSON for this segment, then display the image
     if 'image' in st.session_state.segment_content:
         image_path = st.session_state.segment_content['image']
-        st.image(image_path, use_column_width=True)
+        render_image(image_path)
+
+    st.subheader(st.session_state.segment_content['title'])
     st.write(st.session_state.segment_content['text'])
+
 
 def render_answerbox():
     # if the image directory is present in the JSON for this segment, then display the image
     if 'image' in st.session_state.segment_content:
         image_path = st.session_state.segment_content['image']
-        st.image(image_path, use_column_width=True)
+        render_image(image_path)
 
     # Render a textbox in which the student can type their answer.
     st.text_area(label='Your answer', label_visibility='hidden', 
@@ -294,6 +303,7 @@ def render_answerbox():
 def render_question():
     """Function to render the question and textbox for the students answer."""
     st.subheader(st.session_state.segment_content['question'])
+
 
 def fetch_ordered_segment_sequence():
     """Fetches the practice segments from the database."""
@@ -329,7 +339,14 @@ def add_to_practice_phase():
 
 
 def render_student_answer():
-    st.info(f"Jouw antwoord: {st.session_state.student_answer}")
+    student_answer = f"""
+    <h1 style='font-size: 20px; margin: 15px 0 10px 10px; padding: 0;'>Jouw antwoord:</h1>
+    <div style='background-color: #F5F5F5; padding: 20px; border-radius: 7px; margin-bottom: 0px;'>
+        <p style='color: #333; margin: 0px 0'>{st.session_state.student_answer}</p>
+    </div>
+    """
+    st.markdown(student_answer, unsafe_allow_html=True)
+
 
 def fetch_segment_index():
     """Fetch the last segment index from db"""
@@ -408,10 +425,9 @@ def render_learning_page():
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
-                with st.spinner("Een Large Language Model checkt je antwoord met het antwoordmodel. Twijfel je? Check de 'explanation' voor de juiste vergelijking."): 
+                with st.spinner("Een groot taalmodel (AI) checkt je antwoord met het antwoordmodel. Check zelf het antwoordmodel als je twijfelt."):
+                    render_student_answer()
                     evaluate_answer()
-                    time.sleep(3)
-                render_student_answer()
                 render_feedback()
                 add_to_practice_phase()
                 render_explanation()
@@ -704,7 +720,7 @@ def render_sidebar():
         spacer, image_col = st.columns([0.4, 1])
         with image_col:
             render_logo()
-        st.sidebar.title("Modules")
+        st.sidebar.title("Hoorcolleges")
 
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
