@@ -1,0 +1,141 @@
+{
+    "module_name": "Neurobiologie en Signaaltransductie",
+    "segments": [
+        {
+            "type": "info",
+            "title": "Voltage-gated Natriumkanalen",
+            "text": "Voltage-gated natriumkanalen zijn specifieke kanalen in de celmembranen die reageren op veranderingen in de membraanpotentiaal. Deze kanalen zijn essentieel voor het genereren en doorgeven van elektrische signalen in zenuwcellen."
+        },
+        {
+            "type": "info",
+            "title": "Structuur en Membraanpotentiaal",
+            "text": "De structuur van een voltage-gated natriumkanaal is zo dat de buitenkant positief en de binnenkant negatief geladen is wanneer het kanaal gesloten is. Veranderingen in de membraanpotentiaal kunnen ervoor zorgen dat deze kanalen openen, waardoor natriumionen de cel binnenstromen.",
+            "image": "images/voltage-gated_natrium_kanaal.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat gebeurt er met voltage-gated natriumkanalen als de membraanpotentiaal verandert?",
+            "answer": "Wanneer er een verandering in de membraanpotentiaal optreedt, kunnen de voltage-gated natriumkanalen openen, wat leidt tot een instroom van natriumionen in de cel (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is het alles-of-niets-principe bij een actiepotentiaal?",
+            "answer": "Het alles-of-niets-principe bij een actiepotentiaal houdt in dat zodra een actiepotentiaal wordt geïnitieerd, deze altijd dezelfde structuur en sterkte heeft (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Waarvan is de initiatie van een actiepotentiaal afhankelijk?",
+            "answer": "De initiatie van een actiepotentiaal is afhankelijk van de hoeveelheid geopende natriumkanalen en de hoogte van de depolarisatie (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van de natriumkalium pomp in het behouden van de rustpotentiaal?",
+            "answer": "De natriumkalium pomp helpt de rustpotentiaal te behouden door drie natriumionen (Na+) naar buiten te pompen en twee kaliumionen (K+) naar binnen te halen voor elke ATP die wordt gebruikt (1 punt), wat helpt de elektrochemische gradiënt in stand te houden (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt de activatie van natriumkanalen bij aan depolarisatie?",
+            "answer": "De activatie van natriumkanalen laat natriumionen (Na+) de cel binnenstromen (1 punt), wat resulteert in een vermindering van de negatieve lading binnen de cel en leidt tot depolarisatie (1 punt), het begin van een actiepotentiaal."
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt de refractaire periode van Natrium kanalen bij aan de unidirectionele voortplanting van actiepotentialen?",
+            "answer": "De refractaire periode van Natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in één richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om Natrium door te laten na activatie (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van de myelineschede in signaaltransductie?",
+            "answer": "De myelineschede versnelt de signaaltransductie (1 punt) door het mogelijk maken van saltatoire geleiding, waarbij actiepotentialen van de ene knoop van Ranvier naar de andere 'springen' (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is het doel van optogenetica?",
+            "answer": "Het doel van optogenetica is om neuronen te activeren of te remmen met behulp van licht (1 punt), door gebruik te maken van genetisch geïntroduceerde lichtgevoelige kanalen of pompen (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Welke lichtgevoelige eiwitten worden gebruikt in optogenetica en wat is hun functie?",
+            "answer": "In optogenetica worden eiwitten zoals rhodopsine uit algen (1 punt) en halorhodopsine uit bacteriën (1 punt) gebruikt, waarbij het eerste type de neuronen activeert en het tweede type de neuronen remt."
+        },
+        {
+            "type": "question",
+            "question": "Wat is het gevolg van mutaties in natriumkanalen voor het functioneren van het hart?",
+            "answer": "Mutaties in natriumkanalen kunnen leiden tot veranderingen in actiepotentialen, wat invloed kan hebben op belangrijke lichaamsfuncties zoals hartritme (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe activeren voltage-gated calciumkanalen neurotransmitterafgifte?",
+            "answer": "Wanneer een actiepotentiaal de presynaptische terminus bereikt, openen voltage-gated calciumkanalen, waardoor calciumionen de cel binnenstromen, wat de afgifte van neurotransmitters uit vesikels stimuleert (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van de acetylcholine receptor?",
+            "answer": "De acetylcholine receptor fungeert als een natriumkanaal dat opent wanneer acetylcholine gebonden is, om zo zenuwsignalen door te geven (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Welke ionen zijn essentieel voor de neuromusculaire overdracht en spiercontractie?",
+            "answer": "Calcium (1 punt) en natrium (1 punt) zijn essentiële ionen voor de neuromusculaire overdracht en spiercontractie."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van ionen kanalen bij neuromusculaire overdracht?",
+            "answer": "De kanalen faciliteren de ionenstroom van natrium en calcium (1 punt), wat essentieel is voor de vrijgave van neurotransmitters en het opwekken van een spiercontractie (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van acetylcholinesterase bij de beëindiging van neurotransmittersignalen?",
+            "answer": "Acetylcholinesterase breekt acetylcholine af (1 punt), wat essentieel is voor het stoppen van signaaltransductie tussen neuronen (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe beïnvloeden antidepressiva de concentratie van neurotransmitters zoals serotonine?",
+            "answer": "Antidepressiva remmen de heropname van neurotransmitters zoals serotonine (1 punt), wat leidt tot een verhoogde concentratie in de synaptische spleet (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat veroorzaakt de negatieve rustpotentiaal van een neuron?",
+            "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van Natrium en Kalium ionen binnen en buiten de cel."
+        },
+        {
+            "type": "question",
+            "question": "Hoe beïnvloedt beschadiging van myeline de signaaltransductie?",
+            "answer": "Beschadiging van myeline, zoals bij aandoeningen zoals multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen in de zenuwsignalering (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van neurotransmitters in synaptische transmissie?",
+            "answer": "Neurotransmitters spelen een cruciale rol in synaptische transmissie door het activeren (1 punt) of remmen (1 punt) van postsynaptische cellen via interactie met hun receptoren."
+        },
+        {
+            "type": "question",
+            "question": "Hoe verschillen glutamaat en GABA in hun effect op synaptische transmissie?",
+            "answer": "Glutamaat en GABA verschillen in hun effect op synaptische transmissie doordat glutamaat voornamelijk een excitatoir (activerend) effect heeft (1 punt), terwijl GABA voornamelijk een inhibitoir (remmend) effect heeft (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe verschillen glutamaat en GABA in hun effect op synaptische transmissie?",
+            "answer": "Glutamaat en GABA verschillen in hun effect op synaptische transmissie doordat glutamaat voornamelijk een excitatoir (activerend) effect heeft (1 punt), terwijl GABA voornamelijk een inhibitoir (remmend) effect heeft (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van postsynaptische acetylcholine-receptoren?",
+            "answer": "Postsynaptische acetylcholine-receptoren laten natriumionen de cel binnenstromen als ze geactiveerd worden, wat kan resulteren in het ontstaan van een nieuwe actiepotentiaal (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is het doel van de patch clamp techniek?",
+            "answer": "Het doel van de patch clamp techniek is om de specificiteit en werking van ionenkanalen te karakteriseren door de elektrische potentiaal over een membraan te meten (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Welke aspecten van ionenkanalen kunnen bestudeerd worden met de patch clamp techniek?",
+            "answer": "Met de patch clamp techniek kunnen eigenschappen zoals geleidingssnelheid (0.5 punt), ionenselectiviteit (0.5 punt), en de mechanismen van opening en sluiting (1 punt) van ionenkanalen bestudeerd worden."
+        },
+        {
+            "type": "question",
+            "question": "Waarom zijn ionenkanalen belangrijk voor neuronen en spiercellen?",
+            "answer": "Ionenkanalen zijn belangrijk voor het reguleren van de elektrische activiteit in neuronen en spiercellen (1 punt) en zijn betrokken bij de pathofysiologie van ziekten zoals epilepsie en migraine (1 punt)."
+        }
+    ]
+}
