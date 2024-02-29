@@ -21,7 +21,7 @@ auth = OAuth(login_page)
 
 auth.register(
     name='surfconext',
-    client_id='learnloop-test.datanose.nl',
+    client_id=os.getenv('SURFCONEXT_CLIENT_ID'),
     client_secret=os.getenv('SURFCONEXT_CLIENT_SECRET'),
     server_metadata_url='https://connect.test.surfconext.nl/.well-known/openid-configuration', #TODO: change for productin env
     client_kwargs={'scope': 'openid'}

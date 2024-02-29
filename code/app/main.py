@@ -17,14 +17,14 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-on_premise_testing = False # Set to true if IP adres is allowed by Gerrit
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
-#trigger workflow
 # Create openai instance
 load_dotenv()
 
 # Database connection
-if on_premise_testing:
+if running_on_premise:
+    print("Running on premise")
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
@@ -815,13 +815,13 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    if not on_premise_testing:
+    if not running_on_premise:
         st.session_state.username = "flower2960"
 
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
     
-    if st.session_state.nonce is None and on_premise_testing:
+    if st.session_state.nonce is None and running_on_premise:
         render_login_page()
     elif st.session_state.username is None:
         fetch_username()

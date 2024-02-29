@@ -3,6 +3,8 @@ ingressClass: nginx
 image: learnloop
 tag: latest
 
+surfconextClientId: learnloop-test.datanose.nl
+
 azure:
   keyvaultName: keyvaultName
   resourceGroup: resourceGroupName
@@ -11,5 +13,11 @@ azure:
   clientId: clientId
   identityName: identityName
   secrets:
-    - name: learnloop-connection-string
-      key: CONNECTIONSTRING # TODO: check this and add other secrets
+    - name: learnloop-openai-api-key
+      key: OPENAI_API_KEY
+    - name: learnloop-cosmos-uri
+      key: COSMOS_URI
+    - name: learnloop-surfconext-client-secret
+      key: SURFCONEXT_CLIENT_SECRET
+    - name: learnloop-flask-secret
+      key: FLASK_SECRET
