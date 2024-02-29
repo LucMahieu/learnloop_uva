@@ -18,6 +18,16 @@
             "answer": "Wanneer er een verandering in de membraanpotentiaal optreedt, kunnen de voltage-gated natriumkanalen openen, wat leidt tot een instroom van natriumionen in de cel (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Drie Stadia van Natriumkanalen",
+            "text": "Natriumkanalen kunnen zich in drie verschillende stadia bevinden: gesloten, open, en ge\u00efnactiveerd. Tijdens de refractaire periode na een actiepotentiaal blijven de kanalen ge\u00efnactiveerd, wat verdere actiepotentialen tijdelijk voorkomt."
+        },
+        {
+            "type": "info",
+            "title": "Actiepotentiaal",
+            "text": "Een actiepotentiaal ontstaat door depolarisatie van de celmembraan, wat leidt tot het openen van natriumkanalen. Dit proces volgt het alles-of-niets-principe, wat inhoudt dat een actiepotentiaal altijd dezelfde sterkte en vorm heeft wanneer deze eenmaal ge\u00efnitieerd is. De actiepotentiaal is afhankelijk van de hoeveelheid geopende natriumkanalen en de hoogte van de depolarisatie."
+        },
+        {
             "type": "question",
             "question": "Wat is het alles-of-niets-principe bij een actiepotentiaal?",
             "answer": "Het alles-of-niets-principe bij een actiepotentiaal houdt in dat zodra een actiepotentiaal wordt geïnitieerd, deze altijd dezelfde structuur en sterkte heeft (1 punt)."
@@ -26,6 +36,16 @@
             "type": "question",
             "question": "Waarvan is de initiatie van een actiepotentiaal afhankelijk?",
             "answer": "De initiatie van een actiepotentiaal is afhankelijk van de hoeveelheid geopende natriumkanalen en de hoogte van de depolarisatie (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Ionenuitwisseling",
+            "text": "In neuronen is er een constante uitwisseling van ionen om de rustpotentiaal in stand te houden. Kaliumionen (K+) lekken via hun gradi\u00c3\u00abnt naar buiten, terwijl de natriumkalium (Na+/K+) pomp actief is om de ionenbalans en dus de rustpotentiaal te behouden."
+        },
+        {
+            "type": "info",
+            "title": "Rustpotentiaal en Depolarisatie",
+            "text": "De rustpotentiaal is de spanning over het celmembraan van een neuron in rust. Een elektrische stimulus kan leiden tot de activatie van natriumkanalen, waardoor natriumionen (Na+) naar binnen stromen en depolarisatie veroorzaken, het begin van een actiepotentiaal."
         },
         {
             "type": "question",
@@ -38,9 +58,19 @@
             "answer": "De activatie van natriumkanalen laat natriumionen (Na+) de cel binnenstromen (1 punt), wat resulteert in een vermindering van de negatieve lading binnen de cel en leidt tot depolarisatie (1 punt), het begin van een actiepotentiaal."
         },
         {
+            "type": "info",
+            "title": "Unidirectionele Voortplanting van Actiepotentialen",
+            "text": "Actiepotentialen in neuronen planten zich unidirectioneel voort als gevolg van de refractaire periode, een tijdspanne waarin de neuron tijdelijk niet in staat is om een nieuw actiepotentiaal te genereren na het vuren van een voorgaande."
+        },
+        {
             "type": "question",
             "question": "Hoe draagt de refractaire periode van Natrium kanalen bij aan de unidirectionele voortplanting van actiepotentialen?",
             "answer": "De refractaire periode van Natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in één richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om Natrium door te laten na activatie (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Myelineschede en Saltatoire Geleiding",
+            "text": "De myelineschede is een isolerende laag rondom de axonen van sommige neuronen die de transductiesnelheid van actiepotentialen verhoogt door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt."
         },
         {
             "type": "question",
@@ -48,9 +78,19 @@
             "answer": "De myelineschede versnelt de signaaltransductie (1 punt) door het mogelijk maken van saltatoire geleiding, waarbij actiepotentialen van de ene knoop van Ranvier naar de andere 'springen' (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Optogenetica",
+            "text": "Optogenetica is een biotechnologische techniek waarbij gebruik wordt gemaakt van lichtgevoelige eiwitten, zoals kanalen en pompen, om de activiteit van neuronen te controleren. Dit wordt bereikt door genetisch lichtgevoelige kanalen, zoals rhodopsine uit algen of halorhodopsine uit bacteri\u00ebn, in de neuronen te introduceren, waardoor deze cellen geactiveerd of geremd kunnen worden met licht van specifieke golflengtes."
+        },
+        {
             "type": "question",
             "question": "Wat is het doel van optogenetica?",
             "answer": "Het doel van optogenetica is om neuronen te activeren of te remmen met behulp van licht (1 punt), door gebruik te maken van genetisch geïntroduceerde lichtgevoelige kanalen of pompen (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Lichtgevoelige kanalen",
+            "text": "Lichtgevoelige kanalen zijn eiwitten die reageren op licht en de mogelijkheid bieden om neuronale activiteit nauwkeurig te reguleren. Voorbeelden van deze eiwitten zijn rhodopsine uit algen, dat gebruikt wordt om neuronen te activeren, en halorhodopsine uit bacteri\u00ebn, dat gebruikt wordt om neuronen te remmen."
         },
         {
             "type": "question",
@@ -58,9 +98,29 @@
             "answer": "In optogenetica worden eiwitten zoals rhodopsine uit algen (1 punt) en halorhodopsine uit bacteriën (1 punt) gebruikt, waarbij het eerste type de neuronen activeert en het tweede type de neuronen remt."
         },
         {
+            "type": "info",
+            "title": "Ionkanalen en ziekten",
+            "text": "Ionkanalen spelen een cruciale rol bij het functioneren van cellen en zijn betrokken bij verschillende ziektebeelden zoals epilepsie en migraine. Het correct functioneren van deze kanalen is essentieel voor het handhaven van de elektrische balans in cellen."
+        },
+        {
+            "type": "info",
+            "title": "Mutaties in natriumkanalen",
+            "text": "Mutaties in de natriumkanalen kunnen ernstige gevolgen hebben voor de gezondheid. Deze mutaties kunnen leiden tot veranderingen in de actiepotentialen, wat weer invloed heeft op processen zoals hartritme en neuronale activiteit."
+        },
+        {
             "type": "question",
             "question": "Wat is het gevolg van mutaties in natriumkanalen voor het functioneren van het hart?",
             "answer": "Mutaties in natriumkanalen kunnen leiden tot veranderingen in actiepotentialen, wat invloed kan hebben op belangrijke lichaamsfuncties zoals hartritme (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Neurotransmitters",
+            "text": "Neurotransmitters zijn chemische boodschappers die informatie overdragen tussen neuronen via synapsen. Ze kunnen activerende (excitatoire) of remmende (inhibitoire) effecten hebben op de postsynaptische cel."
+        },
+        {
+            "type": "info",
+            "title": "Synaptische Transmissie",
+            "text": "Synaptische transmissie is het proces waarbij een actiepotentiaal in de presynaptische cel de afgifte van neurotransmitters induceert. Deze vrijgekomen neurotransmitters kunnen vervolgens binden aan receptoren op de postsynaptische cel, wat kan leiden tot het genereren van nieuwe actiepotentialen."
         },
         {
             "type": "question",
@@ -68,9 +128,24 @@
             "answer": "Wanneer een actiepotentiaal de presynaptische terminus bereikt, openen voltage-gated calciumkanalen, waardoor calciumionen de cel binnenstromen, wat de afgifte van neurotransmitters uit vesikels stimuleert (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Acetylcholine Receptor Structuur",
+            "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om een functioneel kanaal te vormen, dat essentieel is voor het doorgeven van signalen in het zenuwstelsel."
+        },
+        {
+            "type": "info",
+            "title": "Acetylcholine Receptor Functionaliteit",
+            "text": "Deze receptor fungeert als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is. Dit proces is cruciaal voor de overdracht van zenuwimpulsen."
+        },
+        {
             "type": "question",
             "question": "Wat is de functie van de acetylcholine receptor?",
             "answer": "De acetylcholine receptor fungeert als een natriumkanaal dat opent wanneer acetylcholine gebonden is, om zo zenuwsignalen door te geven (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Neuromusculaire overdracht",
+            "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gestuurde natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol."
         },
         {
             "type": "question",
@@ -78,9 +153,19 @@
             "answer": "Calcium (1 punt) en natrium (1 punt) zijn essentiële ionen voor de neuromusculaire overdracht en spiercontractie."
         },
         {
+            "type": "info",
+            "title": "Role van Kanalen in Neuromusculaire Overdracht",
+            "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gestuurde natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie."
+        },
+        {
             "type": "question",
             "question": "Wat is de functie van ionen kanalen bij neuromusculaire overdracht?",
             "answer": "De kanalen faciliteren de ionenstroom van natrium en calcium (1 punt), wat essentieel is voor de vrijgave van neurotransmitters en het opwekken van een spiercontractie (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Beëindiging van neurotransmittersignalen",
+            "text": "Om de communicatie tussen neuronen efficiënt te houden, moeten signalen nauwkeurig worden gestart en gestopt. Een van de manieren waarop dit gebeurt, is door de afbraak van neurotransmitters. Bijvoorbeeld, acetylcholinesterase is een enzym dat acetylcholine afbreekt. Dit proces is cruciaal voor het be\u00ebindigen van de signaaltransductie en het voorkomen van overstimulatie van de neuronen."
         },
         {
             "type": "question",
@@ -88,9 +173,19 @@
             "answer": "Acetylcholinesterase breekt acetylcholine af (1 punt), wat essentieel is voor het stoppen van signaaltransductie tussen neuronen (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Werking van Antidepressiva",
+            "text": "Antidepressiva zijn medicijnen die de heropname van neurotransmitters zoals serotonine kunnen remmen. Dit verhoogt de concentratie van deze neurotransmitters in de synaptische spleet, wat kan bijdragen aan het verbeteren van de stemming en het verlichten van depressieve symptomen."
+        },
+        {
             "type": "question",
             "question": "Hoe beïnvloeden antidepressiva de concentratie van neurotransmitters zoals serotonine?",
             "answer": "Antidepressiva remmen de heropname van neurotransmitters zoals serotonine (1 punt), wat leidt tot een verhoogde concentratie in de synaptische spleet (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Rustpotentiaal en ionentransport",
+            "text": "Neuronen hebben een negatieve rustpotentiaal die gecreëerd wordt door uitstromend kalium en de actieve werking van natriumkalium-pompen. Deze rustpotentiaal is essentieel voor het behoud van de elektrische stabiliteit van de cel en om de voorwaarden voor een actiepotentiaal te scheppen."
         },
         {
             "type": "question",
@@ -98,9 +193,29 @@
             "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van Natrium en Kalium ionen binnen en buiten de cel."
         },
         {
+            "type": "info",
+            "title": "Myelineschede en snelle signaaltransductie",
+            "text": "Myelineschedes isoleren axonen en laten actiepotentialen 'springen' tussen de knopen van Ranvier voor snellere transmissie."
+        },
+        {
+            "type": "info",
+            "title": "Impact van Myeline Beschadiging",
+            "text": "Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie."
+        },
+        {
             "type": "question",
             "question": "Hoe beïnvloedt beschadiging van myeline de signaaltransductie?",
             "answer": "Beschadiging van myeline, zoals bij aandoeningen zoals multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen in de zenuwsignalering (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Neurotransmitters",
+            "text": "Neurotransmitters zijn chemische boodschappers die signalen overdragen tussen neuronen door interactie met specifieke receptoren op postsynaptische cellen. Ze kunnen een activerend (excitatoir) of remmend (inhibitoir) effect hebben op deze cellen, wat essentieel is voor de verwerking van informatie in de hersenen."
+        },
+        {
+            "type": "info",
+            "title": "Synaptische Transmissie",
+            "text": "Synaptische transmissie is het proces waarbij neurotransmitters vrijkomen uit de presynaptische neuron en zich binden aan receptoren op de postsynaptische neuron, wat resulteert in de activering of remming van de postsynaptische cel. Verschillende neurotransmitters, zoals glutamaat en gamma-aminoboterzuur (GABA), hebben tegenovergestelde effecten, waarbij glutamaat overwegend excitatoire en GABA overwegend inhibitoire reacties veroorzaakt."
         },
         {
             "type": "question",
@@ -113,9 +228,14 @@
             "answer": "Glutamaat en GABA verschillen in hun effect op synaptische transmissie doordat glutamaat voornamelijk een excitatoir (activerend) effect heeft (1 punt), terwijl GABA voornamelijk een inhibitoir (remmend) effect heeft (1 punt)."
         },
         {
-            "type": "question",
-            "question": "Hoe verschillen glutamaat en GABA in hun effect op synaptische transmissie?",
-            "answer": "Glutamaat en GABA verschillen in hun effect op synaptische transmissie doordat glutamaat voornamelijk een excitatoir (activerend) effect heeft (1 punt), terwijl GABA voornamelijk een inhibitoir (remmend) effect heeft (1 punt)."
+            "type": "info",
+            "title": "Ionentransport in Neuronen",
+            "text": "Ionentransport is cruciaal in de werking van neuronen en omvat processen zoals de activering van calciumkanalen in presynaptische cellen door actiepotentialen, wat uiteindelijk leidt tot de afgifte van neurotransmitters."
+        },
+        {
+            "type": "info",
+            "title": "Receptoractiviteit en Actiepotentialen",
+            "text": "Postsynaptische acetylcholine-receptoren zijn essentieel voor neuronale communicatie. Wanneer deze receptoren geactiveerd worden, laten ze natriumionen de cel binnen, wat kan resulteren in het genereren van een nieuwe actiepotentiaal in de postsynaptische cel."
         },
         {
             "type": "question",
@@ -123,14 +243,29 @@
             "answer": "Postsynaptische acetylcholine-receptoren laten natriumionen de cel binnenstromen als ze geactiveerd worden, wat kan resulteren in het ontstaan van een nieuwe actiepotentiaal (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Patch Clamp Techniek",
+            "text": "De patch clamp techniek wordt gebruikt om de specificiteit en werking van ionenkanalen te karakteriseren. Deze methode maakt het mogelijk om de elektrische activiteit van individuele ionenkanalen te meten, waardoor inzicht wordt verkregen in de manier waarop specifieke ionen door celmembranen stromen."
+        },
+        {
             "type": "question",
             "question": "Wat is het doel van de patch clamp techniek?",
             "answer": "Het doel van de patch clamp techniek is om de specificiteit en werking van ionenkanalen te karakteriseren door de elektrische potentiaal over een membraan te meten (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Specifiek gebruik van patch plamp techniek",
+            "text": "Door gebruik te maken van de patch clamp techniek kunnen wetenschappers de eigenschappen van verschillende soorten ionenkanalen bestuderen, zoals hun geleidingssnelheid, selectiviteit voor bepaalde ionen, en de mechanismen die hun opening en sluiting regelen."
+        },
+        {
             "type": "question",
             "question": "Welke aspecten van ionenkanalen kunnen bestudeerd worden met de patch clamp techniek?",
             "answer": "Met de patch clamp techniek kunnen eigenschappen zoals geleidingssnelheid (0.5 punt), ionenselectiviteit (0.5 punt), en de mechanismen van opening en sluiting (1 punt) van ionenkanalen bestudeerd worden."
+        },
+        {
+            "type": "info",
+            "title": "Belang van ionenkanalen",
+            "text": "Ionenkanalen zijn essentieel voor de functie van neuronen en spiercellen en zijn betrokken bij diverse ziektebeelden zoals epilepsie en migraine."
         },
         {
             "type": "question",
