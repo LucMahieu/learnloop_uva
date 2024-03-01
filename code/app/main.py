@@ -193,15 +193,15 @@ def re_insert_question(interval):
 def render_SR_nav_buttons():
     col_prev, col1, col2, col3, col_next = st.columns([1.8, 3, 3, 3, 1.8])
     with col_prev:
-        st.button('Previous', use_container_width=True, on_click=lambda: change_segment_index(-1))
+        st.button('Vorige', use_container_width=True, on_click=lambda: change_segment_index(-1))
     with col1:
-        st.button('Repeat quickly ↩️', use_container_width=True, on_click=re_insert_question, args=(10,))
+        st.button('Herhaal snel ↩️', use_container_width=True, on_click=re_insert_question, args=(10,))
     with col2:
-        st.button('Repeat later 🕒', use_container_width=True, on_click=re_insert_question, args=(15,))
+        st.button('Herhaal later 🕒', use_container_width=True, on_click=re_insert_question, args=(15,))
     with col3:
         st.button('Got it ✅', use_container_width=True, on_click=lambda: change_segment_index(1))
     with col_next:
-        st.button('Next', use_container_width=True, on_click=lambda: change_segment_index(1))
+        st.button('Volgende', use_container_width=True, on_click=lambda: change_segment_index(1))
 
 
 def render_explanation():
