@@ -27,7 +27,8 @@
         {
             "type": "info",
             "title": "Ionenconcentraties en celomgeving",
-            "text": "De concentratie van verschillende ionen varieert aanzienlijk tussen de binnen- en buitenkant van cellen. Natrium (Na+) heeft een lage concentratie binnen en een hoge buiten de cel. Kalium (K+) heeft een hoge concentratie binnen en een lage buiten de cel. Chloride (Cl-) en calcium (Ca2+) hebben beide een lage concentratie binnen de cel, terwijl ze buiten de cel in hogere concentraties voorkomen. Magnesium (Mg2+) is ook een belangrijk ion, met vari\u00ebrende concentraties. Protonen (H+) zijn cruciaal voor het reguleren van de lading en pH in zowel de binnen- als buitenkant van de cel."
+            "text": "De concentratie van verschillende ionen varieert aanzienlijk tussen de binnen- en buitenkant van cellen. Natrium (Na+) heeft een lage concentratie binnen en een hoge buiten de cel. Kalium (K+) heeft een hoge concentratie binnen en een lage buiten de cel. Chloride (Cl-) en calcium (Ca2+) hebben beide een lage concentratie binnen de cel, terwijl ze buiten de cel in hogere concentraties voorkomen.",
+            "image": "images/ionenconcentraties.png"
         },
         {
             "type": "question",

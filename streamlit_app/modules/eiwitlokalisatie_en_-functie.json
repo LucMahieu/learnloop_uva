@@ -3,13 +3,9 @@
     "segments": [
         {
             "type": "info",
-            "title": "Belang van Eiwitlokalisatie en -transport",
-            "text": "Voor het correct functioneren van cellen is het van belang dat eiwitten nauwkeurig worden gepositioneerd. Dit wordt bereikt door processen die zorgen voor eiwitlokalisatie en -transport binnen de cel."
-        },
-        {
-            "type": "info",
-            "title": "Eiwitlokalisatie",
-            "text": "Eiwitlokalisatie is het proces waarbij eiwitten naar de juiste locatie binnen de cel worden gebracht. Dit is noodzakelijk omdat de functie van eiwitten vaak locatie-afhankelijk is."
+            "title": "Belang van eiwitlokalisatie en -transport",
+            "text": "Voor het correct functioneren van cellen is het van belang dat eiwitten nauwkeurig worden gepositioneerd, want de functie van eiwitten is vaak locatie-afhankelijk. Dit wordt bereikt door processen die zorgen voor eiwitlokalisatie en -transport binnen de cel.",
+            "image": "images/cel_compartimenten.png"
         },
         {
             "type": "question",
@@ -28,18 +24,9 @@
         },
         {
             "type": "info",
-            "title": "Verhouding celvolume en membraanoppervlakte bij lever- en pancreascellen",
-            "text": "Lever- en pancreascellen zijn voorbeelden van cellen waarbij de grootte en de daarmee samenhangende verhouding tussen celvolume en membraanoppervlakte direct invloed hebben op hun specifieke functies. De effici\u00ebntie van processen zoals detoxificatie in levercellen en enzymsecretie in pancreascellen kan afhankelijk zijn van deze verhouding."
-        },
-        {
-            "type": "question",
-            "question": "Wat zegt de verhouding tussen celvolume en membraanoppervlakte over de functies van lever- en pancreascellen?",
-            "answer": "De verhouding is belangrijk omdat het de efficiëntie van processen zoals detoxificatie in levercellen (1 punt) en enzymsecretie in pancreascellen be\u00efnvloedt, doordat het de stofuitwisseling met de omgeving bepaalt (1 punt)."
-        },
-        {
-            "type": "info",
             "title": "Cytoskelet",
-            "text": "Het cytoskelet is een complex netwerk van vezels in de cel, opgebouwd uit microtubules, intermediate filaments, en microfilaments, die belangrijk zijn voor de structuur en het transport binnen de cel."
+            "text": "Het cytoskelet is een complex netwerk van vezels in de cel, opgebouwd uit microtubules, intermediate filaments, en microfilaments, die belangrijk zijn voor de structuur en het transport binnen de cel.",
+            "image": "images/cytoskelet.png"
         },
         {
             "type": "info",
@@ -53,13 +40,14 @@
         },
         {
             "type": "question",
-            "question": "Welk onderdeel van het cytoskelet wordt voornamelijk gebruikt voor het transport van eiwitten en kleine blaasjes?",
-            "answer": "Eigenlijk worden alle onderdelen gebruikt, meeste gaat via de microtubules (tubuline)"
+            "question": "Welk onderdeel van het cytoskelet wordt het meest gebruikt voor het transport van eiwitten en kleine blaasjes?",
+            "answer": "Eigenlijk worden alle onderdelen gebruikt, maar het meeste gaat via de microtubules (tubuline)"
         },
         {
             "type": "info",
             "title": "Eiwitbiosynthese en ribosomen",
-            "text": "Eiwitbiosynthese, het proces waarbij eiwitten worden geproduceerd, vindt plaats bij zowel membraangebonden als vrije polysomen (ribosomen). De locatie van de synthese be\u00efnvloedt de bestemming van de eiwitten in de cel."
+            "text": "Eiwitbiosynthese, het proces waarbij eiwitten worden geproduceerd, vindt plaats bij zowel membraangebonden als vrije polysomen (ribosomen). De locatie van de synthese be\u00efnvloedt de bestemming van de eiwitten in de cel.",
+            "image": "images/ribosomen.png"
         },
         {
             "type": "question",
@@ -84,29 +72,32 @@
         {
             "type": "info",
             "title": "Functie en identiteit van eiwitten",
-            "text": "Het 'groene gedeelte' van een eiwit staat voor de identiteit en functie van het eiwit, terwijl het 'rode gedeelte' informatie bevat over de bestemming van het eiwit in de vorm van een adreslabel."
+            "text": "Het 'groene gedeelte' van een eiwit staat voor de identiteit en functie van het eiwit, terwijl het 'rode gedeelte' informatie bevat over de bestemming van het eiwit in de vorm van een adreslabel.",
+            "image": "images/eiwit_adreslabels.png"
         },
         {
             "type": "question",
             "question": "Wat is de rol van het 'groene gedeelte' van een eiwit?",
-            "answer": "Het 'groene gedeelte' van een eiwit bepaalt de identiteit en de functie van het eiwit (1 punt)."
-            # TODO: image van groene gedeelte toevoegen
+            "answer": "Het 'groene gedeelte' van een eiwit bepaalt de identiteit en de functie van het eiwit (1 punt).",
+            "image": "images/eiwit_adreslabels.png"
         },
         {
             "type": "question",
             "question": "Wat bevat het 'rode gedeelte' van een eiwit en wat is het belang ervan?",
-            "answer": "Het 'rode gedeelte' van een eiwit bevat het adreslabel dat de bestemming van het eiwit in de cel aangeeft (1 punt)."
-            # TODO: image van rode gedeelte toevoegen
+            "answer": "Het 'rode gedeelte' van een eiwit bevat het adreslabel dat de bestemming van het eiwit in de cel aangeeft (1 punt).",
+            "image": "images/eiwit_adreslabels.png"
         },
         {
             "type": "info",
             "title": "Selectief nucleair transport",
-            "text": "Transport naar de kern is selectief en vereist specifieke signalen. Eiwitten moeten een nuclear localization signal (NLS) bevatten om door de kernmembraan te worden getransporteerd."
+            "text": "Transport naar de kern is selectief en vereist specifieke signalen. Eiwitten moeten een nuclear localization signal (NLS) bevatten om door de kernmembraan te worden getransporteerd.",
+            "image": "images/nucleair_import_signal.png"
         },
         {
             "type": "info",
             "title": "Importeinen en nuclear localization signal",
-            "text": "Importeinen zijn eiwitten die andere eiwitten met een NLS herkennen en deze vervolgens naar de kern begeleiden voor transport."
+            "text": "Importeinen zijn eiwitten die andere eiwitten met een NLS herkennen en deze vervolgens naar de kern begeleiden voor transport.",
+            "image": "images/nucleaire_import.png"
         },
         {
             "type": "question",
@@ -116,7 +107,8 @@
         {
             "type": "info",
             "title": "Exporteinen en RAN-GTP",
-            "text": "Export uit de kern vereist ook specifieke signalen en wordt geregeld door exporteinen, die samenwerken met het RAN-GTP eiwit om transport te faciliteren."
+            "text": "Export uit de kern vereist ook specifieke signalen en wordt geregeld door exporteinen, die samenwerken met het RAN-GTP eiwit om transport te faciliteren.",
+            "image": "images/nucleaire_export.png"
         },
         {
             "type": "question",
@@ -125,8 +117,9 @@
         },
         {
             "type": "info",
-            "title": "RAN-GDP en RAN-GTP cyclus",
-            "text": "De RAN-GDP en RAN-GTP cyclus is een essentieel mechanisme voor nucleocytoplasmatisch transport. RAN-GDP wordt in de kern omgezet in RAN-GTP door de werking van Ran-GEF. Eenmaal buiten de kern, wordt RAN-GTP weer omgezet in RAN-GDP door RAN-GAP. De NTF2 shuttle is specifiek ontworpen om RAN-GDP terug naar de kern te vervoeren, waarbij het twee moleculen tegelijk kan transporteren. Dit maakt deel uit van een cruciaal regulerend systeem voor cellulaire transportprocessen."
+            "title": "RAN-GDP en RAN-GTP transport cyclus",
+            "text": "De RAN-GDP en RAN-GTP transport cyclus is een essentieel mechanisme voor nucleocytoplasmatisch transport. RAN-GDP wordt in de kern omgezet in RAN-GTP door de werking van Ran-GEF. Eenmaal buiten de kern, wordt RAN-GTP weer omgezet in RAN-GDP door RAN-GAP. De NTF2 shuttle is specifiek ontworpen om RAN-GDP terug naar de kern te vervoeren, waarbij het twee moleculen tegelijk kan transporteren. Dit maakt deel uit van een cruciaal regulerend systeem voor cellulaire transportprocessen.",
+            "image": "images/RAN-GDP_GTP.png"
         },
         {
             "type": "question",
@@ -136,17 +129,7 @@
         {
             "type": "question",
             "question": "Hoe draagt NTF2 bij aan de RAN-GDP en RAN-GTP transport cyclus?",
-            "answer": "NTF2 is een shuttle die speciaal is ontworpen om RAN-GDP terug naar de kern te transporteren, en kan twee moleculen tegelijk vervoeren (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Beschikbaarheid van energie en nucleotiden",
-            "text": "GTP, GDP, ATP en ADP zijn nucleotiden die constant aanwezig zijn in de cel en cruciaal zijn voor verschillende cellulaire processen. Ze circuleren door de cel om energie te leveren waar nodig."
-        },
-        {
-            "type": "info",
-            "title": "Rol van mitochondria in energieproductie",
-            "text": "Mitochondria zijn de energiecentrales van de cel, verantwoordelijk voor de productie van ATP uit ADP. Dit proces voorziet de cel van de benodigde energie voor het uitvoeren van haar functies."
+            "answer": "NTF2 is een shuttle die speciaal is ontworpen om RAN-GDP terug naar de kern te transporteren (1 punt) en kan twee moleculen tegelijk vervoeren (1 punt)."
         },
         {
             "type": "info",
@@ -311,7 +294,7 @@
         {
             "type": "info",
             "title": "Peptidases",
-            "text": "Peptidases zijn enzymen die helpen bij het vormen van de finale structuur van een eiwit door peptidebindingen te klieven."
+            "text": "Peptidases zijn enzymen die helpen bij de maturatie van de finale structuur van een eiwit door peptidebindingen te klieven."
         },
         {
             "type": "question",
@@ -321,7 +304,7 @@
         {
             "type": "info",
             "title": "Glycosylering",
-            "text": "Glycosylering is een proces dat plaatsvindt in het endoplasmatisch reticulum waarbij suikergroepen worden toegevoegd aan eiwitten, wat resulteert in volledig geglycosyleerde eiwitten."
+            "text": "Glycosylering is een proces dat plaatsvindt in het endoplasmatisch reticulum en het Golgi waarbij suikergroepen worden toegevoegd aan eiwitten, wat resulteert in volledig geglycosyleerde eiwitten."
         },
         {
             "type": "question",
@@ -330,13 +313,13 @@
         },
         {
             "type": "info",
-            "title": "Kardelsequentie",
-            "text": "Een kardelsequentie is een specifieke sequentie aanwezig in eiwitten die betrokken zijn bij glycosylering, welke ervoor zorgt dat het eiwit na modificatie terugkeert naar de juiste locatie."
+            "title": "KDEL-sequentie",
+            "text": "Een KDEL-sequentie is een specifieke sequentie aanwezig in eiwitten die betrokken zijn bij glycosylering, welke ervoor zorgt dat het eiwit na modificatie terugkeert naar het ER."
         },
         {
             "type": "question",
-            "question": "Wat is de functie van een KDEL sequentie in eiwitten?",
-            "answer": "Een KDEL sequentie zorgt ervoor dat een eiwit na modificatie in het Golgi terugkeert naar de het ER (1 punt)."
+            "question": "Wat is de functie van een KDEL-sequentie in eiwitten?",
+            "answer": "Een KDEL-sequentie zorgt ervoor dat een eiwit na modificatie in het Golgi terugkeert naar het ER (1 punt)."
         }
     ]
 }

@@ -1,0 +1,44 @@
+{
+    "segments": [
+        {
+            "type": "info",
+            "title": "Structuur van nucleaire poriecomplexen (NPC's)",
+            "text": "NPC's zijn complexe structuren in het kernmembraan die bestaan uit verschillende componenten, waaronder cytosolische fibrillen, membraanring-eiwitten, het nucleaire mandje en kanaalnucleoporines. Deze complexen fungeren als poorten die het transport van moleculen tussen de nucleus en het cytosol reguleren."
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de belangrijkste componenten van nucleaire poriecomplexen (NPC's) en wat is hun functie?",
+            "answer": "De belangrijkste componenten zijn cytosolische fibrillen, membraanring-eiwitten, het nucleaire mandje en kanaalnucleoporines (1 punt). Ze reguleren het transport van moleculen tussen de nucleus en het cytosol (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Rol van het kernmembraan",
+            "text": "Het kernmembraan functioneert als een 'envelop' die de kern omringt en verbonden is met het ruw endoplasmatisch reticulum (ER). Deze structuur integreert de kern met de rest van de cel en zorgt voor de regulatie van het nucleaire transport."
+        },
+        {
+            "type": "question",
+            "question": "Hoe integreert het kernmembraan de kern met de rest van de cel en welke rol speelt het bij het nucleair transport?",
+            "answer": "Het kernmembraan functioneert als een 'envelop' die de kern omringt (1 punt) en is verbonden met het ruw endoplasmatisch reticulum (ER) (1 punt). Het speelt een cruciale rol bij het reguleren van nucleair transport (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Nucleaire import",
+            "text": "Nucleaire import is een proces waarbij eiwitten met een nucleair lokalisatiesignaal (NLS) vanuit het cytosol naar de nucleus worden getransporteerd. Dit proces vereist interactie met een nucleaire importreceptor en het succesvolle transport door het nucleaire poriecomplex (NPC)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is noodzakelijk voor een eiwit om door het nucleaire poriecomplex (NPC) getransporteerd te worden?",
+            "answer": "Een eiwit moet een nucleair lokalisatiesignaal (NLS) bezitten (1 punt) en binden aan een nucleaire importreceptor (1 punt) om door het NPC getransporteerd te worden."
+        },
+        {
+            "type": "info",
+            "title": "Rol van Ran in nucleaire import",
+            "text": "Eenmaal in de nucleus wordt GTP, dat gebonden is aan het eiwit Ran, gehydrolyseerd tot GDP. Deze hydrolyse zorgt ervoor dat Ran-GDP disassocieert van de receptor, waardoor het eiwit (de 'cargo') in de nucleus wordt afgeleverd. Dit mechanisme is cruciaal voor het handhaven van de juiste eiwitverdeling in de cel."
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt het eiwit Ran bij aan het proces van nucleaire import?",
+            "answer": "Ran gebonden aan GTP zorgt voor de associatie met de nucleaire importreceptor (1 punt). Na hydrolyse van GTP naar GDP in de nucleus disassocieert Ran-GDP van de receptor, wat resulteert in de afgifte van het eiwit in de nucleus (1 punt)."
+        }
+    ]
+}
