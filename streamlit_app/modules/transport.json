@@ -5,14 +5,13 @@
             "type": "info",
             "title": "Transporteiwitten",
             "text": "Transporteiwitten spelen een vitale rol in het faciliteren van het transport van stoffen over celmembranen. Ze helpen bij het verplaatsen van moleculen die niet gemakkelijk door de lipide dubbellaag kunnen.",
-            "image": "images/transporter.png"
-            
+            "image": "transporter.png"
         },
         {
             "type": "info",
             "title": "Ionenkanalen",
             "text": "Ionenkanalen zijn gespecialiseerde eiwitstructuren in het membraan die functioneren als kanalen voor het doorlaten van ionen. Ze kunnen continu open zijn, of gereguleerd worden door verschillende signalen.",
-            "image": "images/ion_channel.png"
+            "image": "ion_channel.png"
         },
         {
             "type": "question",
@@ -28,7 +27,7 @@
             "type": "info",
             "title": "Ionenconcentraties en celomgeving",
             "text": "De concentratie van verschillende ionen varieert aanzienlijk tussen de binnen- en buitenkant van cellen. Natrium (Na+) heeft een lage concentratie binnen en een hoge buiten de cel. Kalium (K+) heeft een hoge concentratie binnen en een lage buiten de cel. Chloride (Cl-) en calcium (Ca2+) hebben beide een lage concentratie binnen de cel, terwijl ze buiten de cel in hogere concentraties voorkomen.",
-            "image": "images/ionenconcentraties.png"
+            "image": "ionenconcentraties.png"
         },
         {
             "type": "question",
@@ -54,7 +53,7 @@
             "type": "info",
             "title": "Membraanstructuur en permeabiliteit",
             "text": "De lipide bilaag van een celmembraan is selectief permeabel en laat hydrofobe stoffen en deeltjes zoals gasmoleculen en steroidhormonen door. Water en glycerol hebben een beperkte doorgang door de membraan, terwijl suiker en sucrose zeer beperkte doorgang hebben. Geladen ionen kunnen niet door de lipide bilaag heen zonder hulp.",
-            "image": "images/permeabiliteit_lipide_bilaag.png"
+            "image": "permeabiliteit_lipide_bilaag.png"
         },
         {
             "type": "question",
@@ -80,7 +79,7 @@
             "type": "info",
             "title": "Kanalen Versus Transporteiwitten",
             "text": "Kanalen zijn structureel verschillend van transporteiwitten en hebben de mogelijkheid om permeabel te worden, wat betekent dat ze onder bepaalde omstandigheden stoffen door het membraan kunnen laten passeren.",
-            "image": "images/transporters_en_kanalen.png"
+            "image": "transporters_en_kanalen.png"
         },
         {
             "type": "question",
@@ -91,7 +90,7 @@
             "type": "info",
             "title": "Passief Transport",
             "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren. Het verloopt met de concentratiegradi\u00ebnt mee, wat betekent dat moleculen van een gebied met een hoge concentratie naar een gebied met een lagere concentratie bewegen, zonder dat dit energie kost.",
-            "images": "images/actief_en_passief_transport.png"
+            "images": "actief_en_passief_transport.png"
         },
         {
             "type": "question",
@@ -102,7 +101,7 @@
             "type": "info",
             "title": "Actief Transport",
             "text": "Actief transport is een proces waarbij cellen stoffen tegen hun concentratiegradi\u00ebnt in transporteren. Dit type transport vereist energie, vaak in de vorm van ATP, omdat het stoffen verplaatst van een gebied met lage concentratie naar een gebied met hoge concentratie.",
-            "images": "images/actief_en_passief_transport.png"
+            "images": "actief_en_passief_transport.png"
         },
         {
             "type": "question",
@@ -113,7 +112,7 @@
             "type": "info",
             "title": "Elektrochemische Gradi\u00ebnt",
             "text": "De elektrochemische gradi\u00ebnt is een combinatie van de concentratiegradi\u00ebnt en de elektrische gradi\u00ebnt over een membraan. Het speelt een belangrijke rol in het transporteren van ionen door de celmembraan en kan dienen als energiebron voor bepaalde typen van transport.",
-            "image": "images/elektrochemisch_gradient.png"
+            "image": "elektrochemisch_gradient.png"
         },
         {
             "type": "question",
@@ -124,13 +123,13 @@
             "type": "info",
             "title": "Ion-gekoppeld Transport",
             "text": "Ion-gekoppeld transport verwijst naar een vorm van actief transport waarbij de energie van de concentratiegradi\u00ebnt van een ion wordt gebruikt om een ander molecuul te transporteren.",
-            "image": "images/soorten_transporters.png"
+            "image": "soorten_transporters.png"
         },
         {
             "type": "info",
             "title": "Natrium-Kalium Pomp",
             "text": "De natrium-kalium pomp is ook een transporteiwit dat actief de concentratiegradi\u00ebnten van natrium en kalium over de celmembraan reguleert. Dit mechanisme is essentieel voor diverse cellulaire processen, waaronder het handhaven van het membraanpotentiaal.",
-            "image": "images/natrium_kalium_pomp.png"
+            "image": "natrium_kalium_pomp.png"
         },
         {
             "type": "question",
@@ -146,7 +145,7 @@
             "type": "info",
             "title": "Transporteiwitten en Specificiteit",
             "text": "Transporteiwitten zijn gespecialiseerde eiwitten in celmembranen die moleculen over de membraan verplaatsen. Hun werking is gebaseerd op specificiteit, wat betekent dat ze verschillende transportmechanismen gebruiken voor verschillende moleculen. Er zijn drie hoofdtypen: uniport, die \u00e9\u00e9n molecuul in \u00e9\u00e9n richting transporteert; symport, ook bekend als co-transporter, die twee verschillende moleculen in dezelfde richting transporteert; en antiport, die twee verschillende moleculen in tegengestelde richtingen transporteert.",
-            "image": "images/soorten_passief_transporters.png"
+            "image": "soorten_passief_transporters.png"
         },
         {
             "type": "question",
@@ -162,7 +161,7 @@
             "type": "info",
             "title": "Ionkanalen en hun Regulatie",
             "text": "Ionkanalen zijn essentieel voor het functioneren van cellen en kunnen gereguleerd worden op basis van verschillende stimuli. Er zijn voltage-gated kanalen die reageren op veranderingen in de membraanpotentiaal, ligand-gated kanalen die openen door binding van een specifieke moleculaire ligand, en mechanisch geactiveerde kanalen die openen als reactie op fysieke stimuli zoals druk of rek.",
-            "image": "images/soorten_kanalen.png"
+            "image": "soorten_kanalen.png"
         },
         {
             "type": "question",
@@ -193,7 +192,7 @@
             "type": "info",
             "title": "Selectiviteitsfilter van Ionkanalen",
             "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat alleen specifieke ionen het kanaal kunnen doorkruisen, wat cruciaal is voor de functie van cellen.",
-            "image": "images/selectiviteitsfilter.png"
+            "image": "selectiviteitsfilter.png"
         },
         {
             "type": "question",
@@ -219,7 +218,7 @@
             "type": "info",
             "title": "Structuur en membraanpotentiaal",
             "text": "De structuur van een voltage-gated natriumkanaal is zo dat de buitenkant positief en de binnenkant negatief geladen is wanneer het kanaal gesloten is. Veranderingen in de membraanpotentiaal kunnen ervoor zorgen dat deze kanalen openen, waardoor natriumionen de cel binnenstromen.",
-            "image": "images/voltage-gated_natrium_kanaal.png"
+            "image": "voltage-gated_natrium_kanaal.png"
         },
         {
             "type": "question",
@@ -230,13 +229,13 @@
             "type": "info",
             "title": "Drie stadia van natriumkanalen",
             "text": "Natriumkanalen kunnen zich in drie verschillende stadia bevinden: gesloten, open, en ge\u00EFnactiveerd. Tijdens de refractaire periode na een actiepotentiaal blijven de kanalen ge\u00EFnactiveerd, wat verdere actiepotentialen tijdelijk voorkomt.",
-            "image": "images/voltage-gated_natrium_kanaal_stadia.png"
+            "image": "voltage-gated_natrium_kanaal_stadia.png"
         },
         {
             "type": "info",
             "title": "Actiepotentiaal",
             "text": "Een actiepotentiaal is een tijdelijke omkering van het elektrische membraanpotentiaal in een neuron. Het proces begint met de depolarisatie van de celmembraan, waarbij natriumionen naar binnen stromen en kaliumionen naar buiten. Deze ionenbeweging is mogelijk door de sequenti\u00eble opening en sluiting van natrium- en kaliumkanalen. De actiepotentiaal volgt het alles-of-niets-principe, wat betekent dat het signaal altijd een uniforme sterkte en vorm heeft, ongeacht de stimulatie-intensiteit. Dit mechanisme is essentieel voor de signaalvoortplanting langs het neuron, waardoor informatie snel door het zenuwstelsel kan worden overgedragen.",
-            "image": "images/membraanpotentiaal.png"
+            "image": "membraanpotentiaal.png"
         },          
         {
             "type": "question",
@@ -252,13 +251,13 @@
             "type": "info",
             "title": "Ionenuitwisseling",
             "text": "In neuronen is er een constante uitwisseling van ionen om de rustpotentiaal in stand te houden. Kaliumionen (K+) lekken via hun gradi\u00EBnt naar buiten, terwijl de natriumkalium (Na+/K+) pomp actief is om de ionenbalans en dus de rustpotentiaal te behouden.",
-            "image": "images/ionenuitwisseling.png"
+            "image": "ionenuitwisseling.png"
         },
         {
             "type": "info",
             "title": "Rustpotentiaal en depolarisatie",
             "text": "De rustpotentiaal is de spanning over het celmembraan van een neuron in rust. Een elektrische stimulus kan leiden tot de activatie van natriumkanalen, waardoor natriumionen (Na+) naar binnen stromen en depolarisatie veroorzaken, het begin van een actiepotentiaal.",
-            "image": "images/actiepotentiaal_blauw.png"
+            "image": "actiepotentiaal_blauw.png"
         },
         {
             "type": "question",
@@ -274,7 +273,7 @@
             "type": "info",
             "title": "Unidirectionele voortplanting van actiepotentialen",
             "text": "Actiepotentialen in neuronen planten zich unidirectioneel voort als gevolg van de refractaire periode, een tijdspanne waarin de neuron tijdelijk niet in staat is om een nieuw actiepotentiaal te genereren na het vuren van een voorgaande.",
-            "image": "images/unidirectionele_propagatie_actiepotentiaal.png"
+            "image": "unidirectionele_propagatie_actiepotentiaal.png"
         },
         {
             "type": "question",
@@ -285,7 +284,7 @@
             "type": "info",
             "title": "Myelineschede en saltatoire geleiding",
             "text": "De myelineschede is een isolerende laag rondom de axonen van sommige neuronen die de transductiesnelheid van actiepotentialen verhoogt door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt. Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie.",
-            "image": "images/saltatoire_geleiding.png"
+            "image": "saltatoire_geleiding.png"
         },
         {
             "type": "question",
@@ -311,7 +310,7 @@
             "type": "info",
             "title": "Lichtgevoelige kanalen",
             "text": "Lichtgevoelige kanalen zijn eiwitten die reageren op licht en de mogelijkheid bieden om neuronale activiteit nauwkeurig te reguleren. Voorbeelden van deze eiwitten zijn rhodopsine uit algen, dat gebruikt wordt om neuronen te activeren, en halorhodopsine uit bacteri\u00ebn, dat gebruikt wordt om neuronen te remmen.",
-            "image": "images/algen_rhodopsine_optogenetica.png"
+            "image": "algen_rhodopsine_optogenetica.png"
         },
         {
             "type": "question",
@@ -327,7 +326,7 @@
             "type": "info",
             "title": "Mutaties in natriumkanalen",
             "text": "Mutaties in de natriumkanalen kunnen ernstige gevolgen hebben voor de gezondheid. Deze mutaties kunnen leiden tot veranderingen in de actiepotentialen, wat weer invloed heeft op processen zoals hartritme en neuronale activiteit.",
-            "image": "images/mutaties_natrium_kanalen_hartritme.png"
+            "image": "mutaties_natrium_kanalen_hartritme.png"
         },
         {
             "type": "question",
@@ -338,7 +337,7 @@
             "type": "info",
             "title": "Voltage-gated calciumkanalen en neurotransmitterafgifte",
             "text": "Voltage-gated calciumkanalen reageren op veranderingen in de elektrische lading over het celmembraan, zoals die optreden wanneer een actiepotentiaal aankomt bij de terminus van een neuron. Wanneer deze kanalen openen, stromen calciumionen de cel binnen. Dit proces leidt tot de afgifte van neurotransmitters doordat calcium bindt aan eiwitten die de vesikels met neurotransmitters naar de celmembraan leiden, waar ze hun inhoud vrijgeven in de synaptische spleet.",
-            "image": "images/synaptische_calcium_kanalen.png"
+            "image": "synaptische_calcium_kanalen.png"
         },
         {
             "type": "question",
@@ -349,7 +348,7 @@
             "type": "info",
             "title": "Acetylcholine receptor structuur & functionaliteit",
             "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om te fungeren als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is.",
-            "image": "images/acetylcholine_receptor_ligand.png"
+            "image": "acetylcholine_receptor_ligand.png"
         },
         {
             "type": "question",
@@ -370,7 +369,7 @@
             "type": "info",
             "title": "Neuromusculaire overdracht",
             "text": "De neuromusculaire overdracht is het proces waarbij een zenuwimpuls wordt omgezet in een spiercontractie. Dit vereist de betrokkenheid van calcium en natriumtransport. Verschillende kanalen, zoals voltage-gated natriumkanalen en calciumkanalen, spelen hierbij een cruciale rol.",
-            "image": "images/neuromusculaire_junctie.png"
+            "image": "neuromusculaire_junctie.png"
         },
         {
             "type": "question",
@@ -381,7 +380,7 @@
             "type": "info",
             "title": "Rol van kanalen in neuromusculaire overdracht",
             "text": "Verschillende soorten kanalen zijn betrokken bij de neuromusculaire overdracht. Voltage-gated natriumkanalen en calciumkanalen zorgen voor de noodzakelijke ionenstroom die leidt tot de vrijgave van neurotransmitters en uiteindelijk tot spiercontractie.",
-            "image": "images/neuromusculaire_overdracht.png"
+            "image": "neuromusculaire_overdracht.png"
         },
         {
             "type": "question",
@@ -392,7 +391,7 @@
             "type": "info",
             "title": "Be\u00EBindiging van neurotransmittersignalen",
             "text": "Om de communicatie tussen neuronen effici\u00EBnt te houden, moeten signalen nauwkeurig worden gestart en gestopt. Een van de manieren waarop dit gebeurt, is door de afbraak van neurotransmitters. Bijvoorbeeld, acetylcholinesterase is een enzym dat acetylcholine afbreekt. Dit proces is cruciaal voor het be\u00ebindigen van de signaaltransductie en het voorkomen van overstimulatie van de neuronen.",
-            "image": "images/acetylcholinesterase.png"
+            "image": "acetylcholinesterase.png"
         },
         {
             "type": "question",
@@ -403,7 +402,7 @@
             "type": "info",
             "title": "Werking van antidepressiva",
             "text": "Antidepressiva zijn medicijnen die de heropname van neurotransmitters zoals serotonine kunnen remmen. Dit verhoogt de concentratie van deze neurotransmitters in de synaptische spleet, wat kan bijdragen aan het verbeteren van de stemming en het verlichten van depressieve symptomen.",
-            "image": "images/werking_antidepressiva.png"
+            "image": "werking_antidepressiva.png"
         },
         {
             "type": "question",
@@ -424,7 +423,7 @@
             "type": "info",
             "title": "Synaptische transmissie",
             "text": "Synaptische transmissie is het proces waarbij neurotransmitters vrijkomen uit de presynaptische neuron en zich binden aan receptoren op de postsynaptische neuron, wat resulteert in de activering of remming van de postsynaptische cel. Verschillende neurotransmitters, zoals glutamaat en gamma-aminoboterzuur (GABA), hebben tegenovergestelde effecten, waarbij glutamaat overwegend excitatoire en GABA overwegend inhibitoire reacties veroorzaakt.",
-            "image": "images/synaps_in_rust_en_actief.png"
+            "image": "synaps_in_rust_en_actief.png"
         },
         {
             "type": "question",
@@ -440,7 +439,7 @@
             "type": "info",
             "title": "Patch clamp techniek",
             "text": "De patch clamp techniek wordt gebruikt om de specificiteit en werking van ionenkanalen te karakteriseren. Deze methode maakt het mogelijk om de elektrische activiteit van individuele ionenkanalen te meten, waardoor inzicht wordt verkregen in de manier waarop specifieke ionen door celmembranen stromen.",
-            "image": "images/patch_clamp.png"
+            "image": "patch_clamp.png"
         },
         {
             "type": "question",

@@ -14,9 +14,13 @@
         },
         {
             "type": "info",
-            "title": "Eiwittransport",
-            "text": "Eiwitten worden na synthese in het endoplasmatisch reticulum getransporteerd naar verschillende locaties binnen de cel. Er wordt onderscheid gemaakt tussen drie types transport: \n 1) **Selectief transport** (van cytosol naar de celkern) \n 2) **Transmembraan** (van cytosol naar organellen) \n 3) Vesiculair transport (tussen organellen of naar de extracellulaire omgeving). \n\n In deze module bespreken we de mechanismen die betrokken zijn bij selectief en transmembraan transport.",
-            "image": "eiwit_transport.png"
+            "title": "Intracellulaire compartimenten en eiwittransport",
+            "text": "Eiwitten worden na synthese in het endoplasmatisch reticulum getransporteerd naar verschillende locaties binnen de cel, zoals de plasmamembraan, of worden uitgescheiden buiten de cel. Dit transport is een geco\u00f6rdineerd proces dat de functionaliteit van de cel waarborgt."
+        },
+        {
+            "type": "question",
+            "question": "Waar worden eiwitten naartoe getransporteerd vanuit het endoplasmatisch reticulum en waarom is dit belangrijk?",
+            "answer": "Eiwitten worden getransporteerd naar verschillende compartimenten van de cel, zoals de kern, lysosomen en plasmamembraan, of buiten de cel (1 punt). Dit is belangrijk voor het handhaven van de functionaliteit en specialisatie van de cel (1 punt)."
         },
         {
             "type": "info",
@@ -27,7 +31,7 @@
         {
             "type": "info",
             "title": "Eiwittransport via het cytoskelet",
-            "text": "Het cytoskelet faciliteert het transport van eiwitten en vesikels langs specifieke wegen, waarbij microfilamenten vaak gebruikt worden voor de beweging van eiwitten en vesikels."
+            "text": "Het cytoskelet faciliteert het transport van eiwitten en blaasjes langs specifieke wegen, waarbij microfilamenten vaak gebruikt worden voor de beweging van eiwitten en kleine blaasjes."
         },
         {
             "type": "question",
@@ -36,7 +40,7 @@
         },
         {
             "type": "question",
-            "question": "Welk onderdeel van het cytoskelet wordt het meest gebruikt voor het transport van eiwitten en vesikels?",
+            "question": "Welk onderdeel van het cytoskelet wordt het meest gebruikt voor het transport van eiwitten en kleine blaasjes?",
             "answer": "Eigenlijk worden alle onderdelen gebruikt, maar het meeste gaat via de microtubules (tubuline)"
         },
         {
@@ -46,115 +50,96 @@
             "image": "ribosomen.png"
         },
         {
+            "type": "question",
+            "question": "Waar in de cel vindt de eiwitsynthese plaats en hoe beinvloedt de locatie de bestemming van het eiwit?",
+            "answer": "De locatie van eiwitsynthese, bij membraangebonden of vrije polysomen, bepaalt of het eiwit binnen de cel blijft of wordt uitgescheiden (1 punt)."
+        },
+        {
             "type": "info",
             "title": "Aminozuurvolgorde en eiwitfunctie",
-            "text": "De specifieke aminozuurvolgorde van een eiwit draagt informatie die bepalend is voor zowel de bestemming binnen de cel als de uiteindelijke functie van het eiwit. Die stukken informatie in de aminozuurvolgorde noem je ook wel signaalsequenties."
+            "text": "De specifieke aminozuurvolgorde van een eiwit draagt informatie die bepalend is voor zowel de bestemming binnen de cel als de uiteindelijke functie van het eiwit."
         },
         {
             "type": "question",
-            "question": "Hoe wordt de bestemming en functie van een eiwit bepaald?",
-            "answer": "De aminozuurvolgorde bevat de specifieke signaalsequenties (1 punt) die de bestemming en functie van het eiwit binnen de cel bepalen."
+            "question": "Hoe be\u00efnvloedt de aminozuurvolgorde van een eiwit zijn bestemming en functie?",
+            "answer": "De aminozuurvolgorde bevat specifieke signalen die de bestemming (1 punt) en functie (1 punt) van het eiwit binnen de cel bepalen."
+        },
+        {
+            "type": "info",
+            "title": "Adreslabels in eiwitten",
+            "text": "Adreslabels zijn specifieke sequenties in de aminozuurvolgorde van een eiwit die bepalen naar welke locatie binnen de cel het eiwit getransporteerd wordt."
         },
         {
             "type": "info",
             "title": "Functie en identiteit van eiwitten",
-            "text": "Het groene gedeelte van bovenstaande eiwit staat voor de identiteit en functie van het eiwit, terwijl het rode gedeelte informatie bevat over de bestemming van het eiwit in de vorm van een adreslabel. Als het adreslabel aan de N-terminus zit, dan is deze lineair en noem je het een signaalsequentie. Als de informatie in het midden van het eiwit zit, dan moet het eiwit eerst opgevouwen worden om de zogenaamde 'signal patches' in het rode gedeelte samen te voegen.",
+            "text": "Het 'groene gedeelte' van een eiwit staat voor de identiteit en functie van het eiwit, terwijl het 'rode gedeelte' informatie bevat over de bestemming van het eiwit in de vorm van een adreslabel.",
             "image": "eiwit_adreslabels.png"
         },
         {
             "type": "question",
-            "question": "Welke rol vervult het groene gedeelte in onderstaande eiwitten en wat is de rol van het rode gedeelte?",
-            "answer": "Het groene gedeelte bepaalt de identiteit en de functie van het eiwit (1 punt) terwijl het rode gedeelte het adreslabel bevat dat de bestemming van het eiwit aangeeft (1 punt).",
+            "question": "Wat is de rol van het 'groene gedeelte' van een eiwit?",
+            "answer": "Het 'groene gedeelte' van een eiwit bepaalt de identiteit en de functie van het eiwit (1 punt).",
+            "image": "eiwit_adreslabels.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat bevat het 'rode gedeelte' van een eiwit en wat is het belang ervan?",
+            "answer": "Het 'rode gedeelte' van een eiwit bevat het adreslabel dat de bestemming van het eiwit in de cel aangeeft (1 punt).",
             "image": "eiwit_adreslabels.png"
         },
         {
             "type": "info",
             "title": "Selectief nucleair transport",
-            "text": "Transport naar de kern is selectief en vereist specifieke signalen. Eiwitten moeten een nuclear localization (import of export) signal (NLS) bevatten om door de kernmembraan te worden getransporteerd. Een mutatie in dat signaal kan leiden tot een verandering in de lokalisatie van het eiwit.",
-            "image": "nuclear_import_signal.png"
+            "text": "Transport naar de kern is selectief en vereist specifieke signalen. Eiwitten moeten een nuclear localization signal (NLS) bevatten om door de kernmembraan te worden getransporteerd.",
+            "image": "nucleair_import_signal.png"
         },
         {
             "type": "info",
-            "title": "Importins en nuclear localization signal",
-            "text": "Importins zijn eiwitten die in het cytosol zitten en andere eiwitten met een nuclear localization signal herkennen en deze vervolgens naar de kern begeleiden voor transport. Er zijn verschillende soorten importins die specifieke eiwitten herkennen en transporteren en de eiwitten met een NLS noem je cargo-eiwitten zodra deze gekoppeld zijn aan een importin eiwit.",
-            "image": "importins.png"
-        },
-        {
-            "type": "info",
-            "title": "Adaptor eiwitten",
-            "text": "Adaptor eiwitten zijn betrokken bij het nucleair transport van eiwitten. Ze helpen bij het herkennen van eiwitten met een nuclear localization signal en zorgen voor de interactie met importins voor transport naar de kern.",
-            "image": "adaptor_eiwitten.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is de rol van importins in het nucleair transport?",
-            "answer": "Importins herkennen eiwitten met een nuclear localization signal (1 punt) en transporteren deze naar de kern (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Nuclear Pore Complex",
-            "text": "Importins die aan een cargo-eiwit gekoppeld zijn, zullen door het nucleaire pore complex (NPC) moeten reizen. Het NPC is een complexe structuur die het transport van eiwitten tussen de kern en het cytoplasma reguleert en bestaat onder andere uit fibrillen, nucleoporines, membraanringen en nucleare mandjes die een barri\u00e8re vormen voor het transport van grote moleculen, maar die ook selectief transport van eiwitten mogelijk maken.",
-            "image": "nuclear_pore_complex.png"
-        },
-        {
-            "type": "info",
-            "title": "Nucleaire import en export cycli",
-            "text": "Het nucleaire transport wordt gereguleerd door import- en exportcycli. Importcycli zorgen voor het transport van eiwitten naar de kern, terwijl exportcycli het transport van eiwitten uit de kern reguleren."
-        },
-        {
-            "type": "info",
-            "title": "Nucleaire import",
-            "text": "In de afbeelding heeft het bruine eiwit een nucleair importsignaal (NIS) waardoor het wordt herkend door een importin recepter. Omdat het zowel een passend NLS als transporteiwit heeft, kan het cargo-eiwit door het nucleaire porie complex (NPC) passeren, terwijl andere moleculen worden uitgesloten. Binnen de kern zorgt de interactie met een ander molecuul, Ran-GTP, ervoor dat het cargo-eiwit loslaat van de import receptor. Het cargo-eiwit wordt nu afgeleverd in de kern, terwijl de import receptor, nu gebonden aan Ran-GDP (de 'lege' vorm na het lossen van de 'energie'), terugkeert naar het cytoplasma om een nieuwe cyclus te beginnen.",
+            "title": "Importeinen en nuclear localization signal",
+            "text": "Importeinen zijn eiwitten die andere eiwitten met een NLS herkennen en deze vervolgens naar de kern begeleiden voor transport.",
             "image": "nucleaire_import.png"
         },
         {
             "type": "question",
-            "question": "Waar moet een molecuul aan voldoen om door het nucleaire porie complex te kunnen passeren?",
-            "answer": "Een molecuul moet een passend signaal (NLS) (1 punt) en de juiste transporteiwit hebben (1 punt) om door het nucleaire porie complex te kunnen passeren."
-        },
-        {
-            "type": "question",
-            "question": "Wat is de rol van Ran-GTP in het nucleair import transport?",
-            "answer": "Ran-GTP bindt aan de importin receptor (1 punt) waardoor deze het cargo-eiwit loslaat in de kern (1 punt)."
+            "question": "Wat is de rol van importeinen in het nucleair transport?",
+            "answer": "Importeinen herkennen eiwitten met een nuclear localization signal (1 punt) en transporteren deze naar de kern (1 punt)."
         },
         {
             "type": "info",
-            "title": "Nucleaire export",
-            "text": "In de afbeelding heeft het groene eiwit een nucleair exportsignaal (NES), waardoor het wordt herkend door een exportin receptor. Met zowel een passend NES als het transporteiwit exportin, kan het cargo-eiwit door het nucleaire porie complex (NPC) het cytoplasma in worden getransporteerd, terwijl eiwitten zonder dit signaal binnen de kern blijven. Binnen de kern bindt Ran-GTP aan het exportin-cargo complex, wat nodig is voor de interactie met het NPC. Wanneer het complex het NPC passeert en in het cytoplasma aankomt, wordt Ran-GTP gehydrolyseerd naar Ran-GDP. Dit resulteert in het loslaten van het cargo-eiwit van de exportin receptor. Het cargo-eiwit is nu in het cytoplasma afgeleverd, en de exportin receptor, nu gebonden aan Ran-GDP keert terug naar de kern om een nieuwe cyclus te beginnen.",
+            "title": "Exporteinen en RAN-GTP",
+            "text": "Export uit de kern vereist ook specifieke signalen en wordt geregeld door exporteinen, die samenwerken met het RAN-GTP eiwit om transport te faciliteren.",
             "image": "nucleaire_export.png"
         },
-        { 
+        {
             "type": "question",
-            "question": "Beschrijf de effecten van de twee interacties tussen Ran-GTP/GDP en een exportin in het nucleair transport.",
-            "answer": "In de kern is Ran-GTP vereist bij de binding van het cargo-eiwit met de exportin (1 punt). In het cytoplasma vindt hydrolyse van Ran-GTP naar Ran-GDP plaats, waardoor het cargo-eiwit in het cytoplasma losgelaten wordt. (1 punt)"
+            "question": "Hoe werken exporteinen en RAN-GTP samen bij nucleair transport?",
+            "answer": "Exporteinen herkennen signalen voor kernexport (1 punt) en werken samen met het RAN-GTP eiwit om eiwitten uit de kern te transporteren (1 punt)."
         },
         {
             "type": "info",
-            "title": "Ran-GDP en Ran-GTP transport cyclus",
-            "text": "Zowel in de import- als de exportcyclus, wordt Ran-GTP vanuit de celkern naar het cytoplasma getransporteerd, maar in die cycli wordt niet uitgelegd hoe de gehydrolyseerde Ran-GDP weer teruggetransporteerd wordt naar de celkern. Dit gebeurt door het NTF2 shuttle systeem, dat de specifieke taak heeft om Ran-GDP terug naar de kern te vervoeren.",
+            "title": "RAN-GDP en RAN-GTP transport cyclus",
+            "text": "De RAN-GDP en RAN-GTP transport cyclus is een essentieel mechanisme voor nucleocytoplasmatisch transport. RAN-GDP wordt in de kern omgezet in RAN-GTP door de werking van Ran-GEF. Eenmaal buiten de kern, wordt RAN-GTP weer omgezet in RAN-GDP door RAN-GAP. De NTF2 shuttle is specifiek ontworpen om RAN-GDP terug naar de kern te vervoeren, waarbij het twee moleculen tegelijk kan transporteren. Dit maakt deel uit van een cruciaal regulerend systeem voor cellulaire transportprocessen.",
             "image": "RAN-GDP_GTP.png"
         },
         {
             "type": "question",
-            "question": "Hoe wordt de Ran-GDP voorraad in de celkern weer aangevuld?",
-            "answer": "Ran-GDP wordt terug naar de celkern getransporteerd door het NTF2 shuttle systeem (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Ran-GEF en Ran-GAP",
-            "text": "Ran-**G**TP **A**ctivating **P**rotein (Ran-GAP) zit in het cytoplasma en Ran-**G**TP **E**xchange **P**rotein (Ran-GEF) zit in de celkern en samen reguleren ze de Ran-GTP/GDP cyclus.",
-            "image": "Ran-GEF_Ran-GAP_1.png"
-        },
-        {
-            "type": "info",
-            "title": "Ran-GEF en Ran-GAP",
-            "text": "Ran-**G**TP **A**ctivating **P**rotein (Ran-GAP) zit in het cytoplasma en Ran-**G**TP **E**xchange **P**rotein (Ran-GEF) zit in de celkern en samen reguleren ze de Ran-GTP/GDP cyclus. Ran-GDP wordt in de celkern omgezet naar Ran-GTP door het Ran-GEF enzym terwijl Ran-GTP in het cytoplasma wordt gehydrolyseerd naar Ran-GDP door het Ran-GAP enzym.",
-            "image": "Ran-GEF_Ran-GAP_2.png"
+            "question": "Wat is de functie van Ran-GEF in de RAN-GDP en RAN-GTP transport cyclus?",
+            "answer": "Ran-GEF stimuleert de uitwisseling van GDP voor GTP aan RAN in de kern (1 punt)."
         },
         {
             "type": "question",
-            "question": "Wat is de rol van Ran-GEF en Ran-GAP in de Ran-GTP/GDP cyclus?",
-            "answer": "Ran-GEF zet Ran-GDP om in Ran-GTP in de celkern (1 punt) terwijl Ran-GAP Ran-GTP in het cytoplasma hydrolyseert naar Ran-GDP (1 punt)."
+            "question": "Hoe draagt NTF2 bij aan de RAN-GDP en RAN-GTP transport cyclus?",
+            "answer": "NTF2 is een shuttle die speciaal is ontworpen om RAN-GDP terug naar de kern te transporteren (1 punt) en kan twee moleculen tegelijk vervoeren (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Cytoplasmatische regulatie systemen",
+            "text": "Cytoplasmatische regulatie systemen kunnen invloed hebben op eiwittransport naar de kern door de activatie van fosfatases te be\u00efnvloeden, wat leidt tot defosforylering van transcriptiefactoren en het exposeren van een importsignaal voor kerntransport."
+        },
+        {
+            "type": "question",
+            "question": "Hoe kunnen cytoplasmatische regulatie systemen invloed hebben op eiwittransport naar de kern?",
+            "answer": "Regulatie systemen kunnen de activatie van fosfatases be\u00efnvloeden, wat leidt tot defosforylering van transcriptiefactoren en het exposeren van een importsignaal voor kerntransport (1 punt)."
         },
         {
             "type": "question",

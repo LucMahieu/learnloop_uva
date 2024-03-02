@@ -19,17 +19,14 @@ running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 load_dotenv()
 
 # Database connection
-# if running_on_premise:
-#     print("Running on-premise")
-#     COSMOS_URI = os.getenv('COSMOS_URI')
-#     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-# else:
-#     print("Running off-premise")
-#     MONGO_URI = os.getenv('MONGO_DB')
-#     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-
-MONGO_URI = os.getenv('MONGO_DB')
-db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+if running_on_premise:
+    print("Running on-premise")
+    COSMOS_URI = os.getenv('COSMOS_URI')
+    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+else:
+    print("Running off-premise")
+    MONGO_URI = os.getenv('MONGO_DB')
+    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 OPENAI_API_KEY = os.getenv('OPENAI_API')
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
@@ -75,7 +72,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./code/app/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
+        with open("streamlit_app/code/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -210,9 +207,6 @@ def render_SR_nav_buttons():
 
 
 def render_explanation():
-    if 'image' in st.session_state.segment_content:
-        image_path = st.session_state.segment_content['image']
-        render_image(image_path)
     with st.expander("Antwoordmodel"):
         st.markdown(st.session_state.segment_content['answer'])
 
@@ -281,11 +275,17 @@ def render_image(image_path):
     st.markdown(image_html, unsafe_allow_html=True)
 
 
+def fetch_image_path():
+    if 'image' in st.session_state.segment_content:
+        image_path = st.session_state.segment_content['image']
+        return f"streamlit_app/images/{image_path}"
+
+
 def render_info():
     """Renders the info segment with title and text."""
     # if the image directory is present in the JSON for this segment, then display the image
-    if 'image' in st.session_state.segment_content:
-        image_path = st.session_state.segment_content['image']
+    image_path = fetch_image_path()
+    if image_path:
         render_image(image_path)
 
     st.subheader(st.session_state.segment_content['title'])
@@ -294,10 +294,6 @@ def render_info():
 
 def render_answerbox():
     # if the image directory is present in the JSON for this segment, then display the image
-    if 'image' in st.session_state.segment_content:
-        image_path = st.session_state.segment_content['image']
-        render_image(image_path)
-
     # Render a textbox in which the student can type their answer.
     st.text_area(label='Your answer', label_visibility='hidden', 
                 placeholder="Type your answer",
@@ -428,24 +424,37 @@ def render_learning_page():
         # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
         'answer' in st.session_state.segment_content):
-            render_question()
             if st.session_state.submitted:
+
+                # Render image if present in the feedback
+                image_path = fetch_image_path()
+                if image_path:
+                    render_image(image_path)
+
+                render_question()
+
                 # Spinner that displays during evaluating answer
                 with st.spinner("Een groot taalmodel (AI) checkt je antwoord met het antwoordmodel. Check zelf het antwoordmodel als je twijfelt."):
                     render_student_answer()
                     evaluate_answer()
+                
                 render_feedback()
                 add_to_practice_phase()
                 render_explanation()
                 render_navigation_buttons()
             else:
+                image_path = fetch_image_path()
+                if image_path:
+                    render_image(image_path)
+                
+                render_question()
                 render_answerbox()
                 if st.session_state.student_answer:
                     set_submitted_true()
                     st.rerun()
                 render_check_and_nav_buttons()
 
-        st.button("Rapporteer fout", on_click=flag_error)
+        # st.button("Rapporteer fout", on_click=flag_error)
         
         # Multiple choice question
         if (st.session_state.segment_content['type'] == 'question' and
@@ -630,7 +639,7 @@ def select_page_type():
     module_json_name = module.lower().replace(" ", "_")
 
     # Load the json content for this module
-    with open(f"./modules/{module_json_name}.json", "r") as f:
+    with open(f"streamlit_app/modules/{module_json_name}.json", "r") as f:
         st.session_state.page_content = json.load(f)
 
     # Determine what type of page to display
@@ -706,7 +715,7 @@ def initialise_session_states():
 
 
 def render_logo():
-    st.image('./images/logo.png', width=100)
+    st.image('streamlit_app/images/logo.png', width=100)
 
 
 def determine_modules(): #TODO: change the way the sequence of the modules is determined so it corresponds to the sequence of the course
@@ -717,7 +726,7 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
     # Determine the modules to display in the sidebar
     if st.session_state.modules == []:
         # Read the modules from the modules directory
-        modules = os.listdir("./modules")
+        modules = os.listdir("streamlit_app/modules")
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
         # Capitalize the first letter of each module
@@ -751,11 +760,6 @@ def initialise_database():
     """
     Initialise the progress object with the modules and phases in the database.
     """
-    db.users.update_one(
-        {"username": st.session_state.username},
-        {"$set": {"authenticated": True}}
-    )
-
     for module in st.session_state.modules:
         db.users.update_one(
             {"username": st.session_state.username},
@@ -801,12 +805,13 @@ def determine_if_to_initialise_database():
 
 
 def fetch_username():
-    user_doc = db.users.find_one({'nonce': st.query_params.nonce})
+    user_doc = db.users.find_one({'nonce': st.session_state.nonce})
     st.session_state.username = user_doc['username']
 
 
 def invalidate_nonce():
     db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
+    st.session_state.nonce = None
 
 
 def convert_image_base64(image_path):
@@ -822,7 +827,7 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./images/logo.png")
+        logo_base64 = convert_image_base64("streamlit_app/images/logo.png")
         html_content = f"""
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
@@ -840,7 +845,7 @@ def render_login_page():
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
-    left_col, mid_col, right_col = st.columns([1, 6, 1])
+    left_col, mid_col, right_col = st.columns([1, 3, 1])
     
     initialise_session_states()
 
@@ -850,7 +855,7 @@ if __name__ == "__main__":
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
     
-    if st.session_state.nonce is None and running_on_premise:
+    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
         render_login_page()
     elif st.session_state.username is None:
         fetch_username()
