@@ -22,6 +22,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Extract metadata for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
@@ -29,16 +33,28 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata for Docker
-        id: meta
-        uses: docker/metadata-action@v5
+      - name: Build and push Flask Docker image
+        uses: docker/build-push-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          context: ./flask_app
+          file: ./flask_app/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}/flask_app:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Streamlit Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./streamlit_app
+          file: ./streamlit_app/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}/streamlit_app:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: . # Change to /flask_app ? How will the /streamlit_app be handled?
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
