@@ -364,8 +364,9 @@ def render_learning_explanation():
     """Renders explanation of learning phase if the user hasn't started with
     the current phase."""
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Learning phase 📖</strong></p>', unsafe_allow_html=True)
-        st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
+        st.markdown('<p style="font-size: 30px;"><strong>Leerfase 📖</strong></p>', unsafe_allow_html=True)
+        # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
+        st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in de oefenfase.")
         render_start_button()
     exit()
 
@@ -395,10 +396,10 @@ def reset_segment_index():
 # this page corresponds with 
 def render_final_page():
     if st.session_state.selected_phase == 'learning':
-        st.write("This is the last page of the LEARNING PHASE")
+        st.write("Je hebt de leerfase afgerond! Ga nu naar de oefenfase om de stof te oefenen.")
     else:
-        st.write("This is the last page of the PRACTICE PHASE")
-    st.button("Back to beginning", on_click=reset_segment_index)
+        st.write("Je hebt de oefenfase afgerond!")
+    st.button("Terug naar begin", on_click=reset_segment_index)
     # otherwise the progress bar and everything will get rendered
     exit()
 
@@ -516,8 +517,9 @@ def render_practice_explanation():
     """Renders the explanation for the practice phase if the user hasn't started
     this phase in this module."""
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Practice phase 📝</strong></p>', unsafe_allow_html=True)
-        st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
+        st.markdown('<p style="font-size: 30px;"><strong>Oefenfase 📝</strong></p>', unsafe_allow_html=True)
+        # st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
+        st.write("In de oefenfase kun je de concepten die je hebt geleerd in de leerfase oefenen. Het gebruikt **'spaced repetition'** om je geheugen te versterken zodat je beter de stof onthoudt.")
         if st.session_state.ordered_segment_sequence == []:
             st.info("Nothing here. First walk through the learning phase to collect difficult questions.")
         else:
@@ -738,16 +740,16 @@ def render_sidebar():
         spacer, image_col = st.columns([0.4, 1])
         with image_col:
             render_logo()
-        st.sidebar.title("Hoorcolleges")
+        st.sidebar.title("Colleges")
 
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
             with st.expander(module):
                 # Display buttons for the two types of phases per module
-                if st.button('Learning phase 📖', key=module + ' learning'):
+                if st.button('Leerfase 📖', key=module + ' learning'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'learning'
-                if st.button('Practice phase 📝', key=module + ' practice'):
+                if st.button('Oefenfase 📝', key=module + ' practice'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'practice'
 
