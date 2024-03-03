@@ -157,89 +157,187 @@
             "answer": "Ran-GEF zet Ran-GDP om in Ran-GTP in de celkern (1 punt) terwijl Ran-GAP Ran-GTP in het cytoplasma hydrolyseert naar Ran-GDP (1 punt)."
         },
         {
+            "type": "info",
+            "title": "Mitochondriale importsystemen",
+            "text": "Mitochondri\u00ebn zijn de energiecentrales van de cel en zijn verantwoordelijk voor de productie van ATP (adenosinetrifosfaat), dat als universele energiedrager dient voor bijna alle cellulaire activiteiten. **Eiwitten die nodig zijn voor mitochondriale functies worden meestal in het cytoplasma gesynthetiseerd** en moeten daarna naar de mitochondria ge\u00efmporteerd worden. Als er ook maar \u00e9\u00e9n gen verkeerd is voor de synthese of import van deze mitochondriale eiwitten, kan dat leiden tot een mitochondriale ziekte die, door de belangrijke functie van mitochondri\u00ebn, een grote impact heeft op het organisme.",
+            "image": "mitochondria.png"
+        },
+        {
             "type": "question",
             "question": "Waarom zijn mitochondria belangrijk voor cellen?",
-            "answer": "Mitochondria zijn belangrijk omdat ze ATP produceren (1 punt), wat noodzakelijk is voor het functioneren van cellulaire processen (1 punt)."
+            "answer": "Mitochondria zijn belangrijk voor cellen omdat ze verantwoordelijk zijn voor de productie van ATP (1 punt), dat als universele energiedrager dient voor bijna alle cellulaire activiteiten (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Waar worden eiwitten voor mitochondriale functies gesynthetiseerd?",
+            "answers": {
+                "correct_answer": "In het cytoplasma",
+                "wrong_answers": [
+                    "In de mitochondriale matrix",
+                    "In het endoplasmatisch reticulum",
+                    "In de intermembraanruimte"
+                ]
+            }
         },
         {
             "type": "info",
-            "title": "Mitochondriale Importsystemen",
-            "text": "Mitochondria zijn de energiecentrales van de cel en bevatten hun eigen DNA. Eiwitten die nodig zijn voor mitochondriale functies worden meestal in het cytoplasma gesynthetiseerd en moeten daarna naar de mitochondria ge\u00efmporteerd worden. Dit importproces vereist signaalpeptiden aan de N-terminus van de eiwitten, die herkend worden door specifieke mitochondriale receptoren. Het transport van de eiwitten verloopt via verschillende translocatiesystemen zoals TOM, TIM23, TIM22, OXA en SAM, afhankelijk van naar welk mitochondriaal compartiment het eiwit moet."
+            "title": "Bouw van mitochondria",
+            "text": "Mitochondria zijn opgebouwd uit een dubbelmembraan structuur die vier verschillende compartimenten vormt: \n 1) het **buitenmembraan** \n 2) de **intermembraanruimte** \n 3) het **binnenmembraan** \n 4) de **mitochondriale matrix**. \n\n Elk compartiment heeft specifieke functies en elk eiwit bevat een signaalsequentie (peptide) die bepaalt naar welk compartiment het getransporteerd moet worden.",
+            "image": "mitochondria_structure.png"
         },
         {
             "type": "question",
-            "question": "Waarom moeten eiwitten naar de mitochondria ge\u00efmporteerd worden?",
-            "answer": "Eiwitten moeten naar de mitochondria ge\u00efmporteerd worden omdat ze in het cytoplasma worden gesynthetiseerd (1 punt) en essentieel zijn voor de mitochondriale functies (1 punt)."
+            "question": "Welke compartimenten kunnen worden onderscheiden binnen mitochondria?",
+            "answer": "Binnen mitochondri\u00ebn kunnen het buitenmembraan (1 punt), de intermembraanruimte (1 punt), het binnenmembraan (1 punt) en de matrix (1 punt) worden onderscheiden."
         },
         {
             "type": "info",
-            "title": "Eiwittransport naar de Mitochondriale Matrix",
-            "text": "Om naar de mitochondriale matrix getransporteerd te worden, moeten eiwitten een specifieke signaalsequentie hebben. Daarnaast is ATP nodig om chaperone-eiwitten te activeren die het eiwit helpen te vouwen en te transporteren tijdens de import."
+            "title": "Signaalsequentie in de N-terminus",
+            "text": "Om naar de mitochondri\u00ebn en binnen de mitochondri\u00ebn naar de juiste compartimenten getransporteerd te worden, hebben de meeste eiwitten een specifieke signaalsequentie (signaalpeptide) nodig die vastzit aan de N-terminus.",
+            "image": "signaalsequentie_n-terminus.png"
         },
         {
             "type": "question",
-            "question": "Welke rol speelt ATP bij het transport van eiwitten naar de mitochondriale matrix?",
-            "answer": "ATP is noodzakelijk voor de activatie van chaperone-eiwitten (1 punt) die helpen bij de vouwing en translocatie van het eiwit tijdens de import naar de mitochondriale matrix (1 punt)."
+            "question": "Wat bevat de N-terminus en wat is de functie daarvan?",
+            "answer": "De N-terminus bevat een specifieke signaalsequentie (of signaalpeptide) (1 punt) die bepaalt of een eiwit naar een mitochondrium getransporteerd moet worden en zo ja, naar welk compartiment (1 punt)."
+        },
+        { 
+            "type": "info",
+            "title": "Translocatiecomplexen",
+            "text": "Om eiwitten binnen de mitochondri\u00ebn naar het juiste compartiment te transporteren, zijn er kanalen aanwezig in de membranen die de compartimenten scheiden. Deze kanalen worden **translocatiecomplexen** genoemd en daarin wordt onderscheid gemaakt tussen 5 verschillende soorten: \n 1) **TOM**-complex \n 2) **TIM23**-complex \n 3) **TIM22**-complex \n 4) **OXA**-complex \n 5) **SAM**-complex",
+            "image": "translocatiecomplexen_simpel.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van translocatiecomplexen in mitochondri\u00ebn? Translocatiecomplexen zorgen voor ... van eiwitten in/naar het juiste compartiment binnen de mitochondri\u00ebn. ",
+            "answers": {
+                "correct_answer": "het transport",
+                "wrong_answers": [
+                    "de synthese",
+                    "de afbraak",
+                    "de opslag"
+                ]
+            }
+        },
+        { 
+            "type": "info",
+            "title": "Van het cytosol naar de matrix",
+            "text": "Het **TOM**-complex fungeert als de hoofdpoort voor eiwitten die vanuit het cytosol naar de mitochondri\u00ebn verhuizen. Het speurt naar en herkent de unieke signaalsequenties van deze eiwitten, waarna het ze doorgeeft aan de intermembraanruimte. Eenmaal daar, neemt het **TIM23**-complex het stokje over. Dit complex identificeert de eiwitten bestemd voor de mitochondriale matrix, en leidt ze door het binnenmembraan heen, gebruikmakend van een elektrochemische gradi\u00ebnt als drijvende kracht.",
+            "image": "eiwit_naar_matrix_animated.gif"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de taken van het TOM-complex in de mitochondriale eiwitimport?",
+            "answer": "Het TOM-complex herkent het signaalpeptide/identificeert de eiwitten in het cytosol bestemd voor de mitochondri\u00ebn (1 punt) en leidt ze door het buitenmembraan heen (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van het TIM23-complex in de mitochondriale eiwitimport?",
+            "answer": "Het TIM23-complex identificeert de eiwitten bestemd voor de mitochondriale matrix (1 punt) en leidt ze door het binnenmembraan heen (1 punt)."
         },
         {
             "type": "info",
-            "title": "Mitochondriale compartimenten",
-            "text": "Mitochondria zijn opgebouwd uit een dubbelmembraan structuur die verschillende compartimenten vormt: het buitenmembraan, de intermembraanruimte, het binnenmembraan en de matrix. Elk compartiment heeft specifieke functies en locaties voor eiwitlokalisatie."
+            "title": "Chaperones HSP70 beschermen het eiwit",
+            "text": "In het cytosol worden eiwitten omgeven en ondersteund door chaperone-eiwitten, zoals HSP70. Deze **chaperones voorkomen ongewenste aggregatie (klontering)** door zich aan de eiwitten te binden. Wanneer een eiwit wordt herkend door het TOM-complex, vindt er een loskoppeling van de chaperones plaats en worden deze ge\u00efnactiveerd. Na loskoppeling worden de chaperones weer geactiveerd en zijn ze klaar om opnieuw te binden aan een ander eiwit. **Bij dat activatieproces is ATP nodig**.",
+            "image": "cystolic_chaperones_ATP.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke rol spelen chaperones bij het transport van eiwitten naar het TOM-complex?",
+            "answer": "Chaperones voorkomen ongewenste aggregatie (klontering) van eiwitten (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Waarvoor wordt ATP gebruikt bij transport van eiwitten in het cytosol?",
+            "answers": {
+                "correct_answer": "Activatie van chaperone-eiwitten",
+                "wrong_answers": [
+                    "Deactivatie van chaperone-eiwitten",
+                    "Activatie van het TOM-complex",
+                    "Deactivatie van het TOM-complex"
+                ]
+            }
         },
         {
             "type": "info",
-            "title": "Eiwittransport in mitochondri\u00ebn",
-            "text": "Eiwitten kunnen naar verschillende locaties binnen de mitochondri\u00ebn worden getransporteerd. Dit proces wordt gereguleerd door signaalpeptiden die de bestemming van de eiwitten bepalen en translocatiecomplexen die het transport faciliteren."
+            "title": "Membraanpotentiaal binnenmembraan",
+            "text": "Eiwitten die naar de mitochondriale matrix moeten, hebben een speciale signaalsequentie die ze via het **TIM23**-complex daarheen leidt. Er is een **membraanpotentiaal over het binnenmembraan door een verschil in lading**, waarbij de binnenmembraanruimte positief is en de matrix negatief. Dit verschil helpt eiwitten van de ene naar de andere ruimte te bewegen.",
+            "image": "membraanpotentiaal_mitochondria.png"
         },
         {
             "type": "question",
-            "question": "Welke compartimenten kunnen worden onderscheiden binnen mitochondriën?",
-            "answer": "Binnen mitochondriën kunnen het buitenmembraan (1 punt), de intermembraanruimte (1 punt), het binnenmembraan (1 punt) en de matrix (1 punt) worden onderscheiden."
-        },
-        {
-            "type": "question",
-            "question": "Hoe wordt het transport van eiwitten naar specifieke locaties binnen mitochondriën geregeld?",
-            "answer": "Het transport van eiwitten binnen mitochondriën wordt geregeld door signaalpeptiden die de bestemming bepalen (1 punt) en translocatiecomplexen die het transport naar de juiste locatie faciliteren (1 punt)."
+            "question": "Wat is de functie van het membraanpotentiaal over het binnenmembraan? Het helpt eiwitten van ... te bewegen.",
+            "answers": {
+                "correct_answer": "het binnenmembraan naar de matrix",
+                "wrong_answers": [
+                    "de matrix naar het binnenmembraan",
+                    "de intermembraanruimte naar de binnenmembraan",
+                    "de intermembraanruimte naar de matrix"
+                ]
+            }
+
         },
         {
             "type": "info",
-            "title": "Mitochondriale eiwitimport en signaalsequenties",
-            "text": "Eiwitten vereisen specifieke signaalsequenties voor transport door de mitochondriale membranen. Verschillende complexen en sequenties zoals het TOM-complex, TIM23-complex, stop-transfer-sequentie, OXA-complex, protease cleavage site, TIM22-complex en SAM-complex spelen een rol in de import en integratie van deze eiwitten in de mitochondri\u00ebn."
+            "title": "Chaperones in de matrix ruimte",
+            "text": "In de mitochondriale matrix helpen chaperone-eiwitten zoals HSP70 het ge\u00efmporteerde **eiwit volledig binnen te trekken en correct te vouwen**. Dit proces **vereist ATP** om de eiwitten in hun functionele vorm te krijgen.",
+            "image": "matrix_chaperone.png"
         },
         {
             "type": "question",
-            "question": "Wat is het doel van een stop-transfer-sequentie in een eiwit bij de mitochondriale eiwit lokalisatie?",
-            "answer": "De stop-transfer-sequentie bevat een reeks hydrofobe aminozuren die ervoor zorgt dat het eiwit in de binnenmembraan blijft en niet verder getransporteerd wordt (1 punt)."
-        },
-        {
-            "type": "question",
-            "question": "Welke rol speelt het TIM23-complex in de mitochondriale eiwitimport?",
-            "answer": "Het TIM23-complex is essentieel voor het transport van eiwitten door het mitochondriele binnenmembraan, het complex heeft een zijuitgang voor eiwitten met een stop-transfer-sequentie, waardoor dit type eiwitten in de binnenmembraan integreren (1 punt)."
-        },
-        {
-            "type": "question",
-            "question": "Hoe verschilt de rol van het TIM22-complex van die van het TIM23-complex?",
-            "answer": "Het TIM22-complex transporteert alleen eiwitten met meerdere hydrofobe domeinen naar het mitochondriele binnenmembraan (1 punt), terwijl het TIM23-complex een breder scala aan eiwitten door de binnenmembraan transporteert, maar ook naar de binnenmembraan en de ruimte tussen de membranen(1 punt)."
+            "question": "Waarvoor wordt ATP (in de gegeven context) in de matrix ruimte gebruikt?",
+            "answer": "ATP wordt gebruikt door chaperones om eiwitten volledig binnen te trekken (1 punt) en correct te vouwen (1 punt)."
         },
         {
             "type": "info",
-            "title": "Mitochondriale eiwitlokalisatie",
-            "text": "De lokalisatie van eiwitten in mitochondri\u00ebn is fundamenteel voor de ATP-productie en zuurstofverbruik. Deze eiwitten zorgen voor een correcte werking van de elektronentransportketen, die essentieel is voor de energievoorziening van de cel."
-        },
-        {
-            "type": "question",
-            "question": "Waarom is de lokalisatie van eiwitten in mitochondriën belangrijk?",
-            "answer": "De lokalisatie van eiwitten in mitochondriën is belangrijk om de eiwitcomplexen voor de ATP-productie (1 punt) en zuurstofverbruik (1 punt) op de juiste plek te krijgen, wat essentieel is voor de energievoorziening van de cel."
+            "title": "Stop-transfer sequentie",
+            "text": "Naast de signaalsequentie, is er een de stop-transfer sequentie. Deze is **hydrofoob** en zorgt ervoor dat het eiwit met deze sequentie **vast blijft zitten in het binnenmembraan**. Dit komt doordat de hydrofobe sequentie in de lipide dubbellag wil blijven. Tegelijkertijd blijft de rest van het eiwit in de intermembraanruimte, nadat de signaalsequentie (rood) is afgeknipt in de matrix.",
+            "image": "stop-transfer-signal.png"
         },
         {
             "type": "info",
-            "title": "Mitochondriale eiwitmutaties en hun gevolgen",
-            "text": "Mutaties in mitochondriale eiwitten kunnen de elektronentransportketen verstoren, wat leidt tot een ineffici\u00ebnte energieproductie en de accumulatie van schadelijke zuurstofradicalen. Deze radicalen kunnen cellulaire schade veroorzaken en zijn geassocieerd met verschillende ziekten."
+            "title": "Tweede signaalsequentie: OXA-signaal",
+            "text": "Een eiwit kan ook via het OXA-complex in de mitochondriale binnenmembraan worden ingebouwd. Dit vereist een signaalsequentie die door het OXA-complex wordt herkend. Het OXA-complex faciliteert de integratie van eiwitten afkomstig uit het cytosol en van **eiwitten gesynthetiseerd in de mitochondriale matrix**. Het complex transporteert het eiwit zodanig dat de signaalsequentie in de binnenmembraan ge\u00efntegreerd blijft, terwijl delen van het eiwit naar de intermembraanruimte kunnen bewegen.",
+            "image": "tweede_signaal_sequentie.png"
         },
         {
             "type": "question",
-            "question": "Wat zijn de gevolgen van mutaties in mitochondriale eiwitten?",
-            "answer": "Mutaties in mitochondriale eiwitten kunnen verstoring van de elektronentransportketen veroorzaken (1 punt) en leiden tot de productie van schadelijke zuurstofradicalen (1 punt)."
+            "question": "Kan een eiwit zonder signaalsequentie door het OXA-complex in de mitochondriale binnenmembraan worden ingebouwd? Licht je antwoord toe.",
+            "answer": "Nee, een eiwit heeft een specifieke signaalsequentie nodig die door het OXA-complex wordt herkend (1 punt). Zonder deze sequentie kan het eiwit niet correct worden getarget of ingebed in de binnenmembraan."
+        },
+        {
+            "type": "question",
+            "question": "Welke twee type eiwit sequenties zijn er tot nu toe besproken?",
+            "answer": "De signaalsequentie (1 punt) en de stop-transfer sequentie (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Protease",
+            "text": "Protease is een enzym dat zich bevindt in de intermembraanruimte. Het is een **enzym dat eiwitten knipt** tussen de stop-transfer sequentie of de tweede signaalsequentie en de rest van het eiwit. Hierdoor blijft de afgenkipte sequentie in de binnenmembraan terwijl de staart van het eiwit zich vrij kan bewegen in de intermembraanruimte.",
+            "image": "protease.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van protease in de intermembraan?",
+            "answers": {
+                "correct_answer": "Het knippen van eiwitten in de intermembraanruimte",
+                "wrong_answers": [
+                    "Het activeren van het TIM22-complex",
+                    "Het transporteren van eiwitten naar de matrix en de intermembraanruimte",
+                    "Het vouwen van eiwitten in de intermembraanruimte"
+                ]
+            }
+        },
+        {
+            "type": "info",
+            "title": "TIM22-complex",
+            "text": "Het **TIM22-complex** integreert bepaalde eiwitten in de binnenmembraan. Dit proces begint wanneer een eiwit met een specifieke signaalsequentie wordt herkend door chaperone-eiwitten in de intermembraanruimte. Deze **chaperones begeleiden vervolgens het eiwit naar het TIM22-complex, dat het eiwit in de binnenmembraan integreert zodat het een functioneel binnenmembraaneiwit wordt.**",
+            "image": "TIM22_complex.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het belangrijkste verschil tussen het TIM22- en TIM23-complex?",
+            "answer": "TIM22-complex is gespecialiseerd in het integreren van eiwitten in de binnenmembraan (1 punt), terwijl het TIM23-complex eiwitten door het binnenmembraan naar de matrix transporteert."
         },
         {
             "type": "info",
@@ -248,7 +346,7 @@
         },
         {
             "type": "question",
-            "question": "Welke 5 functies heeft het Endoplasmatisch reticulum?",
+            "question": "Welke 5 functies heeft het endoplasmatisch reticulum?",
             "answer": "1. Synthese eiwitten op ribosomen aan het ER gebonden (1 punt) 2. Vouwing en glycosylering van eiwitten (1 punt); 3. Synthese van lipiden (1 punt) 4. Opslagplaats voor Calcium ten bate van signalering (1 punt) 5. Organiseren transport van vesicles naar diverse organellen (1 punt)."
         },
         {

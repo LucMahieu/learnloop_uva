@@ -488,10 +488,6 @@ def render_learning_page():
                 st.session_state.score = '0/1'
                 add_to_practice_phase()
 
-            # If no answer has been submitted, display a message
-            if st.session_state.submitted == False:
-                st.write("Please select an answer above.")
-
             #render the nav buttons
             render_navigation_buttons()
 
@@ -854,7 +850,8 @@ if __name__ == "__main__":
 
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
-    
+        st.query_params.pop('nonce', None) # Remove the nonce from the url
+
     if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
         render_login_page()
     elif st.session_state.username is None:
