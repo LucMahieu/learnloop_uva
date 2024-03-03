@@ -13,10 +13,17 @@ spec:
     - host: "{{ .Values.hostname }}"
       http:
         paths:
-          - path: /
+          - path: /flask_app
             pathType: Prefix
             backend:
               service:
-                name: learnloop
+                name: learnloop-auth
+                port:
+                  number: 80
+          - path: /streamlit_app
+            pathType: Prefix
+            backend:
+              service:
+                name: learnloop-ui
                 port:
                   number: 80
