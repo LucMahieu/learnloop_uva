@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: learnloop-ui
+  name: learnloop-auth
   namespace: "{{ .Release.Namespace }}"
 spec:
   selector:
     matchLabels:
-      app: learnloop-ui
+      app: learnloop-auth
   replicas: 1
   revisionHistoryLimit: 3
   template:
     metadata:
       labels:
-        app: learnloop-ui
+        app: learnloop-auth
     spec:
       containers:
-        - name: learnloop-ui
-          image: "{{ .Values.image }}:{{ .Values.tag }}"
+        - name: learnloop-auth
+          image: "{{ .Values.image }}/flask_app:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           env:
           - name: SURFCONEXT_CLIENT_ID
             value: "{{ .Values.surfconextClientId }}"
