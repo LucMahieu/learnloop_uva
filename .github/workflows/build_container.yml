@@ -45,7 +45,7 @@ jobs:
           context: ./flask_app
           file: ./flask_app/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/flask_app:${{ github.sha }}
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/flask_app:main
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Streamlit Docker image
@@ -54,5 +54,5 @@ jobs:
           context: ./streamlit_app
           file: ./streamlit_app/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/streamlit_app:${{ github.sha }}
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/streamlit_app:main
           labels: ${{ steps.meta.outputs.labels }}
