@@ -72,23 +72,23 @@
         },
         {
             "type": "info",
-            "title": "Biologische Membranen en Transporteiwitten",
+            "title": "Biologische membranen en transporteiwitten",
             "text": "Biologische membranen zijn selectief permeabel, wat betekent dat ze sommige stoffen wel en andere niet doorlaten. Hun permeabiliteit voor ionen en water wordt verhoogd door de aanwezigheid van transporteiwitten. Deze transporteiwitten zijn gespecialiseerd in het verplaatsen van stoffen in beide richtingen over het membraan."
         },
         {
             "type": "info",
-            "title": "Kanalen Versus Transporteiwitten",
+            "title": "Kanalen versus transporteiwitten",
             "text": "Kanalen zijn structureel verschillend van transporteiwitten en hebben de mogelijkheid om permeabel te worden, wat betekent dat ze onder bepaalde omstandigheden stoffen door het membraan kunnen laten passeren.",
             "image": "transporters_en_kanalen.png"
         },
         {
             "type": "question",
-            "question": "Wat is het verschil tussen kanalen en transporteiwitten?",
-            "answer": "Kanalen verschillen structureel van transporteiwitten, laten ionen door (1 punt) en kunnen geactiveerd worden om stoffen door te laten (1 punt). Transporteiwitten transporteren macromoleculen door een membraan"
+            "question": "Wat is het belangrijkste verschil tussen kanalen en transporteiwitten?",
+            "answer": "Kanalen fungeren als poorten die open of dicht kunnen gaan voor snelle passieve diffusie van ionen en moleculen (1 punt), terwijl transporteiwitten moleculen actief of passief transporteren door van vorm te veranderen (1 punt)."
         },
         {
             "type": "info",
-            "title": "Passief Transport",
+            "title": "Passief transport",
             "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren. Het verloopt met de concentratiegradi\u00ebnt mee, wat betekent dat moleculen van een gebied met een hoge concentratie naar een gebied met een lagere concentratie bewegen, zonder dat dit energie kost.",
             "images": "actief_en_passief_transport.png"
         },
@@ -99,7 +99,7 @@
         },
         {
             "type": "info",
-            "title": "Actief Transport",
+            "title": "Actief transport",
             "text": "Actief transport is een proces waarbij cellen stoffen tegen hun concentratiegradi\u00ebnt in transporteren. Dit type transport vereist energie, vaak in de vorm van ATP, omdat het stoffen verplaatst van een gebied met lage concentratie naar een gebied met hoge concentratie.",
             "images": "actief_en_passief_transport.png"
         },
@@ -110,7 +110,7 @@
         },
         {
             "type": "info",
-            "title": "Elektrochemische Gradi\u00ebnt",
+            "title": "Elektrochemische gradi\u00ebnt",
             "text": "De elektrochemische gradi\u00ebnt is een combinatie van de concentratiegradi\u00ebnt en de elektrische gradi\u00ebnt over een membraan. Het speelt een belangrijke rol in het transporteren van ionen door de celmembraan en kan dienen als energiebron voor bepaalde typen van transport.",
             "image": "elektrochemisch_gradient.png"
         },
@@ -121,13 +121,13 @@
         },
         {
             "type": "info",
-            "title": "Ion-gekoppeld Transport",
+            "title": "Ion-gekoppeld transport",
             "text": "Ion-gekoppeld transport verwijst naar een vorm van actief transport waarbij de energie van de concentratiegradi\u00ebnt van een ion wordt gebruikt om een ander molecuul te transporteren.",
             "image": "soorten_transporters.png"
         },
         {
             "type": "info",
-            "title": "Natrium-Kalium Pomp",
+            "title": "Natrium-kalium pomp",
             "text": "De natrium-kalium pomp is ook een transporteiwit dat actief de concentratiegradi\u00ebnten van natrium en kalium over de celmembraan reguleert. Dit mechanisme is essentieel voor diverse cellulaire processen, waaronder het handhaven van het membraanpotentiaal.",
             "image": "natrium_kalium_pomp.png"
         },
@@ -143,7 +143,7 @@
         },
         {
             "type": "info",
-            "title": "Transporteiwitten en Specificiteit",
+            "title": "Transporteiwitten en specificiteit",
             "text": "Transporteiwitten zijn gespecialiseerde eiwitten in celmembranen die moleculen over de membraan verplaatsen. Hun werking is gebaseerd op specificiteit, wat betekent dat ze verschillende transportmechanismen gebruiken voor verschillende moleculen. Er zijn drie hoofdtypen: uniport, die \u00e9\u00e9n molecuul in \u00e9\u00e9n richting transporteert; symport, ook bekend als co-transporter, die twee verschillende moleculen in dezelfde richting transporteert; en antiport, die twee verschillende moleculen in tegengestelde richtingen transporteert.",
             "image": "soorten_passief_transporters.png"
         },
@@ -159,7 +159,7 @@
         },
         {
             "type": "info",
-            "title": "Ionkanalen en hun Regulatie",
+            "title": "Ionkanalen en hun regulatie",
             "text": "Ionkanalen zijn essentieel voor het functioneren van cellen en kunnen gereguleerd worden op basis van verschillende stimuli. Er zijn voltage-gated kanalen die reageren op veranderingen in de membraanpotentiaal, ligand-gated kanalen die openen door binding van een specifieke moleculaire ligand, en mechanisch geactiveerde kanalen die openen als reactie op fysieke stimuli zoals druk of rek.",
             "image": "soorten_kanalen.png"
         },
@@ -180,7 +180,7 @@
         },
         {
             "type": "info",
-            "title": "Nernst Vergelijking",
+            "title": "Nernst vergelijking",
             "text": "De Nernst vergelijking is een formule die gebruikt wordt om de elektrochemische evenwichtspotentiaal van een ion over een celmembraan te berekenen, gebaseerd op de concentraties van dat ion aan beide zijden van het membraan."
         },
         {
@@ -190,7 +190,7 @@
         },
         {
             "type": "info",
-            "title": "Selectiviteitsfilter van Ionkanalen",
+            "title": "Selectiviteitsfilter van ionkanalen",
             "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat alleen specifieke ionen het kanaal kunnen doorkruisen, wat cruciaal is voor de functie van cellen.",
             "image": "selectiviteitsfilter.png"
         },
@@ -201,7 +201,7 @@
         },
         {
             "type": "info",
-            "title": "Actief Transport en Ionenbalans",
+            "title": "Actief transport en ionenbalans",
             "text": "Om de ionenbalans te herstellen en te onderhouden is actief transport noodzakelijk. Dit proces, vaak aangedreven door de Natrium-Kalium pomp, verplaatst Na+ ionen naar buiten en K+ ionen naar binnen tegen hun concentratiegradi\u00ebnt in."
         },
         {

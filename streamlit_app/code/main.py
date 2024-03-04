@@ -13,7 +13,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
@@ -259,11 +259,11 @@ def render_check_and_nav_buttons():
     """Renders the previous, check and next buttons when a question is displayed."""
     col_prev_question, col_check, col_next_question = st.columns([1, 4, 1])
     with col_prev_question:
-        st.button('Previous', use_container_width=True, on_click=change_segment_index, args=(-1,))
+        st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
     with col_check:
-        st.button('Check', use_container_width=True, on_click=set_submitted_true)
+        st.button('Controleer', use_container_width=True, on_click=set_submitted_true)
     with col_next_question:
-        st.button('Next', use_container_width=True, on_click=change_segment_index, args=(1,))
+        st.button('Volgende', use_container_width=True, on_click=change_segment_index, args=(1,))
 
 
 def render_image(image_path):
@@ -725,10 +725,10 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
     if st.session_state.modules == []:
         # Read the modules from the modules directory
         modules = os.listdir("streamlit_app/modules")
+        print(modules)
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
         # Capitalize the first letter of each module
-        modules = [module.capitalize() for module in modules]
         st.session_state.modules = modules
 
 
