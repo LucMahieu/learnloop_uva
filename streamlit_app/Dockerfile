@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8501
 
 # Definieer het commando om de Streamlit-applicatie te starten
-CMD ["streamlit", "run", "code/main.py"]
+CMD ["streamlit", "run", "main.py"]

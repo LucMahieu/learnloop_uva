@@ -1,4 +1,4 @@
-.env
+**/.env
 .streamlit/secrets.toml
 .vscode/launch.json
 **.py[cod]
