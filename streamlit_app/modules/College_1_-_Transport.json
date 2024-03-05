@@ -128,7 +128,7 @@
             "type": "info",
             "title": "Ion-gekoppeld transport",
             "text": "Ion-gekoppeld transport verwijst naar een vorm van actief transport waarbij de energie van de concentratiegradi\u00ebnt van een ion wordt gebruikt om een ander molecuul te transporteren.",
-            "image": "soorten_transporters.png"
+            "image": "coupled_ion_transport.png"
         },
         {
             "type": "info",

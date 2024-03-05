@@ -1,3 +1,4 @@
+import time
 import random
 import streamlit as st
 from dotenv import load_dotenv
@@ -648,6 +649,9 @@ def select_page_type():
 
 
 def initialise_session_states():
+    if 'feedback_submitted' not in st.session_state:
+        st.session_state.feedback_submitted = False
+
     if 'username' not in st.session_state:
         st.session_state.username = None
     
@@ -731,6 +735,32 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
         st.session_state.modules = modules
 
 
+def upload_feedback():
+    """Uploads feedback to the database."""
+    db.feedback.insert_one({"feedback": st.session_state.feedback_box})
+    st.session_state.feedback_submitted = True
+
+
+def render_feedback_form():
+    """Feedback form in the sidebar."""
+    st.sidebar.title("Denk je mee?")     
+    st.sidebar.text_area(
+        label='Deel hier anoniem je gedachtes. Groot of klein, **alle feedback is waardevol**.',
+        placeholder="Wat vond je handig? Wat kan beter? Ontbreekt er iets?, etc.",
+        key='feedback_box',
+    )
+
+    st.sidebar.button("Verstuur", on_click=upload_feedback, use_container_width=True)
+
+    if st.session_state.feedback_submitted:
+        st.sidebar.success("Bedankt voor je feedback!")
+        st.balloons()
+        time.sleep(2)
+        st.session_state.feedback_submitted = False
+
+
+
+
 def render_sidebar():
     """	
     Function to render the sidebar with the modules and login module.	
@@ -751,6 +781,8 @@ def render_sidebar():
                 if st.button('Oefenfase 📝', key=module + ' practice'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'practice'
+
+        render_feedback_form()
 
 
 def initialise_database():
