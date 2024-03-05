@@ -63,7 +63,7 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'http://localhost:8501/?nonce={nonce}'
+    redirect_url = f'http://learnloop.datanose.nl/app?nonce={nonce}'
     return redirect(redirect_url, code=302)
 
 
