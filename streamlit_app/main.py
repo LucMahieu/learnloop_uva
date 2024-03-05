@@ -244,8 +244,9 @@ def change_segment_index(step_direction):
 def render_navigation_buttons():
     """Render the navigation buttons that allows users to move between segments."""
     prev_col, next_col = st.columns(2)
-    with prev_col:
-        st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
+    if st.session_state.segment_index != 0:
+        with prev_col:
+            st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
     with next_col:
         st.button("Volgende", on_click=change_segment_index, args=(1,), use_container_width=True)
 
@@ -257,7 +258,7 @@ def set_submitted_true():
 
 def render_check_and_nav_buttons():
     """Renders the previous, check and next buttons when a question is displayed."""
-    col_prev_question, col_check, col_next_question = st.columns([1, 4, 1])
+    col_prev_question, col_check, col_next_question = st.columns([1, 3, 1])
     with col_prev_question:
         st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
     with col_check:
