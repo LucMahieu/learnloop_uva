@@ -13,7 +13,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
@@ -72,7 +72,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./code/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -396,7 +396,7 @@ def reset_segment_index():
 # this page corresponds with 
 def render_final_page():
     if st.session_state.selected_phase == 'learning':
-        st.write("Je hebt de leerfase afgerond! Ga nu naar de oefenfase om de stof te oefenen.")
+        st.write("Je hebt de leerfase afgerond! Je kunt nu naar de oefenfase om de stof verder te oefenen met spaced repetition.")
     else:
         st.write("Je hebt de oefenfase afgerond!")
     st.button("Terug naar begin", on_click=reset_segment_index)
@@ -728,7 +728,6 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
         print(modules)
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-        # Capitalize the first letter of each module
         st.session_state.modules = modules
 
 

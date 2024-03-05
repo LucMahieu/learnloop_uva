@@ -32,12 +32,17 @@
         {
             "type": "question",
             "question": "Welke ionen hebben typisch een hogere concentratie buiten de cel dan binnen de cel?",
-            "answer": "Natrium (Na+) en chloride (Cl-) hebben beide typisch een hogere concentratie buiten de cel dan binnen (1 punt), net als calcium (Ca2+) (1 punt)."
+            "answer": "Natrium (Na+) (1 punt), chloride (Cl-) en calcium (1 punt) hebben beide typisch een hogere concentratie buiten de cel dan binnen."
+        },
+        {
+            "type": "info",
+            "title": "Waterstofionen",
+            "text": "Waterstofionen (H+) zijn positief geladen ionen die een belangrijke rol spelen in de regulatie van de lading en pH binnen en buiten de cel. Ze kunnen niet door de lipide dubbellaag van het celmembraan passeren zonder hulp van transporteiwitten."
         },
         {
             "type": "question",
-            "question": "Welk ion heeft een hogere concentratie binnen de cel vergeleken met buiten de cel en wat is de functie van protonen?",
-            "answer": "Kalium (K+) heeft een hogere concentratie binnen de cel vergeleken met buiten (1 punt). Protonen (H+) reguleren de lading en pH binnen en buiten de cel (1 punt)."
+            "question": "Wat is de functie van waterstofionen in de cel?",
+            "answer": "Waterstofionen (H+) reguleren de lading (1 punt) en pH (1 punt) binnen en buiten de cel voor voor het behoud van een stabiele interne omgeving."
         },
         {
             "type": "info",
