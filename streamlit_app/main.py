@@ -13,7 +13,7 @@ import base64
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
+st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
@@ -245,8 +245,9 @@ def change_segment_index(step_direction):
 def render_navigation_buttons():
     """Render the navigation buttons that allows users to move between segments."""
     prev_col, next_col = st.columns(2)
-    with prev_col:
-        st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
+    if st.session_state.segment_index != 0:
+        with prev_col:
+            st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
     with next_col:
         st.button("Volgende", on_click=change_segment_index, args=(1,), use_container_width=True)
 
@@ -258,9 +259,10 @@ def set_submitted_true():
 
 def render_check_and_nav_buttons():
     """Renders the previous, check and next buttons when a question is displayed."""
-    col_prev_question, col_check, col_next_question = st.columns([1, 4, 1])
-    with col_prev_question:
-        st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
+    col_prev_question, col_check, col_next_question = st.columns([1, 3, 1])
+    if st.session_state.segment_index != 0:
+        with col_prev_question:
+            st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
     with col_check:
         st.button('Controleer', use_container_width=True, on_click=set_submitted_true)
     with col_next_question:
@@ -392,15 +394,25 @@ def initialise_learning_page():
 def reset_segment_index():
     st.session_state.segment_index = 0
     upload_progress()
+    
 
 # render the page at the end of the learning phase (after the last question)
-# this page corresponds with 
 def render_final_page():
-    if st.session_state.selected_phase == 'learning':
-        st.write("Je hebt de leerfase afgerond! Je kunt nu naar de oefenfase om de stof verder te oefenen met spaced repetition.")
-    else:
-        st.write("Je hebt de oefenfase afgerond!")
-    st.button("Terug naar begin", on_click=reset_segment_index)
+    
+    with mid_col:
+        if st.session_state.selected_phase == 'practice':
+            st.markdown('<p style="font-size: 30px;"><strong>Einde van de oefenfase 📝</strong></p>', unsafe_allow_html=True)
+            st.write("En? Ging het goed? Als je hebt gevoel hebt dat je nog wat meer wilt oefenen met de vragen kan je terug naar het begin van de oefenfase.")
+        else:
+            st.markdown('<p style="font-size: 30px;"><strong>Einde van de leerfase 📖</strong></p>', unsafe_allow_html=True)
+            st.write("Lekker bezig! Als je nog een keer alle vragen en infostukjes wilt doorlopen kan je terug naar het begin van de leerfase. Als je verder wilt naar de oefenfase waarin je kan gaan oefenen met de vragen waarmee je moeite had, kan je deze selecteren aan de linkerkant van het scherm.")
+
+        st.button("Terug naar begin", on_click=reset_segment_index)
+    # if st.session_state.selected_phase == 'learning':
+    #     st.write("Je hebt de leerfase afgerond! Je kunt nu naar de oefenfase om de stof verder te oefenen met spaced repetition.")
+    # else:
+    #     st.write("Je hebt de oefenfase afgerond!")
+    
     # otherwise the progress bar and everything will get rendered
     exit()
 
@@ -522,7 +534,7 @@ def render_practice_explanation():
         # st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
         st.write("In de oefenfase kun je de concepten die je hebt geleerd in de leerfase oefenen. Het gebruikt **'spaced repetition'** om je geheugen te versterken zodat je beter de stof onthoudt.")
         if st.session_state.ordered_segment_sequence == []:
-            st.info("Nothing here. First walk through the learning phase to collect difficult questions.")
+            st.info("Hier staat nog niets. Rond eerst de leerfase af om moeilijke vragen te verzamelen.")
         else:
             render_start_button()
     exit()
