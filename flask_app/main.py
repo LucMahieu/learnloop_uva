@@ -9,16 +9,16 @@ import random
 
 load_dotenv()
 
-login_page = Flask(__name__)
-login_page.secret_key = os.getenv('FLASK_SECRET')
+app = Flask(__name__)
+app.secret_key = os.getenv('FLASK_SECRET')
 
 # Init db
 COSMOS_URI = os.getenv('COSMOS_URI')
 client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 db = client.LearnLoop
 
-# Make authentication instance for the flask login_page
-auth = OAuth(login_page)
+# Make authentication instance for the flask app
+auth = OAuth(app)
 
 auth.register(
     name='surfconext',
@@ -29,7 +29,7 @@ auth.register(
 )
 
 
-@login_page.route('/')
+@app.route('/')
 def login():
     redirect_uri = url_for('authorize', _external=True)
     return auth.surfconext.authorize_redirect(redirect_uri)
@@ -54,7 +54,7 @@ def save_nonce_to_db(user_id):
     return nonce
 
 
-@login_page.route('/auth')
+@app.route('/auth')
 def authorize():
     token = auth.surfconext.authorize_access_token()
 
@@ -68,4 +68,4 @@ def authorize():
 
 
 if __name__=="__main__":
-    login_page.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=3000)
