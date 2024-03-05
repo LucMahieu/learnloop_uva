@@ -341,18 +341,18 @@
         {
             "type": "info",
             "title": "Endoplasmatisch Reticulum",
-            "text": "Het **endoplasmatisch reticulum** (ER) is een netwerk van membranen dat door de cel heen zit. Alle eiwitten die niet in de cytosool hun werking hebben worden door middel van het ER naar hun uiteindelijke doel getransporteerd. De belangrijkste functies van het ER zijn: \n 1) synthese van eiwitten op ribosomen die aan het ER gebonden zijn \n 2) vouwing en glycosylering van eiwitten \n 3) biosynthese van lipiden \n 4) opslagplaats voor calcium voor signalering \n 5) organiseren van transport van vesicles naar diverse organellen."
+            "text": "Het **endoplasmatisch reticulum** (ER) is een netwerk van membranen dat door de cel heen zit. Alle eiwitten die niet in de cytosol hun werking hebben worden door middel van het ER naar hun uiteindelijke doel getransporteerd. De belangrijkste functies van het ER zijn: \n 1) **synthese** van eiwitten op ribosomen die aan het ER gebonden zijn \n 2) **vouwing** en **glycosylering** van eiwitten \n 3) **biosynthese** van lipiden \n 4) **opslagplaats** voor calcium voor signalering \n 5) organiseren van **transport van vesicles** naar diverse organellen"
         },
         {
             "type": "info",
-            "title": "Glad ER vs. Ruw ER",
-            "text": "Het endoplasmatisch reticulum bestaat uit een ruw en glad gedeelte. De belangrijkste functie van het glad ER is het transport vanuit het ER naar het golgiapparaat door middel van het vormen van vesicles. Op het ruwe ER liggen ribosomen die belangrijk zijn in de eiwitsynthese binnen de cel. Het ruwe ER dankt zijn naam aan de ribosomen die op het ER liggen en te zien zijn onder de microscoop."
+            "title": "Glad ER vs. ruw ER",
+            "text": "Het endoplasmatisch reticulum bestaat uit een ruw en glad gedeelte. De belangrijkste functie van het glad ER is het transport vanuit het ER naar het golgi-apparaat door middel van het vormen van vesicles. Op het ruwe ER liggen ribosomen die belangrijk zijn in de eiwitsynthese binnen de cel. Het ruwe ER dankt zijn naam aan de ribosomen die op het ER liggen en te zien zijn onder de microscoop."
         },
         {
             "type": "question",
-            "question": "Wat is **geen** functie van het Endoplasmatisch reticulum",
+            "question": "Wat is **geen** functie van het Endoplasmatisch reticulum?",
             "answers": {
-                "correct_answer": "Productie van nucleïnezuren (DNA en RNA)",
+                "correct_answer": "Productie van nucle\u00efnezuren (DNA en RNA)",
                 "wrong_answers": [
                     "Synthese eiwitten op ribosomen die aan het ER gebonden zijn",
                     "Vouwing en glycosylering van eiwitten",
@@ -364,22 +364,22 @@
         },
         {
             "type": "question",
-            "question": "Wat zijn de primaire functies van het ruwe ER en het gladde ER.",
+            "question": "Wat zijn de primaire functies van het ruwe en het gladde ER?",
             "answer": "Het ruwe ER is belangrijk voor de eiwitsynthese (1 punt) en het gladde ER vormt vesicles die belangrijk zijn voor het transport van eiwitten buiten de cel. (1 punt)"
         },
         {
             "type": "info",
             "title": "Sarcoplasmatisch Reticulum",
-            "text": "Het endoplasmatisch reticulum is in elk soort cel net een beetje anders. Het **sarcoplasmatisch reticulum** (SR) is het endoplasmatisch reticulum wat zich in de spiercel bevindt. Het sarcoplasmatisch reticulum is belangrijk bij de afgifte van calcium in de spiercel, wat nodig is voor de contractie van de fybrillen."
+            "text": "Het endoplasmatisch reticulum is in elk soort cel net een beetje anders. Het **sarcoplasmatisch reticulum** (SR) is het endoplasmatisch reticulum wat zich in de spiercel bevindt. Het sarcoplasmatisch reticulum is belangrijk bij de afgifte van calcium in de spiercel, wat nodig is voor de contractie van de fibrillen."
         },
         {
             "type": "info",
             "title": "Afgifte van Calcium in de spier",
-            "text": "Het sarcoplasmatisch reticulum is belangrijk voor de afgifte van calcium in de spier. Dit gebeurt op de volgende manier: \n 1) Zenuwimpuls komt binnen via de axon terminal en triggert de afgifte van acetylcholine. \n 2) De acetylcholine receptor zorgt ervoor dat er een spier actie potentiaal wordt opgewekt. \n 3) De actie potentiaal zorgt ervoor dat er vanuit het endoplasmatisch reticulum calcium ionen terecht komt in het cytoplasma van de spiercel. \n 4) Myofibrillen contraheren door de vrijgekomen calcium ionen. \n 5) Spier trekt samen. \n 6) Calcium wordt met ATP vanuit het cytoplasma weer het SR ingepompt. \n 7) De spier ontspant."
+            "text": "Het sarcoplasmatisch reticulum is belangrijk voor de afgifte van calcium in de spier. Dit gebeurt op de volgende manier: \n 1) **Zenuwimpuls komt binnen** via de axon terminal en **triggert de afgifte van acetylcholine**. \n 2) **Actie potentiaal** wordt opgewekt door acetylcholine receptoren. \n 3) Door actie potentiaal komen calcium ionen terecht in het cytoplasma van de spiercel. \n 4) **Fibrillen contraheren** door de vrijgekomen calcium ionen. \n 5) Spier trekt samen. \n 6) Calcium wordt met ATP vanuit het cytoplasma weer het SR ingepompt. \n 7) De spier **ontspant**."
         },
         {
             "type": "question",
-            "question": "Wat is de goede volgorde voor het samentrekken van een fybril binnen een spiercel? \n 1) Zenuwimpuls komt binnen via de axon terminal en triggert de afgifte van acetylcholine. \n 2) Myofibrillen contraheren door de vrijgekomen calcium ionen. \n 3) Spier trekt samen. \n 4) Calcium wordt met ATP vanuit het cytoplasma weer het SR ingepompt. \n 5) De acetylcholine receptor zorgt ervoor dat er een spier actie potentiaal wordt opgewekt. \n 6) De actie potentiaal zorgt ervoor dat er vanuit het endoplasmatisch reticulum calcium ionen terecht komt in het cytoplasma van de spiercel. \n 7) De spier ontspant.",
+            "question": "Wat is de goede volgorde voor het samentrekken van een fibril binnen een spiercel? \n 1) Zenuwimpuls komt binnen via de axon terminal en triggert de afgifte van acetylcholine. \n 2) Myofibrillen contraheren door de vrijgekomen calcium ionen. \n 3) Spier trekt samen. \n 4) Calcium wordt met ATP vanuit het cytoplasma weer het SR ingepompt. \n 5) De acetylcholine receptor zorgt ervoor dat er een spier actie potentiaal wordt opgewekt. \n 6) De actie potentiaal zorgt ervoor dat er vanuit het endoplasmatisch reticulum calcium ionen terecht komt in het cytoplasma van de spiercel. \n 7) De spier ontspant.",
             "answers": {
                 "correct_answer": "1 \u2192 5 \u2192 6 \u2192 2 \u2192 3 \u2192 4 \u2192 7",
                 "wrong_answers": [
@@ -392,13 +392,8 @@
         },
         {
             "type": "info",
-            "title": "Co-translationeel eiwittransport vs post-translationeel eiwittransport",
-            "text": "Alle eiwitten die via het ER getransporteerd worden naar een andere plaats binnen of buiten de cel hebben een ER-signaal sequentie. Eiwitten die kunnen direct (co-translationeel) of indirect (post-translationeel) naar het ER getransporteerd worden. **Signal Recognition Particle** (SRP) is een eiwit dat in het membraan zit van het endoplasmatisch reticulum met als enige doel het herkennen van de ER-signaal sequentie, zodat de translocatie van het eiwit naar het ER kan plaatsvinden."
-        },
-        {
-            "type": "info",
-            "title": "Eiwitlokalisatie en signaalsequenties",
-            "text": "Eiwitten die naar het ER getranslokeerd moeten worden, bevatten een signaalsequentie die herkend wordt door het signal recognition particle (SRP). Het SRP faciliteert de translocatie van deze eiwitten naar het ER. Een ER signaalsequentie fungeert als een adreslabel voor eiwitten die naar het ER getransloceerd moeten worden. Peptidasen spelen een rol in de lokalisatie van eiwitten door signaalsequenties af te snijden en daarmee de uiteindelijke lokalisatie van eiwitten in de cel te bepalen. Peptidases klieven peptidebindingen om bij te dragen aan de finale structuur van een eiwit."
+            "title": "Co-translationeel eiwittransport vs. post-translationeel eiwittransport",
+            "text": "Alle eiwitten die via het ER getransporteerd worden naar een andere plaats binnen of buiten de cel hebben een ER-signaal sequentie. Eiwitten die kunnen direct (**co-translationeel**) of indirect (**post-translationeel**) naar het ER getransporteerd worden. **Signal Recognition Particle** (SRP) is een eiwit dat in het membraan zit van het endoplasmatisch reticulum met als enige doel het herkennen van de ER-signaal sequentie, zodat de translocatie van het eiwit naar het ER kan plaatsvinden."
         },
         {
             "type": "question",
@@ -407,8 +402,8 @@
         },
         {
             "type": "info",
-            "title": "KDEL sequentie",
-            "text": "Eiwitten die alleen in het ER hun functie hebben, komen soms door membraantransport buiten het endoplasmatisch reticulum in het golgi apparaat terecht. Om weer terug in het ER te geraken hebben deze eiwitten een **KDEL-sequentie**. Doordat de KDEL-sequentie wordt afgelezen door een KDEL receptor in het golgi komt deze door het retrogade transport weer in het ER terecht. Een voorbeeld van een eiwit met een KDEL-sequentie is een eiwit dat helpt bij de biosynthese van lipiden in het ER."
+            "title": "KDEL-sequentie",
+            "text": "Eiwitten die alleen in het ER hun functie hebben, komen soms door membraantransport buiten het endoplasmatisch reticulum in het golgi apparaat terecht. Om weer terug in het ER te geraken, hebben deze eiwitten een **KDEL-sequentie**. Doordat de KDEL-sequentie wordt afgelezen door een KDEL-receptor in het golgi komt deze door het retrogade transport weer in het ER terecht. Een voorbeeld van een eiwit met een KDEL-sequentie is een eiwit dat helpt bij de biosynthese van lipiden in het ER."
         }
     ]
 }
