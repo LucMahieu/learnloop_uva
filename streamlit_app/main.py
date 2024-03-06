@@ -14,7 +14,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
