@@ -32,7 +32,7 @@
         {
             "type": "question",
             "question": "Welke ionen hebben typisch een hogere concentratie buiten de cel dan binnen de cel?",
-            "answer": "Natrium (Na+) (1 punt), chloride (Cl-) en calcium (1 punt) hebben beide typisch een hogere concentratie buiten de cel dan binnen."
+            "answer": "Natrium (Na+) (1 punt), chloride (Cl-) (1 punt) en calcium (1 punt) hebben beide typisch een hogere concentratie buiten de cel dan binnen."
         },
         {
             "type": "info",
@@ -228,7 +228,7 @@
         {
             "type": "question",
             "question": "Wat gebeurt er met voltage-gated natriumkanalen als de membraanpotentiaal verandert?",
-            "answer": "Wanneer er een verandering in de membraanpotentiaal optreedt, kunnen de voltage-gated natriumkanalen openen, wat leidt tot een instroom van natriumionen in de cel (1 punt)."
+            "answer": "Wanneer er een verandering in de membraanpotentiaal optreedt, kunnen de voltage-gated natriumkanalen openen (1 punt), wat leidt tot een instroom van natriumionen in de cel (1 punt)."
         },
         {
             "type": "info",
@@ -241,7 +241,7 @@
             "title": "Actiepotentiaal",
             "text": "Een actiepotentiaal is een tijdelijke omkering van het elektrische membraanpotentiaal in een neuron. Het proces begint met de depolarisatie van de celmembraan, waarbij natriumionen naar binnen stromen en kaliumionen naar buiten. Deze ionenbeweging is mogelijk door de sequenti\u00eble opening en sluiting van natrium- en kaliumkanalen. De actiepotentiaal volgt het alles-of-niets-principe, wat betekent dat het signaal altijd een uniforme sterkte en vorm heeft, ongeacht de stimulatie-intensiteit. Dit mechanisme is essentieel voor de signaalvoortplanting langs het neuron, waardoor informatie snel door het zenuwstelsel kan worden overgedragen.",
             "image": "membraanpotentiaal.png"
-        },          
+        },
         {
             "type": "question",
             "question": "Hoe ontstaat een actiepotentiaal in een neuron?",
@@ -266,7 +266,7 @@
         },
         {
             "type": "question",
-            "question": "Wat is de rol van de natriumkalium pomp in het behouden van de rustpotentiaal?",
+            "question": "Wat is de rol van de natriumkalium-pomp in het behouden van de rustpotentiaal?",
             "answer": "De natriumkalium pomp helpt de rustpotentiaal te behouden door drie natriumionen (Na+) naar buiten te pompen en twee kaliumionen (K+) naar binnen te halen voor elke ATP die wordt gebruikt (1 punt), wat helpt de elektrochemische gradi\u00EBnt in stand te houden (1 punt)."
         },
         {
@@ -417,7 +417,7 @@
         {
             "type": "question",
             "question": "Wat veroorzaakt de negatieve rustpotentiaal van een neuron?",
-            "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van natrium en kalium ionen binnen en buiten de cel."
+            "answer": "De negatieve rustpotentiaal van een neuron wordt veroorzaakt door uitstromend kalium (1 punt) en de actieve werking van natriumkalium-pompen (1 punt). Dit resulteert in een ongelijke verdeling van natrium en kalium ionen binnen en buiten de cel. (1 punt)"
         },
         {
             "type": "info",
