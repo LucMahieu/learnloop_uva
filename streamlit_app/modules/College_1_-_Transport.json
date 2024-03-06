@@ -288,7 +288,7 @@
         {
             "type": "info",
             "title": "Myelineschede en saltatoire geleiding",
-            "text": "De myelineschede is een isolerende laag rondom de axonen van sommige neuronen die de transductiesnelheid van actiepotentialen verhoogt door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt. Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie.",
+            "text": "**De myelineschede is een isolerende laag rondom de axonen** van sommige neuronen **die de transductiesnelheid van actiepotentialen verhoogt** door saltatoire geleiding, waarbij het signaal over de knopen van Ranvier springt. Beschadiging van myeline, zoals bij multiple sclerose, verstoort de signaaltransductie en kan leiden tot vertraging of andere problemen met zenuwsignalen.",
             "image": "saltatoire_geleiding.png"
         },
         {
@@ -304,17 +304,17 @@
         {
             "type": "info",
             "title": "Optogenetica",
-            "text": "Optogenetica is een biotechnologische techniek waarbij gebruik wordt gemaakt van lichtgevoelige eiwitten, zoals kanalen en pompen, om de activiteit van neuronen te controleren. Dit wordt bereikt door genetisch lichtgevoelige kanalen, zoals rhodopsine uit algen of halorhodopsine uit bacteri\u00ebn, in de neuronen te introduceren, waardoor deze cellen geactiveerd of geremd kunnen worden met licht van specifieke golflengtes."
+            "text": "Optogenetica is een biotechnologische techniek waarbij gebruik wordt gemaakt van **lichtgevoelige eiwitten**, zoals kanalen en pompen, om de **activiteit van neuronen te controleren**. Dit wordt bereikt door genetisch lichtgevoelige kanalen, zoals rhodopsine uit algen of halorhodopsine uit bacteri\u00ebn, in de neuronen te introduceren, waardoor deze cellen geactiveerd of geremd kunnen worden met licht van specifieke golflengtes."
         },
         {
             "type": "question",
-            "question": "Wat is het doel van optogenetica?",
+            "question": "Wat is het doel van optogenetica en hoe behaalt het dat doel?",
             "answer": "Het doel van optogenetica is om neuronen te activeren of te remmen met behulp van licht (1 punt), door gebruik te maken van genetisch ge\u00EFntroduceerde lichtgevoelige kanalen of pompen (1 punt)."
         },
         {
             "type": "info",
             "title": "Lichtgevoelige kanalen",
-            "text": "Lichtgevoelige kanalen zijn eiwitten die reageren op licht en de mogelijkheid bieden om neuronale activiteit nauwkeurig te reguleren. Voorbeelden van deze eiwitten zijn rhodopsine uit algen, dat gebruikt wordt om neuronen te activeren, en halorhodopsine uit bacteri\u00ebn, dat gebruikt wordt om neuronen te remmen.",
+            "text": "Lichtgevoelige kanalen zijn eiwitten die reageren op licht en de mogelijkheid bieden om neuronale activiteit nauwkeurig te reguleren. Voorbeelden van deze eiwitten zijn **rhodopsine** uit algen, dat gebruikt wordt om neuronen te **activeren**, en **halorhodopsine** uit bacteri\u00ebn, dat gebruikt wordt om neuronen te **remmen**.",
             "image": "algen_rhodopsine_optogenetica.png"
         },
         {
@@ -324,13 +324,8 @@
         },
         {
             "type": "info",
-            "title": "Ionkanalen en ziekten",
-            "text": "Ionkanalen spelen een cruciale rol bij het functioneren van cellen en zijn betrokken bij verschillende ziektebeelden zoals epilepsie en migraine. Het correct functioneren van deze kanalen is essentieel voor het handhaven van de elektrische balans in cellen."
-        },
-        {
-            "type": "info",
             "title": "Mutaties in natriumkanalen",
-            "text": "Mutaties in de natriumkanalen kunnen ernstige gevolgen hebben voor de gezondheid. Deze mutaties kunnen leiden tot veranderingen in de actiepotentialen, wat weer invloed heeft op processen zoals hartritme en neuronale activiteit.",
+            "text": "Mutaties in ionenkanalen kunnen de oorzaak zijn van verschillende ziektebeelden zoals epilepsie en migraine. Zo kunnen ook mutaties in de natriumkanalen kunnen ernstige gevolgen hebben voor de gezondheid. Deze **mutaties kunnen leiden tot veranderingen in de actiepotentialen**, wat weer invloed heeft op processen zoals **hartritme** en neuronale activiteit.",
             "image": "mutaties_natrium_kanalen_hartritme.png"
         },
         {
@@ -347,12 +342,12 @@
         {
             "type": "question",
             "question": "Hoe activeren voltage-gated calciumkanalen neurotransmitterafgifte?",
-            "answer": "Wanneer een actiepotentiaal de presynaptische terminus bereikt, openen voltage-gated calciumkanalen, waardoor calciumionen de cel binnenstromen, wat de afgifte van neurotransmitters uit vesikels stimuleert (1 punt)."
+            "answer": "Wanneer een actiepotentiaal de presynaptische terminus bereikt, openen voltage-gated calciumkanalen (1 punt), waardoor calciumionen de cel binnenstromen (1 punt), wat de afgifte van neurotransmitters uit vesikels stimuleert (1 punt)."
         },
         {
             "type": "info",
             "title": "Acetylcholine receptor structuur & functionaliteit",
-            "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om te fungeren als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is.",
+            "text": "De acetylcholine receptor is een complex eiwit dat uit meerdere subunits bestaat. Deze subunits werken samen om te fungeren als een natriumkanaal dat specifiek opent wanneer een ligand - in dit geval acetylcholine - gebonden is. Wanneer de receptor geactiveerd wordt, stroomt natrium de cel binnen, wat leidt tot een actiepotentiaal in het postsynaptische neuron.",
             "image": "acetylcholine_receptor_ligand.png"
         },
         {
