@@ -4,6 +4,7 @@ image: learnloop
 tag: latest
 
 surfconextClientId: learnloop-test.datanose.nl
+surfconextMetadataUrl: https://connect.surfconext.nl/.well-known/openid-configuration
 
 azure:
   keyvaultName: keyvaultName

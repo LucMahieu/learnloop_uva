@@ -24,7 +24,7 @@ auth.register(
     name='surfconext',
     client_id=os.getenv('SURFCONEXT_CLIENT_ID'),
     client_secret=os.getenv('SURFCONEXT_CLIENT_SECRET'),
-    server_metadata_url='https://connect.test.surfconext.nl/.well-known/openid-configuration', #TODO: change for productin env
+    server_metadata_url=os.getenv('SURFCONEXT_METADATA_URL'),
     client_kwargs={'scope': 'openid'}
 )
 

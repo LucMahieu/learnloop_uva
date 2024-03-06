@@ -23,6 +23,8 @@ spec:
           env:
           - name: SURFCONEXT_CLIENT_ID
             value: "{{ .Values.surfconextClientId }}"
+          - name: SURFCONEXT_METADATA_URL
+            value: "{{ .Values.surfconextMetadataUrl }}"
           - name: LEARNLOOP_VERSION
             value: "{{ .Chart.AppVersion }}"
           envFrom:

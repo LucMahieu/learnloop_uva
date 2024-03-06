@@ -741,7 +741,6 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
     if st.session_state.modules == []:
         # Read the modules from the modules directory
         modules = os.listdir("./modules")
-        print(modules)
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
         st.session_state.modules = modules
