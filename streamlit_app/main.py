@@ -756,7 +756,8 @@ def render_feedback_form():
     """Feedback form in the sidebar."""
     st.sidebar.title("Denk je mee?")     
     st.sidebar.text_area(
-        label='Deel hier anoniem je gedachtes. Groot of klein, **alle feedback is waardevol**.',
+        label='Denk je mee?',
+        label_visibility="hidden",
         placeholder="Wat vond je handig? Wat kan beter? Ontbreekt er iets?, etc.",
         key='feedback_box',
     )
