@@ -21,7 +21,7 @@
         {
             "type": "question",
             "question": "Hoe functioneren ionenkanalen in celmembranen?",
-            "answer": "Ionenkanalen functioneren als poorten voor één type ionen die zo het membraan kunnen passeren, en kunnen ofwel continu geopend zijn of gereguleerd worden door diverse signalen (1 punt)."
+            "answer": "Ionenkanalen functioneren als poorten voor één type ionen (1 punt) die zo het membraan kunnen passeren (1 punt) en kunnen ofwel continu geopend zijn of gereguleerd worden door diverse signalen (1 punt)."
         },
         {
             "type": "info",
@@ -32,7 +32,14 @@
         {
             "type": "question",
             "question": "Welke ionen hebben typisch een hogere concentratie buiten de cel dan binnen de cel?",
-            "answer": "Natrium (Na+) (1 punt), chloride (Cl-) (1 punt) en calcium (1 punt) hebben beide typisch een hogere concentratie buiten de cel dan binnen."
+            "answers": {
+                "correct_answer": "Natrium (Na+), Chloride (Cl-) en Calcium (Ca2+)",
+                "wrong_answers": [
+                    "Kalium (K+), Chloride (Cl-)",
+                    "Natrium (Na+)",
+                    "Kalium (K+), Chloride (Cl-) en Calcium (Ca2+)"
+                ]
+            }
         },
         {
             "type": "info",
@@ -57,23 +64,37 @@
         {
             "type": "info",
             "title": "Membraanstructuur en permeabiliteit",
-            "text": "De lipide bilaag van een celmembraan is selectief permeabel en laat hydrofobe stoffen en deeltjes zoals gasmoleculen en steroidhormonen door. Water en glycerol hebben een beperkte doorgang door de membraan, terwijl suiker en sucrose zeer beperkte doorgang hebben. Geladen ionen kunnen niet door de lipide bilaag heen zonder hulp.",
+            "text": "De lipide bilaag van een celmembraan is selectief permeabel en laat hydrofobe stoffen en deeltjes zoals gasmoleculen en steroidhormonen door. Water en macromoleculen zoals glycerol, suiker en sucrose hebben een (zeer) beperkte doorgang door de membraan. Daarnaast kunnen ook geladen ionen niet door de lipide bilaag heen zonder hulp doordat ze een lading hebben die niet compatibel is met de hydrofobe kern van de membraan.",
             "image": "permeabiliteit_lipide_bilaag.png"
         },
         {
             "type": "question",
             "question": "Welke soorten moleculen kunnen gemakkelijk door de lipide bilaag van een celmembraan heen?",
-            "answer": "Hydrofobe stoffen zoals gasmoleculen en steroidhormonen kunnen gemakkelijk door de lipide bilaag heen (1 punt)."
+            "answers": {
+                "correct_answer": "Hydrofobe stoffen zoals gasmoleculen en steroidhormonen",
+                "wrong_answers": [
+                    "Geladen ionen zoals natrium en kalium",
+                    "Water en glycerol",
+                    "Suiker en sucrose"
+                ]
+            }
         },
         {
             "type": "question",
             "question": "Waarom kunnen ionen niet zelfstandig door de lipide bilaag van het celmembraan?",
-            "answer": "ionen kunnen niet door de hydrofobe lipide bilaag heen vanwege hun lading en hebben hulp nodig om de membraan over te steken (1 punt)."
+            "answers": {
+                "correct_answer": "Ionen hebben een lading die niet compatibel is met de hydrofobe kern van de membraan",
+                "wrong_answers": [
+                    "Ionen zijn te groot om door de membraan te passeren",
+                    "Ionen zijn te klein om door de membraan te passeren",
+                    "Ionen hebben een lading die niet compatibel is met de hydrofiele kern van de membraan"
+                ]
+            }
         },
         {
             "type": "question",
             "question": "Hoe dragen transporteiwitten bij aan de functie van biologische membranen?",
-            "answer": "Transporteiwitten verhogen de permeabiliteit van biologische membranen voor ionen metabolieten en water (1 punt) door stoffen in beide richtingen over het membraan te verplaatsen (1 punt)."
+            "answer": "Transporteiwitten verhogen de permeabiliteit van biologische membranen (1 punt) voor macromoleculen, ionen en water (1 punt) door stoffen in beide richtingen over het membraan te verplaatsen (1 punt)."
         },
         {
             "type": "info",
@@ -139,7 +160,7 @@
         {
             "type": "question",
             "question": "Hoe draagt de natrium-kalium pomp bij aan het celmembraanpotentiaal?",
-            "answer": "De natrium-kalium pomp draagt bij aan het celmembraanpotentiaal door actief natriumionen uit de cel te pompen en kaliumionen naar binnen te pompen (1 punt), waardoor een elektrochemische gradi\u00ebnt over het celmembraan ontstaat (1 punt)."
+            "answer": "De natrium-kalium pomp draagt bij aan het celmembraanpotentiaal door actief natriumionen uit de cel te pompen (1 punt) en kaliumionen naar binnen te pompen (1 punt), waardoor een elektrochemische gradi\u00ebnt over het celmembraan ontstaat (1 punt)."
         },
         {
             "type": "question",
@@ -156,6 +177,30 @@
             "type": "question",
             "question": "Wat is een uniport transporteiwit?",
             "answer": "Een uniport transporteiwit is een type transporteiwit dat één specifiek molecuul in één richting over een celmembraan transporteert (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is een uniport transporteiwit? Een uniport is een type transporteiwit dat ...",
+            "answers": {
+                "correct_answer": "één specifiek molecuul in één richting over een celmembraan transporteert",
+                "wrong_answers": [
+                    "twee verschillende moleculen in dezelfde richting transporteert",
+                    "twee verschillende moleculen in tegengestelde richtingen transporteert",
+                    "twee specifieke moleculen in één richting over een celmembraan transporteert"
+                ]
+            }
+        },
+        {
+            "type": "question",
+            "question": "Wat is een symport transporteiwit? Een symport is een type transporteiwit dat ...",
+            "answers": {
+                "correct_answer": "twee verschillende moleculen in dezelfde richting transporteert",
+                "wrong_answers": [
+                    "één specifiek molecuul in één richting over een celmembraan transporteert",
+                    "twee verschillende moleculen in tegengestelde richtingen transporteert",
+                    "twee specifieke moleculen in één richting over een celmembraan transporteert"
+                ]
+            }
         },
         {
             "type": "question",
@@ -250,7 +295,7 @@
         {
             "type": "question",
             "question": "Wat is het alles-of-niets-principe bij een actiepotentiaal?",
-            "answer": "Het alles-of-niets-principe bij een actiepotentiaal houdt in dat zodra een actiepotentiaal wordt ge\u00EFnitieerd, deze altijd dezelfde structuur en sterkte heeft (1 punt)."
+            "answer": "Het alles-of-niets-principe bij een actiepotentiaal houdt in dat zodra een actiepotentiaal wordt ge\u00EFnitieerd, deze altijd dezelfde structuur (1 punt) en sterkte heeft (1 punt)."
         },
         {
             "type": "info",
