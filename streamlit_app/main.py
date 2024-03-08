@@ -73,7 +73,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./streamlit_app/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -281,7 +281,7 @@ def render_image(image_path):
 def fetch_image_path():
     if 'image' in st.session_state.segment_content:
         image_path = st.session_state.segment_content['image']
-        return f"./streamlit_app/images/{image_path}"
+        return f"./images/{image_path}"
 
 
 def render_info():
@@ -646,11 +646,11 @@ def select_page_type():
     # For convenience, store the selected module name in a variable
     module = st.session_state.selected_module
 
-    # Make module name lowercase and replace spaces and with underscores and cuts off at the first
-    module_json_name = module.lower().replace(" ", "_")
+    # Replace spaces and with underscores
+    module_json_name = module.replace(" ", "_")
 
     # Load the json content for this module
-    with open(f"./streamlit_app/modules/{module_json_name}.json", "r") as f:
+    with open(f"./modules/{module_json_name}.json", "r") as f:
         st.session_state.page_content = json.load(f)
 
     # Determine what type of page to display
@@ -729,7 +729,7 @@ def initialise_session_states():
 
 
 def render_logo():
-    st.image('./streamlit_app/images/logo.png', width=100)
+    st.image('./images/logo.png', width=100)
 
 
 def determine_modules(): #TODO: change the way the sequence of the modules is determined so it corresponds to the sequence of the course
@@ -740,7 +740,7 @@ def determine_modules(): #TODO: change the way the sequence of the modules is de
     # Determine the modules to display in the sidebar
     if st.session_state.modules == []:
         # Read the modules from the modules directory
-        modules = os.listdir("./streamlit_app/modules")
+        modules = os.listdir("./modules")
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
         st.session_state.modules = modules
@@ -879,7 +879,7 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./streamlit_app/images/logo.png")
+        logo_base64 = convert_image_base64("./images/logo.png")
         html_content = f"""
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
