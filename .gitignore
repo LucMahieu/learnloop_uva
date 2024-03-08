@@ -1,5 +1,5 @@
 **/.env
-.streamlit/secrets.toml
+streamlit_app/.streamlit/secrets.toml
 .vscode/launch.json
 **.py[cod]
 __pycache__/
