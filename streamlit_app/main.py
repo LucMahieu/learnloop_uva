@@ -14,14 +14,14 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 # Create openai instance
 load_dotenv()
 
 # Database connection
 if running_on_premise:
-    print("Running on-premise")
+    # print("Running on-premise")
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
@@ -37,7 +37,7 @@ db = db_client.LearnLoop
 # Ping database to check if it's connected
 try:
     db.command("ping")
-    print("Connected to database")
+    # print("Connected to database")
 except Exception as e:
     print(f"Error: {e}")
 
@@ -754,11 +754,13 @@ def upload_feedback():
 
 def render_feedback_form():
     """Feedback form in the sidebar."""
-    st.sidebar.title("Denk je mee?")     
+    st.write("\n\n")
+    st.write("\n\n")
+    st.sidebar.subheader("Denk je mee?")    
     st.sidebar.text_area(
-        label='Denk je mee?',
-        label_visibility="hidden",
-        placeholder="Wat vond je handig? Wat kan beter? Ontbreekt er iets?, etc.",
+        label='Wat vind je handig? Wat kan beter? etc.',
+        # label_visibility="hidden",
+        # placeholder="Wat vind je handig? Wat kan beter? etc.",
         key='feedback_box',
     )
 
@@ -791,6 +793,17 @@ def render_sidebar():
                 if st.button('Oefenfase 📝', key=module + ' practice'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'practice'
+        
+        if not running_on_premise:
+            st.write("\n\n")
+            st.write("\n\n")
+            st.sidebar.subheader("Account")
+            if st.session_state.username == "Guest":
+                st.text_input("Je bent ingelogd als gast, je vooruitgang wordt niet opgeslagen. Kies een gebruikersnaam waar je vooruitgang aan gekoppeld wordt.", key="temporary_username")
+                st.button("Login", on_click=lambda: st.session_state.__setitem__('username', st.session_state.temporary_username), use_container_width=True)
+            else:
+                st.write(f"Je bent ingelogd als **{st.session_state.username}**.")
+
 
         render_feedback_form()
 
@@ -885,11 +898,12 @@ if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
+
     
     initialise_session_states()
 
-    if not running_on_premise:
-        st.session_state.username = "flower2960"
+    if not running_on_premise and st.session_state.username is None:
+        st.session_state.username = "Guest"
 
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
