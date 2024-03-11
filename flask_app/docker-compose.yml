@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    image: tiangolo/uwsgi-nginx-flask:python3.8
+    network_mode: "host"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+    ports:
+      - "3000:80"
+  # db:
+  #   image: mongo
+  #   environment:
+  #     MONGO_DB_USERNAME: ${MONGO_DB_USERNAME}
+  #     MONGO_DB_PASSWORD: ${MONGO_DB_PASSWORD}
