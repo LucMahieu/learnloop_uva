@@ -19,15 +19,18 @@ running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 # Create openai instance
 load_dotenv()
 
+MONGO_URI = os.getenv('MONGO_DB')
+db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+
 # Database connection
-if running_on_premise:
-    print("Running on-premise")
-    COSMOS_URI = os.getenv('COSMOS_URI')
-    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-else:
-    print("Running off-premise")
-    MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+# if running_on_premise:
+#     print("Running on-premise")
+#     COSMOS_URI = os.getenv('COSMOS_URI')
+#     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+# else:
+#     print("Running off-premise")
+#     MONGO_URI = os.getenv('MONGO_DB')
+#     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 OPENAI_API_KEY = os.getenv('OPENAI_API')
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
@@ -647,7 +650,7 @@ def select_page_type():
     module = st.session_state.selected_module
 
     # Make module name lowercase and replace spaces and with underscores and cuts off at the first
-    module_json_name = module.lower().replace(" ", "_")
+    module_json_name = module.replace(" ", "_")
 
     # Load the json content for this module
     with open(f"./modules/{module_json_name}.json", "r") as f:
@@ -871,7 +874,7 @@ def render_login_page():
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
             <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="http://learnloop.datanose.nl/" style="text-decoration: none;">
+            <a href="http://localhost:3000/" style="text-decoration: none;">
                 <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
                 text-align: center; text-decoration: none; display: block; width: 100%; margin: \
                 4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
