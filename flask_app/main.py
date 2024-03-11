@@ -15,11 +15,9 @@ app.secret_key = os.getenv('FLASK_SECRET')
 running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
 if running_on_premise:
-    print("Running on-premise")
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
-    print("Running off-premise")
     MONGO_URI = os.getenv('MONGO_DB')
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
@@ -71,7 +69,7 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'http://localhost:8501/app?nonce={nonce}'
+    redirect_url = f'http://learnloop.datanose.nl/app?nonce={nonce}'
     return redirect(redirect_url, code=302)
 
 

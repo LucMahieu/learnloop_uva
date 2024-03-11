@@ -20,11 +20,9 @@ load_dotenv()
 
 # Database connection
 if running_on_premise:
-    print("Running on-premise")
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
-    print("Running off-premise")
     MONGO_URI = os.getenv('MONGO_DB')
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
@@ -753,11 +751,13 @@ def upload_feedback():
 
 def render_feedback_form():
     """Feedback form in the sidebar."""
-    st.sidebar.title("Denk je mee?")     
+    st.write("\n\n")
+    st.write("\n\n")
+    st.sidebar.subheader("Denk je mee?")    
     st.sidebar.text_area(
-        label='Denk je mee?',
-        label_visibility="hidden",
-        placeholder="Wat vond je handig? Wat kan beter? Ontbreekt er iets?, etc.",
+        label='Wat vind je handig? Wat kan beter? etc.',
+        # label_visibility="hidden",
+        # placeholder="Wat vind je handig? Wat kan beter? etc.",
         key='feedback_box',
     )
 
@@ -870,7 +870,7 @@ def render_login_page():
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
             <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="http://localhost:3000/" style="text-decoration: none;">
+            <a href="http://learnloop.datanose.nl/" style="text-decoration: none;">
                 <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
                 text-align: center; text-decoration: none; display: block; width: 100%; margin: \
                 4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
