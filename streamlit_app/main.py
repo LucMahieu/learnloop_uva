@@ -16,21 +16,17 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
-# Create openai instance
 load_dotenv()
 
-MONGO_URI = os.getenv('MONGO_DB')
-db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-
 # Database connection
-# if running_on_premise:
-#     print("Running on-premise")
-#     COSMOS_URI = os.getenv('COSMOS_URI')
-#     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-# else:
-#     print("Running off-premise")
-#     MONGO_URI = os.getenv('MONGO_DB')
-#     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+if running_on_premise:
+    print("Running on-premise")
+    COSMOS_URI = os.getenv('COSMOS_URI')
+    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+else:
+    print("Running off-premise")
+    MONGO_URI = os.getenv('MONGO_DB')
+    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 OPENAI_API_KEY = os.getenv('OPENAI_API')
 openai_client = OpenAI(api_key=OPENAI_API_KEY)

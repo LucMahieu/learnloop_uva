@@ -1,5 +1,6 @@
 # Base image
-FROM tiangolo/uwsgi-nginx-flask:python3.8
+# FROM tiangolo/uwsgi-nginx-flask:python3.8
+FROM python:3.8-slim
 
 WORKDIR /app
 
@@ -12,7 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # # Copy modified nginx configuration
-COPY server.conf /etc/nginx/conf.d/server.conf
+# COPY server.conf /etc/nginx/conf.d/server.conf
+
+CMD ["python", "main.py"]
 
 # Set port used by container
 EXPOSE 3000

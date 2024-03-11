@@ -12,10 +12,18 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
-# Init db
-COSMOS_URI = os.getenv('COSMOS_URI')
-client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-db = client.LearnLoop
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+
+if running_on_premise:
+    print("Running on-premise")
+    COSMOS_URI = os.getenv('COSMOS_URI')
+    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+else:
+    print("Running off-premise")
+    MONGO_URI = os.getenv('MONGO_DB')
+    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+
+db = db_client.LearnLoop
 
 # Make authentication instance for the flask app
 auth = OAuth(app)
@@ -63,7 +71,7 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'http://learnloop.datanose.nl/app?nonce={nonce}'
+    redirect_url = f'http://localhost:8501/app?nonce={nonce}'
     return redirect(redirect_url, code=302)
 
 
