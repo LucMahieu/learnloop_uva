@@ -37,7 +37,7 @@ auth.register(
 
 @app.route('/')
 def login():
-    redirect_uri = url_for('authorize', _external=True)
+    redirect_uri = url_for('authorize', _external=True, _scheme='https')
     return auth.surfconext.authorize_redirect(redirect_uri)
 
 
@@ -69,7 +69,7 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'http://learnloop.datanose.nl/app?nonce={nonce}'
+    redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
     return redirect(redirect_url, code=302)
 
 
