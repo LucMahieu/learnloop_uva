@@ -23,5 +23,3 @@ azure:
       key: SURFCONEXT_CLIENT_SECRET
     - name: learnloop-flask-secret
       key: FLASK_SECRET
-    - name: learnloop-azure-openai-api-key
-      key: AZURE_OPENAI_API_KEY

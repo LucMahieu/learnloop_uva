@@ -27,7 +27,7 @@ else:
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 openai_client = AzureOpenAI(
-   api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
+   api_key=os.getenv("OPENAI_API_KEY"),  
    api_version="2024-03-01-preview",
    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 )
