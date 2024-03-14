@@ -773,7 +773,7 @@ def render_logo():
     st.image('./images/logo.png', width=100)
 
 
-def determine_modules(): #TODO: change the way the sequence of the modules is determined so it corresponds to the sequence of the course
+def determine_modules():
     """	
     Function to determine which names of modules to display in the sidebar 
     based on the JSON module files.	
@@ -957,8 +957,6 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    st.session_state.username = "ernie3" #TODO: remove when testing is done
-
     if not running_on_premise:
         st.session_state.username = "flower2960"
 
@@ -966,15 +964,14 @@ if __name__ == "__main__":
         st.session_state.nonce = st.query_params.get('nonce', None)
         st.query_params.pop('nonce', None) # Remove the nonce from the url
 
-    # TODO: add back in when testing is done
-    # if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
-    #     render_login_page()
-    # elif st.session_state.username is None:
-    #     fetch_username()
-    #     invalidate_nonce()
-    #     st.rerun() # Needed, else it seems to get stuck here
+    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
+        render_login_page()
+    elif st.session_state.username is None:
+        fetch_username()
+        invalidate_nonce()
+        st.rerun() # Needed, else it seems to get stuck here
         
-    if st.session_state.username is None: # TODO: remove when testing is done
+    if st.session_state.username is None:
         print("No username")
     else:
         # Determine the modules of the current course
