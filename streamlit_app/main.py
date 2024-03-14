@@ -414,6 +414,10 @@ def render_final_page():
 
 def set_warned_true():
     """Callback function for a button that turns of the LLM warning message."""
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$set": {"warned": True}}
+    )
     st.session_state.warned = True
 
 
@@ -953,7 +957,7 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    st.session_state.username = "ernie2" #TODO: remove when testing is done
+    st.session_state.username = "ernie3" #TODO: remove when testing is done
 
     if not running_on_premise:
         st.session_state.username = "flower2960"
