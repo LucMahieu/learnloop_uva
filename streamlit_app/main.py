@@ -796,8 +796,6 @@ def render_feedback_form():
     st.sidebar.subheader("Denk je mee? (anoniem)")  
     st.sidebar.text_area(
         label='Wat vind je handig? Wat kan beter? etc. Voer geen persoonlijke of herkenbare gegevens in.',
-        # label_visibility="hidden",
-        # placeholder="Wat vind je handig? Wat kan beter? etc.",
         key='feedback_box',
     )
 

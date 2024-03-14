@@ -3,68 +3,8 @@
     "segments": [
         {
             "type": "info",
-            "title": "Transporteiwitten",
-            "text": "Transporteiwitten spelen een vitale rol in het faciliteren van het transport van stoffen over celmembranen. Ze helpen bij het verplaatsen van moleculen die niet gemakkelijk door de lipide dubbellaag kunnen.",
-            "image": "transporter.png"
-        },
-        {
-            "type": "info",
-            "title": "Ionenkanalen",
-            "text": "Ionenkanalen zijn gespecialiseerde eiwitstructuren in het membraan die functioneren als kanalen voor het doorlaten van ionen. Ze kunnen continu open zijn, of gereguleerd worden door verschillende signalen.",
-            "image": "ion_channel.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van transporteiwitten in het membraan?",
-            "answer": "Transporteiwitten faciliteren het transport van stoffen over celmembranen die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
-        },
-        {
-            "type": "question",
-            "question": "Hoe functioneren ionenkanalen in celmembranen?",
-            "answer": "Ionenkanalen functioneren als poorten voor \u00e9\u00e9n type ionen (1 punt) die zo het membraan kunnen passeren (1 punt) en kunnen ofwel continu geopend zijn of gereguleerd worden door diverse signalen (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Ionenconcentraties en celomgeving",
-            "text": "De concentratie van verschillende ionen varieert aanzienlijk tussen de binnen- en buitenkant van cellen. Natrium (Na+) heeft een lage concentratie binnen en een hoge buiten de cel. Kalium (K+) heeft een hoge concentratie binnen en een lage buiten de cel. Chloride (Cl-) en calcium (Ca2+) hebben beide een lage concentratie binnen de cel, terwijl ze buiten de cel in hogere concentraties voorkomen.",
-            "image": "ionenconcentraties.png"
-        },
-        {
-            "type": "question",
-            "question": "Welke ionen hebben typisch een hogere concentratie buiten de cel dan binnen de cel?",
-            "answers": {
-                "correct_answer": "Natrium (Na+), Chloride (Cl-) en Calcium (Ca2+)",
-                "wrong_answers": [
-                    "Kalium (K+), Chloride (Cl-)",
-                    "Natrium (Na+)",
-                    "Kalium (K+), Chloride (Cl-) en Calcium (Ca2+)"
-                ]
-            }
-        },
-        {
-            "type": "info",
-            "title": "Waterstofionen",
-            "text": "Waterstofionen (H+) zijn positief geladen ionen die een belangrijke rol spelen in de regulatie van de lading en pH binnen en buiten de cel. Ze kunnen niet door de lipide dubbellaag van het celmembraan passeren zonder hulp van transporteiwitten."
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van waterstofionen in de cel?",
-            "answer": "Waterstofionen (H+) reguleren de lading (1 punt) en pH (1 punt) binnen en buiten de cel voor voor het behoud van een stabiele interne omgeving."
-        },
-        {
-            "type": "info",
-            "title": "Belang van ionenconcentraties",
-            "text": "De verschillen in ionenconcentraties zijn essentieel voor cellulaire processen zoals het genereren van elektrische signalen in zenuwcellen, het handhaven van osmotische balans en het activeren van enzymen en signaalmoleculen."
-        },
-        {
-            "type": "question",
-            "question": "Waarom zijn de verschillen in ionenconcentraties belangrijk voor cellen?",
-            "answer": "Verschillen in ionenconcentraties zijn belangrijk voor het genereren van elektrische signalen (1 punt), handhaving van osmotische balans (1 punt) en activatie van enzymen en signaalmoleculen (1 punt)."
-        },
-        {
-            "type": "info",
             "title": "Membraanstructuur en permeabiliteit",
-            "text": "De lipide bilaag van een celmembraan is selectief permeabel en laat hydrofobe stoffen en deeltjes zoals gasmoleculen en steroidhormonen door. Water en macromoleculen zoals glycerol, suiker en sucrose hebben een (zeer) beperkte doorgang door de membraan. Daarnaast kunnen ook geladen ionen niet door de lipide bilaag heen zonder hulp doordat ze een lading hebben die niet compatibel is met de hydrofobe kern van de membraan.",
+            "text": "Biologische celmembranen zijn selectief permeabel, wat betekent dat ze sommige stoffen wel en andere niet doorlaten. Deze lipide bilaag van een celmembraan laat **hydrofobe stoffen** en deeltjes zoals gasmoleculen en steroidhormonen door. Water en macromoleculen zoals glycerol, suiker en sucrose hebben een (zeer) beperkte doorgang door de membraan. Daarnaast kunnen ook **geladen ionen niet door de lipide bilaag** heen zonder hulp doordat hun **lading niet compatibel is met de hydrofobe kern van de membraan**.",
             "image": "permeabiliteit_lipide_bilaag.png"
         },
         {
@@ -92,30 +32,9 @@
             }
         },
         {
-            "type": "question",
-            "question": "Hoe dragen transporteiwitten bij aan de functie van biologische membranen?",
-            "answer": "Transporteiwitten verhogen de permeabiliteit van biologische membranen (1 punt) voor macromoleculen, ionen en water (1 punt) door stoffen in beide richtingen over het membraan te verplaatsen (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Biologische membranen en transporteiwitten",
-            "text": "Biologische membranen zijn selectief permeabel, wat betekent dat ze sommige stoffen wel en andere niet doorlaten. Hun permeabiliteit voor ionen en water wordt verhoogd door de aanwezigheid van transporteiwitten. Deze transporteiwitten zijn gespecialiseerd in het verplaatsen van stoffen in beide richtingen over het membraan."
-        },
-        {
-            "type": "info",
-            "title": "Kanalen versus transporteiwitten",
-            "text": "Kanalen zijn structureel verschillend van transporteiwitten en hebben de mogelijkheid om permeabel te worden, wat betekent dat ze onder bepaalde omstandigheden stoffen door het membraan kunnen laten passeren.",
-            "image": "transporters_en_kanalen.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is het belangrijkste verschil tussen kanalen en transporteiwitten?",
-            "answer": "Kanalen fungeren als poorten die open of dicht kunnen gaan voor snelle passieve diffusie van ionen en moleculen (1 punt), terwijl transporteiwitten moleculen actief of passief transporteren door van vorm te veranderen (1 punt)."
-        },
-        {
             "type": "info",
             "title": "Passief transport",
-            "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren. Het verloopt met de concentratiegradi\u00ebnt mee, wat betekent dat moleculen van een gebied met een hoge concentratie naar een gebied met een lagere concentratie bewegen, zonder dat dit energie kost.",
+            "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren. Het verloopt **met de concentratiegradi\u00ebnt mee**, wat betekent dat moleculen van een gebied met een hoge concentratie naar een gebied met een lagere concentratie bewegen, **zonder dat dit energie kost**.",
             "images": "actief_en_passief_transport.png"
         },
         {
@@ -126,35 +45,107 @@
         {
             "type": "info",
             "title": "Actief transport",
-            "text": "Actief transport is een proces waarbij cellen stoffen tegen hun concentratiegradi\u00ebnt in transporteren. Dit type transport vereist energie, vaak in de vorm van ATP, omdat het stoffen verplaatst van een gebied met lage concentratie naar een gebied met hoge concentratie.",
+            "text": "Actief transport is een proces waarbij cellen stoffen **tegen hun concentratiegradi\u00ebnt in** transporteren. Dit type transport **vereist energie**, vaak in de vorm van **ATP**, omdat het stoffen verplaatst van een gebied met lage concentratie naar een gebied met hoge concentratie.",
             "images": "actief_en_passief_transport.png"
         },
         {
             "type": "question",
             "question": "Hoe verschilt actief transport van passief transport?",
-            "answer": "Actief transport vereist energie, zoals ATP (1 punt), om stoffen tegen de concentratiegradi\u00ebnt in te transporteren (1 punt), terwijl passief transport geen energie vereist en met de concentratiegradi\u00ebnt mee verloopt (1 punt)."
+            "answer": "Actief transport vereist energie, zoals ATP (1 punt), om stoffen tegen de concentratiegradi\u00ebnt in te transporteren (1 punt), terwijl passief transport geen energie vereist (1 punt) en met de concentratiegradi\u00ebnt mee verloopt (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Kanalen en transporteiwitten",
+            "text": "Kanalen en transporteiwitten zijn twee belangrijke mechanismen voor het transporteren van stoffen over celmembranen. **Kanalen fungeren als poorten** die open of dicht kunnen gaan voor snelle **passieve diffusie** van ionen en moleculen, terwijl **transporteiwitten** moleculen **actief of passief** transporteren door van vorm te veranderen.",
+            "image": "transporters_en_kanalen.png"
+        },
+        {
+            "type": "info",
+            "title": "Ionenkanalen",
+            "text": "Ionenkanalen zijn gespecialiseerde eiwitstructuren in het membraan die **functioneren als poorten voor \u00E9\u00E9n type ionen die niet door de lipide bilaag heen kunnen**. Ze kunnen continu open zijn, of gereguleerd worden door verschillende signalen.",
+            "image": "ion_channel.png"
+        },
+        {
+            "type": "info",
+            "title": "Selectiviteitsfilter van ionkanalen",
+            "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat **alleen specifieke ion** het kanaal kunnen doorkruisen.",
+            "image": "selectiviteitsfilter.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van ionenkanalen?",
+            "answer": "Ionenkanalen maken transport van specifieke ionen over het celmembraan mogelijk (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van het selectiviteitsfilter in ionkanalen?",
+            "answer": "Het selectiviteitsfilter in ionkanalen zorgt ervoor dat alleen specifieke ionen kunnen passeren (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Transporteiwitten",
+            "text": "Transporteiwitten helpen bij het verplaatsen van **moleculen die niet gemakkelijk door de lipide dubbellaag kunnen.**",
+            "image": "transporter.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van transporteiwitten in het membraan?",
+            "answer": "Transporteiwitten faciliteren het transport van stoffen over celmembranen (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Ionenconcentraties en celomgeving",
+            "text": "De concentratie van verschillende ionen varieert aanzienlijk tussen de binnen- en buitenkant van cellen. **Natrium (Na+)** heeft een lage concentratie binnen en een hoge buiten de cel. **Kalium (K+)** heeft een hoge concentratie binnen en een lage buiten de cel. **Chloride (Cl-)** en **calcium (Ca2+)** hebben beide een lage concentratie binnen de cel, terwijl ze buiten de cel in hogere concentraties voorkomen.",
+            "image": "ionenconcentraties.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke ionen hebben typisch een hogere concentratie buiten de cel dan binnen de cel?",
+            "answers": {
+                "correct_answer": "Natrium (Na+), Chloride (Cl-) en Calcium (Ca2+)",
+                "wrong_answers": [
+                    "Kalium (K+), Chloride (Cl-)",
+                    "Natrium (Na+)",
+                    "Kalium (K+), Chloride (Cl-) en Calcium (Ca2+)"
+                ]
+            }
+        },
+        {
+            "type": "info",
+            "title": "Waterstofionen",
+            "text": "Waterstofionen (H+) zijn positief geladen ionen die een belangrijke rol spelen in de **regulatie van de lading en pH binnen en buiten de cel**. Ze kunnen niet door de lipide dubbellaag van het celmembraan passeren zonder hulp van transporteiwitten."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van waterstofionen in de cel?",
+            "answer": "Waterstofionen (H+) reguleren de lading (1 punt) en pH (1 punt) binnen en buiten de cel voor voor het behoud van een stabiele interne omgeving."
+        },
+        {
+            "type": "info",
+            "title": "Ion-gekoppeld transport",
+            "text": "Ion-gekoppeld transport verwijst naar een vorm van **actief transport** waarbij de energie van de **concentratiegradi\u00ebnt van een ion** wordt gebruikt om een ander molecuul te transporteren. Hierbij wordt het ion **tegen zijn eigen concentratiegradi\u00ebnt in** getransporteerd, wat energie levert voor het transport van een ander molecuul.",
+            "image": "coupled_ion_transport.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat gebeurt er tijdens ion-gekoppeld transport?",
+            "answer": "Tijdens ion-gekoppeld transport wordt een ion tegen zijn eigen concentratiegradi\u00ebnt in getransporteerd (1 punt), wat energie levert voor het transport van een ander molecuul (1 punt)."
         },
         {
             "type": "info",
             "title": "Elektrochemische gradi\u00ebnt",
-            "text": "De elektrochemische gradi\u00ebnt is een combinatie van de concentratiegradi\u00ebnt en de elektrische gradi\u00ebnt over een membraan. Het speelt een belangrijke rol in het transporteren van ionen door de celmembraan en kan dienen als energiebron voor bepaalde typen van transport.",
+            "text": "De elektrochemische gradi\u00ebnt is een **combinatie van de concentratiegradi\u00ebnt en de elektrische gradi\u00ebnt** over een membraan. Het speelt een belangrijke rol in het transporteren van ionen door de celmembraan en kan dienen als **energiebron voor bepaalde typen van transport**.",
             "image": "elektrochemisch_gradient.png"
         },
         {
             "type": "question",
             "question": "Wat is de elektrochemische gradi\u00ebnt en welke rol speelt het bij transportmechanismes?",
-            "answer": "De elektrochemische gradi\u00ebnt is een combinatie van een concentratie- en elektrische gradi\u00ebnt (1 punt) die als energiebron kan dienen voor transportprocessen van ionen en macromoleculen door de celmembraan (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Ion-gekoppeld transport",
-            "text": "Ion-gekoppeld transport verwijst naar een vorm van actief transport waarbij de energie van de concentratiegradi\u00ebnt van een ion wordt gebruikt om een ander molecuul te transporteren.",
-            "image": "coupled_ion_transport.png"
+            "answer": "De elektrochemische gradi\u00ebnt is een combinatie van een concentratie- en elektrische gradi\u00ebnt (1 punt) die als energiebron kan dienen voor transport over het membraan (1 punt)."
         },
         {
             "type": "info",
             "title": "Natrium-kalium pomp",
-            "text": "De natrium-kalium pomp is ook een transporteiwit dat actief de concentratiegradi\u00ebnten van natrium en kalium over de celmembraan reguleert. Dit mechanisme is essentieel voor diverse cellulaire processen, waaronder het handhaven van het membraanpotentiaal.",
+            "text": "De natrium-kalium pomp is ook een transporteiwit dat **actief** de concentratiegradi\u00ebnten van natrium en kalium over de celmembraan reguleert. Kaliumionen (K+) kunnen door de celmembraan lekken via **kaliumlekkanalen**, die openstaan in rusttoestand. De natrium-kalium pomp is verantwoordelijk voor het herstellen van de ionenbalans die ontstaat door dit lekken. Daarvoor pompt de natrium-kalium pomp **drie natriumionen naar buiten** en **twee kaliumionen naar binnen**, wat resulteert in een **elektrochemische gradi\u00ebnt** over het membraan.",
             "image": "natrium_kalium_pomp.png"
         },
         {
@@ -163,30 +154,20 @@
             "answer": "De natrium-kalium pomp draagt bij aan het celmembraanpotentiaal door actief natriumionen uit de cel te pompen (1 punt) en kaliumionen naar binnen te pompen (1 punt), waardoor een elektrochemische gradi\u00ebnt over het celmembraan ontstaat (1 punt)."
         },
         {
-            "type": "question",
-            "question": "Hoe functioneert ion-gekoppeld transport en wat is de drijvende kracht hier achter?",
-            "answer": "Ion-gekoppeld transport functioneert door het gebruik van de concentratiegradi\u00ebnt van een ion (1 punt) om een ander molecuul te transporteren (1 punt)."
-        },
-        {
             "type": "info",
-            "title": "Transporteiwitten en specificiteit",
-            "text": "Transporteiwitten zijn gespecialiseerde eiwitten in celmembranen die moleculen over de membraan verplaatsen. Hun werking is gebaseerd op specificiteit, wat betekent dat ze verschillende transportmechanismen gebruiken voor verschillende moleculen. Er zijn drie hoofdtypen: uniport, die \u00e9\u00e9n molecuul in \u00e9\u00e9n richting transporteert; symport, ook bekend als co-transporter, die twee verschillende moleculen in dezelfde richting transporteert; en antiport, die twee verschillende moleculen in tegengestelde richtingen transporteert.",
+            "title": "Specificiteit en transportmechanismen",
+            "text": "De werking van transporteiwitten is gebaseerd op specificiteit, wat betekent dat ze **verschillende transportmechanismen** gebruiken voor verschillende moleculen. Er zijn drie hoofdtypen: **uniport**, die **\u00e9\u00e9n molecuul in \u00e9\u00e9n richting** transporteert; **symport**, ook bekend als co-transporter, die **twee verschillende moleculen in dezelfde richting** transporteert; en **antiport**, die **twee verschillende moleculen in tegengestelde richtingen** transporteert.",
             "image": "soorten_passief_transporters.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is een uniport transporteiwit?",
-            "answer": "Een uniport transporteiwit is een type transporteiwit dat \u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert (1 punt)."
         },
         {
             "type": "question",
             "question": "Wat is een uniport transporteiwit? Een uniport is een type transporteiwit dat ...",
             "answers": {
-                "correct_answer": "\u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert",
+                "correct_answer": "\u00E9\u00E9n specifiek molecuul in \u00E9\u00E9n richting over een celmembraan transporteert",
                 "wrong_answers": [
                     "twee verschillende moleculen in dezelfde richting transporteert",
                     "twee verschillende moleculen in tegengestelde richtingen transporteert",
-                    "twee specifieke moleculen in \u00e9\u00e9n richting over een celmembraan transporteert"
+                    "twee specifieke moleculen in \u00E9\u00E9n richting over een celmembraan transporteert"
                 ]
             }
         },
@@ -196,9 +177,9 @@
             "answers": {
                 "correct_answer": "twee verschillende moleculen in dezelfde richting transporteert",
                 "wrong_answers": [
-                    "\u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert",
+                    "\u00E9\u00E9n specifiek molecuul in \u00E9\u00E9n richting over een celmembraan transporteert",
                     "twee verschillende moleculen in tegengestelde richtingen transporteert",
-                    "twee specifieke moleculen in \u00e9\u00e9n richting over een celmembraan transporteert"
+                    "twee specifieke moleculen in \u00E9\u00E9n richting over een celmembraan transporteert"
                 ]
             }
         },
@@ -210,13 +191,25 @@
         {
             "type": "info",
             "title": "Ionkanalen en hun regulatie",
-            "text": "Ionkanalen zijn essentieel voor het functioneren van cellen en kunnen gereguleerd worden op basis van verschillende stimuli. Er zijn voltage-gated kanalen die reageren op veranderingen in de membraanpotentiaal, ligand-gated kanalen die openen door binding van een specifieke moleculaire ligand, en mechanisch geactiveerde kanalen die openen als reactie op fysieke stimuli zoals druk of rek.",
+            "text": "Ionkanalen kunnen gereguleerd worden op basis van verschillende stimuli. Een aantal verschillende soorten ionkanalen zijn: \n 1) **Voltage-gated** kanalen die reageren op **veranderingen in de membraanpotentiaal** \n 2) **Ligand-gated** kanalen die openen door **binding van een specifieke moleculaire ligand** \n 3) **Mechanisch geactiveerde** kanalen die openen als reactie op **fysieke stimuli** zoals druk of rek.",
             "image": "soorten_kanalen.png"
         },
         {
             "type": "question",
+            "question": "Welke drie type ionkanalen zijn er besproken die verschillen in hun regulatie?",
+            "answer": "Voltage-gated kanalen (1 punt), ligand-gated kanalen (1 punt), en mechanisch geactiveerde kanalen (1 punt)."
+        },
+        {
+            "type": "question",
             "question": "Wat is de trigger voor het openen van voltage-gated ionkanalen?",
-            "answer": "Voltage-gated ionkanalen openen als reactie op veranderingen in de membraanpotentiaal (1 punt)."
+            "answers": {
+                "correct_answer": "Veranderingen in de membraanpotentiaal",
+                "wrong_answers": [
+                    "Binding van een specifieke moleculaire ligand",
+                    "Fysieke stimuli zoals druk of rek",
+                    "Veranderingen in de concentratie van een specifiek ion"
+                ]
+            }
         },
         {
             "type": "question",
@@ -226,12 +219,19 @@
         {
             "type": "question",
             "question": "Wat veroorzaakt het openen van mechanisch geactiveerde ionkanalen?",
-            "answer": "Mechanisch geactiveerde ionkanalen openen als reactie op fysieke stimuli zoals druk of rek (1 punt)."
+            "answers": {
+                "correct_answer": "Fysieke stimuli zoals druk of rek",
+                "wrong_answers": [
+                    "Veranderingen in de membraanpotentiaal",
+                    "Binding van een specifieke moleculaire ligand",
+                    "Veranderingen in de concentratie van een specifiek ion"
+                ]
+            }
         },
         {
             "type": "info",
             "title": "Nernst vergelijking",
-            "text": "De Nernst vergelijking is een formule die gebruikt wordt om de elektrochemische evenwichtspotentiaal van een ion over een celmembraan te berekenen, gebaseerd op de concentraties van dat ion aan beide zijden van het membraan."
+            "text": "De Nernst vergelijking is een formule die gebruikt wordt om de **elektrochemische evenwichtspotentiaal van een ion over een celmembraan** te berekenen, gebaseerd op de concentraties van dat ion aan beide zijden van het membraan."
         },
         {
             "type": "question",
@@ -240,34 +240,8 @@
         },
         {
             "type": "info",
-            "title": "Selectiviteitsfilter van ionkanalen",
-            "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat alleen specifieke ionen het kanaal kunnen doorkruisen, wat cruciaal is voor de functie van cellen.",
-            "image": "selectiviteitsfilter.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van het selectiviteitsfilter in ionkanalen?",
-            "answer": "Het selectiviteitsfilter in ionkanalen zorgt ervoor dat \u00e9\u00e9n specifiek ion kan passeren (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Actief transport en ionenbalans",
-            "text": "Om de ionenbalans te herstellen en te onderhouden is actief transport noodzakelijk. Dit proces, vaak aangedreven door de Natrium-Kalium pomp, verplaatst Na+ ionen naar buiten en K+ ionen naar binnen tegen hun concentratiegradi\u00ebnt in."
-        },
-        {
-            "type": "question",
-            "question": "Hoe wordt de ionenbalans in een neuron hersteld en onderhouden?",
-            "answer": "De ionenbalans wordt hersteld en onderhouden door actief transport (1 punt), specifiek de werking van de Natrium-Kalium pomp die Na+ naar buiten en K+ naar binnen verplaatst (1 punt)."
-        },
-        {
-            "type": "info",
-            "title": "Voltage-gated natriumkanalen",
-            "text": "Voltage-gated natriumkanalen zijn specifieke kanalen in de celmembranen die reageren op veranderingen in de membraanpotentiaal. Deze kanalen zijn essentieel voor het genereren en doorgeven van elektrische signalen in zenuwcellen."
-        },
-        {
-            "type": "info",
             "title": "Structuur en membraanpotentiaal",
-            "text": "De structuur van een voltage-gated natriumkanaal is zo dat de buitenkant positief en de binnenkant negatief geladen is wanneer het kanaal gesloten is. Veranderingen in de membraanpotentiaal kunnen ervoor zorgen dat deze kanalen openen, waardoor natriumionen de cel binnenstromen.",
+            "text": "De structuur van een voltage-gated natriumkanaal is zo dat de buitenkant positief en de binnenkant negatief geladen is wanneer het kanaal gesloten is. **Veranderingen in de membraanpotentiaal** kunnen ervoor zorgen dat deze kanalen openen, waardoor **natriumionen de cel binnenstromen**. Deze instroom van natriumionen is **nodig voor het genereren van actiepotentialen** in zenuwcellen.",
             "image": "voltage-gated_natrium_kanaal.png"
         },
         {
@@ -277,20 +251,14 @@
         },
         {
             "type": "info",
-            "title": "Drie stadia van natriumkanalen",
-            "text": "Natriumkanalen kunnen zich in drie verschillende stadia bevinden: gesloten, open, en ge\u00EFnactiveerd. Tijdens de refractaire periode na een actiepotentiaal blijven de kanalen ge\u00EFnactiveerd, wat verdere actiepotentialen tijdelijk voorkomt.",
-            "image": "voltage-gated_natrium_kanaal_stadia.png"
-        },
-        {
-            "type": "info",
             "title": "Actiepotentiaal",
-            "text": "Een actiepotentiaal is een tijdelijke omkering van het elektrische membraanpotentiaal in een neuron. Het proces begint met de depolarisatie van de celmembraan, waarbij natriumionen naar binnen stromen en kaliumionen naar buiten. Deze ionenbeweging is mogelijk door de sequenti\u00eble opening en sluiting van natrium- en kaliumkanalen. De actiepotentiaal volgt het alles-of-niets-principe, wat betekent dat het signaal altijd een uniforme sterkte en vorm heeft, ongeacht de stimulatie-intensiteit. Dit mechanisme is essentieel voor de signaalvoortplanting langs het neuron, waardoor informatie snel door het zenuwstelsel kan worden overgedragen.",
-            "image": "membraanpotentiaal.png"
+            "text": "Een neuron in rust heeft een **negatieve membraanpotentiaal**, maar een **elektrische stimulus kan leiden tot de activatie** van voltage-gated natriumkanalen, waardoor natriumionen (Na+) naar binnen stromen en **depolarisatie** veroorzaken. Hierdoor keert membraanpotentiaal tijdelijk om en wordt de binnenkant van de cel positief ten opzichte van de buitenkant. Vervolgens worden de natriumkanalen ge\u00EFnactiveerd en sluiten de natriumkanalen, terwijl de **kaliumkanalen openen** en kaliumionen (K+) naar buiten stromen, waardoor de cel weer **hyperpolariseert** en de rustpotentiaal herstelt.",
+            "image": "actiepotentiaal_blauw.png"
         },
         {
             "type": "question",
             "question": "Hoe ontstaat een actiepotentiaal in een neuron?",
-            "answer": "Een actiepotentiaal ontstaat door de werking van natrium- en kaliumkanalen (1 punt), waarbij natriumionen de cel in stromen en kaliumionen de cel uit stromen, wat resulteert in een tijdelijke omkering van het elektrische membraanpotentiaal (1 punt)."
+            "answer": "Een actiepotentiaal ontstaat door de werking van natrium- en kaliumkanalen (1 punt), waarbij natriumionen de cel in stromen en kaliumionen de cel uit stromen (1 punt), wat resulteert in een tijdelijke omkering van het elektrische membraanpotentiaal."
         },
         {
             "type": "question",
@@ -304,20 +272,9 @@
             "image": "ionenuitwisseling.png"
         },
         {
-            "type": "info",
-            "title": "Rustpotentiaal en depolarisatie",
-            "text": "De rustpotentiaal is de spanning over het celmembraan van een neuron in rust. Een elektrische stimulus kan leiden tot de activatie van natriumkanalen, waardoor natriumionen (Na+) naar binnen stromen en depolarisatie veroorzaken, het begin van een actiepotentiaal.",
-            "image": "actiepotentiaal_blauw.png"
-        },
-        {
             "type": "question",
             "question": "Wat is de rol van de natriumkalium-pomp in het behouden van de rustpotentiaal?",
             "answer": "De natriumkalium pomp helpt de rustpotentiaal te behouden door drie natriumionen (Na+) naar buiten te pompen en twee kaliumionen (K+) naar binnen te halen voor elke ATP die wordt gebruikt (1 punt), wat helpt de elektrochemische gradi\u00EBnt in stand te houden (1 punt)."
-        },
-        {
-            "type": "question",
-            "question": "Hoe draagt de activatie van natriumkanalen bij aan depolarisatie?",
-            "answer": "De activatie van natriumkanalen laat natriumionen (Na+) de cel binnenstromen (1 punt), wat resulteert in een vermindering van de negatieve lading binnen de cel en leidt tot depolarisatie (1 punt), het begin van een actiepotentiaal."
         },
         {
             "type": "info",
@@ -326,9 +283,15 @@
             "image": "unidirectionele_propagatie_actiepotentiaal.png"
         },
         {
+            "type": "info",
+            "title": "Drie stadia van natriumkanalen",
+            "text": "Dat komt doordat natriumkanalen zich in drie verschillende stadia kunnen bevinden: **gesloten, open, en ge\u00EFnactiveerd**. **Tijdens de refractaire periode na een actiepotentiaal zijn de kanalen ge\u00EFnactiveerd**, wat verdere actiepotentialen tijdelijk voorkomt.",
+            "image": "voltage-gated_natrium_kanaal_stadia.png"
+        },
+        {
             "type": "question",
             "question": "Hoe draagt de refractaire periode van Natrium kanalen bij aan de unidirectionele voortplanting van actiepotentialen?",
-            "answer": "De refractaire periode van Natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in \u00e9\u00e9n richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om Natrium door te laten na activatie (1 punt)."
+            "answer": "De refractaire periode van natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in \u00E9\u00E9n richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om natrium door te laten na activatie (1 punt)."
         },
         {
             "type": "info",
