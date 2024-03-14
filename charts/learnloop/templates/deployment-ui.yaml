@@ -21,6 +21,8 @@ spec:
           ports:
             - containerPort: 80
           env:
+          - name: AZURE_OPENAI_ENDPOINT
+            value: "{{ .Values.azureOpenaiEndpoint }}"
           - name: SURFCONEXT_CLIENT_ID
             value: "{{ .Values.surfconextClientId }}"
           - name: LEARNLOOP_VERSION
