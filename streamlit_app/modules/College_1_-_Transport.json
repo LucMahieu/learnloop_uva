@@ -21,7 +21,7 @@
         {
             "type": "question",
             "question": "Hoe functioneren ionenkanalen in celmembranen?",
-            "answer": "Ionenkanalen functioneren als poorten voor één type ionen (1 punt) die zo het membraan kunnen passeren (1 punt) en kunnen ofwel continu geopend zijn of gereguleerd worden door diverse signalen (1 punt)."
+            "answer": "Ionenkanalen functioneren als poorten voor \u00e9\u00e9n type ionen (1 punt) die zo het membraan kunnen passeren (1 punt) en kunnen ofwel continu geopend zijn of gereguleerd worden door diverse signalen (1 punt)."
         },
         {
             "type": "info",
@@ -176,17 +176,17 @@
         {
             "type": "question",
             "question": "Wat is een uniport transporteiwit?",
-            "answer": "Een uniport transporteiwit is een type transporteiwit dat één specifiek molecuul in één richting over een celmembraan transporteert (1 punt)."
+            "answer": "Een uniport transporteiwit is een type transporteiwit dat \u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert (1 punt)."
         },
         {
             "type": "question",
             "question": "Wat is een uniport transporteiwit? Een uniport is een type transporteiwit dat ...",
             "answers": {
-                "correct_answer": "één specifiek molecuul in één richting over een celmembraan transporteert",
+                "correct_answer": "\u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert",
                 "wrong_answers": [
                     "twee verschillende moleculen in dezelfde richting transporteert",
                     "twee verschillende moleculen in tegengestelde richtingen transporteert",
-                    "twee specifieke moleculen in één richting over een celmembraan transporteert"
+                    "twee specifieke moleculen in \u00e9\u00e9n richting over een celmembraan transporteert"
                 ]
             }
         },
@@ -196,9 +196,9 @@
             "answers": {
                 "correct_answer": "twee verschillende moleculen in dezelfde richting transporteert",
                 "wrong_answers": [
-                    "één specifiek molecuul in één richting over een celmembraan transporteert",
+                    "\u00e9\u00e9n specifiek molecuul in \u00e9\u00e9n richting over een celmembraan transporteert",
                     "twee verschillende moleculen in tegengestelde richtingen transporteert",
-                    "twee specifieke moleculen in één richting over een celmembraan transporteert"
+                    "twee specifieke moleculen in \u00e9\u00e9n richting over een celmembraan transporteert"
                 ]
             }
         },
@@ -247,7 +247,7 @@
         {
             "type": "question",
             "question": "Wat is de functie van het selectiviteitsfilter in ionkanalen?",
-            "answer": "Het selectiviteitsfilter in ionkanalen zorgt ervoor dat één specifiek ion kan passeren (1 punt)."
+            "answer": "Het selectiviteitsfilter in ionkanalen zorgt ervoor dat \u00e9\u00e9n specifiek ion kan passeren (1 punt)."
         },
         {
             "type": "info",
@@ -328,7 +328,7 @@
         {
             "type": "question",
             "question": "Hoe draagt de refractaire periode van Natrium kanalen bij aan de unidirectionele voortplanting van actiepotentialen?",
-            "answer": "De refractaire periode van Natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in één richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om Natrium door te laten na activatie (1 punt)."
+            "answer": "De refractaire periode van Natrium kanalen zorgt ervoor dat actiepotentialen zich slechts in \u00e9\u00e9n richting kunnen voortplanten doordat de kanalen tijdelijk niet in staat is om Natrium door te laten na activatie (1 punt)."
         },
         {
             "type": "info",

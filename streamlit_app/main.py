@@ -4,7 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 import json
-from openai import OpenAI
+from openai import AzureOpenAI
 from pymongo import MongoClient
 import certifi
 import base64
@@ -26,8 +26,11 @@ else:
     MONGO_URI = os.getenv('MONGO_DB')
     db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
-OPENAI_API_KEY = os.getenv('OPENAI_API')
-openai_client = OpenAI(api_key=OPENAI_API_KEY)
+openai_client = AzureOpenAI(
+   api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
+   api_version="2024-03-01-preview",
+   azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+)
 
 db = db_client.LearnLoop
 
@@ -73,13 +76,14 @@ def evaluate_answer():
         with open("./direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
+
         response = openai_client.chat.completions.create(
-            model="gpt-4-1106-preview",
+            model="learnloop",
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=300
+            max_tokens=500
         )
 
         split_response = response.choices[0].message.content.split(";;")
@@ -195,7 +199,7 @@ def render_SR_nav_buttons():
     with col_prev:
         st.button('Vorige', use_container_width=True, on_click=lambda: change_segment_index(-1))
     with col1:
-        st.button('Herhaal snel ↩️', use_container_width=True, on_click=re_insert_question, args=(10,))
+        st.button('Herhaal snel ↩️', use_container_width=True, on_click=re_insert_question, args=(5,))
     with col2:
         st.button('Herhaal later 🕒', use_container_width=True, on_click=re_insert_question, args=(15,))
     with col3:
@@ -323,9 +327,7 @@ def update_ordered_segment_sequence(ordered_segment_sequence):
 def add_to_practice_phase():
     """
     Adds the current segment to the practice phase in the database if the score is lower than 100.
-
     """
-    
     if score_to_percentage() < 100:
         fetch_ordered_segment_sequence()
         # Store in variable for clarity
@@ -399,19 +401,42 @@ def render_final_page():
     with mid_col:
         if st.session_state.selected_phase == 'practice':
             st.markdown('<p style="font-size: 30px;"><strong>Einde van de oefenfase 📝</strong></p>', unsafe_allow_html=True)
-            st.write("En? Ging het goed? Als je hebt gevoel hebt dat je nog wat meer wilt oefenen met de vragen kan je terug naar het begin van de oefenfase.")
+            st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van de oefenfase.")
         else:
             st.markdown('<p style="font-size: 30px;"><strong>Einde van de leerfase 📖</strong></p>', unsafe_allow_html=True)
-            st.write("Lekker bezig! Als je nog een keer alle vragen en infostukjes wilt doorlopen kan je terug naar het begin van de leerfase. Als je verder wilt naar de oefenfase waarin je kan gaan oefenen met de vragen waarmee je moeite had, kan je deze selecteren aan de linkerkant van het scherm.")
+            st.write("Lekker bezig! Als je nog een keer alle vragen en infostukjes wilt doorlopen, kun je terug naar het begin van de leerfase. Als je verder wilt naar de **oefenfase** waarin je kan gaan oefenen met de vragen waarmee je moeite had, kan je deze selecteren aan de linkerkant van het scherm.")
 
         st.button("Terug naar begin", on_click=reset_segment_index)
-    # if st.session_state.selected_phase == 'learning':
-    #     st.write("Je hebt de leerfase afgerond! Je kunt nu naar de oefenfase om de stof verder te oefenen met spaced repetition.")
-    # else:
-    #     st.write("Je hebt de oefenfase afgerond!")
     
     # otherwise the progress bar and everything will get rendered
     exit()
+
+
+def set_warned_true():
+    """Callback function for a button that turns of the LLM warning message."""
+    st.session_state.warned = True
+
+
+def reset_progress():
+    """Resets the progress of the user in the current phase to the database."""
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
+    )
+    # initialise_learning_page()
+
+
+def render_warning():
+    st.markdown("""
+        <div style="color: #987c37; background-color: #fffced; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+            Door zometeen op <strong>'controleer'</strong> te klikken, laat je het antwoord dat je ingevuld hebt controleren door een large language model (LLM). Weet je zeker dat je door wil gaan?
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    st.button("Nee", on_click=reset_progress, use_container_width=True)
+    st.button("Ja", use_container_width=True, on_click=set_warned_true)
+    st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
 
 
 def render_learning_page():
@@ -445,10 +470,13 @@ def render_learning_page():
                 render_question()
 
                 # Spinner that displays during evaluating answer
-                with st.spinner("Een groot taalmodel (AI) checkt je antwoord met het antwoordmodel. Check zelf het antwoordmodel als je twijfelt."):
+                with st.spinner(f"Een large language model (LLM) checkt je antwoord met het antwoordmodel. \
+                                Check zelf het antwoordmodel als je twijfelt. \n\n Leer meer over het gebruik \
+                                van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
+                                het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
                     evaluate_answer()
-                
+                                
                 render_feedback()
                 add_to_practice_phase()
                 render_explanation()
@@ -459,13 +487,20 @@ def render_learning_page():
                     render_image(image_path)
                 
                 render_question()
-                render_answerbox()
+
+                if st.session_state.warned == False:
+                    render_warning()
+                else:
+                    render_answerbox()
+                
+                # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
                 if st.session_state.student_answer:
                     set_submitted_true()
                     st.rerun()
-                render_check_and_nav_buttons()
-
-        # st.button("Rapporteer fout", on_click=flag_error)
+                
+                if st.session_state.warned == True:
+                    render_check_and_nav_buttons()
+            
         
         # Multiple choice question
         if (st.session_state.segment_content['type'] == 'question' and
@@ -501,10 +536,6 @@ def render_learning_page():
 
             #render the nav buttons
             render_navigation_buttons()
-
-
-def flag_error():
-    st.success("FUNCTIE WERKT NOG NIET | Fout gerapporteerd, bedankt!")
 
 
 def set_submitted_answer(answer):
@@ -579,25 +610,32 @@ def render_practice_page():
             render_info()
             render_navigation_buttons()
 
-        # open question
+        # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
         'answer' in st.session_state.segment_content):
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
-                with st.spinner('Evaluating your answer 🔄'):
+                with st.spinner(f"Een large language model (LLM) checkt je antwoord met het antwoordmodel. \
+                                Check zelf het antwoordmodel als je twijfelt. \n\n Leer meer over het gebruik \
+                                van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
+                                het kopje 'Extra info' in de sidebar."):
+                    render_student_answer()
                     evaluate_answer()
-                render_student_answer()
+                
                 render_feedback()
                 render_explanation()
                 render_SR_nav_buttons()
             else:
-                render_answerbox()
-                 # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
-                if st.session_state.student_answer:
-                    set_submitted_true()
-                    st.rerun()
-                render_check_and_nav_buttons()
+                if st.session_state.warned == False:
+                    render_warning()
+                else:
+                    render_answerbox()
+                    # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
+                    if st.session_state.student_answer:
+                        set_submitted_true()
+                        st.rerun()
+                    render_check_and_nav_buttons()
 
         # MC Question
         if (st.session_state.segment_content['type'] == 'question' and
@@ -628,10 +666,6 @@ def render_practice_page():
             elif st.session_state.submitted:
                 st.error("❌ Incorrect. Try again.")
 
-            # If no answer has been submitted, display a message
-            if st.session_state.submitted == False:
-                st.write("Please select an answer above.")
-
             #render the nav buttons
             render_navigation_buttons()
 
@@ -658,6 +692,12 @@ def select_page_type():
 
 
 def initialise_session_states():
+    if 'info_page' not in st.session_state:
+        st.session_state.info_page = False
+
+    if 'warned' not in st.session_state:
+        st.session_state.warned = None
+
     if 'feedback_submitted' not in st.session_state:
         st.session_state.feedback_submitted = False
 
@@ -753,9 +793,9 @@ def render_feedback_form():
     """Feedback form in the sidebar."""
     st.write("\n\n")
     st.write("\n\n")
-    st.sidebar.subheader("Denk je mee?")    
+    st.sidebar.subheader("Denk je mee? (anoniem)")  
     st.sidebar.text_area(
-        label='Wat vind je handig? Wat kan beter? etc.',
+        label='Wat vind je handig? Wat kan beter? etc. Voer geen persoonlijke of herkenbare gegevens in.',
         # label_visibility="hidden",
         # placeholder="Wat vind je handig? Wat kan beter? etc.",
         key='feedback_box',
@@ -768,6 +808,21 @@ def render_feedback_form():
         st.balloons()
         time.sleep(2)
         st.session_state.feedback_submitted = False
+        st.rerun()
+
+
+def render_info_page():
+    """Renders the info page that contains the explanation of the learning and practice phases."""
+    with open("./uitleg_llms.txt", "r") as f:
+        info_page = f.read()
+    with mid_col:
+        st.markdown(info_page, unsafe_allow_html=True)
+    return
+
+
+def set_info_page_true():
+    """Sets the info page to true."""
+    st.session_state.info_page = True
 
 
 def render_sidebar():
@@ -787,11 +842,16 @@ def render_sidebar():
                 if st.button('Leerfase 📖', key=module + ' learning'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'learning'
+                    st.session_state.info_page = False
                 if st.button('Oefenfase 📝', key=module + ' practice'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'practice'
+                    st.session_state.info_page = False
 
         render_feedback_form()
+
+        st.sidebar.subheader("Extra info")
+        st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
 
 
 def initialise_database():
@@ -802,7 +862,8 @@ def initialise_database():
         db.users.update_one(
             {"username": st.session_state.username},
             {"$set":
-             {f"progress.{module}": {
+             {"warned": False,
+              f"progress.{module}": {
                     "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
                     "practice": {"segment_index": -1,
                                  "ordered_segment_sequence": [],
@@ -829,7 +890,8 @@ def determine_if_to_initialise_database():
             st.session_state.reset_db = False
             initialise_database()
             return
-            
+
+
     user = db.users.find_one({"username": st.session_state.username})
     
     if "progress" not in user:
@@ -880,12 +942,20 @@ def render_login_page():
         st.markdown(html_content, unsafe_allow_html=True)
 
 
+def fetch_if_warned():
+    """Fetches from database if the user has been warned about LLM."""
+    user_doc = db.users.find_one({"username": st.session_state.username})
+    return user_doc["warned"]
+
+
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
     
     initialise_session_states()
+
+    st.session_state.username = "ernie2" #TODO: remove when testing is done
 
     if not running_on_premise:
         st.session_state.username = "flower2960"
@@ -894,12 +964,16 @@ if __name__ == "__main__":
         st.session_state.nonce = st.query_params.get('nonce', None)
         st.query_params.pop('nonce', None) # Remove the nonce from the url
 
-    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
-        render_login_page()
-    elif st.session_state.username is None:
-        fetch_username()
-        invalidate_nonce()
-        st.rerun() # Needed, else it seems to get stuck here
+    # TODO: add back in when testing is done
+    # if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
+    #     render_login_page()
+    # elif st.session_state.username is None:
+    #     fetch_username()
+    #     invalidate_nonce()
+    #     st.rerun() # Needed, else it seems to get stuck here
+        
+    if st.session_state.username is None: # TODO: remove when testing is done
+        print("No username")
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
@@ -907,9 +981,12 @@ if __name__ == "__main__":
         
         render_sidebar()
 
-        if st.session_state.selected_module is None:         
+        if st.session_state.info_page:
+            render_info_page()
+            exit()
+        elif st.session_state.selected_module is None:         
             # Automatically start the first module if no module is selected           
-            st.session_state.selected_module = st.session_state.modules[0] # TODO: this should start at the module where the student left off instead of the first module
+            st.session_state.selected_module = st.session_state.modules[0]
             st.session_state.selected_phase = 'learning'
             
             # Rerun to make sure the page is displayed directly after start button is clicked
@@ -917,5 +994,8 @@ if __name__ == "__main__":
         else:
             # Only (re-)initialise if user is new or when testing is on
             determine_if_to_initialise_database()
+
+            if st.session_state.warned == None:
+                st.session_state.warned = fetch_if_warned()
 
             select_page_type()
