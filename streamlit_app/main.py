@@ -289,7 +289,7 @@ def render_info():
     """Renders the info segment with title and text."""
     # if the image directory is present in the JSON for this segment, then display the image
     image_path = fetch_image_path()
-    if image_path:
+    if image_path and image_path != None:
         render_image(image_path)
 
     st.subheader(st.session_state.segment_content['title'])
@@ -468,7 +468,7 @@ def render_learning_page():
 
                 # Render image if present in the feedback
                 image_path = fetch_image_path()
-                if image_path:
+                if image_path and image_path != None:
                     render_image(image_path)
 
                 render_question()
@@ -487,7 +487,7 @@ def render_learning_page():
                 render_navigation_buttons()
             else:
                 image_path = fetch_image_path()
-                if image_path:
+                if image_path and image_path != None:
                     render_image(image_path)
                 
                 render_question()
