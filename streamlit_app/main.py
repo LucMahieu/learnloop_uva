@@ -14,7 +14,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 load_dotenv()
 
@@ -897,8 +897,8 @@ def determine_if_to_initialise_database():
     user = db.users.find_one({"username": st.session_state.username})
     
     if "progress" not in user:
-            initialise_database()
-            return
+        initialise_database()
+        return
     
     for module in st.session_state.modules:
         if module not in user["progress"]:
