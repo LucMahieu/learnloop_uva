@@ -4,13 +4,7 @@
         {
             "type": "info",
             "title": "Vesicle Transport en Structuur",
-            "text": "In het cellulaire transportproces zijn vesikels kleine blaasjes die in verschillende categorieën zijn onderverdeeld, elk met specifieke rollen. De algemene structuur van een vesikel bevat diverse eiwitten die essentieel zijn voor hun functie. Een voorbeeld van een specifieke categorie vesikels zijn AR-vesikels, die de Golgi verlaten en betrokken zijn bij het verder transporteren van moleculen.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat zijn vesikels en wat is hun rol in het transportproces?",
-            "answer": "Vesikels zijn kleine blaasjes die in categorieën zijn onderverdeeld, elk met specifieke rollen (1 punt) in het cellulaire transportproces. Ze bevatten eiwitten (1 punt) die nodig zijn voor hun functie.",
+            "text": "In het cellulaire transportproces zijn vesikels kleine blaasjes die in verschillende categorie\u00EBn zijn onderverdeeld, elk met specifieke rollen. Een voorbeeld van een specifieke categorie vesikels zijn AR-vesikels, die de Golgi verlaten en betrokken zijn bij het verder transporteren van moleculen.",
             "image": null
         },
         {
@@ -22,31 +16,31 @@
         {
             "type": "info",
             "title": "Endocytose",
-            "text": "Endocytose is een proces waarbij cellen materialen opnemen door kleine delen van hun celmembraan naar binnen te vouwen en af te snoeren, wat resulteert in de vorming van een endosoom. Vervolgens kunnen deze endosomen ofwel naar andere delen van de cel worden getransporteerd, zoals de Golgi-apparatuur, of ze kunnen worden gerecycled en terug naar het celmembraan worden gestuurd.",
+            "text": "Endocytose is een proces waarbij cellen materialen opnemen door kleine delen van hun celmembraan naar binnen te vouwen en af te snoeren, wat resulteert in de vorming van een endosoom. Vervolgens kunnen deze endosomen ofwel naar andere delen van de cel worden getransporteerd, zoals het Golgi-apparaat, of ze kunnen worden gerecycled en terug naar het celmembraan worden gestuurd.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is endocytose en waar gaan endosomen typisch naartoe na hun vorming?",
-            "answer": "Endocytose is het proces waarbij cellen materialen opnemen in endosomen (1 punt), die vervolgens naar de Golgi-apparatuur gaan of terug naar het celmembraan worden gestuurd (1 punt).",
+            "answer": "Endocytose is het proces waarbij cellen materialen opnemen in endosomen (1 punt), die vervolgens naar het Golgi-apparaat gaan of terug naar het celmembraan worden gestuurd (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Cytoskelet en Vesicle Transport",
-            "text": "Het cytoskelet is een netwerk van eiwitvezels in de cel dat structurele ondersteuning biedt. Het is ook van cruciaal belang voor het transport van vesikels binnen de cel. Door interactie met motorproteïnen kunnen vesikels langs de vezels van het cytoskelet naar hun bestemming worden verplaatst.",
+            "text": "Het cytoskelet is een netwerk van eiwitvezels in de cel dat structurele ondersteuning biedt en betrokken is bij het transport van vesikels binnen de cel. Door interactie met motorprote\u00EFnen kunnen vesikels langs de vezels van het cytoskelet naar hun bestemming worden verplaatst.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is de rol van het cytoskelet in het vesikel transportproces?",
-            "answer": "Het cytoskelet biedt een route voor vesikels om met behulp van motorproteïnen naar hun bestemming binnen de cel te worden getransporteerd (1 punt).",
+            "answer": "Het cytoskelet biedt een route voor vesikels om met behulp van motorprote\u00EFnen naar hun bestemming binnen de cel te worden getransporteerd (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Membraanafsnoering",
-            "text": "Membraanafsnoering is een essentieel onderdeel van het vesikel transportproces, waarbij een deel van het celmembraan zich afsnoert om een vesikel te vormen. Dit vereist de betrokkenheid van specifieke eiwitten die de kromming van het membraan induceren en helpen bij de uiteindelijke afsnoering.",
+            "text": "Het vesikel transportproces begint bij membraanafsnoering, waarbij een deel van het celmembraan zich afsnoert om een vesikel te vormen. Dit vereist de betrokkenheid van specifieke eiwitten die de kromming van het membraan induceren en helpen bij de uiteindelijke afsnoering.",
             "image": null
         },
         {
@@ -58,7 +52,7 @@
         {
             "type": "info",
             "title": "SAR-1 en vesikelvorming",
-            "text": "Het SAR-1-eiwit is essentieel voor het initiëren van de vorming van vesikels in het endoplasmatisch reticulum (ER). SAR-1 zorgt voor de rekrutering van andere eiwitten die nodig zijn om een vesikel af te snoeren van het ER-membraan.",
+            "text": "Het SAR-1-eiwit is betrokken bij het initi\u00EBren van de vorming van vesikels in het endoplasmatisch reticulum (ER). SAR-1 zorgt voor de rekrutering van andere eiwitten die nodig zijn om een vesikel af te snoeren van het ER-membraan.",
             "image": null
         },
         {
@@ -70,42 +64,30 @@
         {
             "type": "info",
             "title": "COP2-vesikels en hun transportroute",
-            "text": "De COP2-vesikels zijn betrokken bij het transporteren van materialen van het ER naar de Golgi-apparatus. Ze zijn een sleutelcomponent in de secretiecyclus van eiwitten en lipiden.",
+            "text": "De COP2-vesikels zijn betrokken bij het transporteren van materialen van het ER naar het Golgi-apparaat. Ze zijn een sleutelcomponent in de secretiecyclus van eiwitten en lipiden.",
             "image": null
         },
         {
             "type": "question",
             "question": "Waar zijn COP2-vesikels voor verantwoordelijk?",
-            "answer": "COP2-vesikels zijn verantwoordelijk voor het transporteren van materialen van het ER naar de Golgi-apparatus (1 punt).",
+            "answer": "COP2-vesikels zijn verantwoordelijk voor het transporteren van materialen van het ER naar het Golgi-apparaat (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "COP1-vesikels en hun functies",
-            "text": "De COP1-vesikels fungeren in het transport tussen de Golgi-apparatus en het ER, en worden ook gebruikt in de constitutieve secretieroute, die betrokken is bij het continu transporteren van stoffen naar de celmembraan.",
+            "text": "De COP1-vesikels fungeren in het transport tussen het Golgi-apparaat en het ER, en worden ook gebruikt in de standaard secretieroute, die betrokken is bij het continu transporteren van stoffen naar de celmembraan.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is de functie van COP1-vesikels?",
-            "answer": "COP1-vesikels transporteren stoffen tussen het Golgi-apparatus en het ER (1 punt) en zijn betrokken bij de constitutieve secretieroute (1 punt).",
+            "answer": "COP1-vesikels transporteren stoffen tussen het Golgi-apparatus en het ER (1 punt) en zijn betrokken bij de standaard secretieroute (1 punt).",
             "image": null
         },
         {
             "type": "info",
-            "title": "GTP-bindend eiwit en vesikelvorming",
-            "text": "Een GTP-bindend eiwit, zoals SAR-1, is cruciaal voor het starten van de vorming van vesikels. Het binden aan GTP activeert het eiwit en initieert de assemblage van coateiwitten, nodig voor de vorming en selectie van vesikels.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Hoe draagt een GTP-bindend eiwit bij aan vesikelvorming?",
-            "answer": "Een GTP-bindend eiwit activeert de assemblage van coateiwitten die nodig zijn voor vesikelvorming (1 punt) na het binden aan GTP (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Energiebehoefte bij Vesikeltransport",
+            "title": "Energiebehoefte bij vesikeltransport",
             "text": "Voor het vesikeltransport zijn energierijke moleculen nodig. GTP (guanosinetrifosfaat) en ATP (adenosinetrifosfaat) zijn twee nucleotiden die de benodigde energie leveren voor verschillende processen, waaronder het afsnoeren van vesikels van het membraan en hun beweging door de cel.",
             "image": null
         },
@@ -117,57 +99,49 @@
         },
         {
             "type": "info",
-            "title": "COP2-vesikels Kenmerken",
-            "text": "COP2-vesikels zijn verantwoordelijk voor het transport van eiwitten van het endoplasmatisch reticulum (ER) naar de Golgi-apparatus. Deze vesikels zijn dichter en groter dan sommige andere typen vesikels, wat bijdraagt aan hun functionaliteit in het transportproces.",
+            "title": "GTP-bindend eiwit en vesikelvorming",
+            "text": "Een GTP-bindend eiwit, zoals SAR-1, is cruciaal voor het starten van de vorming van vesikels. Het binden aan GTP activeert het eiwit en initieert de assemblage van coateiwitten, nodig voor de vorming en selectie van vesikels.",
             "image": null
         },
         {
             "type": "question",
-
-
-            "question": "Wat zijn de fysieke kenmerken van COP2-vesikels?",
-            "answer": "COP2-vesikels zijn dichter en groter (1 punt).",
+            "question": "Hoe draagt een GTP-bindend eiwit bij aan vesikelvorming?",
+            "answer": "Een GTP-bindend eiwit activeert de assemblage van coateiwitten (1 punt) die nodig zijn voor vesikelvorming na het binden aan GTP (1 punt).",
             "image": null
         },
         {
             "type": "info",
-            "title": "Clathrin-coated Vesikels Structuur",
-            "text": "Clathrin-coated vesikels spelen een cruciale rol in zowel endocytose als het sorteren van eiwitten. Ze zijn herkenbaar aan hun holle structuur en het oppervlak dat lijkt op golfballen dankzij de clathrin-coating.",
+            "title": "COP2-vesikels kenmerken",
+            "text": "COP2-vesikels zijn verantwoordelijk voor het transport van eiwitten van het endoplasmatisch reticulum (ER) naar het Golgi-apparaat. Deze vesikels zijn dichter en groter dan sommige andere typen vesikels, wat bijdraagt aan hun functionaliteit in het transportproces doordat ze een grote lading kunnen dragen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de fysieke kenmerken van COP2-vesikels?",
+            "answer": "COP2-vesikels zijn dichter en groter dan sommige andere typen vesikels (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Clathrin-coated vesikels structuur",
+            "text": "Clathrin-coated vesikels zijn betrokken bij zowel endocytose als het sorteren van eiwitten. Hun kenmerkende 'golfbal' uiterlijk komt door de clathrin-coating, welke helpt bij het vormen van de vesikel en de selectie van lading tijdens het endocytoseproces.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Met welke processen zijn clathrin-coated vesikels geassocieerd?",
+            "answer": "Clathrin-coated vesikels zijn geassocieerd met endosomen en het endocytoseproces (1 punt) en met het sorteren van eiwitten (1 punt).",
             "image": null
         },
         {
             "type": "question",
             "question": "Hoe zien clathrin-coated vesikels eruit en wat is hun structuur?",
-            "answer": "Clathrin-coated vesikels zijn hol en hebben een oppervlak dat lijkt op golfballen (1 punt).",
+            "answer": "Clathrin-coated vesikels zijn hol en/of kooiachtige (1 punt) en hebben een oppervlak dat lijkt op die van een golfbal (1 punt).",
             "image": null
         },
         {
             "type": "info",
-            "title": "Vesikel Secretie",
-            "text": "Vesikel secretie is het proces waarbij COP1-vesikels inhoud transporteren van de Golgi naar het plasmamembraan. Deze vesikels zijn betrokken bij het selectief vervoeren van moleculen naar de juiste bestemming binnen de cel.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat is de rol van COP1-vesikels in vesikelsecretie?",
-            "answer": "COP1-vesikels zijn verantwoordelijk voor het transport van moleculen van de Golgi naar het plasmamembraan (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Clathrin-Coated Vesikels",
-            "text": "Clathrin-coated vesikels zijn speciale structuren die geassocieerd zijn met endosomen en het proces van endocytose. Hun kenmerkende 'golfbal' uiterlijk komt door de clathrin-coating, welke helpt bij het vormen van de vesikel en de selectie van lading tijdens het endocytoseproces.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Waarmee zijn clathrin-coated vesikels geassocieerd?",
-            "answer": "Clathrin-coated vesikels zijn geassocieerd met endosomen en het endocytoseproces (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Clathrin-Coating en Endocytose",
+            "title": "Clathrin-coating en endocytose",
             "text": "De clathrin-coating op vesikels speelt een cruciale rol bij het induceren van endocytose. Deze coating helpt bij het herkennen en selecteren van bepaalde moleculen voor opname en het vormen van de vesikel die deze moleculen de cel in zal brengen.",
             "image": null
         },
@@ -175,6 +149,18 @@
             "type": "question",
             "question": "Welke functie heeft de clathrin-coating bij vesikels?",
             "answer": "De clathrin-coating helpt bij het induceren van endocytose (1 punt) en selecteert specifieke moleculen voor transport in de cel (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vesikel secretie",
+            "text": "Vesikel secretie is het proces waarbij COP1-vesikels inhoud transporteren van de Golgi naar het plasmamembraan.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe verloopt vesikel secretie met COP1-vesikels?",
+            "answer": "COP1-vesikels transporteren inhoud van het Golgi naar het plasmamembraan (1 punt).",
             "image": null
         },
         {
@@ -204,19 +190,19 @@
         {
             "type": "info",
             "title": "RAB GTPases in vesikeltransport",
-            "text": "RAB GTPases zijn belangrijke eiwitten die betrokken zijn bij het initiëren van vesikelvorming en het adresseren van vesikels naar hun juiste locatie. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
+            "text": "RAB GTPases zijn belangrijke eiwitten die betrokken zijn bij het initi\u00EBren van vesikelvorming en het adresseren van vesikels naar hun juiste locatie. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is de functie van RAB GTPases bij vesikeltransport?",
-            "answer": "RAB GTPases zijn betrokken bij het initiëren van vesikelvorming (1 punt) en het nauwkeurig adresseren van vesikels (1 punt) naar hun bestemming.",
+            "answer": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming (1 punt) en het nauwkeurig adresseren van vesikels (1 punt) naar hun bestemming.",
             "image": null
         },
         {
             "type": "info",
             "title": "Vesikeltargeting en RAB GTPases",
-            "text": "Het targetingproces van vesikels gebruikt RAB GTPases als een soort 'adreslabel' om te zorgen dat vesikels op de juiste locatie binnen de cel aankomen. Dit waarborgt de efficiënte en accurate levering van hun lading.",
+            "text": "Het targetingproces van vesikels gebruikt RAB GTPases als een soort 'adreslabel' om te zorgen dat vesikels op de juiste locatie binnen de cel aankomen. Dit waarborgt de effici\u00EBnte en accurate levering van hun lading.",
             "image": null
         },
         {
@@ -227,8 +213,8 @@
         },
         {
             "type": "info",
-            "title": "Vesikelfusie en Snare-complex",
-            "text": "Vesikelfusie is het proces waarbij vesikels samensmelten met membranen en hun inhoud vrijgeven. Dit proces is afhankelijk van het snare-complex, een groep eiwitten die betrokken zijn bij het nauwkeurig en efficiënt samensmelten van vesikels met hun doelmembranen.",
+            "title": "Vesikelfusie en snare-complex",
+            "text": "Vesikelfusie is het proces waarbij vesikels samensmelten met membranen en hun inhoud vrijgeven. Dit proces is afhankelijk van het snare-complex, een groep eiwitten die betrokken zijn bij het nauwkeurig en effici\u00EBnt samensmelten van vesikels met hun doelmembranen.",
             "image": null
         },
         {
@@ -257,7 +243,7 @@
         },
         {
             "type": "question",
-            "question": "Waarvoor zijn Syntaxin en SNAP25 nodig?",
+            "question": "Waarvoor zijn syntaxin en SNAP25 nodig?",
             "answer": "Syntaxin en SNAP25 zijn nodig voor de fusie van synaptische vesikels met de plasmamembraan van neuronen, wat de afgifte van neurotransmitters mogelijk maakt (1 punt).",
             "image": null
         },
@@ -335,7 +321,7 @@
         },
         {
             "type": "info",
-            "title": "ER en Golgi: Centra voor glycosylering",
+            "title": "ER en Golgi: centra voor glycosylering",
             "text": "Het endoplasmatisch reticulum (ER) en het Golgi-apparaat zijn twee belangrijke organellen in een cel waar de glycosylering van eiwitten plaatsvindt. In deze organellen worden suikermoleculen zoals N-glucosamine aan eiwitten toegevoegd, een proces essentieel voor een correcte eiwitvorming.",
             "image": null
         },
@@ -397,7 +383,7 @@
         },
         {
             "type": "info",
-            "title": "Endocytose: Opname van externe materialen",
+            "title": "Endocytose: opname van externe materialen",
             "text": "Endocytose is een cellulair proces waarbij de cel materialen opneemt van buiten de cel. Dit gebeurt door het invouwen van het celmembraan om een vesikel te vormen die de materialen bevat en deze vervolgens in de cel te brengen.",
             "image": null
         },
@@ -421,7 +407,7 @@
         },
         {
             "type": "info",
-            "title": "Neurotransmitter Secretie en Neuropeptiden",
+            "title": "Neurotransmitter secretie en neuropeptiden",
             "text": "Neuropeptiden zijn kleine eiwitten die tijdens het transport naar de synaps gematureerd worden. Deze rijping zorgt ervoor dat ze hun functie als neurotransmitters effectief kunnen vervullen.",
             "image": null
         },
@@ -433,7 +419,7 @@
         },
         {
             "type": "info",
-            "title": "Vesikelfusie met het Plasmamembraan",
+            "title": "Vesikelfusie met het plasmamembraan",
             "text": "Vesikels spelen een cruciale rol bij de secretie van neurotransmitters. Ze fuseren met het plasmamembraan van neuronen en geven zo de neurotransmitters vrij in de synaptische spleet.",
             "image": null
         },
