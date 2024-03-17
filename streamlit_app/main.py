@@ -281,7 +281,10 @@ def render_image(image_path):
 def fetch_image_path():
     if 'image' in st.session_state.segment_content:
         image_path = st.session_state.segment_content['image']
-        return f"./streamlit_app/images/{image_path}"
+        if image_path == None:
+            return None
+        else:
+            return f"./streamlit_app/images/{image_path}"
 
 
 def render_info():
