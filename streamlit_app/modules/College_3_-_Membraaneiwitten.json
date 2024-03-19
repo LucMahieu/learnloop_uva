@@ -53,13 +53,13 @@
         {
             "type": "info",
             "title": "Translocatiecomplex in het ER",
-            "text": "De mitochondria hebben translocatiecomplexen zoals TOM en TIM. Het ER heeft ook een eigen translocatiecomplex, het Sec61-complex, dat helpt bij het transport van eiwitten door het **ER-membraan**. Dit complex herkent eiwitten met een **signaalpeptide** en faciliteert hun doorgang door het membraan, waardoor ze hun juiste locatie in de cel kunnen bereiken.",
+            "text": "De mitochondria hebben translocatiecomplexen zoals TOM en TIM. Het ER heeft ook een eigen translocatiecomplex dat helpt bij het transport van eiwitten door het **ER-membraan**. Dit complex herkent eiwitten met een **signaalpeptide** en faciliteert hun doorgang door het membraan, waardoor ze hun juiste locatie in de cel kunnen bereiken.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Wat is de functie van het Sec61-complex?",
-            "answer": "Het is een translocatiecomplex dat het transport van eiwitten met een signaalpeptide over de ER-membraan faciliteert (1 punt).",
+            "question": "Wat is de functie van het ER translocatiecomplex?",
+            "answer": "Het is een translocatiecomplex dat het transport van eiwitten met een signaalpeptide (1 punt) over de ER-membraan faciliteert (1 punt).",
             "image": null
         },
         {
