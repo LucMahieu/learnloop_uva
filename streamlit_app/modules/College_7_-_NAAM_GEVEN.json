@@ -1,0 +1,317 @@
+{
+    "module_name": "celbio_7",
+    "segments": [
+        {
+            "type": "info",
+            "title": "GTP-eiwitten en het actine-cytoskelet",
+            "text": "GTP-eiwitten zoals **Rho, Rac, en Cdc42** zijn belangrijk voor het reguleren van veranderingen in het actine-cytoskelet van de cel. Deze eiwitten kunnen binden en hydrolyseren van guanosinetrifosfaat (GTP), wat nodig is voor het **aansturen van de dynamiek van het cytoskelet**.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Welke rol spelen GTP-eiwitten bij het actine-cytoskelet?",
+            "answer": "GTP-eiwitten zoals Rho, Rac, en Cdc42 zijn betrokken bij het reguleren van de dynamiek van het actine-cytoskelet (1 punt) door het binden en hydrolyseren van GTP (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Fosfolipase C-route",
+            "text": "De **fosfolipase C-route** is een van de drie hoofdsignaaltransductieroutes die betrokken zijn bij de overdracht van signalen in cellen. Deze route wordt geactiveerd door **G-prote\u00c3\u00afnegekoppelde receptoren**, wat leidt tot de activering van het enzym fosfolipase C. Eenmaal geactiveerd, zorgt fosfolipase C voor de omzetting van het membraanfosfolipide PIP2 in twee secundaire boodschappers: **inositoltrifosfaat (IP3)** en **diacylglycerol (DAG)**. IP3 zorgt voor de vrijgave van calciumionen uit het endoplasmatisch reticulum, terwijl DAG actief blijft in het membraan en **prote\u00c3\u00afnekinase C (PKC)** activeert.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van de fosfolipase C-route in signaaltransductie?",
+            "answer": "De fosfolipase C-route is betrokken bij de overdracht van signalen in cellen door de activering van fosfolipase C (1 punt) en de daaropvolgende productie van secundaire boodschappers IP3 en DAG (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Fosfolipase C en plasmamembraan",
+            "text": "Fosfolipase C is een **enzym** dat belangrijke veranderingen in het plasmamembraan aanbrengt en twee **signaalmoleculen** cre\u00c3\u00abert. Dit proces is cruciaal voor de voortgang van diverse signaaltransductieroutes binnen de cel.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Welke rol speelt fosfolipase C in het plasmamembraan?",
+            "answer": "Fosfolipase C is een enzym dat veranderingen in het plasmamembraan aanbrengt (1 punt) en twee signaalmoleculen produceert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Mechanisme van fosfolipase C",
+            "text": "Het mechanisme van fosfolipase C wordt ge\u00c3\u00afnitieerd door **G-prote\u00c3\u00afnegekoppelde receptoren** die het enzym activeren. Vervolgens zet fosfolipase C de fosfolipide **PIP2** om in twee secondaire boodschappers, **IP3** en **diacylglycerol (DAG)**. IP3 stimuleert de calciumvrijgave uit het endoplasmatisch reticulum door zich te binden aan calciumkanalen, terwijl DAG in het membraan blijft en **prote\u00c3\u00afnekinase C (PKC)** activeert.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe wordt fosfolipase C geactiveerd en wat zijn de resultaten van deze activatie?",
+            "answer": "Fosfolipase C wordt geactiveerd door G-prote\u00c3\u00afnegekoppelde receptoren (1 punt) en zet PIP2 om in IP3, dat calciumvrijgave induceert (1 punt), en DAG, dat PKC activeert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "G-prote\u00c3\u00afnegekoppelde Receptoren en Fosfolipase C",
+            "text": "G-prote\u00c3\u00afnegekoppelde receptoren zijn celoppervlakte moleculen die signalen van buiten de cel doorgeven naar binnen door het activeren van **enzymen** zoals fosfolipase C. Wanneer deze receptoren een signaal ontvangen, kunnen ze **fosfolipase C** activeren, wat leidt tot een kettingreactie van signaaltransductie binnen de cel.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van G-prote\u00c3\u00afnegekoppelde receptoren in relatie tot fosfolipase C?",
+            "answer": "G-prote\u00c3\u00afnegekoppelde receptoren activeren fosfolipase C (1 punt) wanneer ze signalen ontvangen (1 punt), wat signaaltransductie binnen de cel initieert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "PIP2 Omzetting door Fosfolipase C",
+            "text": "Fosfolipase C is een enzym dat verantwoordelijk is voor de omzetting van **PIP2** (fosfatidylinositol 4,5-bisfosfaat), een fosfolipide gelegen in het plasmamembraan, in twee belangrijke secondaire boodschappers: **IP3** (inositol 1,4,5-trifosfaat) en **diacylglycerol (DAG)**. IP3 speelt een rol in het vrijmaken van calcium uit het endoplasmatisch reticulum, terwijl DAG actief blijft binnen het membraan en betrokken is bij de activatie van prote\u00c3\u00afnekinase C.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de producten van PIP2 omzetting door fosfolipase C en wat zijn hun functies?",
+            "answer": "De omzetting van PIP2 door fosfolipase C resulteert in de productie van IP3 (1 punt) dat calciumkanalen in het endoplasmatisch reticulum activeert voor calciumvrijgave (1 punt), en DAG (1 punt) dat binnen het membraan blijft en prote\u00c3\u00afnekinase C (PKC) activeert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Inositoltrifosfaat (IP3)",
+            "text": "Inositoltrifosfaat, of IP3, is een **signaalmolecuul** dat ontstaat door de activiteit van het enzym fosfolipase C. IP3 speelt een cruciale rol in de calciumsignaaltransductie door te binden aan **calciumkanalen in het endoplasmatisch reticulum (ER)**, wat leidt tot de **vrijgave van calciumionen** in de cel.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt IP3 bij aan de vrijgave van calciumionen?",
+            "answer": "IP3 bindt aan calciumkanalen in het endoplasmatisch reticulum (1 punt), wat resulteert in de vrijgave van calciumionen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Diacylglycerol (DAG)",
+            "text": "Diacylglycerol, of DAG, is een ander **signaalmolecuul** geproduceerd door de werking van fosfolipase C. In tegenstelling tot IP3, blijft DAG in het **plasmamembraan** waar het een rol speelt in het activeren van **prote\u00c3\u00afnekinase C (PKC)**, een enzym dat betrokken is bij verschillende cellulaire functies.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van DAG in de cel?",
+            "answer": "DAG blijft in het plasmamembraan (1 punt) en activeert prote\u00c3\u00afnekinase C (PKC) (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Fosfolipase C en signaalmoleculen",
+            "text": "Fosfolipase C is een enzym dat betrokken is bij signaaltransductie in cellen. Het hydrolyseert **PIP2 (fosfatidylinositol-4,5-bisfosfaat)**, een signaalfosfolipide in de plasmamembraan, wat leidt tot de creatie van twee belangrijke secundaire signaalmoleculen die de celactiviteit be\u00efnvloeden.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van fosfolipase C in relatie tot PIP2?",
+            "answer": "Fosfolipase C hydrolyseert PIP2 (1 punt), wat resulteert in de vorming van secundaire signaalmoleculen die celactiviteit be\u00efnvloeden (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Productie van IP3 en diacylglycerol",
+            "text": "De productie van **IP3 (inositoltrifosfaat)** en **diacylglycerol (DAG)** is het resultaat van de enzymatische activiteit van **fosfolipase C**. Deze moleculen spelen een cruciale rol in de signaaltransductie binnen cellen. IP3 is betrokken bij het vrijmaken van calcium uit het endoplasmatisch reticulum, terwijl DAG in de membraan blijft om andere signaaleiwitten zoals prote\u00c3\u00afnekinase C te activeren.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is het resultaat van de enzymatische activiteit van fosfolipase C?",
+            "answer": "De enzymatische activiteit van fosfolipase C resulteert in de productie van IP3 (1 punt) en diacylglycerol (DAG) (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Isoformen van fosfolipase C",
+            "text": "Er bestaan verschillende **isoformen van fosfolipase C**, die elk door verschillende soorten receptoren kunnen worden geactiveerd. **PLC-beta** wordt bijvoorbeeld geactiveerd door **G-prote\u00c3\u00afnegekoppelde receptoren**, terwijl **PLC-gamma** geactiveerd wordt door **receptortyrosinekinases**. Deze isoformen stellen cellen in staat om op verschillende signalen te reageren door het actine-cytoskelet aan te passen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn isoformen van fosfolipase C en door welke receptoren worden ze geactiveerd?",
+            "answer": "Isoformen van fosfolipase C zijn verschillende vormen van hetzelfde enzym die door verschillende receptoren geactiveerd kunnen worden, zoals PLC-beta door G-prote\u00c3\u00afnegekoppelde receptoren (1 punt) en PLC-gamma door receptortyrosinekinases (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Isoformen van fosfolipase C",
+            "text": "Er bestaan **verschillende isoformen** van fosfolipase C die worden geactiveerd door **verschillende receptoren** in signaaltransductiepaden. Het type receptor dat een specifieke isoform activeert, bepaalt de respons in de cel.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn isoformen van fosfolipase C en hoe worden ze geactiveerd?",
+            "answer": "Isoformen van fosfolipase C zijn verschillende vormen van hetzelfde enzym die worden geactiveerd door verschillende receptoren (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "PLC-beta en G-prote\u00c3\u00afnegekoppelde receptoren",
+            "text": "Een specifieke isoform van fosfolipase C, genaamd **PLC-beta**, wordt geactiveerd door **G-prote\u00c3\u00afnegekoppelde receptoren**. De activatie van deze receptoren door signalen van buiten de cel leidt tot de activering van PLC-beta en de daaropvolgende signaaltransductieprocessen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Door welk type receptor wordt PLC-beta geactiveerd?",
+            "answer": "PLC-beta wordt geactiveerd door G-prote\u00c3\u00afnegekoppelde receptoren (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "PLC-gamma en Receptortyrosinekinases",
+            "text": "Fosfolipase C-gamma (**PLC-gamma**) is een isoform van fosfolipase C die specifiek wordt **geactiveerd door receptortyrosinekinases (RTKs)**. Deze enzymen zijn betrokken bij het doorgeven van signalen vanuit de externe omgeving van een cel naar de binnenkant. Wanneer een RTK een ligand bindt, ondergaat het een conformatieverandering die de **kinase activiteit** stimuleert, wat uiteindelijk leidt tot de activering van PLC-gamma.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe wordt PLC-gamma geactiveerd?",
+            "answer": "PLC-gamma wordt geactiveerd door de kinase activiteit van **receptortyrosinekinases (RTKs)** (1 punt) wanneer deze een ligand binden (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Biosensoren in Signaaltransductie",
+            "text": "In de studie van signaaltransductie worden **biosensoren** gebruikt om de activiteit van specifieke enzymen zoals fosfolipase C te detecteren. Biosensoren kunnen de aanwezigheid en **verdwijning van signaalmoleculen** zoals **PIP2** volgen, wat ons inzicht geeft in de activiteit van enzymen en de voortgang van signaaltransductieprocessen binnen de cel.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van biosensoren in signaaltransductie?",
+            "answer": "Biosensoren detecteren de activiteit van enzymen zoals fosfolipase C door het volgen van de aanwezigheid of verdwijning van signaalmoleculen zoals **PIP2** (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Biosensoren en hun rol in de signaaltransductie",
+            "text": "Biosensoren zijn gespecialiseerde moleculen die de activering van bepaalde processen in de cel kunnen detecteren. Ze spelen een sleutelrol in de signaaltransductie door bijvoorbeeld de **activatie van fosfolipase C** en het verdwijnen van **PIP2** in de cel te identificeren.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat detecteren biosensoren in de context van signaaltransductie?",
+            "answer": "Biosensoren detecteren de activatie van fosfolipase C (1 punt) en de verdwijning van PIP2 (1 punt) in de cel.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Calcium als signaalmolecuul",
+            "text": "Calciumionen (**Ca2+**) zijn uiterst belangrijke signaalmoleculen in cellulaire processen. Ze kunnen eiwitten in de cel be\u00c3\u00afnvloeden door **conformatieveranderingen te veroorzaken**. De concentratie van calcium in de cel wordt laag gehouden door actief transport via **calciumkanalen** en **-pompen**. Dit is essentieel voor het adequaat functioneren van cellen, bijvoorbeeld bij de activatie van spiercellen, waar calciumvrijgave getriggerd kan worden door een actiepotentiaal of een ligand zoals **acetylcholine**.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00c3\u00afnvloedt calcium de functie van eiwitten in de cel?",
+            "answer": "Calcium be\u00c3\u00afnvloedt de functie van eiwitten in de cel door conformatieveranderingen te veroorzaken (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Regulatie van Calciumconcentratie",
+            "text": "De calciumconcentratie binnen de cel wordt gereguleerd door structuren zoals **calciumkanalen** en **-pompen**. Deze zijn verantwoordelijk voor het transport van calciumionen in en uit de cel, en zijn cruciaal voor het handhaven van een lage intracellulaire calciumconcentratie, wat noodzakelijk is voor het correct functioneren van talrijke cellulaire processen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe wordt de calciumconcentratie in de cel gereguleerd?",
+            "answer": "De calciumconcentratie in de cel wordt gereguleerd door calciumkanalen (1 punt) en -pompen (1 punt) die calciumionen in en uit de cel transporteren.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Calciumsignalering in spiercellen",
+            "text": "In spiercellen wordt de calciumsignalering getriggerd door een **actiepotentiaal** of een specifieke **ligand**, zoals acetylcholine. Dit leidt tot de vrijgave van calciumionen die noodzakelijk zijn voor spiercontractie, een proces dat de complexiteit van calciumsignalering en de diverse rollen die het speelt in verschillende cellulaire processen illustreert.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat triggert calciumsignalering in spiercellen en wat is het resultaat?",
+            "answer": "Calciumsignalering in spiercellen wordt getriggerd door een actiepotentiaal (1 punt) of een ligand zoals acetylcholine (1 punt), resulterend in de vrijgave van calcium voor spiercontractie.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Complexiteit van calciumsignalering",
+            "text": "De complexiteit van calciumsignalering ligt in de diverse processen die het be\u00c3\u00afnvloedt binnen de cel. Deze signalering kan vari\u00c3\u00abren in frequentie en duur, afhankelijk van externe stimuli zoals **hormoonconcentraties**. Een voorbeeld hiervan is vasopressine, een hormoon dat specifieke effecten heeft op de frequentie van calciumspikes en daarmee de cellulaire reactie reguleert.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe varieert calciumsignalering met hormoonconcentraties?",
+            "answer": "Calciumsignalering varieert met hormoonconcentraties door de frequentie van calciumvrijgave te veranderen (1 punt), zoals ge\u00c3\u00afllustreerd door het effect van vasopressine op calciumspikes (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Rol van calcium in cellen",
+            "text": "Calciumionen (**Ca2+**) spelen een cruciale rol in cellulaire functies door het veroorzaken van **conformatieveranderingen in eiwitten**. Om de cellulaire processen nauwkeurig te reguleren, wordt de concentratie van calcium in de cellen **laag gehouden door actief transport** mechanismen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00c3\u00afnvloedt calcium de functie van eiwitten en hoe wordt de concentratie ervan in de cel geregeld?",
+            "answer": "Calcium be\u00c3\u00afnvloedt de functie van eiwitten door conformatieveranderingen te veroorzaken (1 punt) en wordt laag gehouden in de cel door actief transport (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Calciumkanalen en -pompen",
+            "text": "**Calciumkanalen en -pompen** zijn gespecialiseerde structuren en mechanismen die verantwoordelijk zijn voor de regulatie van de **calciumconcentratie** binnen de cel. Deze structuren helpen de calciumionenconcentratie te balanceren door ze naar binnen of buiten de cel te verplaatsen wanneer nodig.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van calciumkanalen en -pompen?",
+            "answer": "De functie van calciumkanalen en -pompen is het reguleren van de calciumconcentratie binnen de cel (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Calciumactivatie in spiercellen",
+            "text": "In spiercellen vindt calciumactivatie plaats wanneer er een **actiepotentiaal** wordt gegenereerd of wanneer een ligand, zoals **acetylcholine**, zich bindt aan de cel. Deze processen leiden tot een toename van de calciumconcentratie in de spiercellen, wat essentieel is voor de **spiercontractie**.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe wordt calciumactivatie in spiercellen ge\u00c3\u00afnduceerd?",
+            "answer": "Calciumactivatie in spiercellen wordt ge\u00c3\u00afnduceerd door een actiepotentiaal (1 punt) of door de binding van een ligand zoals acetylcholine (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Complexiteit van calciumsignalering",
+            "text": "Calciumsignalering is een **complexe en veelzijdige** manier van communicatie binnen cellen. Het heeft invloed op diverse cellulaire processen, zoals **spiercontractie**, **secreetvrijgave**, en **genexpressie**. De signalering wordt strak gereguleerd door het samenspel van calciumkanalen, -pompen en de binding van calcium aan specifieke eiwitten die een conformatieverandering ondergaan.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn enkele processen die be\u00c3\u00afnvloed worden door calciumsignalering?",
+            "answer": "Processen die be\u00c3\u00afnvloed worden door calciumsignalering omvatten spiercontractie (1 punt), secreetvrijgave (1 punt) en genexpressie (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Calciumsignalering en hormoonconcentratie",
+            "text": "In het proces van **calciumsignalering** speelt de concentratie van hormonen een belangrijke rol. Hormonen kunnen de **frequentie van calciumspikes** be\u00c3\u00afnvloeden, wat betekent dat ze de hoeveelheid keren dat calcium wordt vrijgegeven uit het endoplasmatisch reticulum of andere opslagplaatsen in de cel kunnen veranderen. Dit proces is cruciaal voor het reguleren van verschillende cellulaire activiteiten, aangezien calcium als een **second messenger** fungeert in veel signaaltransductiepaden.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00c3\u00afnvloedt hormoonconcentratie de calciumsignalering?",
+            "answer": "Hormoonconcentratie kan de frequentie van calciumspikes be\u00c3\u00afnvloeden (1 punt), wat de hoeveelheid keren dat calcium wordt vrijgegeven uit cellulaire opslagplaatsen varieert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vasopressine en Calciumsignalering",
+            "text": "Vasopressine is een hormoon dat invloed heeft op **calciumsignalering** in cellen. Calciumsignalering betreft de manier waarop cellen calciumionen gebruiken om interne processen te reguleren. Dit type signalering speelt een cruciale rol bij diverse cellulaire functies en wordt be\u00efnvloed door verschillende hormonen, waaronder vasopressine.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe be\u00efnvloedt vasopressine calciumsignalering?",
+            "answer": "Vasopressine be\u00efnvloedt de calciumsignalering door de frequentie van calciumvrijgave in de cellen te vari\u00ebren (1 punt).",
+            "image": null
+        }
+    ]
+}
