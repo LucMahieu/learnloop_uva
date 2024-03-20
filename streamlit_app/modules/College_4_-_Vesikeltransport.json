@@ -1,0 +1,359 @@
+{
+    "module_name": "celbio_4",
+    "segments": [
+        {
+            "type": "info",
+            "title": "Endocytose",
+            "text": "Endocytose is een proces waarbij cellen materialen van buiten de cel opnemen door kleine delen van hun celmembraan naar binnen te vouwen en af te snoeren, wat resulteert in de vorming van een vesikel die in deze fase een endosoom heet. Vervolgens kunnen deze endosomen ofwel naar andere delen van de cel worden getransporteerd, zoals het Golgi-apparaat, of ze kunnen worden gerecycled en terug naar het celmembraan worden gestuurd.",
+            "image": "endocytose.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is endocytose?",
+            "answer": "Endocytose is het proces waarbij cellen materialen van buiten de cel opnemen in vesikels / endosomen (1 punt)",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Cytoskelet en vesicle transport",
+            "text": "Het cytoskelet is een netwerk van eiwitvezels in de cel dat structurele ondersteuning biedt en betrokken is bij het transport van vesikels binnen de cel. Door interactie met motorprote\u00EFnen kunnen vesikels langs de vezels van het cytoskelet naar hun bestemming worden verplaatst.",
+            "image": "cytoskelet_vesikelttransport.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van het cytoskelet in het vesikel transportproces?",
+            "answer": "Het cytoskelet biedt een route voor vesikels om met behulp van motorprote\u00EFnen naar hun bestemming binnen de cel te worden getransporteerd (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Membraanafsnoering",
+            "text": "Het vesikel transportproces begint bij membraanafsnoering, waarbij een deel van het celmembraan zich afsnoert om een vesikel te vormen. Dit vereist de betrokkenheid van specifieke eiwitten die de kromming van het membraan induceren en helpen bij de uiteindelijke afsnoering.",
+            "image": "membraanafsnoering.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat houdt membraanafsnoering in?",
+            "answer": "Membraanafsnoering is het proces waarbij een deel van het celmembraan zich afsnoert om een vesikel te vormen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "SAR-1 en vesikelvorming",
+            "text": "Het SAR-1-eiwit is betrokken bij het initi\u00EBren van de vorming van vesikels in het endoplasmatisch reticulum (ER). SAR-1 zorgt voor de rekrutering van andere eiwitten die nodig zijn om een vesikel af te snoeren van het ER-membraan.",
+            "image": "sar-1.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van SAR-1 in vesikelvorming?",
+            "answer": "SAR-1 initieert de vorming van vesikels in het ER-membraan door het rekruteren van noodzakelijke eiwitten (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "COP2-vesikels en hun transportroute",
+            "text": "De COP2-vesikels zijn betrokken bij het transporteren van materialen van het ER naar het Golgi-apparaat. Ze zijn een sleutelcomponent in de secretiecyclus van eiwitten en lipiden.",
+            "image": "cop2.png"
+        },
+        {
+            "type": "question",
+            "question": "Waar zijn COP2-vesikels voor verantwoordelijk?",
+            "answer": "COP2-vesikels zijn verantwoordelijk voor het transporteren van materialen van het ER naar het Golgi-apparaat (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "COP1-vesikels en hun functies",
+            "text": "De COP1-vesikels fungeren in het transport tussen het Golgi-apparaat en het ER, en worden ook gebruikt in de standaard secretieroute, die betrokken is bij het continu transporteren van stoffen naar de celmembraan.",
+            "image": "cop1_afsnoering.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van COP1-vesikels?",
+            "answer": "COP1-vesikels transporteren stoffen tussen het Golgi-apparatus en het ER (1 punt) en zijn betrokken bij de standaard secretieroute (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "GTP-bindend eiwit en vesikelvorming",
+            "text": "Een GTP-bindend eiwit, zoals SAR-1, is cruciaal voor het starten van de vorming van vesikels. Het binden aan GTP activeert het eiwit en initieert de assemblage van coateiwitten, nodig voor de vorming en selectie van vesikels.",
+            "image": "sar-1-initiatie.png"
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt een GTP-bindend eiwit bij aan vesikelvorming?",
+            "answer": "Een GTP-bindend eiwit activeert de assemblage van coateiwitten (1 punt) die nodig zijn voor vesikelvorming na het binden aan GTP (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "COP2-vesikels kenmerken",
+            "text": "COP2-vesikels zijn verantwoordelijk voor het transport van eiwitten van het endoplasmatisch reticulum (ER) naar het Golgi-apparaat. Deze vesikels zijn dichter en groter dan sommige andere typen vesikels, wat bijdraagt aan hun functionaliteit in het transportproces doordat ze een grote lading kunnen dragen.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de fysieke kenmerken van COP2-vesikels?",
+            "answer": "COP2-vesikels zijn dichter en groter dan sommige andere typen vesikels (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Clathrin-coated vesikels en enducytose",
+            "text": "Clathrin-coated vesikels zijn betrokken bij het transport van materialen via endocytose en het selecteren van eiwitten voor transport in de cel. De clathrin-coating helpt bij het herkennen en selecteren van specifieke moleculen voor opname in de cel.",
+            "image": "clathrin_coating_proces.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke functie heeft de clathrin-coating bij vesikels?",
+            "answer": "De clathrin-coating helpt bij het induceren van endocytose (1 punt) en selecteert specifieke moleculen voor transport in de cel (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Clathrin-coated vesikels structuur",
+            "text": "Het kenmerkende 'golfbal' uiterlijk van clathrin-coated vesikels kom door de kooiachtige structuur van het clathrineiwit.",
+            "image": "clathrin_kooi_structuur.png"
+        },
+        {
+            "type": "question",
+            "question": "Omschrijf de structuur van clathrin-coated vesikels.",
+            "answer": "Clathrin-coated vesikels zijn hol en/of kooiachtige (1 punt) en hebben een oppervlak dat lijkt op die van een golfbal (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vesikel secretie",
+            "text": "Vesikel secretie is het proces waarbij COP1-vesikels inhoud transporteren van de Golgi naar het plasmamembraan.",
+            "image": "vesikeltransport_coatings.png"
+        },
+        {
+            "type": "question",
+            "question": "Hoe verloopt transport van COP1-vesikels in de secretieroute?",
+            "answer": "Transport van COP1-vesikels in de secretieroute verloopt van het Golgi naar het plasmamembraan (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Fosfolipiden en vesikeladressering",
+            "text": "Fosfolipiden zijn een belangrijk bestanddeel van celmembranen en vormen specifieke domeinen die helpen bij de adressering van vesikels. Deze domeinen zorgen ervoor dat vesikels naar de juiste locatie binnen de cel worden gestuurd.",
+            "image": "fosfolipiden_adreslabels.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van fosfolipiden in vesikeladressering?",
+            "answer": "Fosfolipiden vormen domeinen die essentieel zijn voor de adressering van vesikels (1 punt) naar de correcte bestemming binnen / in de cel (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "PIP2 en endocytose",
+            "text": "PIP2, of fosfatidylinositol 4,5-bisfosfaat, is een fosfolipide dat een rol speelt in het proces van endocytose. Dit specifieke fosfolipide helpt bij het vormen van de inhammen in de celmembraan die nodig zijn voor het invangen van extracellulaire stoffen.",
+            "image": "pip2.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke rol speelt PIP2 bij endocytose?",
+            "answer": "PIP2 helpt bij het vormen van membraaninhammen (1 punt) die nodig zijn voor het invangen van extracellulaire stoffen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "RAB GTPases in vesikeltransport",
+            "text": "RAB GTPases zijn belangrijke eiwitten die betrokken zijn bij het initi\u00EBren van vesikelvorming en het adresseren van vesikels naar hun juiste locatie. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
+            "image": "rab-gtp_vesikels.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van RAB GTPases bij vesikeltransport?",
+            "answer": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming (1 punt) en het adresseren van vesikels (1 punt) naar hun bestemming.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vesikeltargeting en RAB GTPases",
+            "text": "Het targetingproces van vesikels gebruikt RAB GTPases als een soort 'adreslabel' om te zorgen dat vesikels op de juiste locatie binnen de cel aankomen. Dit waarborgt de effici\u00EBnte en accurate levering van hun lading.",
+            "image": "rab5-gtp-docking.png"
+        },
+        {
+            "type": "question",
+            "question": "Hoe gebruikt het targetingproces RAB GTPases?",
+            "answer": "Het targetingproces gebruikt RAB GTPases als een 'adreslabel' (1 punt) om de juiste levering van vesikels binnen de cel te garanderen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vesikelfusie en snare-complex",
+            "text": "Vesikelfusie is het proces waarbij vesikels samensmelten met membranen en hun inhoud vrijgeven. Dit proces is afhankelijk van het snare-complex, een groep eiwitten die betrokken zijn bij het nauwkeurig en effici\u00EBnt samensmelten van vesikels met hun doelmembranen.",
+            "image": "fusie_membraan_snare.png"
+        },
+        {
+            "type": "question",
+            "question": "Waarvan is vesikelfusie afhankelijk?",
+            "answer": "Vesikelfusie is afhankelijk van het snare-complex (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "V-snares en T-snares",
+            "text": "V-snares en T-snares zijn twee soorten snare-eiwitten die belangrijk zijn bij het fusieproces. V-snares bevinden zich op de vesikels en T-snares op de doelmembranen. Om samen te smelten met het doelmembraan, moeten de V-snares en T-snares met elkaar interageren.",
+            "image": "v-snare_t-snare.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van V-snares en T-snares bij vesikelfusie?",
+            "answer": "V-snares op vesikels en T-snares op het doelmembranen maken de de samensmelting met het doelmembraan mogelijk (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Syntaxin en SNAP25",
+            "text": "Syntaxin en SNAP25 zijn specifieke soorten T-snares die nodig zijn voor de fusie van synaptische vesikels. Deze eiwitten werken samen met V-snares om neurotransmitterafgifte in neuronen mogelijk te maken.",
+            "image": "syntaxin.png"
+        },
+        {
+            "type": "question",
+            "question": "Waarvoor zijn syntaxin en SNAP25 nodig?",
+            "answer": "Syntaxin en SNAP25 zijn nodig voor de fusie van synaptische vesikels met de plasmamembraan van neuronen (1 punt), wat de afgifte van neurotransmitters mogelijk maakt (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Vesikelafsnoering en dynamin",
+            "text": "Het snaresysteem is een mechanisme dat nodig is voor de fusie van vesikels met doelmembranen. Voordat vesikels kunnen fuseren, hebben ze eerst een reis afgelegd in de cel. Ze ontstaan uit een ander membraan en tijdens het vormen vindt afsnoering plaats met eiwitten zoals Dynamin. Bij afsnoering worden vesikels losgemaakt van het membraan waaraan ze gevormd zijn.",
+            "image": "dynamin.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de rollen van het snaresysteem en dynamin in vesikeltransport?",
+            "answer": "Het snaresysteem is nodig voor de fusie van vesikels met doelmembranen (1 punt) en dynamin is nodig voor de afsnoering van vesikels van het membraan (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Exit- en retentiesignalen",
+            "text": "Exit- en retentiesignalen zijn moleculaire codes die bepalen of eiwitten getransporteerd moeten worden naar de Golgi-apparaten (exit) of dat ze behouden moeten blijven in het endoplasmatisch reticulum (ER) (retentie). Zonder deze signalen zou het niet mogelijk zijn om eiwitten naar de juiste locatie in de cel te sturen.",
+            "image": "exit-signaal.png"
+        },
+        {
+            "type": "question",
+            "question": "Waarvoor dienen exit- en retentiesignalen?",
+            "answer": "Exitsignalen zijn nodig om eiwitten naar de Golgi-apparaten te transporteren (1 punt) en retentiesignalen om ze in het endoplasmatisch reticulum te behouden (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "KDEL-sequentie",
+            "text": "Een KDEL-sequentie is een specifieke aminozuurvolgorde in een eiwit die fungeert als een adreslabel. Het geeft aan dat het eiwit moet worden teruggestuurd naar het ER vanuit het Golgi-apparaat.",
+            "image": "kdel_terug_naar_er.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van een KDEL-sequentie?",
+            "answer": "Een KDEL-sequentie dient als een adreslabel (1 punt) dat aangeeft dat een eiwit teruggestuurd moet worden naar het endoplasmatisch reticulum (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Transcytose",
+            "text": "Transcytose is een proces waarbij materialen eerst door endocytose opgenomen worden aan de ene zijde van de cel om vervolgens getransporteerd door de cel in vesikels, en ten slotte afgegeven aan de andere zijde door middel van exocytose.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe verloopt het proces van transcytose?",
+            "answer": "Transcytose omvat het opnemen van materialen aan de ene zijde van de cel door endocytose (1 punt), het transporteren van materialen door de cel in vesikels (1 punt), en het afgeven van materialen aan de andere zijde door exocytose (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Glycosylering van Eiwitten",
+            "text": "Glycosylering is een biologisch proces waarbij suikermoleculen, zoals N-glucosamine, worden toegevoegd aan de zijketens van eiwitten of lipiden. Dit vindt plaats in het ER en het Golgi-apparaat en speelt een cruciale rol in de vouwing, stabiliteit en functionaliteit van eiwitten.",
+            "image": "glycosylering.png"
+        },
+        {
+            "type": "question",
+            "question": "Waarvoor dient glycosylering?",
+            "answer": "Glycosylering is belangrijk voor de vouwing (1 punt), stabiliteit (1 punt) en functionaliteit (1 punt) van eiwitten.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat houdt glycosylering in?",
+            "answer": "Glycosylering is het proces waarbij suikermoleculen worden toegevoegd aan de zijketens van eiwitten of lipiden (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Mannose-6-fosfaat en lysosomale targeting",
+            "text": "Mannose-6-fosfaat is een specifiek suikermolecuul dat als een markeringslabel op eiwitten wordt aangebracht tijdens glycosylering. Dit label dient om eiwitten te herkennen en ze te richten naar de lysosomen, de recyclingcentra van cellen.",
+            "image": "mannose.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van Mannose-6-fosfaat in cellen?",
+            "answer": "Mannose-6-fosfaat markeert eiwitten met een label voor lysosomen (1 punt), waar ze heen worden getransporteerd voor afbraak of recycling (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "ER en Golgi: centra voor glycosylering",
+            "text": "Het endoplasmatisch reticulum (ER) en het Golgi-apparaat zijn twee belangrijke organellen in een cel waar de glycosylering van eiwitten plaatsvindt. In deze organellen worden suikermoleculen zoals N-glucosamine aan eiwitten toegevoegd om hun correcte vorming te ondersteunen.",
+            "image": "glycosylering_er_golgi.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verband tussen ER, Golgi en glycosylering?",
+            "answer": "Het ER en het Golgi-apparaat zijn organellen waar glycosylering van eiwitten plaatsvindt (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "N- en O-glycosylering",
+            "text": "N-glycosylering en O-glycosylering zijn twee vormen van glycosylering. Bij N-glycosylering wordt een suikermolecuul toegevoegd aan een stikstofatoom in de zijketen van een aminozuur, terwijl bij O-glycosylering de toevoeging aan een zuurstofatoom plaatsvindt. Beide zijn betrokken bij eiwitvouwing en het bieden van bescherming tegen afbraak door enzymen.",
+            "image": "n_en_o_glycosylering.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen N-glycosylering en O-glycosylering?",
+            "answer": "Bij N-glycosylering wordt een suikermolecuul toegevoegd aan een stikstofatoom (1 punt), en bij O-glycosylering aan een zuurstofatoom in de eiwitzijketen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Lysosomen als recyclingapparaat",
+            "text": "Lysosomen zijn organellen in cellen die functioneren als het recyclingapparaat. Ze bevatten enzymen die in staat zijn om biomoleculen af te breken, waardoor het afval van de cel wordt verwerkt en hergebruikt.",
+            "image": "lysosomen_werking.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de primaire functie van lysosomen in de cel?",
+            "answer": "De primaire functie van lysosomen in de cel is om cellulair afval in de cel af te breken en te recyclen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Autofagie: Opruimen van beschadigde organellen",
+            "text": "Autofagie is een proces waarbij cellen beschadigde organellen opruimen. Dit is een vorm van kwaliteitscontrole die ervoor zorgt dat de cellulaire componenten goed functioneren en dat schadelijke of niet-functionele onderdelen worden verwijderd.",
+            "image": "autofagie.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke rol speelt autofagie in de cel?",
+            "answer": "Het autofagie proces ruimt beschadigde organellen op (1 punt) als een vorm van kwaliteitscontrole om de goede werking van cellulaire componenten te waarborgen (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Neurotransmitter secretie en neuropeptiden",
+            "text": "Neuropeptiden zijn kleine eiwitten die tijdens het transport naar de synaps gematureerd worden, wat inhoudt dat ze worden omgezet in hun actieve vorm. Hierdoor zijn ze klaar voor hun functie als neurotransmitters wanneer ze vrijkomen in de synaptische spleet.",
+            "image": "peptide_neurotransmitters.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat gebeurt er met neuropeptiden tijdens hun transport naar de synaps?",
+            "answer": "Neuropeptiden worden gematureerd (1 punt) tijdens hun transport naar de synaps.",
+            "image": null
+        }
+    ]
+}

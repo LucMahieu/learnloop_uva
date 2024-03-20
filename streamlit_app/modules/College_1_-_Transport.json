@@ -68,7 +68,7 @@
         {
             "type": "info",
             "title": "Selectiviteitsfilter van ionkanalen",
-            "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat **alleen specifieke ion** het kanaal kunnen doorkruisen.",
+            "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren. Dit filter zorgt ervoor dat **alleen specifieke ionen** het kanaal kunnen doorkruisen.",
             "image": "selectiviteitsfilter.png"
         },
         {
