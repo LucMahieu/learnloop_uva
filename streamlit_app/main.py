@@ -937,7 +937,7 @@ def render_login_page():
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
             <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="https://learnloop.datanose.nl/" style="text-decoration: none;">
+            <a href="http://localhost:3000/" style="text-decoration: none;">
                 <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
                 text-align: center; text-decoration: none; display: block; width: 100%; margin: \
                 4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
