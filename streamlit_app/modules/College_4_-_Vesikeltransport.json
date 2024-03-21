@@ -5,7 +5,7 @@
             "type": "info",
             "title": "Soorten eiwit-coatings",
             "text": "Eiwit-coatings zijn betrokken bij de vorming en transport van vesikels. Er zijn verschillende soorten eiwit-coatings, zoals COPI, COPII en Clathrin die elk specifieke functies hebben in het transportproces binnen de cel.",
-            "image": "eiwit_coatings.png"
+            "image": "eiwit-coating_overview.png"
         },
         {
             "type": "question",
@@ -29,7 +29,7 @@
             "type": "info",
             "title": "Cytoskelet en vesicle transport",
             "text": "Het cytoskelet is een netwerk van eiwitvezels in de cel dat structurele ondersteuning biedt en betrokken is bij het transport van vesikels binnen de cel. Door interactie met motorprote\u00EFnen kunnen vesikels langs de vezels van het cytoskelet naar hun bestemming worden verplaatst.",
-            "image": "cytoskelet_vesikelttransport.png"
+            "image": "cytoskelet_vesikeltransport.png"
         },
         {
             "type": "question",
@@ -69,7 +69,7 @@
         },
         {
             "type": "question",
-            "question": "Waar inde cel hebben COPII-vesikels een rol?",
+            "question": "Waar in de cel hebben COPII-vesikels een rol?",
             "answer": "COPII-vesikels zijn verantwoordelijk voor het transporteren van vesikels van het ER naar het Golgi-apparaat (1 punt).",
             "image": null
         },
@@ -99,7 +99,7 @@
         },
         {
             "type": "info",
-            "title": "eigenschappen van COPII-vesikels",
+            "title": "Eigenschappen van COPII-vesikels",
             "text": "COPII-vesikels zijn verantwoordelijk voor het transport van eiwitten van het endoplasmatisch reticulum (ER) naar het Golgi-apparaat. Deze vesikels zijn dichter en groter dan sommige andere typen vesikels, wat bijdraagt aan hun functionaliteit in het transportproces doordat ze een grote lading kunnen dragen.",
             "image": null
         },
