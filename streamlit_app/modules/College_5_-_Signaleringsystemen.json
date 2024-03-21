@@ -5,7 +5,7 @@
             "type": "info",
             "title": "Signaaltransductieproces",
             "text": "Het **signaaltransductieproces** omvat de waarneming van een signaal, gevolgd door **transductie** en uiteindelijk een **respons**. Dit proces stelt cellen in staat om externe informatie te ontvangen en daarop te reageren, waardoor ze passende acties kunnen ondernemen.",
-            "image": null
+            "image": "signaal_perceptie_transductie_response.png"
         },
         {
             "type": "question",
@@ -17,7 +17,7 @@
             "type": "info",
             "title": "Celcommunicatie",
             "text": "Celcommunicatie verwijst naar het vermogen van cellen om informatie uit te wisselen via **receptoren** en **transductiesystemen**. Deze communicatie is cruciaal voor het co\u00f6rdineren van acties binnen de cel en is essentieel voor het goed functioneren van meercellige organismen.",
-            "image": null
+            "image": "intracellulaire_signaleringsroute.png"
         },
         {
             "type": "question",
@@ -25,8 +25,6 @@
             "answer": "Cellen communiceren met elkaar door middel van signaalmoleculen, receptoren en transductiesystemen (1 punt), wat resulteert in specifieke acties/responsen binnen de cel (1 punt).",
             "image": null
         },
-
-
         {
             "type": "info",
             "title": "Cellulaire functies en endoplasmatisch reticulum",
@@ -37,7 +35,7 @@
             "type": "info",
             "title": "Signaalverwerking in cellen",
             "text": "Signaalverwerking omvat de ontvangst van **externe signalen** door cellen, die vervolgens **intern verwerkt** worden. Dit proces kan leiden tot verscheidene **veranderingen binnen de cel**, zoals het activeren van genexpressie of het starten van cellulaire reacties.",
-            "image": null
+            "image": "signaleringsroute_met_pijl.png"
         },
         {
             "type": "info",
@@ -55,7 +53,7 @@
             "type": "info",
             "title": "Verschillende soorten signalen",
             "text": "In celcommunicatie worden diverse soorten signalen gebruikt, waaronder **hormonen**, **neurotransmitters**, **gassen**, **ionen**, **vetzuren**, **nutri\u00c3\u00abnten**, en **temperatuur**. Deze signalen spelen een cruciale rol in het co\u00c3\u00b6rdineren van de activiteiten van cellen in een organisme.",
-            "image": null
+            "image": "signaleringsroute_moleculen.png"
         },
 
         {
@@ -68,13 +66,13 @@
             "type": "question",
             "question": "Wat zijn de vier types signaleringssystemen in multicellulaire organismen?",
             "answer": "De vier types signaleringssystemen in multicellulaire organismen zijn contactafhankelijke signalering (1 punt), paracriene signalering (1 punt), endocriene signalering (1 punt) en synaptische signalering (1 punt).",
-            "image": null
+            "image": "vier_signaleringsmechanismen.png"
         },
         {
             "type": "info",
             "title": "Contactafhankelijke signalering",
             "text": "Contactafhankelijke signalering vereist **direct fysiek contact** tussen cellen via membraan-gebonden signaleringsmoleculen. Deze moleculen van de ene cel interageren met receptorprote\u00c3\u00afnen op het oppervlak van een andere cel, wat een signaaltransductieproces activeert.",
-            "image": null
+            "image": "contact_signal.png"
         },
         {
             "type": "question",
@@ -86,7 +84,7 @@
             "type": "info",
             "title": "Paracriene signalering",
             "text": "Bij paracriene signalering geven cellen signalen af die **lokaal diffunderen** en effect hebben op naburige cellen. Deze vorm van signalering is belangrijk voor korte-afstandscommunicatie tussen cellen die dicht bij elkaar liggen.",
-            "image": null
+            "image": "paracriene_signaling.png"
         },
         {
             "type": "question",
@@ -98,7 +96,7 @@
             "type": "info",
             "title": "Endocriene signalering",
             "text": "Endocriene signalering kenmerkt zich door de afgifte van hormonen in de bloedbaan, die vervolgens **systemische effecten** hebben op doelcellen die zich soms ver van de signaalbron bevinden. Deze hormonen kunnen op verschillende weefsels of organen in het lichaam inwerken en zijn essentieel voor het reguleren van lange-afstandscommunicatie.",
-            "image": null
+            "image": "endocrience_signalering.png"
         },
         {
             "type": "question",
@@ -116,14 +114,14 @@
             "type": "question",
             "question": "Wat is synaptische signalering?",
             "answer": "Synaptische signalering is een vorm van communicatie tussen zenuwcellen en de cellen waarmee ze contact maken, waarbij neurotransmitters worden vrijgegeven in een synaptische spleet (1 punt) om snel te communiceren met de doelwitcel (1 punt).",
-            "image": null
+            "image": "synaptische_signalering.png"
         },
 
         {
             "type": "info",
             "title": "Celreceptoren en hun locatie",
             "text": "Celreceptoren zijn gespecialiseerde eiwitmoleculen die signalen kunnen ontvangen. Ze zijn gelokaliseerd **aan de buitenkant van de cel** voor het opvangen van extracellulaire signalen, of **binnen in de cel** voor intracellulaire signalen zoals die van bepaalde **hormoonreceptoren**.",
-            "image": null
+            "image": "cel_receptoren.png"
         },
         {
             "type": "question",
@@ -159,7 +157,7 @@
             "type": "info",
             "title": "Intracellulaire Receptoren",
             "text": "Intracellulaire receptoren zijn specifieke eiwitten gevonden **in het cytoplasma of in de kern** van cellen. Ze zijn van cruciaal belang voor het waarnemen van **stero\u00c3\u00afdhormonen** die door de celmembraan kunnen diffunderen vanwege hun **vetoplosbare aard**.",
-            "image": null
+            "image": "intracellulaire_receptoren.png"
         },
         {
             "type": "question",
@@ -171,7 +169,7 @@
             "type": "info",
             "title": "Receptorstructuur",
             "text": "De structuur van een stero\u00c3\u00afdhormoonreceptor is essentieel voor zijn functie. Het bevat een **transcriptieactivatiedomein** om de genexpressie te starten, een **DNA-bindend domein** om aan specifieke DNA-sequenties te binden, en een **ligand-bindend domein** om het signaalmolecuul (ligand) te herkennen en te binden.",
-            "image": null
+            "image": "receptoractivatiedomeinen.png"
         },
         {
             "type": "question",
@@ -183,7 +181,7 @@
             "type": "info",
             "title": "Stero\u00c3\u00afdhormoonreceptoren en hun werking",
             "text": "Stero\u00c3\u00afdhormoonreceptoren zijn gespecialiseerde eiwitten die reageren op de aanwezigheid van specifieke hormonen. Wanneer een **hormoon (ligand)** zich bindt aan de receptor, wordt een reeks gebeurtenissen geactiveerd: de receptor-ligandcomplex ondergaat **translocatie naar de kern** van de cel, waar het zich bindt aan specifieke DNA-sequenties die bekend staan als **promotors**. Deze binding initieert de **vorming van een transcriptiecomplex**, wat leidt tot de transcriptie van doelgenen die door het hormoon worden gereguleerd.",
-            "image": null
+            "image": "steroide_hormonen.png"
         },
         {
             "type": "question",
@@ -195,7 +193,7 @@
             "type": "info",
             "title": "Hormoontransport",
             "text": " Stero\u00c3\u00afdhormonen worden in de bloedbaan getransporteerd, vaak **gebonden aan transporteiwitten**. Dit zorgt voor stabiliteit en reguleert de beschikbaarheid van het hormoon voor weefsels. Een voorbeeld van zo'n transporteiwit is **globuline**.",
-            "image": null
+            "image": "steroide_hormonen.png"
         },
         {
             "type": "question",
@@ -243,7 +241,7 @@
             "type": "info",
             "title": "Receptortypen en signaaltransductie",
             "text": "In de celbiologie zijn er **drie klassen oppervlakte-receptoren**: ionkanaal-gekoppelde, G-prote\u00c3\u00afne-gekoppelde en enzym-gekoppelde receptoren. Elk type heeft zijn eigen mechanisme voor **signaaltransductie**, wat leidt tot diverse cellulaire reacties. Deze receptoren dragen bij aan de complexiteit van hoe cellen signalen waarnemen en daarop reageren.",
-            "image": null
+            "image": "membraanreceptorklassen.png"
         },
         {
             "type": "question",
@@ -253,9 +251,9 @@
         },
         {
             "type": "info",
-            "title": "Snelle vs. Langzame Reacties in Signaaltransductieroutes",
+            "title": "Snelle vs. langzame reacties in signaaltransductieroutes",
             "text": "Binnen signaaltransductieroutes kunnen reacties variëren in snelheid. Snelle reacties treden op binnen seconden tot minuten en zijn vaak het resultaat van wijzigingen in de functie of locatie van eiwitten. Langzame reacties kunnen uren tot dagen duren en betreffen meestal transcriptie- en translatieprocessen, waarbij nieuwe eiwitten worden geproduceerd. Deze variatie in reactiesnelheid stelt cellen in staat om op verschillende tijdschalen adequaat te reageren op signalen uit hun omgeving.",
-            "image": null
+            "image": "fast_and_slow_signalling.png"
         },
         {
             "type": "question",
@@ -265,7 +263,7 @@
         },
         {
             "type": "info",
-            "title": "Divergentie en Convergentie in Signaaltransductieroutes",
+            "title": "Divergentie en convergentie in signaaltransductieroutes",
             "text": "Divergentie en convergentie zijn cruciale concepten in signaaltransductieroutes. Divergentie vindt plaats wanneer een enkel signaal zich splitst en verschillende paden in de cel activeert, wat leidt tot een veelzijdige respons. Convergentie, daarentegen, treedt op wanneer verschillende signalen samenkomen op één enkel pad, wat de cel in staat stelt om een gecoördineerde reactie te genereren op een combinatie van stimuli. Deze mechanismen dragen bij aan de flexibiliteit en precisie van cellulaire reacties.",
             "image": null
         },
@@ -277,7 +275,7 @@
         },
         {
             "type": "info",
-            "title": "De Rol van Scaffolds in Signaaltransductieroutes",
+            "title": "De Rol van scaffolds in signaaltransductieroutes",
             "text": "Scaffolds spelen een essentiële rol in de organisatie van signaaltransductieroutes. Ze zijn moleculaire 'steigers' die verschillende signaaleiwitten bij elkaar brengen op specifieke locaties binnen de cel. Dit zorgt voor een efficiëntere signaaloverdracht, omdat de noodzakelijke componenten dicht bij elkaar worden gehouden. Scaffolds kunnen ook de specificiteit van signaleringstrajecten verhogen door bepaalde eiwitinteracties te faciliteren of te voorkomen, wat bijdraagt aan de nauwkeurigheid van de cellulaire respons.",
             "image": null
         },
@@ -285,7 +283,7 @@
             "type": "question",
             "question": "Wat is de functie van scaffolds in signaaltransductieroutes?",
             "answer": "Scaffolds organiseren signaaleiwitten op specifieke locaties, wat leidt tot een efficiëntere signaaloverdracht en verhoogde specificiteit van signaaltransductieroutes door bepaalde eiwitinteracties te faciliteren of te voorkomen.",
-            "image": null
+            "image": "scaffold_proteins.png"
         },
         {
             "type": "info",
@@ -302,7 +300,7 @@
             "type": "info",
             "title": "Docking proteins in signaleringssystemen",
             "text": "Docking proteins zijn cruciale componenten binnen signaleringssystemen die specifieke bindingsplaatsen bieden voor andere signaalmoleculen. Ze spelen een sleutelrol in de precisie en specificiteit van cellulaire signalering door ervoor te zorgen dat signaaleiwitten correct gepositioneerd worden binnen de cel. Dit maakt het mogelijk voor signalen om efficiënt en nauwkeurig te worden overgedragen naar de juiste bestemming.",
-            "image": null
+            "image": "docking_sites.png"
         },
         {
             "type": "question",
@@ -314,7 +312,7 @@
             "type": "info",
             "title": "Adapters in signaleringssystemen",
             "text": "Adaptereiwitten zijn essentieel voor de werking van signaleringssystemen. Ze fungeren als bruggen tussen twee of meer eiwitten die anders niet direct zouden kunnen interageren. Dit bevordert de vorming van eiwitcomplexen die nodig zijn voor het doorgeven van signalen. Adapters verhogen de flexibiliteit en modulariteit van signaleringspaden door verschillende eiwitten samen te brengen voor specifieke functies.",
-            "image": null
+            "image": "adaptor_protein.png"
         },
         {
             "type": "question",
@@ -344,7 +342,7 @@
             "type": "info",
             "title": "Belang van functionerende domeinen in signaleringssystemen",
             "text": "De functionerende domeinen binnen de componenten van signaleringssystemen zijn essentieel voor hun activiteit. **Defecten in deze domeinen** kunnen leiden tot verstoring van het hele complex en daarmee de juiste signaaltransductie belemmeren.",
-            "image": null
+            "image": "eiwit_domeinen.png"
         },
         {
             "type": "question",
@@ -359,10 +357,28 @@
             "image": null
         },
         {
+            "type": "info",
+            "title": "Divergentie",
+            "text": "Divergentie is een belangrijk concept in signaaltransductie, waarbij **één signaal** kan leiden tot **meerdere reacties** binnen de cel. Dit fenomeen draagt bij aan de **diversiteit** en **flexibiliteit** van cellulaire responsen, waardoor cellen kunnen reageren op verschillende omgevingsstimuli.",
+            "image": "efficientie_door_divergentie.png"
+        },
+        {
+            "type": "info",
+            "title": "Convergentie",
+            "text": "Convergentie is een belangrijk concept in signaaltransductie, waarbij **meerdere signalen** samenkomen op één punt in de cel. Dit fenomeen stelt cellen in staat om **geïntegreerde reacties** te genereren op verschillende signalen, wat bijdraagt aan de **coördinatie** van cellulaire processen.",
+            "image": "convergentie.png"
+        },
+        {
             "type": "question",
             "question": "Hoe beïnvloeden de principes van convergentie en divergentie de regulatie van cellulaire processen?",
             "answer": "Convergentie laat meerdere signalen toe om op hetzelfde eiwit in te werken, wat de regulatie van complexe processen zoals metabolisme faciliteert. Divergentie maakt het mogelijk dat één signaal verschillende reacties kan initiëren, wat bijdraagt aan de flexibiliteit en aanpassingsvermogen van cellulaire responsen.",
             "image": null
+        },
+        {
+            "type": "info",
+            "title": "Desebsibilisatie",
+            "text": "Invullen",
+            "image": "desensibiliseren.png"
         }
         
     ]
