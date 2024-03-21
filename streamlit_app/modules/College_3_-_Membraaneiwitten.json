@@ -12,7 +12,7 @@
             "question": "Wat gebeurt er in het lumen?",
             "answers": {
                 "correct_answer": "Eiwitsynthese",
-                "incorrect_answers": [
+                "wrong_answers": [
                     "Vetzuursynthese",
                     "DNA-replicatie",
                     "Glycogeensynthese"
@@ -154,7 +154,7 @@
             "question": "Wat is **geen** voorbeeld van een lipide dat in het ER wordt gesynthetiseerd?",
             "answers": {
                 "correct_answer": "Glycogeen",
-                "incorrect_answers": [
+                "wrong_answers": [
                     "Fosfolipiden",
                     "Cholesterol",
                     "Glycolipiden"
@@ -172,7 +172,7 @@
             "question": "Wat is een voorbeeld van een vetzuur dat uit de voeding wordt opgenomen?",
             "answers": {
                 "correct_answer": "Omega-3 vetzuren",
-                "incorrect_answers": [
+                "wrong_answers": [
                     "Omega-6 vetzuren",
                     "Transvetzuren",
                     "Verzadigde vetzuren"
