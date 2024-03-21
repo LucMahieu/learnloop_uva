@@ -290,7 +290,7 @@
         {
             "type": "info",
             "title": "Retrograde transport",
-            "text": "Retrograde transport is een proces in cellen waarbij materialen van de plasmamembraan of van buiten de cel worden teruggestuurd naar het **endoplasmatisch reticulum (ER)** of het **Golgi-apparaat**. Dit mechanisme wordt gebruikt voor recycling van componenten en bespaart energie door het verminderen van de noodzaak voor nieuwe synthese.",
+            "text": "Retrograde transport is een proces in cellen waarbij materialen van de plasmamembraan of van buiten de cel worden teruggestuurd naar het **endoplasmatisch reticulum (ER)** via het **Golgi-apparaat**. Dit mechanisme wordt gebruikt voor recycling van componenten en bespaart energie door het verminderen van de noodzaak voor nieuwe synthese.",
             "image": "retrograde_transport.png"
         },
         {
@@ -312,6 +312,24 @@
         },
         {
             "type": "info",
+            "title": "Secretieroute van vesicles",
+            "text": "Vesicles worden gebruikt in de **consecutieve secretieroute** van het **endoplasmatisch reticulum** naar het **Golgi-apparaat** en vervolgens naar het **celmembraan**. Vesicles zijn essentieel voor het transport van eiwitten en lipiden tussen organellen en voor de secretie van stoffen uit de cel. Vesicles worden gevormd door het endoplasmatisch reticulum en het Golgi-apparaat en worden getransporteerd door het **cytoskelet**.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Lysosomen",
+            "text": "Lysosomen zijn **organellen** in cellen die verantwoordelijk zijn voor de **afbraak** van verschillende moleculen, zoals eiwitten, lipiden en koolhydraten. Ze bevatten **enzymen** die helpen bij de **vertering** van deze moleculen en spelen een cruciale rol bij de **recycling** van celcomponenten.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van lysosomen in de cel?",
+            "answer": "Lysosomen zijn organellen die verantwoordelijk zijn voor de afbraak van moleculen (1 punt), zoals eiwitten, lipiden en koolhydraten (1 punt), en spelen een rol bij de recycling van celcomponenten (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
             "title": "Cytoskelet",
             "text": "Het cytoskelet is een netwerk van **eiwitvezels** binnen de cel dat verschillende functies vervult, waaronder het geven van **vorm en stevigheid** aan de cel en het **faciliteren van transport**. Voor het vesicle transport zijn de motorprote\u00c3\u00afnen **kinesine en dyne\u00c3\u00afne** essentieel, die vesicles langs de microtubuli van het cytoskelet verplaatsen. Kinesine transporteert naar de plus kan van de microtubuli en dyne\u00c3\u00afne transporteert vesicles naar de min kant van de microtubuli van het cytoskelet. ",
             "image": "dyneine_kinesine.png"
@@ -325,7 +343,7 @@
         {
             "type": "question",
             "question": "In welke richting transporteren kinesine en dyne\u00c3\u00afne vesicles langs het cytoskelet?",
-            "answer": "Kinesine transporteert naar de plus kan van de microtubuli en dyne\u00c3\u00afne transporteert vesicles naar de min kant van de microtubuli van het cytoskelet (1 punt).",
+            "answer": "Kinesine transporteert naar de plus kant van de microtubuli (1 punt) en dyne\u00c3\u00afne transporteert vesicles naar de min kant van de microtubuli van het cytoskelet (1 punt).",
             "image": null
         },
         {
@@ -345,6 +363,17 @@
             "question": "Wat is het verschil tussen het cis- en trans-gedeelte van het Golgi-apparaat?",
             "answer": "Het cis-gedeelte van het Golgi-apparaat is de zijde die vesicles ontvangt (1 punt), terwijl het trans-gedeelte de zijde is die vesicles verzendt naar hun bestemming (1 punt).",
             "image": null
+        },
+        {
+            "type": "info",
+            "title": "Eiwitcoating van vesikels",
+            "text": "Vesicles worden omhuld door **eiwitcoatings** die helpen bij hun vorming en transport binnen de cel. Deze eiwitcoatings, zoals **clathrine** en **COPII**, spelen een cruciale rol bij het herkennen van de inhoud van de vesicles en het richten ervan naar de juiste locatie.",
+            "image": "eiwit-coating_overview.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van eiwitcoatings zoals clathrine en COPII?",
+            "answer": "Eiwitcoatings helpen bij de vorming (1 punt) en het transport van vesicles binnen de cel (1 punt)."
         }
     ]
 }
