@@ -258,7 +258,7 @@
             "image": null
         },
         {
-            " type": "question",
+            "type": "question",
             "question": "Wat is de functie van flippase?",
             "answer": "Flippase verplaatst selectief vetzuren om de asymmetrie van de membraan te behouden (1 punt).",
             "image": null
@@ -296,7 +296,8 @@
         {
             "type": "question",
             "question": "Waarom wordt retrograde transport beschouwd als een effici\u00ebnte manier om energie te besparen?",
-            "answer": "Retrograde transport wordt beschouwd als een effici\u00ebnte manier om energie te besparen omdat het de recycling van cellulaire componenten mogelijk maakt (1 punt), waardoor het niet nodig is om deze componenten opnieuw te synthetiseren (1 punt)."
+            "answer": "Retrograde transport wordt beschouwd als een effici\u00ebnte manier om energie te besparen omdat het de recycling van cellulaire componenten mogelijk maakt (1 punt), waardoor het niet nodig is om deze componenten opnieuw te synthetiseren (1 punt).",
+            "image": null
         },
         {
             "type": "info",
