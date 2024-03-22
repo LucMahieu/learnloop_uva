@@ -231,7 +231,8 @@
         {
             "type": "question",
             "question": "Wat is de rol van structurele lipiden in de membraanstructuur?",
-            "answer": "Structurele lipiden vormen de ruggengraat van celmembranen (1 punt) en zorgen voor integriteit en flexibiliteit van de membraan (1 punt)."
+            "answer": "Structurele lipiden vormen de ruggengraat van celmembranen (1 punt) en zorgen voor integriteit en flexibiliteit van de membraan (1 punt).",
+            "image": null
         },
         {
             "type": "info",
@@ -374,7 +375,8 @@
         {
             "type": "question",
             "question": "Wat is de functie van eiwitcoatings zoals clathrine en COPII?",
-            "answer": "Eiwitcoatings helpen bij de vorming (1 punt) en het transport van vesicles binnen de cel (1 punt)."
+            "answer": "Eiwitcoatings helpen bij de vorming (1 punt) en het transport van vesicles binnen de cel (1 punt).",
+            "image": null
         }
     ]
 }
