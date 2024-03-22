@@ -877,6 +877,22 @@ def initialise_database():
         )
 
 
+def initialise_module_in_database(module):
+    """
+    Adds a new module to the database without resetting the rest of the database.
+    """
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$set":
+         {f"progress.{module}": {
+                "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
+                "practice": {"segment_index": -1,
+                                "ordered_segment_sequence": [],
+                            }}
+        }}
+    )
+
+
 def determine_if_to_initialise_database():
     """
     Determine if currently testing, if the progress is saved, or if all modules are included
@@ -905,7 +921,7 @@ def determine_if_to_initialise_database():
     
     for module in st.session_state.modules:
         if module not in user["progress"]:
-            initialise_database()
+            initialise_module_in_database(module)
             return
 
 
