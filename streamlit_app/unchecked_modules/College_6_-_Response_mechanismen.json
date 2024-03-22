@@ -15,8 +15,8 @@
         },
         {
             "type": "info",
-            "title": "Acetylcholine en G-prote\u00efne gekoppelde receptoren",
-            "text": "Acetylcholine is een neurotransmitter die verschillende functies in het lichaam uitoefent afhankelijk van het type receptor waaraan het bindt. Wanneer acetylcholine bindt aan **G-prote\u00efne gekoppelde receptoren** in het hart, leidt dit tot een verlaging van de hartslag. In speekselklieren stimuleert het de secretie en in skeletspieren veroorzaakt het contractie via een acetylcholine gekoppelde receptor.",
+            "title": "Acetylcholine activeert verschillende receptoren in verschillende cellen",
+            "text": "Acetylcholine is een signaalmolecuul dat verschillende functies in het lichaam uitoefent afhankelijk van het type receptor waaraan het bindt. Wanneer acetylcholine bindt aan **G-prote\u00efne gekoppelde receptoren** (GPCR) in het hart, leidt dit tot een verlaging van de hartslag. In speekselklieren stimuleert het via een GPCR de secretie en in skeletspieren veroorzaakt het contractie via een acetylcholine geactiveerd ionenkanaal.",
             "image": "g_gekoppelde_proteinen_verschillende_reacties.png"
         },
         {
@@ -28,12 +28,12 @@
         {
             "type": "info",
             "title": "Concentratieafhankelijke signalen en morfogenen",
-            "text": "Concentratieafhankelijke signalen spelen een cruciale rol in de ontwikkelingsbiologie. **Morfogenen** zoals Sonic Hedgehog be\u00efnvloeden de celontwikkeling en het lot van cellen in een embryo door verschillende reacties uit te lokken, afhankelijk van hun concentratiegradi\u00ebnt.",
+            "text": "Concentratieafhankelijke signalen spelen een cruciale rol in de ontwikkelingsbiologie. **Morfogenen** zoals Sonic Hedgehog (SHH) be\u00efnvloeden de celontwikkeling en het lot van cellen in een embryo door verschillende reacties uit te lokken, afhankelijk van de concentratiegradi\u00ebnt van SHH.",
             "image": "morfogen_gradient.png"
         },
         {
             "type": "question",
-            "question": "Hoe be\u00efnvloeden morfogenen zoals Sonic Hedgehog de celontwikkeling tijdens embryogenese?",
+            "question": "Hoe kan een morfogen zoals Sonic Hedgehog de verschillende cellen tot verschillende differentiatiepaden aanzetten tijdens embryogenese?",
             "answer": "Morfogenen zoals Sonic Hedgehog veroorzaken verschillende celontwikkelingen afhankelijk van hun concentratie (1 punt), wat essentieel is voor de juiste vorming en differentiatie van weefsels tijdens embryogenese (1 punt).",
             "image": null
         },
@@ -45,51 +45,57 @@
         },
         {
             "type": "question",
-            "question": "Wat bepaalt de halfwaardetijd van signalen en wat zijn de gevolgen ervan voor cellulaire processen?",
+            "question": "Wat is het effect van verschillen in de halfwaardetijd van signalen en wat zijn de gevolgen ervan voor cellulaire processen?",
             "answer": "De halfwaardetijd van signalen bepaalt of een signaal langdurige (1 punt) of kortstondige effecten (1 punt) heeft op cellulaire processen.",
             "image": null
         },
         {
             "type": "info",
             "title": "Signaaltransductieroutes",
-            "text": "Signaaltransductieroutes zijn processen waarbij een biologisch signaal wordt omgezet in een functionele respons in een cel. Deze routes zijn essentieel voor cellen om externe signalen te interpreteren en erop te reageren. Het begrijpen van de **duur van signalen** is belangrijk omdat dit de sterkte en het type celreactie kan be\u00c3\u00afnvloeden. Verschillende signalen kunnen snel veranderende of langdurige effecten hebben, afhankelijk van hun chemische aard en de receptorinteracties.",
+            "text": "Signaaltransductieroutes zijn processen waarbij een biologisch signaal wordt omgezet in een functionele respons in een cel. Deze routes zijn essentieel voor cellen om externe signalen te interpreteren en erop te reageren. Verschillende signalen kunnen snelle, kortdurende effecten of langdurige effecten hebben, afhankelijk van hun chemische aard en de de signaaltransductieketen.",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Doelwitten van Signaaltransductieroutes",
+            "text": "De doelwitten van signaaltransductieroutes zijn de **uiteindelijke effectoren** in de cel die veranderingen veroorzaken als gevolg van het signaal. Dit kunnen enzymen zijn, genregulatoire eiwitten, of structurele eiwitten die bijvoorbeeld de celvorm of -beweging be\u00efnvloeden.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Waarom is het belangrijk om de duur van signalen in signaaltransductieroutes te begrijpen?",
-            "answer": "Het is belangrijk om de duur van signalen te begrijpen omdat dit invloed heeft op de **sterkte (1 punt)** en het **type respons (1 punt)** die de cel vertoont.",
+            "question": "Waarom is het belangrijk om de snelheid en duur van een signaaltransductieroute te begrijpen?",
+            "answer": "Het is belangrijk om de snelheid en duur van signalen te begrijpen omdat dit invloed heeft op de **sterkte (1 punt)** en het **type respons (1 punt)** die de cel vertoont.",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn enkele voorbeelden van doelwitten die be\u00efnvloed worden door signaaltransductieroutes?",
+            "answer": "Doelwitten van signaaltransductieroutes omvatten enzymen die metabole routes activeren (1 punt), genregulatoire eiwitten die genexpressie be\u00efnvloeden (1 punt), en structurele eiwitten die celvorm of -beweging veranderen (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Receptoren en G-prote\u00c3\u00afnen",
-            "text": "Receptoren zijn gespecialiseerde eiwitten op het celoppervlak of in de cel die externe signalen herkennen en binden. G-prote\u00c3\u00afnen zijn moleculaire schakelaars die betrokken zijn bij het overbrengen van signalen van deze receptoren naar andere delen van de cel. Er zijn twee hoofdtypen receptoren: **ionkanalen** en **G-prote\u00c3\u00afne gekoppelde receptoren**. G-prote\u00c3\u00afne gekoppelde receptoren werken samen met heterotrimeer G-prote\u00c3\u00afnen, die bestaan uit subunits genaamd **G-alpha, G-beta en G-gamma**. Deze subunits spelen verschillende rollen in de activering van de receptoren en het starten van de signaaltransductieroutes.",
+            "text": "Receptoren zijn gespecialiseerde eiwitten op het celoppervlak of in de cel die externe signalen herkennen en binden. G-prote\u00c3\u00afnen zijn moleculaire schakelaars die betrokken zijn bij het overbrengen van signalen van deze receptoren naar andere delen van de cel. Er zijn drie klassen membraanreceptoren: **ionkanalen** en **G-prote\u00c3\u00afne gekoppelde receptoren** en **enzym-gekoppelde receptoren**. G-prote\u00c3\u00afne gekoppelde receptoren werken samen met heterotrimeer G-prote\u00c3\u00afnen, die bestaan uit subunits genaamd **G-alpha, G-beta/G-gamma**. Deze subunits spelen verschillende rollen in het doorgeven van het signaal in de transductieketen.",
             "image": "ion_kanaal_gekoppelde_receptoren.png"
         },
         {
             "type": "question",
-            "question": "Wat zijn de rollen van G-alpha, G-beta en G-gamma in G-prote\u00c3\u00afne gekoppelde receptoren?",
-            "answer": "De subunits G-alpha, G-beta en G-gamma van heterotrimeer G-prote\u00c3\u00afnen hebben verschillende rollen in de activering van **G-prote\u00c3\u00afne gekoppelde receptoren (1 punt)** en het initi\u00c3\u00abren van **signaaltransductieroutes (1 punt)**.",
+            "question": "Wat zijn de rollen van G-alpha, G-beta/G-gamma in G-prote\u00c3\u00afne gekoppelde receptoren?",
+            "answer": "De subunits G-alpha, G-beta en G-gamma van heterotrimeer G-prote\u00c3\u00afnen kunnen het signaal doorgeven naar andere delen van de signaal transductie keten of effectoren (1 punt). ",
             "image": null
         },
         {
             "type": "info",
             "title": "Receptortypen",
-            "text": "In de celbiologie zijn receptoren eiwitten die signalen van buiten de cel kunnen ontvangen en doorgeven. Er zijn voornamelijk twee typen: **ionkanalen** en **G-prote\u00efne gekoppelde receptoren**. Ionkanalen laten specifieke ionen door de celmembraan passeren, terwijl G-prote\u00efne gekoppelde receptoren signalen overdragen via een proces dat G-prote\u00efne signalering wordt genoemd.",
+            "text": "In de celmembraan zitten oppervlaktereceptoren die signalen van buiten de cel kunnen ontvangen en doorgeven. Er zijn drie klassen: **ionkanalen**, enzymgekoppelde recptoren en **G-prote\u00efne gekoppelde receptoren**. Ionkanalen laten specifieke ionen door de celmembraan passeren, terwijl G-prote\u00efne gekoppelde receptoren signalen overdragen via een proces dat G-prote\u00efne signalering wordt genoemd. Enzym gekoppelde receptoren zijn transmembraaneiwitten die na dimerisatie enzymactiviteit stimuleren. Dit gebeurt via fosforylering van andere eiwitten of via activatie van Fosfolipase C of PI-3-kinase.",
             "image": "ion_kanaal_gekoppelde_receptoren.png"
         },
         {
             "type": "question",
-            "question": "Welke twee hoofdtypen receptoren worden onderscheiden in de celbiologie?",
-            "answer": "De twee hoofdtypen receptoren zijn ionkanalen (1 punt) en G-prote\u00efne gekoppelde receptoren (1 punt).",
+            "question": "Welke drie hoofdtypen receptoren worden onderscheiden in de celbiologie?",
+            "answer": "De drie hoofdtypen receptoren zijn ionkanalen (1 punt), G-prote\u00efne gekoppelde receptoren (1 punt) en enzym-gekoppelde receptoren (1 punt).",
             "image": null
-        },
-        {
-            "type": "info",
-            "title": "G-prote\u00efne gekoppelde receptorstructuur",
-            "text": "Een **G-prote\u00efne gekoppelde receptor** is een type **transmembraan receptor** dat signalen van buiten de cel opvangt en deze omzet in cellulaire reacties. Deze receptoren werken samen met een **heterotrimeer G-prote\u00efne**, een complex bestaande uit drie subunits: G-alpha, G-beta, en G-gamma, die elk een specifieke rol spelen in de signaaltransductie.",
-            "image": "g-proteine_gekoppelde_receptoren.png"
         },
         {
             "type": "question",
@@ -100,7 +106,7 @@
         {
             "type": "info",
             "title": "Heterotrimeer G-prote\u00c3\u00afne subunits",
-            "text": "Heterotrimeer G-prote\u00c3\u00afnen bestaan uit drie subunits: **G-alpha**, **G-beta**, en **G-gamma**. Elke subunit heeft een specifieke rol in de signaaltransductie. G-alpha kan binden en hydrolyseren van GTP, terwijl G-beta en G-gamma een complex vormen dat kan interageren met andere moleculen in de cel.",
+            "text": "Heterotrimeer G-prote\u00c3\u00afnen bestaan uit drie subunits: **G-alpha**, **G-beta**, en **G-gamma**. Elke subunit heeft een specifieke rol in de signaaltransductie. G-alpha kan GTP binden en hydrolyseren, terwijl G-beta en G-gamma een complex vormen dat kan interacteren met andere eiwitten in de cel.",
             "image": "g-proteine_gekoppelde_receptoren.png"
         },
         {
@@ -112,37 +118,37 @@
         {
             "type": "info",
             "title": "Activering van G-prote\u00c3\u00afne gekoppelde receptoren",
-            "text": "De activering van G-prote\u00c3\u00afne gekoppelde receptoren gebeurt door de **uitwisseling van GDP voor GTP** op de G-alpha subunit. Dit leidt tot een conformationele verandering in het G-prote\u00c3\u00afne, waardoor het kan interageren met en activeren van **downstream effectoren** zoals enzymen en ionkanalen die cellulaire reacties veroorzaken.",
+            "text": "De activering van G-prote\u00c3\u00afne gekoppelde receptoren gebeurt wanneer een ligand bindt aan de transmembraan receptor, hetgeen leidt tot de **uitwisseling van GDP voor GTP** op de G-alpha subunit. Dit leidt tot een conformationele verandering in het G-prote\u00c3\u00afne, waardoor het kan interacteren met **downstream effectoren** zoals enzymen en ionkanalen die cellulaire reacties veroorzaken.",
             "image": "activatie_g_proteine_gekoppelde_receptoren.png"
         },
         {
             "type": "question",
             "question": "Hoe worden G-prote\u00c3\u00afne gekoppelde receptoren geactiveerd?",
-            "answer": "G-prote\u00c3\u00afne gekoppelde receptoren worden geactiveerd door de uitwisseling van GDP voor GTP op de G-alpha subunit (1 punt), wat leidt tot activering van downstream effectoren (1 punt).",
+            "answer": "G-prote\u00c3\u00afne gekoppelde receptoren worden geactiveerd door binding van de ligand aan de transmembraan receptor hetgeen leidt tot de uitwisseling van GDP voor GTP op de G-alpha subunit (1 punt), wat leidt tot activering van downstream effectoren (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "GTP-bindende eiwitten",
-            "text": "GTP-bindende eiwitten zijn belangrijk in het proces van signaaltransductie binnen cellen. Deze eiwitten worden geactiveerd door **guanine nucleotide exchange factors (GEFs)**, die de binding van GTP aan het eiwit bevorderen. Eenmaal geactiveerd kunnen ze verschillende cellulaire reacties teweegbrengen. Wanneer het GTP vervolgens gehydrolyseerd wordt tot GDP, worden deze eiwitten gedeactiveerd door **GTPase-activating proteins (GAPs)**, waardoor hun activiteit wordt be\u00ebindigd.",
+            "text": "GTP-bindende eiwitten zijn belangrijk in het proces van signaaltransductie binnen cellen. Deze eiwitten worden geactiveerd door **guanine nucleotide exchange factors (GEFs)**, die de binding uitwisseling van GDP voor van GTP aan het G-eiwit bevorderen. Eenmaal geactiveerd kunnen ze verschillende cellulaire reacties teweegbrengen. Wanneer **GTPase-activating proteins (GAPs)** de intrisieke GTPase activiteit van het G-protein activeren wordt het GTP vervolgens gehydrolyseerd wordt tot GDP, worden deze eiwitten gedeactiveerd door **GTPase-activating proteins (GAPs)**, waardoor hun activiteit wordt be\u00ebindigd.",
             "image": "GEF_GAP_G-proteine.png"
         },
         {
             "type": "question",
             "question": "Hoe worden GTP-bindende eiwitten geactiveerd en gedeactiveerd?",
-            "answer": "GTP-bindende eiwitten worden geactiveerd door GEFs (1 punt), die de binding van GTP aan het eiwit bevorderen, en gedeactiveerd door GAPs (1 punt), die de hydrolyse van GTP naar GDP stimuleren.",
+            "answer": "GTP-bindende eiwitten worden geactiveerd door GEFs (1 punt), die de uitwisseling van GDP voor GTP aan het eiwit bevorderen, en gedeactiveerd door GAPs (1 punt), die de hydrolyse van GTP naar GDP stimuleren.",
             "image": null
         },
         {
             "type": "info",
             "title": "Cyclisch AMP als tweede boodschapper",
-            "text": "Cyclisch AMP (cAMP) is een **tweede boodschapper** die betrokken is bij veel signaaltransductieprocessen. Het wordt geproduceerd door het enzym **adenylcyclase** en speelt een rol in de activering van **prote\u00efnekinase A (PKA)**. Eenmaal geactiveerd, kan PKA de **genexpressie** en **eiwitsynthese** moduleren.",
+            "text": "Cyclisch AMP (cAMP) is een **tweede boodschapper** die betrokken is bij veel signaaltransductieprocessen. Het wordt geproduceerd door het enzym **adenylcyclase** en speelt een rol in de activering van **prote\u00efnekinase A (PKA)**. Eenmaal geactiveerd, kan PKA onder andere de **genexpressie** moduleren. cAMP wordt afgebroken door het enzym cAMP-fosfodi\u00c3\u00absterase, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle beëindiging van het cAMP signaal",
             "image": "cAMP_second_messenger.png"
         },
         {
             "type": "question",
             "question": "Wat is de rol van cyclisch AMP in cellulaire signaaltransductie?",
-            "answer": "Cyclisch AMP fungeert als een tweede boodschapper (1 punt) die wordt geproduceerd door adenylcyclase (1 punt) en betrokken is bij de activering van PKA (1 punt), wat genexpressie en eiwitsynthese be\u00efnvloedt (1 punt).",
+            "answer": "Cyclisch AMP fungeert als een tweede boodschapper (1 punt) die wordt geproduceerd door adenylcyclase (1 punt) en betrokken is bij de activering van PKA (1 punt), die genexpressie be\u00efnvloedt (1 punt).",
             "image": null
         },
         {
@@ -153,74 +159,50 @@
         },
         {
             "type": "question",
-            "question": "Hoe zijn G-prote\u00efne gekoppelde receptoren betrokken bij geurwaarneming?",
-            "answer": "G-prote\u00efne gekoppelde receptoren in geurreceptorcellen detecteren geurmoleculen (1 punt) en initi\u00ebren een signaaltransductieproces dat resulteert in geurwaarneming (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Neuronale Activatie",
-            "text": "Neuronale activatie is een proces waarbij **neuronen** een elektrisch signaal genereren en versturen. Dit begint met een **verandering in membraanpotentiaal** door de instroom van **natriumionen (Na+)**, wat leidt tot **depolarisatie** van het neuron. Als de depolarisatie een bepaald drempelniveau bereikt, wordt een **actiepotentiaal** gegenereerd, een sterke elektrische impuls die langs het axon van het neuron reist.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Hoe leidt de instroom van natriumionen tot neuronale activatie?",
-            "answer": "De instroom van natriumionen (Na+) veroorzaakt depolarisatie van het neuron (1 punt), en bij het bereiken van een drempelniveau wordt een actiepotentiaal gegenereerd (1 punt).",
+            "question": "Welke klasse receptoren is betrokken bij geurwaarneming?",
+            "answer": "G-prote\u00efne gekoppelde receptoren in geurreceptorcellen detecteren geurmoleculen (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Geur en Smaak",
-            "text": "De waarneming van geur en smaak is een complex proces waarbij **cyclisch AMP (cAMP)** een centrale rol speelt. cAMP is betrokken bij de **depolarisatie van sensorische cellen**, wat leidt tot de overdracht van signalen naar de hersenen. De perceptie van verschillende smaken, zoals die van peper, menthol en mosterd, wordt bepaald door verschillende **receptoren** die reageren op deze stoffen.",
+            "text": "De waarneming van geur en smaak is een complex proces waarbij **cyclisch AMP (cAMP)** een centrale rol speelt. cAMP is betrokken bij activatie van cAMP-gated ionenkanalen die de **depolarisatie van sensorische cellen** verzorgen, wat leidt tot de overdracht van signalen naar de hersenen.",
             "image": "geurwaarneming_receptoren.png"
         },
         {
             "type": "question",
             "question": "Hoe draagt cyclisch AMP (cAMP) bij aan de waarneming van geur en smaak?",
-            "answer": "Cyclisch AMP (cAMP) draagt bij aan de waarneming van geur en smaak door de depolarisatie van sensorische cellen te faciliteren (1 punt), wat resulteert in het doorgeven van signalen aan de hersenen (1 punt).",
+            "answer": "Cyclisch AMP (cAMP) draagt bij aan de waarneming van geur en smaak door via activatie van cAMP-gated ionenkanalen depolarisatie van sensorische cellen te faciliteren (1 punt), wat resulteert in het doorgeven van signalen aan de hersenen (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Cyclisch GMP",
-            "text": "Cyclisch GMP (cGMP) is een ander type **second messenger** dat een rol speelt in diverse **signaalpaden**. Het wordt geproduceerd door enzymen zoals **guanylaatcyclase** en be\u00efnvloedt verschillende **cellulaire processen** en **fysiologische reacties**, zoals spiercelontspanning en fototransductie in visuele cellen.",
+            "text": "Cyclisch GMP (cGMP) is een ander type **second messenger** dat een rol speelt in diverse **signaalpaden**. Het wordt geproduceerd door het enzym **guanylaatcyclase** en be\u00efnvloedt verschillende **cellulaire processen** en **fysiologische reacties**, zoals spiercelontspanning en fototransductie in visuele cellen. cGMP wordt afgebroken door het enzym cGMP-fosfodi\u00c3\u00absterase, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle beeindiging van het cGMP signaal ",
             "image": null
         },
         {
             "type": "question",
-            "question": "Wat zijn de belangrijkste functies van cyclisch GMP in cellulaire signaalpaden?",
+            "question": "Wat is de functie van cyclisch GMP in cellulaire signaalpaden?",
             "answer": "Cyclisch GMP fungeert als een second messenger in cellulaire signaalpaden (1 punt), be\u00efnvloedt een verscheidenheid aan cellulaire processen (1 punt), en wordt geproduceerd door enzymen zoals guanylaatcyclase (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Fototransductie",
-            "text": "Fototransductie is het proces waarbij lichtsignalen omgezet worden in elektrische signalen in de fotoreceptoren van het oog. Dit proces begint met de **activatie van G-prote\u00c3\u00afne gekoppelde receptoren**, die een cascade van biochemische reacties in gang zetten. Een belangrijk enzym in dit proces is **fosfodi\u00c3\u00absterase**, dat de concentratie van **cyclisch GMP (cGMP)** verlaagt. De verlaging van cGMP is cruciaal voor het sluiten van ionenkanalen en het cre\u00c3\u00abren van een elektrisch signaal dat uiteindelijk naar de hersenen wordt gestuurd.",
+            "text": "Fototransductie is het proces waarbij lichtsignalen omgezet worden in elektrische signalen in de fotoreceptoren van het oog. Dit proces begint met de **activatie van G-prote\u00c3\u00afne gekoppelde receptoren**, die een cascade van biochemische reacties in gang zetten. Een belangrijk enzym in dit proces is **fosfodi\u00c3\u00absterase**, dat de concentratie van **cyclisch GMP (cGMP)** verlaagt. De verlaging van cGMP is cruciaal voor het sluiten van ionenkanalen en het verminderen van het elektrisch signaal dat naar de hersenen wordt gestuurd.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is fototransductie en welke rol speelt fosfodi\u00c3\u00absterase hierin?",
-            "answer": "Fototransductie is het omzetten van lichtsignalen naar elektrische signalen in de ogen (1 punt), waarbij fosfodi\u00c3\u00absterase de concentratie van cyclisch GMP verlaagt (1 punt).",
+            "answer": "Fototransductie is het omzetten van lichtsignalen naar elektrische signalen in de ogen (1 punt), waarbij fosfodi\u00c3\u00absterase de concentratie van cyclisch GMP verlaagt (1 punt) zodat er minder signalen naar de hersenen gestuurd worden.",
             "image": null
         },
         {
             "type": "info",
             "title": "Signaalversterking",
-            "text": "**Signaalversterking** is een fenomeen waarbij \u00c3\u00a9\u00c3\u00a9n signaalmolecuul een grote respons kan genereren. Dit gebeurt vaak in signaaltransductiepaden waarbij second messengers zoals **cyclisch AMP (cAMP)** of **cyclisch GMP (cGMP)** betrokken zijn. In het geval van fototransductie zorgt de verlaging van cGMP-niveaus voor een proportioneel grotere verandering in het elektrische signaal dat naar de hersenen wordt gestuurd.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Hoe draagt signaalversterking bij aan de fototransductie?",
-            "answer": "Signaalversterking zorgt ervoor dat een kleine verandering in cGMP-niveaus een groot elektrisch signaal kan produceren (1 punt), wat essentieel is voor het doorsturen van visuele informatie naar de hersenen (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Signaalversterking",
-            "text": "Signaalversterking is een proces waarbij een enkel signaalmolecuul een cascade van gebeurtenissen kan initi\u00c3\u00abren, resulterend in een groot effect. Dit wordt mogelijk gemaakt door **second messengers**, zoals **cyclisch AMP** (cAMP) en **cyclisch GMP** (cGMP), die de boodschap van het oorspronkelijke signaalmolecuul versterken en verspreiden.",
+            "text": "Signaalversterking is een proces waarbij een enkel signaalmolecuul een cascade van gebeurtenissen kan initi\u00c3\u00abren, resulterend in een groot effect. Dit wordt mogelijk gemaakt door **second messengers**, zoals **cyclisch AMP** (cAMP), **cyclisch GMP** (cGMP), IP3 en Calcium-ionen, die de boodschap van het oorspronkelijke signaalmolecuul versterken en verspreiden.",
             "image": null
         },
         {
@@ -232,25 +214,25 @@
         {
             "type": "info",
             "title": "Cyclisch GMP en fysiologische processen",
-            "text": "Cyclisch GMP (cGMP) is een belangrijke second messenger die diverse fysiologische processen reguleert. Het wordt geproduceerd door het enzym **guanylaatcyclase** en heeft onder andere een rol in **spiercelontspanning**. In bepaalde cellen, zoals die in de bloedvaten, wordt de productie van cGMP gestimuleerd door **stikstofoxide (NO)**, wat leidt tot vasodilatatie en een toename van de bloedstroom.",
+            "text": "Cyclisch GMP (cGMP) is een belangrijke second messenger die diverse fysiologische processen reguleert. Het wordt geproduceerd door het enzym **guanylaatcyclase** en heeft onder andere een rol in **spiercelontspanning** die leidt tot een erectie. In de endotheelcellen van de bloedvaten, wordt de productie van cGMP gestimuleerd door **stikstofoxide (NO)**, wat leidt tot vasodilatatie en een toename van de bloedstroom.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Hoe draagt cyclisch GMP bij aan spiercelontspanning en wat stimuleert zijn productie?",
+            "question": "Hoe draagt cyclisch GMP bij aan spiercelontspanning die leidt tot een erectie en wat stimuleert de productie van cGMP?",
             "answer": "Cyclisch GMP draagt bij aan spiercelontspanning door het signaal voor ontspanning te versterken (1 punt) en zijn productie wordt gestimuleerd door stikstofoxide (NO) (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "De rol van fosfodi\u00c3\u00absterase",
-            "text": "Fosfodi\u00c3\u00absterase is een enzym dat betrokken is bij het reguleren van de niveaus van second messengers zoals cGMP. Het enzym breekt cGMP af, waardoor de effecten ervan worden omgekeerd. In sommige gevallen kan de remming van fosfodi\u00c3\u00absterase worden gebruikt om bepaalde fysiologische processen, zoals een erectie, te verlengen door de niveaus van cGMP hoger te houden en zo de spiercelontspanning te versterken.",
+            "text": "Fosfodi\u00c3\u00absterase is een enzym dat betrokken is bij het reguleren van de niveaus van second messengers zoals cGMP. Het enzym breekt cGMP af, waardoor de effecten ervan worden be\u00c3\u00abindigd. In sommige gevallen kan de remming van fosfodi\u00c3\u00absterase worden gebruikt om bepaalde fysiologische processen, zoals een erectie, te verlengen door de niveaus van cGMP hoger te houden en zo de spiercelontspanning te versterken.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is de functie van fosfodi\u00c3\u00absterase in de regulatie van second messengers?",
-            "answer": "Fosfodi\u00c3\u00absterase breekt cyclisch GMP af (1 punt), waardoor het de niveaus van deze second messenger vermindert en de effecten omkeert (1 punt).",
+            "answer": "Fosfodi\u00c3\u00absterase breekt cyclisch GMP af (1 punt), waardoor de concentratie van deze second messenger wordt verlaagd en de effecten worden beëindigd (1 punt).",
             "image": null
         },
         {
@@ -267,44 +249,32 @@
         },
         {
             "type": "info",
-            "title": "Fosfodi\u00ebsterase en cyclisch GMP",
-            "text": "Fosfodi\u00ebsterase is een enzym dat de rol heeft om de effecten van **cyclisch GMP (cGMP)** om te keren. Door cGMP af te breken, wordt de spiercelontspanning verminderd, wat normaal gesproken zou leiden tot het afnemen van een erectie. Echter, de remming van fosfodi\u00ebsterase kan leiden tot een verlengde erectie doordat de afbraak van cGMP wordt tegengegaan.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van fosfodi\u00ebsterase in relatie tot cyclisch GMP en erecties?",
-            "answer": "Fosfodi\u00ebsterase breekt cyclisch GMP (cGMP) af (1 punt), wat normaal de spiercelontspanning en dus de erectie vermindert (1 punt). Remming van fosfodi\u00ebsterase kan leiden tot een verlengde erectie door de afbraak van cGMP te beperken (1 punt).",
+            "title": "Desensbiliseren van Signaaltransductie",
+            "text": "Desensbiliseren van signaaltransductie is een belangrijk proces dat ervoor zorgt dat cellen gepast kunnen reageren op signalen. **Desensbiliseren** is een mechanisme dat betrokken is bij het aanpassen van de celreactie door veranderingen in de receptor activiteit of in de daaropvolgende signaaltransductieketen.",
             "image": null
         },
         {
             "type": "info",
-            "title": "Regulatie van Signaaltransductie",
-            "text": "Regulatie van signaaltransductie is een belangrijk proces dat ervoor zorgt dat cellen gepast kunnen reageren op signalen. **Receptorregulatie** is een mechanisme dat betrokken is bij het aanpassen van de celreactie door veranderingen in de receptor activiteit.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Receptorregulatie",
-            "text": "Receptorregulatie omvat processen zoals **endocytose**, waarbij celreceptoren worden ingesloten en in de cel worden opgenomen, waardoor ze tijdelijk niet beschikbaar zijn voor signalen. Dit proces kan worden gestimuleerd door **fosforylering**, een chemische modificatie waarbij een fosfaatgroep wordt toegevoegd aan een eiwit, vaak leidend tot een verandering in de functie van het eiwit. Bovendien speelt de **binding van arrestine** aan receptoren een cruciale rol in het desensibiliseren van receptoren, waardoor ze geen signalen meer kunnen doorgeven.",
+            "title": "Desensbiliseren van receptoren",
+            "text": "Desensbiliseren omvat processen zoals **endocytose**, waarbij celreceptoren worden ingesloten en in de cel worden opgenomen, waardoor ze tijdelijk niet beschikbaar zijn voor signalen. Dit proces kan worden gestart door **fosforylering** van het intracellulaire domein, een chemische modificatie waarbij een fosfaatgroep wordt toegevoegd aan een eiwit. In dit geval zorgt **binding van arrestine** aan receptoren voor het initi\u00c3\u00abren van endocytose vesicles, die de receptor internaliseren.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Wat is receptorregulatie en welke processen zijn erbij betrokken?",
-            "answer": "Receptorregulatie is het aanpassen van de activiteit van celreceptoren om de cellulaire reactie op signalen te controleren (1 punt). Het omvat processen zoals endocytose door fosforylering (1 punt) en de binding van arrestine (1 punt).",
+            "question": "Wat is receptor desensibiliseren en welke processen zijn erbij betrokken?",
+            "answer": "Receptorregulatie is het aanpassen van de activiteit van celreceptoren om de cellulaire reactie op signalen te controleren (1 punt). Het omvat processen zoals endocytose door fosforylering (1 punt) en de binding van arrestine (1 punt), leidend tot de endocytose van de receptor.",
             "image": null
         },
         {
             "type": "info",
             "title": "Negatieve Feedback",
-            "text": "Negatieve feedback is een regulerend mechanisme waarbij de **activatie van een systeem leidt tot de productie van een uitkomst die het systeem weer uitschakelt**. Dit proces helpt bij het handhaven van de stabiliteit binnen biologische systemen door te voorkomen dat reacties overactief worden.",
+            "text": "Negatieve feedback is een regulerend mechanisme waarbij de **activatie van een systeem leidt tot de productie van een uitkomst die het systeem weer uitschakelt**. Dit proces helpt bij het handhaven van de stabiliteit binnen biologische systemen om te zorgen dat reacties snel be\u00c3\u00abindigd worden of te voorkomen dat reacties overactief worden.",
             "image": null
         },
         {
             "type": "question",
             "question": "Wat is de functie van negatieve feedback in biologische systemen?",
-            "answer": "De functie van negatieve feedback is het handhaven van stabiliteit door het uitschakelen van een systeem na activatie (1 punt), voorkomend dat reacties overactief worden (1 punt).",
+            "answer": "De functie van negatieve feedback is het handhaven van stabiliteit door het uitschakelen van een systeem na activatie (1 punt), voorkomend dat reacties overactief worden of om te zorgen dat reacties snel be\u00c3\u00abindigd worden (1 punt).",
             "image": null
         },
         {
@@ -321,32 +291,14 @@
         },
         {
             "type": "info",
-            "title": "Monomere G-prote\u00c3\u00afnen",
-            "text": "Monomere G-prote\u00c3\u00afnen zijn belangrijke moleculaire schakelaars binnen cellen. Ze zijn betrokken bij diverse processen zoals **nucleair transport**, **vesikeltransport**, en **cytoskeletreorganisatie**. Hun activiteit wordt gereguleerd door binding en hydrolyse van GTP (guanosinetrifosfaat).",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Welke drie hoofdfuncties hebben monomere G-prote\u00c3\u00afnen binnen de cel?",
-            "answer": "Monomere G-prote\u00c3\u00afnen zijn betrokken bij nucleair transport (1 punt), vesikeltransport (1 punt), en cytoskeletreorganisatie (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
             "title": "Celbeweging en structuurvorming",
-            "text": "G-prote\u00c3\u00afnen spelen een cruciale rol in celbeweging en structuurvorming door hun invloed op **stressfibers**, **lamellipodia**, en **filopodia**. Deze structuren zijn belangrijk voor de mobiliteit van de cel en de interactie met de extracellulaire matrix.",
+            "text": "G-proteïnen spelen een cruciale rol in celbeweging en structuurvorming door hun invloed op **stressfibers**, **lamellipodia**, en **filopodia**. Deze structuren zijn belangrijk voor de mobiliteit van de cel en de interactie met de extracellulaire matrix. Daarnaast zijn G-proteïne gekoppelde receptoren essentieel in cellulaire signalering. Ze detecteren moleculen buiten de cel en activeren interne signaaltransductieroutes, wat leidt tot een cellulaire reactie.",
             "image": null
         },
         {
             "type": "question",
             "question": "Hoe dragen G-prote\u00c3\u00afnen bij aan celbeweging en structuurvorming?",
             "answer": "G-prote\u00c3\u00afnen dragen bij aan celbeweging en structuurvorming door het reguleren van stressfibers (1 punt), lamellipodia (1 punt), en filopodia (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "G-prote\u00c3\u00afne Gekoppelde Receptoren",
-            "text": "G-prote\u00c3\u00afne gekoppelde receptoren (GPCRs) zijn een grote familie van **membraaneiwitten** die signalen van buiten de cel omzetten in cellulaire reacties. Deze receptoren zijn betrokken bij veel fysiologische processen en worden geactiveerd door een verscheidenheid aan liganden, zoals hormonen, neurotransmitters en licht. GPCRs werken door interactie met G-prote\u00c3\u00afnen, die het signaal binnen de cel verder overbrengen.",
             "image": null
         },
         {
@@ -377,18 +329,6 @@
             "type": "question",
             "question": "Wat is het doel van signaalversterking in cellulaire communicatie?",
             "answer": "Het doel van signaalversterking is om een klein aantal signaalmoleculen te veranderen in een grote cellulaire respons (1 punt), wat zorgt voor effici\u00ebntie en versterking van het signaal binnen de cel (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Doelwitten van Signaaltransductieroutes",
-            "text": "De doelwitten van signaaltransductieroutes zijn de **uiteindelijke effectoren** in de cel die veranderingen veroorzaken als gevolg van het signaal. Dit kunnen enzymen zijn, genregulatoire eiwitten, of structurele eiwitten die bijvoorbeeld de celvorm of -beweging be\u00efnvloeden.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat zijn enkele voorbeelden van doelwitten die be\u00efnvloed worden door signaaltransductieroutes?",
-            "answer": "Doelwitten van signaaltransductieroutes omvatten enzymen die metabole routes activeren (1 punt), genregulatoire eiwitten die genexpressie be\u00efnvloeden (1 punt), en structurele eiwitten die celvorm of -beweging veranderen (1 punt).",
             "image": null
         }
     ]
