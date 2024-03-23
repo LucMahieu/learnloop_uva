@@ -10,7 +10,14 @@
         {
             "type": "question",
             "question": "Wat zijn de verschillende soorten eiwit-coatings die betrokken zijn bij vesikelvorming en transport?",
-            "answer": "De verschillende soorten eiwit-coatings zijn COPI (1 punt), COPII (1 punt) en clathrin (1 punt).",
+            "answers": {
+                "correct_answer": "COPI, COPII en Clathrin",
+                "wrong_answers": [
+                    "COPII, RAB, COPI en SAR",
+                    "Clathrin, RAB en SAR",
+                    "COPI, RAB en Clathrin"
+                ]
+            },
             "image": null
         },
         {
@@ -22,7 +29,14 @@
         {
             "type": "question",
             "question": "Wat is endocytose?",
-            "answer": "Endocytose is het proces waarbij cellen materialen van buiten de cel opnemen in vesikels / endosomen (1 punt)",
+            "answers": {
+                "correct_answer": "Het proces waarbij cellen materialen van buiten de cel opnemen door delen van hun celmembraan naar binnen te vouwen en af te snoeren.",
+                "wrong_answers": [
+                    "Het proces waarbij cellen materialen van binnen de cel naar buiten afgeven door delen van hun celmembraan naar buiten te vouwen.",
+                    "Het proces waarbij cellen materialen van buiten de cel opnemen door delen van hun celmembraan naar buiten te vouwen.",
+                    "Het proces waarbij cellen materialen van binnen de cel naar buiten afgeven door delen van hun celmembraan naar binnen te vouwen."
+                ]
+            },
             "image": null
         },
         {
@@ -34,7 +48,14 @@
         {
             "type": "question",
             "question": "Wat is de rol van het cytoskelet in het vesikel transportproces?",
-            "answer": "Het cytoskelet biedt een route voor vesikels om met behulp van motorprote\u00EFnen naar hun bestemming binnen de cel te worden getransporteerd (1 punt).",
+            "answers": {
+                "correct_answer": "Het cytoskelet biedt structurele ondersteuning en is betrokken bij het transport van vesikels binnen de cel.",
+                "wrong_answers": [
+                    "Het cytoskelet is verantwoordelijk voor de synthese van vesikels in de cel.",
+                    "Het cytoskelet fungeert als een barrière die de beweging van vesikels binnen de cel beperkt.",
+                    "Het cytoskelet reguleert de grootte en vorm van vesikels in de cel."
+                ]
+            },
             "image": null
         },
         {
@@ -46,7 +67,14 @@
         {
             "type": "question",
             "question": "Wat houdt membraanafsnoering in?",
-            "answer": "Membraanafsnoering is het proces waarbij een deel van het celmembraan wordt afgesnoerd zodat een vesikel ontstaat (1 punt).",
+            "answers": {
+                "correct_answer": "Een deel van het celmembraan buigt en snoert zich af om een vesikel te vormen.",
+                "wrong_answers": [
+                    "Een vesikel wordt gevormd door de fusie van twee membranen.",
+                    "Een deel van het celmembraan wordt verwijderd om een vesikel te vormen.",
+                    "Een vesikel wordt getransporteerd door het cytoplasma naar zijn bestemming."
+                ]
+            },
             "image": null
         },
         {
@@ -58,7 +86,14 @@
         {
             "type": "question",
             "question": "Wat is de rol van SAR-1 in COPII vesikelvorming?",
-            "answer": "SAR-1 initieert de vorming van vesikels aan het ER-membraan door het rekruteren van noodzakelijke eiwitten (1 punt).",
+            "answers": {
+                "correct_answer": "SAR-1 initieert de vorming van COPII vesikels aan het ER.",
+                "wrong_answers": [
+                    "SAR-1 zorgt voor de fusie van COPII vesikels met het Golgi-apparaat.",
+                    "SAR-1 transporteert COPII vesikels naar het celmembraan.",
+                    "SAR-1 reguleert de grootte van COPII vesikels."
+                ]
+            },
             "image": null
         },
         {
@@ -70,7 +105,14 @@
         {
             "type": "question",
             "question": "Waar in de cel hebben COPII-vesikels een rol?",
-            "answer": "COPII-vesikels zijn verantwoordelijk voor het transporteren van vesikels van het ER naar het Golgi-apparaat (1 punt).",
+            "answers": {
+                "correct_answer": "COPII-vesikels transporteren materialen van het ER naar het Golgi-apparaat.",
+                "wrong_answers": [
+                    "COPII-vesikels transporteren materialen van het Golgi-apparaat naar het ER.",
+                    "COPII-vesikels transporteren materialen van het Golgi-apparaat naar het celmembraan.",
+                    "COPII-vesikels transporteren materialen van het celmembraan naar het ER."
+                ]
+            },
             "image": null
         },
         {
@@ -106,7 +148,14 @@
         {
             "type": "question",
             "question": "Wat zijn de fysieke kenmerken van COPII-vesikels?",
-            "answer": "COPII-vesikels zijn dichter en groter dan sommige andere typen vesikels (1 punt).",
+            "answers": {
+                "correct_answer": "Dichter en groter dan andere vesikels.",
+                "wrong_answers": [
+                    "Kleiner en lichter dan andere vesikels.",
+                    "Doorzichtiger en flexibeler dan andere vesikels.",
+                    "Zwaarder en langwerpiger dan andere vesikels."
+                ]
+            },
             "image": null
         },
         {
@@ -142,7 +191,14 @@
         {
             "type": "question",
             "question": "Welk type vesikels is verantwoordelijk voor de constitutieve secretieroute?",
-            "answer": " COPI-vesikels verzorgen de secretieroute die verloopt van het Golgi naar het plasmamembraan (1 punt).",
+            "answers": {
+                "correct_answer": "COPI-vesikels",
+                "wrong_answers": [
+                    "COPII-vesikels",
+                    "Clathrin-coated vesikels",
+                    "SAR-1 vesikels"
+                ]
+            },
             "image": null
         },
         {
