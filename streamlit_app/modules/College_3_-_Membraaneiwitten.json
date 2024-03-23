@@ -41,7 +41,14 @@
         {
             "type": "question",
             "question": "Hoe wordt de ori\u00EBntatie van een eiwit in het ER bepaald?",
-            "answer": "De ori\u00EBntatie van een eiwit in het ER wordt bepaald door de specifieke aminozuurvolgorde (1 punt) die functioneert als een adreslabel (1 punt).",
+            "answers": {
+                "correct_answer": "De ori\u00EBntatie van een eiwit in het ER wordt bepaald door de specifieke aminozuurvolgorde die functioneert als een adreslabel.",
+                "wrong_answers": [
+                    "De ori\u00EBntatie wordt willekeurig bepaald door de lipidensamenstelling van het ER-membraan.",
+                    "Het wordt bepaald door de temperatuur in het ER tijdens de eiwitsynthese.",
+                    "De ori\u00EBntatie is afhankelijk van de enzymatische activiteit in het Golgi-apparaat."
+                ]
+            },
             "image": null
         },
         {
@@ -99,7 +106,14 @@
         {
             "type": "question",
             "question": "Wat bepaalt of een transmembraaneiwit meerdere keren door het membraan gaat?",
-            "answer": "De passage van een transmembraaneiwit door het membraan wordt bepaald door de aanwezigheid van start- en stop- transfersequenties (1 punt) en de locatie van negatieve aminozuren hierin (1 punt)."
+            "answers": {
+                "correct_answer": "De passage van een transmembraaneiwit door het membraan wordt bepaald door de aanwezigheid van start- en stop-transfersequenties.",
+                "wrong_answers": [
+                    "Het wordt bepaald door de grootte en vorm van het eiwit.",
+                    "De frequentie van door het membraan gaan hangt af van de pH-waarde in de omgeving van het membraan.",
+                    "Het aantal passages is gerelateerd aan de hydrofobiciteit van het gehele eiwit."
+                ]
+            }
         },
         {
             "type": "info",
@@ -146,12 +160,19 @@
         {
             "type": "question",
             "question": "Waar en hoe vindt de synthese van lipiden plaats in het ER?",
-            "answer": "De synthese van lipiden vindt plaats aan de cytoplasmatische kant van het ER (1 punt)",
+            "answers": {
+                "correct_answer": "De synthese van lipiden vindt plaats aan de cytoplasmatische kant van het ER.",
+                "wrong_answers": [
+                    "Lipidensynthese gebeurt aan de binnenzijde van het ER, gebruikmakend van nucleaire enzymen.",
+                    "De synthese vindt plaats aan de buitenzijde van het ER met behulp van mitochondriale enzymen.",
+                    "Het proces gebeurt in het lumen van het ER, waar lipiden worden samengesteld uit glycoproteïnen."
+                ]
+            },
             "image": null
         },
         {
             "type": "question",
-            "question": "Wat is **geen** voorbeeld van een lipide dat in het ER wordt gesynthetiseerd?",
+            "question": "Wat is g\u00E9\u00E9n voorbeeld van een lipide dat in het ER wordt gesynthetiseerd?",
             "answers": {
                 "correct_answer": "Glycogeen",
                 "wrong_answers": [
@@ -201,6 +222,17 @@
         {
             "type": "question",
             "question": "Waar bevinden de vetzuurstaarten en de kopgroep van een vetzuur ten opzichte van het membraan?",
+            "answers": {
+                "correct_answer": "De vetzuurstaarten van lipiden bevinden zich in het binnenste van de membraan, en de kopgroep bevindt zich aan de buitenkant van het membraan.",
+                "wrong_answers": [
+                    "De vetzuurstaarten van lipiden bevinden zich aan de buitenkant van het membraan, en de kopgroep bevindt zich aan de binnenkant van het membraan."
+                ]
+            },
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Waar bevinden de vetzuurstaarten en de kopgroep van een vetzuur ten opzichte van het membraan?",
             "answer": "De vetzuurstaarten van lipiden bevinden zich in het binnenste van de membraan (1 punt), terwijl kopgroep zich bevindt aan de buitenkant van de membraan.",
             "image": null
         },
@@ -225,7 +257,14 @@
         {
             "type": "question",
             "question": "Wat is fosfatidylcholine en waar komt het voor?",
-            "answer": "Fosfatidylcholine is een structureel lipide dat veel voorkomt in celmembranen (1 punt) en bijdraagt aan de vorming en eigenschappen van de lipide bilaag (1 punt).",
+            "answers": {
+                "correct_answer": "Fosfatidylcholine is een structureel lipide dat veel voorkomt in celmembranen en bijdraagt aan de vorming en eigenschappen van de lipide bilaag.",
+                "wrong_answers": [
+                    "Fosfatidylcholine is een eiwit dat voornamelijk voorkomt in het cytoplasma en betrokken is bij celmetabolisme.",
+                    "Het is een type van nucleïnezuur dat deel uitmaakt van de genetische code in de celkern.",
+                    "Fosfatidylcholine is een soort koolhydraat dat essentieel is voor energieopslag in spierweefsel."
+                ]
+            },
             "image": null
         },
         {
@@ -258,9 +297,16 @@
             "image": null
         },
         {
-            " type": "question",
+            "type": "question",
             "question": "Wat is de functie van flippase?",
-            "answer": "Flippase verplaatst selectief vetzuren om de asymmetrie van de membraan te behouden (1 punt).",
+            "answers": {
+                "correct_answer": "Flippase verplaatst selectief vetzuren om de asymmetrie van de membraan te behouden.",
+                "wrong_answers": [
+                    "Flippase is betrokken bij het omklappen van DNA-sequentiestructuren tijdens transcriptie.",
+                    "Het dient als een enzym dat glucose omzet in fructose in de celmembraan.",
+                    "Flippase helpt bij het transport van ionen over de mitochondriale membraan."
+                ]
+            },
             "image": null
         },
         {
@@ -296,7 +342,15 @@
         {
             "type": "question",
             "question": "Waarom wordt retrograde transport beschouwd als een effici\u00ebnte manier om energie te besparen?",
-            "answer": "Retrograde transport wordt beschouwd als een effici\u00ebnte manier om energie te besparen omdat het de recycling van cellulaire componenten mogelijk maakt (1 punt), waardoor het niet nodig is om deze componenten opnieuw te synthetiseren (1 punt)."
+            "answers": {
+                "correct_answer": "Retrograde transport wordt beschouwd als een effici\u00ebnte manier om energie te besparen omdat het de recycling van cellulaire componenten mogelijk maakt, waardoor het niet nodig is om deze componenten opnieuw te synthetiseren.",
+                "wrong_answers": [
+                    "Omdat het sneller is dan anterograde transport, wat minder energie kost.",
+                    "Het vermindert de behoefte aan ATP door het gebruik van passief transport in plaats van actief transport.",
+                    "Retrograde transport genereert extra ATP, wat de energie-efficiëntie van de cel verhoogt."
+                ]
+            },
+            "image": null
         },
         {
             "type": "info",
@@ -329,6 +383,18 @@
             "image": null
         },
         {
+            "type": "question",
+            "question": "Wat is niet waar over lysosomen?",
+            "answers": {
+                "correct_answer": "Lysosomen zijn verantwoordelijk voor de productie van eiwitten in de cel.",
+                "wrong_answers": [
+                    "Lysosomen zijn verantwoordelijk voor de afbraak van moleculen.",
+                    "Lysosomen spelen een belangrijke rol in de recyling van celcomponenten."
+                ]
+            },
+            "image": null
+        },
+        {
             "type": "info",
             "title": "Cytoskelet",
             "text": "Het cytoskelet is een netwerk van **eiwitvezels** binnen de cel dat verschillende functies vervult, waaronder het geven van **vorm en stevigheid** aan de cel en het **faciliteren van transport**. Voor het vesicle transport zijn de motorprote\u00EFnen **kinesine en dyne\u00EFne** essentieel, die vesicles langs de microtubuli van het cytoskelet verplaatsen. Kinesine transporteert naar de plus kan van de microtubuli en dyne\u00EFne transporteert vesicles naar de min kant van de microtubuli van het cytoskelet. ",
@@ -354,8 +420,15 @@
         },
         {
             "type": "question",
-            "question": "Wat zijn de functies van het Golgi-apparaat?",
-            "answer": "Het Golgi-apparaat is verantwoordelijk voor het sorteren (1 punt) en distribueren van vesicles (1 punt) en heeft een cis- en trans-gedeelte voor het ontvangen en verzenden ervan (1 punt).",
+            "question": "Wat is geen functie van het Golgi-apparaat?",
+            "answers": {
+                "correct_answer": "Synthetiseren van eiwitten en lipiden",
+                "wrong_answers": [
+                    "Het sorteren van vesicles.",
+                    "Het distribueren van vesicles.",
+                    "Het verzenden van vesicles"
+                ]
+            },
             "image": null
         },
         {
