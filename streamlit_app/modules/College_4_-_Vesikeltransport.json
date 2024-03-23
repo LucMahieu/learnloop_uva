@@ -148,13 +148,20 @@
         {
             "type": "info",
             "title": "Fosfolipiden en vesikeladressering",
-            "text": "Fosfolipiden zijn zitten in celmembranen en vormen specifieke domeinen die helpen bij de landing van vesikels. Deze domeinen zorgen ervoor dat vesikels op de juiste locatie binnen de cel fuseren.",
+            "text": "Fosfolipiden zitten in celmembranen en vormen specifieke domeinen die helpen bij de landing van vesikels. Deze domeinen zorgen ervoor dat vesikels op de juiste locatie binnen de cel fuseren.",
             "image": "fosfolipiden_adreslabels.png"
         },
         {
             "type": "question",
             "question": "Wat is de rol van fosfolipiden in vesikeladressering?",
-            "answer": "Fosfolipiden vormen domeinen in het celmembraan (1 punt) voor het landen van vesikels op de juiste plek (1 punt).",
+            "answers": {
+                "correct_answer": "Fosfolipiden vormen domeinen in het celmembraan voor het landen van vesikels op de juiste plek.",
+                "wrong_answers": [
+                    "Fosfolipiden functioneren als signaalmoleculen die vesikels naar hun bestemming dirigeren.",
+                    "Ze zorgen voor de energievoorziening die nodig is voor het transport van vesikels binnen de cel.",
+                    "Fosfolipiden dienen als receptoren op vesikels om de fusie met het doelcelmembraan te vergemakkelijken."
+                ]
+            },
             "image": null
         },
         {
@@ -178,7 +185,14 @@
         {
             "type": "question",
             "question": "Welk eiwit complex maakt de fusie van vesikels met andere membranen mogelijk?",
-            "answer": "Vesikelfusie is afhankelijk van het snare-complex (1 punt).",
+            "answers": {
+                "correct_answer": "Snare-complex",
+                "wrong_answers": [
+                    "Actinefilamenten complex",
+                    "Golgi-enzymcomplex",
+                    "Ribosoomcomplex"
+                ]
+            },
             "image": null
         },
         {
@@ -220,7 +234,14 @@
         {
             "type": "question",
             "question": "Wat is de functie van een KDEL-sequentie?",
-            "answer": "Een KDEL-sequentie dient als een adreslabel (1 punt) dat aangeeft dat een eiwit teruggestuurd moet worden naar het endoplasmatisch reticulum (1 punt).",
+            "answers": {
+                "correct_answer": "Het dient als een adreslabel dat aangeeft dat een eiwit teruggestuurd moet worden naar het endoplasmatisch reticulum.",
+                "wrong_answers": [
+                    "Het signaleert dat een eiwit moet worden afgebroken in de lysosomen.",
+                    "Het geeft aan dat een eiwit getransporteerd moet worden naar het Golgi-apparaat.",
+                    "Het markeert een eiwit voor export uit de cel."
+                ]
+            },
             "image": null
         },
         {
@@ -231,8 +252,15 @@
         },
         {
             "type": "question",
-            "question": "Hoe verloopt het proces van transcytose?",
-            "answer": "Transcytose omvat het opnemen van materialen aan de ene zijde van de cel door endocytose (1 punt), het transporteren van materialen door de cel in vesikels (1 punt), en het afgeven van materialen aan de andere zijde door exocytose (1 punt).",
+            "question": "Wat is geen onderdeel van de transcytose?",
+            "answers": {
+                "correct_answer": "Fosforylering van eiwitten in het cytoplasma.",
+                "wrong_answers": [
+                    "Opnemen van materialen aan de ene zijde van de cel door endocytose.",
+                    "Transporteren van materialen door de cel in vesikels.",
+                    "Afgeven van materialen aan de andere zijde door exocytose."
+                ]
+            },
             "image": null
         },
         {
@@ -244,7 +272,14 @@
         {
             "type": "question",
             "question": "Welke functie heeft de glycosylering van eiwitten?",
-            "answer": "Glycosylering is belangrijk voor de vouwing (1 punt), stabiliteit (1 punt) en functionaliteit (1 punt) van eiwitten.",
+            "answers": {
+                "correct_answer": "Belangrijk voor de vouwing, stabiliteit en functionaliteit van eiwitten.",
+                "wrong_answers": [
+                    "Zorgt voor de transport van eiwitten naar verschillende delen van de cel.",
+                    "Helpt bij de signaaloverdracht tussen verschillende cellen.",
+                    "Bevordert de interactie van eiwitten met celmembraanlipiden."
+                ]
+            },
             "image": null
         },
         {
@@ -262,7 +297,7 @@
         {
             "type": "question",
             "question": "Wat is de functie van een Mannose-6-fosfaat zijgroep op eiwitten",
-            "answer": "Mannose-6-fosfaat markeert eiwitten met een label voor lysosomen (1 punt), waar ze heen worden getransporteerd om deel te nemen aan de afbraak of recycling van cellulaire biomoleculen(1 punt).",
+            "answer": "Mannose-6-fosfaat markeert eiwitten met een label voor lysosomen (1 punt), waar ze heen worden getransporteerd om deel te nemen aan de afbraak of recycling van cellulaire biomoleculen (1 punt).",
             "image": null
         },
         {
@@ -274,7 +309,14 @@
         {
             "type": "question",
             "question": "In welke compartimenten van de cel vindt glycosylering van eiwitten plaats?",
-            "answer": "Het ER en het Golgi-apparaat zijn organellen waar glycosylering van eiwitten plaatsvindt (1 punt).",
+            "answers": {
+                "correct_answer": "Het ER en het Golgi-apparaat",
+                "wrong_answers": [
+                    "Het ER en de mitochondriën",
+                    "Het Golgi-apparaat en de lysosomen",
+                    "Het ER en de celkern"
+                ]
+            },
             "image": null
         },
         {
@@ -285,8 +327,28 @@
         },
         {
             "type": "question",
-            "question": "Wat is het verschil tussen N-glycosylering en O-glycosylering?",
-            "answer": "Bij N-glycosylering wordt een suikermolecuul toegevoegd aan een Asparagine residue van een eiwit (1 punt), en bij O-glycosylering aan een aminozuren Pro, Ser en Thr in de eiwitzijketen (1 punt).",
+            "question": "Wat is N-glycosylering?",
+            "answers": {
+                "correct_answer": "Het toevoegen van een suikermolecuul aan een Asparagine residu van een eiwit.",
+                "wrong_answers": [
+                    "Het toevoegen van een suikermolecuul aan een Lysine residu van een eiwit.",
+                    "Het toevoegen van een suikermolecuul aan een Proline residu van een eiwit.",
+                    "Het teoveogen van een suikermolecuul aan een Threonine residu van een eiwit."
+                ]
+            },
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is O-glycosylering?",
+            "answers": {
+                "correct_answer": "Het toevoegen van een suikermolecuul aan de aminozuren Proline, Serine en Threonine in de eiwitzijketen.",
+                "wrong_answers": [
+                    "Het toevoegen van een suikermolecuul aan een Histidine residu van een eiwit.",
+                    "Het toevoegen van een suikermolecuul aan de aminozuren Lysine en Arginine in een eiwit.",
+                    "Het toevoegen van een suikermolecuul aan een Cyste\u00EFne residu van een eiwit."
+                ]
+            },
             "image": null
         },
         {
@@ -298,7 +360,14 @@
         {
             "type": "question",
             "question": "Wat is de primaire functie van lysosomen in de cel?",
-            "answer": "De primaire functie van lysosomen in de cel is om cellulair biomoleculen in de cel af te breken en te recyclen (1 punt).",
+            "answers": {
+                "correct_answer": "Het afbreken en recyclen van cellulair biomoleculen.",
+                "wrong_answers": [
+                    "Het synthetiseren van eiwitten voor de cel.",
+                    "Het opwekken van energie door ATP-productie.",
+                    "Het reguleren van de celgroei en celcyclus."
+                ]
+            },
             "image": null
         },
         {
@@ -322,9 +391,15 @@
         {
             "type": "question",
             "question": "Wat gebeurt er met neuropeptiden tijdens hun transport naar de synaps?",
-            "answer": "Neuropeptiden worden vanuit een precursor omgezet tot hun actieve vorm (1 punt) tijdens hun transport naar de synaps.",
+            "answers": {
+                "correct_answer": "Ze worden vanuit een precursor omgezet tot hun actieve vorm.",
+                "wrong_answers": [
+                    "Ze worden afgebroken en geëlimineerd uit de neuron.",
+                    "Neuropeptiden worden verpakt in vesikels zonder verdere verandering.",
+                    "Ze ondergaan een proces van fosforylering om actief te worden."
+                ]
+            },
             "image": null
         }
     ]
 }
-
