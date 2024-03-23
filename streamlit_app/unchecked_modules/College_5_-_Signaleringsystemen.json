@@ -55,7 +55,6 @@
             "text": "In celcommunicatie worden diverse soorten signalen gebruikt, waaronder **hormonen**, **neurotransmitters**, **gassen**, **ionen**, **vetzuren**, **nutri\u00c3\u00abnten**, en **temperatuur**. Deze signalen spelen een cruciale rol in het co\u00c3\u00b6rdineren van de activiteiten van cellen in een organisme.",
             "image": "signaleringsroute_moleculen.png"
         },
-
         {
             "type": "info",
             "title": "Signaleringsmechanismen in multicellulaire organismen",
@@ -71,7 +70,7 @@
         {
             "type": "info",
             "title": "Contactafhankelijke signalering",
-            "text": "Contactafhankelijke signalering vereist **direct fysiek contact** tussen cellen via membraan-gebonden signaleringsmoleculen. Deze moleculen van de ene cel interageren met receptorprote\u00c3\u00afnen op het oppervlak van een andere cel, wat een signaaltransductieproces activeert.",
+            "text": "Contactafhankelijke signalering vereist **direct fysiek contact** tussen cellen via membraan-gebonden signaleringsmoleculen. Deze moleculen van de ene cel interageren met receptorprote\u00EFnen op het oppervlak van een andere cel, wat een signaaltransductieproces activeert.",
             "image": "contact_signal.png"
         },
         {
@@ -116,7 +115,6 @@
             "answer": "Synaptische signalering is een vorm van communicatie tussen zenuwcellen en de cellen waarmee ze contact maken, waarbij neurotransmitters worden vrijgegeven in een synaptische spleet (1 punt) om snel te communiceren met de doelwitcel (1 punt).",
             "image": "synaptische_signalering.png"
         },
-
         {
             "type": "info",
             "title": "Celreceptoren en hun locatie",
@@ -132,13 +130,13 @@
         {
             "type": "info",
             "title": "Hormoonreceptoren",
-            "text": "Hormoonreceptoren zijn gespecialiseerde intracellulaire receptoren die reageren op specifieke hormonen zoals **corticostero\u00c3\u00afden**. Wanneer deze hormonen aan hun receptoren binden, activeren ze een reeks reacties binnen de cel.",
+            "text": "Hormoonreceptoren zijn gespecialiseerde intracellulaire receptoren die reageren op specifieke hormonen zoals **corticostero\u00EFden**. Wanneer deze hormonen aan hun receptoren binden, activeren ze een reeks reacties binnen de cel.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Hoe en waar in de cel activeren corticostero\u00c3\u00afden hun receptoren?",
-            "answer": "Corticostero\u00c3\u00afden activeren hun intracellulaire receptoren door eraan te binden (1 punt), wat vervolgens een transcriptionele reactie in de cel in gang zet (1 punt).",
+            "question": "Hoe en waar in de cel activeren corticostero\u00EFden hun receptoren?",
+            "answer": "Corticostero\u00EFden activeren hun intracellulaire receptoren door eraan te binden (1 punt), wat vervolgens een transcriptionele reactie in de cel in gang zet (1 punt).",
             "image": null
         },
         {
@@ -156,97 +154,68 @@
         {
             "type": "info",
             "title": "Intracellulaire Receptoren",
-            "text": "Intracellulaire receptoren zijn specifieke eiwitten gevonden **in het cytoplasma of in de kern** van cellen. Ze zijn van cruciaal belang voor het waarnemen van **stero\u00c3\u00afdhormonen** die door de celmembraan kunnen diffunderen vanwege hun **vetoplosbare aard**.",
+            "text": "Intracellulaire receptoren zijn specifieke eiwitten gevonden **in het cytoplasma of in de kern** van cellen. Ze zijn van belang voor het waarnemen van **stero\u00EFdhormonen** die zich in het bloed bevinden.",
             "image": "intracellulaire_receptoren.png"
         },
         {
             "type": "question",
-            "question": "Waar bevinden intracellulaire receptoren zich en waarvoor zijn ze verantwoordelijk?",
-            "answer": "Intracellulaire receptoren bevinden zich in het cytoplasma of in de kern (1 punt) en zijn verantwoordelijk voor het waarnemen van stero\u00c3\u00afdhormonen (1 punt).",
+            "question": "Waar bevinden intracellulaire receptoren zich en wat is hun verantwoordelijkheid?",
+            "answer": "Intracellulaire receptoren bevinden zich in het cytoplasma of in de kern (1 punt) en zijn verantwoordelijk voor het waarnemen van stero\u00EFdhormonen (1 punt).",
             "image": null
         },
         {
             "type": "info",
             "title": "Receptorstructuur",
-            "text": "De structuur van een stero\u00c3\u00afdhormoonreceptor is essentieel voor zijn functie. Het bevat een **transcriptieactivatiedomein** om de genexpressie te starten, een **DNA-bindend domein** om aan specifieke DNA-sequenties te binden, en een **ligand-bindend domein** om het signaalmolecuul (ligand) te herkennen en te binden.",
+            "text": "De structuur van een stero\u00EFdhormoonreceptor is essentieel voor zijn functie. Het bevat een **transcriptieactivatiedomein** om de genexpressie te starten, een **DNA-bindend domein** om aan specifieke DNA-sequenties te binden, en een **ligand-bindend domein** om het signaalmolecuul (ligand) te herkennen en te binden.",
             "image": "receptoractivatiedomeinen.png"
         },
         {
-            "type": "question",
-            "question": "Wat zijn de drie belangrijke domeinen van een stero\u00c3\u00afdhormoonreceptor en wat is hun functie?",
-            "answer": "De drie belangrijke domeinen van een receptor zijn het transcriptieactivatiedomein om genexpressie te starten (1 punt), het DNA-bindend domein om aan specifieke DNA-sequenties te binden (1 punt), en het ligand-bindend domein om signaalmoleculen te herkennen en te binden (1 punt).",
-            "image": null
-        },
-        {
             "type": "info",
-            "title": "Stero\u00c3\u00afdhormoonreceptoren en hun werking",
-            "text": "Stero\u00c3\u00afdhormoonreceptoren zijn gespecialiseerde eiwitten die reageren op de aanwezigheid van specifieke hormonen. Wanneer een **hormoon (ligand)** zich bindt aan de receptor, wordt een reeks gebeurtenissen geactiveerd: de receptor-ligandcomplex ondergaat **translocatie naar de kern** van de cel, waar het zich bindt aan specifieke DNA-sequenties die bekend staan als **promotors**. Deze binding initieert de **vorming van een transcriptiecomplex**, wat leidt tot de transcriptie van doelgenen die door het hormoon worden gereguleerd.",
-            "image": "steroide_hormonen.png"
+            "title": "Activatie van een receptor",
+            "text": "Wanneer een ligand bindt aan een receptor, leidt dit tot verschillende reacties: het ligand-bindingsdomein van de receptor omsluit het ligand, wat zorgt dat een remmend eiwit loslaat. Vervolgens binden coactivator-eiwitten aan het transcriptie-activeringsdomein van de receptor. Ten slotte bindt het DNA-bindingsdomein aan het doel-DNA wat leidt tot verhoogde genexpressie.",
+            "image": "activatie_receptor.png"
         },
         {
             "type": "question",
-            "question": "Hoe wordt een stero\u00c3\u00afdhormoonreceptor geactiveerd en wat gebeurt er vervolgens?",
-            "answer": "Een stero\u00c3\u00afdhormoonreceptor wordt geactiveerd door de binding van een hormoon (ligand) (1 punt), waarna het receptor-ligandcomplex naar de kern transloceert (1 punt), zich bindt aan promotors (1 punt), en de vorming van een transcriptiecomplex initieert (1 punt).",
+            "question": "Wat is geen domein van een stero\u00EFdhormoonreceptor?",
+            "answers": {
+                "correct_answer": "Het enzymatische activeringsdomein om de receptor te katalyseren naar een actieve vorm",
+                "wrong_answers": [
+                    "Het transcriptieactivatiedomein om genexpressie te starten",
+                    "Het DNA-bindend domein om aan specifieke DNA-sequenties te binden",
+                    "Het ligand-bindend domein om signaalmoleculen te herkennen en te binden"
+                ]
+            },
             "image": null
         },
         {
             "type": "info",
             "title": "Hormoontransport",
-            "text": " Stero\u00c3\u00afdhormonen worden in de bloedbaan getransporteerd, vaak **gebonden aan transporteiwitten**. Dit zorgt voor stabiliteit en reguleert de beschikbaarheid van het hormoon voor weefsels. Een voorbeeld van zo'n transporteiwit is **globuline**.",
+            "text": " Stero\u00EFdhormonen worden in de bloedbaan getransporteerd, vaak gebonden aan transporteiwitten. Eenmaal in de cel wordt het hormoon ook weer gebonden aan eiwitten om vervolgens bij de receptor aan te komen. Het stero\u00EFd kan nooit op zichzelf door het bloed of de cel bewegen, maar is altijd verbonden aan een eiwitcomplex.",
             "image": "steroide_hormonen.png"
         },
         {
-            "type": "question",
-            "question": "Hoe worden Stero\u00c3\u00afdhormonen getransporteerd in de bloedbaan?",
-            "answer": "Hormonen worden getransporteerd in de bloedbaan vaak gebonden aan transporteiwitten (1 punt), zoals globuline (1 punt).",
-            "image": null
-        },
-        {
             "type": "info",
-            "title": "Androgeen Ongevoeligheidssyndroom (AOS)",
-            "text": "Het **Androgeen Ongevoeligheidssyndroom (AOS)** is een aandoening waarbij individuen met een mannelijk XY-karyotype **uiterlijke vrouwelijke kenmerken** ontwikkelen. Dit komt door een defect in de androgeenreceptoren, waardoor het lichaam niet reageert op mannelijke hormonen zoals testosteron.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat zijn de kenmerken van Androgeen Ongevoeligheidssyndroom?",
-            "answer": "Kenmerken van Androgeen Ongevoeligheidssyndroom omvatten uiterlijke vrouwelijke kenmerken bij genetische mannen (1 punt) vanwege defecte androgeenreceptoren (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Diagnostische tests voor AOS",
-            "text": "Om **Androgeen ongevoeligheidssyndroom** (AOS) te diagnosticeren, worden verschillende tests uitgevoerd. Deze omvatten het vaststellen van het **XY-karyotype**, het meten van de **respons op testosteron**, en het onderzoeken van de **familiegeschiedenis** om te zien of AOS eerder is voorgekomen.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Welke diagnostische tests worden gebruikt om Androgeen ongevoeligheidssyndroom te identificeren?",
-            "answer": "Diagnostische tests voor Androgeen ongevoeligheidssyndroom omvatten het vaststellen van het XY-karyotype (1 punt), meten van de testosteronrespons (1 punt), en het onderzoeken van de familiegeschiedenis (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Mutaties in hormoonreceptoren",
-            "text": "Hormoonreceptoren zijn cruciaal voor de juiste werking van cellen en het uitvoeren van reacties op hormonale signalen. Deze receptoren bestaan uit verschillende domeinen, waaronder een **ligand-bindend domein** en een **DNA-bindend domein**. Mutaties in deze domeinen kunnen leiden tot disfunctionele hormoonreceptoren en resulteren in ziekten of syndromen.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Waar kunnen mutaties in hormoonreceptoren toe leiden?",
-            "answer": "Mutaties in hormoonreceptoren kunnen leiden tot disfunctionele receptoren (1 punt) en kunnen ziekten of syndromen veroorzaken (1 punt) door verstoringen in de ligand-binding en DNA-binding processen.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Receptortypen en signaaltransductie",
-            "text": "In de celbiologie zijn er **drie klassen oppervlakte-receptoren**: ionkanaal-gekoppelde, G-prote\u00c3\u00afne-gekoppelde en enzym-gekoppelde receptoren. Elk type heeft zijn eigen mechanisme voor **signaaltransductie**, wat leidt tot diverse cellulaire reacties. Deze receptoren dragen bij aan de complexiteit van hoe cellen signalen waarnemen en daarop reageren.",
+            "title": "Oppervlakte recptoren",
+            "text": "**Oppervlaktereceptoren** zijn membraaneiwitten die externe signalen opvangen en via signaaltransductie een respons in de cel op gang brengen. Er zijn drie klassen oppervlakte-receptoren: ionkanaal-gekoppelde, G-prote\u00EFne-gekoppelde en enzym-gekoppelde receptoren. Elk type heeft zijn eigen mechanisme voor **signaaltransductie**, wat leidt tot diverse cellulaire reacties. Deze receptoren dragen bij aan de complexiteit van hoe cellen signalen waarnemen en daarop reageren.",
             "image": "membraanreceptorklassen.png"
         },
         {
             "type": "question",
-            "question": "Wat zijn de drie klassen oppervlakte-receptoren betrokken bij signaaltransductie?",
-            "answer": "De drie hoofdtypen receptoren zijn ionkanaal-gekoppelde (1 punt), G-prote\u00c3\u00afne-gekoppelde (1 punt) en enzym-gekoppelde receptoren (1 punt).",
+            "question": "Wat is het verschil tussen oppervlakte- en intracellulaire receptoren?",
+            "answer": "Oppervlaktereceptoren bevinden zich op de celmembraan en herkennen signalen zonder dat deze de cel binnenkomen (1 punt). Intracellulaire receptoren daarentegen zijn gelokaliseerd in het cytoplasma of de kern (1 punt).",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Welke drie klassen oppervlakte receptoren zijn betrokken bij signaaltransductie?",
+            "answers": {
+                "correct_answer": "G-prote\u00EFne-gekoppelde receptoren, Ionkanaal-gekoppelde receptoren, Enzym-gekoppelde receptoren",
+                "wrong_answers": [
+                    "G-prote\u00EFne-gekoppelde receptoren, Enzym-gekoppelde receptoren, Nucleaire receptoren",
+                    "G-prote\u00EFne-gekoppelde receptoren, Nucleaire receptoren, Ionkanaal-gekoppelde receptoren"
+                ]
+            },
             "image": null
         },
         {
@@ -258,48 +227,55 @@
         {
             "type": "question",
             "question": "Hoe verschillen snelle reacties van langzame reacties in signaaltransductieroutes?",
-            "answer": "Snelle reacties vinden plaats binnen seconden tot minuten en zijn gerelateerd aan functie- of locatiewijzigingen van eiwitten, terwijl langzame reacties uren tot dagen duren, vaak betrokken bij de productie van nieuwe eiwitten door transcriptie en translatie.",
+            "answer": "Snelle reacties vinden plaats binnen seconden tot minuten en zijn gerelateerd aan functie- of locatiewijzigingen van eiwitten (1 punt), terwijl langzame reacties uren tot dagen duren, vaak betrokken bij de productie van nieuwe eiwitten door transcriptie en translatie (1 punt).",
             "image": null
         },
         {
             "type": "info",
-            "title": "Divergentie en convergentie in signaaltransductieroutes",
-            "text": "Divergentie en convergentie zijn cruciale concepten in signaaltransductieroutes. Divergentie vindt plaats wanneer een enkel signaal zich splitst en verschillende paden in de cel activeert, wat leidt tot een veelzijdige respons. Convergentie, daarentegen, treedt op wanneer verschillende signalen samenkomen op één enkel pad, wat de cel in staat stelt om een gecoördineerde reactie te genereren op een combinatie van stimuli. Deze mechanismen dragen bij aan de flexibiliteit en precisie van cellulaire reacties.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat is het verschil tussen divergentie en convergentie in signaaltransductieroutes?",
-            "answer": "Divergentie betreft een enkel signaal dat zich splitst naar meerdere paden voor een veelzijdige respons, terwijl convergentie meerdere signalen samenbrengt op één pad, wat leidt tot een gecoördineerde reactie.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "De Rol van scaffolds in signaaltransductieroutes",
-            "text": "Scaffolds spelen een essentiële rol in de organisatie van signaaltransductieroutes. Ze zijn moleculaire 'steigers' die verschillende signaaleiwitten bij elkaar brengen op specifieke locaties binnen de cel. Dit zorgt voor een efficiëntere signaaloverdracht, omdat de noodzakelijke componenten dicht bij elkaar worden gehouden. Scaffolds kunnen ook de specificiteit van signaleringstrajecten verhogen door bepaalde eiwitinteracties te faciliteren of te voorkomen, wat bijdraagt aan de nauwkeurigheid van de cellulaire respons.",
-            "image": null
+            "title": "Scaffolds",
+            "text": "Scaffolds zijn moleculaire 'steigers' die verschillende signaaleiwitten bij elkaar brengen op specifieke locaties binnen de cel. Dit zorgt voor een effici\u00EBntere signaaloverdracht, omdat de noodzakelijke componenten dicht bij elkaar worden gehouden. Scaffolds kunnen ook de specificiteit van signaleringstrajecten verhogen door bepaalde eiwitinteracties te faciliteren of te voorkomen, wat bijdraagt aan de nauwkeurigheid van de cellulaire respons.",
+            "image": "scaffold_proteins.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van scaffolds in signaaltransductieroutes?",
-            "answer": "Scaffolds organiseren signaaleiwitten op specifieke locaties, wat leidt tot een efficiëntere signaaloverdracht en verhoogde specificiteit van signaaltransductieroutes door bepaalde eiwitinteracties te faciliteren of te voorkomen.",
-            "image": "scaffold_proteins.png"
+            "answer": "Scaffolds organiseren signaaleiwitten op specifieke locaties, wat leidt tot een effici\u00EBntere signaaloverdracht en verhoogde specificiteit van signaaltransductieroutes (1 punt).",
+            "image": null
         },
         {
             "type": "info",
-            "title": "Signaalbe\u00c3\u00abindiging",
-            "text": "Signaalbe\u00c3\u00abindiging is een cruciaal onderdeel van de celcommunicatie. Het zorgt ervoor dat signalen niet oneindig blijven activeren en bestaat uit processen zoals **deactivatie van eiwitten**, **endocytose** van receptoren en **afbraak van de receptor**. Deze processen zorgen voor de be\u00c3\u00abindiging van de signaaltransductie en helpen de cel om terug te keren naar de rusttoestand.",
+            "title": "Divergentie in signaaltransductieroutes",
+            "text": "Divergentie vindt plaats wanneer een enkel signaal zich splitst en verschillende paden in de cel activeert, wat leidt tot een veelzijdige respons. Convergentie, daarentegen, treedt op wanneer verschillende signalen samenkomen op één enkel pad, wat de cel in staat stelt om een geco\u00F6rdineerde reactie te genereren op een combinatie van stimuli. Deze mechanismen dragen bij aan de flexibiliteit en precisie van cellulaire reacties.",
+            "image": "divergentie.png"
+        },
+        {
+            "type": "info",
+            "title": "Convergentie in signaaltransductieroutes",
+            "text": "Convergentie treedt op wanneer verschillende signalen samenkomen op één enkel pad, wat de cel in staat stelt om een geco\u00F6rdineerde reactie te genereren op een combinatie van stimuli.",
+            "image": "convergentie.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen divergentie en convergentie in signaaltransductieroutes?",
+            "answer": "Divergentie betreft een enkel signaal dat zich splitst naar meerdere paden voor een veelzijdige respons (1 punt), terwijl convergentie meerdere signalen samenbrengt op één pad, wat leidt tot een gecoördineerde reactie (1 punt).",
+            "image": null
+        },
+        {
+            "type": "info",
+            "title": "Signaalbe\\u00EBindiging",
+            "text": "Signaalbe\u00EBindiging is een cruciaal onderdeel van de celcommunicatie. Het zorgt ervoor dat signalen niet oneindig blijven activeren en bestaat uit processen zoals **deactivatie van eiwitten**, **endocytose** van receptoren en **afbraak van de receptor**. Deze processen zorgen voor de be\u00c3\u00abindiging van de signaaltransductie en helpen de cel om terug te keren naar de rusttoestand.",
             "image": null
         },
         {
             "type": "question",
-            "question": "Welke processen zijn verantwoordelijk voor signaalbe\u00c3\u00abindiging in cellen?",
-            "answer": "Signaalbe\u00c3\u00abindiging in cellen omvat de deactivatie van eiwitten (1 punt), endocytose van receptoren (1 punt), en de afbraak van de receptor (1 punt).",
+            "question": "Welke processen zijn verantwoordelijk voor signaalbe\u00EBindiging in cellen?",
+            "answer": "Signaalbe\u00EBindiging in cellen omvat de deactivatie van eiwitten (1 punt), endocytose van receptoren (1 punt), en de afbraak van de receptor (1 punt).",
             "image": null
-        },    {
+        },
+        {
             "type": "info",
             "title": "Docking proteins in signaleringssystemen",
-            "text": "Docking proteins zijn cruciale componenten binnen signaleringssystemen die specifieke bindingsplaatsen bieden voor andere signaalmoleculen. Ze spelen een sleutelrol in de precisie en specificiteit van cellulaire signalering door ervoor te zorgen dat signaaleiwitten correct gepositioneerd worden binnen de cel. Dit maakt het mogelijk voor signalen om efficiënt en nauwkeurig te worden overgedragen naar de juiste bestemming.",
+            "text": "Docking proteins bieden specifieke bindingplaatsen voor andere signaalmoleculen. Ze spelen een sleutelrol in de precisie en specificiteit van cellulaire signalering door ervoor te zorgen dat signaaleiwitten correct gepositioneerd worden binnen de cel. Dit maakt het mogelijk voor signalen om efficiënt en nauwkeurig te worden overgedragen naar de juiste bestemming.",
             "image": "docking_sites.png"
         },
         {
@@ -310,77 +286,15 @@
         },
         {
             "type": "info",
-            "title": "Adapters in signaleringssystemen",
-            "text": "Adaptereiwitten zijn essentieel voor de werking van signaleringssystemen. Ze fungeren als bruggen tussen twee of meer eiwitten die anders niet direct zouden kunnen interageren. Dit bevordert de vorming van eiwitcomplexen die nodig zijn voor het doorgeven van signalen. Adapters verhogen de flexibiliteit en modulariteit van signaleringspaden door verschillende eiwitten samen te brengen voor specifieke functies.",
+            "title": "Samenstelling van signaleringssystemen",
+            "text": "Signaleringssystemen bestaan uit verschillende componenten zoals **docking proteins**, **adapters**, **scaffolds**, en **effectoren**. Deze componenten werken samen om signalen binnen de cel door te geven en een passende reactie te veroorzaken.",
             "image": "adaptor_protein.png"
         },
         {
-            "type": "question",
-            "question": "Hoe dragen adaptereiwitten bij aan de werking van signaleringssystemen?",
-            "answer": "Adaptereiwitten fungeren als bruggen tussen verschillende eiwitten, bevorderen de vorming van eiwitcomplexen en verhogen de flexibiliteit en modulariteit van signaleringspaden.",
-            "image": null
-        },
-        {
             "type": "info",
-            "title": "Effectoren in signaleringssystemen",
-            "text": "Effectoren zijn de uitvoerende moleculen in signaleringssystemen, die de uiteindelijke reacties van de cel op signalen uitvoeren. Ze kunnen verschillende vormen aannemen, zoals enzymen, ionenkanalen of transcriptiefactoren, afhankelijk van het specifieke signaalpad. Door direct in te grijpen op cellulaire processen, zetten effectoren de ontvangen signalen om in concrete cellulaire acties, zoals celgroei, differentiatie, of apoptose.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat is de functie van effectoren binnen signaleringssystemen?",
-            "answer": "Effectoren voeren de uiteindelijke reacties van de cel uit door signalen om te zetten in concrete acties, zoals celgroei, differentiatie of apoptose.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Samenstelling van signaleringssystemen",
-            "text": "Signaleringssystemen bestaan uit verschillende componenten zoals **docking proteins**, **adapters**, **scaffolds**, en **effectoren**. Deze componenten werken samen om signalen binnen de cel door te geven en een passende reactie te veroorzaken.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Belang van functionerende domeinen in signaleringssystemen",
-            "text": "De functionerende domeinen binnen de componenten van signaleringssystemen zijn essentieel voor hun activiteit. **Defecten in deze domeinen** kunnen leiden tot verstoring van het hele complex en daarmee de juiste signaaltransductie belemmeren.",
-            "image": "eiwit_domeinen.png"
-        },
-        {
-            "type": "question",
-            "question": "Wat is het gevolg van defecten in de functionerende domeinen van signaleringssystemen?",
-            "answer": "Defecten in de functionerende domeinen van signaleringssystemen kunnen het hele complex verstoren (1 punt) en de correcte signaaltransductie belemmeren (1 punt).",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Regulatie van cellulaire processen",
-            "text": "De regulatie van cellulaire processen, zoals metabolisme, wordt beïnvloed door verschillende signalen die op hetzelfde eiwit kunnen inwerken. Dit toont de complexiteit en fijnafstemming van cellulaire reacties op een breed scala van omgevingsfactoren. De principes van convergentie en divergentie zijn hierbij van cruciaal belang, waarbij convergentie verwijst naar het fenomeen waarbij meerdere signalen kunnen samenkomen op één eiwit, en divergentie naar het proces waarbij één signaal meerdere reactiewegen kan initiëren.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Divergentie",
-            "text": "Divergentie is een belangrijk concept in signaaltransductie, waarbij **één signaal** kan leiden tot **meerdere reacties** binnen de cel. Dit fenomeen draagt bij aan de **diversiteit** en **flexibiliteit** van cellulaire responsen, waardoor cellen kunnen reageren op verschillende omgevingsstimuli.",
-            "image": "efficientie_door_divergentie.png"
-        },
-        {
-            "type": "info",
-            "title": "Convergentie",
-            "text": "Convergentie is een belangrijk concept in signaaltransductie, waarbij **meerdere signalen** samenkomen op één punt in de cel. Dit fenomeen stelt cellen in staat om **geïntegreerde reacties** te genereren op verschillende signalen, wat bijdraagt aan de **coördinatie** van cellulaire processen.",
-            "image": "convergentie.png"
-        },
-        {
-            "type": "question",
-            "question": "Hoe beïnvloeden de principes van convergentie en divergentie de regulatie van cellulaire processen?",
-            "answer": "Convergentie laat meerdere signalen toe om op hetzelfde eiwit in te werken, wat de regulatie van complexe processen zoals metabolisme faciliteert. Divergentie maakt het mogelijk dat één signaal verschillende reacties kan initiëren, wat bijdraagt aan de flexibiliteit en aanpassingsvermogen van cellulaire responsen.",
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Desebsibilisatie",
-            "text": "Invullen",
+            "title": "Desensibilisatie",
+            "text": "Een signaal is pas een signaal als het een keer ophoudt. Als het heel lang blijft, dan zal de cel het niet meer als signaal zien. Een cel heeft verschillende mechanismen om dit te bewerkstelligen. Een receptor kan gesequestreerd worden. Dan wordt de receptor van het membraan verwijdert en dan vervolgens weer gerecycled en zonder het signaal teruggestopt. Daarnaast kan een receptor ook volledig weggehaald worden.",
             "image": "desensibiliseren.png"
         }
-        
     ]
 }
-
