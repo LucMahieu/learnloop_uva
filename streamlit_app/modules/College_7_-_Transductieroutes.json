@@ -468,10 +468,10 @@
             "type": "question",
             "question": "Wat is de functie van trans-autofosforylatie in de activering van RTK's?",
             "answers": {
-                "correct_answer": "Het creëert bindingsites voor intracellulaire signaaleiwitten en initieert downstream signaaltransductie",
+                "correct_answer": "Het cre\u00EBert bindingsites voor signaaleiwitten en initieert downstream signaaltransductie",
                 "wrong_answers": [
-                    "Het inactiveren van de kinaseactiviteit van RTK's",
-                    "Het voorkomen van dimerisatie van RTK's",
+                    "Het inactiveren van de kinaseactiviteit van RTK's en stoppen van signaaltransductie",
+                    "Het voorkomen van dimerisatie van RTK's en signaaltransductie",
                     "Het afschermen van de receptor tegen verdere signaalprote\u00efnebinding"
                 ]
             },
@@ -480,7 +480,7 @@
         {
             "type": "info",
             "title": "Ras GTPase activering door RTK",
-            "text": "De activering van het intracellulaire monomeer Ras GTPase wordt ge\u00efnitieerd door Receptor Tyrosine Kinase (RTK) via adaptor eiwitten zoals Grb2 en de guanine nucleotide exchange factor (GEF) genaamd Sos. Dit proces zet de transductie van extracellulaire signalen om in intracellulaire acties door de omzetting van GDP naar GTP op Ras, wat de MAPKinase signaalroute in gang zet.",
+            "text": "De activering van het intracellulaire monomeer Ras GTPase wordt ge\u00efnitieerd door **Receptor Tyrosine Kinase (RTK)** via **adaptor eiwitten** zoals Grb2 en de guanine nucleotide exchange factor (GEF) genaamd Sos. Dit proces zet de transductie van extracellulaire signalen om in intracellulaire acties door **Ras GTPase**, wat de **MAPKinase signaalroute** in gang zet.",
             "image": "RTK_activation_MAPkinase.png"
         },
         {
@@ -491,7 +491,7 @@
         {
             "type": "info",
             "title": "MAPKinase route en kanker",
-            "text": "De MAPKinase-signaalroute is essentieel voor de regulering van celdeling. Mutaties in de Ras-gen kunnen leiden tot een vorm van Ras die resistent is tegen GTPase-activating proteins (GAPs), wat resulteert in onophoudelijk actief Ras. Dit zorgt voor een continue activering van de MAPKinase-route, wat ongereguleerde celdeling en potentieel kanker tot gevolg kan hebben.",
+            "text": "De MAPKinase-signaalroute is essentieel voor de **regulering van celdeling**. Mutaties in de Ras-gen kunnen leiden tot een vorm van Ras die resistent is tegen GTPase-activating proteins (GAPs), wat resulteert in **onophoudelijk actief Ras**. Dit zorgt voor een **continue activering van de MAPKinase-route**, wat **ongereguleerde celdeling** en potentieel kanker tot gevolg kan hebben.",
             "image": "ongereguleerde_celdeling_mapkinase.png"
         },
         {
@@ -509,36 +509,36 @@
         {
             "type": "info",
             "title": "MAPKinase-signaalroute",
-            "text": "De activering van de MAPKinase-signaalroute begint met een groeifactor die Ras-eiwit activeert, wat op zijn beurt weer de MAP kinase kinase kinase (Raf) activeert. Raf activeert vervolgens MAP kinase kinase (Mek), die MAP kinase (Erk) activeert. Deze kinases fosforyleren specifieke doeleiwitten in de cel, wat leidt tot **celdeling** en andere celresponsen.",
+            "text": "De activering van de **MAPKinase-signaalroute** begint met een **groeifactor** die Ras-eiwit activeert, wat op zijn beurt weer de **MAP kinase kinase kinase (Raf)** activeert. Raf activeert vervolgens **MAP kinase kinase (Mek)**, die **MAP kinase (Erk)** activeert. Deze kinases **fosforyleren specifieke doeleiwitten** in de cel, wat leidt tot **celdeling** en andere celresponsen.",
             "image": "mapkkk_route.png"
         },
         {
             "type": "question",
             "question": "Wat zijn de stappen in de MAPKinase-signaalroute?",
-            "answer": "Ras activeert Raf (1 punt), Raf activeert Mek (1 punt), Mek activeert Erk (1 punt), wat leidt tot fosforylering van doeleiwitten in de cel (1 punt)."
+            "answer": "Ras activeert MAP kinase kinase kinase of Raf (1 punt), Raf activeert MAP kinase kinase of Mek (1 punt), Mek activeert MAP kinase of Erk (1 punt), wat leidt tot fosforylering van doeleiwitten in de cel (1 punt)."
         },
         {
             "type": "info",
             "title": "Scaffolding van signaalroutes",
-            "text": "Scaffolding eiwitten **organiseren eiwitten** zoals MAPKinases in de MAPKinase signaalroute. Ze fungeren als een soort **skelet** waarop de verschillende eiwitten kunnen binden en interageren, waardoor de efficiëntie van de signaaltransductie wordt verhoogd.",
+            "text": "Scaffolding eiwitten **organiseren eiwitten** zoals MAPKinases in de MAPKinase signaalroute. Ze fungeren als een soort **skelet** waarop de verschillende eiwitten kunnen binden en interageren, waardoor de effici\u00EBntie van de signaaltransductie wordt verhoogd.",
             "image": "scaffold_proteine_kinase.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van scaffolding eiwitten in signaaltransductie?",
             "answers": {
-                "correct_answer": "Ze organiseren eiwitten in signaalroutes en verhogen de efficiëntie van signaaltransductie",
+                "correct_answer": "Ze organiseren eiwitten in signaalroutes en verhogen de effici\u00EBntie van signaaltransductie",
                 "wrong_answers": [
-                    "Ze degraderen eiwitten in signaalroutes en verlagen de efficiëntie van signaaltransductie",
-                    "Ze transporteren eiwitten in signaalroutes en verhogen de efficiëntie van signaaltransductie",
-                    "Ze isoleren eiwitten in signaalroutes en verlagen de efficiëntie van signaaltransductie"
+                    "Ze degraderen eiwitten in signaalroutes en verlagen de effici\u00EBntie van signaaltransductie",
+                    "Ze transporteren eiwitten in signaalroutes en verhogen de effici\u00EBntie van signaaltransductie",
+                    "Ze isoleren eiwitten in signaalroutes en verlagen de effici\u00EBntie van signaaltransductie"
                 ]
             }
         },
         {
             "type": "info",
             "title": "PI3-Kinase Route",
-            "text": "De **PI3-kinase route** is een ander signaaltransductiemechanisme dat een rol speelt in de celoverleving. Deze route helpt apoptosis, of geprogrammeerde celdood, te **remmen** en **bevordert de overleving** van de cel.",
+            "text": "De **PI3-kinase route** is een ander signaaltransductiemechanisme dat een rol speelt in de celoverleving. Deze route helpt **apoptosis**, of geprogrammeerde celdood, te **remmen** en **bevordert de overleving** van de cel.",
             "image": "pi3kinase_signaleringsroute_geen_rood.png"
         },
         {
@@ -557,7 +557,7 @@
         {
             "type": "info",
             "title": "PI3-Kinase Route",
-            "text": "De PI3-Kinase route begint met de activering van een **receptor tyrosine kinase** (RTK), die vervolgens PI3-kinase activeert. PI3-kinase fosforyleert PI(4,5)P2 tot PI(3,4,5)P3. Dit leidt tot de activering van **Akt**, welke BAD fosforyleert en een apoptose remmend eiwit vrijmaakt.",
+            "text": "De PI3-Kinase route begint met de activering van een **receptor tyrosine kinase** (RTK), die vervolgens **PI3-kinase** activeert. PI3-kinase **fosforyleert PI(4,5)P2 tot PI(3,4,5)P3**. Dit leidt tot de activering van **Akt**, welke **BAD fosforyleert** en een apoptose remmend eiwit vrijmaakt.",
             "image": "pi3_kinase_route.png"
         },
         {
@@ -568,27 +568,27 @@
         {
             "type": "info",
             "title": "Directe Kernsignalering door JAK-STAT Route",
-            "text": "De JAK-STAT route is een voorbeeld van directe kernsignalering die plaatsvindt wanneer cytokinereceptoren interactie aangaan met hun liganden. Deze route is efficiënter vergeleken met de indirecte signaalroutes zoals de MAPK-route, omdat het direct transcriptiefactoren activeert die naar de kern gaan om genexpressie te reguleren. De JAK-STAT signaleringsroute is vooral belangrijk in de afweer tegen virussen, zoals bij COVID-19, en speelt een rol bij de werking van cytokines zoals EPO, die de productie van rode bloedcellen stimuleert.",
-            "image": "image.png"
+            "text": "De JAK-STAT route is een voorbeeld van **directe kernsignalering** die plaatsvindt wanneer **cytokinereceptoren** interactie aangaan met hun **liganden**. Deze route is **effici\u00EBnter** vergeleken met de indirecte signaalroutes zoals de MAPK-route, omdat het **direct transcriptiefactoren activeert** die naar de kern gaan om genexpressie te reguleren. De JAK-STAT signaleringsroute is vooral belangrijk in de afweer tegen virussen, zoals bij COVID-19.",
+            "image": "jak_tat_systeem.png"
         },
         {
             "type": "question",
             "question": "Waarom wordt de JAK-STAT route beschouwd als een vorm van directe kernsignalering?",
             "answers": {
-                "correct_answer": "Omdat de activering van de receptor direct leidt tot de activatie van transcriptiefactoren die de kern binnengaan en genexpressie reguleren",
+                "correct_answer": "Omdat activering van de receptor direct leidt tot activatie van transcriptiefactoren",
                 "wrong_answers": [
-                    "Omdat het signalen via meerdere tussenstappen overdraagt",
-                    "Omdat het de celkern vermijdt en alleen in het cytosol werkt",
-                    "Omdat het gebruik maakt van G-prote\u00efnen om signalen over te dragen"
+                    "Omdat het signalen via meerdere tussenstappen overdraagt voordat het de kern bereikt",
+                    "Omdat het de celkern vermijdt en alleen in het cytosol werkt om signalen te transduceren",
+                    "Omdat het gebruik maakt van G-prote\u00efnen om signalen over te dragen naar de kern"
                 ]
             },
             "image": null
         },
         {
             "type": "info",
-            "title": "De Rol van JAK en STAT Eiwitten",
+            "title": "De rol van JAK en STAT eiwitten",
             "text": "In de JAK-STAT route herkent een cytokinereceptor zijn cytokine, wat leidt tot dimerisatie en trans-autofosforylatie. Dit proces activeert JAK (Janus kinase), een enzym dat aan de receptor gekoppeld is, dat op zijn beurt STAT (signaal transducers en activatoren van transcriptie) eiwitten fosforyleert. Deze STAT-eiwitten vormen vervolgens homo- of heterodimeren en verplaatsen zich naar de kern om genexpressie te reguleren, wat kan resulteren in verschillende cellulaire reacties, zoals celdeling of de productie van meer cytokines.",
-            "image": "image.png"
+            "image": "jak_tat_systeem.png"
         },
         {
             "type": "question",
@@ -602,24 +602,6 @@
                 ]
             },
             "image": null
-        },
-        {
-            "type": "info",
-            "title": "Signaaltransductie en Cellulaire Reacties",
-            "text": "De signaaltransductie via de JAK-STAT route is een voorbeeld van hoe cellulaire reacties snel kunnen worden ingezet in reactie op externe signalen. In vergelijking met andere signaaltransductieroutes, zoals de G-prote\u00efne gekoppelde receptorroutes (GPCR) en receptor tyrosine kinase (RTK) routes, waarbij second messengers en kinases betrokken zijn, biedt de JAK-STAT route een directere en vaak snellere respons op signalen zoals cytokines.",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Wat is het voordeel van de JAK-STAT signaalroute vergeleken met GPCR en RTK routes?",
-            "answers": {
-                "correct_answer": "Het biedt een directere en snellere respons door direct genexpressie te reguleren zonder tussenliggende second messengers",
-                "wrong_answers": [
-                    "Het is langzamer maar zorgt voor meer gedetailleerde regeling",
-                    "Het is minder specifiek maar zorgt voor een bredere respons",
-                    "Het is complexer maar zorgt voor een nauwkeurigere respons"
-                ]   
-            }
         },
         {
             "type": "info",
