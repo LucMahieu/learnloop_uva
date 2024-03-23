@@ -787,6 +787,7 @@ def determine_modules():
         modules = os.listdir("./modules")
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
+        modules.sort(key=lambda module: int(module.split(" ")[1]))
         st.session_state.modules = modules
 
 
