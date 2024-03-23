@@ -6,6 +6,9 @@ on:
     types:
       - completed
 
+env:
+  UPDATER_SECRET: ${{ secrets.UPDATER_SECRET }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
