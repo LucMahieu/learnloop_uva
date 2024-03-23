@@ -1,8 +1,10 @@
 name: build and release chart
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["build and push container"]
+    types:
+      - completed
 
 jobs:
   release:
@@ -30,3 +32,8 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Deploy latest version
+        run: |
+          VERSION=$(grep version charts/learnloop/Chart.yaml | cut -d " " -f2)
+          curl "https://k8s.datanose.nl/gitops-updater?name=learnloop&secret=${UPDATER_SECRET}&version=${VERSION}"
