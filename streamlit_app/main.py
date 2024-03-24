@@ -620,6 +620,12 @@ def render_practice_page():
         # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
         'answer' in st.session_state.segment_content):
+            
+            # Render image if present in the feedback
+            image_path = fetch_image_path()
+            if image_path:
+                render_image(image_path)
+
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer

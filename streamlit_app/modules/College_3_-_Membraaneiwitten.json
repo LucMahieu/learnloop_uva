@@ -52,12 +52,6 @@
             "image": null
         },
         {
-            "type": "question",
-            "question": "Hoe be\u00EFnvloedt de lading van het cytosol en het ER-lumen de ori\u00EBntatie van eiwitten?",
-            "answer": "Het is een translocatiecomplex dat het transport van eiwitten met een signaalpeptide over de ER-membraan faciliteert (1 punt).",
-            "image": null
-        },
-        {
             "type": "info",
             "title": "Translocatiecomplex in het ER",
             "text": "De mitochondria hebben translocatiecomplexen zoals TOM en TIM. Het ER heeft ook een eigen translocatiecomplex dat helpt bij het transport van eiwitten door het **ER-membraan**. Dit complex herkent eiwitten met een **signaalpeptide** en faciliteert hun doorgang door het membraan, waardoor ze hun juiste locatie in de cel kunnen bereiken.",
@@ -159,13 +153,13 @@
         },
         {
             "type": "question",
-            "question": "Waar en hoe vindt de synthese van lipiden plaats in het ER?",
+            "question": "Waar vindt de synthese van lipiden plaats?",
             "answers": {
-                "correct_answer": "De synthese van lipiden vindt plaats aan de cytoplasmatische kant van het ER.",
+                "correct_answer": "Aan de cytoplasmatische kant van het ER.",
                 "wrong_answers": [
-                    "Lipidensynthese gebeurt aan de binnenzijde van het ER, gebruikmakend van nucleaire enzymen.",
-                    "De synthese vindt plaats aan de buitenzijde van het ER met behulp van mitochondriale enzymen.",
-                    "Het proces gebeurt in het lumen van het ER, waar lipiden worden samengesteld uit glycoproteïnen."
+                    "In vrije drijvende ribosomen in het cytosol.",
+                    "Op de oppervlakte van mitochondriën",
+                    "In het lumen van het ER."
                 ]
             },
             "image": null

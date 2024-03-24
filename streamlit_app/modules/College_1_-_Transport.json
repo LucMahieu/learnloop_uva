@@ -79,7 +79,14 @@
         {
             "type": "question",
             "question": "Wat is de functie van het selectiviteitsfilter in ionkanalen?",
-            "answer": "Het selectiviteitsfilter in ionkanalen zorgt ervoor dat alleen specifieke ionen kunnen passeren (1 punt)."
+            "answers": {
+                "correct_answer": "Het bepaalt welke ionen door het kanaal kunnen passeren",
+                "wrong_answers": [
+                    "Het reguleert de opening en sluiting van het kanaal",
+                    "Het zorgt voor de actieve transport van ionen",
+                    "Het voorkomt dat ionen door het kanaal passeren"
+                ]
+            }
         },
         {
             "type": "info",
@@ -139,8 +146,15 @@
         },
         {
             "type": "question",
-            "question": "Wat is de elektrochemische gradi\u00ebnt en welke rol speelt het bij transportmechanismes?",
-            "answer": "De elektrochemische gradi\u00ebnt is een combinatie van een concentratie- en elektrische gradi\u00ebnt (1 punt) die als energiebron kan dienen voor transport over het membraan (1 punt)."
+            "question": "Wat is de elektrochemische gradi\u00ebnt?",
+            "answers": {
+                "correct_answer": "Een combinatie van de concentratiegradi\u00ebnt en de elektrische gradi\u00ebnt over een membraan",
+                "wrong_answers": [
+                    "Een gradi\u00ebnt die alleen door concentratieverschillen wordt bepaald",
+                    "Een gradi\u00ebnt die alleen door elektrische ladingen wordt bepaald",
+                    "Een gradi\u00ebnt die alleen door de grootte van de ionen wordt bepaald"
+                ]
+            }
         },
         {
             "type": "info",
@@ -214,7 +228,14 @@
         {
             "type": "question",
             "question": "Hoe worden ligand-gated kanalen geactiveerd?",
-            "answer": "Ligand-gated kanalen worden geactiveerd door de binding van een specifieke moleculaire ligand aan het kanaal (1 punt)."
+            "answers": {
+                "correct_answer": "Binding van een specifieke moleculaire ligand",
+                "wrong_answers": [
+                    "Binding van een geladen specifieke moleculaire ligand",
+                    "Veranderingen in het membraanpotentiaal",
+                    "Veranderingen in de concentratie van een specifiek ion"
+                ]
+            }
         },
         {
             "type": "question",
@@ -236,7 +257,7 @@
         {
             "type": "question",
             "question": "Wat berekent de Nernst vergelijking?",
-            "answer": "De Nernst vergelijking berekent de elektrische potentiaal die ontstaat door concentratieverschillen van dat ionen aan de binnen- en buitenkant van een celmembraan (1 punt)."
+            "answer": "De Nernst vergelijking berekent de elektrische potentiaal (1 punt) die ontstaat door concentratieverschillen van dat ionen aan de binnen- en buitenkant van een celmembraan (1 punt)."
         },
         {
             "type": "info",
@@ -263,7 +284,14 @@
         {
             "type": "question",
             "question": "Wat is het alles-of-niets-principe bij een actiepotentiaal?",
-            "answer": "Het alles-of-niets-principe bij een actiepotentiaal houdt in dat zodra een actiepotentiaal wordt ge\u00EFnitieerd, deze altijd dezelfde structuur (1 punt) en sterkte heeft (1 punt)."
+            "answers": {
+                "correct_answer": "Een actiepotentiaal vindt plaats met een vaste amplitude en duur, ongeacht de sterkte van de stimulus",
+                "wrong_answers": [
+                    "Een actiepotentiaal kan vari\u00EBren in amplitude en duur afhankelijk van de sterkte van de stimulus",
+                    "Een actiepotentiaal kan alleen optreden als de stimulus sterk genoeg is",
+                    "Een actiepotentiaal kan alleen optreden als de stimulus lang genoeg aanhoudt"
+                ]
+            }
         },
         {
             "type": "info",
