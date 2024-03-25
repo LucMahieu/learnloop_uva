@@ -10,7 +10,7 @@
         },
         {
             "type": "question",
-            "question": "Welke rol spelen GTP-eiwitten zoals zoals Rho, Rac, en Cdc42 bij het actine-cytoskelet?",
+            "question": "Welke rol spelen GTP-eiwitten zoals Rho, Rac, en Cdc42 bij het actine-cytoskelet?",
             "answers": {
                 "correct_answer": "Ze reguleren veranderingen in het actine-cytoskelet",
                 "wrong_answers": [
@@ -24,8 +24,27 @@
         {
             "type": "info",
             "title": "Fosfolipase C signaaltransductieroute",
-            "text": "De **fosfolipase C signaaltransductieroute** is \u00e9\u00e9n van de drie belangrijkste routes voor de overdracht van signalen binnen cellen. Deze route wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren** en leidt tot de productie van **inositoltrifosfaat (IP3)** en **diacylglycerol (DAG)**, twee secundaire boodschappers die betrokken zijn bij verschillende cellulaire processen.",
+            "text": "De **fosfolipase C signaaltransductieroute** is \u00e9\u00e9n van de drie belangrijkste routes voor de overdracht van signalen binnen cellen. Deze route wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, welke via de **heterotrimere G-prote\u00EFnen** het **fosfolipase C** enzym activeren. Vervolgens zet fosfolipase C de fosfolipide **PIP2** om in twee second messengers, **IP3** en **diacylglycerol (DAG)**. IP3 stimuleert de calciumvrijgave uit het endoplasmatisch reticulum door zich te binden aan IP3 receptor afhankelijke calciumkanalen, terwijl DAG in het membraan blijft en **prote\u00c3\u00afnekinase C (PKC)** activeert.",
             "image": "fosfolipase_c_signaaltransductieroute.png"
+        },
+        {
+            "type": "info",
+            "title": "Fosfolipase C en plasmamembraan",
+            "text": "Fosfolipase C is een **enzym** dat belangrijke veranderingen in het plasmamembraan aanbrengt en **twee second messengers cre\u00EBert**, namelijk **inositoltrifosfaat (IP3)** en **diacylglycerol (DAG)**.",
+            "image": "fosfolipase_c_red_box.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke rol speelt fosfolipase C in het plasmamembraan?",
+            "answers": {
+                "correct_answer": "Het cre\u00EBert twee second messengers",
+                "wrong_answers": [
+                    "Het vernietigt een second messenger",
+                    "Het produceert een second messenger",
+                    "Het verbergt twee second messengers"
+                ]
+            },
+            "image": null
         },
         {
             "type": "info",
@@ -42,25 +61,6 @@
                     "Ze remmen fosfolipase C",
                     "Ze degraderen fosfolipase C",
                     "Ze produceren fosfolipase C"
-                ]
-            },
-            "image": null
-        },
-        {
-            "type": "info",
-            "title": "Fosfolipase C en plasmamembraan",
-            "text": "Fosfolipase C is een **enzym** dat belangrijke veranderingen in het plasmamembraan aanbrengt en **twee signaalmoleculen cre\u00EBert** waardoor er een kettingreactie van signaaltransductie binnen de cel ontstaat.",
-            "image": "fosfolipase_c_red_box.png"
-        },
-        {
-            "type": "question",
-            "question": "Welke rol speelt fosfolipase C in het plasmamembraan?",
-            "answers": {
-                "correct_answer": "Het cre\u00EBert twee signaalmoleculen",
-                "wrong_answers": [
-                    "Het vernietigt een signaalmolecuul",
-                    "Het produceert een signaalmolecuul",
-                    "Het verbergt twee signaalmoleculen"
                 ]
             },
             "image": null
@@ -87,7 +87,7 @@
         {
             "type": "info",
             "title": "Inositoltrifosfaat (IP3)",
-            "text": "Inositoltrifosfaat, of IP3, is een **signaalmolecuul** en **geen eiwit** dat ontstaat door de activiteit van het enzym fosfolipase C. IP3 speelt een belangrijke rol in de calciumsignaaltransductie door te binden aan **calciumkanalen in het endoplasmatisch reticulum (ER)**, wat leidt tot de **vrijgave van calciumionen** in de cel.",
+            "text": "Inositoltrifosfaat, of IP3, is een **signaalmolecuul** en **geen eiwit** dat ontstaat door de activiteit van het enzym fosfolipase C. IP3 speelt een belangrijke rol in de calciumsignaaltransductie door te diffunderen door het cytoplasma en te binden aan **IP3 receptoren** in het **endoplasmatisch reticulum (ER)**, wat leidt tot de **vrijgave van calciumionen** in de cel.",
             "image": "hydrolyse_fosfolipase_c_ip3.png"
         },
         {
@@ -137,31 +137,31 @@
         {
             "type": "info",
             "title": "Isoformen van fosfolipase C",
-            "text": "Er bestaan verschillende **isoformen van fosfolipase C**, die elk door verschillende soorten receptoren kunnen worden geactiveerd. **PLC-beta** wordt bijvoorbeeld geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, terwijl **PLC-gamma** geactiveerd wordt door **receptortyrosinekinases**. Deze isoformen stellen cellen in staat om op verschillende signalen te reageren door het actine-cytoskelet aan te passen.",
+            "text": "Er bestaan verschillende **isoformen van fosfolipase C**, die elk door verschillende soorten receptoren kunnen worden geactiveerd. **PLC-beta 1** wordt bijvoorbeeld geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, terwijl **PLC-gamma 2** geactiveerd wordt door **receptortyrosinekinases**. Deze isoformen stellen cellen in staat om op verschillende signalen te reageren.",
             "image": "dual_signalling_pathway.png"
         },
         {
             "type": "question",
             "question": "Wat zijn twee isoformen van fosfolipase C?",
             "answers": {
-                "correct_answer": "PLC-beta en PLC-gamma",
+                "correct_answer": "PLC-beta 1 en PLC-gamma 2",
                 "wrong_answers": [
                     "PLC-alpha en PLC-delta",
-                    "PLC-beta en PLC-zeta",
-                    "PLC-omega en PLC-gamma"
+                    "PLC-beta 1 en PLC-zeta",
+                    "PLC-omega en PLC-gamma 2"
                 ]
             },
             "image": null
         },
         {
             "type": "info",
-            "title": "PLC-beta en G-prote\u00EFnegekoppelde receptoren",
-            "text": "De isoform **PLC-beta**, wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**. De activatie van deze receptoren door signalen van buiten de cel leidt tot de activering van PLC-beta en de daaropvolgende signaaltransductieprocessen.",
+            "title": "PLC-beta 1 en G-prote\u00EFnegekoppelde receptoren",
+            "text": "De isoform **PLC-beta 1**, wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**. De activatie van deze receptoren door signalen van buiten de cel leidt tot de activering van PLC-beta 1 en de daaropvolgende signaaltransductieprocessen.",
             "image": "dual_signalling_pathway.png"
         },
         {
             "type": "question",
-            "question": "Door welk type receptor wordt PLC-beta geactiveerd?",
+            "question": "Door welk type receptor wordt PLC-beta 1 geactiveerd?",
             "answers": {
                 "correct_answer": "G-prote\u00EFnegekoppelde receptoren",
                 "wrong_answers": [
@@ -174,13 +174,13 @@
         },
         {
             "type": "info",
-            "title": "PLC-gamma en receptortyrosinekinases",
-            "text": "**PLC-gamma**, wordt specifiek **geactiveerd door receptortyrosinekinases (RTKs)**. Wanneer een RTK een ligand bindt, ondergaat het een conformatieverandering die de **kinase activiteit** stimuleert, wat uiteindelijk leidt tot de activering van PLC-gamma.",
+            "title": "PLC-gamma 2 en receptortyrosinekinases",
+            "text": "**PLC-gamma 2**, wordt specifiek **geactiveerd door receptortyrosinekinases (RTKs)**. Wanneer een RTK een ligand bindt, ondergaat het een conformatieverandering die de **kinase activiteit** stimuleert, wat uiteindelijk leidt tot de activering van PLC-gamma 2.",
             "image": "dual_signalling_pathway.png"
         },
         {
             "type": "question",
-            "question": "Hoe wordt PLC-gamma geactiveerd?",
+            "question": "Hoe wordt PLC-gamma 2 geactiveerd?",
             "answers": {
                 "correct_answer": "Door receptortyrosinekinases",
                 "wrong_answers": [
@@ -194,12 +194,12 @@
         {
             "type": "question",
             "question": "Wat zijn de isoformen van fosfolipase c en hoe verschillen ze in activatie?",
-            "answer": "De isoformen van fosfolipase C zijn PLC-beta en PLC-gamma (1 punt). PLC-beta wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt), terwijl PLC-gamma geactiveerd wordt door receptortyrosinekinases (1 punt)."
+            "answer": "De isoformen van fosfolipase C zijn PLC-beta 1 en PLC-gamma 2 (1 punt). PLC-beta 1 wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt), terwijl PLC-gamma 2 geactiveerd wordt door receptortyrosinekinases (1 punt)."
         },
         {
             "type": "info",
             "title": "Biosensoren in signaaltransductie",
-            "text": "In de studie van signaaltransductie worden **biosensoren** gebruikt om de **activiteit te detecteren** van specifieke enzymen zoals fosfolipase C. Biosensoren zijn gespecialiseerde moleculen en kunnen de aanwezigheid en **verdwijning van signaalmoleculen** zoals **PIP2** volgen, wat ons inzicht geeft in de voortgang van signaaltransductieprocessen binnen de cel.",
+            "text": "In de studie van signaaltransductie worden **biosensoren** gebruikt om de **activiteit te detecteren** van specifieke enzymen zoals fosfolipase C. Een biosensor bestaat uit een **eiwit domein** dat aan een bepaald **signaalmolecuul** bindt, gekoppled aan een **fluorescent eiwit (GFP)**. Hiermee kun je de plek van het signaalmolecuul onder de microscoop zichtbaar maken. Hiermee kunnen onderzoekers de aanwezigheid en **verdwijning van signaalmoleculen** zoals **PIP2** volgen, wat inzicht geeft in de voortgang van signaaltransductieprocessen binnen de cel.",
             "image": null
         },
         {
@@ -237,7 +237,7 @@
         {
             "type": "info",
             "title": "Regulatie van calciumconcentratie",
-            "text": "De concentratie calcium buiten de cel is ongeveer 10000 keer hoger dan binnen de cel. Dit is belangrijk voor het adequaat functioneren van de enzymen in de cel. De concentratie van calcium in de cel wordt zo laag mogelijk gehouden door **actief transport** via **calciumkanalen** en **-pompen**.",
+            "text": "De concentratie calcium buiten de cel is ongeveer 10000 keer hoger dan in het cytoplasma. Dit is belangrijk voor het adequaat functioneren van de enzymen in de cel. De concentratie van calcium in het cytoplasma wordt zo laag mogelijk gehouden door **actief transport** via **calciumkanalen** en **-pompen**. Deze zijn verantwoordelijk voor het transport van calcumionen in en uit de cel en naar het ER of naar de mitochondri\u00ebn.",
             "image": "natrium_kalium_pomp_calcium.png"
         },
         {
@@ -256,12 +256,12 @@
         {
             "type": "info",
             "title": "Calciumsignalering in spiercellen",
-            "text": "In spiercellen wordt de calciumsignalering getriggerd door een **actiepotentiaal** of een specifieke **ligand**, zoals acetylcholine. Dit leidt tot de **vrijgave van calciumionen** in de cel, wat vervolgens voor **spiercontractie** zorgt.",
+            "text": "In spiercellen wordt de calciumsignalering getriggerd door een **actiepotentiaal** of een specifieke **ligand**, zoals acetylcholine. Dit leidt tot de **vrijgave van calciumionen** in de cel, wat vervolgens voor **contractie** van myosine fibrillen in de spiercel zorgt.",
             "image": "ryanodine_calcium_spiercel_ip3.png"
         },
         {
             "type": "question",
-            "question": "Wat triggert spiercontractie?",
+            "question": "Wat triggert contractie van myosine fibrillen in de spiercel?",
             "answers": {
                 "correct_answer": "Een actiepotentiaal of een specifieke ligand die de vrijgave van calciumionen induceert",
                 "wrong_answers": [
