@@ -356,7 +356,7 @@
         {
             "type": "question",
             "question": "Welke lichtgevoelige eiwitten worden gebruikt in optogenetica en wat is hun functie?",
-            "answer": "In optogenetica worden eiwitten zoals rhodopsine uit algen (1 punt) en halorhodopsine uit bacteri\u00EBn (1 punt) gebruikt, waarbij het eerste type de neuronen activeert en het tweede type de neuronen remt."
+            "answer": "In optogenetica worden eiwitten zoals rhodopsine (1 punt) en halorhodopsine (1 punt) gebruikt, waarbij het eerste type de neuronen activeert en het tweede type de neuronen remt."
         },
         {
             "type": "info",

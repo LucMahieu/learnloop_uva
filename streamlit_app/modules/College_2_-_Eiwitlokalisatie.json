@@ -142,13 +142,13 @@
         {
             "type": "info",
             "title": "Ran-GEF en Ran-GAP",
-            "text": "Ran-**G**TP **A**ctivating **P**rotein (Ran-GAP) zit in het cytoplasma en Ran-**G**TP **E**xchange **P**rotein (Ran-GEF) zit in de celkern en samen reguleren ze de Ran-GTP/GDP cyclus.",
+            "text": "Ran-**G**TP **A**ctivating **P**rotein (Ran-GAP) zit in het cytoplasma en Ran-**G**TP **E**xchange **F**actor (Ran-GEF) zit in de celkern en samen reguleren ze de Ran-GTP/GDP cyclus.",
             "image": "Ran-GEF_Ran-GAP_1.png"
         },
         {
             "type": "info",
             "title": "Ran-GEF en Ran-GAP",
-            "text": "Ran-**G**TP **A**ctivating **P**rotein (Ran-GAP) zit in het cytoplasma en Ran-**G**TP **E**xchange **P**rotein (Ran-GEF) zit in de celkern en samen reguleren ze de Ran-GTP/GDP cyclus. Ran-GDP wordt in de celkern omgezet naar Ran-GTP door het Ran-GEF enzym terwijl Ran-GTP in het cytoplasma wordt gehydrolyseerd naar Ran-GDP door het Ran-GAP enzym.",
+            "text": "Ran-GDP wordt in de celkern omgezet naar Ran-GTP door het Ran-GEF enzym terwijl Ran-GTP in het cytoplasma wordt gehydrolyseerd naar Ran-GDP door het Ran-GAP enzym.",
             "image": "Ran-GEF_Ran-GAP_2.png"
         },
         {
