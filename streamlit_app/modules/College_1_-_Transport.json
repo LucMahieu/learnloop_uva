@@ -130,13 +130,13 @@
         {
             "type": "info",
             "title": "Ion-gekoppeld transport",
-            "text": "Ion-gekoppeld transport verwijst naar een vorm van **actief transport** waarbij de energie van de **concentratiegradi\u00ebnt van een ion** wordt gebruikt om een ander molecuul te transporteren. Hierbij wordt het ion **tegen zijn eigen concentratiegradi\u00ebnt in** getransporteerd, wat energie levert voor het transport van een ander molecuul.",
+            "text": "**Ion-gekoppeld transport** verwijst naar een vorm van **actief transport** waarbij de energie van de concentratiegradiënt van een ion, zoals natrium of kalium, wordt gebruikt om een ander molecuul of ion over het celmembraan te transporteren. In dit proces **verplaatst het ion zich met zijn eigen concentratiegradiënt** naar binnen of buiten de cel, **waardoor de energie vrijkomt** die nodig is voor het transport van een ander molecuul **tegen diens concentratiegradiënt in**.",
             "image": "coupled_ion_transport.png"
         },
         {
             "type": "question",
             "question": "Wat gebeurt er tijdens ion-gekoppeld transport?",
-            "answer": "Tijdens ion-gekoppeld transport wordt een ion tegen zijn eigen concentratiegradi\u00ebnt in getransporteerd (1 punt), wat energie levert voor het transport van een ander molecuul (1 punt)."
+            "answer": "Tijdens ion-gekoppeld transport beweegt een ion met zijn eigen concentratiegradiënt mee over het membraan (1 punt) waardoor er energie vrijkomt (1 punt) die wordt gebruikt om een ander molecuul of ion tegen zijn concentratiegradiënt in te transporteren (1 punt)."
         },
         {
             "type": "info",
