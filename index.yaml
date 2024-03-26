@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   learnloop:
   - apiVersion: v2
+    appVersion: 0.3.20
+    created: "2024-03-26T13:32:31.196748008Z"
+    description: LearnLoop
+    digest: 92dcb3acd5688b15ef21ed513f3e16876a118f21801bd574163463a06201f8e2
+    name: learnloop
+    type: application
+    urls:
+    - https://github.com/LucMahieu/learnloop_uva/releases/download/learnloop-0.3.20/learnloop-0.3.20.tgz
+    version: 0.3.20
+  - apiVersion: v2
     appVersion: 0.3.19
     created: "2024-03-26T10:47:26.887821026Z"
     description: LearnLoop
@@ -391,4 +401,4 @@ entries:
     urls:
     - https://github.com/LucMahieu/learnloop_uva/releases/download/learnloop-0.1.1/learnloop-0.1.1.tgz
     version: 0.1.1
-generated: "2024-03-26T10:47:26.888251476Z"
+generated: "2024-03-26T13:32:31.197020797Z"
