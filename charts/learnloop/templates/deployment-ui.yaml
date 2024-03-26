@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: learnloop-ui
-  replicas: 3
+  replicas: 2
   revisionHistoryLimit: 3
   template:
     metadata:
