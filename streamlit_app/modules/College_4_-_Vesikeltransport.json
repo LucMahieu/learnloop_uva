@@ -368,7 +368,7 @@
             "answers": {
                 "correct_answer": "Het ER en het Golgi-apparaat",
                 "wrong_answers": [
-                    "Het ER en de mitochondriën",
+                    "Het ER en de mitochondri\u00ebn",
                     "Het Golgi-apparaat en de lysosomen",
                     "Het ER en de celkern"
                 ]
@@ -450,7 +450,7 @@
             "answers": {
                 "correct_answer": "Ze worden vanuit een precursor omgezet tot hun actieve vorm.",
                 "wrong_answers": [
-                    "Ze worden afgebroken en geëlimineerd uit de neuron.",
+                    "Ze worden afgebroken en ge\u00eblimineerd uit de neuron.",
                     "Neuropeptiden worden verpakt in vesikels zonder verdere verandering.",
                     "Ze ondergaan een proces van fosforylering om actief te worden."
                 ]

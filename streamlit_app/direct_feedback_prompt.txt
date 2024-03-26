@@ -31,7 +31,7 @@ Antwoord student:
 Fotosynthese is een proces waarbij planten zonlicht gebruiken om voedsel te maken. Het vindt plaats in de bladeren van planten.
 
 Beoordelingsrubriek:
-- Fotosynthese is het proces waarbij planten, algen en sommige bacteriën zonlicht omzetten in energie (1 punt).
+- Fotosynthese is het proces waarbij planten, algen en sommige bacteri\u00ebn zonlicht omzetten in energie (1 punt).
 - Tijdens fotosynthese wordt koolstofdioxide en water omgezet in glucose en zuurstof (1 punt).
 - Het proces vindt voornamelijk plaats in de chloroplasten van plantencellen (1 punt).
 Mogelijk aantal punten: 3 punten.

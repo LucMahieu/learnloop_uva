@@ -215,7 +215,7 @@
         {
             "type": "info",
             "title": "Snelle vs. langzame reacties in signaaltransductieroutes",
-            "text": "Binnen signaaltransductieroutes kunnen reacties variëren in snelheid. Snelle reacties treden op binnen seconden tot minuten en zijn vaak het resultaat van wijzigingen in de functie of locatie van eiwitten. Langzame reacties kunnen uren tot dagen duren en betreffen meestal transcriptie- en translatieprocessen, waarbij nieuwe eiwitten worden geproduceerd. Deze variatie in reactiesnelheid stelt cellen in staat om op verschillende tijdschalen adequaat te reageren op signalen uit hun omgeving.",
+            "text": "Binnen signaaltransductieroutes kunnen reacties vari\u00ebren in snelheid. Snelle reacties treden op binnen seconden tot minuten en zijn vaak het resultaat van wijzigingen in de functie of locatie van eiwitten. Langzame reacties kunnen uren tot dagen duren en betreffen meestal transcriptie- en translatieprocessen, waarbij nieuwe eiwitten worden geproduceerd. Deze variatie in reactiesnelheid stelt cellen in staat om op verschillende tijdschalen adequaat te reageren op signalen uit hun omgeving.",
             "image": "fast_and_slow_signalling.png"
         },
         {
@@ -269,13 +269,13 @@
         {
             "type": "info",
             "title": "Docking proteins in signaleringssystemen",
-            "text": "Docking proteins bieden specifieke bindingplaatsen voor andere signaalmoleculen. Ze spelen een sleutelrol in de precisie en specificiteit van cellulaire signalering door ervoor te zorgen dat signaaleiwitten correct gepositioneerd worden binnen de cel. Dit maakt het mogelijk voor signalen om efficiënt en nauwkeurig te worden overgedragen naar de juiste bestemming.",
+            "text": "Docking proteins bieden specifieke bindingplaatsen voor andere signaalmoleculen. Ze spelen een sleutelrol in de precisie en specificiteit van cellulaire signalering door ervoor te zorgen dat signaaleiwitten correct gepositioneerd worden binnen de cel. Dit maakt het mogelijk voor signalen om effici\u00ebnt en nauwkeurig te worden overgedragen naar de juiste bestemming.",
             "image": "docking_sites.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van docking proteins binnen signaleringssystemen?",
-            "answer": "Docking proteins bieden specifieke bindingsplaatsen voor andere moleculen, waardoor signaaleiwitten correct gepositioneerd en efficiënt overgedragen kunnen worden binnen de cel.",
+            "answer": "Docking proteins bieden specifieke bindingsplaatsen voor andere moleculen, waardoor signaaleiwitten correct gepositioneerd en effici\u00ebnt overgedragen kunnen worden binnen de cel.",
             "image": null
         },
         {

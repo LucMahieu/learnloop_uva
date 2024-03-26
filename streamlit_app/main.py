@@ -683,6 +683,17 @@ def render_practice_page():
             render_navigation_buttons()
 
 
+def render_theory_page():
+    """
+    Renders the page that contains the theory of the lecture.
+    """
+    with mid_col:
+        for segment in st.session_state.page_content["segments"]:
+            if segment['type'] == 'info':
+                st.session_state.segment_content = segment
+                render_info()
+
+
 def select_page_type():
     """
     Determines what type of page to display based on which module the user selected.
@@ -702,6 +713,8 @@ def select_page_type():
         render_learning_page()
     if st.session_state.selected_phase == 'practice':
         render_practice_page()
+    if st.session_state.selected_phase == 'theory':
+        render_theory_page()
 
 
 def initialise_session_states():
@@ -837,6 +850,14 @@ def set_info_page_true():
     st.session_state.info_page = True
 
 
+def track_visits():
+    """Tracks the visits to the modules."""
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$inc": {f"progress.{st.session_state.selected_module}.visits.{st.session_state.selected_phase}": 1}}
+    )
+    
+
 def render_sidebar():
     """	
     Function to render the sidebar with the modules and login module.	
@@ -855,10 +876,17 @@ def render_sidebar():
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'learning'
                     st.session_state.info_page = False
+                    track_visits()
                 if st.button('Oefenfase 📝', key=module + ' practice'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'practice'
                     st.session_state.info_page = False
+                    track_visits()
+                if st.button('Theorie 📚', key=module + ' theory'):
+                    st.session_state.selected_module = module
+                    st.session_state.selected_phase = 'theory'
+                    st.session_state.info_page = False
+                    track_visits()
 
         render_feedback_form()
 

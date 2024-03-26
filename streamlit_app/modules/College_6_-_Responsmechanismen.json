@@ -156,7 +156,7 @@
         {
             "type": "info",
             "title": "Cyclisch AMP als tweede boodschapper",
-            "text": "Cyclisch AMP (cAMP) is een **tweede boodschapper** die betrokken is bij veel signaaltransductieprocessen. Het wordt geproduceerd door het enzym **adenylcyclase** en speelt een rol in de activering van **prote\u00efnekinase A (PKA)**. Eenmaal geactiveerd, kan PKA onder andere de **genexpressie** moduleren. cAMP wordt afgebroken door het enzym **cAMP-fosfodi\u00EBsterase**, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle beëindiging van het cAMP signaal",
+            "text": "Cyclisch AMP (cAMP) is een **tweede boodschapper** die betrokken is bij veel signaaltransductieprocessen. Het wordt geproduceerd door het enzym **adenylcyclase** en speelt een rol in de activering van **prote\u00efnekinase A (PKA)**. Eenmaal geactiveerd, kan PKA onder andere de **genexpressie** moduleren. cAMP wordt afgebroken door het enzym **cAMP-fosfodi\u00EBsterase**, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle be\u00ebindiging van het cAMP signaal",
             "image": "cAMP_second_messenger.png"
         },
         {
@@ -186,7 +186,7 @@
         {
             "type": "info",
             "title": "Signalering door GTP binding",
-            "text": "GTP-bindende eiwitten worden geactiveerd wanneer **GEFs** (guanine nucleotide exchange factors) de vervanging van GDP door GTP bevorderen. Deze activering initieert de signaaloverdracht, waarmee belangrijke cellulaire processen zoals groei en reacties op externe prikkels worden gereguleerd. Het G-proteïne blijft actief en zendt signalen uit zolang het GTP gebonden heeft. Uiteindelijk wordt het GTP door de intrinsieke GTPase-activiteit van het eiwit gehydrolyseerd tot GDP. **GAPs** (GTPase-activating proteins) versnellen deze hydrolyse, wat resulteert in de inactivering van het G-proteïne en het beëindigen van de signaaloverdracht.",
+            "text": "GTP-bindende eiwitten worden geactiveerd wanneer **GEFs** (guanine nucleotide exchange factors) de vervanging van GDP door GTP bevorderen. Deze activering initieert de signaaloverdracht, waarmee belangrijke cellulaire processen zoals groei en reacties op externe prikkels worden gereguleerd. Het G-prote\u00EFne blijft actief en zendt signalen uit zolang het GTP gebonden heeft. Uiteindelijk wordt het GTP door de intrinsieke GTPase-activiteit van het eiwit gehydrolyseerd tot GDP. **GAPs** (GTPase-activating proteins) versnellen deze hydrolyse, wat resulteert in de inactivering van het G-prote\u00EFne en het be\u00ebindigen van de signaaloverdracht.",
             "image": "GPT_binding_signalering.png"
         },
         {

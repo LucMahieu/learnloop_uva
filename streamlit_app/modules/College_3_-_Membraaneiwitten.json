@@ -158,7 +158,7 @@
                 "correct_answer": "Aan de cytoplasmatische kant van het ER.",
                 "wrong_answers": [
                     "In vrije drijvende ribosomen in het cytosol.",
-                    "Op de oppervlakte van mitochondriën",
+                    "Op de oppervlakte van mitochondri\u00ebn",
                     "In het lumen van het ER."
                 ]
             },
@@ -198,7 +198,7 @@
         {
             "type": "question",
             "question": "Waarom is opname van vetzuren uit voeding belangrijk?",
-            "answer": "Opname van vetzuren uit de voeding is belangrijk omdat het lichaam essentiële vetzuren nodig heeft en deze niet zelf kan produceren (1 punt).",
+            "answer": "Opname van vetzuren uit de voeding is belangrijk omdat het lichaam essenti\u00eble vetzuren nodig heeft en deze niet zelf kan produceren (1 punt).",
             "image": null
         },
         {
@@ -255,7 +255,7 @@
                 "correct_answer": "Fosfatidylcholine is een structureel lipide dat veel voorkomt in celmembranen en bijdraagt aan de vorming en eigenschappen van de lipide bilaag.",
                 "wrong_answers": [
                     "Fosfatidylcholine is een eiwit dat voornamelijk voorkomt in het cytoplasma en betrokken is bij celmetabolisme.",
-                    "Het is een type van nucleïnezuur dat deel uitmaakt van de genetische code in de celkern.",
+                    "Het is een type van nucle\u00EFnezuur dat deel uitmaakt van de genetische code in de celkern.",
                     "Fosfatidylcholine is een soort koolhydraat dat essentieel is voor energieopslag in spierweefsel."
                 ]
             },
@@ -342,7 +342,7 @@
                 "wrong_answers": [
                     "Omdat het sneller is dan anterograde transport, wat minder energie kost.",
                     "Het vermindert de behoefte aan ATP door het gebruik van passief transport in plaats van actief transport.",
-                    "Retrograde transport genereert extra ATP, wat de energie-efficiëntie van de cel verhoogt."
+                    "Retrograde transport genereert extra ATP, wat de energie-effici\u00ebntie van de cel verhoogt."
                 ]
             },
             "image": null
