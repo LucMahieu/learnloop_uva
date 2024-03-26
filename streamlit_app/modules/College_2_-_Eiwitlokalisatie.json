@@ -261,20 +261,21 @@
         {
             "type": "info",
             "title": "Membraanpotentiaal binnenmembraan",
-            "text": "Eiwitten die naar de mitochondriale matrix moeten, hebben een speciale signaalsequentie die ze via het **TIM23**-complex daarheen leidt. Er is een **membraanpotentiaal over het binnenmembraan door een verschil in lading**, waarbij de binnenmembraanruimte positief is en de matrix negatief. Dit verschil helpt eiwitten van de ene naar de andere ruimte te bewegen.",
+            "text": "Eiwitten bestemd voor de mitochondriale matrix bezitten een unieke signaalsequentie die hun herkenning en transport via het **TIM23**-complex faciliteert. De membraanpotentiaal over het binnenmembraan, gegenereerd door een verschil in ladingen waarbij de matrix negatief geladen is ten opzichte van de intermembraanruimte, speelt een belangrijke rol in dit proces. Dit potentiaalverschil dient als een drijvende kracht die helpt bij het verplaatsen van eiwitten **van de intermembraanruimte naar de mitochondriale matrix**.",
             "image": "membraanpotentiaal_mitochondria.png"
         },
         {
-            "type": "question",
+            "type": "question",	
             "question": "Wat is de functie van het membraanpotentiaal over het binnenmembraan? Het helpt eiwitten van ... te bewegen.",
             "answers": {
-                "correct_answer": "het binnenmembraan naar de matrix",
+                "correct_answer": "de intermembraanruimte naar de matrix",
                 "wrong_answers": [
                     "de matrix naar het binnenmembraan",
                     "de intermembraanruimte naar de binnenmembraan",
-                    "de intermembraanruimte naar de matrix"
+                    "het binnenmembraan naar de matrix"
                 ]
             }
+            
         },
         {
             "type": "info",
