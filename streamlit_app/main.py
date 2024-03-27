@@ -589,8 +589,12 @@ def initialise_practice_page():
     else:
         fetch_ordered_segment_sequence()
 
-        # Use the segment index to lookup the json index in the ordered_segment_sequence
-        json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
+        # TODO: Fix this bad solution that fixes that list index out of range error
+        try:
+            # Use the segment index to lookup the json index in the ordered_segment_sequence
+            json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
+        except:
+            json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index - 10]
 
         # Select the segment (with contents) that corresponds to the saved json index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
