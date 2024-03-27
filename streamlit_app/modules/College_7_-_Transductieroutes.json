@@ -613,6 +613,24 @@
             "type": "question",
             "question": "Geef een voorbeeld van een signaaltransductieroute waarin de vier hoofdonderdelen; receptor, enzym, second messenger(s) en kinase(s) duidelijk naar voren komen.",
             "answer": "Het antwoord moet een specifieke route bevatten (1 punt), zoals de G-prote\u00efne gekoppelde receptorroute (GPCR). Benoem daarbij de receptor, zoals een GPCR (1 punt), het enzym, zoals fosfolipase C (1 punt), het second messenger, zoals IP3 (1 punt) en de kinase zoals prote\u00efne kinase C (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
+
         }
     ]
 }

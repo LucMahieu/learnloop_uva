@@ -437,6 +437,24 @@
             "type": "question",
             "question": "Wat is de functie van de KDEL-sequentie?",
             "answer": "De KDEL-sequentie zorgt ervoor dat eiwitten die buiten het ER terecht zijn gekomen, weer terug in het ER geraken door het retrogade transport (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over eiwittransport in de cel voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over eiwittransport in de cel voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over eiwittransport in de cel voltooid."
+
         }
     ]
 }

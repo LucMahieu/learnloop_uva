@@ -223,13 +223,13 @@
         {
             "type": "info",
             "title": "RAB GTPases in vesikeltransport",
-            "text": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming en het adresseren van vesikels naar hun juiste locatie. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
+            "text": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming, het adresseren van vesikels naar hun juiste locatie en het fuseren van vesikels met hun doelmembranen. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
             "image": "rab-gtp_vesikels.png"
         },
         {
             "type": "question",
             "question": "Wat is de functie van RAB GTPases bij vesikeltransport?",
-            "answer": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming (1 punt) en het adresseren van vesikels (1 punt) naar hun bestemming.",
+            "answer": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming (1 punt), het adresseren van vesikels (1 punt) en het fuseren van vesikels met hun doelmembranen.",
             "image": null
         },
         {

@@ -491,6 +491,18 @@
             "type": "question",
             "question": "Welke aspecten van ionenkanalen kunnen bestudeerd worden met de patch clamp techniek?",
             "answer": "Met de patch clamp techniek kunnen eigenschappen zoals geleidingssnelheid (0.5 punt), ionenselectiviteit (0.5 punt), en de mechanismen van opening en sluiting (1 punt) van ionenkanalen bestudeerd worden."
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over transport voltooid!"
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over transport voltooid!"
+
         }
     ]
 }

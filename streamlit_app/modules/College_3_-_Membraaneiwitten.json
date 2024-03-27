@@ -444,6 +444,24 @@
             "question": "Wat is de functie van eiwitcoatings zoals clathrine en COPII?",
             "answer": "Eiwitcoatings helpen bij de vorming (1 punt) en het transport van vesicles binnen de cel (1 punt).",
             "image": null
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
+
+        },
+        {
+            "type": "info",
+            "title": "Einde leertraject",
+            "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
+
         }
     ]
 }
