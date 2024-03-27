@@ -186,11 +186,11 @@
             "type": "question",
             "question": "Wat is een voorbeeld van een vetzuur dat uit de voeding wordt opgenomen?",
             "answers": {
-                "correct_answer": "Omega-3 vetzuren",
+                "correct_answer": "Omega-3",
                 "wrong_answers": [
-                    "Omega-6 vetzuren",
-                    "Transvetzuren",
-                    "Verzadigde vetzuren"
+                    "Glucose",
+                    "Monoglyceriden",
+                    "Aminozuren"
                 ]
             },
             "image": null
@@ -203,15 +203,15 @@
         },
         {
             "type": "info",
-            "title": "Structuur van vetzuren",
-            "text": "De structuur van vetzuren is gebaseerd op **acylglycerol**, wat bestaat uit een glycerolmolecuul gebonden aan twee vetzuurstaarten en een hydroxygroep. Deze structuur is de basis voor veel complexere lipiden die worden gevonden in celmembranen, waar ze bijdragen aan de membraanstructuur en -functie. De vetzuurstaarten van lipiden bevinden zich in het binnenste van de membraan, terwijl de hydrofiele kopgroep zich bevindt aan de buitenkant van de membraan.",
-            "image": "vetzuur.png"
-        },
+            "title": "Structuur van fosfolipiden",
+            "text": "Vetzuren bestaan uit lange koolwaterstofketens met een carboxylgroep aan het ene uiteinde. In fosfolipiden zijn twee vetzuurstaarten gebonden aan een glycerolmolecuul, samen met een fosfaatgroep en meestal een bijkomende polaire groep. Fosfolipiden zijn essentieel voor celmembranen en vormen een bilayer met de hydrofobe vetzuurstaarten naar binnen gekeerd en de hydrofiele kop bestaande uit de fosfaat- en polaire groepen naar buiten, bijdragend aan de membraanstructuur en -functie.",
+            "image": "image.png"
+        },        
         {
             "type": "question",
-            "question": "Beschrijf de basisstructuur van een vetzuur.",
-            "answer": "De basisstructuur van een vetzuur bestaat uit een acylglycerol met twee vetzuurstaarten (1 punt) en een hydroxygroep (1 punt).",
-            "image": null
+            "question": "Wat is de structuur van fosfolipiden?",
+            "answer": "Fosfolipiden bestaan uit twee vetzuurstaarten (1 punt) die gebonden zijn aan een glycerolmolecuul (1 punt), samen met een fosfaatgroep (1 punt) en meestal een bijkomende polaire groep (1 punt).",
+            "image": null	
         },
         {
             "type": "question",
@@ -219,7 +219,8 @@
             "answers": {
                 "correct_answer": "De vetzuurstaarten van lipiden bevinden zich in het binnenste van de membraan, en de kopgroep bevindt zich aan de buitenkant van het membraan.",
                 "wrong_answers": [
-                    "De vetzuurstaarten van lipiden bevinden zich aan de buitenkant van het membraan, en de kopgroep bevindt zich aan de binnenkant van het membraan."
+                    "De vetzuurstaarten van lipiden bevinden zich aan de buitenkant van het membraan, en de kopgroep bevindt zich aan de binnenkant van het membraan.",
+                    "De vetzuurstaarten en kopgroepen bevinden zich beide aan de buitenkant van het membraan."
                 ]
             },
             "image": null
