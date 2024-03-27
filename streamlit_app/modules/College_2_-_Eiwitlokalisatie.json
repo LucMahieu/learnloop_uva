@@ -21,23 +21,23 @@
         {
             "type": "info",
             "title": "Cytoskelet",
-            "text": "Het cytoskelet is een complex netwerk van vezels in de cel, opgebouwd uit microtubules, intermediate filaments, en microfilaments, die belangrijk zijn voor de structuur en het transport binnen de cel.",
+            "text": "Het cytoskelet is een complex netwerk van vezels in de cel, opgebouwd uit microtubuli, intermediate filaments, en microfilaments, die belangrijk zijn voor de structuur en het transport van eiwitten en blaasjes binnen de cel.",
             "image": "cytoskelet.png"
-        },
-        {
-            "type": "info",
-            "title": "Eiwittransport via het cytoskelet",
-            "text": "Het cytoskelet faciliteert het transport van eiwitten en vesikels langs specifieke wegen, waarbij microfilamenten vaak gebruikt worden voor de beweging van eiwitten en vesikels."
         },
         {
             "type": "question",
             "question": "Waaruit bestaat het cytoskelet en wat is de functie ervan?",
-            "answer": "Het cytoskelet bestaat uit microtubules, intermediate filaments en microfilaments (1 punt) en is verantwoordelijk voor de structuur en het transport van eiwitten en blaasjes binnen de cel (1 punt). Actine en Tubuline moeten genoemd worden!"
+            "answer": "Het cytoskelet bestaat uit microtubuli (1 punt), intermediate filaments (1 punt) en microfilaments (1 punt) en is verantwoordelijk voor de structuur en het transport van eiwitten en blaasjes binnen de cel (1 punt)."
+        },
+        {
+            "type": "info",
+            "title": "Actine en tubuline",
+            "text": "Microfilamenten, opgebouwd uit actine, zijn betrokken bij de beweging van cellen en het transport van blaasjes. Microtubuli, opgebouwd uit tubuline, zijn belangrijk voor het transport van eiwitten en vesikels binnen de cel."
         },
         {
             "type": "question",
-            "question": "Welk onderdeel van het cytoskelet wordt het meest gebruikt voor het transport van eiwitten en vesikels?",
-            "answer": "Eigenlijk worden alle onderdelen gebruikt, maar het meeste gaat via de microtubules (tubuline)"
+            "question": "Waar zijn microfilamenten en microtubuli uit opgebouwd?",
+            "answer": "Microfilamenten zijn opgebouwd uit actine (1 punt) en microtubuli zijn opgebouwd uit tubuline (1 punt)."
         },
         {
             "type": "info",
