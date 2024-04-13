@@ -13,20 +13,6 @@ import base64
 st.set_page_config(page_title="LearnLoop", layout="wide")
 load_dotenv()
 
-def initialise_run_settings():
-    """
-    Settings:
-    Turn on 'testing' to:
-    - Reset db every time the webapp is loaded
-    - Use dummy LLM feedback as response to save openai costs and time during testing
-    - Use localhost in stead of learnloop.datanose.nl for authentication
-
-    Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
-    has access to CosmosDB (determined by Gerrit).
-    """
-    st.session_state.testing = True
-    st.session_state.running_on_premise = True
-
 
 def connect_to_openai():
     return AzureOpenAI(
@@ -40,7 +26,7 @@ def connect_to_database():
     """
     Connect to either MongoDB or CosmosDB and ping to check connection.
     """
-    if st.session_state.running_on_premise:
+    if running_on_premise:
         COSMOS_URI = os.getenv('COSMOS_URI')
         db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
     else:
@@ -80,7 +66,7 @@ def upload_progress():
 
 def evaluate_answer():
     """Evaluates the answer of the student and returns a score and feedback."""
-    if st.session_state.testing != True:
+    if testing != True:
         
         # Create user prompt with the question, correct answer and student answer
         prompt = f"""Input:\n
@@ -742,9 +728,6 @@ def select_page_type():
 
 
 def initialise_session_states():
-    if 'running_on_premise' not in st.session_state:
-        st.session_state.running_on_premise = False
-
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
 
@@ -965,7 +948,7 @@ def determine_if_to_initialise_database():
     if not user_exists:
         db.users.insert_one({"username": st.session_state.username})
 
-    if st.session_state.testing:
+    if testing:
         if 'reset_db' not in st.session_state:
             st.session_state.reset_db = True
         
@@ -1012,7 +995,7 @@ def render_login_page():
         welcome_title = "Celbiologie - deel 2"
         logo_base64 = convert_image_base64("./images/logo.png")
 
-        if st.session_state.testing:
+        if testing:
             href = "http://localhost:3000/"
         else:
             href = "https://learnloop.datanose.nl/"
@@ -1039,28 +1022,41 @@ def fetch_if_warned():
 
 def fetch_and_remove_nonce():
     if 'nonce' not in st.session_state:
-            st.session_state.nonce = st.query_params.get('nonce', None)
-            st.query_params.pop('nonce', None) # Remove the nonce from the url
+        st.session_state.nonce = st.query_params.get('nonce', None)
+        st.query_params.pop('nonce', None) # Remove the nonce from the url
 
 
 if __name__ == "__main__":
+    # ---------------------------------------------------------
+    # SETTINGS:
+
+    # Turn on 'testing' to:
+    # - Reset db every time the webapp is loaded
+    # - Use dummy LLM feedback as response to save openai costs and time during testing
+    # - Use localhost in stead of learnloop.datanose.nl for authentication
+
+    # Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
+    # has access to CosmosDB (determined by Gerrit).
+
+    testing = True
+    running_on_premise = True
+    # ---------------------------------------------------------
+
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
     
     initialise_session_states()
-    initialise_run_settings()
-
     db = connect_to_database()
     openai_client = connect_to_openai()
 
-    if not st.session_state.running_on_premise:
+    if not testing:
         st.session_state.username = "test_user"
 
     fetch_and_remove_nonce()
 
     if st.session_state.nonce is None \
-        and st.session_state.running_on_premise \
+        and running_on_premise \
         and not st.session_state.username:
         render_login_page()
 

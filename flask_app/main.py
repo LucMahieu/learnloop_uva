@@ -39,7 +39,12 @@ def connect_to_database():
 
 @app.route('/')
 def login():
-    redirect_uri = url_for('authorize', _external=True, _scheme='https')
+    if testing:
+        scheme = 'http'
+    else:
+        scheme = 'https'
+    
+    redirect_uri = url_for('authorize', _external=True, _scheme=scheme)
     return auth.surfconext.authorize_redirect(redirect_uri)
 
 
@@ -72,9 +77,12 @@ def authorize():
 
     # Redirect to streamlit app
     if testing:
-        redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
+        url = 'http://localhost:8501/'
     else:
-        redirect_url = f'https://localhost:8501/app?none={nonce}'
+        url = 'https://learnloop.datanose.nl/'
+    
+    redirect_url = f'{url}app?nonce={nonce}'
+
     return redirect(redirect_url, code=302)
 
 
@@ -94,9 +102,9 @@ def create_auth_instance():
 
 if __name__=="__main__":
     # Initialise settings
-    running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+    running_on_premise = True # Set to true if IP adres is allowed by Gerrit
     testing = True
     
-    # db = connect_to_database()
+    db = connect_to_database()
     auth = create_auth_instance()
     app.run(host='0.0.0.0', port=3000)
