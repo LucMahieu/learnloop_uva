@@ -670,7 +670,7 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    if not running_on_premise:
+    if not running_on_premise or st.session_state.currently_testing:
         st.session_state.username = "test_user"
 
     else:
