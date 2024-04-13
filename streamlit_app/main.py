@@ -243,38 +243,47 @@ def reset_progress():
     )
 
 
-def generate_insights():
+def fetch_feedback_from_db():
     """
-    Aggregates the feedback from all users into percentages for 
-    each score type (0.0, 0.5, 1.0).
+    Fetches all the feedback that users got on the current question
+    from the database for further processing.
     """
-    module = st.session_state.selected_module
-    question = st.session_state.segment_content['question']
 
-    feedback_path = f"progress.{module}.feedback.{question}"
 
-    # A feedback cursor is not a JSON object, but a collection of JSON objects
-    feedback_cursor = db.users.find(
-        {
-            feedback_path: {"$exists": True, "$not": {"$size":  0}} # Check if the path exists and has a value other then 0
-        },
-        {
-            feedback_path: 1 # Boolean to tell that you want to project (output) this path
+def rerun_if_no_docs_for_feedback_path(feedback_path):
+    """
+    Check if there is any feedback to aggregate (only if users made the current question). 
+    Displays warning and reruns program (sort of return) if there isn't any feedback in the db.
+    """
+    feedback_count = db.users.count_documents(
+        { 
+            feedback_path: {"$exists": True, "$ne": {}}
         }
     )
 
-    if not feedback_cursor:
-        st.write("No feedback to aggregate into insights.")
+    if feedback_count == 0:
+        st.warning("No feedback to aggregate into insights. Try again in 3 seconds.")
+        time.sleep(3)
         st.session_state.submitted = False
-        return
+        st.rerun()
 
-    # Put all feedback data in a list
-    flat_feedback_list = []
-    for feedback_doc in feedback_cursor:
-        feedback_items = feedback_doc['progress'][module]['feedback'][question]
+
+def flatten_db_cursor(cursor):
+    """
+    Puts all data from db cursor in a flat list format.
+    """
+    flat_list = []
+    for doc in cursor:
+        module = st.session_state.selected_module
+        question = st.session_state.segment_content['question']
+        feedback_items = doc['progress'][module]['feedback'][question]
         for i, item in enumerate(feedback_items):
-            flat_feedback_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
+            flat_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
+    
+    return flat_list
 
+
+def create_score_percentages_df(flat_feedback_list):
     df = pd.DataFrame(flat_feedback_list, columns=['feedback_item', 'score', 'feedback'])
 
     # Each user has feedback items for the same parts of the answers, all with their own score
@@ -292,6 +301,46 @@ def generate_insights():
 
     # Rename the columns to be more intuitive
     perc_df.columns = [f"{col} score" for col in perc_df.columns]
+
+    return perc_df
+
+
+def find_docs_for_path(path):
+    """
+    Finds the documents in a db for a certain path and returns a cursor.
+    """
+    # A feedback cursor is not a JSON object, but a collection of JSON objects
+    cursor = db.users.find(
+        {
+            path: {"$exists": True, "$not": {"$size":  0}} # Check if the path exists and has a value other then 0
+        },
+        {
+            path: 1 # Boolean to tell that you want to project (output) this path
+        }
+    )
+
+    return cursor
+
+
+
+def generate_insights():
+    """
+    Aggregates the feedback from all users into percentages for 
+    each score type (0.0, 0.5, 1.0).
+    """
+    module = st.session_state.selected_module
+    # Remove dots to prevent interference with querying db because of the dot notation in path
+    question = st.session_state.segment_content['question'].replace('.', ' ')
+
+    feedback_path = f"progress.{module}.feedback.{question}"
+
+    rerun_if_no_docs_for_feedback_path(feedback_path)
+
+    feedback_cursor = find_docs_for_path(feedback_path)
+
+    flat_feedback_list = flatten_db_cursor(feedback_cursor)
+
+    perc_df = create_score_percentages_df(flat_feedback_list)
 
     return perc_df
 
@@ -385,6 +434,8 @@ def render_learning_page():
 
             render_navigation_buttons()
         else:
+            render_progress_bar()
+
             image_path = fetch_image_path()
             if image_path:
                 render_image(image_path)
