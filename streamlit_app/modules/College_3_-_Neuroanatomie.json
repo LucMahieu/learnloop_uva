@@ -1,0 +1,25 @@
+{
+    "module_name": "Transport en Signaaltransductie",
+    "segments": [
+        {
+            "type": "question",
+            "question": "Wat is passief transport en hoe verloopt het?",
+            "answer": "Passief transport is het verplaatsen van moleculen over een celmembraan met de concentratiegradi\u00ebnt mee (1 punt) zonder direct energieverbruik (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Hoe verschilt actief transport van passief transport?",
+            "answer": "Actief transport vereist energie, zoals ATP (1 punt), om stoffen tegen de concentratiegradi\u00ebnt in te transporteren (1 punt), terwijl passief transport geen energie vereist (1 punt) en met de concentratiegradi\u00ebnt mee verloopt (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van ionenkanalen?",
+            "answer": "Ionenkanalen maken transport van specifieke ionen over het celmembraan mogelijk (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van transporteiwitten in het membraan?",
+            "answer": "Transporteiwitten faciliteren het transport van stoffen over celmembranen (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+        }
+    ]
+}
