@@ -330,7 +330,7 @@ def generate_insights():
     """
     module = st.session_state.selected_module
     # Remove dots to prevent interference with querying db because of the dot notation in path
-    question = st.session_state.segment_content['question'].replace('.', ' ')
+    question = st.session_state.segment_content['question'].replace('.', '')
 
     feedback_path = f"progress.{module}.feedback.{question}"
 
