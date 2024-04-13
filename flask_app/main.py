@@ -9,30 +9,32 @@ import random
 
 load_dotenv()
 
+# Create flask app
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+def connect_to_database():
+    """
+    Connect to either MongoDB or CosmosDB and ping to check connection.
+    """
+    print("Trying to connect with database")
+    if running_on_premise:
+        COSMOS_URI = os.getenv('COSMOS_URI')
+        db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+    else:
+        MONGO_URI = os.getenv('MONGO_DB')
+        db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
-if running_on_premise:
-    COSMOS_URI = os.getenv('COSMOS_URI')
-    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-else:
-    MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+    db = db_client.LearnLoop
 
-db = db_client.LearnLoop
+    # Ping database to check if it's connected
+    try:
+        db.command("ping")
+        print("Connected to database")
+    except Exception as e:
+        print(f"Error: {e}")
 
-# Make authentication instance for the flask app
-auth = OAuth(app)
-
-auth.register(
-    name='surfconext',
-    client_id=os.getenv('SURFCONEXT_CLIENT_ID'),
-    client_secret=os.getenv('SURFCONEXT_CLIENT_SECRET'),
-    server_metadata_url=os.getenv('SURFCONEXT_METADATA_URL'),
-    client_kwargs={'scope': 'openid'}
-)
+    return db
 
 
 @app.route('/')
@@ -69,9 +71,32 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
+    if testing:
+        redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
+    else:
+        redirect_url = f'https://localhost:8501/app?none={nonce}'
     return redirect(redirect_url, code=302)
 
 
+def create_auth_instance():
+    """Make authentication instance for the flask app"""
+    auth = OAuth(app)
+
+    auth.register(
+        name='surfconext',
+        client_id=os.getenv('SURFCONEXT_CLIENT_ID'),
+        client_secret=os.getenv('SURFCONEXT_CLIENT_SECRET'),
+        server_metadata_url=os.getenv('SURFCONEXT_METADATA_URL'),
+        client_kwargs={'scope': 'openid'}
+    )
+    return auth
+
+
 if __name__=="__main__":
+    # Initialise settings
+    running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+    testing = True
+    
+    # db = connect_to_database()
+    auth = create_auth_instance()
     app.run(host='0.0.0.0', port=3000)

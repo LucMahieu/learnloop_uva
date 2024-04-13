@@ -11,35 +11,52 @@ import base64
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
-
-# Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
-
 load_dotenv()
 
-# Database connection
-if running_on_premise:
-    COSMOS_URI = os.getenv('COSMOS_URI')
-    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-else:
-    MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+def initialise_run_settings():
+    """
+    Settings:
+    Turn on 'testing' to:
+    - Reset db every time the webapp is loaded
+    - Use dummy LLM feedback as response to save openai costs and time during testing
+    - Use localhost in stead of learnloop.datanose.nl for authentication
 
-openai_client = AzureOpenAI(
-   api_key=os.getenv("OPENAI_API_KEY"),  
-   api_version="2024-03-01-preview",
-   azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
-)
+    Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
+    has access to CosmosDB (determined by Gerrit).
+    """
+    st.session_state.testing = True
+    st.session_state.running_on_premise = True
 
-db = db_client.LearnLoop
 
-# Ping database to check if it's connected
-try:
-    db.command("ping")
-    print("Connected to database")
-except Exception as e:
-    print(f"Error: {e}")
+def connect_to_openai():
+    return AzureOpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),  
+    api_version="2024-03-01-preview",
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+    )
+
+
+def connect_to_database():
+    """
+    Connect to either MongoDB or CosmosDB and ping to check connection.
+    """
+    if st.session_state.running_on_premise:
+        COSMOS_URI = os.getenv('COSMOS_URI')
+        db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
+    else:
+        MONGO_URI = os.getenv('MONGO_DB')
+        db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+
+    db = db_client.LearnLoop
+
+    # Ping database to check if it's connected
+    try:
+        db.command("ping")
+        print("Connected to database")
+    except Exception as e:
+        print(f"Error: {e}")
+
+    return db
 
 
 def upload_progress():
@@ -63,7 +80,7 @@ def upload_progress():
 
 def evaluate_answer():
     """Evaluates the answer of the student and returns a score and feedback."""
-    if st.session_state.currently_testing != True:
+    if st.session_state.testing != True:
         
         # Create user prompt with the question, correct answer and student answer
         prompt = f"""Input:\n
@@ -438,7 +455,6 @@ def reset_progress():
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
-    # initialise_learning_page()
 
 
 def render_warning():
@@ -726,6 +742,9 @@ def select_page_type():
 
 
 def initialise_session_states():
+    if 'running_on_premise' not in st.session_state:
+        st.session_state.running_on_premise = False
+
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
 
@@ -946,7 +965,7 @@ def determine_if_to_initialise_database():
     if not user_exists:
         db.users.insert_one({"username": st.session_state.username})
 
-    if st.session_state.currently_testing:
+    if st.session_state.testing:
         if 'reset_db' not in st.session_state:
             st.session_state.reset_db = True
         
@@ -992,11 +1011,17 @@ def render_login_page():
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
         logo_base64 = convert_image_base64("./images/logo.png")
+
+        if st.session_state.testing:
+            href = "http://localhost:3000/"
+        else:
+            href = "https://learnloop.datanose.nl/"
+        
         html_content = f"""
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
             <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="https://learnloop.datanose.nl/" style="text-decoration: none;">
+            <a href={href} style="text-decoration: none;">
                 <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
                 text-align: center; text-decoration: none; display: block; width: 100%; margin: \
                 4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
@@ -1012,29 +1037,37 @@ def fetch_if_warned():
     return user_doc["warned"]
 
 
+def fetch_and_remove_nonce():
+    if 'nonce' not in st.session_state:
+            st.session_state.nonce = st.query_params.get('nonce', None)
+            st.query_params.pop('nonce', None) # Remove the nonce from the url
+
+
 if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
     
     initialise_session_states()
+    initialise_run_settings()
 
-    if not running_on_premise:
-        st.session_state.username = "flower2960"
+    db = connect_to_database()
+    openai_client = connect_to_openai()
 
-    if 'nonce' not in st.session_state:
-        st.session_state.nonce = st.query_params.get('nonce', None)
-        st.query_params.pop('nonce', None) # Remove the nonce from the url
+    if not st.session_state.running_on_premise:
+        st.session_state.username = "test_user"
 
-    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
+    fetch_and_remove_nonce()
+
+    if st.session_state.nonce is None \
+        and st.session_state.running_on_premise \
+        and not st.session_state.username:
         render_login_page()
+
     elif st.session_state.username is None:
         fetch_username()
         invalidate_nonce()
         st.rerun() # Needed, else it seems to get stuck here
-        
-    if st.session_state.username is None:
-        print("No username")
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
