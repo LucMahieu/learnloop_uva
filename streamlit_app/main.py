@@ -73,7 +73,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt_3.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
 
@@ -86,13 +86,21 @@ def evaluate_answer():
             max_tokens=500
         )
 
-        split_response = response.choices[0].message.content.split(";;")
+        response = response.choices[0].message.content
 
-        if len(split_response) != 2:
-            raise ValueError("Server response is not in the correct format. Please retry.")
+        # Turn into JSON and select the current question
+        question = st.session_state.segment_content['question']
+        json_response = json.loads(response)[question]
 
-        st.session_state.feedback = split_response[0].split(">>")
-        st.session_state.score = split_response[1]
+        # Reset the session states
+        st.session_state.feedback = []
+        st.session_state.score = []
+
+        # Add each item to the feedback and score lists
+        for feedback_item in json_response:
+            st.session_state.score.append(feedback_item['score'])
+            st.session_state.feedback.append(feedback_item['feedback'])
+
     else:
         st.session_state.feedback = "O"
         st.session_state.score = "0/2"
@@ -483,7 +491,7 @@ def render_learning_page():
                                 het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
                     evaluate_answer()
-                                
+                                        
                 render_feedback()
                 add_to_practice_phase()
                 render_explanation()
