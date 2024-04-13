@@ -9,7 +9,7 @@ from pymongo import MongoClient
 import certifi
 import base64
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -61,25 +61,6 @@ def upload_progress():
         {"username": st.session_state.username},
         {"$set": data}
     )
-
-
-def score_to_percentage():
-    """Converts a score in the form of a string to a percentage."""
-    try:
-        # Calculate the score percentage
-        part, total = st.session_state.score.split('/')
-        if total == '0':
-            score_percentage = 0
-        else:
-            # If there is a comma (e.g. 1,5), change it to a dot
-            if ',' in part:
-                part = part.replace(',', '.')
-            score_percentage = int(float(part) / float(total) * 100)
-    except Exception as e:
-        st.error(f"Error calculating score: {e}")
-        return  # Early exit on error
-    
-    return score_percentage
 
 
 def render_progress_bar():
@@ -271,7 +252,6 @@ def generate_insights():
     question = st.session_state.segment_content['question']
 
     feedback_path = f"progress.{module}.feedback.{question}"
-    st.write(feedback_path)
 
     # A feedback cursor is not a JSON object, but a collection of JSON objects
     feedback_cursor = db.users.find(
@@ -283,10 +263,14 @@ def generate_insights():
         }
     )
 
+    if not feedback_cursor:
+        st.write("No feedback to aggregate into insights.")
+        st.session_state.submitted = False
+        return
+
     # Put all feedback data in a list
     flat_feedback_list = []
     for feedback_doc in feedback_cursor:
-        st.write(feedback_doc)
         feedback_items = feedback_doc['progress'][module]['feedback'][question]
         for i, item in enumerate(feedback_items):
             flat_feedback_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
@@ -308,7 +292,6 @@ def generate_insights():
 
     # Rename the columns to be more intuitive
     perc_df.columns = [f"{col} score" for col in perc_df.columns]
-    st.write(perc_df)
 
     return perc_df
 
@@ -389,6 +372,8 @@ def render_learning_page():
     # Display the info or question in the middle column
     with mid_col:
         if st.session_state.submitted:
+            render_progress_bar()
+
             # Render image if present in the feedback
             image_path = fetch_image_path()
             if image_path:
