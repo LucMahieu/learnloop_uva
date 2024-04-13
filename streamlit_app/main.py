@@ -8,6 +8,8 @@ from openai import AzureOpenAI
 from pymongo import MongoClient
 import certifi
 import base64
+import pandas as pd
+import matplotlib as plt
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -61,51 +63,6 @@ def upload_progress():
     )
 
 
-def evaluate_answer():
-    """Evaluates the answer of the student and returns a score and feedback."""
-    if st.session_state.currently_testing != True:
-        
-        # Create user prompt with the question, correct answer and student answer
-        prompt = f"""Input:\n
-        Vraag: {st.session_state.segment_content['question']}\n
-        Antwoord student: {st.session_state.student_answer}\n
-        Beoordelingsrubriek: {st.session_state.segment_content['answer']}\n
-        Output:\n"""
-
-        # Read the role prompt from a file
-        with open("./direct_feedback_prompt_3.txt", "r", encoding="utf-8") as f:
-            role_prompt = f.read()
-
-
-        response = openai_client.chat.completions.create(
-            model="learnloop",
-            messages=[
-                {"role": "system", "content": role_prompt},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=500
-        )
-
-        response = response.choices[0].message.content
-
-        # Turn into JSON and select the current question
-        question = st.session_state.segment_content['question']
-        json_response = json.loads(response)[question]
-
-        # Reset the session states
-        st.session_state.feedback = []
-        st.session_state.score = []
-
-        # Add each item to the feedback and score lists
-        for feedback_item in json_response:
-            st.session_state.score.append(feedback_item['score'])
-            st.session_state.feedback.append(feedback_item['feedback'])
-
-    else:
-        st.session_state.feedback = "O"
-        st.session_state.score = "0/2"
-
-
 def score_to_percentage():
     """Converts a score in the form of a string to a percentage."""
     try:
@@ -123,33 +80,6 @@ def score_to_percentage():
         return  # Early exit on error
     
     return score_percentage
-
-
-def render_feedback():
-    """Renders the feedback box with the score and feedback."""
-    # Calculate the score percentage
-    score_percentage = score_to_percentage()
-
-    # Determine color of box based on score percentage
-    if score_percentage > 75:
-        color = 'rgba(0, 128, 0, 0.2)'  # Green
-    elif score_percentage > 49:
-        color = 'rgba(255, 165, 0, 0.2)'  # Orange
-    else:
-        color = 'rgba(255, 0, 0, 0.2)'  # Red
-
-    feedback_items = [f"<li style='font-size: 17px; margin: 5px 0; margin-top: 10px'>{feedback}</li>" for feedback in st.session_state.feedback]
-    feedback_html = f"<ul style='padding-left: 0px; list-style-type: none;'>{''.join(feedback_items)}</ul>"
-
-    result_html = f"""
-    <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
-    {feedback_html}
-    <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
-        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {st.session_state.score}</h1>
-        <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
-    </div>
-    """
-    st.markdown(result_html, unsafe_allow_html=True)
 
 
 def render_progress_bar():
@@ -182,50 +112,16 @@ def render_progress_bar():
     st.session_state.progress = progress
 
 
-def re_insert_question(interval):
-    """Copies a question that the user wants to repeat and re-insert it
-    in the list that contains the segment sequence. The interval determines
-    how many other questions it takes for the question to be displayed again."""
-    new_pos = st.session_state.segment_index + interval
-
-    # Make sure the new position fits in the segment sequence list
-    list_length = len(st.session_state.ordered_segment_sequence)
-    if new_pos > list_length:
-        new_pos = list_length
-
-    # Read value of current index that corresponds to the json index
-    json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
-
-    # Insert the segment in new position
-    st.session_state.ordered_segment_sequence.insert(new_pos, json_index)
-
-    change_segment_index(1)    
-
-
-def render_SR_nav_buttons():
-    col_prev, col1, col2, col3, col_next = st.columns([1.8, 3, 3, 3, 1.8])
-    with col_prev:
-        st.button('Vorige', use_container_width=True, on_click=lambda: change_segment_index(-1))
-    with col1:
-        st.button('Herhaal snel ↩️', use_container_width=True, on_click=re_insert_question, args=(5,))
-    with col2:
-        st.button('Herhaal later 🕒', use_container_width=True, on_click=re_insert_question, args=(15,))
-    with col3:
-        st.button('Got it ✅', use_container_width=True, on_click=lambda: change_segment_index(1))
-    with col_next:
-        st.button('Volgende', use_container_width=True, on_click=lambda: change_segment_index(1))
-
-
-def render_explanation():
-    with st.expander("Antwoordmodel"):
-        st.markdown(st.session_state.segment_content['answer'])
-
-
 def determine_phase_length():
     if st.session_state.selected_phase == 'practice':
         return len(st.session_state.ordered_segment_sequence)
     else:
         return len(st.session_state.page_content["segments"])
+
+
+def render_explanation():
+    with st.expander("Antwoordmodel"):
+        st.markdown(st.session_state.segment_content['answer'])
 
 
 def change_segment_index(step_direction):
@@ -243,9 +139,6 @@ def change_segment_index(step_direction):
 
     # Prevent evaluating aswer when navigating to the next or previous segment
     st.session_state.submitted = False
-    
-    # Set the shuffled answers to None in case a new multiple choice question comes up
-    st.session_state.shuffled_answers = None
 
     # Update database with new index
     upload_progress()
@@ -273,7 +166,7 @@ def render_check_and_nav_buttons():
         with col_prev_question:
             st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
     with col_check:
-        st.button('Controleer', use_container_width=True, on_click=set_submitted_true)
+        st.button('Generate', use_container_width=True, on_click=set_submitted_true)
     with col_next_question:
         st.button('Volgende', use_container_width=True, on_click=change_segment_index, args=(1,))
 
@@ -294,72 +187,11 @@ def fetch_image_path():
             return None
         else:
             return f"./images/{image_path}"
-
-
-def render_info():
-    """Renders the info segment with title and text."""
-    # if the image directory is present in the JSON for this segment, then display the image
-    image_path = fetch_image_path()
-    if image_path:
-        render_image(image_path)
-
-    st.subheader(st.session_state.segment_content['title'])
-    st.write(st.session_state.segment_content['text'])
-
-
-def render_answerbox():
-    # if the image directory is present in the JSON for this segment, then display the image
-    # Render a textbox in which the student can type their answer.
-    st.text_area(label='Your answer', label_visibility='hidden', 
-                placeholder="Type your answer",
-                key='student_answer'
-    )
     
 
 def render_question():
     """Function to render the question and textbox for the students answer."""
-    st.subheader(st.session_state.segment_content['question'])
-
-
-def fetch_ordered_segment_sequence():
-    """Fetches the practice segments from the database."""
-    user_doc = db.users.find_one({"username": st.session_state.username})
-    st.session_state.ordered_segment_sequence = user_doc["progress"][st.session_state.selected_module]["practice"]["ordered_segment_sequence"]
-
-
-def update_ordered_segment_sequence(ordered_segment_sequence):
-    """Updates the practice segments in the database."""
-    db.users.update_one(
-        {"username": st.session_state.username},
-        {"$set": {f"progress.{st.session_state.selected_module}.practice.ordered_segment_sequence": ordered_segment_sequence}}
-    )
-
-
-def add_to_practice_phase():
-    """
-    Adds the current segment to the practice phase in the database if the score is lower than 100.
-    """
-    if score_to_percentage() < 100:
-        fetch_ordered_segment_sequence()
-        # Store in variable for clarity
-        ordered_segment_sequence = st.session_state.ordered_segment_sequence
-        segment_index = st.session_state.segment_index
-
-        if segment_index not in ordered_segment_sequence:
-            ordered_segment_sequence.append(segment_index)
-
-        # Update practice segments in db
-        update_ordered_segment_sequence(ordered_segment_sequence)
-
-
-def render_student_answer():
-    student_answer = f"""
-    <h1 style='font-size: 20px; margin: 15px 0 10px 10px; padding: 0;'>Jouw antwoord:</h1>
-    <div style='background-color: #F5F5F5; padding: 20px; border-radius: 7px; margin-bottom: 0px;'>
-        <p style='color: #333; margin: 0px 0'>{st.session_state.student_answer}</p>
-    </div>
-    """
-    st.markdown(student_answer, unsafe_allow_html=True)
+    st.title(st.session_state.segment_content['question'])
 
 
 def fetch_segment_index():
@@ -378,7 +210,6 @@ def render_learning_explanation():
     the current phase."""
     with mid_col:
         st.markdown('<p style="font-size: 30px;"><strong>Leerfase 📖</strong></p>', unsafe_allow_html=True)
-        # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
         st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in de oefenfase.")
         render_start_button()
     exit()
@@ -423,35 +254,127 @@ def render_final_page():
     exit()
 
 
-def set_warned_true():
-    """Callback function for a button that turns of the LLM warning message."""
-    db.users.update_one(
-        {"username": st.session_state.username},
-        {"$set": {"warned": True}}
-    )
-    st.session_state.warned = True
-
-
 def reset_progress():
     """Resets the progress of the user in the current phase to the database."""
     db.users.update_one(
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
-    # initialise_learning_page()
 
 
-def render_warning():
-    st.markdown("""
-        <div style="color: #987c37; background-color: #fffced; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-            Door zometeen op <strong>'controleer'</strong> te klikken, laat je het antwoord dat je ingevuld hebt controleren door een large language model (LLM). Weet je zeker dat je door wil gaan?
-        </div>
-        """,
-        unsafe_allow_html=True
+def generate_insights():
+    """
+    Aggregates the feedback from all users into percentages for 
+    each score type (0.0, 0.5, 1.0).
+    """
+    module = st.session_state.selected_module
+    question = st.session_state.segment_content['question']
+
+    feedback_path = f"progress.{module}.feedback.{question}"
+    st.write(feedback_path)
+
+    # A feedback cursor is not a JSON object, but a collection of JSON objects
+    feedback_cursor = db.users.find(
+        {
+            feedback_path: {"$exists": True, "$not": {"$size":  0}} # Check if the path exists and has a value other then 0
+        },
+        {
+            feedback_path: 1 # Boolean to tell that you want to project (output) this path
+        }
     )
-    st.button("Nee", on_click=reset_progress, use_container_width=True)
-    st.button("Ja", use_container_width=True, on_click=set_warned_true)
-    st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
+
+    # Put all feedback data in a list
+    flat_feedback_list = []
+    for feedback_doc in feedback_cursor:
+        st.write(feedback_doc)
+        feedback_items = feedback_doc['progress'][module]['feedback'][question]
+        for i, item in enumerate(feedback_items):
+            flat_feedback_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
+
+    df = pd.DataFrame(flat_feedback_list, columns=['feedback_item', 'score', 'feedback'])
+
+    # Each user has feedback items for the same parts of the answers, all with their own score
+    # Use size() to count how many times a score is given for one of the feedback items for each score type (0, 0.5, 1)
+    size_df = df.groupby(['feedback_item', 'score']).size()
+
+    # Group the scores together and calculate the percentage for each type of score for each feedback item
+    perc_df = size_df.groupby(level=0).apply(lambda x: 100 * x / float(x.sum()))
+
+    # Reorganize scores logically by making new columns for each score type
+    perc_df = perc_df.unstack()
+
+    # Fill empty cells with 0
+    perc_df = perc_df.fillna(0)
+
+    # Rename the columns to be more intuitive
+    perc_df.columns = [f"{col} score" for col in perc_df.columns]
+    st.write(perc_df)
+
+    return perc_df
+
+
+def extract_score(index, score_type, perc_df):
+    """
+    Extract the occurrence of the score type from df and convert 
+    percentage to the right ratio of the bar graph.
+    """
+    total_bar_length = 6
+    return int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
+
+
+def parse_answer_items():
+    """Parses the parts of the answer into a list format"""
+    answer_items = st.session_state.segment_content['answer'].split(' (1 punt)')
+    return answer_items
+
+
+def render_insights(perc_df):
+    bar_segments = []
+    for index in perc_df.index:
+        # Define the segments of each bar
+        # Each tuple consists of (length, color)
+        bar_segments.append(
+            [
+                (extract_score(index, '0.0 score', perc_df), '#c0e7c0'),
+                (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), 
+                (extract_score(index, '1.0 score', perc_df), '#e5bbbb')
+            ]
+        )
+
+    # Create the figure and axis
+    fig, ax = plt.subplots(figsize=(6, 3))
+
+    # Starting position of first bar
+    bottom_bar_pos = 3
+    bar_height = 0.5 # Thickness
+
+    # Create each bar with its bar segments
+    for bar in bar_segments:
+        left = 0  # Starting left position for each bar
+        for i, segment in enumerate(bar):
+            length, color = segment
+            # Draw each segment
+            rect = plt.Rectangle((left, bottom_bar_pos), length, bar_height, color=color)
+
+            ax.text(y=0.65 + i * 1.5, # The spacing between the answer items
+                    x=0, 
+                    s=f"{parse_answer_items()[-(i+1)]}", # Reversed walk through answer items
+                    fontsize=10
+            )
+
+            ax.add_patch(rect)
+            # Update the left position for the next segment
+            left += length
+        # Update the starting bottom position for the next bar
+        bottom_bar_pos -= 1.5
+
+    total_bar_length = 6
+    ax.set_xlim(0, total_bar_length)
+    ax.set_ylim(0, 4)
+    ax.axis('off') # Remove axes
+
+    # Show the plot
+    st.pyplot(fig)
 
 
 def render_learning_page():
@@ -465,92 +388,24 @@ def render_learning_page():
 
     # Display the info or question in the middle column
     with mid_col:
-        render_progress_bar()
+        if st.session_state.submitted:
+            # Render image if present in the feedback
+            image_path = fetch_image_path()
+            if image_path:
+                render_image(image_path)
 
-        # Determine what type of segment to display and render interface accordingly
-        if st.session_state.segment_content['type'] == 'info':
-            render_info()
-            render_navigation_buttons()
-
-        # Open question
-        if (st.session_state.segment_content['type'] == 'question' and 
-        'answer' in st.session_state.segment_content):
-            if st.session_state.submitted:
-
-                # Render image if present in the feedback
-                image_path = fetch_image_path()
-                if image_path:
-                    render_image(image_path)
-
-                render_question()
-
-                # Spinner that displays during evaluating answer
-                with st.spinner(f"Een large language model (LLM) checkt je antwoord met het antwoordmodel. \
-                                Check zelf het antwoordmodel als je twijfelt. \n\n Leer meer over het gebruik \
-                                van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
-                                het kopje 'Extra info' in de sidebar."):
-                    render_student_answer()
-                    evaluate_answer()
-                                        
-                render_feedback()
-                add_to_practice_phase()
-                render_explanation()
-                render_navigation_buttons()
-            else:
-                image_path = fetch_image_path()
-                if image_path:
-                    render_image(image_path)
-                
-                render_question()
-
-                if st.session_state.warned == False:
-                    render_warning()
-                else:
-                    render_answerbox()
-                
-                # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
-                if st.session_state.student_answer:
-                    set_submitted_true()
-                    st.rerun()
-                
-                if st.session_state.warned == True:
-                    render_check_and_nav_buttons()
-            
-        
-        # Multiple choice question
-        if (st.session_state.segment_content['type'] == 'question' and
-             'answers' in st.session_state.segment_content):
             render_question()
+            perc_df = generate_insights()
+            render_insights(perc_df)
 
-            correct_answer = st.session_state.segment_content['answers']['correct_answer']
-            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
-            
-            # Check if the answers have already been shuffled and stored
-            if st.session_state.shuffled_answers == None:
-                answers = [correct_answer] + wrong_answers
-                random.shuffle(answers)
-                st.session_state.shuffled_answers = answers
-            else:
-                answers = st.session_state.shuffled_answers
-                
-            if 'choosen_answer' not in st.session_state:
-                st.session_state.choosen_answer = None
-                
-            # Create a button for each answer
-            for i, answer in enumerate(answers):
-                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
-            
-            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
-                st.success("✅ Correct!")
-                st.session_state.score = '1/1'
-            # if the score is not correct, the questions is added to the practice phase
-            elif st.session_state.submitted:
-                st.error("❌ Incorrect. Try again.")
-                st.session_state.score = '0/1'
-                add_to_practice_phase()
-
-            #render the nav buttons
             render_navigation_buttons()
+        else:
+            image_path = fetch_image_path()
+            if image_path:
+                render_image(image_path)
+            
+            render_question()            
+            render_check_and_nav_buttons()
 
 
 def set_submitted_answer(answer):
@@ -567,139 +422,6 @@ def reset_submitted_if_page_changed():
     if st.session_state.old_page != st.session_state.current_page:
         st.session_state.submitted = False
         st.session_state.old_page = (st.session_state.selected_module, st.session_state.selected_phase)
-
-
-def render_practice_explanation():
-    """Renders the explanation for the practice phase if the user hasn't started
-    this phase in this module."""
-    with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Oefenfase 📝</strong></p>', unsafe_allow_html=True)
-        # st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
-        st.write("In de oefenfase kun je de concepten die je hebt geleerd in de leerfase oefenen. Het gebruikt **'spaced repetition'** om je geheugen te versterken zodat je beter de stof onthoudt.")
-        if st.session_state.ordered_segment_sequence == []:
-            st.info("Hier staat nog niets. Rond eerst de leerfase af om moeilijke vragen te verzamelen.")
-        else:
-            render_start_button()
-    exit()
-
-
-def initialise_practice_page():
-    """Update all session states with database data and render practice explanation 
-    if it's the first time."""
-    # Fetch the last segment index from db
-    st.session_state.segment_index = fetch_segment_index()
-
-    if st.session_state.segment_index == -1:
-        fetch_ordered_segment_sequence()
-        render_practice_explanation()
-    elif st.session_state.segment_index == 100_000:
-        render_final_page()
-    else:
-        fetch_ordered_segment_sequence()
-
-        json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
-
-        # Select the segment (with contents) that corresponds to the saved json index where the user left off
-        st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
-        
-        reset_submitted_if_page_changed()
-
-
-
-def render_practice_page():
-    """
-    Renders the page that contains the practice questions and 
-    answers without the info segments and with the spaced repetition buttons.
-    This phase allows the student to practice the concepts they've learned
-    during the learning phase and which they found difficult.
-    """
-    initialise_practice_page()
-
-    # Display the info or question in the middle column
-    with mid_col:
-        render_progress_bar()
-
-        # Determine what type of segment to display and render interface accordingly
-        # info_question
-        if st.session_state.segment_content['type'] == 'info':
-            render_info()
-            render_navigation_buttons()
-
-        # Open question
-        if (st.session_state.segment_content['type'] == 'question' and 
-        'answer' in st.session_state.segment_content):
-            
-            # Render image if present in the feedback
-            image_path = fetch_image_path()
-            if image_path:
-                render_image(image_path)
-
-            render_question()
-            if st.session_state.submitted:
-                # Spinner that displays during evaluating answer
-                with st.spinner(f"Een large language model (LLM) checkt je antwoord met het antwoordmodel. \
-                                Check zelf het antwoordmodel als je twijfelt. \n\n Leer meer over het gebruik \
-                                van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
-                                het kopje 'Extra info' in de sidebar."):
-                    render_student_answer()
-                    evaluate_answer()
-                
-                render_feedback()
-                render_explanation()
-                render_SR_nav_buttons()
-            else:
-                if st.session_state.warned == False:
-                    render_warning()
-                else:
-                    render_answerbox()
-                    # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
-                    if st.session_state.student_answer:
-                        set_submitted_true()
-                        st.rerun()
-                    render_check_and_nav_buttons()
-
-        # MC Question
-        if (st.session_state.segment_content['type'] == 'question' and
-             'answers' in st.session_state.segment_content):
-            render_question()
-
-            correct_answer = st.session_state.segment_content['answers']['correct_answer']
-            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
-            
-            # Check if the answers have already been shuffled and stored
-            if st.session_state.shuffled_answers == None:
-                answers = [correct_answer] + wrong_answers
-                random.shuffle(answers)
-                st.session_state.shuffled_answers = answers
-            else:
-                answers = st.session_state.shuffled_answers
-                
-            if 'choosen_answer' not in st.session_state:
-                st.session_state.choosen_answer = None
-                
-            # Create a button for each answer
-            for i, answer in enumerate(answers):
-                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
-            
-            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
-                st.success("✅ Correct!")
-            # if the score is not correct, the questions is added to the practice phase
-            elif st.session_state.submitted:
-                st.error("❌ Incorrect. Try again.")
-
-            #render the nav buttons
-            render_navigation_buttons()
-
-
-def render_theory_page():
-    """
-    Renders the page that contains the theory of the lecture.
-    """
-    with mid_col:
-        for segment in st.session_state.page_content["segments"]:
-            if segment['type'] == 'info':
-                st.session_state.segment_content = segment
-                render_info()
 
 
 def select_page_type():
@@ -719,19 +441,12 @@ def select_page_type():
     # Determine what type of page to display
     if st.session_state.selected_phase == 'learning':
         render_learning_page()
-    if st.session_state.selected_phase == 'practice':
-        render_practice_page()
-    if st.session_state.selected_phase == 'theory':
-        render_theory_page()
 
 
 def initialise_session_states():
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
-
-    if 'warned' not in st.session_state:
-        st.session_state.warned = None
-
+    
     if 'feedback_submitted' not in st.session_state:
         st.session_state.feedback_submitted = False
 
@@ -744,29 +459,14 @@ def initialise_session_states():
     if 'current_page' not in st.session_state:
         st.session_state.current_page = None
 
-    if 'ordered_segment_sequence' not in st.session_state:
-        st.session_state.ordered_segment_sequence = []
-
-    if 'ordered_segment_sequence' not in st.session_state:
-        st.session_state.ordered_segment_sequence = []
-
     if 'selected_phase' not in st.session_state:
         st.session_state.selected_phase = None
-
-    if 'easy_count' not in st.session_state:
-        st.session_state.easy_count = {}
 
     if 'page_content' not in st.session_state:
         st.session_state.page_content = None
 
-    if 'indices' not in st.session_state:
-        st.session_state.indices = []
-
     if 'segment_index' not in st.session_state:
         st.session_state.segment_index = 0
-
-    if 'authentication_status' not in st.session_state:
-        st.session_state.authentication_status = None
 
     if 'selected_module' not in st.session_state:
         st.session_state.selected_module = None
@@ -774,29 +474,17 @@ def initialise_session_states():
     if 'modules' not in st.session_state:
         st.session_state.modules = []
 
-    if 'segments' not in st.session_state:
-        st.session_state.segments = None
-    
     if 'segment_content' not in st.session_state:
         st.session_state.segment_content = None
 
     if 'submitted' not in st.session_state:
         st.session_state.submitted = False
-    
-    if 'student_answer' not in st.session_state:
-        st.session_state.student_answer = ""
         
     if 'score' not in st.session_state:
         st.session_state.score = ""
 
     if 'feedback' not in st.session_state:
         st.session_state.feedback = ""
-
-    if 'difficulty' not in st.session_state:
-        st.session_state.difficulty = ""
-
-    if 'shuffled_answers' not in st.session_state:
-        st.session_state.shuffled_answers = None
 
 
 def render_logo():
@@ -968,48 +656,11 @@ def determine_if_to_initialise_database():
             return
 
 
-def fetch_username():
-    user_doc = db.users.find_one({'nonce': st.session_state.nonce})
-    st.session_state.username = user_doc['username']
-
-
-def invalidate_nonce():
-    db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
-    st.session_state.nonce = None
-
-
 def convert_image_base64(image_path):
     """Converts image in working dir to base64 format so it is 
     compatible with html."""
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode()
-
-
-def render_login_page():
-    """This is the first page the user sees when visiting the website and 
-    prompts the user to login via SURFconext."""
-    columns = st.columns([1, 0.9, 1])
-    with columns[1]:
-        welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./images/logo.png")
-        html_content = f"""
-        <div style='text-align: center; margin: 20px;'>
-            <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
-            <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="https://learnloop.datanose.nl/" style="text-decoration: none;">
-                <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
-                text-align: center; text-decoration: none; display: block; width: 100%; margin: \
-                4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
-            </a>
-        </div>"""
-
-        st.markdown(html_content, unsafe_allow_html=True)
-
-
-def fetch_if_warned():
-    """Fetches from database if the user has been warned about LLM."""
-    user_doc = db.users.find_one({"username": st.session_state.username})
-    return user_doc["warned"]
 
 
 if __name__ == "__main__":
@@ -1020,21 +671,8 @@ if __name__ == "__main__":
     initialise_session_states()
 
     if not running_on_premise:
-        st.session_state.username = "flower2960"
+        st.session_state.username = "test_user"
 
-    if 'nonce' not in st.session_state:
-        st.session_state.nonce = st.query_params.get('nonce', None)
-        st.query_params.pop('nonce', None) # Remove the nonce from the url
-
-    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
-        render_login_page()
-    elif st.session_state.username is None:
-        fetch_username()
-        invalidate_nonce()
-        st.rerun() # Needed, else it seems to get stuck here
-        
-    if st.session_state.username is None:
-        print("No username")
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
@@ -1055,8 +693,5 @@ if __name__ == "__main__":
         else:
             # Only (re-)initialise if user is new or when testing is on
             determine_if_to_initialise_database()
-
-            if st.session_state.warned == None:
-                st.session_state.warned = fetch_if_warned()
 
             select_page_type()
