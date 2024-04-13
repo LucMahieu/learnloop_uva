@@ -90,48 +90,51 @@ def evaluate_answer():
         )
 
         response = response.choices[0].message.content
-
-        # Turn into JSON and select the current question
-        question = st.session_state.segment_content['question']
-        json_response = json.loads(response)[question]
-
-        # Reset the session states
-        st.session_state.feedback = []
-        st.session_state.score = []
-
-        # Add each item to the feedback and score lists
-        for feedback_item in json_response:
-            st.session_state.score.append(feedback_item['score'])
-            st.session_state.feedback.append(feedback_item['feedback'])
-
-    else:
-        st.session_state.feedback = "O"
-        st.session_state.score = "0/2"
-
-
-def score_to_percentage():
-    """Converts a score in the form of a string to a percentage."""
-    try:
-        # Calculate the score percentage
-        part, total = st.session_state.score.split('/')
-        if total == '0':
-            score_percentage = 0
-        else:
-            # If there is a comma (e.g. 1,5), change it to a dot
-            if ',' in part:
-                part = part.replace(',', '.')
-            score_percentage = int(float(part) / float(total) * 100)
-    except Exception as e:
-        st.error(f"Error calculating score: {e}")
-        return  # Early exit on error
+        json_response = json.loads(response)
     
-    return score_percentage
+    else:
+        question = st.session_state.segment_content['question']
+        # Create dummy response for current question to test
+        json_response = {
+            f"{question}": [
+                {
+                    "score": 1,
+                    "feedback": "✅ Correct: fotosynthese is een <strong>proces waarbij planten zonlicht omzetten in energie</strong>."
+                },
+                {
+                    "score": 0,
+                    "feedback": "❌ Onvolledig: vermeld dat <strong>koolstofdioxide en water omgezet worden in glucose en zuurstof</strong>."
+                },
+                {
+                    "score": 0.5,
+                    "feedback": "🟨 Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de <strong>chloroplasten</strong> gebeurt."
+                }
+            ]
+        }
+
+    # Turn into JSON and select the current question
+    question = st.session_state.segment_content['question']
+    feedback_response = json_response[question]
+
+    # Reset the session states
+    st.session_state.feedback = []
+    st.session_state.score = []
+
+    # Add each item to the feedback and score lists
+    for feedback_item in feedback_response:
+        st.session_state.score.append(feedback_item['score'])
+        st.session_state.feedback.append(feedback_item['feedback'])
+
+    return feedback_response
 
 
 def render_feedback():
     """Renders the feedback box with the score and feedback."""
-    # Calculate the score percentage
-    score_percentage = score_to_percentage()
+    part = sum(st.session_state.score)
+    total = len(st.session_state.score)
+    score_percentage = int(part / total * 100)
+
+    st.session_state.score_percentage = score_percentage
 
     # Determine color of box based on score percentage
     if score_percentage > 75:
@@ -148,7 +151,7 @@ def render_feedback():
     <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
     {feedback_html}
     <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
-        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {st.session_state.score}</h1>
+        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {part} / {total}</h1>
         <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
     </div>
     """
@@ -342,7 +345,7 @@ def add_to_practice_phase():
     """
     Adds the current segment to the practice phase in the database if the score is lower than 100.
     """
-    if score_to_percentage() < 100:
+    if st.session_state.score_percentage < 100:
         fetch_ordered_segment_sequence()
         # Store in variable for clarity
         ordered_segment_sequence = st.session_state.ordered_segment_sequence
@@ -456,6 +459,22 @@ def render_warning():
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
 
 
+def save_feedback_to_db(feedback_items):
+    """
+    After submitting an answer, the student recieves LLM feedback.
+    This function saves that feedback to the database and is 
+    tied to the question and module.
+    """
+    module = st.session_state.selected_module
+    question = st.session_state.segment_content['question'].replace('.', '')
+
+    feedback_path = f"progress.{module}.feedback.{question}"
+    db.users.update_one(
+        {"username": st.session_state.username},
+        {"$set": {feedback_path: feedback_items}}
+    )
+
+
 def render_learning_page():
     """
     Renders the page that takes the student through the concepts of the lecture
@@ -492,9 +511,10 @@ def render_learning_page():
                                 van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
                                 het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
-                    evaluate_answer()
+                    feedback_response = evaluate_answer()
                                         
                 render_feedback()
+                save_feedback_to_db(feedback_response)
                 add_to_practice_phase()
                 render_explanation()
                 render_navigation_buttons()
@@ -1040,6 +1060,9 @@ if __name__ == "__main__":
 
     testing = True
     running_on_premise = True
+    
+    if testing:
+        st.session_state.username = "test_user"
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1049,9 +1072,6 @@ if __name__ == "__main__":
     initialise_session_states()
     db = connect_to_database()
     openai_client = connect_to_openai()
-
-    if not testing:
-        st.session_state.username = "test_user"
 
     fetch_and_remove_nonce()
 
