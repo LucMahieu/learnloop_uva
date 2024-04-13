@@ -357,7 +357,10 @@ def extract_score(index, score_type, perc_df):
 def parse_answer_items():
     """Parses the parts of the answer into a list format"""
     answer_items = st.session_state.segment_content['answer'].split(' (1 punt)')
-    return answer_items
+    stripped_items = [item.strip(' .,') for item in answer_items]
+    cleaned_items = [item for item in stripped_items if item != '']
+    
+    return cleaned_items
 
 
 def render_insights(perc_df):
