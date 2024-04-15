@@ -66,7 +66,7 @@ def upload_progress():
 
 def evaluate_answer():
     """Evaluates the answer of the student and returns a score and feedback."""
-    if testing != True:
+    if use_dummy_openai_calls != True:
         
         # Create user prompt with the question, correct answer and student answer
         prompt = f"""Input:\n
@@ -76,7 +76,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt_3.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt_4.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
 
@@ -151,7 +151,7 @@ def render_feedback():
     <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
     {feedback_html}
     <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
-        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {part} / {total}</h1>
+        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {part}/{total}</h1>
         <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
     </div>
     """
@@ -459,6 +459,28 @@ def render_warning():
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
 
 
+def feedback_is_in_correct_format(feedback_items):
+    """
+    The format of the feedback needs to correspond to the answermodel. 
+    Otherwise it can't be aggregated for the feedback insights.
+    """
+    # Identify the answer items in answermodel
+    answer = st.session_state.segment_content['answer']
+    answer = answer.replace('.', '').replace(',', '').replace('?', '')
+    answer_items = answer.split(' (1 punt) ')
+
+    # Count number of points to be scored
+    answer_item_count = len(answer_items)
+    feedback_item_count = len(feedback_items)
+
+    # Compare elemnent counts
+    if answer_item_count != feedback_item_count:
+        st.warning("De feedback kan niet worden opgeslagen door een systeemfout en zal daarom ook niet gebruikt worden voor het inzicht op het collegescherm. Dit probleem moeten we nog oplossen.")
+        return False
+    else:
+        return True
+
+
 def save_feedback_to_db(feedback_items):
     """
     After submitting an answer, the student recieves LLM feedback.
@@ -466,13 +488,15 @@ def save_feedback_to_db(feedback_items):
     tied to the question and module.
     """
     module = st.session_state.selected_module
+    # Remove dots because db query is dot sensitive
     question = st.session_state.segment_content['question'].replace('.', '')
 
-    feedback_path = f"progress.{module}.feedback.{question}"
-    db.users.update_one(
-        {"username": st.session_state.username},
-        {"$set": {feedback_path: feedback_items}}
-    )
+    if feedback_is_in_correct_format(feedback_items):
+        feedback_path = f"progress.{module}.feedback.{question}"
+        db.users.update_one(
+            {"username": st.session_state.username},
+            {"$set": {feedback_path: feedback_items}}
+        )
 
 
 def render_learning_page():
@@ -1051,16 +1075,17 @@ if __name__ == "__main__":
     # SETTINGS:
 
     # Turn on 'testing' to:
-    # - Reset db every time the webapp is loaded
-    # - Use dummy LLM feedback as response to save openai costs and time during testing
-    # - Use localhost in stead of learnloop.datanose.nl for authentication
+    # - Reset db for current user every time the webapp is loaded
+    # - Use localhost instead of learnloop.datanose.nl for authentication
+    testing = True
 
     # Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
     # has access to CosmosDB (determined by Gerrit).
+    running_on_premise = False
 
-    testing = True
-    running_on_premise = True
-    
+    # Use dummy LLM feedback as response to save openai costs and time during testing
+    use_dummy_openai_calls = False
+
     if testing:
         st.session_state.username = "test_user"
     # ---------------------------------------------------------
