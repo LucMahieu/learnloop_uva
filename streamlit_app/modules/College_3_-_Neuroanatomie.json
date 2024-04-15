@@ -3,8 +3,9 @@
     "segments": [
         {
             "type": "question",
-            "question": "Benoem de genummerde hersengebieden in de afbeelding van boven naar beneden. Schrijf daarbij eerst het nummer op met daarachter de naam.",
-            "answer": "1. Hippocampus (1 punt), 2. Thalamus (1 punt), 3. Fornix (1 punt), 4. 3rd ventricle (1 punt), 5. Capsula externa (1 punt), 6. Capsula interna (1 punt), 7. Amygdala (1 punt)."
+            "question": "Benoem de zeven genummerde hersengebieden in de afbeeldingen van boven naar beneden. Schrijf daarbij eerst het nummer op met daarachter de naam.",
+            "answer": "1. Hippocampus (1 punt), 2. Thalamus (1 punt), 3. Fornix (1 punt), 4. 3rd ventricle (1 punt), 5. Capsula externa (1 punt), 6. Capsula interna (1 punt), 7. Amygdala (1 punt).",
+            "image": "hersenplakje_rat.png"
         },
         {
             "type": "question",
@@ -19,7 +20,7 @@
         {
             "type": "question",
             "question": "Leg uit hoe juxtacellulaire kleuring werkt en waarom je het zou gebruiken.",
-            "answer": "Juxtacellulaire kleuring is een techniek waarbij een kleurstof, zoals biocytin, wordt geïnjecteerd naast een neuron (1 punt) van een levend organisme (1 punt). Het wordt gebruikt om gedetailleerde morfologische informatie te verkrijgen over de cel (1 punt). Je gebruikt deze methode om het effect van bepaalde ziektebeelden zoals alzheimer of factoren zoals early life stress op neuronen te bepalen (1 punt)."
+            "answer": "Juxtacellulaire kleuring is een techniek waarbij een kleurstof, zoals biocytin, wordt geïnjecteerd vlak naast een neuron (1 punt) van een levend organisme (1 punt). Als het neuron gestimuleerd wordt door de elektrode, dan zullen de natriumkanalen openen en gaat de kleurstof via deze kanalen het neuron in (1 punt). Hierdoor weet je als onderzoeker welk neuron je hebt gestimuleerd (1 punt). Je gebruikt deze methode om het effect van bepaalde ziektebeelden zoals alzheimer of factoren zoals early life stress op neuronen te bepalen (1 punt)."
         }
     ]
 }
