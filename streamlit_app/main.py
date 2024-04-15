@@ -522,7 +522,7 @@ def render_learning_page():
         'answer' in st.session_state.segment_content):
             if st.session_state.submitted:
 
-                # Render image if present in the feedback
+                # Render image if present
                 image_path = fetch_image_path()
                 if image_path:
                     render_image(image_path)
@@ -615,128 +615,6 @@ def reset_submitted_if_page_changed():
         st.session_state.old_page = (st.session_state.selected_module, st.session_state.selected_phase)
 
 
-def render_practice_explanation():
-    """Renders the explanation for the practice phase if the user hasn't started
-    this phase in this module."""
-    with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Oefenfase 📝</strong></p>', unsafe_allow_html=True)
-        # st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
-        st.write("In de oefenfase kun je de concepten die je hebt geleerd in de leerfase oefenen. Het gebruikt **'spaced repetition'** om je geheugen te versterken zodat je beter de stof onthoudt.")
-        if st.session_state.ordered_segment_sequence == []:
-            st.info("Hier staat nog niets. Rond eerst de leerfase af om moeilijke vragen te verzamelen.")
-        else:
-            render_start_button()
-    exit()
-
-
-def initialise_practice_page():
-    """Update all session states with database data and render practice explanation 
-    if it's the first time."""
-    # Fetch the last segment index from db
-    st.session_state.segment_index = fetch_segment_index()
-
-    if st.session_state.segment_index == -1:
-        fetch_ordered_segment_sequence()
-        render_practice_explanation()
-    elif st.session_state.segment_index == 100_000:
-        render_final_page()
-    else:
-        fetch_ordered_segment_sequence()
-
-        json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
-
-        # Select the segment (with contents) that corresponds to the saved json index where the user left off
-        st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
-        
-        reset_submitted_if_page_changed()
-
-
-
-def render_practice_page():
-    """
-    Renders the page that contains the practice questions and 
-    answers without the info segments and with the spaced repetition buttons.
-    This phase allows the student to practice the concepts they've learned
-    during the learning phase and which they found difficult.
-    """
-    initialise_practice_page()
-
-    # Display the info or question in the middle column
-    with mid_col:
-        render_progress_bar()
-
-        # Determine what type of segment to display and render interface accordingly
-        # info_question
-        if st.session_state.segment_content['type'] == 'info':
-            render_info()
-            render_navigation_buttons()
-
-        # Open question
-        if (st.session_state.segment_content['type'] == 'question' and 
-        'answer' in st.session_state.segment_content):
-            
-            # Render image if present in the feedback
-            image_path = fetch_image_path()
-            if image_path:
-                render_image(image_path)
-
-            render_question()
-            if st.session_state.submitted:
-                # Spinner that displays during evaluating answer
-                with st.spinner(f"Een large language model (LLM) checkt je antwoord met het antwoordmodel. \
-                                Check zelf het antwoordmodel als je twijfelt. \n\n Leer meer over het gebruik \
-                                van LLM's op de pagina **'Uitleg mogelijkheden & limitaties LLM's'** onder \
-                                het kopje 'Extra info' in de sidebar."):
-                    render_student_answer()
-                    evaluate_answer()
-                
-                render_feedback()
-                render_explanation()
-                render_SR_nav_buttons()
-            else:
-                if st.session_state.warned == False:
-                    render_warning()
-                else:
-                    render_answerbox()
-                    # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
-                    if st.session_state.student_answer:
-                        set_submitted_true()
-                        st.rerun()
-                    render_check_and_nav_buttons()
-
-        # MC Question
-        if (st.session_state.segment_content['type'] == 'question' and
-             'answers' in st.session_state.segment_content):
-            render_question()
-
-            correct_answer = st.session_state.segment_content['answers']['correct_answer']
-            wrong_answers = st.session_state.segment_content['answers']['wrong_answers']
-            
-            # Check if the answers have already been shuffled and stored
-            if st.session_state.shuffled_answers == None:
-                answers = [correct_answer] + wrong_answers
-                random.shuffle(answers)
-                st.session_state.shuffled_answers = answers
-            else:
-                answers = st.session_state.shuffled_answers
-                
-            if 'choosen_answer' not in st.session_state:
-                st.session_state.choosen_answer = None
-                
-            # Create a button for each answer
-            for i, answer in enumerate(answers):
-                st.button(answer, key=f"button{i}", use_container_width=True, on_click=set_submitted_answer, args=(answer,))
-            
-            if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
-                st.success("✅ Correct!")
-            # if the score is not correct, the questions is added to the practice phase
-            elif st.session_state.submitted:
-                st.error("❌ Incorrect. Try again.")
-
-            #render the nav buttons
-            render_navigation_buttons()
-
-
 def render_theory_page():
     """
     Renders the page that contains the theory of the lecture.
@@ -765,10 +643,6 @@ def select_page_type():
     # Determine what type of page to display
     if st.session_state.selected_phase == 'learning':
         render_learning_page()
-    if st.session_state.selected_phase == 'practice':
-        render_practice_page()
-    if st.session_state.selected_phase == 'theory':
-        render_theory_page()
 
 
 def initialise_session_states():
@@ -929,16 +803,6 @@ def render_sidebar():
                 if st.button('Leerfase 📖', key=module + ' learning'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'learning'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Oefenfase 📝', key=module + ' practice'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'practice'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Theorie 📚', key=module + ' theory'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'theory'
                     st.session_state.info_page = False
                     track_visits()
 
