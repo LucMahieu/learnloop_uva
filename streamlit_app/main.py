@@ -1077,7 +1077,7 @@ if __name__ == "__main__":
     # Turn on 'testing' to:
     # - Reset db for current user every time the webapp is loaded
     # - Use localhost instead of learnloop.datanose.nl for authentication
-    testing = True
+    testing = False
 
     # Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
     # has access to CosmosDB (determined by Gerrit).
