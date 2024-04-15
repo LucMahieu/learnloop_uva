@@ -93,7 +93,7 @@ def evaluate_answer():
         json_response = json.loads(response)
     
     else:
-        question = st.session_state.segment_content['question']
+        question = st.session_state.segment_content['question'].replace('.', '')
         # Create dummy response for current question to test
         json_response = {
             f"{question}": [
@@ -113,7 +113,7 @@ def evaluate_answer():
         }
 
     # Turn into JSON and select the current question
-    question = st.session_state.segment_content['question']
+    question = st.session_state.segment_content['question'].replace('.', '')
     feedback_response = json_response[question]
 
     # Reset the session states
