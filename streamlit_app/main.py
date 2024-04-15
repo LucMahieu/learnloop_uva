@@ -243,13 +243,6 @@ def reset_progress():
     )
 
 
-def fetch_feedback_from_db():
-    """
-    Fetches all the feedback that users got on the current question
-    from the database for further processing.
-    """
-
-
 def rerun_if_no_docs_for_feedback_path(feedback_path):
     """
     Check if there is any feedback to aggregate (only if users made the current question). 
@@ -298,6 +291,7 @@ def create_score_percentages_df(flat_feedback_list):
 
     # Fill empty cells with 0
     perc_df = perc_df.fillna(0)
+    st.write(perc_df.columns)
 
     # Rename the columns to be more intuitive
     perc_df.columns = [f"{col} score" for col in perc_df.columns]
@@ -331,7 +325,6 @@ def generate_insights():
     module = st.session_state.selected_module
     # Remove dots to prevent interference with querying db because of the dot notation in path
     question = st.session_state.segment_content['question'].replace('.', '')
-    print(question)
 
     feedback_path = f"progress.{module}.feedback.{question}"
 
@@ -352,14 +345,21 @@ def extract_score(index, score_type, perc_df):
     percentage to the right ratio of the bar graph.
     """
     total_bar_length = 6
-    print(perc_df)
-    return int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
+    st.write(perc_df.columns)
+    if score_type in perc_df.columns:
+        score_percentage = int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
+        st.write('hello00')
+        return score_percentage
+    else:
+        st.write('hello')
+        return int(0 * total_bar_length / 100)
 
 
 def parse_answer_items():
     """Parses the parts of the answer into a list format"""
-    answer_items = st.session_state.segment_content['answer'].split(' (1 punt) ')
-    stripped_items = [item.strip(' .,') for item in answer_items]
+    answer_items = st.session_state.segment_content['answer'].replace('.', '').replace(',', '').replace('?', '').replace('\n', ' ')
+    answer_items = answer_items.split(' (1 punt) ')
+    stripped_items = [item.strip(' .,').replace(' (1 punt)', '') for item in answer_items]
     cleaned_items = [item for item in stripped_items if item != '']
     
     return cleaned_items
@@ -372,42 +372,49 @@ def render_insights(perc_df):
         # Each tuple consists of (length, color)
         bar_segments.append(
             [
-                (extract_score(index, '0 score', perc_df), '#c0e7c0'), # 0.0
-                (extract_score(index, '1 score', perc_df), '#f7d4b6'), # 0.5
-                (extract_score(index, '2 score', perc_df), '#e5bbbb')   # 1.0
+                (extract_score(index, '0.0 score', perc_df), '#c0e7c0'), # 0.0
+                (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
+                (extract_score(index, '1.0 score', perc_df), '#e5bbbb')   # 1.0
             ]
         )
 
     # Create the figure and axis
-    fig, ax = plt.subplots(figsize=(6, 3))
+    fig, ax = plt.subplots(figsize=(8, len(perc_df)))
 
-    # Starting position of first bar
-    bottom_bar_pos = 3
-    bar_height = 0.5 # Thickness
+    bottom_bar_pos = 0 # Starting position of first bar
+    bar_height = 0.6 # Thickness
+    bar_text_spacing = 0.2 # Distance between the bar and the answer item above it
+    upper_y_lim = 2
+    lower_y_lim = -(len(perc_df) + upper_y_lim)
+
+    answer_items = parse_answer_items()
 
     # Create each bar with its bar segments
-    for bar in bar_segments:
-        left = 0  # Starting left position for each bar
-        for i, segment in enumerate(bar):
-            length, color = segment
-            # Draw each segment
-            rect = plt.Rectangle((left, bottom_bar_pos), length, bar_height, color=color)
+    for i, bar in enumerate(bar_segments):
+        left_pos = 0  # Starting left position for each bar
+        for segment in bar:
 
-            ax.text(y=0.65 + i * 1.5, # The spacing between the answer items
-                    x=0, 
-                    s=f"{parse_answer_items()[-(i+1)]}", # Reversed walk through answer items
+            # Draw each segment
+            bar_length, color = segment
+            rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
+
+            ax.text(y=bar_text_spacing + bar_height + lower_y_lim + i * 1.5, # The spacing between the answer items
+                    x=0,
+                    s=f"{answer_items[-i-1]}", # Reversed walk through answer items
                     fontsize=10
             )
 
+            # Draw actual bar graphics
             ax.add_patch(rect)
+
             # Update the left position for the next segment
-            left += length
+            left_pos += bar_length
         # Update the starting bottom position for the next bar
         bottom_bar_pos -= 1.5
 
     total_bar_length = 6
     ax.set_xlim(0, total_bar_length)
-    ax.set_ylim(0, 4)
+    ax.set_ylim(lower_y_lim, upper_y_lim)
     ax.axis('off') # Remove axes
 
     # Show the plot
