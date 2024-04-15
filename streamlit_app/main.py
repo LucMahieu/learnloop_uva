@@ -104,10 +104,6 @@ def evaluate_answer():
                 {
                     "score": 0,
                     "feedback": "❌ Onvolledig: vermeld dat <strong>koolstofdioxide en water omgezet worden in glucose en zuurstof</strong>."
-                },
-                {
-                    "score": 0.5,
-                    "feedback": "🟨 Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de <strong>chloroplasten</strong> gebeurt."
                 }
             ]
         }
@@ -466,12 +462,16 @@ def feedback_is_in_correct_format(feedback_items):
     """
     # Identify the answer items in answermodel
     answer = st.session_state.segment_content['answer']
-    answer = answer.replace('.', '').replace(',', '').replace('?', '')
+    answer = answer.replace('.', '').replace(',', '').replace('?', '').replace('\n', ' ')
     answer_items = answer.split(' (1 punt) ')
 
     # Count number of points to be scored
     answer_item_count = len(answer_items)
     feedback_item_count = len(feedback_items)
+    st.write(answer_item_count)
+    st.write(feedback_item_count)
+    st.write(answer_items)
+    st.write(feedback_items)
 
     # Compare elemnent counts
     if answer_item_count != feedback_item_count:
