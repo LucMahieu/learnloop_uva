@@ -16,11 +16,6 @@
             "type": "question",
             "question": "Wanneer gebruik je anterograde tracers en wanneer reterograad?",
             "answer": "Je gebruikt anterograde tracers om de invloed van een gebied op de rest van het brein (de projectiegebieden) in kaart te brengen (1 punt). Retrograde tracers gebruik je om te bepalen welke input een gebied ontvangt van andere gebieden uit het brein (1 punt)."            
-        },
-        {
-            "type": "question",
-            "question": "Leg uit hoe juxtacellulaire kleuring werkt en waarom je het zou gebruiken.",
-            "answer": "Juxtacellulaire kleuring is een techniek waarbij een kleurstof, zoals biocytin, wordt geïnjecteerd vlak naast een neuron (1 punt) van een levend organisme (1 punt). Als het neuron gestimuleerd wordt door de elektrode, dan zullen de natriumkanalen openen en gaat de kleurstof via deze kanalen het neuron in (1 punt). Hierdoor weet je als onderzoeker welk neuron je hebt gestimuleerd (1 punt). Je gebruikt deze methode om het effect van bepaalde ziektebeelden zoals alzheimer of factoren zoals early life stress op neuronen te bepalen (1 punt)."
         }
     ]
 }
