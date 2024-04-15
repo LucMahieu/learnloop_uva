@@ -275,7 +275,7 @@ def flatten_db_cursor(cursor):
     flat_list = []
     for doc in cursor:
         module = st.session_state.selected_module
-        question = st.session_state.segment_content['question']
+        question = st.session_state.segment_content['question'].replace('.', '')
         feedback_items = doc['progress'][module]['feedback'][question]
         for i, item in enumerate(feedback_items):
             flat_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
@@ -331,6 +331,7 @@ def generate_insights():
     module = st.session_state.selected_module
     # Remove dots to prevent interference with querying db because of the dot notation in path
     question = st.session_state.segment_content['question'].replace('.', '')
+    print(question)
 
     feedback_path = f"progress.{module}.feedback.{question}"
 
@@ -351,6 +352,7 @@ def extract_score(index, score_type, perc_df):
     percentage to the right ratio of the bar graph.
     """
     total_bar_length = 6
+    print(perc_df)
     return int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
 
 
@@ -370,9 +372,9 @@ def render_insights(perc_df):
         # Each tuple consists of (length, color)
         bar_segments.append(
             [
-                (extract_score(index, '0.0 score', perc_df), '#c0e7c0'),
-                (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), 
-                (extract_score(index, '1.0 score', perc_df), '#e5bbbb')
+                (extract_score(index, '0 score', perc_df), '#c0e7c0'), # 0.0
+                (extract_score(index, '1 score', perc_df), '#f7d4b6'), # 0.5
+                (extract_score(index, '2 score', perc_df), '#e5bbbb')   # 1.0
             ]
         )
 
