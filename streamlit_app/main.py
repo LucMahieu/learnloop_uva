@@ -291,7 +291,6 @@ def create_score_percentages_df(flat_feedback_list):
 
     # Fill empty cells with 0
     perc_df = perc_df.fillna(0)
-    st.write(perc_df.columns)
 
     # Rename the columns to be more intuitive
     perc_df.columns = [f"{col} score" for col in perc_df.columns]
@@ -345,14 +344,13 @@ def extract_score(index, score_type, perc_df):
     percentage to the right ratio of the bar graph.
     """
     total_bar_length = 6
-    st.write(perc_df.columns)
     if score_type in perc_df.columns:
         score_percentage = int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
-        st.write('hello00')
+        st.write(score_percentage)
         return score_percentage
     else:
-        st.write('hello')
-        return int(0 * total_bar_length / 100)
+        st.write(float(0))
+        return float(0)
 
 
 def parse_answer_items():
@@ -372,9 +370,9 @@ def render_insights(perc_df):
         # Each tuple consists of (length, color)
         bar_segments.append(
             [
-                (extract_score(index, '0.0 score', perc_df), '#c0e7c0'), # 0.0
+                (extract_score(index, '1.0 score', perc_df), '#c0e7c0'), # 0.0
                 (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
-                (extract_score(index, '1.0 score', perc_df), '#e5bbbb')   # 1.0
+                (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
             ]
         )
 
