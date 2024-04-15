@@ -103,7 +103,7 @@ def create_auth_instance():
 if __name__=="__main__":
     # Initialise settings
     running_on_premise = True # Set to true if IP adres is allowed by Gerrit
-    testing = True
+    testing = False
     
     db = connect_to_database()
     auth = create_auth_instance()

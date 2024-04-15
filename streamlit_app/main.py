@@ -1081,7 +1081,7 @@ if __name__ == "__main__":
 
     # Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
     # has access to CosmosDB (determined by Gerrit).
-    running_on_premise = False
+    running_on_premise = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
