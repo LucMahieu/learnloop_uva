@@ -26,7 +26,7 @@ def connect_to_database():
     """
     Connect to either MongoDB or CosmosDB and ping to check connection.
     """
-    if running_on_premise:
+    if not use_mongodb:
         COSMOS_URI = os.getenv('COSMOS_URI')
         db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
     else:
@@ -79,17 +79,17 @@ def evaluate_answer():
         with open("./direct_feedback_prompt_4.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
-
         response = openai_client.chat.completions.create(
             model="learnloop",
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=500
+            max_tokens=6000
         )
 
         response = response.choices[0].message.content
+
         json_response = json.loads(response)
     
     else:
@@ -109,7 +109,7 @@ def evaluate_answer():
         }
 
     # Turn into JSON and select the current question
-    question = st.session_state.segment_content['question'].replace('.', '')
+    question = st.session_state.segment_content['question']
     feedback_response = json_response[question]
 
     # Reset the session states
@@ -147,7 +147,7 @@ def render_feedback():
     <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
     {feedback_html}
     <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
-        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {part}/{total}</h1>
+        <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {int(part)}/{total}</h1>
         <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
     </div>
     """
@@ -468,14 +468,10 @@ def feedback_is_in_correct_format(feedback_items):
     # Count number of points to be scored
     answer_item_count = len(answer_items)
     feedback_item_count = len(feedback_items)
-    st.write(answer_item_count)
-    st.write(feedback_item_count)
-    st.write(answer_items)
-    st.write(feedback_items)
 
     # Compare elemnent counts
     if answer_item_count != feedback_item_count:
-        st.warning("De feedback kan niet worden opgeslagen door een systeemfout en zal daarom ook niet gebruikt worden voor het inzicht op het collegescherm. Dit probleem moeten we nog oplossen.")
+        st.warning("De feedback kan niet worden opgeslagen door een systeemfout en zal daarom ook niet gebruikt worden voor het inzicht op het collegescherm. Dat gaan we nog fixen ;)")
         return False
     else:
         return True
@@ -856,7 +852,7 @@ def determine_if_to_initialise_database():
     if not user_exists:
         db.users.insert_one({"username": st.session_state.username})
 
-    if testing:
+    if reset_user_doc:
         if 'reset_db' not in st.session_state:
             st.session_state.reset_db = True
         
@@ -903,7 +899,7 @@ def render_login_page():
         welcome_title = "Celbiologie - deel 2"
         logo_base64 = convert_image_base64("./images/logo.png")
 
-        if testing:
+        if surf_test_env:
             href = "http://localhost:3000/"
         else:
             href = "https://learnloop.datanose.nl/"
@@ -936,21 +932,21 @@ def fetch_and_remove_nonce():
 
 if __name__ == "__main__":
     # ---------------------------------------------------------
-    # SETTINGS:
+    # SETTINGS FOR TESTING:
 
-    # Turn on 'testing' to:
-    # - Reset db for current user every time the webapp is loaded
-    # - Use localhost instead of learnloop.datanose.nl for authentication
-    testing = False
+    # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
+    surf_test_env = False
 
-    # Turn on 'running_on_premise' if you want to use CosmosDB and your current IP 
-    # has access to CosmosDB (determined by Gerrit).
-    running_on_premise = True
+    # Reset db for current user every time the webapp is loaded
+    reset_user_doc = False
+
+    # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
+    use_mongodb = False
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
-    if testing:
+    if surf_test_env or reset_user_doc or use_dummy_openai_calls or not use_mongodb:
         st.session_state.username = "test_user"
     # ---------------------------------------------------------
 
@@ -964,8 +960,9 @@ if __name__ == "__main__":
 
     fetch_and_remove_nonce()
 
+    # Only render login page if not testing
     if st.session_state.nonce is None \
-        and running_on_premise \
+        and not use_mongodb \
         and not st.session_state.username:
         render_login_page()
 

@@ -26,47 +26,10 @@ Volg deze stappen zorgvuldig, neem je tijd en sla geen stappen over:
 
 
 Voorbeeld 1 JSON-output:
-{
-  "Wat zijn de kenmerken van episodisch geheugen?": [
-    {
-      "score": 1.0,
-      "feedback": "✅ Correct: <strong>bewust toegankelijk</strong>."
-    },
-    {
-      "score": 0.5,
-      "feedback": "🟨 Gedeeltelijk correct: episodisch geheugen kan inderdaad bewust opgehaald worden, maar leg ook uit dat iemand deze herinneringen <strong>expliciet aan anderen kan vertellen</strong>."
-    }
-  ]
-}
+{"Wat zijn de kenmerken van episodisch geheugen?":[{"score":1.0,"feedback":"✅ Correct: <strong>bewust toegankelijk</strong>."},{"score":0.5,"feedback":"🟨 Gedeeltelijk correct: episodisch geheugen kan inderdaad bewust opgehaald worden, maar leg ook uit dat iemand deze herinneringen <strong>expliciet aan anderen kan vertellen</strong>."}]}
 
 Voorbeeld 2 JSON-output:
-{
-  "Leg uit wat fotosynthese is, hoe het plaatsvindt en waar.": [
-    {
-      "score": 1.0,
-      "feedback": "✅ Correct: fotosynthese is een <strong>proces waarbij planten zonlicht omzetten in energie</strong>."
-    },
-    {
-      "score": 0.0,
-      "feedback": "❌ Onvolledig: vermeld dat <strong>koolstofdioxide en water omgezet worden in glucose en zuurstof</strong>."
-    },
-    {
-      "score": 0.5,
-      "feedback": "🟨 Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de <strong>chloroplasten</strong> gebeurt."
-    }
-  ]
-}
+{"Leg uit wat fotosynthese is, hoe het plaatsvindt en waar.":[{"score":1.0,"feedback":"✅ Correct: fotosynthese is een <strong>proces waarbij planten zonlicht omzetten in energie</strong>."},{"score":0.0,"feedback":"❌ Onvolledig: vermeld dat <strong>koolstofdioxide en water omgezet worden in glucose en zuurstof</strong>."},{"score":0.5,"feedback":"🟨 Gedeeltelijk correct: fotosynthese vindt plaats in de bladeren, maar specificeer dat het in de <strong>chloroplasten</strong> gebeurt."}]}
 
 Voorbeeld 3 JSON-output (wanneer de student geen antwoord gegeven heeft):
-{
-  "Wat zijn de kenmerken van episodisch geheugen?": [
-    {
-      "score": 0.0,
-      "feedback": "❌ Ontbreekt: vermeld dat ionenkanalen <strong>transport van specifieke ionen over het celmembraan</strong> mogelijk maken."
-    },
-    {
-      "score": 0.0,
-      "feedback": "❌ Ontbreekt: vermeld ook dat het gaat om <strong>ionen die anders niet door de lipide dubbellaag</strong> kunnen passeren."
-    }
-  ]
-}
+{"Wat zijn de kenmerken van episodisch geheugen?":[{"score":0.0,"feedback":"❌ Ontbreekt: vermeld dat ionenkanalen <strong>transport van specifieke ionen over het celmembraan</strong> mogelijk maken."},{"score":0.0,"feedback":"❌ Ontbreekt: vermeld ook dat het gaat om <strong>ionen die anders niet door de lipide dubbellaag</strong> kunnen passeren."}]}
