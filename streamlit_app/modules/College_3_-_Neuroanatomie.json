@@ -1,25 +1,25 @@
 {
-    "module_name": "Transport en Signaaltransductie",
+    "module_name": "Neurowetenschappen",
     "segments": [
         {
             "type": "question",
-            "question": "Leg uit wat fotosynthese is, hoe het plaatsvindt en waar.",
-            "answer": "Passief transport is het verplaatsen van lala (1 punt) zonder direct energieverbruik (1 punt) en dan heb je nog antwoord item 3 waar je punten voor krijgt."
+            "question": "Benoem de genummerde hersengebieden in de afbeelding van boven naar beneden. Schrijf daarbij eerst het nummer op met daarachter de naam.",
+            "answer": "1. Hippocampus (1 punt), 2. Thalamus (1 punt), 3. Fornix (1 punt), 4. 3rd ventricle (1 punt), 5. Capsula externa (1 punt), 6. Capsula interna (1 punt), 7. Amygdala (1 punt)."
         },
         {
             "type": "question",
-            "question": "Hoe verschilt actief transport van passief transport?",
-            "answer": "Actief transport vereist energie, zoals ATP (1 punt), om stoffen tegen de concentratiegradi\u00ebnt in te transporteren (1 punt), terwijl passief transport geen energie vereist (1 punt) en met de concentratiegradi\u00ebnt mee verloopt (1 punt)."
+            "question": "Wat zijn de synthese gebieden van dopamine, noradrenaline, acetylcholine en serotonine?",
+            "answer": "Dopamine:\n    1. VTA (1 punt)\n    2. Substantia nigra (1 punt)\n\nAcetylcholine:\n    1. Mediale septum (1 punt)\n    2. Nucleus diagonale band van Broca (1 punt)\n\nNoradrenaline:\n    1. Locus Coeruleus (1 punt)\n\nSerotonine:\n    1. Dorsale raphe (1 punt)\n    2. Mediale raphe (1 punt)"
         },
         {
             "type": "question",
-            "question": "Wat is de functie van ionenkanalen?",
-            "answer": "Ionenkanalen maken transport van specifieke ionen over het celmembraan mogelijk (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+            "question": "Wanneer gebruik je anterograde tracers en wanneer reterograad?",
+            "answer": "Je gebruikt anterograde tracers om de invloed van een gebied op de rest van het brein (de projectiegebieden) in kaart te brengen (1 punt). Retrograde tracers gebruik je om te bepalen welke input een gebied ontvangt van andere gebieden uit het brein (1 punt)."            
         },
         {
             "type": "question",
-            "question": "Wat is de functie van transporteiwitten in het membraan?",
-            "answer": "Transporteiwitten faciliteren het transport van stoffen over celmembranen (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+            "question": "Leg uit hoe juxtacellulaire kleuring werkt en waarom je het zou gebruiken.",
+            "answer": "Juxtacellulaire kleuring is een techniek waarbij een kleurstof, zoals biocytin, wordt geïnjecteerd naast een neuron (1 punt) van een levend organisme (1 punt). Het wordt gebruikt om gedetailleerde morfologische informatie te verkrijgen over de cel (1 punt). Je gebruikt deze methode om het effect van bepaalde ziektebeelden zoals alzheimer of factoren zoals early life stress op neuronen te bepalen (1 punt)."
         }
     ]
 }
