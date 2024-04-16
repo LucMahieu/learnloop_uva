@@ -944,7 +944,7 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    skip_authentication = True
+    skip_authentication = False
     if skip_authentication:
         st.session_state.username = "test_user_2"
     # ---------------------------------------------------------
