@@ -71,12 +71,14 @@ def evaluate_answer():
         # Create user prompt with the question, correct answer and student answer
         prompt = f"""Input:\n
         Vraag: {st.session_state.segment_content['question']}\n
-        Antwoord student: {st.session_state.student_answer}\n
-        Beoordelingsrubriek: {st.session_state.segment_content['answer']}\n
+        Studentantwoord: {st.session_state.student_answer}\n
+        Correcte antwoord: {st.session_state.segment_content['answer']}
+        Antwoordmodel: {st.session_state.segment_content['answer_items']}\n
         Output:\n"""
 
+        print(prompt)
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt_4.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt_5.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -88,6 +90,7 @@ def evaluate_answer():
             max_tokens=6000
         )
 
+        print(response)
         response = response.choices[0].message.content
 
         json_response = json.loads(response)
@@ -460,13 +463,8 @@ def feedback_is_in_correct_format(feedback_items):
     The format of the feedback needs to correspond to the answermodel. 
     Otherwise it can't be aggregated for the feedback insights.
     """
-    # Identify the answer items in answermodel
-    answer = st.session_state.segment_content['answer']
-    answer = answer.replace('.', '').replace(',', '').replace('?', '').replace('\n', ' ')
-    answer_items = answer.split(' (1 punt) ')
-
     # Count number of points to be scored
-    answer_item_count = len(answer_items)
+    answer_item_count = len(st.session_state.segment_content['answer_items'])
     feedback_item_count = len(feedback_items)
 
     # Compare elemnent counts
@@ -730,6 +728,7 @@ def determine_modules():
         modules = os.listdir("./modules")
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
+        # Sort the modules in correct order based on the college number
         modules.sort(key=lambda module: int(module.split(" ")[1]))
         st.session_state.modules = modules
 
@@ -935,7 +934,7 @@ if __name__ == "__main__":
     # SETTINGS FOR TESTING:
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = False
+    surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
@@ -946,7 +945,8 @@ if __name__ == "__main__":
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
-    if surf_test_env or reset_user_doc or use_dummy_openai_calls or not use_mongodb:
+    # Bypass authentication when testing so flask app doesnt have to run
+    if surf_test_env or reset_user_doc or use_dummy_openai_calls:
         st.session_state.username = "test_user"
     # ---------------------------------------------------------
 
