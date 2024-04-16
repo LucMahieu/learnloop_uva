@@ -10,6 +10,7 @@ import certifi
 import base64
 import pandas as pd
 import matplotlib.pyplot as plt
+import textwrap
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -172,7 +173,7 @@ def fetch_image_path():
 
 def render_question():
     """Function to render the question and textbox for the students answer."""
-    st.title(st.session_state.segment_content['question'])
+    st.header(st.session_state.segment_content['question'])
 
 
 def fetch_segment_index():
@@ -343,12 +344,77 @@ def extract_score(index, score_type, perc_df):
     Extract the occurrence of the score type from df and convert 
     percentage to the right ratio of the bar graph.
     """
-    total_bar_length = 6
     if score_type in perc_df.columns:
+        total_bar_length = 6
         score_percentage = int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
         return score_percentage
     else:
         return float(0)
+
+
+# def render_insights(perc_df):
+#     bar_segments = []
+#     for index in perc_df.index:
+#         # Define the segments of each bar
+#         # Each tuple consists of (length, color)
+#         bar_segments.append(
+#             [
+#                 (extract_score(index, '1.0 score', perc_df), '#c0e7c0'), # 0.0
+#                 (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
+#                 (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
+#             ]
+#         )
+    
+
+#     bottom_bar_pos = 0 # Starting position of first bar
+#     bar_height = 0.6 # Thickness
+#     bar_text_spacing = 0.2 # Distance between the bar and the answer item (text) above it
+#     upper_y_lim = 2
+#     lower_y_lim = -(len(perc_df) + upper_y_lim)
+#     total_width = 6
+
+#     # Create the figure and axis
+#     fig, ax = plt.subplots(figsize=(total_width, (upper_y_lim - lower_y_lim)))
+
+#     ax.set_xlim(0, total_width)
+#     ax.set_ylim(lower_y_lim, upper_y_lim)
+#     ax.axis('off') # Remove axes
+
+
+#     answer_items = [item['item'] for item in st.session_state.segment_content['answer_items']]
+
+#     # Create each bar with its bar segments
+#     for i, bar in enumerate(bar_segments):
+#         left_pos = 0  # Starting left position for each bar
+#         for segment in bar:
+
+#             # Draw each segment
+#             bar_length, color = segment
+#             rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
+            
+#             # Wrap text for the text to stay within the figure
+#             answer_item_wrapped = textwrap.fill(answer_items[i], width=60)
+
+#             # Display the text
+#             ax.text(y=bottom_bar_pos + bar_height + bar_text_spacing, # The spacing between the answer items
+#                     x=0,
+#                     s=f"{answer_item_wrapped}", # Reversed walk through answer items
+#                     fontsize=10
+#             )
+
+#             # Draw actual bar graphics
+#             ax.add_patch(rect)
+
+#             # Update the left position for the next segment
+#             left_pos += bar_length
+
+#         # Update the starting bottom position for the next bar
+#         bottom_bar_pos -= 1.5
+
+#     plot_column = st.columns([2, 5, 2])[1]
+#     with plot_column:
+#         # Show the plot
+#         st.pyplot(fig)
 
 
 def render_insights(perc_df):
@@ -364,47 +430,42 @@ def render_insights(perc_df):
             ]
         )
     
-    # Create the figure and axis
-    fig, ax = plt.subplots(figsize=(8, len(perc_df)))
 
     bottom_bar_pos = 0 # Starting position of first bar
-    bar_height = 0.6 # Thickness
-    bar_text_spacing = 0.2 # Distance between the bar and the answer item above it
-    upper_y_lim = 2
-    lower_y_lim = -(len(perc_df) + upper_y_lim)
+    bar_height = 0.2 # Thickness
+    total_width = 6
 
-    answer_items = [item for item in st.session_state.segment_content['answer_items']]
+    answer_items = [item['item'] for item in st.session_state.segment_content['answer_items']]
 
     # Create each bar with its bar segments
     for i, bar in enumerate(bar_segments):
+        text_column = st.columns([1, 50, 1])[1]
+        with text_column:
+            st.subheader(answer_items[i])
+
         left_pos = 0  # Starting left position for each bar
+        # Create the figure and axis
+        fig, ax = plt.subplots(figsize=(total_width, bar_height))
+        fig.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0)
+
+        ax.set_xlim(0, total_width)
+        ax.set_ylim(0, bar_height)
+        ax.axis('off') # Remove axes
+
         for segment in bar:
 
             # Draw each segment
             bar_length, color = segment
             rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
 
-            ax.text(y=bar_text_spacing + bar_height + lower_y_lim + i * 1.5, # The spacing between the answer items
-                    x=0,
-                    s=f"{answer_items[-i-1]}", # Reversed walk through answer items
-                    fontsize=10
-            )
-
             # Draw actual bar graphics
             ax.add_patch(rect)
 
             # Update the left position for the next segment
             left_pos += bar_length
-        # Update the starting bottom position for the next bar
-        bottom_bar_pos -= 1.5
 
-    total_bar_length = 6
-    ax.set_xlim(0, total_bar_length)
-    ax.set_ylim(lower_y_lim, upper_y_lim)
-    ax.axis('off') # Remove axes
-
-    # Show the plot
-    st.pyplot(fig)
+        # Plot one bar
+        st.pyplot(fig)
 
 
 def render_learning_page():
