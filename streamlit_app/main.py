@@ -351,16 +351,6 @@ def extract_score(index, score_type, perc_df):
         return float(0)
 
 
-def parse_answer_items():
-    """Parses the parts of the answer into a list format"""
-    answer_items = st.session_state.segment_content['answer'].replace('.', '').replace(',', '').replace('?', '').replace('\n', ' ')
-    answer_items = answer_items.split(' (1 punt) ')
-    stripped_items = [item.strip(' .,').replace(' (1 punt)', '') for item in answer_items]
-    cleaned_items = [item for item in stripped_items if item != '']
-    
-    return cleaned_items
-
-
 def render_insights(perc_df):
     bar_segments = []
     for index in perc_df.index:
@@ -383,7 +373,7 @@ def render_insights(perc_df):
     upper_y_lim = 2
     lower_y_lim = -(len(perc_df) + upper_y_lim)
 
-    answer_items = parse_answer_items()
+    answer_items = [item for item in st.session_state.segment_content['answer_items']]
 
     # Create each bar with its bar segments
     for i, bar in enumerate(bar_segments):
