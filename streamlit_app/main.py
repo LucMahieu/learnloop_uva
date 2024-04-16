@@ -346,10 +346,8 @@ def extract_score(index, score_type, perc_df):
     total_bar_length = 6
     if score_type in perc_df.columns:
         score_percentage = int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
-        st.write(score_percentage)
         return score_percentage
     else:
-        st.write(float(0))
         return float(0)
 
 
@@ -375,7 +373,7 @@ def render_insights(perc_df):
                 (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
             ]
         )
-
+    
     # Create the figure and axis
     fig, ax = plt.subplots(figsize=(8, len(perc_df)))
 
