@@ -76,7 +76,6 @@ def evaluate_answer():
         Antwoordmodel: {st.session_state.segment_content['answer_items']}\n
         Output:\n"""
 
-        print(prompt)
         # Read the role prompt from a file
         with open("./direct_feedback_prompt_5.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
@@ -90,7 +89,6 @@ def evaluate_answer():
             max_tokens=6000
         )
 
-        print(response)
         response = response.choices[0].message.content
 
         json_response = json.loads(response)
@@ -101,11 +99,11 @@ def evaluate_answer():
         json_response = {
             f"{question}": [
                 {
-                    "score": 1,
+                    "score": 1.0,
                     "feedback": "✅ Correct: fotosynthese is een <strong>proces waarbij planten zonlicht omzetten in energie</strong>."
                 },
                 {
-                    "score": 0,
+                    "score": 0.0,
                     "feedback": "❌ Onvolledig: vermeld dat <strong>koolstofdioxide en water omgezet worden in glucose en zuurstof</strong>."
                 }
             ]
@@ -934,7 +932,7 @@ if __name__ == "__main__":
     # SETTINGS FOR TESTING:
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = True
+    surf_test_env = False
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
@@ -946,8 +944,9 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    if surf_test_env or reset_user_doc or use_dummy_openai_calls:
-        st.session_state.username = "test_user"
+    skip_authentication = True
+    if skip_authentication:
+        st.session_state.username = "test_user_2"
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
