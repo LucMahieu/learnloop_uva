@@ -16,8 +16,8 @@ import textwrap
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 load_dotenv()
 
@@ -765,28 +765,26 @@ if __name__ == "__main__":
     
     initialise_session_states()
 
-    if not running_on_premise or st.session_state.currently_testing:
-        st.session_state.username = "test_user"
+    st.session_state.username = "test_user"
 
-    else:
-        # Determine the modules of the current course
-        if st.session_state.modules == []:
-            determine_modules()
+    # Determine the modules of the current course
+    if st.session_state.modules == []:
+        determine_modules()
+    
+    render_sidebar()
+
+    if st.session_state.info_page:
+        render_info_page()
+        exit()
+    elif st.session_state.selected_module is None:         
+        # Automatically start the first module if no module is selected           
+        st.session_state.selected_module = st.session_state.modules[0]
+        st.session_state.selected_phase = 'learning'
         
-        render_sidebar()
+        # Rerun to make sure the page is displayed directly after start button is clicked
+        st.rerun()
+    else:
+        # Only (re-)initialise if user is new or when testing is on
+        determine_if_to_initialise_database()
 
-        if st.session_state.info_page:
-            render_info_page()
-            exit()
-        elif st.session_state.selected_module is None:         
-            # Automatically start the first module if no module is selected           
-            st.session_state.selected_module = st.session_state.modules[0]
-            st.session_state.selected_phase = 'learning'
-            
-            # Rerun to make sure the page is displayed directly after start button is clicked
-            st.rerun()
-        else:
-            # Only (re-)initialise if user is new or when testing is on
-            determine_if_to_initialise_database()
-
-            select_page_type()
+        select_page_type()
