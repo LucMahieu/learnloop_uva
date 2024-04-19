@@ -932,13 +932,13 @@ if __name__ == "__main__":
     # SETTINGS FOR TESTING:
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = False
+    surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    use_mongodb = False
+    use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
