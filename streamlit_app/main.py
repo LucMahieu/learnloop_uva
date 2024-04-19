@@ -5,18 +5,20 @@ from dotenv import load_dotenv
 import os
 import json
 from openai import AzureOpenAI
+
 from pymongo import MongoClient
+from pymongo.server_api import ServerApi
 import certifi
+
 import base64
 import pandas as pd
 import matplotlib.pyplot as plt
-import textwrap
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
+st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 load_dotenv()
@@ -27,7 +29,8 @@ if running_on_premise:
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
 else:
     MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+    # db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+    db_client = MongoClient(MONGO_URI, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
 openai_client = AzureOpenAI(
    api_key=os.getenv("OPENAI_API_KEY"),  
