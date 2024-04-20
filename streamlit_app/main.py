@@ -9,6 +9,9 @@ from pymongo import MongoClient
 import certifi
 import base64
 
+# Used to mitigate rate limit errors for OpenAI calls
+from tenacity import retry, stop_after_attempt, wait_random_exponential, retry_if_exception
+
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 load_dotenv()
@@ -64,6 +67,20 @@ def upload_progress():
     )
 
 
+def notify_user_about_retry(retry_state):
+    """
+    When the OpenAI call results in an error, the user is notified with a
+    message.
+    """
+    st.warning(f"Het evalueren is niet goed gelukt, maar de LLM probeert binnen een paar seconden poging {retry_state.attempt_number + 1}.")
+
+
+@retry(
+        wait=wait_random_exponential(min=1, max=60),
+        stop=stop_after_attempt(3),
+        retry=retry_if_exception(lambda ex: True),
+        before_sleep=notify_user_about_retry
+    )
 def evaluate_answer():
     """Evaluates the answer of the student and returns a score and feedback."""
     if use_dummy_openai_calls != True:
@@ -77,7 +94,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt_5.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt_6.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
