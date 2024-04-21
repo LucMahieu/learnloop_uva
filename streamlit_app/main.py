@@ -14,7 +14,7 @@ from pymongo.server_api import ServerApi
 import certifi
 
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt # No longer needed (only for old render insights function) # TODO: remove this and function when no longer needed
 import plotly.graph_objects as go
 import textwrap
 
@@ -817,58 +817,58 @@ def render_insights(perc_df):
     st.plotly_chart(fig)
 
 
-def render_insights_old(perc_df):
-    st.write(perc_df)
-    bar_segments = []
-    for index in perc_df.index:
-        # Define the segments of each bar
-        # Each tuple consists of (length, color)
-        bar_segments.append(
-            [
-                (extract_score(index, '1.0 score', perc_df), '#c0e7c0'), # 0.0
-                (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
-                (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
-            ]
-        )
+# def render_insights_old(perc_df):
+#     st.write(perc_df)
+#     bar_segments = []
+#     for index in perc_df.index:
+#         # Define the segments of each bar
+#         # Each tuple consists of (length, color)
+#         bar_segments.append(
+#             [
+#                 (extract_score(index, '1.0 score', perc_df), '#c0e7c0'), # 0.0
+#                 (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
+#                 (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
+#             ]
+#         )
 
-    st.write(bar_segments)
+#     st.write(bar_segments)
     
 
-    bottom_bar_pos = 0 # Starting position of first bar
-    bar_height = 0.2 # Thickness
-    total_width = 6
+#     bottom_bar_pos = 0 # Starting position of first bar
+#     bar_height = 0.2 # Thickness
+#     total_width = 6
 
-    answer_items = [item['item'] for item in st.session_state.segment_content['answer_items']]
+#     answer_items = [item['item'] for item in st.session_state.segment_content['answer_items']]
 
-    # Create each bar with its bar segments
-    for i, bar in enumerate(bar_segments):
-        text_column = st.columns([1, 50, 1])[1]
-        with text_column:
-            st.write(answer_items[i])
+#     # Create each bar with its bar segments
+#     for i, bar in enumerate(bar_segments):
+#         text_column = st.columns([1, 50, 1])[1]
+#         with text_column:
+#             st.write(answer_items[i])
 
-        left_pos = 0  # Starting left position for each bar
-        # Create the figure and axis
-        fig, ax = plt.subplots(figsize=(total_width, bar_height))
-        fig.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0)
+#         left_pos = 0  # Starting left position for each bar
+#         # Create the figure and axis
+#         fig, ax = plt.subplots(figsize=(total_width, bar_height))
+#         fig.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0)
 
-        ax.set_xlim(0, total_width)
-        ax.set_ylim(0, bar_height)
-        ax.axis('off') # Remove axes
+#         ax.set_xlim(0, total_width)
+#         ax.set_ylim(0, bar_height)
+#         ax.axis('off') # Remove axes
 
-        for segment in bar:
+#         for segment in bar:
 
-            # Draw each segment
-            bar_length, color = segment
-            rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
+#             # Draw each segment
+#             bar_length, color = segment
+#             rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
 
-            # Draw actual bar graphics
-            ax.add_patch(rect)
+#             # Draw actual bar graphics
+#             ax.add_patch(rect)
 
-            # Update the left position for the next segment
-            left_pos += bar_length
+#             # Update the left position for the next segment
+#             left_pos += bar_length
 
-        # Plot one bar
-        st.pyplot(fig)
+#         # Plot one bar
+#         st.pyplot(fig)
 
 
 def set_submitted_answer(answer):
