@@ -1,16 +1,26 @@
 import time
 import random
+import base64
 import streamlit as st
+import json
+
 from dotenv import load_dotenv
 import os
-import json
+
 from openai import AzureOpenAI
+
 from pymongo import MongoClient
+from pymongo.server_api import ServerApi
 import certifi
-import base64
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+import textwrap
 
 # Used to mitigate rate limit errors for OpenAI calls
 from tenacity import retry, stop_after_attempt, wait_random_exponential, retry_if_exception
+
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -34,7 +44,7 @@ def connect_to_database():
         db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
     else:
         MONGO_URI = os.getenv('MONGO_DB')
-        db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+        db_client = MongoClient(MONGO_URI, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
     db = db_client.LearnLoop
 
@@ -94,7 +104,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt_6.txt", "r", encoding="utf-8") as f:
+        with open("./direct_feedback_prompt_5.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
         response = openai_client.chat.completions.create(
@@ -293,7 +303,10 @@ def render_check_and_nav_buttons():
         with col_prev_question:
             st.button('Vorige', use_container_width=True, on_click=change_segment_index, args=(-1,))
     with col_check:
-        st.button('Controleer', use_container_width=True, on_click=set_submitted_true)
+        if st.session_state.user_type == 'student':
+            st.button('Controleer', use_container_width=True, on_click=set_submitted_true)
+        else:
+            st.button('Genereer inzicht', use_container_width=True, on_click=set_submitted_true)
     with col_next_question:
         st.button('Volgende', use_container_width=True, on_click=change_segment_index, args=(1,))
 
@@ -608,6 +621,256 @@ def render_learning_page():
             render_navigation_buttons()
 
 
+def render_teacher_learning_page():
+    """
+    Renders the page that takes the student through the concepts of the lecture
+    with info segments and questions. The student can navigate between segments
+    and will get personalized feedback on their answers. Incorrectly answered
+    questions are added to the practice phase.
+    """
+    initialise_learning_page()
+
+    # Display the info or question in the middle column
+    if st.session_state.submitted:
+        with mid_col:
+            render_progress_bar()
+
+            # Render image if present in the feedback
+            image_path = fetch_image_path()
+            if image_path:
+                render_image(image_path)
+
+            render_question()
+            perc_df = generate_insights()
+        
+        columns = st.columns([1, 12, 1])
+        with columns[1]:
+            render_insights(perc_df)
+            render_navigation_buttons()
+    else:
+        with mid_col:
+            render_progress_bar()
+
+            image_path = fetch_image_path()
+            if image_path:
+                render_image(image_path)
+            
+            render_question()            
+            render_check_and_nav_buttons()
+
+
+def rerun_if_no_docs_for_feedback_path(feedback_path):
+    """
+    Check if there is any feedback to aggregate (only if users made the current question). 
+    Displays warning and reruns program (sort of return) if there isn't any feedback in the db.
+    """
+    feedback_count = db.users.count_documents(
+        { 
+            feedback_path: {"$exists": True, "$ne": {}}
+        }
+    )
+
+    if feedback_count == 0:
+        st.warning("No feedback to aggregate into insights. Try again in 3 seconds.")
+        time.sleep(3)
+        st.session_state.submitted = False
+        st.rerun()
+
+
+def flatten_db_cursor(cursor):
+    """
+    Puts all data from db cursor in a flat list format.
+    """
+    flat_list = []
+    for doc in cursor:
+        module = st.session_state.selected_module
+        question = st.session_state.segment_content['question'].replace('.', '')
+        feedback_items = doc['progress'][module]['feedback'][question]
+        for i, item in enumerate(feedback_items):
+            flat_list.append({'feedback_item': i+1, 'score': item['score'], 'feedback': item['feedback']})
+    
+    return flat_list
+
+
+def create_score_percentages_df(flat_feedback_list):
+    df = pd.DataFrame(flat_feedback_list, columns=['feedback_item', 'score', 'feedback'])
+
+    # Each user has feedback items for the same parts of the answers, all with their own score
+    # Use size() to count how many times a score is given for one of the feedback items for each score type (0, 0.5, 1)
+    size_df = df.groupby(['feedback_item', 'score']).size()
+
+    # Group the scores together and calculate the percentage for each type of score for each feedback item
+    perc_df = size_df.groupby(level=0).apply(lambda x: 100 * x / float(x.sum()))
+
+    # Reorganize scores logically by making new columns for each score type
+    perc_df = perc_df.unstack()
+
+    # Fill empty cells with 0
+    perc_df = perc_df.fillna(0)
+
+    # Rename the columns to be more intuitive
+    perc_df.columns = [f"{col} score" for col in perc_df.columns]
+
+    return perc_df
+
+
+def find_docs_for_path(path):
+    """
+    Finds the documents in a db for a certain path and returns a cursor.
+    """
+    # A feedback cursor is not a JSON object, but a collection of JSON objects
+    cursor = db.users.find(
+        {
+            path: {"$exists": True, "$not": {"$size":  0}} # Check if the path exists and has a value other then 0
+        },
+        {
+            path: 1 # Boolean to tell that you want to project (output) this path
+        }
+    )
+
+    return cursor
+
+
+def generate_insights():
+    """
+    Aggregates the feedback from all users into percentages for 
+    each score type (0.0, 0.5, 1.0).
+    """
+    module = st.session_state.selected_module
+    # Remove dots to prevent interference with querying db because of the dot notation in path
+    question = st.session_state.segment_content['question'].replace('.', '')
+
+    feedback_path = f"progress.{module}.feedback.{question}"
+
+    rerun_if_no_docs_for_feedback_path(feedback_path)
+
+    feedback_cursor = find_docs_for_path(feedback_path)
+
+    flat_feedback_list = flatten_db_cursor(feedback_cursor)
+
+    perc_df = create_score_percentages_df(flat_feedback_list)
+
+    return perc_df
+
+
+def extract_score(index, score_type, perc_df):
+    """
+    Extract the occurrence of the score type from df and convert
+    percentage to the right ratio of the bar graph.
+    """
+    if score_type in perc_df.columns:
+        total_bar_length = 6
+        score_percentage = int(perc_df.loc[index, score_type].item()) * total_bar_length / 100
+        return score_percentage
+    else:
+        return float(0)
+
+
+def render_insights(perc_df):
+    """
+    Plots the aggregated insights and displays it on streamlit. Each answer item gets
+    its own bar that consists of three colors, corresponding to the three possible scores.
+    """
+    # Extract the relevant data from the aggregated feedback dataframe
+    data = {
+        'answer_items': [item['item'] for item in st.session_state.segment_content['answer_items']],
+        '0.0 score': perc_df.get('0.0 score', 0),
+        '0.5 score': perc_df.get('0.5 score', 0),
+        '1.0 score': perc_df.get('1.0 score', 0)
+    }
+
+    df = pd.DataFrame(data)
+
+    # Wrap the text so long sentences fit on the left side of graph
+    df['wrapped_items'] = df['answer_items'].apply(lambda text: '<br>'.join(textwrap.wrap(text, width=50))) # Adjust width of box
+
+    # Create new figure
+    fig = go.Figure()
+
+    # Settings for the names and colors of the figure
+    fig_layout = {
+        'score_names': ['Ontbreekt / Incorrect', 'Gedeeltelijk correct', 'Incorrect'],
+        'scores': ['0.0 score', '0.5 score', '1.0 score'],
+        'bar_colors': ['red', 'orange', 'green']
+    }
+
+    # Create a bar for each score with a color and name and the corresponding answer item
+    for i in range(len(fig_layout['scores'])):
+        fig.add_trace(go.Bar(
+            y=df['wrapped_items'],
+            x=df[fig_layout['scores'][i]],
+            name=fig_layout['score_names'][i],
+            orientation='h',
+            marker_color=fig_layout['bar_colors'][i],
+            width=0.7
+        ))
+
+    fig.update_layout(
+        barmode='stack',
+        margin=dict(l=20, r=20, t=20, b=20),
+        height=90 + 85 * len(df['answer_items']), # Height of figure is sort of adaptive
+        width=1200, # Width of whole figure
+        xaxis=dict(tickfont=dict(size=18, color='black')),
+        yaxis=dict(tickfont=dict(size=18, color='black'), autorange='reversed')
+    )
+
+    st.plotly_chart(fig)
+
+
+def render_insights_old(perc_df):
+    st.write(perc_df)
+    bar_segments = []
+    for index in perc_df.index:
+        # Define the segments of each bar
+        # Each tuple consists of (length, color)
+        bar_segments.append(
+            [
+                (extract_score(index, '1.0 score', perc_df), '#c0e7c0'), # 0.0
+                (extract_score(index, '0.5 score', perc_df), '#f7d4b6'), # 0.5
+                (extract_score(index, '0.0 score', perc_df), '#e5bbbb')  # 1.0
+            ]
+        )
+
+    st.write(bar_segments)
+    
+
+    bottom_bar_pos = 0 # Starting position of first bar
+    bar_height = 0.2 # Thickness
+    total_width = 6
+
+    answer_items = [item['item'] for item in st.session_state.segment_content['answer_items']]
+
+    # Create each bar with its bar segments
+    for i, bar in enumerate(bar_segments):
+        text_column = st.columns([1, 50, 1])[1]
+        with text_column:
+            st.write(answer_items[i])
+
+        left_pos = 0  # Starting left position for each bar
+        # Create the figure and axis
+        fig, ax = plt.subplots(figsize=(total_width, bar_height))
+        fig.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0)
+
+        ax.set_xlim(0, total_width)
+        ax.set_ylim(0, bar_height)
+        ax.axis('off') # Remove axes
+
+        for segment in bar:
+
+            # Draw each segment
+            bar_length, color = segment
+            rect = plt.Rectangle((left_pos, bottom_bar_pos), bar_length, bar_height, color=color)
+
+            # Draw actual bar graphics
+            ax.add_patch(rect)
+
+            # Update the left position for the next segment
+            left_pos += bar_length
+
+        # Plot one bar
+        st.pyplot(fig)
+
+
 def set_submitted_answer(answer):
     st.session_state.submitted = True
     st.session_state.choosen_answer = answer
@@ -651,10 +914,16 @@ def select_page_type():
 
     # Determine what type of page to display
     if st.session_state.selected_phase == 'learning':
-        render_learning_page()
+        if st.session_state.user_type == 'student':
+            render_learning_page()
+        if st.session_state.user_type == 'teacher':
+            render_teacher_learning_page()
 
 
 def initialise_session_states():
+    if 'user_type' not in st.session_state:
+        st.session_state.user_type = None
+
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
 
@@ -794,6 +1063,20 @@ def track_visits():
         {"username": st.session_state.username},
         {"$inc": {f"progress.{st.session_state.selected_module}.visits.{st.session_state.selected_phase}": 1}}
     )
+
+
+def determine_user_type():
+    """Sets the user as teacher or student, depending on current setting"""
+    teacher_on = st.toggle("Zet docent modus aan")
+    if teacher_on:
+        st.text_input("Vul de toegangscode in", type='password', key='teacher_code')
+        if st.session_state.teacher_code == 'brainloop':
+            st.session_state.user_type = 'teacher'
+        else:
+            st.warning('Toegangscode is onjuist')
+    else:
+        st.session_state.user_type = 'student'
+    
     
 
 def render_sidebar():
@@ -820,6 +1103,9 @@ def render_sidebar():
 
         st.sidebar.subheader("Extra info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
+
+        st.subheader("Docent modus")
+        determine_user_type()
 
 
 def initialise_database():
@@ -944,25 +1230,40 @@ def fetch_and_remove_nonce():
         st.query_params.pop('nonce', None) # Remove the nonce from the url
 
 
+# def determine_user_type():
+#     """
+#     Determines if current account is from teacher (Luc) or student.
+#     This is used to determine which interface to show.
+#     """
+#     lucs_username = ("4def1a90c9aa237c857bc530766d0feb6d831415", "flower2960", "3385ec9a01b87268772cdfb30801734dcec5a7e1")
+#     if st.session_state.username in lucs_username:
+#         st.session_state.user_type = 'teacher'
+#     else:
+#         st.session_state.user_type = 'student'
+
+
 if __name__ == "__main__":
     # ---------------------------------------------------------
     # SETTINGS FOR TESTING:
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = True
+    surf_test_env = False
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    use_mongodb = True
+    use_mongodb = False
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
+    no_login_page = False
+
     # Bypass authentication when testing so flask app doesnt have to run
     skip_authentication = False
     if skip_authentication:
+        no_login_page = True
         st.session_state.username = "test_user_2"
     # ---------------------------------------------------------
 
@@ -977,15 +1278,19 @@ if __name__ == "__main__":
     fetch_and_remove_nonce()
 
     # Only render login page if not testing
-    if st.session_state.nonce is None \
+    if no_login_page == False \
+        and st.session_state.nonce is None \
         and not use_mongodb \
         and not st.session_state.username:
         render_login_page()
 
+    # Fetch username through query param and invalidate nonce
     elif st.session_state.username is None:
         fetch_username()
         invalidate_nonce()
         st.rerun() # Needed, else it seems to get stuck here
+
+    # Render the actual app
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
