@@ -1,0 +1,23 @@
+{
+    "module_name": "Transport en Signaaltransductie",
+    "segments": [
+        {
+            "type": "info",
+            "title": "Membraanstructuur en permeabiliteit",
+            "text": "Biologische celmembranen zijn selectief permeabel, wat betekent dat ze sommige stoffen wel en andere niet doorlaten. Deze lipide bilaag van een celmembraan laat **hydrofobe stoffen** en deeltjes zoals gasmoleculen en steroidhormonen door. Water en macromoleculen zoals glycerol, suiker en sucrose hebben een (zeer) beperkte doorgang door de membraan. Daarnaast kunnen ook **geladen ionen niet door de lipide bilaag** heen zonder hulp doordat hun **lading niet compatibel is met de hydrofobe kern van de membraan**.",
+            "image": "permeabiliteit_lipide_bilaag.png"
+        },
+        {
+            "type": "question",
+            "question": "Welke soorten moleculen kunnen gemakkelijk door de lipide bilaag van een celmembraan heen?",
+            "answers": {
+                "correct_answer": "Hydrofobe stoffen zoals gasmoleculen en steroidhormonen",
+                "wrong_answers": [
+                    "Geladen ionen zoals natrium en kalium",
+                    "Water en glycerol",
+                    "Suiker en sucrose"
+                ]
+            }
+        }
+    ]
+}

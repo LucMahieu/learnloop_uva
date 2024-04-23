@@ -14,7 +14,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 load_dotenv()
 
@@ -804,9 +804,21 @@ def determine_modules():
     if st.session_state.modules == []:
         # Read the modules from the modules directory
         modules = os.listdir("./modules")
+
+        # # Hard code that SCJ demo has to be an exception # TODO: remove when demo is done
+        # for module in modules.copy():
+        #     if module == 'SCJ_Demo.json':
+        #         modules.pop(module)
+
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
+        for module in modules.copy():
+            if module == "SCJ_Demo":
+                modules.pop(module)
+                SCJ_module = module
+        
         modules.sort(key=lambda module: int(module.split(" ")[1]))
+        modules.insert(SCJ_module, 0)
         st.session_state.modules = modules
 
 
@@ -866,6 +878,7 @@ def render_sidebar():
         spacer, image_col = st.columns([0.4, 1])
         with image_col:
             render_logo()
+        
         st.sidebar.title("Colleges")
 
         # Display the modules in expanders in the sidebar
@@ -888,7 +901,7 @@ def render_sidebar():
                     st.session_state.info_page = False
                     track_visits()
 
-        render_feedback_form()
+        # render_feedback_form()
 
         st.sidebar.subheader("Extra info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
