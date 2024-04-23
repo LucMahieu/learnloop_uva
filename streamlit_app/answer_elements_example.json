@@ -1,0 +1,60 @@
+{
+    "type": "question",
+    "question": "Wat zijn de synthesegebieden van noradrenaline, acetylcholine en serotonine?",
+    "written_answer": "Acetylcholine wordt gesynthetiseerd in de mediale septum en de nucleus diagonale band van Broca. Noradrenaline wordt voornamelijk gesynthetiseerd in de locus Coeruleus. Serotonine wordt gesynthetiseerd in twee regio's: de dorsale raphe en de mediale raphe.",
+    "answer_items": {
+        "Acetylcholine": [
+            {"medial septum": 1},
+            {"nucleus diagonal band of Broca": 1}
+        ],
+        "Noradrenaline": [
+            {"locus Coeruleus": 1}
+        ],
+        "Serotonin": [
+            {"dorsal raphe": 1},
+            {"medial raphe": 1}
+        ]
+    }
+}
+
+
+{
+    "module_name": "Neurowetenschappen",
+    "segments": [
+        {
+            "type": "question",
+            "question": "Benoem de zeven genummerde hersengebieden in de afbeeldingen van boven naar beneden. Schrijf daarbij eerst het nummer op met daarachter de naam.",
+            "answer_items": [
+                {"item": "Hippocampus", "points": 1},
+                {"item": "Thalamus", "points": 1},
+                {"item": "Fornix", "points": 1},
+                {"item": "3rd ventricle", "points": 1},
+                {"item": "Capsula externa", "points": 1},
+                {"item": "Capsula interna", "points": 1},
+                {"item": "Amygdala", "points": 1}
+            ],
+            "image": "hersenplakje_rat.png"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de synthesegebieden van noradrenaline, acetylcholine en serotonine?",
+            "written_answer": "Acetylcholine wordt gesynthetiseerd in de mediale septum en de nucleus diagonale band van Broca. Noradrenaline wordt voornamelijk gesynthetiseerd in de locus Coeruleus. Serotonine wordt gesynthetiseerd in twee regio's: de dorsale raphe en de mediale raphe.",
+            "answer_items": [
+                {"item": "Acetylcholine: medial septum", "points": 1},
+                {"item": "Acetylcholine: nucleus diagonal band of Broca", "points": 1},
+                {"item": "Noradrenaline: locus Coeruleus", "points": 1},
+                {"item": "Serotonin: dorsal raphe", "points": 1},
+                {"item": "Serotonin: medial raphe", "points": 1}
+            ]
+        },
+        {
+            "type": "question",
+            "question": "Wanneer gebruik je anterograde tracers en wanneer retrograad?",
+            "written_answer": "Je gebruikt anterograde tracers om de invloed van een gebied op de rest van het brein (projectiegebieden) in kaart te brengen. Retrograde tracers gebruik je om te bepalen welke input een gebied ontvangt van andere gebieden uit het brein.",
+            "answer_items": [
+                {"item": "Anterograde tracers: gebruik om de invloed van een gebied op de rest van het brein in kaart te brengen", "points": 1},
+                {"item": "Retrograde tracers: gebruik om te bepalen welke input een gebied ontvangt van andere gebieden uit het brein", "points": 1}
+            ]
+        }
+    ]
+}
