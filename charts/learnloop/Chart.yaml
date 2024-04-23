@@ -3,8 +3,4 @@ name: learnloop
 description: LearnLoop
 type: application
 version: 0.3.43
-<<<<<<< HEAD
 appVersion: "0.3.43"
-=======
-appVersion: "0.3.43"
->>>>>>> 3f7282a4e9b055666ee2177f39f28fe9a955fbd7

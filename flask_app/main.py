@@ -9,15 +9,11 @@ import random
 
 load_dotenv()
 
-# Initialise settings
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
-testing = False
-
-# Create flask app
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
-print("Trying to connect with database")
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+
 if running_on_premise:
     COSMOS_URI = os.getenv('COSMOS_URI')
     db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
@@ -27,13 +23,7 @@ else:
 
 db = db_client.LearnLoop
 
-# Ping database to check if it's connected
-try:
-    db.command("ping")
-    print("Connected to database")
-except Exception as e:
-    print(f"Error: {e}")
-
+# Make authentication instance for the flask app
 auth = OAuth(app)
 
 auth.register(
@@ -47,12 +37,7 @@ auth.register(
 
 @app.route('/')
 def login():
-    if testing:
-        scheme = 'http'
-    else:
-        scheme = 'https'
-    
-    redirect_uri = url_for('authorize', _external=True, _scheme=scheme)
+    redirect_uri = url_for('authorize', _external=True, _scheme='https')
     return auth.surfconext.authorize_redirect(redirect_uri)
 
 
@@ -84,13 +69,7 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    if testing:
-        url = 'http://localhost:8501/'
-    else:
-        url = 'https://learnloop.datanose.nl/'
-    
-    redirect_url = f'{url}app?nonce={nonce}'
-
+    redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
     return redirect(redirect_url, code=302)
 
 

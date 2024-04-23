@@ -12,26 +12,15 @@ from openai import AzureOpenAI
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 import certifi
-
-import pandas as pd
-# import matplotlib.pyplot as plt # No longer needed (only for old render insights function) # TODO: remove this and function when no longer needed
-import plotly.graph_objects as go
-import textwrap
-
-# Used to mitigate rate limit errors for OpenAI calls
-from tenacity import retry, stop_after_attempt, wait_random_exponential, retry_if_exception
-
+import base64
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
-<<<<<<< HEAD
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
-=======
->>>>>>> 3f7282a4e9b055666ee2177f39f28fe9a955fbd7
 load_dotenv()
 
 
@@ -1026,15 +1015,6 @@ def determine_modules():
 
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-<<<<<<< HEAD
-        for module in modules.copy():
-            if module == "SCJ_Demo":
-                modules.pop(module)
-                SCJ_module = module
-        
-=======
-        # Sort the modules in correct order based on the college number
->>>>>>> 3f7282a4e9b055666ee2177f39f28fe9a955fbd7
         modules.sort(key=lambda module: int(module.split(" ")[1]))
         modules.insert(SCJ_module, 0)
         st.session_state.modules = modules
