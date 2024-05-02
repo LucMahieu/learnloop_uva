@@ -1,0 +1,23 @@
+{
+    "module_name": "oefententamen_3",
+    "segments": [
+        {
+            "type": "question",
+            "question": "Beschrijf kort de stappen in de fosfolipase C-route.",
+            "answer": "Fosfolipase C wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt) en zet PIP2 om in IP3 (1 punt), dat calciumvrijgave induceert (1 punt), en DAG (1 punt), dat PKC activeert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Beschrijf kort de stappen in de fosfolipase C-route.",
+            "answer": "Fosfolipase C wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt) en zet PIP2 om in IP3 (1 punt), dat calciumvrijgave induceert (1 punt), en DAG (1 punt), dat PKC activeert (1 punt).",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Beschrijf kort de stappen in de fosfolipase C-route.",
+            "answer": "Fosfolipase C wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt) en zet PIP2 om in IP3 (1 punt), dat calciumvrijgave induceert (1 punt), en DAG (1 punt), dat PKC activeert (1 punt).",
+            "image": null
+        }
+    ]
+}
