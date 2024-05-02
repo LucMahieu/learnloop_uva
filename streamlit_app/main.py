@@ -375,6 +375,14 @@ def render_learning_explanation():
         render_start_button()
     exit()
 
+def render_oefententamen_explanation():
+    with mid_col:
+        st.markdown('<p style="font-size: 30px;"><strong>Leerfase 📖</strong></p>', unsafe_allow_html=True)
+        # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
+        st.write("Je gaat nu oefenen met een oefententamen!")
+        render_start_button()
+    exit()
+
 
 def initialise_learning_page():
     """
@@ -384,9 +392,15 @@ def initialise_learning_page():
     st.session_state.segment_index = fetch_segment_index()
 
     if st.session_state.segment_index == -1: # If user never started this phase
-        render_learning_explanation()
+        if st.session_state.selected_module.startswith("Oefententamen"):
+            render_oefententamen_explanation()
+        else:
+            render_learning_explanation()
     elif st.session_state.segment_index == 100_000: # if we are at the final screen
-        render_final_page()
+        if st.session_state.selected_module.startswith("Oefententamen"):
+            render_oefententamen_final_page()
+        else:
+            render_final_page()
     else:
         # Select the segment (with contents) that corresponds to the saved index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
@@ -412,6 +426,12 @@ def render_final_page():
         st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
     
     # otherwise the progress bar and everything will get rendered
+    exit()
+
+def render_oefententamen_final_page():
+    st.markdown('<p style="font-size: 30px;"><strong>Einde van het oefententamen! 🎓 </strong></p>', unsafe_allow_html=True)
+    st.write("Hoe ging ie? Je kan het oefententamen opnieuw beginnen door op de knop hieronder te drukken.")
+    st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
     exit()
 
 
@@ -715,6 +735,7 @@ def select_page_type():
         render_practice_page()
     if st.session_state.selected_phase == 'theory':
         render_theory_page()
+    
 
 
 def initialise_session_states():
@@ -879,27 +900,46 @@ def render_sidebar():
 
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
-            with st.expander(module):
-                # Display buttons for the two types of phases per module
-                if st.button('Leerfase 📖', key=module + ' learning'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'learning'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Oefenfase 📝', key=module + ' practice'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'practice'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Theorie 📚', key=module + ' theory'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'theory'
-                    st.session_state.info_page = False
-                    track_visits()
-
+            # If the module is not a Oefententamen, then skip it
+            if not module.startswith('Oefententamen'):
+                with st.expander(module):
+                    # Display buttons for the two types of phases per module
+                    if st.button('Leerfase 📖', key=module + ' learning'):
+                        st.session_state.selected_module = module
+                        st.session_state.selected_phase = 'learning'
+                        st.session_state.info_page = False
+                        track_visits()
+                    if st.button('Oefenfase 📝', key=module + ' practice'):
+                        st.session_state.selected_module = module
+                        st.session_state.selected_phase = 'practice'
+                        st.session_state.info_page = False
+                        track_visits()
+                    if st.button('Theorie 📚', key=module + ' theory'):
+                        st.session_state.selected_module = module
+                        st.session_state.selected_phase = 'theory'
+                        st.session_state.info_page = False
+                        track_visits()
         # render_feedback_form()
-
-        st.sidebar.subheader("Extra info")
+        st.sidebar.title("Oefententamens")
+        if st.button('Oefententamen 1', key='Oefententamen 1' + ' learning'):
+            st.session_state.selected_module = 'Oefententamen 1'
+            st.session_state.selected_phase = 'learning'
+            st.session_state.info_page = False
+            track_visits()
+        if st.button('Oefententamen 2', key='Oefententamen 2' + ' learning'):
+            st.session_state.selected_module = 'Oefententamen 2'
+            st.session_state.selected_phase = 'learning'
+            st.session_state.info_page = False
+            track_visits()
+        if st.button('Oefententamen 3', key='Oefententamen 3' + ' learning'):
+            st.session_state.selected_module = 'Oefententamen 3'
+            st.session_state.selected_phase = 'learning'
+            st.session_state.info_page = False
+            track_visits()
+        
+        
+        
+        st.sidebar.subheader("Extra Info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
 
 
