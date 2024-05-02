@@ -8,23 +8,19 @@ from openai import AzureOpenAI
 from pymongo import MongoClient
 import certifi
 import base64
+from overview_page import OverviewPage
+import db_config
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+
+left_col, mid_col, right_col = st.columns([1, 3, 1])
 
 load_dotenv()
-
-# Database connection
-if running_on_premise:
-    COSMOS_URI = os.getenv('COSMOS_URI')
-    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-else:
-    MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 openai_client = AzureOpenAI(
    api_key=os.getenv("OPENAI_API_KEY"),  
@@ -32,15 +28,7 @@ openai_client = AzureOpenAI(
    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 )
 
-db = db_client.LearnLoop
-
-# Ping database to check if it's connected
-try:
-    db.command("ping")
-    print("Connected to database")
-except Exception as e:
-    print(f"Error: {e}")
-
+db = db_config.connect_db()
 
 def upload_progress():
     """
@@ -430,7 +418,6 @@ def reset_progress():
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
-    # initialise_learning_page()
 
 
 def render_warning():
@@ -578,6 +565,7 @@ def render_practice_explanation():
 def initialise_practice_page():
     """Update all session states with database data and render practice explanation 
     if it's the first time."""
+
     # Fetch the last segment index from db
     st.session_state.segment_index = fetch_segment_index()
 
@@ -590,7 +578,7 @@ def initialise_practice_page():
         fetch_ordered_segment_sequence()
 
         json_index = st.session_state.ordered_segment_sequence[st.session_state.segment_index]
-
+        
         # Select the segment (with contents) that corresponds to the saved json index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
         
@@ -694,21 +682,33 @@ def render_theory_page():
                 render_info()
 
 
-def select_page_type():
+def render_overview_page():
     """
-    Determines what type of page to display based on which module the user selected.
+    Renders the page that shows all the subjects in a lecture, which gives the 
+    student insight into their progress.
     """
-    # For convenience, store the selected module name in a variable
-    module = st.session_state.selected_module
+    overview_page = OverviewPage(st.session_state.selected_module)
+    overview_page.render_page()
 
-    # Make module name lowercase and replace spaces and with underscores and cuts off at the first
-    module_json_name = module.replace(" ", "_")
 
-    # Load the json content for this module
+def load_json_content(): #TODO: This might result in a lot of memory usage, which is costly and slow
+    """
+    Load all the contents from the current JSON into memory.
+    """
+    module_json_name = st.session_state.selected_module.replace(" ", "_")
     with open(f"./modules/{module_json_name}.json", "r") as f:
         st.session_state.page_content = json.load(f)
 
+
+def render_selected_page():
+    """
+    Determines what type of page to display based on which module the user selected.
+    """
+    load_json_content() # to render content
+    
     # Determine what type of page to display
+    if st.session_state.selected_phase == 'overview':
+        render_overview_page()
     if st.session_state.selected_phase == 'learning':
         render_learning_page()
     if st.session_state.selected_phase == 'practice':
@@ -881,6 +881,11 @@ def render_sidebar():
         for module in st.session_state.modules:
             with st.expander(module):
                 # Display buttons for the two types of phases per module
+                if st.button('Overview 📖', key=module + ' overview'):
+                    st.session_state.selected_module = module
+                    st.session_state.selected_phase = 'overview'
+                    st.session_state.info_page = False
+                    track_visits()
                 if st.button('Leerfase 📖', key=module + ' learning'):
                     st.session_state.selected_module = module
                     st.session_state.selected_phase = 'learning'
@@ -1059,5 +1064,5 @@ if __name__ == "__main__":
 
             if st.session_state.warned == None:
                 st.session_state.warned = fetch_if_warned()
-
-            select_page_type()
+            
+            render_selected_page()

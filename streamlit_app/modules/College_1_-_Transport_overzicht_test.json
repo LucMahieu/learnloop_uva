@@ -1,0 +1,82 @@
+{
+    "module_name": "Transport en Signaaltransductie",
+    "topics": [
+        {
+            "topic_title": "Celmembranen en transportmechanismen",
+            "segments": [
+                {
+                    "type": "info",
+                    "title": "Membraanstructuur en permeabiliteit",
+                    "text": "Biologische celmembranen zijn selectief permeabel...",
+                    "image": "permeabiliteit_lipide_bilaag.png"
+                },
+                {
+                    "type": "question",
+                    "question": "Welke soorten moleculen kunnen gemakkelijk door de lipide bilaag van een celmembraan heen?",
+                    "answers": {
+                        "correct_answer": "Hydrofobe stoffen zoals gasmoleculen en steroidhormonen",
+                        "wrong_answers": ["Geladen ionen zoals natrium en kalium", "Water en glycerol", "Suiker en sucrose"]
+                    }
+                },
+                {
+                    "type": "info",
+                    "title": "Passief transport",
+                    "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren...",
+                    "images": "actief_en_passief_transport.png"
+                },
+                {
+                    "type": "question",
+                    "question": "Wat is passief transport en hoe verloopt het?",
+                    "answer": "Passief transport is het verplaatsen van moleculen over een celmembraan met de concentratiegradiënt mee (1 punt) zonder direct energieverbruik (1 punt)."
+                },
+                {
+                    "type": "info",
+                    "title": "Actief transport",
+                    "text": "Actief transport is een proces waarbij cellen stoffen tegen hun concentratiegradiënt in transporteren...",
+                    "images": "actief_en_passief_transport.png"
+                },
+                {
+                    "type": "question",
+                    "question": "Hoe verschilt actief transport van passief transport?",
+                    "answer": "Actief transport vereist energie, zoals ATP (1 punt), om stoffen tegen de concentratiegradiënt in te transporteren (1 punt), terwijl passief transport geen energie vereist (1 punt) en met de concentratiegradiënt mee verloopt (1 punt)."
+                }
+            ]
+        },
+        {
+            "topic_title": "Specifieke transportmechanismen",
+            "segments": [
+                {
+                    "type": "info",
+                    "title": "Kanalen en transporteiwitten",
+                    "text": "Kanalen en transporteiwitten zijn twee belangrijke mechanismen...",
+                    "image": "transporters_en_kanalen.png"
+                },
+                {
+                    "type": "info",
+                    "title": "Ionenkanalen",
+                    "text": "Ionenkanalen zijn gespecialiseerde eiwitstructuren...",
+                    "image": "ion_channel.png"
+                },
+                {
+                    "type": "question",
+                    "question": "Wat is de functie van ionenkanalen?",
+                    "answer": "Ionenkanalen maken transport van specifieke ionen over het celmembraan mogelijk (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
+                },
+                {
+                    "type": "info",
+                    "title": "Selectiviteitsfilter van ionkanalen",
+                    "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren.",
+                    "image": "selectiviteitsfilter.png"
+                },
+                {
+                    "type": "question",
+                    "question": "Wat is de functie van het selectiviteitsfilter in ionkanalen?",
+                    "answers": {
+                        "correct_answer": "Het bepaalt welke ionen door het kanaal kunnen passeren",
+                        "wrong_answers": ["Het reguleert de opening en sluiting van het kanaal", "Het zorgt voor de actieve transport van ionen", "Het voorkomt dat ionen door het kanaal passeren"]
+                    }
+                }
+            ]
+        }
+    ]
+}
