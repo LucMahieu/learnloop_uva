@@ -10,6 +10,7 @@ import certifi
 import base64
 from overview_page import OverviewPage
 import db_config
+from utils import Utils
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -691,20 +692,14 @@ def render_overview_page():
     overview_page.render_page()
 
 
-def load_json_content(): #TODO: This might result in a lot of memory usage, which is costly and slow
-    """
-    Load all the contents from the current JSON into memory.
-    """
-    module_json_name = st.session_state.selected_module.replace(" ", "_")
-    with open(f"./modules/{module_json_name}.json", "r") as f:
-        st.session_state.page_content = json.load(f)
-
-
 def render_selected_page():
     """
     Determines what type of page to display based on which module the user selected.
     """
-    load_json_content() # to render content
+    # Load content to load on one of the pages
+    json_name = Utils.selected_module_json_name() + ".json"
+    json_path = f"./modules/{json_name}"
+    st.session_state.page_content = Utils.load_json_content(json_path)
     
     # Determine what type of page to display
     if st.session_state.selected_phase == 'overview':
