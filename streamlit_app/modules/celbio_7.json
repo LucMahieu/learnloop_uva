@@ -1,0 +1,75 @@
+{
+    "module_name": "celbio_7",
+    "segments": [
+        {
+            "type": "theory",
+            "title": "Inleiding tot Signaaltransductie",
+            "text": "Het **signaaltransductieproces** is een fundamentele methode waarmee cellen reageren op externe prikkels. Het proces omvat vier tot vijf stappen: **perceptie** van het signaal, **transductie**, en uiteindelijk een **respons**.",
+            "image": null,
+            "tag": "5.1.1"
+        },
+        {
+            "type": "theory",
+            "title": "Perceptie van Signalen",
+            "text": "Perceptie is de eerste stap in signaaltransductie waar de cel een **extern signaal waarneemt**. Dit is cruciaal om het transductieproces te initi\u00ebren.",
+            "image": null,
+            "tag": "5.1.2"
+        },
+        {
+            "type": "theory",
+            "title": "Transductie van Signalen",
+            "text": "Na perceptie volgt **transductie**, waarbij het waargenomen signaal wordt **omgezet** in een vorm die binnen de cel begrepen en doorgegeven kan worden, vaak via een reeks **eiwitinteracties**.",
+            "image": null,
+            "tag": "5.1.3"
+        },
+        {
+            "type": "theory",
+            "title": "Respons op Signalen",
+            "text": "De laatste fase van signaaltransductie is de **respons**. Na transductie reageert de cel met een passende actie, die een verandering in **gedrag of metabolisme** kan zijn.",
+            "image": null,
+            "tag": "5.1.4"
+        },
+        {
+            "type": "theory",
+            "title": "Stappen in Signaaltransductie",
+            "text": "Samenvattend, signaaltransductie omvat de volgende stappen: een **signaal** wordt waargenomen, **eiwitten** binnen de cel dragen het signaal over en de cel produceert een **respons**. De complexiteit van deze stappen kan vari\u00ebren, afhankelijk van het type cel en signaal.",
+            "image": null,
+            "tag": "5.1.5"
+        },
+        {
+            "type": "theory",
+            "title": "Basis van Contactafhankelijke Signalering",
+            "text": "Contactafhankelijke signalering is een mechanisme waarbij **direct fysiek contact** tussen cellen vereist is voor signaaloverdracht. In dit proces bevinden zowel het signaalmolecuul als de receptor zich **verankerd in het plasmamembraan** van de respectievelijke cellen. Dit onderscheidt zich van andere signaleringstypen waarbij moleculen door de extracellulaire ruimte kunnen reizen.",
+            "image": null,
+            "tag": "5.2.1"
+        },
+        {
+            "type": "theory",
+            "title": "Membraangebonden Signaalmoleculen en Receptoren",
+            "text": "De essentie van contactafhankelijke signalering ligt in het gebruik van **membraangebonden signaalmoleculen en membraangebonden receptoren**. Dit beperkt de signalering tot cellen die in nauw contact staan of naast elkaar liggen, aangezien de signalen niet vrij in de extracellulaire ruimte kunnen bewegen.",
+            "image": null,
+            "tag": "5.2.2"
+        },
+        {
+            "type": "theory",
+            "title": "Contactafhankelijke Signalering in het Immuunsysteem",
+            "text": "Een praktisch voorbeeld van contactafhankelijke signalering is te vinden in het **immuunsysteem**. Hier presenteren cellen **antigenen**, die vervolgens worden herkend door receptoren op andere immuuncellen, wat leidt tot activering en communicatie via direct contact.",
+            "image": null,
+            "tag": "5.2.3"
+        },
+        {
+            "type": "theory",
+            "title": "Interactie tussen Ge\u00c3\u00afnfecteerde en Cytotoxische Cellen",
+            "text": "Een specifiek voorbeeld binnen de celbiologie is de interactie tussen **ge\u00c3\u00afnfecteerde cellen en cytotoxische cellen**. De ge\u00c3\u00afnfecteerde cel presenteert een molecuul op zijn oppervlak dat herkend wordt door een receptor op de cytotoxische cel, wat resulteert in activatie en immuunrespons.",
+            "image": null,
+            "tag": "5.2.4"
+        },
+        {
+            "type": "theory",
+            "title": "Gap Junctions als Vorm van Contactafhankelijke Signalering",
+            "text": "De **gap junctions** in hartspiercellen zijn een ander voorbeeld van contactafhankelijke signalering. Deze eiwitstructuren in aangrenzende celmembranen laten de snelle overdracht van signalen toe, zoals **calcium-ionen**, die essentieel zijn voor spiercontractie. Gap junctions zijn cruciaal voor de co\u00c3\u00b6rdinatie en functie van spieren.",
+            "image": null,
+            "tag": "5.2.5"
+        }
+    ]
+}
