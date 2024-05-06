@@ -2,7 +2,7 @@
     "module_name": "celbio_3",
     "segments": [
         {
-            "type": "info",
+            "type": "theory",
             "title": "Herhaling: het endoplasmatisch reticulum (ER)",
             "text": "Het **endoplasmatisch reticulum (ER)** is een organel in cellen dat uit een membraan bestaat met daarbinnen een holte genaamd het **lumen**. Het lumen van het ER is de locatie waar **eiwitsynthese** plaatsvindt, wat een cruciaal onderdeel is van de celwerking.",
             "image": "ER_doorsnede.png"
@@ -21,7 +21,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Eiwitlokalisatie in het endoplasmatisch reticulum (ER)",
             "text": "Binnen het ER zijn er twee belangrijke soorten eiwitten: **hydrofiele eiwitten**, die zich in het **lumen** (de binnenruimte) van het ER bevinden, en **transmembraaneiwitten**, die in het **membraan van het ER** ge\u00EFntegreerd zijn.",
             "image": null
@@ -33,7 +33,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Eiwitori\u00EBntatie in het ER",
             "text": "De ori\u00EBntatie van eiwitten in het ER wordt bepaald tijdens de eiwitsynthese. Elk eiwit heeft een specifieke aminozuurvolgorde die dient als een **adreslabel**, waardoor het eiwit naar de juiste locatie wordt geleid en correct geori\u00EBnteerd binnen het ER. Bovendien wordt de ori\u00EBntatie van eiwitten be\u00EFnvloed door de elektrochemische lading tussen het cytosol en het ER-lumen. Het cytosol heeft over het algemeen een positievere lading in vergelijking met het ER-lumen, wat van invloed is op de positionering van transmembraaneiwitten en hun functionaliteit.",
             "image": "eiwit_orientatie.png"
@@ -52,7 +52,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Translocatiecomplex in het ER",
             "text": "De mitochondria hebben translocatiecomplexen zoals TOM en TIM. Het ER heeft ook een eigen translocatiecomplex dat helpt bij het transport van eiwitten door het **ER-membraan**. Dit complex herkent eiwitten met een **signaalpeptide** en faciliteert hun doorgang door het membraan, waardoor ze hun juiste locatie in de cel kunnen bereiken.",
             "image": null
@@ -64,7 +64,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Herhaling: hydrofobe sequenties",
             "text": "Hydrofobe sequenties zijn delen van eiwitten die bestaan uit **hydrofobe (waterafstotende) aminozuren**. Deze sequenties bepalen de positie van transmembraaneiwitten in het membraan, doordat ze ervoor zorgen dat deze delen van het eiwit zich in de **hydrofobe kern van het membraan** bevinden.",
             "image": "translocatie_complex.png"
@@ -76,7 +76,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Starttransfersequentie",
             "text": "De **starttransfersequentie** is een specifieke reeks aminozuren in een eiwit die de ori\u00EBntatie van dat eiwit in het membraan be\u00EFnvloedt. De sequentie reageert op de lading van de aminozuren en bepaalt zo aan welke kant van het membraan het eiwit zich zal bevinden.",
             "image": "start_transfer_sequentie.png"
@@ -87,7 +87,7 @@
             "answer": "De interne starttransfersequentie be\u00EFnvloedt de ori\u00EBntatie van een eiwit in het membraan door te reageren op de lading van de aminozuren (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Meervoudige Transmembraaneiwitten",
             "text": "**Meervoudige transmembraaneiwitten** zijn eiwitten die **meerdere keren door het celmembraan** heen gaan. Deze eiwitten, zoals **receptoren**, hebben verschillende delen die zich binnen en buiten de cel bevinden, wat essentieel is voor hun functie in celcommunicatie en signaaltransductie.",
             "image": "multi_transfer_eiwit.png"
@@ -110,7 +110,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "GPI-geankerde eiwitten",
             "text": "GPI-geankerde eiwitten zijn eiwitten die in het **endoplasmatisch reticulum (ER)** worden gesynthetiseerd en aangepast met een **glycosylfosfatidylinositol (GPI)**-anker. Dit anker is verantwoordelijk voor de verankering van het eiwit aan de **buitenkant van de celmembraan** door middel van een **lipideverbinding** die zich in het membraan bevindt.",
             "image": "gpi_anker.png"
@@ -122,7 +122,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Lipide-ankers: prenylering en myristoylering",
             "text": "Lipide-ankers, zoals prenylering en myristoylering, zijn chemische modificaties die eiwitten aan celmembranen verankeren. **Prenylering** houdt in dat een lipide in de vorm van een prenylgroep wordt toegevoegd aan een eiwit. **Myristoylering** betreft de toevoeging van een myristoylgroep aan het N-terminus van een eiwit. Deze ankers zorgen ervoor dat de eiwitten hun functies binnen de membraan kunnen vervullen, zoals signaaltransductie of interactie met andere celcomponenten.",
             "image": "prenylering.png"
@@ -134,7 +134,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Unfolded Protein Response (UPR)",
             "text": "De Unfolded Protein Response is een **cellulair stressresponsmechanisme** dat geactiveerd wordt in het **endoplasmatisch reticulum (ER)**. Het is gericht op het herstellen van normale functies door het stopzetten van eiwitsynthese, het verhogen van de productie van moleculen die helpen bij **eiwitvouwing**, en het afbreken van **verkeerd gevouwen eiwitten**.",
             "image": "unfolded_protein_response.png"
@@ -146,7 +146,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Synthese van Lipiden in het ER",
             "text": "De **synthese van lipiden** vindt plaats aan de **cytoplasmatische kant** van het **endoplasmatisch reticulum**. Deze lipiden zijn essentieel voor het vormen van celmembranen en andere cellulaire structuren. Ze omvatten verschillende soorten moleculen, zoals fosfolipiden, cholesterol en glycolipiden.",
             "image": "synthese_lipiden.png"
@@ -177,7 +177,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Vetzuuropname",
             "text": "Vetzuuropname verwijst naar het proces waarbij vetzuren uit de voeding worden opgenomen door het lichaam. Dit omvat **omega-3 vetzuren**, die bekend staan om hun gezondheidsvoordelen. Vetzuuropname is essentieel voor verschillende lichaamsfuncties, zoals energieproductie en celmembraneigenschappen.",
             "image": "omega3_opname.png"
@@ -202,7 +202,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Structuur van fosfolipiden",
             "text": "Vetzuren bestaan uit lange koolwaterstofketens met een carboxylgroep aan het ene uiteinde. In fosfolipiden zijn twee vetzuurstaarten gebonden aan een glycerolmolecuul, samen met een fosfaatgroep en meestal een bijkomende polaire groep. Fosfolipiden zijn essentieel voor celmembranen en vormen een bilayer met de hydrofobe vetzuurstaarten naar binnen gekeerd en de hydrofiele kop bestaande uit de fosfaat- en polaire groepen naar buiten, bijdragend aan de membraanstructuur en -functie.",
             "image": "vetzuur.png"
@@ -232,7 +232,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Membraanfunctie en vetzuurkopgroepen",
             "text": "De **functie van celmembranen** wordt be\u00EFnvloed door de **vari\u00EBrende kopgroepen van vetzuren**. Deze groepen bepalen de interacties met andere moleculen en de flexibiliteit en permeabiliteit van het membraan.",
             "image": null
@@ -244,7 +244,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fosfatidylcholine en Structurele Lipiden in Membraanstructuur",
             "text": "**Fosfatidylcholine** is een voorbeeld van een structureel lipide dat veel voorkomt in de **celmembranen**. Het draagt bij aan de vorming van de lipide bilaag en bepaalt mede de fysieke eigenschappen van de membraan. Structurele lipiden zoals fosfatidylcholine vormen de ruggengraat van celmembranen en zijn essentieel voor het behoud van hun integriteit en flexibiliteit. Deze lipiden zorgen ervoor dat celmembranen hun cruciale rollen in celbescherming, -transport en -communicatie kunnen vervullen.",
             "image": "synthese_fosfatyl.png"
@@ -269,7 +269,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Asymmetrische membraan",
             "text": "Een asymmetrische membraan heeft een ongelijke verdeling van componenten, waarbij er bijvoorbeeld meer **nieuwe vetzuren aan de buitenkant** van het endoplasmatisch reticulum (ER) zijn dan aan de binnenkant. Dit draagt bij aan de unieke functies van de membraan aan elke zijde.",
             "image": null
@@ -281,7 +281,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Scramblase en flippase",
             "text": "Scramblase en flippase zijn **enzymen** die actief de verdeling van vetzuren in een celmembraan reguleren door ze van de ene kant van het membraan naar de andere te verplaatsen. Scramblase zorgt voor een **willekeurige verdeling** van vetzuren over beide lagen, terwijl flippase **selectief vetzuren** verplaatst om de asymmetrie van de membraan te behouden.",
             "image": "scramblase_flippase.png"
@@ -306,7 +306,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Lipide rafts",
             "text": "Lipide rafts zijn speciale **structuren in het plasmamembraan** die helpen bij de organisatie van **eiwitten**. Ze zijn rijk aan cholesterol en sphingolipiden, en functioneren als **platforms voor cel signalering** en andere membraan gerelateerde processen. Cel signalering houdt in dat cellen met elkaar communiceren door middel van chemische signalen.",
             "image": "lipide_raft1.png"
@@ -318,7 +318,7 @@
             "image": "lipide_raft2.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Vesicle organisatie",
             "text": "Vesicle organisatie behelst het gebruik van **labels** zoals eiwit- en lipidenmarkeringen die vesicles helpen bij hun transport naar de juiste **celorganellen**. Dit proces zorgt ervoor dat stoffen effici\u00EBnt en correct binnen de cel worden verdeeld.",
             "image": "vesicle_transport.png"
@@ -330,7 +330,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Retrograde transport",
             "text": "Retrograde transport is een proces in cellen waarbij materialen van de plasmamembraan of van buiten de cel worden teruggestuurd naar het **endoplasmatisch reticulum (ER)** via het **Golgi-apparaat**. Dit mechanisme wordt gebruikt voor recycling van componenten en bespaart energie door het verminderen van de noodzaak voor nieuwe synthese.",
             "image": "retrograde_transport.png"
@@ -349,7 +349,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Endocytose en exocytose",
             "text": "Endocytose en exocytose zijn **cellulaire processen** die respectievelijk het **opnemen** en **uitscheiden** van materialen door de cel mogelijk maken. Endocytose omvat het invouwen van de plasmamembraan om een deeltje of vloeistof te omsluiten en een vesikel te vormen dat in de cel wordt gebracht. Exocytose is het proces waarbij een vesikel fuseert met de plasmamembraan om zijn inhoud naar buiten de cel te transporteren.",
             "image": "endocytose_exocytose.png"
@@ -361,13 +361,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Secretieroute van vesicles",
             "text": "Vesicles worden gebruikt in de **consecutieve secretieroute** van het **endoplasmatisch reticulum** naar het **Golgi-apparaat** en vervolgens naar het **celmembraan**. Vesicles zijn essentieel voor het transport van eiwitten en lipiden tussen organellen en voor de secretie van stoffen uit de cel. Vesicles worden gevormd door het endoplasmatisch reticulum en het Golgi-apparaat en worden getransporteerd door het **cytoskelet**.",
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Lysosomen",
             "text": "Lysosomen zijn **organellen** in cellen die verantwoordelijk zijn voor de **afbraak** van verschillende moleculen, zoals eiwitten, lipiden en koolhydraten. Ze bevatten **enzymen** die helpen bij de **vertering** van deze moleculen en spelen een cruciale rol bij de **recycling** van celcomponenten.",
             "image": null
@@ -391,7 +391,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Cytoskelet",
             "text": "Het cytoskelet is een netwerk van **eiwitvezels** binnen de cel dat verschillende functies vervult, waaronder het geven van **vorm en stevigheid** aan de cel en het **faciliteren van transport**. Voor het vesicle transport zijn de motorprote\u00EFnen **kinesine en dyne\u00EFne** essentieel, die vesicles langs de microtubuli van het cytoskelet verplaatsen. Kinesine transporteert naar de plus kan van de microtubuli en dyne\u00EFne transporteert vesicles naar de min kant van de microtubuli van het cytoskelet. ",
             "image": "dyneine_kinesine.png"
@@ -409,7 +409,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Het Golgi-apparaat",
             "text": "Het **Golgi-apparaat** fungeert als een **sorteer- en distributiecentrum** voor **vesicles** binnen de cel. Het bestaat uit gestapelde membranen met verschillende secties, bekend als het **cis-** en **trans-gedeelte**. Het cis-gedeelte is de ontvangende zijde van het Golgi-apparaat, terwijl het trans-gedeelte de verzendende zijde is die vesicles doorstuurt naar hun volgende bestemming.",
             "image": "golgi_cis_trans.png"
@@ -434,7 +434,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Eiwitcoating van vesikels",
             "text": "Vesicles worden omhuld door **eiwitcoatings** die helpen bij hun vorming en transport binnen de cel. Deze eiwitcoatings, zoals **clathrine** en **COPII**, spelen een cruciale rol bij het herkennen van de inhoud van de vesicles en het richten ervan naar de juiste locatie.",
             "image": "eiwit-coating_overview.png"
@@ -446,19 +446,19 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
 
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
 
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over celorganellen en membraantransport voltooid."
 

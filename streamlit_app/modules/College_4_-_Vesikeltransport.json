@@ -2,7 +2,7 @@
     "module_name": "celbio_4",
     "segments": [
         {
-            "type": "info",
+            "type": "theory",
             "title": "Soorten eiwit-coatings",
             "text": "Eiwit-coatings zijn betrokken bij de vorming en transport van vesikels. Er zijn verschillende soorten eiwit-coatings, zoals COPI, COPII en Clathrin die elk specifieke functies hebben in het transportproces binnen de cel.",
             "image": "eiwit-coating_overview.png"
@@ -21,7 +21,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Endocytose",
             "text": "Endocytose is een proces waarbij cellen materialen van buiten de cel opnemen door kleine delen van hun celmembraan naar binnen te vouwen en af te snoeren, wat resulteert in de vorming van een vesikel die in deze fase een endosoom heet. Vervolgens kunnen deze endosomen ofwel naar andere delen van de cel worden getransporteerd, zoals het Golgi-apparaat, of ze kunnen worden gerecycled en terug naar het celmembraan worden gestuurd.",
             "image": "endocytose.png"
@@ -40,7 +40,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Cytoskelet en vesicle transport",
             "text": "Het cytoskelet is een netwerk van eiwitvezels in de cel dat structurele ondersteuning biedt en betrokken is bij het transport van vesikels binnen de cel. Door interactie met motorprote\u00EFnen kunnen vesikels langs de vezels van het cytoskelet naar hun bestemming worden verplaatst.",
             "image": "cytoskelet_vesikeltransport.png"
@@ -59,7 +59,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Membraanafsnoering",
             "text": "Het vesikel transportproces begint bij membraanafsnoering, waarbij een deel van het celmembraan zich afsnoert om een vesikel te vormen. Dit vereist de betrokkenheid van specifieke eiwitten die de kromming van het membraan induceren en helpen bij de uiteindelijke afsnoering.",
             "image": "membraanafsnoering.png"
@@ -78,7 +78,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "SAR-1 en vesikelvorming",
             "text": "Het SAR-1-eiwit is betrokken bij het initi\u00EBren van de vorming van COPII vesikels aan het endoplasmatisch reticulum (ER). SAR-1 zorgt voor de rekrutering van andere eiwitten die nodig zijn om een vesikel af te snoeren van het ER-membraan.",
             "image": "sar-1.png"
@@ -97,7 +97,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "COPII-vesikels en hun transportroute",
             "text": "De COPII-vesikels zijn betrokken bij het transporteren van materialen van het ER naar het Golgi-apparaat. Ze zijn een sleutelcomponent in de secretieroute van eiwitten en lipiden.",
             "image": "cop2.png"
@@ -116,7 +116,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "COPI-vesikels en hun functies",
             "text": "De COPI-vesikels fungeren in het transport tussen het Golgi-apparaat en het ER, in het Golgi en worden ook gebruikt in de standaard secretieroute, die betrokken is bij het continu transporteren van stoffen van het Golgi naar de celmembraan.",
             "image": "cop1_afsnoering.png"
@@ -128,7 +128,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "GTP-bindend eiwit en vesikelvorming",
             "text": "Een GTP-bindend eiwit, zoals SAR-1, wordt bij het binden van GTP geactiveerd waardoor deze de assemblage van coateiwitten initieert die nodig is voor de vorming en selectie van vesikels.",
             "image": "sar-1-initiatie.png"
@@ -140,7 +140,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Eigenschappen van COPII-vesikels",
             "text": "COPII-vesikels zijn verantwoordelijk voor het transport van eiwitten van het endoplasmatisch reticulum (ER) naar het Golgi-apparaat. Deze vesikels zijn dichter en groter dan sommige andere typen vesikels, wat bijdraagt aan hun functionaliteit in het transportproces doordat ze een grote lading kunnen dragen.",
             "image": null
@@ -159,7 +159,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Clathrin-coated vesikels en endocytose",
             "text": "Clathrin-coated vesikels zijn betrokken bij het transport van materialen via endocytose en het selecteren van eiwitten voor transport in de cel. De clathrin-coating helpt bij het herkennen en selecteren van specifieke moleculen voor endocytose.",
             "image": "clathrin_coating_proces.png"
@@ -171,7 +171,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Clathrin-coated vesikels structuur",
             "text": "Het kenmerkende 'golfbal' uiterlijk van clathrin-coated vesikels kom door de kooiachtige structuur van het clathrineiwit.",
             "image": "clathrin_kooi_structuur.png"
@@ -183,7 +183,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Constitutieve vesikel secretie",
             "text": "Constitutieve Vesikel secretie is het proces waarbij COPI-vesikels inhoud transporteren van de Golgi naar het plasmamembraan.",
             "image": "vesikeltransport_coatings.png"
@@ -202,7 +202,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fosfolipiden en vesikeladressering",
             "text": "Fosfolipiden zitten in celmembranen en vormen specifieke domeinen die helpen bij de landing van vesikels. Deze domeinen zorgen ervoor dat vesikels op de juiste locatie binnen de cel fuseren.",
             "image": "fosfolipiden_adreslabels.png"
@@ -221,7 +221,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "RAB GTPases in vesikeltransport",
             "text": "RAB GTPases zijn betrokken bij het initi\u00EBren van vesikelvorming, het adresseren van vesikels naar hun juiste locatie en het fuseren van vesikels met hun doelmembranen. Ze fungeren als moleculaire schakelaars die aan- en uitgezet kunnen worden door GTP te binden en te hydrolyseren.",
             "image": "rab-gtp_vesikels.png"
@@ -233,7 +233,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Vesikelfusie en snare-complex",
             "text": "Vesikelfusie is het proces waarbij vesikels samensmelten met membranen en hun inhoud vrijgeven. Dit proces is afhankelijk van het snare-complex, een groep eiwitten die betrokken zijn bij het nauwkeurig en effici\u00EBnt samensmelten van vesikels met hun doelmembranen.",
             "image": "fusie_membraan_snare.png"
@@ -252,7 +252,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "V-snares en T-snares",
             "text": "V-snares en T-snares zijn twee soorten snare-eiwitten die belangrijk zijn bij het fusieproces. V-snares bevinden zich op de vesikels en T-snares op de doelmembranen. Om samen te smelten met het doelmembraan, moeten de V-snares en T-snares met elkaar interageren.",
             "image": "v-snare_t-snare.png"
@@ -264,13 +264,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Vesikelafsnoering en dynamin",
             "text": "Vesikles ontstaan uit een membraan en tijdens het vormen vindt afsnoering plaats met eiwitten zoals Dynamin. Bij afsnoering worden vesikels losgemaakt van het membraan waaraan ze gevormd zijn.",
             "image": "dynamin.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Exit- en retentiesignalen",
             "text": "Exit- en retentiesignalen zijn moleculaire codes die bepalen of eiwitten getransporteerd moeten worden naar de Golgi-apparaten (exit) of dat ze behouden moeten blijven in het endoplasmatisch reticulum (ER) (retentie). Zonder deze signalen zou het niet mogelijk zijn om eiwitten naar de juiste locatie in de cel te sturen.",
             "image": "exit-signaal.png"
@@ -282,7 +282,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "KDEL-sequentie",
             "text": "Een KDEL-sequentie is een specifieke aminozuurvolgorde in een eiwit die fungeert als een adreslabel. Het geeft aan dat het eiwit moet worden teruggestuurd naar het ER vanuit het Golgi-apparaat.",
             "image": "kdel_terug_naar_er.png"
@@ -301,7 +301,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Transcytose",
             "text": "Transcytose is een proces waarbij materialen eerst door endocytose opgenomen worden aan de ene zijde van de cel om vervolgens getransporteerd door de cel in vesikels, en ten slotte afgegeven aan de andere zijde door middel van exocytose.",
             "image": null
@@ -320,7 +320,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Glycosylering van eiwitten",
             "text": "Glycosylering is een biologisch proces waarbij suikermoleculen, zoals N-glucosamine, worden gekoppeld aan eiwitten. Dit vindt plaats in het ER en het Golgi-apparaat. Glycosylering zorgt voor de vouwing, stabiliteit en functionaliteit van eiwitten.",
             "image": "glycosylering.png"
@@ -345,7 +345,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Mannose-6-fosfaat en lysosomale targeting",
             "text": "Mannose-6-fosfaat is een specifiek suikermolecuul dat als een markeringslabel op eiwitten wordt aangebracht tijdens glycosylering. Dit label dient om enzymen te herkennen en ze te transporteren naar de lysosomen, de recyclingcentra van cellen.",
             "image": "mannose.png"
@@ -357,7 +357,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "ER en Golgi: centra voor glycosylering",
             "text": "Het endoplasmatisch reticulum (ER) en het Golgi-apparaat zijn twee belangrijke organellen in een cel waar de glycosylering van eiwitten plaatsvindt. In deze organellen worden suikermoleculen zoals N-glucosamine aan eiwitten toegevoegd om hun correcte vorming te ondersteunen.",
             "image": "glycosylering_er_golgi.png"
@@ -376,7 +376,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "N- en O-glycosylering",
             "text": "N-glycosylering en O-glycosylering zijn twee vormen van glycosylering. Bij N-glycosylering wordt een suikermolecuul toegevoegd aan een stikstofatoom in de zijketen van het aminozuur Asparagine, terwijl bij O-glycosylering de toevoeging aan een zuurstofatoom van Serine, Proline of Threonine plaatsvindt.",
             "image": "n_en_o_glycosylering.png"
@@ -408,7 +408,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Lysosomen als recyclingapparaat",
             "text": "Lysosomen zijn organellen in cellen die functioneren als het recyclingapparaat. Ze bevatten enzymen die in staat zijn om biomoleculen af te breken, waardoor onderdelen van de cel kunnen worden hergebruikt.",
             "image": "lysosomen_werking.png"
@@ -427,7 +427,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Autofagie: opruimen van beschadigde organellen",
             "text": "Autofagie is een proces waarbij cellen beschadigde organellen opruimen. Dit is een vorm van kwaliteitscontrole die ervoor zorgt dat de cellulaire componenten goed functioneren en dat schadelijke of niet-functionele onderdelen worden verwijderd.",
             "image": "autofagie.png"
@@ -439,7 +439,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Neurotransmitter secretie en neuropeptiden",
             "text": "Neuropeptiden zijn kleine eiwitten die tijdens het transport naar de synaps vanuit een groter precursor-eiwit worden omgezet in hun actieve vorm. Hierdoor zijn ze klaar voor hun functie als neurotransmitters wanneer ze vrijkomen in de synaptische spleet.",
             "image": "peptide_neurotransmitters.png"

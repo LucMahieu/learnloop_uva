@@ -3,7 +3,7 @@ import json
 class JsonDataAccess:
     def __init__(self, file_path):
         self.file_path = file_path
-        self.data = self.load_data()
+        self.response = self.load_response()
 
 
     def load_data(self):

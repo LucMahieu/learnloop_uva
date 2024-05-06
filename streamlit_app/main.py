@@ -448,7 +448,7 @@ def render_learning_page():
         render_progress_bar()
 
         # Determine what type of segment to display and render interface accordingly
-        if st.session_state.segment_content['type'] == 'info':
+        if st.session_state.segment_content['type'] == 'theory':
             render_info()
             render_navigation_buttons()
 
@@ -602,7 +602,7 @@ def render_practice_page():
 
         # Determine what type of segment to display and render interface accordingly
         # info_question
-        if st.session_state.segment_content['type'] == 'info':
+        if st.session_state.segment_content['type'] == 'theory':
             render_info()
             render_navigation_buttons()
 
@@ -678,7 +678,7 @@ def render_theory_page():
     """
     with mid_col:
         for segment in st.session_state.page_content["segments"]:
-            if segment['type'] == 'info':
+            if segment['type'] == 'theory':
                 st.session_state.segment_content = segment
                 render_info()
 

@@ -2,7 +2,7 @@
     "module_name": "celbio_6",
     "segments": [
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signaaltransductie en celreacties",
             "text": "Signaaltransductie is het proces waarbij cellen signalen van buitenaf ontvangen en deze omzetten in een functionele respons. Dit proces is essentieel voor cellen om te reageren op hun omgeving. Een belangrijk aspect van signaaltransductie is dat **verschillende cellen**, **verschillende reacties** kunnen hebben op **hetzelfde signaal**. Dit betekent dat het signaal zelf niet de reactie dicteert, maar dat de celtype-specifieke mechanismen en structuren bepalen wat de uitkomst van het signaal zal zijn.",
             "image": "verschillende_celreacties_zelfde_signaal.png"
@@ -14,7 +14,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Acetylcholine activeert verschillende receptoren in verschillende cellen",
             "text": "Acetylcholine is een signaalmolecuul dat verschillende functies in het lichaam uitoefent afhankelijk van het type receptor waaraan het bindt. Wanneer acetylcholine bindt aan **G-prote\u00efne gekoppelde receptoren** (GPCR) in het hart, leidt dit tot een verlaging van de hartslag. In speekselklieren stimuleert het via een GPCR de secretie en in skeletspieren veroorzaakt het contractie via een acetylcholine geactiveerd ionenkanaal.",
             "image": "g_gekoppelde_proteinen_verschillende_reacties.png"
@@ -26,7 +26,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Concentratieafhankelijke signalen en morfogenen",
             "text": "Concentratieafhankelijke signalen spelen een cruciale rol in de ontwikkelingsbiologie. **Morfogenen** zoals Sonic Hedgehog (SHH) be\u00efnvloeden de celontwikkeling en het lot van cellen in een embryo, door verschillende reacties uit te lokken, afhankelijk van de concentratiegradi\u00ebnt van SHH.",
             "image": "morfogen_gradient.png"
@@ -38,7 +38,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signaalduur en Effecten",
             "text": "De **halfwaardetijd** van signalen is een belangrijke factor in signaaltransductie die bepaalt of een signaal langdurige of kortstondige effecten heeft op cellulaire processen. Langdurige signalen kunnen leiden tot meer permanente veranderingen in celgedrag, terwijl kortstondige signalen tijdelijke responsen veroorzaken.",
             "image": "halfwaardetijd_synthese.png"
@@ -50,13 +50,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signaaltransductieroutes",
             "text": "Signaaltransductieroutes zijn processen waarbij een biologisch signaal wordt omgezet in een functionele respons in een cel. Deze routes zijn essentieel voor cellen om externe signalen te interpreteren en erop te reageren. Verschillende signalen kunnen snelle, kortdurende effecten of langdurige effecten hebben, afhankelijk van hun chemische aard en de de signaaltransductieketen.",
             "image": "signaaltransductie_cAMP.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Doelwitten van Signaaltransductieroutes",
             "text": "De doelwitten van signaaltransductieroutes zijn de **uiteindelijke effectoren** in de cel die veranderingen veroorzaken als gevolg van het signaal. Dit kunnen enzymen zijn, genregulatoire eiwitten, of structurele eiwitten die bijvoorbeeld de celvorm of -beweging be\u00efnvloeden.",
             "image": null
@@ -81,13 +81,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Receptoren en G-prote\u00EFnen",
             "text": "Receptoren zijn gespecialiseerde eiwitten op het celoppervlak of in de cel, die externe signalen herkennen en binden. G-prote\u00EFnen zijn moleculaire schakelaars die betrokken zijn bij het overbrengen van signalen van deze receptoren naar andere delen van de cel.",
             "image": "ion_kanaal_gekoppelde_receptoren.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Receptortypen",
             "text": "In de celmembraan zitten oppervlaktereceptoren die signalen van buiten de cel kunnen ontvangen en doorgeven. Er zijn drie klassen: **ionkanalen**, **enzymgekoppelde receptoren** en **G-prote\u00efne gekoppelde receptoren**. Ionkanalen laten specifieke ionen door de celmembraan passeren, terwijl G-prote\u00efne gekoppelde receptoren signalen overdragen via een proces dat G-prote\u00efne signalering wordt genoemd. Enzym gekoppelde receptoren zijn transmembraaneiwitten die na dimerisatie enzymactiviteit stimuleren. Dit gebeurt via fosforylering van andere eiwitten of via activatie van Fosfolipase C of PI-3-kinase.",
             "image": null
@@ -106,7 +106,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Heterotrimeer G-prote\u00EFne subunits",
             "text": "Heterotrimeer G-prote\u00EFnen bestaan uit drie subunits: **G-alpha**, **G-beta**, en **G-gamma**. Elke subunit heeft een specifieke rol in de signaaltransductie. G-alpha kan GTP binden en hydrolyseren, terwijl G-beta en G-gamma een complex vormen dat kan interacteren met andere eiwitten in de cel.",
             "image": "g-proteine_gekoppelde_receptoren.png"
@@ -124,13 +124,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Activering van G-prote\u00EFne gekoppelde receptoren",
             "text": "De activering van G-prote\u00EFne gekoppelde receptoren gebeurt wanneer een ligand bindt aan de transmembraan receptor, hetgeen leidt tot de **uitwisseling van GDP voor GTP** op de G-alpha subunit. Dit leidt tot een conformationele verandering in het G-prote\u00EFne, waardoor het kan interacteren met **downstream effectoren** zoals enzymen en ionkanalen die cellulaire reacties veroorzaken.",
             "image": "activatie_g_proteine_gekoppelde_receptoren.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "GTP-bindende eiwitten",
             "text": "GTP-bindende eiwitten zijn belangrijk in het proces van signaaltransductie binnen cellen. Deze eiwitten worden geactiveerd door **guanine nucleotide exchange factors (GEFs)**, die de binding uitwisseling van GDP voor van GTP aan het G-eiwit bevorderen. Eenmaal geactiveerd kunnen ze verschillende cellulaire reacties teweegbrengen. Wanneer **GTPase-activating proteins (GAPs)** de intrisieke GTPase activiteit van het G-prote\u00EFne activeren, wordt het GTP vervolgens gehydrolyseerd wordt tot GDP, worden deze eiwitten gedeactiveerd door **GTPase-activating prote\u00EFns (GAPs)**, waardoor hun activiteit wordt be\u00ebindigd.",
             "image": "GEF_GAP_G-proteine.png"
@@ -142,7 +142,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signaalversterking",
             "text": "Signaalversterking is een proces waarbij een enkel signaalmolecuul een cascade van gebeurtenissen kan initi\u00EBren, resulterend in een groot effect. Dit wordt mogelijk gemaakt door **second messengers**, zoals **cyclisch AMP** (cAMP), **cyclisch GMP** (cGMP), IP3 en Calcium-ionen, die de boodschap van het oorspronkelijke signaalmolecuul versterken en verspreiden.",
             "image": null
@@ -154,7 +154,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Cyclisch AMP als tweede boodschapper",
             "text": "Cyclisch AMP (cAMP) is een **tweede boodschapper** die betrokken is bij veel signaaltransductieprocessen. Het wordt geproduceerd door het enzym **adenylcyclase** en speelt een rol in de activering van **prote\u00efnekinase A (PKA)**. Eenmaal geactiveerd, kan PKA onder andere de **genexpressie** moduleren. cAMP wordt afgebroken door het enzym **cAMP-fosfodi\u00EBsterase**, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle be\u00ebindiging van het cAMP signaal",
             "image": "cAMP_second_messenger.png"
@@ -178,13 +178,13 @@
             "image": "cAMP_molecuul.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signalering door Fosforylering",
             "text": "**Fosforylering** is een proces waarbij een fosfaatgroep aan een eiwit wordt toegevoegd. Eiwitkinasen zijn enzymen die deze fosfaatgroepen toevoegen, waardoor de activiteit, locatie of interactie van het eiwit kan veranderen. Fosfatases zijn enzymen die fosfaatgroepen verwijderen, wat vaak resulteert in de deactivering of functieverandering van het eiwit. Deze balans tussen fosforylering door kinasen en defosforylering door fosfatases is cruciaal voor de regulering van cellulaire processen.",
             "image": "fosforylering.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Signalering door GTP binding",
             "text": "GTP-bindende eiwitten worden geactiveerd wanneer **GEFs** (guanine nucleotide exchange factors) de vervanging van GDP door GTP bevorderen. Deze activering initieert de signaaloverdracht, waarmee belangrijke cellulaire processen zoals groei en reacties op externe prikkels worden gereguleerd. Het G-prote\u00EFne blijft actief en zendt signalen uit zolang het GTP gebonden heeft. Uiteindelijk wordt het GTP door de intrinsieke GTPase-activiteit van het eiwit gehydrolyseerd tot GDP. **GAPs** (GTPase-activating proteins) versnellen deze hydrolyse, wat resulteert in de inactivering van het G-prote\u00EFne en het be\u00ebindigen van de signaaloverdracht.",
             "image": "GPT_binding_signalering.png"
@@ -208,7 +208,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Geurwaarneming via G-prote\u00efne gekoppelde receptoren",
             "text": "Geurwaarneming wordt gemedieerd door **G-prote\u00efne gekoppelde receptoren** die zich bevinden in geurreceptorcellen. Deze receptoren detecteren geurmoleculen en starten een signaaltransductieproces dat uiteindelijk leidt tot de **waarneming van geuren**.",
             "image": "odor_receptor.png"
@@ -220,7 +220,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Geur en Smaak",
             "text": "De waarneming van geur en smaak is een complex proces waarbij **cyclisch AMP (cAMP)** een centrale rol speelt. cAMP is betrokken bij activatie van cAMP-gated ionenkanalen die de **depolarisatie van sensorische cellen** verzorgen, wat leidt tot de overdracht van signalen naar de hersenen.",
             "image": "geurwaarneming_receptoren.png"
@@ -232,7 +232,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Cyclisch GMP",
             "text": "Cyclisch GMP (cGMP) is een ander type **second messenger** dat een rol speelt in diverse **signaalpaden**. Het wordt geproduceerd door het enzym **guanylaatcyclase** en be\u00efnvloedt verschillende **cellulaire processen** en **fysiologische reacties**, zoals spiercelontspanning en fototransductie in visuele cellen. cGMP wordt afgebroken door het enzym cGMP-fosfodi\u00EBsterase, dat in de meeste cellen altijd actief is. Dit zorgt voor een snelle beeindiging van het cGMP signaal ",
             "image": null
@@ -251,7 +251,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fototransductie",
             "text": "Fototransductie is het proces waarbij lichtsignalen omgezet worden in elektrische signalen in de fotoreceptoren van het oog. Dit proces begint met de **activatie van G-prote\u00EFne gekoppelde receptoren**, die een cascade van biochemische reacties in gang zetten. Een belangrijk enzym in dit proces is **fosfodi\u00EBsterase**, dat de concentratie van **cyclisch GMP** (cGMP) verlaagt. De verlaging van cGMP is cruciaal voor het sluiten van ionenkanalen en het verminderen van het elektrisch signaal dat naar de hersenen wordt gestuurd. ",
             "image": "fototransductie.png"
@@ -280,7 +280,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Erectie en de rol van stikstofoxide (NO)",
             "text": "Een erectie is een fysiologisch proces waarbij stikstofoxide (NO) een cruciale rol speelt. NO activeert een enzym genaamd **guanylaatcyclase**, wat leidt tot de productie van **cyclisch GMP (cGMP)**. cGMP zorgt ervoor dat spiercellen in de bloedvatwanden zich ontspannen, wat resulteert in een toename van de bloedstroom en dus een erectie.",
             "image": "erectie.png"
@@ -292,7 +292,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Desensitisering van receptoren",
             "text": "Desensitisering is het proces waarbij celreceptoren worden ingesloten en in de cel worden opgenomen, waardoor ze tijdelijk niet beschikbaar zijn voor signalen. Dit proces kan worden gestart door **fosforylering** van het intracellulaire domein, een chemische modificatie waarbij een fosfaatgroep wordt toegevoegd aan een eiwit. In dit geval zorgt binding van **arrestine** aan receptoren voor het initi\u00EBren van endocytose vesicles, die de receptor internaliseren.",
             "image": "desensitisering.png"
@@ -316,7 +316,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Negatieve Feedback",
             "text": "Negatieve feedback is een regulerend mechanisme waarbij de **activatie van een systeem leidt tot de productie van een uitkomst die het systeem weer uitschakelt**. Dit proces helpt bij het handhaven van de stabiliteit binnen biologische systemen om te zorgen dat reacties snel be\u00EBindigd worden of te voorkomen dat reacties overactief worden.",
             "image": "negatieve_feedback.png"
@@ -328,7 +328,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Monomere G-prote\u00EFnen",
             "text": "Monomere G-prote\u00EFnen, ook bekend als kleine GTPases, zijn belangrijk voor verschillende cellulaire processen, waaronder nucleair transport, vesikeltransport en de reorganisatie van het cytoskelet. Ze spelen ook een belangrijke rol in celbeweging en structuurvorming.",
             "image": null

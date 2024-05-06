@@ -125,7 +125,7 @@ class OverviewPage:
                 for self.segment_index in topic['segment_indexes']:
                     print(self.segment_index)
 
-                    if self.get_segment_type() == "info":
+                    if self.get_segment_type() == "theory":
 
                         # Create invisible container to cluster each infosegment with the corresponding question segment(s) and image
                         content_container = st.container()

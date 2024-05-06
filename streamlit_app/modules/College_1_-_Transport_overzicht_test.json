@@ -5,7 +5,7 @@
             "topic_title": "Celmembranen en transportmechanismen",
             "segments": [
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Membraanstructuur en permeabiliteit",
                     "text": "Biologische celmembranen zijn selectief permeabel...",
                     "image": "permeabiliteit_lipide_bilaag.png"
@@ -19,7 +19,7 @@
                     }
                 },
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Passief transport",
                     "text": "Passief transport is een manier waarop stoffen de celmembraan kunnen passeren...",
                     "images": "actief_en_passief_transport.png"
@@ -30,7 +30,7 @@
                     "answer": "Passief transport is het verplaatsen van moleculen over een celmembraan met de concentratiegradiënt mee (1 punt) zonder direct energieverbruik (1 punt)."
                 },
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Actief transport",
                     "text": "Actief transport is een proces waarbij cellen stoffen tegen hun concentratiegradiënt in transporteren...",
                     "images": "actief_en_passief_transport.png"
@@ -46,13 +46,13 @@
             "topic_title": "Specifieke transportmechanismen",
             "segments": [
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Kanalen en transporteiwitten",
                     "text": "Kanalen en transporteiwitten zijn twee belangrijke mechanismen...",
                     "image": "transporters_en_kanalen.png"
                 },
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Ionenkanalen",
                     "text": "Ionenkanalen zijn gespecialiseerde eiwitstructuren...",
                     "image": "ion_channel.png"
@@ -63,7 +63,7 @@
                     "answer": "Ionenkanalen maken transport van specifieke ionen over het celmembraan mogelijk (1 punt) die anders niet door de lipide dubbellaag zouden kunnen passeren (1 punt)."
                 },
                 {
-                    "type": "info",
+                    "type": "theory",
                     "title": "Selectiviteitsfilter van ionkanalen",
                     "text": "Het selectiviteitsfilter is een onderdeel van ionkanalen dat bepaalt welke ionen erdoorheen kunnen passeren.",
                     "image": "selectiviteitsfilter.png"
