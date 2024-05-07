@@ -3,7 +3,7 @@
     "segments": [
         
         {
-            "type": "info",
+            "type": "theory",
             "title": "GTP-eiwitten en het actine-cytoskelet",
             "text": "Kleine monomere GTP-eiwitten zoals **Rho, Rac, en Cdc42** zijn belangrijk voor het reguleren van veranderingen in het **actine-cytoskelet** van de cel. Het cytoskelet is sterk betrokken bij **celbeweging, -deling en -vorm**, wat celmigratie, en het faciliteren van **cel-cel communicatie** mogelijk maakt. Deze kleine monomere eiwitten functioneren als **moleculaire schakelaars** voor deze processen.",
             "image": "rho-rac-cdc42.png"
@@ -22,13 +22,13 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fosfolipase C signaaltransductieroute",
             "text": "De **fosfolipase C signaaltransductieroute** is \u00e9\u00e9n van de drie belangrijkste routes voor de overdracht van signalen binnen cellen. Deze route wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, welke via de **heterotrimere G-prote\u00EFnen** het **fosfolipase C** enzym activeren. Vervolgens zet fosfolipase C de fosfolipide **PIP2** om in twee second messengers, **IP3** en **diacylglycerol (DAG)**. IP3 stimuleert de calciumvrijgave uit het endoplasmatisch reticulum door zich te binden aan IP3 receptor afhankelijke calciumkanalen, terwijl DAG in het membraan blijft en **prote\u00c3\u00afnekinase C (PKC)** activeert.",
             "image": "fosfolipase_c_signaaltransductieroute.png"
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fosfolipase C en plasmamembraan",
             "text": "Fosfolipase C is een **enzym** dat belangrijke veranderingen in het plasmamembraan aanbrengt en **twee second messengers cre\u00EBert**, namelijk **inositoltrifosfaat (IP3)** en **diacylglycerol (DAG)**.",
             "image": "fosfolipase_c_red_box.png"
@@ -47,7 +47,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "G-prote\u00EFnegekoppelde receptoren",
             "text": "**G-prote\u00EFnegekoppelde receptoren** zijn celoppervlakte moleculen die signalen van buiten de cel doorgeven naar binnen door het activeren van **enzymen** zoals fosfolipase C. Wanneer deze receptoren een signaal ontvangen, kunnen ze **fosfolipase C** activeren, wat leidt tot een kettingreactie van signaaltransductie binnen de cel.",
             "image": "gpcr_fosfolipase_c_red_box.png"
@@ -66,7 +66,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "PIP2 Omzetting door Fosfolipase C",
             "text": "Fosfolipase C is verantwoordelijk is voor de omzetting van **PIP2** (fosfatidylinositol 4,5-bisfosfaat), een fosfolipide gelegen in het plasmamembraan, in twee belangrijke secondaire boodschappers: **IP3** (inositol 1,4,5-trifosfaat) en **diacylglycerol (DAG)**.",
             "image": "hydrolyse_fosfolipase_c.png"
@@ -85,7 +85,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Inositoltrifosfaat (IP3)",
             "text": "Inositoltrifosfaat, of IP3, is een **signaalmolecuul** en **geen eiwit** dat ontstaat door de activiteit van het enzym fosfolipase C. IP3 speelt een belangrijke rol in de calciumsignaaltransductie door te diffunderen door het cytoplasma en te binden aan **IP3 receptoren** in het **endoplasmatisch reticulum (ER)**, wat leidt tot de **vrijgave van calciumionen** in de cel.",
             "image": "hydrolyse_fosfolipase_c_ip3.png"
@@ -104,7 +104,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Diacylglycerol (DAG)",
             "text": "Diacylglycerol, of DAG, is een ander **signaalmolecuul** geproduceerd door de werking van fosfolipase C. In tegenstelling tot IP3, blijft DAG in het **plasmamembraan** waar het een rol speelt in het activeren van **prote\u00EFnekinase C (PKC)**, een enzym dat betrokken is bij verschillende cellulaire functies.",
             "image": "hydrolyse_fosfolipase_c_dag.png"
@@ -123,7 +123,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Fosfolipase C-route",
             "text": "Samenvattend is de **fosfolipase C-route** \u00e9\u00e9n van de drie belangrijkste signaaltransductieroutes die betrokken zijn bij de overdracht van signalen in cellen. Deze route wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, wat leidt tot de activering van het enzym fosfolipase C. Eenmaal geactiveerd, zorgt fosfolipase C voor de omzetting van het membraanfosfolipide PIP2 in twee secundaire boodschappers: **inositoltrifosfaat (IP3)** en **diacylglycerol (DAG)**. IP3 zorgt voor de vrijgave van calciumionen uit het endoplasmatisch reticulum, terwijl DAG actief blijft in het membraan en **prote\u00EFnekinase C (PKC)** activeert.",
             "image": "fosfolipase_c_signaaltransductieroute.png"
@@ -135,7 +135,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Isoformen van fosfolipase C",
             "text": "Er bestaan verschillende **isoformen van fosfolipase C**, die elk door verschillende soorten receptoren kunnen worden geactiveerd. **PLC-beta 1** wordt bijvoorbeeld geactiveerd door **G-prote\u00EFnegekoppelde receptoren**, terwijl **PLC-gamma 2** geactiveerd wordt door **receptortyrosinekinases**. Deze isoformen stellen cellen in staat om op verschillende signalen te reageren.",
             "image": "dual_signalling_pathway.png"
@@ -154,7 +154,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "PLC-beta 1 en G-prote\u00EFnegekoppelde receptoren",
             "text": "De isoform **PLC-beta 1**, wordt geactiveerd door **G-prote\u00EFnegekoppelde receptoren**. De activatie van deze receptoren door signalen van buiten de cel leidt tot de activering van PLC-beta 1 en de daaropvolgende signaaltransductieprocessen.",
             "image": "dual_signalling_pathway.png"
@@ -173,7 +173,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "PLC-gamma 2 en receptortyrosinekinases",
             "text": "**PLC-gamma 2**, wordt specifiek **geactiveerd door receptortyrosinekinases (RTKs)**. Wanneer een RTK een ligand bindt, ondergaat het een conformatieverandering die de **kinase activiteit** stimuleert, wat uiteindelijk leidt tot de activering van PLC-gamma 2.",
             "image": "dual_signalling_pathway.png"
@@ -197,7 +197,7 @@
             "answer": "De isoformen van fosfolipase C zijn PLC-beta 1 en PLC-gamma 2 (1 punt). PLC-beta 1 wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt), terwijl PLC-gamma 2 geactiveerd wordt door receptortyrosinekinases (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Biosensoren in signaaltransductie",
             "text": "In de studie van signaaltransductie worden **biosensoren** gebruikt om de **activiteit te detecteren** van specifieke enzymen zoals fosfolipase C. Een biosensor bestaat uit een **eiwit domein** dat aan een bepaald **signaalmolecuul** bindt, gekoppled aan een **fluorescent eiwit (GFP)**. Hiermee kun je de plek van het signaalmolecuul onder de microscoop zichtbaar maken. Hiermee kunnen onderzoekers de aanwezigheid en **verdwijning van signaalmoleculen** zoals **PIP2** volgen, wat inzicht geeft in de voortgang van signaaltransductieprocessen binnen de cel.",
             "image": null
@@ -216,7 +216,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Calcium als signaalmolecuul",
             "text": "Calciumionen (**Ca2+**) zijn uiterst belangrijke signaalmoleculen in cellulaire processen. Ze kunnen eiwitten in de cel be\u00efnvloeden door **conformatieveranderingen te veroorzaken** doordat ze de lading van een eiwit kunnen veranderen. Daarom wordt de **calcium concentratie** in de cel **strikt gereguleerd**.",
             "image": "calcium_opslag_release_cytosol.png"
@@ -235,7 +235,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Regulatie van calciumconcentratie",
             "text": "De concentratie calcium buiten de cel is ongeveer 10000 keer hoger dan in het cytoplasma. Dit is belangrijk voor het adequaat functioneren van de enzymen in de cel. De concentratie van calcium in het cytoplasma wordt zo laag mogelijk gehouden door **actief transport** via **calciumkanalen** en **-pompen**. Deze zijn verantwoordelijk voor het transport van calcumionen in en uit de cel en naar het ER of naar de mitochondri\u00ebn.",
             "image": "natrium_kalium_pomp_calcium.png"
@@ -254,7 +254,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Calciumsignalering in spiercellen",
             "text": "In spiercellen wordt de calciumsignalering getriggerd door een **actiepotentiaal** of een specifieke **ligand**, zoals acetylcholine. Dit leidt tot de **vrijgave van calciumionen** in de cel, wat vervolgens voor **contractie** van myosine fibrillen in de spiercel zorgt.",
             "image": "ryanodine_calcium_spiercel_ip3.png"
@@ -273,7 +273,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Ryanodine receptor afwijkingen",
             "text": "De ryanodine receptor is verantwoordelijk voor de vrijgave van calcium in de spiercel. Een leaky ryanodine receptor kan leiden tot **calcium overload** in de cel, wat kan resulteren in **verlamming**. Aan de andere kant kan een te high responsive ryanodine receptor leiden tot **oncontroleerbare calcium release**, wat kan leiden tot **spierkrampen**.",
             "image": "muscle_contraction_leaky_highly-responsive.png"
@@ -285,7 +285,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Calcium golven in de cel",
             "text": "In cellen kunnen **calcium golven** ontstaan door de **vrijgave van calciumionen** uit intracellulaire opslagplaatsen zoals het endoplasmatisch reticulum. Deze golven kunnen zich door de cel verspreiden en een **kettingreactie van calciumsignalen** veroorzaken. Een kleine hoeveelheid calcium zorgt voor een **positieve feedback** cyclus die leidt tot een grotere calciumgolf, terwijl een grote hoeveelheid calcium leidt tot een **negatieve feedback** cyclus waardoor de kanalen sluiten en de golf stopt.",
             "image": "calcium_golven.png"
@@ -302,7 +302,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Vasopressine en calciumsignalering",
             "text": "Vasopressine is een hormoon dat invloed heeft op **calciumsignalering** in cellen. Het reguleert de calciumsignalering door de **frequentie van calciumvrijgave** in de cellen te vari\u00ebren. Stel dat vasopressine de calciumvrijgave verhoogt, dan zullen er **meer calcium spikes** optreden in de cel. Merk op dat de hoogte van de spikes niet verandert, alleen de frequentie.",
             "image": "vasopressine_frequentie_spikes.png"
@@ -321,7 +321,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Calmoduline en calmoduline-afhankelijke prote\u00EFne kinase",
             "text": "**Calmoduline** (CaM) is een calciumbindend eiwit dat, wanneer het calciumionen bindt, in staat is om andere eiwitten zoals **calmoduline-afhankelijke prote\u00EFne kinase** (CaMK) te activeren door deze te vervormen.",
             "image": "cam_camk.png"
@@ -340,7 +340,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "CaMKII activatie", 
             "text": "**Na dissociatie van calciumionen, blijft CaMKII actief** en kan het andere eiwitten fosforyleren. Dit proces is belangrijk voor de regulatie van verschillende celprocessen en cognitieve functies zoals leren en geheugen.",
             "image": "cam_camk_activatie.png"
@@ -358,7 +358,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Calcium en celdood",
             "text": "**Te veel calcium in de cel** kan leiden tot **celdood**, een proces dat ook wel **apoptose** genoemd wordt. Dit gebeurt omdat overmatige calciumconcentraties verschillende cellulaire structuren kunnen beschadigen, waaronder mitochondri\u00ebn en enzymen, wat uiteindelijk leidt tot de dood van de cel.",
             "image": "calcium_overlading_celdood.png"
@@ -377,7 +377,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Convergente signalering",
             "text": "Convergente signalering is een proces waarbij **verschillende signalen** die de cel ontvangt, via verschillende routes, samenkomen in de **celkern**. Dit zorgt ervoor dat de cel een **geco\u00f6rdineerde respons** kan uitvoeren op meerdere signalen tegelijk, wat vaak resulteert in de aanpassing van genexpressie en andere belangrijke celactiviteiten.",
             "image": "convergente_signalering.png"
@@ -396,7 +396,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Enzymgekoppelde receptoren",
             "text": "Enzymgekoppelde receptoren zijn een klasse van eiwitten in de celmembraan waar een **signaalmolecuul**, zoals een hormoon of groeifactor aan kan binden. Dit kan leiden tot **fosforylering** van de receptor waardoor deze actief wordt en een **signaaltransductieroute** in gang zet.",
             "image": "enzym_coupled_receptors_dimeer.png"
@@ -415,7 +415,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Dimerisatie",
             "text": "Dimerisatie is een proces waarbij twee eiwitten aan elkaar binden om een **dimeer** te vormen. Er zijn twee soorten dimeren: **homodimers**, die bestaan uit twee identieke eiwitmonomeren, en **heterodimers**, die bestaan uit twee verschillende eiwitmonomeren. Fosforylering, het toevoegen van een fosfaatgroep, is vaak nodig om deze receptoren te **activeren** waarna dimerisatie plaatsvindt.",
             "image": "enzym_coupled_receptors_dimeer.png"
@@ -427,7 +427,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Protein kinase",
             "text": "Protein kinase activiteit verwijst naar de functie van enzymen die andere eiwitten fosforyleren door een fosfaatgroep toe te voegen. **Tyrosine kinases** zijn een specifieke groep van protein kinases die **tyrosineresiduen** op eiwitten fosforyleren.",
             "image": "RTK_activation.png"
@@ -446,7 +446,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Activering van receptor-tyrosinekinasen (RTK)",
             "text": "Receptor-tyrosinekinasen (RTK's) zijn inactief in hun monomeervorm en worden geactiveerd door binding van een **signaalprote\u00efne**. Deze binding veroorzaakt **dimerisatie** en **trans-autofosforylatie**. Eenmaal geactiveerd, bieden RTK's fosforylatiesites voor verschillende intracellulaire signaaleiwitten, die verder downstream signaalwegen activeren..",
             "image": "RTK_activation.png"
@@ -478,7 +478,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Ras GTPase activering door RTK",
             "text": "De activering van het intracellulaire monomeer Ras GTPase wordt ge\u00efnitieerd door **Receptor Tyrosine Kinase (RTK)** via **adaptor eiwitten** zoals Grb2 en de guanine nucleotide exchange factor (GEF) genaamd Sos. Dit proces zet de transductie van extracellulaire signalen om in intracellulaire acties door **Ras GTPase**, wat de **MAPKinase signaalroute** in gang zet.",
             "image": "RTK_activation_MAPkinase.png"
@@ -489,7 +489,7 @@
             "answer": "De activering van RTK leidt tot de activering van Ras GTPase (1 punt) via adaptor eiwitten (1 punt), wat de MAPKinase signaalroute activeert en signalen naar de celkern stuurt (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "MAPKinase route en kanker",
             "text": "De MAPKinase-signaalroute is essentieel voor de **regulering van celdeling**. Mutaties in de Ras-gen kunnen leiden tot een vorm van Ras die resistent is tegen GTPase-activating proteins (GAPs), wat resulteert in **onophoudelijk actief Ras**. Dit zorgt voor een **continue activering van de MAPKinase-route**, wat **ongereguleerde celdeling** en potentieel kanker tot gevolg kan hebben.",
             "image": "ongereguleerde_celdeling_mapkinase.png"
@@ -507,7 +507,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "MAPKinase-signaalroute",
             "text": "De activering van de **MAPKinase-signaalroute** begint met een **groeifactor** die Ras-eiwit activeert, wat op zijn beurt weer de **MAP kinase kinase kinase (Raf)** activeert. Raf activeert vervolgens **MAP kinase kinase (Mek)**, die **MAP kinase (Erk)** activeert. Deze kinases **fosforyleren specifieke doeleiwitten** in de cel, wat leidt tot **celdeling** en andere celresponsen.",
             "image": "mapkkk_route.png"
@@ -518,7 +518,7 @@
             "answer": "Ras activeert MAP kinase kinase kinase of Raf (1 punt), Raf activeert MAP kinase kinase of Mek (1 punt), Mek activeert MAP kinase of Erk (1 punt), wat leidt tot fosforylering van doeleiwitten in de cel (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Scaffolding van signaalroutes",
             "text": "Scaffolding eiwitten **organiseren eiwitten** zoals MAPKinases in de MAPKinase signaalroute. Ze fungeren als een soort **skelet** waarop de verschillende eiwitten kunnen binden en interageren, waardoor de effici\u00EBntie van de signaaltransductie wordt verhoogd.",
             "image": "scaffold_proteine_kinase.png"
@@ -536,7 +536,7 @@
             }
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "PI3-Kinase Route",
             "text": "De **PI3-kinase route** is een ander signaaltransductiemechanisme dat een rol speelt in de celoverleving. Deze route helpt **apoptosis**, of geprogrammeerde celdood, te **remmen** en **bevordert de overleving** van de cel.",
             "image": "pi3kinase_signaleringsroute_geen_rood.png"
@@ -555,7 +555,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "PI3-Kinase Route",
             "text": "De PI3-Kinase route begint met de activering van een **receptor tyrosine kinase** (RTK), die vervolgens **PI3-kinase** activeert. PI3-kinase **fosforyleert PI(4,5)P2 tot PI(3,4,5)P3**. Dit leidt tot de activering van **Akt**, welke **BAD fosforyleert** en een apoptose remmend eiwit vrijmaakt.",
             "image": "pi3_kinase_route.png"
@@ -566,7 +566,7 @@
             "answer": "RTK activeert PI3-kinase (1 punt), PI3-kinase fosforyleert PI(4,5)P2 tot PI(3,4,5)P3 (1 punt), wat leidt tot de activering van Akt (1 punt), die BAD fosforyleert (1 punt) en een apoptose remmend eiwit vrijmaakt (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Directe Kernsignalering door JAK-STAT Route",
             "text": "De JAK-STAT route is een voorbeeld van **directe kernsignalering** die plaatsvindt wanneer **cytokinereceptoren** interactie aangaan met hun **liganden**. Deze route is **effici\u00EBnter** vergeleken met de indirecte signaalroutes zoals de MAPK-route, omdat het **direct transcriptiefactoren activeert** die naar de kern gaan om genexpressie te reguleren. De JAK-STAT signaleringsroute is vooral belangrijk in de afweer tegen virussen, zoals bij COVID-19.",
             "image": "jak_tat_systeem.png"
@@ -585,7 +585,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "De rol van JAK en STAT eiwitten",
             "text": "In de JAK-STAT route herkent een cytokinereceptor zijn cytokine, wat leidt tot dimerisatie en trans-autofosforylatie. Dit proces activeert JAK (Janus kinase), een enzym dat aan de receptor gekoppeld is, dat op zijn beurt STAT (signaal transducers en activatoren van transcriptie) eiwitten fosforyleert. Deze STAT-eiwitten vormen vervolgens homo- of heterodimeren en verplaatsen zich naar de kern om genexpressie te reguleren, wat kan resulteren in verschillende cellulaire reacties, zoals celdeling of de productie van meer cytokines.",
             "image": "jak_tat_systeem.png"
@@ -604,7 +604,7 @@
             "image": null
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Overzicht van signaaltransductiepaden",
             "text": "Deze afbeelding vat de belangrijkste mechanismen samen waarmee cellen externe signalen interpreteren en omzetten in functionele reacties. Twee primaire paden worden benadrukt: de G-prote\u00efne gekoppelde receptorroute (GPCR) en de receptor tyrosine kinase (RTK) route. Deze paden maken gebruik van second messengers om signalen door te geven, die op hun beurt een reeks kinases activeren. Deze activatie cascade heeft invloed op de genexpressie en induceert een verscheidenheid aan cellulaire reacties en gedragingen.",
             "image": "alle_protein_kinase_routes.png"
@@ -615,19 +615,19 @@
             "answer": "Het antwoord moet een specifieke route bevatten (1 punt), zoals de G-prote\u00efne gekoppelde receptorroute (GPCR). Benoem daarbij de receptor, zoals een GPCR (1 punt), het enzym, zoals fosfolipase C (1 punt), het second messenger, zoals IP3 (1 punt) en de kinase zoals prote\u00efne kinase C (1 punt)."
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
 
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
 
         },
         {
-            "type": "info",
+            "type": "theory",
             "title": "Einde leertraject",
             "text": "Gefeliciteerd! Je hebt het leertraject over signaaltransductie voltooid."
 

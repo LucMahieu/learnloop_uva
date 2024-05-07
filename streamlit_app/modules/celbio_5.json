@@ -1,0 +1,131 @@
+{
+    "module_name": "celbio_5",
+    "segments": [
+        {
+            "type": "theory",
+            "title": "Introductie tot Signaaltransductie",
+            "text": "Signaaltransductie begint met een **signaal** dat moet worden waargenomen, een proces genoemd **perceptie**. Na succesvolle perceptie wordt het signaal doorgegeven, wat bekend staat als **transductie**.",
+            "tag": "5.1.1",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de belangrijkste stadia in het signaaltransductieproces en wat gebeurt er in elk van deze stadia?",
+            "answer": "De belangrijkste stadia van het signaaltransductieproces zijn perceptie (1 punt), waarbij het signaal wordt waargenomen, transductie (1 punt), waarbij het signaal wordt doorgegeven, en respons (1 punt), de actie of reactie van de cel op het signaal.",
+            "tag": "5.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Stappen in Signaaltransductie",
+            "text": "Het signaaltransductieproces omvat typisch vier tot vijf stappen: **perceptie van het signaal**, **transductie**, en uiteindelijk een **respons**.",
+            "tag": "5.1.2",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoeveel stappen zijn er typisch in een signaaltransductieproces en welke stappen volgen na de perceptie van het signaal?",
+            "answer": "Een signaaltransductieproces omvat typisch vier tot vijf stappen (1 punt), waarbij na de perceptie van het signaal transductie (1 punt) plaatsvindt en uiteindelijk leidt tot een respons (1 punt).",
+            "tag": "5.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Rol van Eiwitten in Signaaltransductie",
+            "text": "Eiwitten binnen de cel spelen een cruciale rol bij de **transductie** van signalen, door het doorgegeven signaal om te zetten in een actie of **respons**.",
+            "tag": "5.1.3",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is de rol van eiwitten in het signaaltransductieproces?",
+            "answer": "Eiwitten binnen de cel zijn cruciaal voor de transductie van signalen (1 punt), omdat ze het doorgegeven signaal omzetten in een specifieke actie of respons (1 punt).",
+            "tag": "5.1.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Resultaat van Signaaltransductie",
+            "text": "Een goed verlopende signaaltransductie resulteert uiteindelijk in een specifieke **respons** van de cel, wat het doel is van het signaaltransductieproces.",
+            "tag": "5.1.4",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Wat is het uiteindelijke doel van een goed verlopend signaaltransductieproces?",
+            "answer": "Het uiteindelijke doel van een goed verlopend signaaltransductieproces is om een specifieke respons (1 punt) van de cel te bewerkstelligen.",
+            "tag": "5.1.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Basis van Contactafhankelijke Signalering",
+            "text": "Contactafhankelijke signalering is een vorm van communicatie tussen cellen waarbij de **signalerende cel** een membraangebonden signaalmolecuul heeft en de **doelwitcel** een bijbehorende receptor in haar plasmamembraan. Dit proces vereist **direct fysiek contact** tussen de cellen, aangezien de signalen niet vrij door de extracellulaire ruimte bewegen.",
+            "image": null,
+            "tag": "5.2.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat is vereist tussen twee cellen om contactafhankelijke signalering mogelijk te maken en waarom?",
+            "answer": "Direct fysiek contact tussen de signalerende cel en de doelwitcel is vereist (1 punt) omdat de signaalmoleculen membraangebonden zijn en niet vrij door de extracellulaire ruimte bewegen (1 punt).",
+            "tag": "5.2.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Kenmerken van Membraangebonden Signaalmoleculen en Receptoren",
+            "text": "In contactafhankelijke signalering zijn zowel het signaalmolecuul als de receptor **verankerd in het plasmamembraan** van de respectievelijke cellen. Dit type signalering is beperkt tot de interactie van **membraangebonden eiwitten**.",
+            "image": null,
+            "tag": "5.2.2"
+        },
+        {
+            "type": "question",
+            "question": "Hoe beperkt het feit dat zowel signaalmoleculen als receptoren verankerd zijn in het plasmamembraan de reikwijdte van contactafhankelijke signalering?",
+            "answer": "De reikwijdte van contactafhankelijke signalering is beperkt tot de interactie van membraangebonden eiwitten (1 punt), wat betekent dat alleen cellen die zich in direct contact met elkaar bevinden kunnen communiceren (1 punt).",
+            "tag": "5.2.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Immuunsysteem en Contactafhankelijke Signalering",
+            "text": "Een belangrijk voorbeeld van contactafhankelijke signalering vindt plaats in het **immuunsysteem**, waar cellen zoals antigen presenterende cellen en cytotoxische cellen communiceren door middel van membraangebonden moleculen en receptoren om een immuunrespons te activeren.",
+            "image": null,
+            "tag": "5.2.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke rol speelt contactafhankelijke signalering in het immuunsysteem?",
+            "answer": "In het immuunsysteem communiceren antigen presenterende cellen en cytotoxische cellen via contactafhankelijke signalering met behulp van membraangebonden moleculen en receptoren om een immuunrespons te activeren (1 punt).",
+            "tag": "5.2.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Gap Junctions als Vorm van Contactafhankelijke Signalering",
+            "text": "Gap junctions, die vooral in **hartspiercellen** voorkomen, zijn structuren gevormd door eiwitten in aangrenzende celmembranen die een directe signaalroute bieden. Ze zijn essentieel voor de **snelle overdracht van signalen**, zoals calcium-ionen die nodig zijn voor spiercontractie.",
+            "image": null,
+            "tag": "5.2.4"
+        },
+        {
+            "type": "question",
+            "question": "Wat maakt gap junctions een speciale vorm van contactafhankelijke signalering in hartspiercellen?",
+            "answer": "Gap junctions vormen structuren die een directe signaalroute bieden tussen aangrenzende celmembranen (1 punt), essentieel voor de snelle overdracht van signalen zoals calcium-ionen die nodig zijn voor spiercontractie (1 punt), met name in hartspiercellen (1 punt).",
+            "tag": "5.2.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Functioneel Belang van Gap Junctions",
+            "text": "Deze gap junctions zijn van cruciaal belang voor de functie van spieren, aangezien ze de doorgifte van calcium-ionen mogelijk maken, wat resulteert in de **geco\u00c3\u00b6rdineerde contractie** van spiervezels. Wanneer gap junctions niet goed functioneren, kan de spieractiviteit verstoord zijn.",
+            "image": null,
+            "tag": "5.2.5"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de gevolgen van niet-functionerende gap junctions voor spierweefsel?",
+            "answer": "Wanneer gap junctions niet goed functioneren, kan dit leiden tot verstoring van de spieractiviteit (1 punt) omdat de geco\u00c3\u00b6rdineerde doorgifte van calcium-ionen en dus de geco\u00c3\u00b6rdineerde contractie van spiervezels belemmerd wordt (1 punt).",
+            "tag": "5.2.5",
+            "image": null
+        }
+    ]
+}

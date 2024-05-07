@@ -1,0 +1,33 @@
+{
+    "module_name": "celbio_5",
+    "topics": [
+        {
+            "topic_title": "Signaaltransductieproces",
+            "segment_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "topic_title": "Contactafhankelijke signalering",
+            "segment_indexes": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ]
+        }
+    ]
+}
