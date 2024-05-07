@@ -14,7 +14,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
 st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
+running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 load_dotenv()
 
@@ -377,9 +377,9 @@ def render_learning_explanation():
 
 def render_oefententamen_explanation():
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Leerfase 📖</strong></p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 30px;"><strong>Oefententamen ✍🏽</strong></p>', unsafe_allow_html=True)
         # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
-        st.write("Je gaat nu oefenen met een oefententamen!")
+        st.write("Dit oefententamen bevat een willekeurige selectie aan tentamenvragen over de stof uit de colleges.")
         render_start_button()
     exit()
 
@@ -919,25 +919,25 @@ def render_sidebar():
                         st.session_state.selected_phase = 'theory'
                         st.session_state.info_page = False
                         track_visits()
-        # render_feedback_form()
+
         st.sidebar.title("Oefententamens")
-        if st.button('Oefententamen 1', key='Oefententamen 1' + ' learning'):
+        if st.button('Oefententamen 1', key='Oefententamen 1' + ' learning', use_container_width=True):
             st.session_state.selected_module = 'Oefententamen 1'
             st.session_state.selected_phase = 'learning'
             st.session_state.info_page = False
             track_visits()
-        if st.button('Oefententamen 2', key='Oefententamen 2' + ' learning'):
+        if st.button('Oefententamen 2', key='Oefententamen 2' + ' learning', use_container_width=True):
             st.session_state.selected_module = 'Oefententamen 2'
             st.session_state.selected_phase = 'learning'
             st.session_state.info_page = False
             track_visits()
-        if st.button('Oefententamen 3', key='Oefententamen 3' + ' learning'):
+        if st.button('Oefententamen 3', key='Oefententamen 3' + ' learning', use_container_width=True):
             st.session_state.selected_module = 'Oefententamen 3'
             st.session_state.selected_phase = 'learning'
             st.session_state.info_page = False
             track_visits()
         
-        
+        render_feedback_form() # So users can give feedback
         
         st.sidebar.subheader("Extra Info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
