@@ -11,6 +11,7 @@ import base64
 from overview_page import OverviewPage
 import db_config
 from utils import Utils
+from data_access_layer import DatabaseAccess, ContentAccess
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -274,7 +275,7 @@ def fetch_image_path():
         if image_path is None:
             return None
         else:
-            return f"./images/{image_path}"
+            return f"./content/images/{image_path}"
 
 
 def render_info():
@@ -358,9 +359,17 @@ def render_learning_explanation():
     """Renders explanation of learning phase if the user hasn't started with
     the current phase."""
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Leerfase 📖</strong></p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 30px;"><strong>Leren 🌱</strong></p>', unsafe_allow_html=True)
         # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
         st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in de oefenfase.")
+        render_start_button()
+    exit()
+
+def render_oefententamen_explanation():
+    with mid_col:
+        st.markdown('<p style="font-size: 30px;"><strong>Oefententamen ✍🏽</strong></p>', unsafe_allow_html=True)
+        # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
+        st.write("Dit oefententamen bevat een willekeurige selectie aan tentamenvragen over de stof uit de colleges.")
         render_start_button()
     exit()
 
@@ -373,9 +382,15 @@ def initialise_learning_page():
     st.session_state.segment_index = fetch_segment_index()
 
     if st.session_state.segment_index == -1: # If user never started this phase
-        render_learning_explanation()
+        if st.session_state.selected_module.startswith("Oefententamen"):
+            render_oefententamen_explanation()
+        else:
+            render_learning_explanation()
     elif st.session_state.segment_index == 100_000: # if we are at the final screen
-        render_final_page()
+        if st.session_state.selected_module.startswith("Oefententamen"):
+            render_oefententamen_final_page()
+        else:
+            render_final_page()
     else:
         # Select the segment (with contents) that corresponds to the saved index where the user left off
         st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
@@ -401,6 +416,13 @@ def render_final_page():
         st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
     
     # otherwise the progress bar and everything will get rendered
+    exit()
+
+def render_oefententamen_final_page():
+    with mid_col:
+        st.markdown('<p style="font-size: 30px;"><strong>Einde oefententamen 🎓 </strong></p>', unsafe_allow_html=True)
+        st.write("Klaar! Hoe ging het?")
+        st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
     exit()
 
 
@@ -432,6 +454,18 @@ def render_warning():
     st.button("Nee", on_click=reset_progress, use_container_width=True)
     st.button("Ja", use_container_width=True, on_click=set_warned_true)
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
+
+
+def one_up_progress_counter():
+    """
+    Counts how many times a person answered the current question and updates database.
+    """
+    user_doc = db.users.find_one({"username": {st.session_state.username}})
+    
+    progress_count = db_dal.fetch_progress_counter()[str(st.session_state.segment_index)]
+    
+    # Add one to count and update counter
+    db_dal.update_progress_counter(user_doc, st.session_state.module, progress_count + 1)
 
 
 def render_learning_page():
@@ -471,6 +505,7 @@ def render_learning_page():
                                 het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
                     evaluate_answer()
+                    one_up_progress_counter()
                                 
                 render_feedback()
                 add_to_practice_phase()
@@ -553,11 +588,11 @@ def render_practice_explanation():
     """Renders the explanation for the practice phase if the user hasn't started
     this phase in this module."""
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Oefenfase 📝</strong></p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 30px;"><strong>Herhalen 🔄</strong></p>', unsafe_allow_html=True)
         # st.write("The practice phase is where you can practice the concepts you've learned in the learning phase. It uses **spaced repetition** to reinforce your memory and **improve retention.**")
-        st.write("In de oefenfase kun je de concepten die je hebt geleerd in de leerfase oefenen. Het gebruikt **'spaced repetition'** om je geheugen te versterken zodat je beter de stof onthoudt.")
+        st.write("Herhaal de moeilijkste vragen uit de leerfase met **_spaced repetition_** om je geheugen te versterken zodat je beter de stof onthoudt.")
         if st.session_state.ordered_segment_sequence == []:
-            st.info("Hier staat nog niets. Rond eerst de leerfase af om moeilijke vragen te verzamelen.")
+            st.info(" Nog geen moeilijke vragen verzameld. Maak daarvoor eerst vragen uit de leerfase.")
         else:
             render_start_button()
     exit()
@@ -672,17 +707,6 @@ def render_practice_page():
             render_navigation_buttons()
 
 
-def render_theory_page():
-    """
-    Renders the page that contains the theory of the lecture.
-    """
-    with mid_col:
-        for segment in st.session_state.page_content["segments"]:
-            if segment['type'] == 'theory':
-                st.session_state.segment_content = segment
-                render_info()
-
-
 def render_overview_page():
     """
     Renders the page that shows all the subjects in a lecture, which gives the 
@@ -692,14 +716,20 @@ def render_overview_page():
     overview_page.render_page()
 
 
+def load_json_page_content():
+    # Load content to load on one of the pages
+    json_name = Utils.selected_module_json_name() + ".json"
+    json_path = f"./content/modules/{json_name}"
+    st.session_state.page_content = cont_dal.load_json_content(json_path)
+
+    return st.session_state.page_content
+
+
 def render_selected_page():
     """
     Determines what type of page to display based on which module the user selected.
     """
-    # Load content to load on one of the pages
-    json_name = Utils.selected_module_json_name() + ".json"
-    json_path = f"./modules/{json_name}"
-    st.session_state.page_content = Utils.load_json_content(json_path)
+    load_json_page_content()
     
     # Determine what type of page to display
     if st.session_state.selected_phase == 'overview':
@@ -708,8 +738,7 @@ def render_selected_page():
         render_learning_page()
     if st.session_state.selected_phase == 'practice':
         render_practice_page()
-    if st.session_state.selected_phase == 'theory':
-        render_theory_page()
+    
 
 
 def initialise_session_states():
@@ -787,7 +816,7 @@ def initialise_session_states():
 
 
 def render_logo():
-    st.image('./images/logo.png', width=100)
+    st.image('./content/images/logo.png', width=100)
 
 
 def determine_modules():
@@ -798,19 +827,19 @@ def determine_modules():
     # Determine the modules to display in the sidebar
     if st.session_state.modules == []:
         # Read the modules from the modules directory
-        modules = os.listdir("./modules")
+        modules = os.listdir("./content/modules")
 
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
 
         # Hard code the SCJ demo name to be removed from list and to add it back after sorting line TODO: remove after SCJ demo
-        for module in modules.copy():
-            if module == "SCJ Demo":
-                modules.remove(module)
-                scj_module = module
+        # for module in modules.copy():
+        #     if module == "SCJ Demo":
+        #         modules.remove(module)
+        #         scj_module = module
         
         modules.sort(key=lambda module: int(module.split(" ")[1]))
-        modules.insert(0, scj_module)
+        # modules.insert(0, scj_module)
         st.session_state.modules = modules
 
 
@@ -860,6 +889,17 @@ def track_visits():
         {"username": st.session_state.username},
         {"$inc": {f"progress.{st.session_state.selected_module}.visits.{st.session_state.selected_phase}": 1}}
     )
+
+
+def render_page_button(page_title, module, phase):
+    """
+    Renders the buttons that the users clicks to go to a certain page.
+    """
+    if st.button(page_title, key=f'{module} {phase}', use_container_width=True):
+        st.session_state.selected_module = module
+        st.session_state.selected_phase = phase
+        st.session_state.info_page = False
+        track_visits()
     
 
 def render_sidebar():
@@ -872,34 +912,27 @@ def render_sidebar():
             render_logo()
         st.sidebar.title("Colleges")
 
+        practice_exam_count = 0
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
-            with st.expander(module):
-                # Display buttons for the two types of phases per module
-                if st.button('Overview 📖', key=module + ' overview'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'overview'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Leerfase 📖', key=module + ' learning'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'learning'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Oefenfase 📝', key=module + ' practice'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'practice'
-                    st.session_state.info_page = False
-                    track_visits()
-                if st.button('Theorie 📚', key=module + ' theory'):
-                    st.session_state.selected_module = module
-                    st.session_state.selected_phase = 'theory'
-                    st.session_state.info_page = False
-                    track_visits()
+            # If the module is not a Oefententamen, then skip it
+            if not module.startswith('Oefententamen'):
+                with st.expander(module):
+                    # Display buttons for the two types of phases per module
+                    render_page_button('Leren 🌱', module, phase='overview')
+                    render_page_button('Herhalen 🔄', module, phase='practice')
+            elif module.startswith('Oefententamen'):
+                practice_exam_count += 1
 
-        # render_feedback_form()
+        st.sidebar.title("Oefententamens")
+        
+        # Render the practice exam buttons
+        for i in range(practice_exam_count):
+            render_page_button(f'Oefententamen {i + 1} ✍🏽', f'Oefententamen {i + 1}', 'learning')
 
-        st.sidebar.subheader("Extra info")
+        render_feedback_form() # So users can give feedback
+        
+        st.sidebar.subheader("Extra Info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
 
 
@@ -931,10 +964,27 @@ def initialise_module_in_database(module):
          {f"progress.{module}": {
                 "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
                 "practice": {"segment_index": -1,
-                                "ordered_segment_sequence": [],
+                             "ordered_segment_sequence": [],
                             }}
         }}
     )
+
+
+def create_empty_progress_dict():
+    """
+    Creates an empty dictionary that contains the JSON
+    index of the segment as key and the number of times  
+    the user answered a question.
+    """
+    empty_dict = {}
+    
+    number_of_segments = len(load_json_page_content()['segments'])
+    print(f"Number of segments: {number_of_segments}")
+    
+    for i in range(number_of_segments):
+        empty_dict[f'{i}'] = 0
+    
+    return empty_dict
 
 
 def determine_if_to_initialise_database():
@@ -968,6 +1018,12 @@ def determine_if_to_initialise_database():
             initialise_module_in_database(module)
             return
 
+        # Check if the user doc contains the dict in which the
+        # is saved how many times a question is made by user
+        if db_dal.fetch_progress_counter(module) is None:
+            empty_dict = create_empty_progress_dict()
+            db_dal.add_progress_counter(module, empty_dict)
+
 
 def fetch_username():
     user_doc = db.users.find_one({'nonce': st.session_state.nonce})
@@ -992,7 +1048,7 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./images/logo.png")
+        logo_base64 = convert_image_base64("./content/images/logo.png")
         html_content = f"""
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
@@ -1017,6 +1073,10 @@ if __name__ == "__main__":
     # Create a mid column with margins in which everything one a 
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
+
+    # Create data acces layer instance for the database
+    db_dal = DatabaseAccess()
+    cont_dal = ContentAccess()
     
     initialise_session_states()
 
