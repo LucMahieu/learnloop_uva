@@ -16,7 +16,7 @@ from utils import Utils
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
+st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 left_col, mid_col, right_col = st.columns([1, 3, 1])
@@ -299,7 +299,16 @@ def render_answerbox():
 
 def render_question():
     """Function to render the question and textbox for the students answer."""
-    st.subheader(st.session_state.segment_content['question'])
+    if 'answers' in st.session_state.segment_content:
+        st.subheader(st.session_state.segment_content['question']) 
+    else:
+        number_of_points = st.session_state.segment_content['answer'].count('(1 punt)')
+        if number_of_points == 0:
+            st.subheader(st.session_state.segment_content['question']) 
+        elif number_of_points == 1:    
+            st.subheader(st.session_state.segment_content['question']  + f' ({number_of_points} punt)')
+        else:
+            st.subheader(st.session_state.segment_content['question']  + f' ({number_of_points} punten)')
 
 
 def fetch_ordered_segment_sequence():
