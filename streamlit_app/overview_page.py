@@ -4,11 +4,13 @@ import base64
 from io import BytesIO
 import json
 import db_config
-from utils import Utils
+from data_access_layer import DatabaseAccess, ContentAccess
 
 class OverviewPage:
     def __init__(self, module_title) -> None:
         self.db = db_config.connect_db() # database connection
+        self.db_dal = DatabaseAccess()
+        self.cont_dal = ContentAccess()
         self.module_title = module_title
 
         
@@ -45,16 +47,16 @@ class OverviewPage:
             st.write("\n")
 
 
-    def start_learning_page(self):
+    def start_learning_page(self, topic_index):
         """
         Updates the segment index and calls the function to render the correct page
         corresponding to the selected topic.
         """
         # Determine which segment has to be displayed for the selected topic
-        segment_index = self.get_index_first_segment_in_topic()
+        segment_index = self.get_index_first_segment_in_topic(topic_index)
 
         # Change the segment index to the index corresponding to the selected topic
-        self.db.users.update_one(
+        self.db.users_2.update_one(
             {"username": st.session_state.username},
             {"$set": {f"progress.{st.session_state.selected_module}.learning.segment_index": segment_index}}
         )
@@ -62,68 +64,91 @@ class OverviewPage:
         st.session_state.selected_phase = 'learning'
     
 
-    def get_index_first_segment_in_topic(self):
+    def get_index_first_segment_in_topic(self, topic_index):
         """
         Takes in the json index of a topic and extracts the first segment in the list of 
         segments that belong to that topic.
         """
-        topics = self.get_topics()
-        return topics[self.topic_index]['segment_indexes'][0]
+        module = st.session_state.selected_module.replace(' ', '_')
+        topics = self.cont_dal.get_topics_list(module)
+        return topics[topic_index]['segment_indexes'][0]
 
     def get_segment_type(self):
-        return self.segments_json['segments'][self.segment_index].get('type', None)
+        return self.segments_list[self.segment_index].get('type', None)
 
     def get_segment_question(self):
-        return self.segments_json['segments'][self.segment_index].get('question', None)
+        return self.segments_list[self.segment_index].get('question', None)
         
     def get_segment_answer(self):
-        return self.segments_json['segments'][self.segment_index].get('answer', None)
+        return self.segments_list[self.segment_index].get('answer', None)
 
     def get_segment_title(self):
-        return self.segments_json['segments'][self.segment_index]['title']
+        return self.segments_list[self.segment_index]['title']
     
-    def get_topics(self):
-        return self.topics_json['topics']
-
     def get_segment_text(self):
-        return self.segments_json['segments'][self.segment_index]['text']
+        return self.segments_list[self.segment_index]['text']
 
     def get_segment_image_file_name(self):
-        self.image_file_name= self.segments_json['segments'][self.segment_index].get('image', None)
+        self.image_file_name= self.segments_list[self.segment_index].get('image', None)
         
     def get_image_path(self):
-        return f"./images/{self.image_file_name}"
+        return f"./content/images/{self.image_file_name}"
 
     def get_segment_mc_answers(self):
-        return self.segments_json['segments'][self.segment_index]['answers']
+        return self.segments_list[self.segment_index]['answers']
+    
 
+    def is_topic_completed(self, topic_index, module):
+        """
+        Checks if the user made all segments for this topic.
+        """
+        topic_segment_indexes = self.cont_dal.get_topic_segment_indexes(module, topic_index)
+        progress_count = self.db_dal.fetch_progress_counter(module)
+        
+        for index in topic_segment_indexes:
+            print(f"Current index in loop: {index}")
+            print(progress_count)
+            if progress_count[str(index)] == 0: # Weird str syntax used because couldn't save numbers as keys in database dict
+                return False
+        
+        return True
+    
 
     def render_topic_containers(self):
         """
         Renders the container that contains the topic title, start button,
         and theory and questions for one topic of the lecture.
         """
-        module_json_name = Utils.selected_module_json_name()
-        topics_json_path = f"./modules/{module_json_name}_topics.json"
-        self.topics_json = Utils.load_json_content(topics_json_path)
+        module_name_underscored = st.session_state.selected_module.replace(' ', '_')
+        print(f"module_underscored: {module_name_underscored}")
+        
+        self.topics_list = self.cont_dal.get_topics_list(module_name_underscored)
+        self.segments_list = self.cont_dal.get_segments_list(module_name_underscored)
 
-        content_json_path = f"./modules/{module_json_name}.json"
-        self.segments_json = Utils.load_json_content(content_json_path)
-
-        for self.topic_index, topic in enumerate(self.get_topics()):
+        for topic_index, topic in enumerate(self.topics_list):
             container = st.container(border=True)
             cols = container.columns([0.02, 6, 2])
 
             with cols[1]:
-                st.subheader(f"{self.topic_index + 1}. {topic['topic_title']} ✅") #TODO: now check is hardcoded, but this should be coupled to the progress of user.
+                print("Net voor de topic completed check")
+                # Check if user made all segments in topic
+                if self.is_topic_completed(topic_index, module_name_underscored):
+                    topic_status = '✅'
+                else:
+                    topic_status = '⬜'
+                
+                topic_title = topic['topic_title']
+                st.subheader(f"{topic_index + 1}. {topic_title} {topic_status}")
+
+                print("Na de topic check")
 
             with cols[2]:
                 # Button that starts the learning phase at the first segment of this topic
-                st.button("Start", key=f"start_{self.topic_index + 1}", on_click=self.start_learning_page, use_container_width=True)
+                st.button("Start", key=f"start_{topic_index + 1}", on_click=self.start_learning_page, args=(topic_index, ), use_container_width=True)
+
 
             with container.expander("Theorie & vragen"):
                 for self.segment_index in topic['segment_indexes']:
-                    print(self.segment_index)
 
                     if self.get_segment_type() == "theory":
 
