@@ -461,7 +461,7 @@ def render_warning():
     st.button("Nee", on_click=reset_progress, use_container_width=True)
     st.button("Ja", use_container_width=True, on_click=set_warned_true)
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
-
+    
 
 def one_up_progress_counter():
     """
