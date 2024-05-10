@@ -104,8 +104,26 @@ def score_to_percentage():
     
     return score_percentage
 
+def render_mc_feedback(question):
+    if question['student_answer'] == question['correct_answer']: # antwoord is goed
+        result_html = f"""
+        <div style='background-color: rgba(0, 128, 0, 0.2); padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
+            <p style='font-size: 16px; margin: 8px 0 8px 10px; padding: 0;'>✅  {question['student_answer']}</p>
+        </div>
+        """
+    else: # antwoord is fout
+        result_html = f"""
+        <div style='background-color: rgba(255, 0, 0, 0.2); padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
+            <p style='font-size: 16px; margin: 8px 0 8px 10px; padding: 0;'>❌  {question['student_answer']}</p>
+        </div>
+        <div>
+        <p> Goede antwoord: {question['correct_answer']} </p>
+        </div>
+        """
+        
+    st.markdown(result_html, unsafe_allow_html=True)
 
-def render_feedback():
+def render_feedback(feedback_field):
     """Renders the feedback box with the score and feedback."""
     # Calculate the score percentage
     score_percentage = score_to_percentage()
@@ -422,21 +440,67 @@ def reset_segment_index_and_feedback():
 
 # render the page at the end of the learning phase (after the last question)
 def render_final_page():
-    
-    with mid_col:
-        # if st.session_state.selected_phase == 'practice':
-        #     st.markdown('<p style="font-size: 30px;"><strong>Einde van de oefenfase 📝</strong></p>', unsafe_allow_html=True)
-        #     st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van de oefenfase.")
-        # else:
-        #     st.markdown('<p style="font-size: 30px;"><strong>Einde van de leerfase 📖</strong></p>', unsafe_allow_html=True)
-        #     st.write("Lekker bezig! Als je nog een keer alle vragen en theorie wil doorlopen, kun je terug naar het begin van de leerfase. Ga verder naar de **oefenfase** om te oefenen met de vragen die je moeilijk vond.")
-        st.markdown('<p style="font-size: 30px;"><strong>Overzicht van de vragen: 📝</strong></p>', unsafe_allow_html=True)
-        st.markdown('<p style="font-size: 30px;"><strong>Score = 75 % </strong></p>', unsafe_allow_html=True)
-        st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
-    
-    # otherwise the progress bar and everything will get rendered
-    exit()
+    questions = get_feedback_questions_from_db()
+    if len(questions) == 0:
+        with mid_col:
+            st.subheader("Feedbackoverzicht")
+            st.write("Voor een overzicht van je gemaakte vragen moet je eerst vragen maken 🙃")
+            st.write("Door op de knop hieronder te drukken kan je terug naar het begin.")
+            st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
+        exit()
 
+    else:
+        total_score, possible_score = calculate_score()
+        score_percentage = int(total_score / possible_score * 100)
+        st.balloons()
+        with mid_col:
+            st.markdown(f'<p style="font-size: 30px;"><strong>Score: {total_score}/{possible_score} ({score_percentage} %) </strong></p>', unsafe_allow_html=True)
+            st.markdown('---')
+            show_feedback_overview()
+            st.write("Door op terug naar het begin te drukken, worden ook al je antwoorden gewist.")
+            st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
+
+
+        # otherwise the progress bar and everything will get rendered
+        exit()
+
+def calculate_score():
+    questions = get_feedback_questions_from_db()
+    total_score = 0
+    possible_score = 0
+    for question in questions:
+        score_str = question.get('score', '0/1')  # Default to "0/1" if score is missing
+        parts = score_str.split('/')
+        total_score += int(parts[0])
+        possible_score += int(parts[1])
+    return total_score, possible_score
+
+def get_feedback_questions_from_db():
+    query = {"username": st.session_state.username}
+
+    projection = {
+        f"progress.{st.session_state.selected_module}.feedback.questions": 1,
+        "_id": 0  
+    }
+
+    user_document = db.users.find_one(query, projection)
+
+    questions = user_document.get('progress', {})\
+                            .get(st.session_state.selected_module, {})\
+                            .get('feedback', {})\
+                            .get('questions', [])
+                            
+    return questions
+
+def show_feedback_overview():
+    questions = get_feedback_questions_from_db()
+    for question in questions:
+        st.subheader(f"{question['question']}")
+        if 'feedback' in question:
+            render_feedback(question['feedback'])            
+        else:
+            render_mc_feedback(question)
+        st.markdown("---")
 def render_oefententamen_final_page():
     with mid_col:
         st.markdown('<p style="font-size: 30px;"><strong>Einde oefententamen 🎓 </strong></p>', unsafe_allow_html=True)
@@ -527,7 +591,7 @@ def render_learning_page():
                     evaluate_answer()
                     one_up_progress_counter()
                                 
-                render_feedback()
+                render_feedback(st.session_state.feedback)
                 save_feedback_on_open_question()
                 add_to_practice_phase()
                 render_explanation()
@@ -579,13 +643,13 @@ def render_learning_page():
             if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
                 st.success("✅ Correct!")
                 st.session_state.score = '1/1'
+                save_feedback_on_mc_question()
             # if the score is not correct, the questions is added to the practice phase
             elif st.session_state.submitted:
                 st.error("❌ Incorrect. Try again.")
                 st.session_state.score = '0/1'
                 add_to_practice_phase()
-
-            save_feedback_on_mc_question()
+                save_feedback_on_mc_question()
 
             #render the nav buttons
             render_navigation_buttons()
@@ -620,7 +684,8 @@ def save_feedback_on_open_question():
     new_question_data = {
         'question': st.session_state.segment_content['question'],
         'student_answer': st.session_state.student_answer,
-        'feedback': st.session_state.feedback
+        'feedback': st.session_state.feedback,
+        'score': st.session_state.score
     }
 
     # Push the new question data
@@ -657,7 +722,8 @@ def save_feedback_on_mc_question():
     new_question_data = {
         'question': st.session_state.segment_content['question'],
         'student_answer': st.session_state.choosen_answer,
-        'correct_answer': st.session_state.segment_content['answers']['correct_answer']
+        'correct_answer': st.session_state.segment_content['answers']['correct_answer'],
+        'score': st.session_state.score
     }
 
     # Push the new question data
@@ -1038,7 +1104,7 @@ def initialise_database():
                     "practice": {"segment_index": -1,
                                  "ordered_segment_sequence": [],
                                 },
-                    "feedbackOnQuestions": {"questions": [] 
+                    "feedback": {"questions": [] 
                                  }            
                     }
             }}
