@@ -15,7 +15,7 @@ from data_access_layer import DatabaseAccess, ContentAccess
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
+st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 left_col, mid_col, right_col = st.columns([1, 3, 1])
