@@ -404,23 +404,35 @@ def initialise_learning_page():
         reset_submitted_if_page_changed()
 
 
-def reset_segment_index():
+def reset_segment_index_and_feedback():
+    """
+    When the user wants to go back to the beginning of the phase, the feedback progress
+    is reset.
+    """
     st.session_state.segment_index = 0
     upload_progress()
+    user_query = {"username": st.session_state.username}
+    set_empty_array = {
+        "$set": {
+            f"progress.{st.session_state.selected_module}.feedback.questions": []
+        }
+    }
+    result = db.users.update_one(user_query, set_empty_array)
     
 
 # render the page at the end of the learning phase (after the last question)
 def render_final_page():
     
     with mid_col:
-        if st.session_state.selected_phase == 'practice':
-            st.markdown('<p style="font-size: 30px;"><strong>Je hebt alles herhaald 🔄</strong></p>', unsafe_allow_html=True)
-            st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van 'Herhalen' 🔄.")
-        else:
-            st.markdown('<p style="font-size: 30px;"><strong>Je hebt alles geleerd 📖</strong></p>', unsafe_allow_html=True)
-            st.write("Lekker bezig! Als je nog een keer alle vragen en theorie wil doorlopen, kun je terug naar het begin van de leerfase. Ga verder naar **'Herhalen' 🔄** om te oefenen met de vragen die je moeilijk vond.")
-
-        st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
+        # if st.session_state.selected_phase == 'practice':
+        #     st.markdown('<p style="font-size: 30px;"><strong>Einde van de oefenfase 📝</strong></p>', unsafe_allow_html=True)
+        #     st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van de oefenfase.")
+        # else:
+        #     st.markdown('<p style="font-size: 30px;"><strong>Einde van de leerfase 📖</strong></p>', unsafe_allow_html=True)
+        #     st.write("Lekker bezig! Als je nog een keer alle vragen en theorie wil doorlopen, kun je terug naar het begin van de leerfase. Ga verder naar de **oefenfase** om te oefenen met de vragen die je moeilijk vond.")
+        st.markdown('<p style="font-size: 30px;"><strong>Overzicht van de vragen: 📝</strong></p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 30px;"><strong>Score = 75 % </strong></p>', unsafe_allow_html=True)
+        st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
     
     # otherwise the progress bar and everything will get rendered
     exit()
@@ -516,6 +528,7 @@ def render_learning_page():
                     one_up_progress_counter()
                                 
                 render_feedback()
+                save_feedback_on_open_question()
                 add_to_practice_phase()
                 render_explanation()
                 render_navigation_buttons()
@@ -572,6 +585,8 @@ def render_learning_page():
                 st.session_state.score = '0/1'
                 add_to_practice_phase()
 
+            save_feedback_on_mc_question()
+
             #render the nav buttons
             render_navigation_buttons()
 
@@ -580,6 +595,80 @@ def set_submitted_answer(answer):
     st.session_state.submitted = True
     st.session_state.choosen_answer = answer
     return
+
+def save_feedback_on_open_question():
+    """
+    Makes sure that the feedback to the question is saved to the database. First it checks if
+    there does not already exists a feedback entry in the database. If it does, it overwrites this one,
+    if it doesn't it makes a new one.
+    """
+    user_query = {"username": st.session_state.username}
+
+    # First, pull the existing question if it exists
+    pull_query = {
+        "$pull": {
+            f"progress.{st.session_state.selected_module}.feedback.questions": {
+                "question": st.session_state.segment_content['question']
+            }
+        }
+    }
+
+    # Execute the pull operation
+    db.users.update_one(user_query, pull_query)
+
+    # Prepare the new question data to be pushed
+    new_question_data = {
+        'question': st.session_state.segment_content['question'],
+        'student_answer': st.session_state.student_answer,
+        'feedback': st.session_state.feedback
+    }
+
+    # Push the new question data
+    push_query = {
+        "$push": {
+            f"progress.{st.session_state.selected_module}.feedback.questions": new_question_data
+        }
+    }
+
+    # Execute the push operation
+    db.users.update_one(user_query, push_query)
+
+def save_feedback_on_mc_question():
+    """
+    Makes sure that the feedback to a MC question is saved to the database. First it checks if
+    there does not already exists a feedback entry in the database. If it does, it overwrites this one,
+    if it doesn't it makes a new one.
+    """
+    user_query = {"username": st.session_state.username}
+
+    # First, pull the existing question if it exists
+    pull_query = {
+        "$pull": {
+            f"progress.{st.session_state.selected_module}.feedback.questions": {
+                "question": st.session_state.segment_content['question']
+            }
+        }
+    }
+
+    # Execute the pull operation
+    db.users.update_one(user_query, pull_query)
+
+    # Prepare the new question data to be pushed
+    new_question_data = {
+        'question': st.session_state.segment_content['question'],
+        'student_answer': st.session_state.choosen_answer,
+        'correct_answer': st.session_state.segment_content['answers']['correct_answer']
+    }
+
+    # Push the new question data
+    push_query = {
+        "$push": {
+            f"progress.{st.session_state.selected_module}.feedback.questions": new_question_data
+        }
+    }
+
+    # Execute the push operation
+    db.users.update_one(user_query, push_query)
 
     
 def reset_submitted_if_page_changed():
@@ -948,7 +1037,10 @@ def initialise_database():
                     "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
                     "practice": {"segment_index": -1,
                                  "ordered_segment_sequence": [],
-                                }}
+                                },
+                    "feedbackOnQuestions": {"questions": [] 
+                                 }            
+                    }
             }}
         )
 
