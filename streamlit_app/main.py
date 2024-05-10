@@ -6,18 +6,16 @@ import os
 import json
 from openai import AzureOpenAI
 from pymongo import MongoClient
-import certifi
 import base64
 from overview_page import OverviewPage
 import db_config
-from utils import Utils
 from data_access_layer import DatabaseAccess, ContentAccess
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
 # Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
+st.session_state.currently_testing = True # Turn on to reset db every time the webapp is loaded and minimize openai costs
 running_on_premise = False # Set to true if IP adres is allowed by Gerrit
 
 left_col, mid_col, right_col = st.columns([1, 3, 1])
@@ -45,7 +43,7 @@ def upload_progress():
         data[f"{path}.ordered_segment_sequence"] = st.session_state.ordered_segment_sequence
     
     # The data dict contains the paths and data
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$set": data}
     )
@@ -305,13 +303,13 @@ def render_question():
 
 def fetch_ordered_segment_sequence():
     """Fetches the practice segments from the database."""
-    user_doc = db.users.find_one({"username": st.session_state.username})
+    user_doc = db.users_2.find_one({"username": st.session_state.username})
     st.session_state.ordered_segment_sequence = user_doc["progress"][st.session_state.selected_module]["practice"]["ordered_segment_sequence"]
 
 
 def update_ordered_segment_sequence(ordered_segment_sequence):
     """Updates the practice segments in the database."""
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.practice.ordered_segment_sequence": ordered_segment_sequence}}
     )
@@ -346,7 +344,7 @@ def render_student_answer():
 
 def fetch_segment_index():
     """Fetch the last segment index from db"""
-    user_doc = db.users.find_one({"username": st.session_state.username})
+    user_doc = db.users_2.find_one({"username": st.session_state.username})
     return user_doc["progress"][st.session_state.selected_module][st.session_state.selected_phase]["segment_index"]
 
 
@@ -361,7 +359,7 @@ def render_learning_explanation():
     with mid_col:
         st.markdown('<p style="font-size: 30px;"><strong>Leren 🌱</strong></p>', unsafe_allow_html=True)
         # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
-        st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in de oefenfase.")
+        st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in 'Herhalen' 🔄.")
         render_start_button()
     exit()
 
@@ -407,11 +405,11 @@ def render_final_page():
     
     with mid_col:
         if st.session_state.selected_phase == 'practice':
-            st.markdown('<p style="font-size: 30px;"><strong>Einde van de oefenfase 📝</strong></p>', unsafe_allow_html=True)
-            st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van de oefenfase.")
+            st.markdown('<p style="font-size: 30px;"><strong>Je hebt alles herhaald 🔄</strong></p>', unsafe_allow_html=True)
+            st.write("Hoe ging het? Als je het gevoel hebt dat je nog wat meer wilt oefenen met de vragen, kun je altijd terugkeren naar het begin van 'Herhalen' 🔄.")
         else:
-            st.markdown('<p style="font-size: 30px;"><strong>Einde van de leerfase 📖</strong></p>', unsafe_allow_html=True)
-            st.write("Lekker bezig! Als je nog een keer alle vragen en theorie wil doorlopen, kun je terug naar het begin van de leerfase. Ga verder naar de **oefenfase** om te oefenen met de vragen die je moeilijk vond.")
+            st.markdown('<p style="font-size: 30px;"><strong>Je hebt alles geleerd 📖</strong></p>', unsafe_allow_html=True)
+            st.write("Lekker bezig! Als je nog een keer alle vragen en theorie wil doorlopen, kun je terug naar het begin van de leerfase. Ga verder naar **'Herhalen' 🔄** om te oefenen met de vragen die je moeilijk vond.")
 
         st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
     
@@ -428,7 +426,7 @@ def render_oefententamen_final_page():
 
 def set_warned_true():
     """Callback function for a button that turns of the LLM warning message."""
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$set": {"warned": True}}
     )
@@ -437,7 +435,7 @@ def set_warned_true():
 
 def reset_progress():
     """Resets the progress of the user in the current phase to the database."""
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
@@ -459,13 +457,12 @@ def render_warning():
 def one_up_progress_counter():
     """
     Counts how many times a person answered the current question and updates database.
-    """
-    user_doc = db.users.find_one({"username": {st.session_state.username}})
-    
-    progress_count = db_dal.fetch_progress_counter()[str(st.session_state.segment_index)]
+    """   
+    module = st.session_state.selected_module.replace('_', ' ')
+    progress_count = db_dal.fetch_progress_counter(module)[str(st.session_state.segment_index)]
     
     # Add one to count and update counter
-    db_dal.update_progress_counter(user_doc, st.session_state.module, progress_count + 1)
+    db_dal.update_progress_counter(module, progress_count + 1)
 
 
 def render_learning_page():
@@ -484,7 +481,9 @@ def render_learning_page():
         # Determine what type of segment to display and render interface accordingly
         if st.session_state.segment_content['type'] == 'theory':
             render_info()
+            one_up_progress_counter()
             render_navigation_buttons()
+
 
         # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
@@ -716,20 +715,11 @@ def render_overview_page():
     overview_page.render_page()
 
 
-def load_json_page_content():
-    # Load content to load on one of the pages
-    json_name = Utils.selected_module_json_name() + ".json"
-    json_path = f"./content/modules/{json_name}"
-    st.session_state.page_content = cont_dal.load_json_content(json_path)
-
-    return st.session_state.page_content
-
-
 def render_selected_page():
     """
     Determines what type of page to display based on which module the user selected.
     """
-    load_json_page_content()
+    cont_dal.load_page_content_of_module_in_session_state(st.session_state.selected_module)
     
     # Determine what type of page to display
     if st.session_state.selected_phase == 'overview':
@@ -885,7 +875,7 @@ def set_info_page_true():
 
 def track_visits():
     """Tracks the visits to the modules."""
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$inc": {f"progress.{st.session_state.selected_module}.visits.{st.session_state.selected_phase}": 1}}
     )
@@ -941,7 +931,7 @@ def initialise_database():
     Initialise the progress object with the modules and phases in the database.
     """
     for module in st.session_state.modules:
-        db.users.update_one(
+        db.users_2.update_one(
             {"username": st.session_state.username},
             {"$set":
              {"warned": False,
@@ -958,7 +948,7 @@ def initialise_module_in_database(module):
     """
     Adds a new module to the database without resetting the rest of the database.
     """
-    db.users.update_one(
+    db.users_2.update_one(
         {"username": st.session_state.username},
         {"$set":
          {f"progress.{module}": {
@@ -970,19 +960,20 @@ def initialise_module_in_database(module):
     )
 
 
-def create_empty_progress_dict():
+def create_empty_progress_dict(module):
     """
     Creates an empty dictionary that contains the JSON
     index of the segment as key and the number of times  
     the user answered a question.
     """
     empty_dict = {}
-    
-    number_of_segments = len(load_json_page_content()['segments'])
+
+    cont_dal.load_page_content_of_module_in_session_state(module)
+
+    number_of_segments = len(st.session_state.page_content['segments'])
     print(f"Number of segments: {number_of_segments}")
     
-    for i in range(number_of_segments):
-        empty_dict[f'{i}'] = 0
+    empty_dict = {str(i): 0 for i in range(number_of_segments)}
     
     return empty_dict
 
@@ -992,22 +983,22 @@ def determine_if_to_initialise_database():
     Determine if currently testing, if the progress is saved, or if all modules are included
     and if so, reset db when reloading webapp.
     """
-    user_exists = db.users.find_one({"username": st.session_state.username})
+    user_exists = db.users_2.find_one({"username": st.session_state.username})
 
     if not user_exists:
-        db.users.insert_one({"username": st.session_state.username})
+        db.users_2.insert_one({"username": st.session_state.username})
 
-    if st.session_state.currently_testing:
-        if 'reset_db' not in st.session_state:
-            st.session_state.reset_db = True
+    # if st.session_state.currently_testing:
+    #     if 'reset_db' not in st.session_state:
+    #         st.session_state.reset_db = True
         
-        if st.session_state.reset_db:
-            st.session_state.reset_db = False
-            initialise_database()
-            return
+    #     if st.session_state.reset_db:
+    #         st.session_state.reset_db = False
+    #         initialise_database()
+    #         return
 
 
-    user = db.users.find_one({"username": st.session_state.username})
+    user = db.users_2.find_one({"username": st.session_state.username})
     
     if "progress" not in user:
         initialise_database()
@@ -1021,17 +1012,17 @@ def determine_if_to_initialise_database():
         # Check if the user doc contains the dict in which the
         # is saved how many times a question is made by user
         if db_dal.fetch_progress_counter(module) is None:
-            empty_dict = create_empty_progress_dict()
+            empty_dict = create_empty_progress_dict(module)
             db_dal.add_progress_counter(module, empty_dict)
 
 
 def fetch_username():
-    user_doc = db.users.find_one({'nonce': st.session_state.nonce})
+    user_doc = db.users_2.find_one({'nonce': st.session_state.nonce})
     st.session_state.username = user_doc['username']
 
 
 def invalidate_nonce():
-    db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
+    db.users_2.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
     st.session_state.nonce = None
 
 
@@ -1065,7 +1056,7 @@ def render_login_page():
 
 def fetch_if_warned():
     """Fetches from database if the user has been warned about LLM."""
-    user_doc = db.users.find_one({"username": st.session_state.username})
+    user_doc = db.users_2.find_one({"username": st.session_state.username})
     return user_doc["warned"]
 
 

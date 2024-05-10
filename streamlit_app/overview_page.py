@@ -4,7 +4,6 @@ import base64
 from io import BytesIO
 import json
 import db_config
-from utils import Utils
 from data_access_layer import DatabaseAccess, ContentAccess
 
 class OverviewPage:
@@ -57,7 +56,7 @@ class OverviewPage:
         segment_index = self.get_index_first_segment_in_topic(topic_index)
 
         # Change the segment index to the index corresponding to the selected topic
-        self.db.users.update_one(
+        self.db.users_2.update_one(
             {"username": st.session_state.username},
             {"$set": {f"progress.{st.session_state.selected_module}.learning.segment_index": segment_index}}
         )
@@ -70,7 +69,8 @@ class OverviewPage:
         Takes in the json index of a topic and extracts the first segment in the list of 
         segments that belong to that topic.
         """
-        topics = self.get_topics()
+        module = st.session_state.selected_module.replace(' ', '_')
+        topics = self.cont_dal.get_topics_list(module)
         return topics[topic_index]['segment_indexes'][0]
 
     def get_segment_type(self):
@@ -102,16 +102,12 @@ class OverviewPage:
         """
         Checks if the user made all segments for this topic.
         """
-        print("We gaan de loop in")
         topic_segment_indexes = self.cont_dal.get_topic_segment_indexes(module, topic_index)
-        # print(topic_segment_indexes)
-        # progress_count = self.db_dal.fetch_progress_counter(module)
-        # print(progress_count)
-        progress_count = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0}
+        progress_count = self.db_dal.fetch_progress_counter(module)
         
         for index in topic_segment_indexes:
-            print(index)
-            # print(progress_count)
+            print(f"Current index in loop: {index}")
+            print(progress_count)
             if progress_count[str(index)] == 0: # Weird str syntax used because couldn't save numbers as keys in database dict
                 return False
         
@@ -123,10 +119,11 @@ class OverviewPage:
         Renders the container that contains the topic title, start button,
         and theory and questions for one topic of the lecture.
         """
-        module = Utils.selected_module_json_name()
+        module_name_underscored = st.session_state.selected_module.replace(' ', '_')
+        print(f"module_underscored: {module_name_underscored}")
         
-        self.topics_list = self.cont_dal.get_topics_list(module)
-        self.segments_list = self.cont_dal.get_segments_list(module)
+        self.topics_list = self.cont_dal.get_topics_list(module_name_underscored)
+        self.segments_list = self.cont_dal.get_segments_list(module_name_underscored)
 
         for topic_index, topic in enumerate(self.topics_list):
             container = st.container(border=True)
@@ -135,7 +132,7 @@ class OverviewPage:
             with cols[1]:
                 print("Net voor de topic completed check")
                 # Check if user made all segments in topic
-                if self.is_topic_completed(topic_index, module):
+                if self.is_topic_completed(topic_index, module_name_underscored):
                     topic_status = '✅'
                 else:
                     topic_status = '⬜'
