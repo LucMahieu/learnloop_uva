@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
-running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
 if running_on_premise:
     COSMOS_URI = os.getenv('COSMOS_URI')
@@ -42,9 +42,9 @@ def login():
 
 
 def save_id_to_db(user_id):
-    user = db.users_2.find_one({"username": user_id})
+    user = db.users.find_one({"username": user_id})
     if not user:
-        db.users_2.insert_one({"username": user_id})
+        db.users.insert_one({"username": user_id})
 
 
 def generate_nonce(length=16):
@@ -56,7 +56,7 @@ def generate_nonce(length=16):
 
 def save_nonce_to_db(user_id):
     nonce = generate_nonce(16)
-    db.users_2.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
+    db.users.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
     return nonce
 
 

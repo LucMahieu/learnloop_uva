@@ -1,0 +1,16 @@
+{
+    "module_name": "Transport en Signaaltransductie",
+    "segments": [
+        {
+            "type": "info",
+            "title": "Effect van tekort aan oefenmaterialen op studenten",
+            "text": "**Door gebrek aan oefenmateriaal stapelt lesstof zich op** bij studenten buiten contacturen, wat leidt tot **intensief studeren vlak voor tentamens**. Deze piek in studieactiviteit, ge\u00EFllustreerd in de afbeelding, **veroorzaakt stress**, **belemmert effectief leren** en **verlaagt slagingskansen**.",
+            "image": "piek_voor_tentamen.png"
+        },
+        {
+            "type": "question",
+            "question": "Noem drie negatieve gevolgen die studenten kunnen ervaren door de afwezigheid van oefenmaterialen tijdens een vak.",
+            "answer": "De afwezigheid van oefenmaterialen tijdens een vak kan leiden tot stress (1 punt), belemmering van effectief leren (1 punt) en lagere slagingskansen (1 punt)."
+        }
+    ]
+}
