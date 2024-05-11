@@ -73,10 +73,7 @@ class OverviewPage:
         progress_count = self.db_dal.fetch_progress_counter(module, user_doc)
         
         for index in topic_segment_indexes:
-            print(index)
-            print(f"Hier begint de progress count: {progress_count}")
-            print(f"De waarde voor deze index {progress_count.get(index, None)}")
-            if progress_count.get(index, None) == None:
+            if progress_count.get(str(index), None) == None:
                 return False
         
         return True

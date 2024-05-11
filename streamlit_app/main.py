@@ -407,9 +407,6 @@ def initialise_learning_page():
         else:
             render_learning_explanation()
     elif st.session_state.segment_index == 100_000: # if we are at the final screen
-        if st.session_state.selected_module.startswith("Oefententamen"):
-            render_oefententamen_final_page()
-        else:
             render_final_page()
     else:
         # Select the segment (with contents) that corresponds to the saved index where the user left off
@@ -440,7 +437,6 @@ def render_final_page():
         with mid_col:
             st.subheader("Feedbackoverzicht")
             st.write("Voor een overzicht van je gemaakte vragen moet je eerst vragen maken 🙃")
-            st.write("Door op de knop hieronder te drukken kan je terug naar het begin.")
             st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
         exit()
 
@@ -449,11 +445,11 @@ def render_final_page():
         score_percentage = int(total_score / possible_score * 100)
         st.balloons()
         with mid_col:
-            st.markdown(f'<p style="font-size: 30px;"><strong>Score: {total_score}/{possible_score} ({score_percentage} %) </strong></p>', unsafe_allow_html=True)
+            st.title('Feedbackoverzicht')
+            st.markdown(f'<p style="font-size: 30px;"><strong>Eindscore: {total_score}/{possible_score} ({score_percentage} %) </strong></p>', unsafe_allow_html=True)
             st.markdown('---')
             show_feedback_overview()
-            st.write("Door op terug naar het begin te drukken, worden ook al je antwoorden gewist.")
-            st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
+            st.button("Terug naar begin en wis feedback", on_click=reset_segment_index_and_feedback, use_container_width=True)
 
 
         # otherwise the progress bar and everything will get rendered
@@ -487,6 +483,7 @@ def get_feedback_questions_from_db():
                             
     return questions
 
+
 def show_feedback_overview():
     questions = get_feedback_questions_from_db()
     for question in questions:
@@ -496,11 +493,13 @@ def show_feedback_overview():
         else:
             render_mc_feedback(question)
         st.markdown("---")
+
+
 def render_oefententamen_final_page():
     with mid_col:
         st.markdown('<p style="font-size: 30px;"><strong>Einde oefententamen 🎓 </strong></p>', unsafe_allow_html=True)
         st.write("Klaar! Hoe ging het?")
-        st.button("Terug naar begin", on_click=reset_segment_index, use_container_width=True)
+        st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
     exit()
 
 
@@ -1142,14 +1141,14 @@ def determine_if_to_initialise_database():
     if not user_exists:
         db.users_2.insert_one({"username": st.session_state.username})
 
-    # if st.session_state.currently_testing:
-    #     if 'reset_db' not in st.session_state:
-    #         st.session_state.reset_db = True
+    if st.session_state.currently_testing:
+        if 'reset_db' not in st.session_state:
+            st.session_state.reset_db = True
         
-    #     if st.session_state.reset_db:
-    #         st.session_state.reset_db = False
-    #         initialise_database()
-    #         return
+        if st.session_state.reset_db:
+            st.session_state.reset_db = False
+            initialise_database()
+            return
 
 
     user = db.users_2.find_one({"username": st.session_state.username})
