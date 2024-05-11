@@ -1,0 +1,355 @@
+{
+    "module_name": "NAF_1",
+    "segments": [
+        {
+            "type": "theory",
+            "title": "Inleiding tot Systematische Anatomie",
+            "text": "Systematische anatomie is de **discipline** die zich richt op de **bestudering van de positie van structuren en de locatie van organen en systemen** in het menselijk lichaam.",
+            "image": null,
+            "tag": "2.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het primaire doel van systematische anatomie in de medische wetenschap?",
+            "answer": "Het primaire doel van systematische anatomie is de bestudering van de positie van structuren en de locatie van organen en systemen (1 punt) in het menselijk lichaam.",
+            "tag": "2.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Orgaansystemen in de Praktijk",
+            "text": "De **practicumcomponent** van systematische anatomie omvat het onderzoek van verschillende **orgaansystemen**, waaronder het **hart** en de **longen**, het **spijsverteringsstelsel**, de **nieren met urinewegen**, **voortplantingsorganen** en het **bewegingsapparaat**.",
+            "image": null,
+            "tag": "2.1.2"
+        },
+        {
+            "type": "question",
+            "question": "Welke orgaansystemen worden typisch onderzocht in de practicumcomponent van systematische anatomie?",
+            "answer": "In de practicumcomponent van systematische anatomie worden typisch het hart en de longen (1 punt), het spijsverteringsstelsel (1 punt), de nieren met urinewegen (1 punt), voortplantingsorganen (1 punt) en het bewegingsapparaat (1 punt) onderzocht.",
+            "tag": "2.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Introductie Anatomische Terminologie",
+            "text": "Anatomische terminologie is essentieel voor het begrijpen van lichaamsstructuren en -functies, waarbij een **introductie vaak gegeven wordt via het rattenbrein**. Deze kennis wordt vervolgens verder toegespitst op de **humane anatomie** om de complexiteit van het menselijk lichaam te begrijpen.",
+            "image": null,
+            "tag": "2.2.1"
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt het begrijpen van anatomische terminologie via het rattenbrein bij aan de kennis van humane anatomie?",
+            "answer": "Het begrijpen van anatomische terminologie via het rattenbrein dient als een introductie (1 punt) die de basis legt voor het begrijpen van de complexiteit van het menselijk lichaam (1 punt) door overeenkomsten in lichaamsstructuren en -functies (1 punt).",
+            "tag": "2.2.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Relatie Anatomie en Embryologie",
+            "text": "Het begrijpen van de anatomie gaat hand in hand met inzicht in de embryologie. Kennis van embryologie biedt een waardevol perspectief op de **ontwikkeling van het volwassen lichaam**, vanuit de vroegste stadia van de groei.",
+            "image": null,
+            "tag": "2.2.2"
+        },
+        {
+            "type": "question",
+            "question": "Op welke manier biedt kennis van embryologie een waardevol perspectief op de ontwikkeling van het volwassen lichaam?",
+            "answer": "Kennis van embryologie biedt inzicht in de ontwikkeling van het volwassen lichaam vanuit de vroegste stadia van de groei (1 punt), wat essentieel is voor het begrijpen van de anatomie en de complexe lichaamsstructuren (1 punt).",
+            "tag": "2.2.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Ontwikkelingsbiologie",
+            "text": "Ontwikkelingsbiologie omvat een **breder spectrum dan embryologie**, het bestudeert de ontwikkeling van organismen vanaf **bevruchting tot geboorte en daarbuiten**, inclusief de postnatale ontwikkeling en regeneratieprocessen.",
+            "image": null,
+            "tag": "2.2.3"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen ontwikkelingsbiologie en embryologie, en wat omvat ontwikkelingsbiologie?",
+            "answer": "Ontwikkelingsbiologie omvat een breder spectrum dan embryologie (1 punt) omdat het niet alleen de ontwikkeling van organismen vanaf bevruchting tot geboorte bestudeert, maar ook de postnatale ontwikkeling en regeneratieprocessen (1 punt).",
+            "tag": "2.2.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Eerste week van ontwikkeling",
+            "text": "De **eerste week van ontwikkeling** omvat **ovulatie**, **bevruchting**, **zygootdeling**, **morula** formatie en **innesteling** in de baarmoederwand.",
+            "image": null,
+            "tag": "2.3.1"
+        },
+        {
+            "type": "question",
+            "question": "Welke gebeurtenissen vinden plaats tijdens de eerste week van embryonale ontwikkeling en wat is hun volgorde?",
+            "answer": "Tijdens de eerste week van embryonale ontwikkeling vinden ovulatie (1 punt), bevruchting (1 punt), zygootdeling (1 punt), morula formatie (1 punt) en innesteling in de baarmoederwand (1 punt) plaats, in deze volgorde.",
+            "tag": "2.3.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Vorming van de embryoblast",
+            "text": "De **embryoblast** ontwikkelt zich verder door splitsing in de **hypoblast** en **epiblast**, wat resulteert in een **tweelaagse kiemschijf**.",
+            "image": null,
+            "tag": "2.3.2"
+        },
+        {
+            "type": "question",
+            "question": "Hoe ontstaat de tweelaagse kiemschijf en uit welke twee lagen bestaat deze?",
+            "answer": "De tweelaagse kiemschijf ontstaat door de splitsing van de embryoblast (1 punt) in de hypoblast (1 punt) en epiblast (1 punt).",
+            "tag": "2.3.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Amnionholte en dooierzak",
+            "text": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de **amnionholte** en **dooierzak**, belangrijk voor de verdere ontwikkeling van het embryo.",
+            "image": null,
+            "tag": "2.3.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke twee structuren ontwikkelen zich parallel aan de vorming van de tweelaagse kiemschijf en wat is hun belang voor de embryonale ontwikkeling?",
+            "answer": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de amnionholte (1 punt) en dooierzak (1 punt), die belangrijk zijn voor de verdere ontwikkeling van het embryo (1 punt).",
+            "tag": "2.3.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Drielaagse kiemschijf",
+            "text": "De **tweelaagse kiemschijf** transformeert naar een **drielaagse kiemschijf** met de vorming van de drie primaire kiemlagen: **ectoderm**, **mesoderm**, en **endoderm**.",
+            "image": null,
+            "tag": "2.3.4"
+        },
+        {
+            "type": "question",
+            "question": "Welke transformatie ondergaat de tweelaagse kiemschijf en welke drie primaire kiemlagen worden gevormd?",
+            "answer": "De tweelaagse kiemschijf transformeert naar een drielaagse kiemschijf (1 punt) met de vorming van de kiemlagen ectoderm (1 punt), mesoderm (1 punt), en endoderm (1 punt).",
+            "tag": "2.3.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Ontwikkeling van orgaansystemen",
+            "text": "Elk van de kiemlagen draagt bij aan de **ontwikkeling van orgaansystemen**. Het **ectoderm** is verantwoordelijk voor de vorming van het zenuwstelsel en de huid, het **mesoderm** voor onder andere spieren, botten en het circulatiesysteem, en het **endoderm** voor de vorming van interne organen zoals de longen en de lever.",
+            "image": null,
+            "tag": "2.3.5"
+        },
+        {
+            "type": "question",
+            "question": "Hoe dragen de verschillende kiemlagen bij aan de ontwikkeling van orgaansystemen en geef voorbeelden van wat elk van hen vormt?",
+            "answer": "Het ectoderm draagt bij aan de vorming van het zenuwstelsel en de huid (1 punt), het mesoderm is verantwoordelijk voor onder andere de spieren, botten en het circulatiesysteem (1 punt), en het endoderm zorgt voor de vorming van interne organen zoals de longen en de lever (1 punt).",
+            "tag": "2.3.5",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Chemische en Biologische Hi\u00ebrarchie",
+            "text": "De **chemische en biologische hi\u00ebrarchie** beschrijft de organisatie van materie van eenvoudige **moleculen** tot complexe **organismen**. Op elk niveau van deze hi\u00ebrarchie vinden specifieke interacties en processen plaats die van essentieel belang zijn voor het leven.",
+            "image": null,
+            "tag": "2.4.1"
+        },
+        {
+            "type": "question",
+            "question": "Kunt u de chemische en biologische hi\u00ebrarchie beschrijven en uitleggen hoe deze bijdraagt aan de complexiteit van organismen?",
+            "answer": "De chemische en biologische hi\u00ebrarchie beschrijft de organisatie van materie van eenvoudige moleculen (1 punt) tot complexe organismen (1 punt), waarbij op elk niveau specifieke interacties en processen plaatsvinden (1 punt) die essentieel zijn voor het leven (1 punt).",
+            "tag": "2.4.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Anatomische Assen en Vlakken",
+            "text": "De **anatomische assen en vlakken** zijn referentiepunten die gebruikt worden om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven. De **frontale as** verdeelt het lichaam in voor- en achterkant, de **sagittale as** in links en rechts, en de **transversale as** in boven- en onderkant. Deze assen zijn cruciaal voor het begrijpen van anatomische termen en medische beeldvorming.",
+            "image": null,
+            "tag": "2.4.2"
+        },
+        {
+            "type": "question",
+            "question": "Hoe worden de anatomische assen gebruikt om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven en waarom zijn deze belangrijk bij medische beeldvorming?",
+            "answer": "De anatomische assen, waaronder de frontale as (1 punt) die het lichaam in voor- en achterkant verdeelt, de sagittale as (1 punt) in links en rechts, en de transversale as (1 punt) in boven- en onderkant, worden gebruikt als referentiepunten om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven (1 punt) en zijn cruciaal voor het begrijpen van anatomische termen en medische beeldvorming (1 punt).",
+            "tag": "2.4.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Anatomische Ori\u00ebntatie",
+            "text": "Anatomische ori\u00ebntatie omvat termen zoals **craniaal** (richting het hoofd), **caudaal** (richting de staart), **mediaal** (richting het midden van het lichaam), **lateraal** (weg van het midden van het lichaam), **proximaal** (dichter bij de romp) en **distaal** (verder van de romp). Deze termen zijn essentieel voor het nauwkeurig beschrijven van locaties op het lichaam en voor klinische communicatie.",
+            "image": null,
+            "tag": "2.4.3"
+        },
+        {
+            "type": "question",
+            "question": "Kunt u de anatomische termen craniaal, caudaal, mediaal, lateraal, proximaal, en distaal uitleggen in de context van hun belang voor klinische communicatie?",
+            "answer": "Anatomische ori\u00ebntatietermen zoals craniaal (richting het hoofd) (1 punt), caudaal (richting de staart) (1 punt), mediaal (richting het midden van het lichaam) (1 punt), lateraal (weg van het midden van het lichaam) (1 punt), proximaal (dichter bij de romp) (1 punt), en distaal (verder van de romp) (1 punt) zijn essentieel voor het nauwkeurig beschrijven van locaties op het lichaam en voor klinische communicatie (1 punt).",
+            "tag": "2.4.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Orgaansystemen",
+            "text": "Het menselijk lichaam bestaat uit **elf gedefinieerde orgaansystemen**, waaronder het skelet-, spier-, zenuw- en circulatiesysteem. Deze systemen werken samen om de verschillende functies van het lichaam te ondersteunen en te reguleren. De interactie tussen deze systemen is cruciaal voor de homeostase en algehele gezondheid.",
+            "image": null,
+            "tag": "2.4.4"
+        },
+        {
+            "type": "question",
+            "question": "Hoe interacteren de elf gedefinieerde orgaansystemen van het menselijk lichaam met elkaar en welke rol spelen ze in het handhaven van homeostase en gezondheid?",
+            "answer": "De elf gedefinieerde orgaansystemen van het menselijk lichaam, zoals het skelet-, spier-, zenuw- en circulatiesysteem (1 punt), werken samen (1 punt) om de verschillende functies van het lichaam te ondersteunen en te reguleren (1 punt), waarbij hun interactie cruciaal is voor de homeostase (1 punt) en algehele gezondheid (1 punt).",
+            "tag": "2.4.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Huidorgaansysteem",
+            "text": "Het **huidorgaansysteem** omvat de **huid**, **haren**, **klieren** en hun derivaten. Het speelt een essenti\u00eble rol in bescherming, temperatuurregulatie en zintuiglijke waarneming.",
+            "image": null,
+            "tag": "2.5.1"
+        },
+        {
+            "type": "question",
+            "question": "Welke componenten vallen onder het huidorgaansysteem en welke essenti\u00eble rollen vervult het?",
+            "answer": "Het huidorgaansysteem omvat de huid (1 punt), haren (1 punt), klieren en hun derivaten (1 punt). Het speelt een essenti\u00eble rol in bescherming (1 punt), temperatuurregulatie (1 punt) en zintuiglijke waarneming (1 punt).",
+            "tag": "2.5.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Skelet",
+            "text": "Het **skelet** kan worden verdeeld in twee hoofdonderdelen: het **axiale skelet**, waaronder de wervelkolom valt, en het **appendiculair skelet**, dat zich richt op de extremiteiten zoals armen en benen.",
+            "image": null,
+            "tag": "2.5.2"
+        },
+        {
+            "type": "question",
+            "question": "Hoe wordt het skelet verdeeld en welk deel van het skelet omvat de wervelkolom?",
+            "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt). De wervelkolom valt onder het axiale skelet (1 punt).",
+            "tag": "2.5.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Gewrichten",
+            "text": "**Gewrichten** zorgen voor **beweeglijkheid** en vormen verbindingen tussen botten. Een specifiek type is het **synoviale gewricht**, dat soepele beweging tussen aangrenzende botten mogelijk maakt.",
+            "image": null,
+            "tag": "2.5.3"
+        },
+        {
+            "type": "question",
+            "question": "Wat is de functie van gewrichten en wat maakt synoviale gewrichten specifiek?",
+            "answer": "Gewrichten zorgen voor beweeglijkheid (1 punt) en vormen verbindingen tussen botten (1 punt). Synoviale gewrichten maken soepele beweging tussen aangrenzende botten mogelijk (1 punt).",
+            "tag": "2.5.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Spieren",
+            "text": "Spieren zijn verantwoordelijk voor beweging en houding, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft. Spieren werken samen als **agonisten**, **synergisten** of **antagonisten** om bewegingen uit te voeren.",
+            "image": null,
+            "tag": "2.5.4"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de functies van spieren en hoe worden deze gecategoriseerd in termen van hun rollen bij bewegingen?",
+            "answer": "Spieren zijn verantwoordelijk voor beweging en houding (1 punt), en elke spier heeft een origo (beginpunt) en een insertie (eindpunt) (1 punt). Spieren werken samen als agonisten, synergisten of antagonisten om bewegingen uit te voeren (1 punt).",
+            "tag": "2.5.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Bewegingsapparaat",
+            "text": "Het **bewegingsapparaat** bestaat uit het **skelet**, **spieren** en **gewrichten**, ondersteund door **vascularisatie** (bloedvoorziening) en **zenuwsturing** (innervatie) voor co\u00f6rdinatie en controle.",
+            "image": null,
+            "tag": "2.5.5"
+        },
+        {
+            "type": "question",
+            "question": "Uit welke onderdelen bestaat het bewegingsapparaat en door welke systemen wordt het ondersteund?",
+            "answer": "Het bewegingsapparaat bestaat uit het skelet (1 punt), spieren (1 punt) en gewrichten (1 punt), ondersteund door vascularisatie (bloedvoorziening) (1 punt) en zenuwsturing (innervatie) voor co\u00f6rdinatie en controle (1 punt).",
+            "tag": "2.5.5",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Bewegingsvrijheid",
+            "text": "**Bewegingsvrijheid** verwijst naar de mogelijkheden van rotaties en translaties binnen verschillende gewrichtstypen. Elk gewrichtstype heeft zijn eigen unieke set van **bewegingsmogelijkheden**.",
+            "image": null,
+            "tag": "2.5.6"
+        },
+        {
+            "type": "question",
+            "question": "Wat betekent bewegingsvrijheid in de context van gewrichten en hoe verschilt deze tussen verschillende gewrichtstypen?",
+            "answer": "Bewegingsvrijheid verwijst naar de mogelijkheden van rotaties en translaties binnen verschillende gewrichtstypen (1 punt). Elk gewrichtstype heeft zijn eigen unieke set van bewegingsmogelijkheden (1 punt).",
+            "tag": "2.5.6",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Vrijheidsgraden van beweging",
+            "text": "Gewrichten bieden verschillende **vrijheidsgraden van beweging**, waaronder **rotaties** en **translaties** in verschillende vlakken. Dit bepaalt de manier waarop we onze lichaamsdelen kunnen bewegen.",
+            "image": null,
+            "tag": "2.6.1"
+        },
+        {
+            "type": "question",
+            "question": "Welke types van beweging worden geboden door de vrijheidsgraden van gewrichten?",
+            "answer": "De vrijheidsgraden van gewrichten bieden rotaties (1 punt) en translaties (1 punt) in verschillende vlakken.",
+            "tag": "2.6.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Gewrichtstypen",
+            "text": "Er bestaan verschillende **gewrichtstypen**, zoals het **kogelgewricht** dat beweging in alle richtingen toestaat, het **scharniergewricht** dat voornamelijk beweging in \u00e9\u00e9n vlak mogelijk maakt, en het **rolgewricht** dat rotatie rond \u00e9\u00e9n as toelaat.",
+            "image": null,
+            "tag": "2.6.2"
+        },
+        {
+            "type": "question",
+            "question": "Hoe verschillen een kogelgewricht, scharniergewricht en rolge-wricht van elkaar qua toegestane bewegingen?",
+            "answer": "Een kogelgewricht staat beweging in alle richtingen toe (1 punt), een scharniergewricht maakt voornamelijk beweging in \u00e9\u00e9n vlak mogelijk (1 punt), en een rolge-wricht laat rotatie rond \u00e9\u00e9n as toe (1 punt).",
+            "tag": "2.6.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Bewegingsbeperkingen",
+            "text": "**Bewegingsbeperkingen** worden be\u00efnvloed door factoren zoals **weke delen** (spieren, ligamenten, en pezen) en de **botstructuur** van het gewricht. Deze beperkingen zijn cruciaal voor het voorkomen van letsel.",
+            "image": null,
+            "tag": "2.6.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke factoren be\u00efnvloeden bewegingsbeperkingen van gewrichten en hoe dragen deze bij aan het voorkomen van letsel?",
+            "answer": "Bewegingsbeperkingen worden be\u00efnvloed door weke delen zoals spieren, ligamenten en pezen (1 punt), en door de botstructuur van het gewricht (1 punt), wat cruciaal is voor het voorkomen van letsel (1 punt).",
+            "tag": "2.6.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Specifieke bewegingen",
+            "text": "Gewrichten stellen ons in staat specifieke bewegingen uit te voeren zoals **flexie** (buigen), **extensie** (strekken), **abductie** (wegvoeren van de middenlijn), **adductie** (naar de middenlijn toe bewegen), en verschillende **rotaties**.",
+            "image": null,
+            "tag": "2.6.4"
+        },
+        {
+            "type": "question",
+            "question": "Welke specifieke bewegingen maken gewrichten mogelijk en hoe worden ze gedefinieerd?",
+            "answer": "Gewrichten maken specifieke bewegingen mogelijk zoals flexie, wat buigen is (1 punt), extensie, wat strekken is (1 punt), abductie, wat wegvoeren van de middenlijn is (1 punt), adductie, wat naar de middenlijn toe bewegen is (1 punt), en verschillende rotaties (1 punt).",
+            "tag": "2.6.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Ontwikkeling en anatomische positionering",
+            "text": "De **ontwikkeling** en **anatomische positionering** van gewrichten zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen, wat bijdraagt aan de uiteindelijke vorm en functie van het bewegingsapparaat.",
+            "image": null,
+            "tag": "2.6.5"
+        },
+        {
+            "type": "question",
+            "question": "Op welke manier be\u00efnvloeden de ontwikkeling en anatomische positionering van gewrichten de uiteindelijke vorm en functie van het bewegingsapparaat?",
+            "answer": "De ontwikkeling en anatomische positionering van gewrichten, zoals be\u00efnvloed door processen als de embryonale draaiing van ledematen, dragen bij aan de uiteindelijke vorm en functie van het bewegingsapparaat (1 punt).",
+            "tag": "2.6.5",
+            "image": null
+        }
+    ]
+}

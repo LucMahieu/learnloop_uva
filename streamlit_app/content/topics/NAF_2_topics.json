@@ -1,0 +1,170 @@
+{
+    "module_name": "NAF_2",
+    "topics": [
+        {
+            "topic_title": "Cardiovasculair systeem",
+            "segment_indexes": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "topic_title": "Bouw van het vaatstelsel",
+            "segment_indexes": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ]
+        },
+        {
+            "topic_title": "Bloedsomlopen",
+            "segment_indexes": [
+                10,
+                11,
+                12,
+                13
+            ]
+        },
+        {
+            "topic_title": "Thorax en hartlocatie",
+            "segment_indexes": [
+                14,
+                15,
+                16,
+                17
+            ]
+        },
+        {
+            "topic_title": "Pulmonale circulatie",
+            "segment_indexes": [
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ]
+        },
+        {
+            "topic_title": "Systemische circulatie en lymfestelsel",
+            "segment_indexes": [
+                24,
+                25,
+                26,
+                27
+            ]
+        },
+        {
+            "topic_title": "Spijsverteringsstelsel",
+            "segment_indexes": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+            ]
+        },
+        {
+            "topic_title": "Ademhalingstelsel",
+            "segment_indexes": [
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
+            ]
+        },
+        {
+            "topic_title": "Lateraliteit en orgaanpositie",
+            "segment_indexes": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+            ]
+        },
+        {
+            "topic_title": "Urinewegstelsel",
+            "segment_indexes": [
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61
+            ]
+        },
+        {
+            "topic_title": "Voortplantingssysteem",
+            "segment_indexes": [
+                62,
+                63,
+                64,
+                65,
+                66,
+                67
+            ]
+        },
+        {
+            "topic_title": "Hormonaal systeem",
+            "segment_indexes": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73
+            ]
+        },
+        {
+            "topic_title": "Lichaamsholten",
+            "segment_indexes": [
+                74,
+                75,
+                76,
+                77,
+                78,
+                79
+            ]
+        },
+        {
+            "topic_title": "Pneumothorax",
+            "segment_indexes": [
+                80,
+                81,
+                82,
+                83,
+                84,
+                85
+            ]
+        },
+        {
+            "topic_title": "Peritoneale aandoeningen",
+            "segment_indexes": [
+                86,
+                87,
+                88,
+                89
+            ]
+        }
+    ]
+}
