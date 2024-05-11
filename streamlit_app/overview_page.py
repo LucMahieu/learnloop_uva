@@ -4,13 +4,11 @@ import base64
 from io import BytesIO
 import json
 import db_config
-from data_access_layer import DatabaseAccess, ContentAccess
+from utils import Utils
 
 class OverviewPage:
     def __init__(self, module_title) -> None:
         self.db = db_config.connect_db() # database connection
-        self.db_dal = DatabaseAccess()
-        self.cont_dal = ContentAccess()
         self.module_title = module_title
 
         
@@ -47,7 +45,7 @@ class OverviewPage:
             st.write("\n")
 
 
-    def start_learning_page(self, topic_index):
+    def start_learning_page(self):
         """
         Updates the segment index and calls the function to render the correct page
         corresponding to the selected topic.
@@ -56,7 +54,7 @@ class OverviewPage:
         segment_index = self.cont_dal.get_index_first_segment_in_topic(topic_index)
 
         # Change the segment index to the index corresponding to the selected topic
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {f"progress.{st.session_state.selected_module}.learning.segment_index": segment_index}}
         )
@@ -106,8 +104,7 @@ class OverviewPage:
 
             with cols[2]:
                 # Button that starts the learning phase at the first segment of this topic
-                st.button("Start", key=f"start_{topic_index + 1}", on_click=self.start_learning_page, args=(topic_index, ), use_container_width=True)
-
+                st.button("Start", key=f"start_{self.topic_index + 1}", on_click=self.start_learning_page, use_container_width=True)
 
             with container.expander("Theorie & vragen"):
                 for st.session_state.segment_index in topic['segment_indexes']:
