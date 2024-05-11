@@ -10,6 +10,7 @@ import base64
 from overview_page import OverviewPage
 import db_config
 from data_access_layer import DatabaseAccess, ContentAccess
+from datetime import datetime
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -351,12 +352,6 @@ def render_student_answer():
     st.markdown(student_answer, unsafe_allow_html=True)
 
 
-def fetch_segment_index():
-    """Fetch the last segment index from db"""
-    user_doc = db.users_2.find_one({"username": st.session_state.username})
-    return user_doc["progress"][st.session_state.selected_module][st.session_state.selected_phase]["segment_index"]
-
-
 def render_start_button():
     """Start button at the beginning of a phase that the user never started."""
     st.button("Start", use_container_width=True, on_click=change_segment_index, args=(1,))
@@ -386,7 +381,7 @@ def initialise_learning_page():
     Sets all session states to correspond with database.
     """
     # Fetch the last segment index from db
-    st.session_state.segment_index = fetch_segment_index()
+    st.session_state.segment_index = cont_dal.fetch_segment_index()
 
     if st.session_state.segment_index == -1: # If user never started this phase
         if st.session_state.selected_module.startswith("Oefententamen"):
@@ -461,17 +456,34 @@ def render_warning():
     st.button("Nee", on_click=reset_progress, use_container_width=True)
     st.button("Ja", use_container_width=True, on_click=set_warned_true)
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
-    
 
-def one_up_progress_counter():
+
+def progress_date_tracking_format():
+    """
+    The date format for the progress counter that counts the number of times
+    a user visited a segment or answered a question, through dates as entries.
+    It also adds the first entry directly.
+    """
+    date = datetime.utcnow().date()
+    return {"type": cont_dal.get_segment_type(), "entries": [date.isoformat()]}
+
+
+def add_date_to_progress_counter():
     """
     Counts how many times a person answered the current question and updates database.
-    """   
+    """
     module = st.session_state.selected_module.replace('_', ' ')
-    progress_count = db_dal.fetch_progress_counter(module)[str(st.session_state.segment_index)]
+    user_doc = db_dal.find_user_doc()
+    segment_progress_count = db_dal.fetch_progress_counter(module, user_doc)[str(st.session_state.segment_index)]
     
-    # Add one to count and update counter
-    db_dal.update_progress_counter(module, progress_count + 1)
+    # Initialise or update date format
+    if segment_progress_count is None:
+        segment_progress_count = progress_date_tracking_format()
+    else:
+        date = datetime.utcnow().date()
+        segment_progress_count['entries'].append(date.isoformat())
+
+    db_dal.update_progress_counter_for_segment(module, segment_progress_count)
 
 
 def render_learning_page():
@@ -490,7 +502,7 @@ def render_learning_page():
         # Determine what type of segment to display and render interface accordingly
         if st.session_state.segment_content['type'] == 'theory':
             render_info()
-            one_up_progress_counter()
+            add_date_to_progress_counter()
             render_navigation_buttons()
 
 
@@ -513,7 +525,7 @@ def render_learning_page():
                                 het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
                     evaluate_answer()
-                    one_up_progress_counter()
+                    add_date_to_progress_counter()
                                 
                 render_feedback()
                 add_to_practice_phase()
@@ -611,7 +623,7 @@ def initialise_practice_page():
     if it's the first time."""
 
     # Fetch the last segment index from db
-    st.session_state.segment_index = fetch_segment_index()
+    st.session_state.segment_index = cont_dal.fetch_segment_index()
 
     if st.session_state.segment_index == -1:
         fetch_ordered_segment_sequence()
@@ -737,7 +749,6 @@ def render_selected_page():
         render_learning_page()
     if st.session_state.selected_phase == 'practice':
         render_practice_page()
-    
 
 
 def initialise_session_states():
@@ -816,30 +827,6 @@ def initialise_session_states():
 
 def render_logo():
     st.image('./content/images/logo.png', width=100)
-
-
-def determine_modules():
-    """	
-    Function to determine which names of modules to display in the sidebar 
-    based on the JSON module files.	
-    """
-    # Determine the modules to display in the sidebar
-    if st.session_state.modules == []:
-        # Read the modules from the modules directory
-        modules = os.listdir("./content/modules")
-
-        # Remove the json extension and replace the underscores with spaces
-        modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-
-        # Hard code the SCJ demo name to be removed from list and to add it back after sorting line TODO: remove after SCJ demo
-        # for module in modules.copy():
-        #     if module == "SCJ Demo":
-        #         modules.remove(module)
-        #         scj_module = module
-        
-        modules.sort(key=lambda module: int(module.split(" ")[1]))
-        # modules.insert(0, scj_module)
-        st.session_state.modules = modules
 
 
 def upload_feedback():
@@ -980,9 +967,9 @@ def create_empty_progress_dict(module):
     cont_dal.load_page_content_of_module_in_session_state(module)
 
     number_of_segments = len(st.session_state.page_content['segments'])
-    print(f"Number of segments: {number_of_segments}")
     
-    empty_dict = {str(i): 0 for i in range(number_of_segments)}
+    # Create a dictionary with indexes (strings) as key and None as value
+    empty_dict = {str(i): None for i in range(number_of_segments)}
     
     return empty_dict
 
@@ -1020,7 +1007,8 @@ def determine_if_to_initialise_database():
 
         # Check if the user doc contains the dict in which the
         # is saved how many times a question is made by user
-        if db_dal.fetch_progress_counter(module) is None:
+        user_doc = db_dal.find_user_doc()
+        if db_dal.fetch_progress_counter(module, user_doc) is None:
             empty_dict = create_empty_progress_dict(module)
             db_dal.add_progress_counter(module, empty_dict)
 
@@ -1099,7 +1087,7 @@ if __name__ == "__main__":
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
-            determine_modules()
+            cont_dal.determine_modules()
         
         render_sidebar()
 

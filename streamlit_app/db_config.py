@@ -22,7 +22,7 @@ def connect_db():
     # Ping database to check if it's connected
     try:
         db.command("ping")
-        print("Connected to database")
+        # print("Connected to database")
     except Exception as e:
         print(f"Error: {e}")
     
