@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
-running_on_premise = False # Set to true if IP adres is allowed by Gerrit
+running_on_premise = True # Set to true if IP adres is allowed by Gerrit
 
 if running_on_premise:
     COSMOS_URI = os.getenv('COSMOS_URI')
