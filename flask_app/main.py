@@ -6,22 +6,12 @@ from pymongo import MongoClient
 import certifi
 import string
 import random
+import db_config
 
 load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
-
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
-
-if running_on_premise:
-    COSMOS_URI = os.getenv('COSMOS_URI')
-    db_client = MongoClient(COSMOS_URI, tlsCAFile=certifi.where())
-else:
-    MONGO_URI = os.getenv('MONGO_DB')
-    db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-
-db = db_client.LearnLoop
 
 # Make authentication instance for the flask app
 auth = OAuth(app)
@@ -37,7 +27,12 @@ auth.register(
 
 @app.route('/')
 def login():
-    redirect_uri = url_for('authorize', _external=True, _scheme='https')
+    if surf_test_env:
+        scheme = 'http'
+    else:
+        scheme = 'https'
+    
+    redirect_uri = url_for('authorize', _external=True, _scheme=scheme)
     return auth.surfconext.authorize_redirect(redirect_uri)
 
 
@@ -69,9 +64,20 @@ def authorize():
     nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
-    redirect_url = f'https://learnloop.datanose.nl/app?nonce={nonce}'
+    if surf_test_env:
+        url = 'http://localhost:8501/'
+    else:
+        url = 'https://learnloop.datanose.nl/'
+    
+    redirect_url = f'{url}app?nonce={nonce}'
+
     return redirect(redirect_url, code=302)
 
 
 if __name__=="__main__":
+    # Initialise run settings
+    use_mongodb = True
+    surf_test_env = True
+
+    db = db_config.connect_db(use_mongodb)
     app.run(host='0.0.0.0', port=3000)

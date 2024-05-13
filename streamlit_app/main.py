@@ -15,21 +15,14 @@ from datetime import datetime
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
 
-# Settings
-st.session_state.currently_testing = False # Turn on to reset db every time the webapp is loaded and minimize openai costs
-running_on_premise = True # Set to true if IP adres is allowed by Gerrit
-
-left_col, mid_col, right_col = st.columns([1, 3, 1])
-
 load_dotenv()
 
-openai_client = AzureOpenAI(
-   api_key=os.getenv("OPENAI_API_KEY"),  
-   api_version="2024-03-01-preview",
-   azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
-)
-
-db = db_config.connect_db()
+def connect_to_openai():
+    return AzureOpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),  
+    api_version="2024-03-01-preview",
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+    )
 
 def upload_progress():
     """
@@ -52,7 +45,7 @@ def upload_progress():
 
 def evaluate_answer():
     """Evaluates the answer of the student and returns a score and feedback."""
-    if st.session_state.currently_testing != True:
+    if use_dummy_openai_calls != True:
         
         # Create user prompt with the question, correct answer and student answer
         prompt = f"""Input:\n
@@ -379,7 +372,7 @@ def render_learning_explanation():
     """Renders explanation of learning phase if the user hasn't started with
     the current phase."""
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Leren 🌱</strong></p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 30px;"><strong>Leren 📖</strong></p>', unsafe_allow_html=True)
         # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
         st.write("In de leerfase word je op een interactieve manier door de concepten van een college heen geleid en krijg je **direct persoonlijke feedback** op open vragen. Vragen die je niet goed hebt, komen automatisch terug in 'Herhalen' 🔄.")
         render_start_button()
@@ -1059,7 +1052,7 @@ def render_sidebar():
             if not module.startswith('Oefententamen'):
                 with st.expander(module):
                     # Display buttons for the two types of phases per module
-                    render_page_button('Leren 🌱', module, phase='overview')
+                    render_page_button('Leren 📖', module, phase='overview')
                     render_page_button('Herhalen 🔄', module, phase='practice')
             elif module.startswith('Oefententamen'):
                 practice_exam_count += 1
@@ -1141,7 +1134,7 @@ def determine_if_to_initialise_database():
     if not user_exists:
         db.users_2.insert_one({"username": st.session_state.username})
 
-    if st.session_state.currently_testing:
+    if reset_user_doc:
         if 'reset_db' not in st.session_state:
             st.session_state.reset_db = True
         
@@ -1193,12 +1186,18 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./content/images/logo.png")
+        logo_base64 = convert_image_base64("./images/logo.png")
+
+        if surf_test_env:
+            href = "http://localhost:3000/"
+        else:
+            href = "https://learnloop.datanose.nl/"
+        
         html_content = f"""
         <div style='text-align: center; margin: 20px;'>
             <img src='data:image/png;base64,{logo_base64}' alt='Logo' style='max-width: 25%; height: auto; margin-bottom: 40px'>
             <h1 style='color: #333; margin-bottom: 20px'>{welcome_title}</h1>
-            <a href="https://learnloop.datanose.nl/" style="text-decoration: none;">
+            <a href={href} style="text-decoration: none;">
                 <button style='font-size:20px; border: none; color: white; padding: 10px 20px; \
                 text-align: center; text-decoration: none; display: block; width: 100%; margin: \
                 4px 0px; cursor: pointer; background-color: #4CAF50; border-radius: 12px;'>UvA Login</button>
@@ -1214,33 +1213,64 @@ def fetch_if_warned():
     return user_doc["warned"]
 
 
-if __name__ == "__main__":
-    # Create a mid column with margins in which everything one a 
-    # page is displayed (referenced to mid_col in functions)
-    left_col, mid_col, right_col = st.columns([1, 3, 1])
-
-    # Create data acces layer instance for the database
-    db_dal = DatabaseAccess()
-    cont_dal = ContentAccess()
-    
-    initialise_session_states()
-
-    if not running_on_premise:
-        st.session_state.username = "flower2960"
-
+def fetch_and_remove_nonce():
     if 'nonce' not in st.session_state:
         st.session_state.nonce = st.query_params.get('nonce', None)
         st.query_params.pop('nonce', None) # Remove the nonce from the url
 
-    if st.session_state.nonce is None and running_on_premise and not st.session_state.username:
+
+if __name__ == "__main__":
+    # ---------------------------------------------------------
+    # SETTINGS FOR TESTING:
+
+    # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
+    surf_test_env = True
+
+    # Reset db for current user every time the webapp is loaded
+    reset_user_doc = False
+
+    # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
+    st.session_state.use_mongodb = True
+
+    # Use dummy LLM feedback as response to save openai costs and time during testing
+    use_dummy_openai_calls = False
+
+    login_page = True
+
+    # Bypass authentication when testing so flask app doesnt have to run
+    skip_authentication = False
+    if skip_authentication:
+        login_page = True
+        st.session_state.username = "test_user_2"
+    # ---------------------------------------------------------
+
+    # Create a mid column with margins in which everything one a 
+    # page is displayed (referenced to mid_col in functions)
+    left_col, mid_col, right_col = st.columns([1, 3, 1])
+    
+    db_dal = DatabaseAccess()
+    cont_dal = ContentAccess()
+    db = db_config.connect_db(st.session_state.use_mongodb)
+
+    initialise_session_states()
+    openai_client = connect_to_openai()
+
+    fetch_and_remove_nonce()
+
+    # Only render login page if not testing
+    if login_page == True \
+        and st.session_state.nonce is None \
+        and st.session_state.use_mongodb == False \
+        and st.session_state.username is None:
         render_login_page()
+
+    # Fetch username through query param and invalidate nonce
     elif st.session_state.username is None:
         fetch_username()
         invalidate_nonce()
         st.rerun() # Needed, else it seems to get stuck here
-        
-    if st.session_state.username is None:
-        print("No username")
+
+    # Render the actual app
     else:
         # Determine the modules of the current course
         if st.session_state.modules == []:
@@ -1264,5 +1294,5 @@ if __name__ == "__main__":
 
             if st.session_state.warned == None:
                 st.session_state.warned = fetch_if_warned()
-            
+
             render_selected_page()

@@ -3,12 +3,12 @@ from PIL import Image
 import base64
 from io import BytesIO
 import json
-import db_config
+import db_config as db_config
 from data_access_layer import DatabaseAccess, ContentAccess
 
 class OverviewPage:
     def __init__(self, module_title) -> None:
-        self.db = db_config.connect_db() # database connection
+        self.db = db_config.connect_db(st.session_state.use_mongodb) # database connection
         self.db_dal = DatabaseAccess()
         self.cont_dal = ContentAccess()
         self.module_title = module_title

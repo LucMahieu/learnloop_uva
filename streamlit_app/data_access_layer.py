@@ -1,11 +1,11 @@
 import json
 import streamlit as st
-import db_config
+import db_config as db_config
 import os
 
 class ContentAccess:
     def __init__(self):
-        self.db = db_config.connect_db() # database connection
+        self.db = db_config.connect_db(st.session_state.use_mongodb) # database connection
         self.segments_list = None
         self.topics_list = None
         self.segment_index = None
@@ -119,7 +119,7 @@ class ContentAccess:
 
 class DatabaseAccess:
     def __init__(self):
-        self.db = db_config.connect_db()
+        self.db = db_config.connect_db(st.session_state.use_mongodb)
         self.users_collection_name = 'users_2'
 
     def fetch_all_documents(self):
