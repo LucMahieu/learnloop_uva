@@ -123,7 +123,9 @@ def render_feedback(feedback_field):
     score_percentage = score_to_percentage()
 
     # Determine color of box based on score percentage
-    if score_percentage > 75:
+    if score_percentage is None:
+        pass
+    elif score_percentage > 75:
         color = 'rgba(0, 128, 0, 0.2)'  # Green
     elif score_percentage > 49:
         color = 'rgba(255, 165, 0, 0.2)'  # Orange
