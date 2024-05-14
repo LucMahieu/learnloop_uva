@@ -1078,7 +1078,6 @@ def render_sidebar():
         for i in range(practice_exam_count):
             render_page_button(f'Oefententamen {i + 1} ✍🏽', f'Oefententamen {i + 1}', 'learning')
         st.session_state.questions_only = st.toggle("Alleen vragen displayen")
-        # st.session_state.questions_only = st.checkbox("Alleen vragen displayen", value=st.session_state.questions_only)
 
         render_feedback_form() # So users can give feedback
 
