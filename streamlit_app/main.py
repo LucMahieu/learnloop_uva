@@ -1062,6 +1062,9 @@ def render_sidebar():
         with image_col:
             render_logo()
         st.sidebar.title("Colleges")
+
+        st.session_state.questions_only = st.toggle("Alleen vragen tonen")
+        
         practice_exam_count = 0
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
@@ -1079,7 +1082,6 @@ def render_sidebar():
         # Render the practice exam buttons
         for i in range(practice_exam_count):
             render_page_button(f'Oefententamen {i + 1} ✍🏽', f'Oefententamen {i + 1}', 'learning')
-        st.session_state.questions_only = st.toggle("Alleen vragen displayen")
 
         render_feedback_form() # So users can give feedback
 
