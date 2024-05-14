@@ -222,26 +222,34 @@ def determine_phase_length():
 
 def change_segment_index(step_direction):
     """Change the segment index based on the direction of step (previous or next)."""
-    # Determine total length of module
     phase_length = determine_phase_length()
-    # 
-    if st.session_state.segment_index + step_direction in range(phase_length):
+
+    while True:
+        # Update segment index based on direction
         st.session_state.segment_index += step_direction
-    # If we are at the last page, we need to go to the final screen.
-    elif st.session_state.segment_index == phase_length - 1:
-        st.session_state.segment_index = 100_000
-    else:
-        st.session_state.segment_index = phase_length - 1
 
-    # Prevent evaluating aswer when navigating to the next or previous segment
+        # Ensure segment index stays within valid range
+        if st.session_state.segment_index < 0:
+            st.session_state.segment_index = 0
+            break
+        if st.session_state.segment_index >= phase_length:
+            st.session_state.segment_index = phase_length - 1
+            break
+        if st.session_state.segment_index == phase_length - 1:
+            st.session_state.segment_index = 100_000
+            break
+
+        # Load new segment content
+        st.session_state.segment_content = st.session_state.page_content['segments'][st.session_state.segment_index]
+
+        # Skip theory segments if questions_only is enabled
+        if not st.session_state.questions_only or st.session_state.segment_content['type'] != 'theory':
+            break
+
+    # Prevent evaluating answer when navigating to the next or previous segment
     st.session_state.submitted = False
-    
-    # Set the shuffled answers to None in case a new multiple choice question comes up
     st.session_state.shuffled_answers = None
-
-    # Update database with new index
     upload_progress()
-
 
 def render_navigation_buttons():
     """Render the navigation buttons that allows users to move between segments."""
@@ -567,6 +575,10 @@ def render_learning_page():
     with mid_col:
         render_progress_bar()
 
+        # Skip theory segment
+        if st.session_state.questions_only and st.session_state.segment_content['type'] == 'theory':
+            change_segment_index(1)
+            initialise_learning_page()
         # Determine what type of segment to display and render interface accordingly
         if st.session_state.segment_content['type'] == 'theory':
             render_info()
@@ -577,8 +589,9 @@ def render_learning_page():
         # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
         'answer' in st.session_state.segment_content):
+                
             if st.session_state.submitted:
-
+                
                 # Render image if present in the feedback
                 image_path = fetch_image_path()
                 if image_path:
@@ -971,6 +984,9 @@ def initialise_session_states():
     if 'shuffled_answers' not in st.session_state:
         st.session_state.shuffled_answers = None
 
+    if 'questions_only' not in st.session_state:
+        st.session_state.questions_only = False
+
 
 def render_logo():
     st.image('./content/images/logo.png', width=100)
@@ -1044,7 +1060,6 @@ def render_sidebar():
         with image_col:
             render_logo()
         st.sidebar.title("Colleges")
-
         practice_exam_count = 0
         # Display the modules in expanders in the sidebar
         for module in st.session_state.modules:
@@ -1062,9 +1077,11 @@ def render_sidebar():
         # Render the practice exam buttons
         for i in range(practice_exam_count):
             render_page_button(f'Oefententamen {i + 1} ✍🏽', f'Oefententamen {i + 1}', 'learning')
+        st.session_state.questions_only = st.toggle("Alleen vragen displayen")
+        # st.session_state.questions_only = st.checkbox("Alleen vragen displayen", value=st.session_state.questions_only)
 
         render_feedback_form() # So users can give feedback
-        
+
         st.sidebar.subheader("Extra Info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
 
