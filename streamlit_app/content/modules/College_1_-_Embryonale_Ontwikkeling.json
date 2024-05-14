@@ -4,43 +4,43 @@
         {
             "type": "theory",
             "title": "Inleiding tot systematische anatomie",
-            "text": "Systematische anatomie is de **discipline** die zich richt op de **bestudering van de positie van structuren en de locatie van organen en systemen** in het menselijk lichaam.",
+            "text": "Systematische anatomie is de discipline die zich richt op de indeling van het lichaam in systemen zoals het skelet, spieren, zenuwen, bloedvaten en organen.",
             "image": null,
             "tag": "2.1.1"
         },
         {
             "type": "theory",
             "title": "Relatie anatomie en embryologie",
-            "text": "Het begrijpen van de anatomie gaat hand in hand met inzicht in de embryologie. Kennis van embryologie biedt een waardevol perspectief op de **ontwikkeling van het volwassen lichaam**, vanuit de vroegste stadia van de groei.",
+            "text": "Het begrijpen van de anatomie gaat hand in hand met inzicht in de embryologie. Kennis van embryologie biedt een waardevol perspectief op de **ontwikkeling van het volwassen lichaam** en de humane anatomie.",
             "image": null,
             "tag": "2.2.2"
         },
         {
             "type": "theory",
-            "title": "Ontwikkelingsbiologie",
-            "text": "Ontwikkelingsbiologie omvat een **breder spectrum dan embryologie**, het bestudeert de ontwikkeling van organismen vanaf **bevruchting tot geboorte en daarbuiten**, inclusief de postnatale ontwikkeling en regeneratieprocessen.",
-            "image": null,
-            "tag": "2.2.3"
-        },
-        {
-            "type": "question",
-            "question": "Wat is het verschil tussen ontwikkelingsbiologie en embryologie?",
-            "answer": "Ontwikkelingsbiologie omvat een breder spectrum dan embryologie (1 punt) omdat het niet alleen de ontwikkeling van organismen vanaf bevruchting tot geboorte bestudeert, maar ook de postnatale ontwikkeling en regeneratieprocessen (1 punt).",
-            "tag": "2.2.3",
-            "image": null
-        },
-        {
-            "type": "theory",
             "title": "Eerste week van ontwikkeling",
-            "text": "De **eerste week van ontwikkeling** omvat **ovulatie**, **bevruchting**, **zygootdeling**, **morula** formatie en **innesteling** in de baarmoederwand.",
+            "text": "De **eerste week van ontwikkeling** omvat **ovulatie**, **bevruchting**, **zygootdeling**, **morula** formatie en **innesteling** (nidatie) in de baarmoederwand.",
             "image": null,
             "tag": "2.3.1"
         },
         {
             "type": "question",
             "question": "Welke gebeurtenissen vinden plaats tijdens de eerste week van embryonale ontwikkeling en wat is hun volgorde?",
-            "answer": "Tijdens de eerste week van embryonale ontwikkeling vinden ovulatie (1 punt), bevruchting (1 punt), zygootdeling (1 punt), morula formatie (1 punt) en innesteling in de baarmoederwand (1 punt) plaats, in deze volgorde.",
+            "answer": "Tijdens de eerste week van embryonale ontwikkeling vinden ovulatie (1 punt), bevruchting (1 punt), zygootdeling (1 punt), morula formatie (1 punt) en innesteling (ookwel nidatie) in de baarmoederwand (1 punt) plaats, in deze volgorde.",
             "tag": "2.3.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Vroege embryonale ontwikkeling",
+            "text": "De vroege embryonale ontwikkeling begint met een **oöcyt** die na bevruchting een **zygote** vormt. De zygote ondergaat een reeks **klievingsdelingen** waardoor het aantal cellen toeneemt: eerst 2 cellen, daarna 4 cellen, gevolgd door 8 cellen. Dit proces leidt tot de vorming van een **morula** (ongeveer 32 cellen), die vervolgens een gecompacteerde morula wordt en uiteindelijk verandert in een **blastocyst**.",
+            "image": null,
+            "tag": "3.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Beschrijf de stadia van de vroege embryonale ontwikkeling vanaf de zygote tot de blastocyst.",
+            "answer": "De vroege embryonale ontwikkeling omvat de volgende stadia: een zygote (1 punt) die klievingsdelingen ondergaat om meerdere cellen te vormen (1 punt), gevolgd door de morula (16/32 cellen) (1 punt) en uiteindelijk de blastocyst (1 punt).",
+            "tag": "3.1.1",
             "image": null
         },
         {
@@ -59,22 +59,22 @@
         },
         {
             "type": "theory",
-            "title": "Amnionholte en dooierzak",
-            "text": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de **amnionholte** en **dooierzak**, belangrijk voor de verdere ontwikkeling van het embryo.",
+            "title": "Amnionholte en dooierzakholte",
+            "text": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de **amnionholte** en **dooierzak**.",
             "image": null,
             "tag": "2.3.3"
         },
         {
             "type": "question",
-            "question": "Welke twee structuren ontwikkelen zich parallel aan de vorming van de tweelaagse kiemschijf en wat is hun belang voor de embryonale ontwikkeling?",
-            "answer": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de amnionholte (1 punt) en dooierzak (1 punt), die belangrijk zijn voor de verdere ontwikkeling van het embryo (1 punt).",
+            "question": "Welke twee structuren ontwikkelen zich parallel aan de vorming van de tweelaagse kiemschijf?",
+            "answer": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de amnionholte (1 punt) en dooierzak (1 punt).",
             "tag": "2.3.3",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Drielaagse kiemschijf",
-            "text": "De **tweelaagse kiemschijf** transformeert naar een **drielaagse kiemschijf** met de vorming van de drie primaire kiemlagen: **ectoderm**, **mesoderm**, en **endoderm**.",
+            "title": "Gastrulatie",
+            "text": "Gastrulatie is een proces waarbij de **tweelaagse kiemschijf** transformeert naar een **drielaagse kiemschijf** met de vorming van de drie primaire kiemlagen: **ectoderm**, **mesoderm**, en **endoderm**.",
             "image": null,
             "tag": "2.3.4"
         },
@@ -88,252 +88,637 @@
         {
             "type": "theory",
             "title": "Ontwikkeling van orgaansystemen",
-            "text": "Elk van de kiemlagen draagt bij aan de **ontwikkeling van orgaansystemen**. Het **ectoderm** is verantwoordelijk voor de vorming van het zenuwstelsel en de huid, het **mesoderm** voor onder andere spieren, botten en het circulatiesysteem, en het **endoderm** voor de vorming van interne organen zoals de longen en de lever.",
+            "text": "Elk van de kiemlagen draagt bij aan de **ontwikkeling van orgaansystemen**. Het **ectoderm** is verantwoordelijk voor de vorming van het zenuwstelsel en de huid, het **mesoderm** voor botten, bindweefsel, het hart- en vaatstelsel en het urogenitaal systeem en het **endoderm** voor de vorming van het epitheel van spijsverteringsklieren, maagdarmkanaal en luchtwegen.",
             "image": null,
             "tag": "2.3.5"
         },
         {
             "type": "question",
-            "question": "Hoe dragen de verschillende kiemlagen bij aan de ontwikkeling van orgaansystemen en geef voorbeelden van wat elk van hen vormt?",
-            "answer": "Het ectoderm draagt bij aan de vorming van het zenuwstelsel en de huid (1 punt), het mesoderm is verantwoordelijk voor onder andere de spieren, botten en het circulatiesysteem (1 punt), en het endoderm zorgt voor de vorming van interne organen zoals de longen en de lever (1 punt).",
+            "question": "Hoe draagt het ectoderm bij aan de ontwikkeling van orgaansystemen? Geef voorbeelden van wat het vormt.",
+            "answer": "Het ectoderm is verantwoordelijk voor de vorming van het zenuwstelsel (1 punt) en de huid (1 punt).",
+            "tag": "2.3.5",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt het mesoderm bij aan de ontwikkeling van orgaansystemen? Geef voorbeelden van wat het vormt.",
+            "answer": "Het mesoderm draagt bij aan de ontwikkeling van de botten (1 punt), het bindweefsel (1 punt), het hart- en vaatstelsel (1 punt) en het urogenitaal systeem (1 punt).",
+            "tag": "2.3.5",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Hoe draagt het endoderm bij aan de ontwikkeling van orgaansystemen? Geef voorbeelden van wat het vormt.",
+            "answer": "Het endoderm is betrokken bij de vorming van het epitheel van spijsverteringsklieren (1 punt), het maagdarmkanaal (1 punt) en de luchtwegen (1 punt).",
             "tag": "2.3.5",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Chemische en Biologische Hi\u00ebrarchie",
-            "text": "De **chemische en biologische hi\u00ebrarchie** beschrijft de organisatie van materie van eenvoudige **moleculen** tot complexe **organismen**. Op elk niveau van deze hi\u00ebrarchie vinden specifieke interacties en processen plaats die van essentieel belang zijn voor het leven.",
+            "title": "Plooivorming",
+            "text": "Tijdens de embryonale ontwikkeling doorlopen de kiembladen een complex proces van plooien. Aanvankelijk vormen de kiembladen een platte schijf. Het ectoderm, gelegen aan de buitenkant, begint zich over de randen te buigen omhoog, terwijl het endoderm naar binnen plooit, waardoor structuren zoals de spijsverteringsbuis beginnen te vormen. Het mesoderm, gelegen tussen ectoderm en endoderm, vouwt zich eveneens, wat uiteindelijk leidt tot de vorming van het hart, bloedvaten en spieren.",
+            "image": null,
+            "tag": "2.3.6"
+        },
+        {
+            "type": "question",
+            "question": "Leg uit hoe de kiembladen zich plooien en noem voor elk kiemblad een voorbeeld van een structuur die het vormt.",
+            "answer": "Tijdens de embryonale ontwikkeling plooit het ectoderm, dat aan de buitenkant ligt, zich omhoog over de randen (1 punt), wat resulteert in de vorming van structuren zoals de huid en het zenuwstelsel (1 punt). Het mesoderm, dat tussen het ectoderm en endoderm ligt, vouwt zich om het endoderm heen (1 punt) en vormt structureren zoals het hart, bloedvaten en spieren (1 punt). Het endoderm plooit naar binnen (1 punt), wat leidt tot de vorming van structureren zoals de spijsverteringsbuis (1 punt).",
+            "tag": "2.3.6",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Kenmerken van gewervelde diersoorten",
+            "text": "Gewervelde dieren worden gekenmerkt door verschillende structurele eigenschappen: \n 1) **Bilaterale symmetrie**: houdt in dat het lichaam spiegelbeeldig verdeeld kan worden in gelijke linker en rechter helften. \n 2) **Polariteit**: verwijst naar de duidelijke voor- en achterkant van het lichaam. \n 3) **Kiembladen**: de drie cellagen die tijdens de embryonale ontwikkeling vormen en uitgroeien tot alle lichaamsweefsels. \n 4) **Lichaamsholten**: zijn ruimtes binnen het lichaam die organen beschermen en toestaan onafhankelijk te bewegen. \n 5) **Segmentatie**: betekent dat het lichaam is opgebouwd uit herhaalde eenheden zoals ruggenwervels. \n 6) **Chorda**: een steunstructuur aan de rugzijde van het embryo zoals de ruggengraat. \n 7) **kieuwbogen**: bot- en kraakbeenstructuren in de keelregio van embryo's, die zich ontwikkelen tot verschillende gezichts- en nekstructuren.",
             "image": null,
             "tag": "2.4.1"
         },
         {
             "type": "question",
-            "question": "Kunt u de chemische en biologische hi\u00ebrarchie beschrijven en uitleggen hoe deze bijdraagt aan de complexiteit van organismen?",
-            "answer": "De chemische en biologische hi\u00ebrarchie beschrijft de organisatie van materie van eenvoudige moleculen (1 punt) tot complexe organismen (1 punt), waarbij op elk niveau specifieke interacties en processen plaatsvinden (1 punt) die essentieel zijn voor het leven (1 punt).",
+            "question": "Welke lichamelijke elementen zijn typerend voor gewervelde dieren?",
+            "answer": "Kenmerken van gewervelde dieren zijn bilaterale symmetrie (1 punt), polariteit (1 punt), kiembladen (1 punt), lichaamsholten (1 punt), segmentatie (1 punt), chorda (1 punt), en kieuwbogen (1 punt).",
             "tag": "2.4.1",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Anatomische Assen en Vlakken",
-            "text": "De **anatomische assen en vlakken** zijn referentiepunten die gebruikt worden om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven. De **frontale as** verdeelt het lichaam in voor- en achterkant, de **sagittale as** in links en rechts, en de **transversale as** in boven- en onderkant. Deze assen zijn cruciaal voor het begrijpen van anatomische termen en medische beeldvorming.",
+            "title": "De Anatomische stand",
+            "text": "De anatomische stand is een referentiepositie die gebruikt wordt in de anatomie om de locatie van anatomische structuren te beschrijven. In deze stand staat het lichaam rechtop, met het gezicht naar voren gericht, de armen langs het lichaam, en de handpalmen naar voren. De voeten zijn eveneens naar voren gericht en plat op de grond. Deze stand wordt gebruikt om consistentie te waarborgen in de medische beschrijvingen van het lichaam en zijn onderdelen.",
+            "image": null,
+            "tag": "3.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Hoe staan de handen en voeten georiënteerd in de anatomische stand?",
+            "answer": "In deze stand zijn de handpalmen naar voren gericht (1 punt) en de voeten plat op de grond en naar voren gericht (1 punt).",
+            "tag": "3.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Anatomische assen en vlakken",
+            "text": "Het menselijk lichaam kan worden verdeeld in drie anatomische assen: de **sagittale as**, die het lichaam in linker en rechter helften verdeelt, de **frontale as**, die het lichaam in voor- en achterkant verdeelt, en de **transversale as**, die het lichaam in boven- en onderkant verdeelt.",
             "image": null,
             "tag": "2.4.2"
         },
         {
             "type": "question",
-            "question": "Hoe worden de anatomische assen gebruikt om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven en waarom zijn deze belangrijk bij medische beeldvorming?",
-            "answer": "De anatomische assen, waaronder de frontale as (1 punt) die het lichaam in voor- en achterkant verdeelt, de sagittale as (1 punt) in links en rechts, en de transversale as (1 punt) in boven- en onderkant, worden gebruikt als referentiepunten om de positie en ori\u00ebntatie van lichaamsdelen te beschrijven (1 punt) en zijn cruciaal voor het begrijpen van anatomische termen en medische beeldvorming (1 punt).",
+            "question": "Welke drie anatomische assen zijn er en hoe verdeelt elke as het lichaam?",
+            "answer": "De drie anatomische assen zijn de sagittale as (1 punt), die het lichaam in linker en rechter helften verdeelt (1 punt), de frontale as (1 punt), die het lichaam in voor- en achterkant verdeeelt (1 punt), en de transversale as (1 punt), die het lichaam in boven- en onderkant verdeelt (1 punt).",
             "tag": "2.4.2",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Anatomische Ori\u00ebntatie",
-            "text": "Anatomische ori\u00ebntatie omvat termen zoals **craniaal** (richting het hoofd), **caudaal** (richting de staart), **mediaal** (richting het midden van het lichaam), **lateraal** (weg van het midden van het lichaam), **proximaal** (dichter bij de romp) en **distaal** (verder van de romp). Deze termen zijn essentieel voor het nauwkeurig beschrijven van locaties op het lichaam en voor klinische communicatie.",
+            "title": "Anatomische ori\u00ebntatie",
+            "text": "Anatomische ori\u00ebntatie omvat termen zoals **craniaal** (richting het hoofd), **caudaal** (richting de staart), **mediaal** (richting het midden van het lichaam), **lateraal** (weg van het midden van het lichaam), **proximaal** (dichter bij de romp) en **distaal** (verder van de romp). Deze termen zijn belangrijk om nauwkeurig de locaties op het lichaam te beschrijven en voor duidelijke klinische communicatie.",
             "image": null,
             "tag": "2.4.3"
         },
         {
             "type": "question",
-            "question": "Kunt u de anatomische termen craniaal, caudaal, mediaal, lateraal, proximaal, en distaal uitleggen in de context van hun belang voor klinische communicatie?",
-            "answer": "Anatomische ori\u00ebntatietermen zoals craniaal (richting het hoofd) (1 punt), caudaal (richting de staart) (1 punt), mediaal (richting het midden van het lichaam) (1 punt), lateraal (weg van het midden van het lichaam) (1 punt), proximaal (dichter bij de romp) (1 punt), en distaal (verder van de romp) (1 punt) zijn essentieel voor het nauwkeurig beschrijven van locaties op het lichaam en voor klinische communicatie (1 punt).",
+            "question": "Leg de anatomische termen craniaal, caudaal, mediaal, lateraal, proximaal, en distaal uitleggen?",
+            "answer": "Anatomische ori\u00ebntatietermen zoals craniaal (1 punt) (richting het hoofd (1 punt)) , caudaal (1 punt) (richting de staart (1 punt)), mediaal (1 punt) (richting het midden van het lichaam (1 punt)), lateraal (1 punt) (weg van het midden van het lichaam (1 punt)), proximaal (1 punt) (dichter bij de romp (1 punt)), en distaal (1 punt) (verder van de romp (1 punt)).",
             "tag": "2.4.3",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Orgaansystemen",
-            "text": "Het menselijk lichaam bestaat uit **elf gedefinieerde orgaansystemen**, waaronder het skelet-, spier-, zenuw- en circulatiesysteem. Deze systemen werken samen om de verschillende functies van het lichaam te ondersteunen en te reguleren. De interactie tussen deze systemen is cruciaal voor de homeostase en algehele gezondheid.",
+            "title": "Gebruik distaal en proximaal",
+            "text": "Het is handig om de termen distaal en proximaal te gebruiken bij het beschrijven van de darmen. In plaats van elke kronkeling van de darmen te beschrijven, kun je relatief tot een bepaald punt zeggen of iets distaal of proximaal is. Dit maakt het beschrijven van de locatie van structuren veel eenvoudiger en duidelijker.",
             "image": null,
-            "tag": "2.4.4"
+            "tag": "2.1.1"
+        },
+        {
+            "type": "theory",
+            "title": "Overzicht van orgaansystemen",
+            "text": "Het menselijk lichaam bestaat uit verschillende orgaansystemen die specifieke functies vervullen. De **huid (integumentum)** beschermt tegen externe invloeden. Het **skelet** en **gewrichten** vormen het steun- en bewegingsapparaat, terwijl **spieren** beweging mogelijk maken. Het **zenuwstelsel** reguleert en coördineert lichaamsactiviteiten, het **cardiovasculair systeem** verzorgt transport van bloed, zuurstof, en voedingsstoffen. Het **spijsverteringsstelsel** zet voedsel om in bruikbare energie en het **ademhalingsstelsel** zorgt voor de opname van zuurstof. De **nieren en urinewegen** filteren afvalstoffen uit het bloed. Het **voortplantingssysteem** zorgt voor voortplanting en het **hormonaal systeem** regelt diverse lichaamsprocessen via hormonen.",
+            "image": null,
+            "tag": "4.1.1"
         },
         {
             "type": "question",
-            "question": "Hoe interacteren de elf gedefinieerde orgaansystemen van het menselijk lichaam met elkaar en welke rol spelen ze in het handhaven van homeostase en gezondheid?",
-            "answer": "De elf gedefinieerde orgaansystemen van het menselijk lichaam, zoals het skelet-, spier-, zenuw- en circulatiesysteem (1 punt), werken samen (1 punt) om de verschillende functies van het lichaam te ondersteunen en te reguleren (1 punt), waarbij hun interactie cruciaal is voor de homeostase (1 punt) en algehele gezondheid (1 punt).",
-            "tag": "2.4.4",
-            "image": null
+            "question": "Noem de elf orgaansystemen van het menselijk lichaam en hun functies.",
+            "answer": "De orgaansystemen van het menselijk lichaam zijn de huid (integumentum) (1 punt), skelet en gewrichten (1 punt), spieren (1 punt), zenuwstelsel (1 punt), cardiovasculair systeem (1 punt), spijsverteringsstelsel (1 punt), ademhalingsstelsel (1 punt), nieren en urinewegen (1 punt), voortplantingssysteem (1 punt), en hormonaal systeem (1 punt).",
+            "image": null,
+            "tag": "4.1.1"
         },
         {
             "type": "theory",
             "title": "Huidorgaansysteem",
-            "text": "Het **huidorgaansysteem** omvat de **huid**, **haren**, **klieren** en hun derivaten. Het speelt een essenti\u00eble rol in bescherming, temperatuurregulatie en zintuiglijke waarneming.",
+            "text": "Het **huidorgaansysteem** omvat de **huid**, **haren**, **klieren** en hun derivaten. Het speelt een rol in bescherming, temperatuurregulatie en gaswisseling.",
             "image": null,
             "tag": "2.5.1"
         },
         {
             "type": "question",
-            "question": "Welke componenten vallen onder het huidorgaansysteem en welke essenti\u00eble rollen vervult het?",
-            "answer": "Het huidorgaansysteem omvat de huid (1 punt), haren (1 punt), klieren en hun derivaten (1 punt). Het speelt een essenti\u00eble rol in bescherming (1 punt), temperatuurregulatie (1 punt) en zintuiglijke waarneming (1 punt).",
+            "question": "Welke componenten vallen onder het huidorgaansysteem?",
+            "answer": "Het huidorgaansysteem omvat de huid (1 punt), haren (1 punt), klieren en hun derivaten (1 punt).",
             "tag": "2.5.1",
             "image": null
         },
         {
             "type": "theory",
             "title": "Skelet",
-            "text": "Het **skelet** kan worden verdeeld in twee hoofdonderdelen: het **axiale skelet**, waaronder de wervelkolom valt, en het **appendiculair skelet**, dat zich richt op de extremiteiten zoals armen en benen.",
+            "text": "Het skelet bestaat uit botstukken, bot, kraakbeen en beenmerg. Dit systeem vervult functies zoals bescherming en steun, aanhechting van pezen, spieren en ligamenten, bloedcelvorming, en het reguleren van de calcium- en fosfaathuishouding.",
+            "image": null,
+            "tag": "4.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Welke organen maken deel uit van het skelet?",
+            "answer": "Botstukken (1 punt), bot (1 punt), kraakbeen (1 punt) en beenmerg (1 punt).",
+            "tag": "4.1.1",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Noem vier functies van het skelet.",
+            "answer": "De vier functies van het skelet zijn: bescherming en steun (1 punt), aanhechting van pezen, spieren en ligamenten (1 punt), bloedcelvorming (1 punt), en calcium- en fosfaathuishouding (1 punt).",
+            "tag": "4.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Het axiaal en appendicular skelet",
+            "text": "Het **skelet** kan worden verdeeld in twee hoofdonderdelen: het **axiale skelet**, waar de schedel, wervelkolom, ribben en borstbeen onder vallen en het **appendiculair skelet**, waar de extremiteiten zoals armen en benen onder vallen.",
             "image": null,
             "tag": "2.5.2"
         },
         {
             "type": "question",
-            "question": "Hoe wordt het skelet verdeeld en welk deel van het skelet omvat de wervelkolom?",
-            "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt). De wervelkolom valt onder het axiale skelet (1 punt).",
+            "question": "Hoe wordt het skelet verdeeld en onder welk deel van het skelet valt een teenkootje (teen botje)?",
+            "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt). Een teenkootje valt onder het appendiculair skelet (1 punt).",
             "tag": "2.5.2",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Gewrichten",
-            "text": "**Gewrichten** zorgen voor **beweeglijkheid** en vormen verbindingen tussen botten. Een specifiek type is het **synoviale gewricht**, dat soepele beweging tussen aangrenzende botten mogelijk maakt.",
+            "title": "Axiaal skelet",
+            "text": "Het axiaal skelet vormt de centrale structuur van het lichaam en bestaat uit de schedel (cranium) en de wervelkolom (columna vertebralis). De wervelkolom bestaat uit 7 halswervels (vertebrae cervicales), 12 borstwervels (vertebrae thoracales), 5 lendenwervels (vertebrae lumbales) en 5 heiligbeenwervels (vertebrae sacrales). Samen ondersteunen deze structuren het lichaam en beschermen ze het ruggenmerg.",
             "image": null,
-            "tag": "2.5.3"
+            "tag": "4.2.1"
         },
         {
             "type": "question",
-            "question": "Wat is de functie van gewrichten en wat maakt synoviale gewrichten specifiek?",
-            "answer": "Gewrichten zorgen voor beweeglijkheid (1 punt) en vormen verbindingen tussen botten (1 punt). Synoviale gewrichten maken soepele beweging tussen aangrenzende botten mogelijk (1 punt).",
-            "tag": "2.5.3",
+            "question": "Waaruit is de wervelkolom opgebouwd? Benoem het type en de hoeveelheid van elk deel.",
+            "answer": "De wervelkolom is opgebouwd uit 7 halswervels / vertebrae cervicales (1 punt), 12 borstwervels / vertebrae thoracales (1 punt), 5 lendenwervels / vertebrae lumbales (1 punt) en 5 heiligbeenwervels / vertebrae sacrales (1 punt).",
+            "tag": "4.2.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Appendiculair Skelet",
+            "text": "Het appendiculair skelet omvat de botten van de bovenste en onderste extremiteiten. De botten in de bovenste extremiteiten omvatten de schoudergordel, bovenarm, onderarm en hand. De botten in de onderste extremiteiten omvatten de bekkengordel, bovenbeen, onderbeen en voet.",
+            "image": null,
+            "tag": "5.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Uit welke botten bestaat het appendiculair skelet van de bovenste extremiteit?",
+            "answer": "Het appendiculair skelet van de bovenste extremiteit omvat de schoudergordel (1 punt), bovenarm (1 punt), onderarm (1 punt) en hand (1 punt).",
+            "tag": "5.1.1",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Uit welke botten bestaat het appendiculair skelet van de onderste extremiteit?",
+            "answer": "Het appendiculair skelet van de onderste extremiteit omvat de bekkengordel (1 punt), bovenbeen (1 punt), onderbeen (1 punt) en voet (1 punt).",
+            "tag": "5.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Botten van de bovenste extremiteiten",
+            "text": "De schoudergordel bestaat uit het sleutelbeen (clavicula) en het schouderblad (scapula). De bovenarm bevat het opperarmbeen (humerus). De onderarm bestaat uit het spaakbeen (radius) en de ellepijp (ulna). De hand is opgebouwd uit de handwortelbeentjes (carpalia), middenhandsbeentjes (metacarpalia) en vingerkootjes (phalangen).",
+            "image": null,
+            "tag": "5.1.2"
+        },
+        {
+            "type": "question",
+            "question": "Noem de botten die deel uitmaken van de schoudergordel, bovenarm, onderarm en hand.",
+            "answer": "De botten van de schoudergordel zijn het sleutelbeen (clavicula) (1 punt) en het schouderblad (scapula) (1 punt). Het bot van de bovenarm is het opperarmbeen (humerus) (1 punt). De botten van de onderarm zijn het spaakbeen (radius) (1 punt) en de ellepijp (ulna) (1 punt). De botten van de hand zijn de handwortelbeentjes (carpalia) (1 punt), middenhandsbeentjes (metacarpalia) (1 punt) en vingerkootjes (phalangen) (1 punt).",
+            "tag": "5.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Gewrichten",
+            "text": "Er zijn twee hoofdtypen gewrichten: continue (onbeweeglijke) gewrichten en discontinue (beweeglijke) gewrichten. Continue gewrichten zijn onderverdeeld in junctura fibrosa (bindweefselverbinding) en junctura cartilaginea (kraakbeenverbinding). Deze verbindingen zorgen voor stabiliteit en beperkte beweging. Discontinue gewrichten, ook bekend als junctura synovialis (synoviale gewrichten), zijn beweeglijke verbindingen die een breed scala aan bewegingen mogelijk maken dankzij de aanwezigheid van een synoviale holte gevuld met vloeistof.",
+            "image": null,
+            "tag": "6.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen continue en discontinue gewrichten?",
+            "answer": "Continue gewrichten zijn onbeweeglijk en omvatten junctura fibrosa (bindweefselverbinding) en junctura cartilaginea (kraakbeenverbinding) (1 punt). Discontinue gewrichten zijn beweeglijk en staan bekend als junctura synovialis (synoviale gewrichten) (1 punt).",
+            "tag": "6.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Continue gewrichten: junctura fibrosa",
+            "text": "Junctura fibrosa, ook wel bindweefselverbinding genoemd, is een type continue, onbeweeglijke gewricht. Een voorbeeld van junctura fibrosa zijn de suturen (schedelnaden), die fibreuze verbindingen zijn tussen de botstukken van de schedel. Deze verbindingen bieden stabiliteit en bescherming voor de hersenen.",
+            "image": null,
+            "tag": "6.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat is een sutuurnaad en waar komt deze voor in het lichaam?",
+            "answer": "Een sutuurnaad is een fibreuze verbinding tussen twee botstukken (1 punt), en komt voor in de schedel (schedelnaden) (1 punt).",
+            "tag": "6.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Continue gewrichten: junctura cartilaginea",
+            "text": "Junctura cartilaginea, ook wel kraakbeenverbinding genoemd, is een type continue, onbeweeglijke gewricht. Een voorbeeld van junctura cartilaginea zijn synchondroses, die kraakbenige verbindingen zijn tussen botstukken. Voorbeelden hiervan zijn de verbindingen tussen de ribben en het borstbeen of tussenwervelschijven in de wervelkolom.",
+            "image": null,
+            "tag": "6.1.2"
+        },
+        {
+            "type": "question",
+            "question": "Wat is een synchondrose en geef een voorbeeld waar deze voorkomt in het lichaam?",
+            "answer": "Een synchondrose is een kraakbenige verbinding tussen twee botstukken (1 punt). Een voorbeeld is een verbindingstuk tussen rib en borstbeen / een tussenwervelschijf in de wervelkolom (1 punt).",
+            "tag": "6.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Discontinue Beenverbindingen: junctura synovialis",
+            "text": "Junctura synovialis, ook wel synoviale gewrichten genoemd, zijn een type discontinue, beweeglijke gewrichten. Deze gewrichten hebben een synoviale holte gevuld met vloeistof, die beweging mogelijk maakt. Voorbeelden van synoviale gewrichten zijn de kniegewrichten, ellebooggewrichten en schoudergewrichten.",
+            "image": null,
+            "tag": "6.2.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn junctura synovialis en noem een voorbeeld waar deze voorkomen in het lichaam?",
+            "answer": "Junctura synovialis zijn synoviale gewrichten, een type beweeglijke gewricht (1 punt) zoals het kniegewricht / ellebooggewricht / schoudergewricht (1 punt).",
+            "tag": "6.2.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Synoviale Gewrichten",
+            "text": "Synoviale gewrichten zijn beweeglijke gewrichten die een synoviale holte bevatten. Deze gewrichten zijn omgeven door een gewrichtskapsel dat bestaat uit twee lagen: de membrana fibrosa en de membrana synovialis. De gewrichtsspleet is gevuld met synoviaalvocht, dat zorgt voor smering en vermindering van wrijving tussen de gewrichtsoppervlakken. De gewrichtsvlakken zijn bedekt met gewrichtskraakbeen, en intra-articulaire structuren zoals ligamenten en menisci bieden extra stabiliteit en ondersteuning.",
+            "image": null,
+            "tag": "6.2.2"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de belangrijkste componenten van een synoviaal gewricht?",
+            "answer": "De belangrijkste componenten van een synoviaal gewricht zijn het gewrichtskapsel (1 punt), bestaande uit de membrana fibrosa (1 punt) en de membrana synovialis (1 punt), de gewrichtsspleet gevuld met synoviaalvocht (1 punt), gewrichtskraakbeen (1 punt), en intra-articulaire structuren zoals ligamenten en menisci (1 punt).",
+            "tag": "6.2.2",
             "image": null
         },
         {
             "type": "theory",
             "title": "Spieren",
-            "text": "Spieren zijn verantwoordelijk voor beweging en houding, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft. Spieren werken samen als **agonisten**, **synergisten** of **antagonisten** om bewegingen uit te voeren.",
+            "text": "Spieren zijn verantwoordelijk voor beweging, houding en warmteproductie, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft.",
             "image": null,
             "tag": "2.5.4"
         },
         {
             "type": "question",
-            "question": "Wat zijn de functies van spieren en hoe worden deze gecategoriseerd in termen van hun rollen bij bewegingen?",
+            "question": "Wat zijn de functies van spieren?",
             "answer": "Spieren zijn verantwoordelijk voor beweging en houding (1 punt), en elke spier heeft een origo (beginpunt) en een insertie (eindpunt) (1 punt). Spieren werken samen als agonisten, synergisten of antagonisten om bewegingen uit te voeren (1 punt).",
             "tag": "2.5.4",
             "image": null
         },
         {
             "type": "theory",
+            "title": "Samenwerking van Spieren",
+            "text": "Spieren werken samen in groepen om bewegingen uit te voeren. De belangrijkste rollen die spieren aannemen zijn die van agonisten, synergisten en antagonisten. Een agonist is de spier die een beweging initieert en wordt ook wel de prime mover genoemd. Een synergist ondersteunt de beweging door de agonist te helpen en extra kracht of stabiliteit te bieden. Een antagonist werkt tegengesteld aan de agonist en helpt bij het gecontroleerd terugkeren naar de oorspronkelijke positie of het afremmen van de beweging.",
+            "image": null,
+            "tag": "7.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de rollen van agonisten, synergisten en antagonisten in spierbewegingen?",
+            "answer": "Agonisten initiëren een beweging (prime mover) (1 punt), synergisten ondersteunen een beweging (1 punt), en antagonisten gaan een beweging tegen (1 punt).",
+            "tag": "7.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
             "title": "Bewegingsapparaat",
-            "text": "Het **bewegingsapparaat** bestaat uit het **skelet**, **spieren** en **gewrichten**, ondersteund door **vascularisatie** (bloedvoorziening) en **zenuwsturing** (innervatie) voor co\u00f6rdinatie en controle.",
+            "text": "Het **bewegingsapparaat** bestaat uit alle delen van het menselijk lichaam die betrokken zijn bij de uitvoering van bewegingen. Dat zijn de armen, benen, schouder- en heupgordel, rug en nek. Daarbij horen het skelet, spieren, zenuwen en de bloedvaten die helpen beweging mogelijk te maken. Oogbewegingen worden in de regel niet tot het bewegingsapparaat gerekend.",
             "image": null,
             "tag": "2.5.5"
         },
         {
             "type": "question",
             "question": "Uit welke onderdelen bestaat het bewegingsapparaat en door welke systemen wordt het ondersteund?",
-            "answer": "Het bewegingsapparaat bestaat uit het skelet (1 punt), spieren (1 punt) en gewrichten (1 punt), ondersteund door vascularisatie (bloedvoorziening) (1 punt) en zenuwsturing (innervatie) voor co\u00f6rdinatie en controle (1 punt).",
+            "answer": "Het bewegingsapparaat bestaat uit de armen (1 punt), benen (1 punt), schoudergordel (1 punt), heupgordel (1 punt), rug (1 punt) en nek (1 punt), en wordt ondersteund door het skelet, spieren, zenuwen en bloedvaten (1 punt).",
             "tag": "2.5.5",
             "image": null
         },
         {
             "type": "theory",
             "title": "Bewegingsvrijheid",
-            "text": "**Bewegingsvrijheid** verwijst naar de mogelijkheden van rotaties en translaties binnen verschillende gewrichtstypen. Elk gewrichtstype heeft zijn eigen unieke set van **bewegingsmogelijkheden**.",
+            "text": "**Bewegingsvrijheid** verwijst naar de mogelijkheden van **rotaties** en **translaties** binnen verschillende gewrichtstypen. Elk gewrichtstype heeft zijn eigen unieke set van **bewegingsmogelijkheden**.",
             "image": null,
             "tag": "2.5.6"
         },
         {
             "type": "question",
-            "question": "Wat betekent bewegingsvrijheid in de context van gewrichten en hoe verschilt deze tussen verschillende gewrichtstypen?",
-            "answer": "Bewegingsvrijheid verwijst naar de mogelijkheden van rotaties en translaties binnen verschillende gewrichtstypen (1 punt). Elk gewrichtstype heeft zijn eigen unieke set van bewegingsmogelijkheden (1 punt).",
+            "question": "Wat betekent bewegingsvrijheid in de context van gewrichten?",
+            "answer": "Bewegingsvrijheid verwijst naar de mogelijkheden van rotaties (1 punt) en translaties (1 punt) binnen verschillende gewrichtstypen (1 punt).",
             "tag": "2.5.6",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Vrijheidsgraden van beweging",
-            "text": "Gewrichten bieden verschillende **vrijheidsgraden van beweging**, waaronder **rotaties** en **translaties** in verschillende vlakken. Dit bepaalt de manier waarop we onze lichaamsdelen kunnen bewegen.",
+            "title": "Vrijheidsgraden van Gewrichten",
+            "text": "De **vrijheidsgraden** van gewrichten verwijzen naar de verschillende soorten bewegingen die mogelijk zijn binnen een gewricht. Deze bewegingen omvatten rotaties en translaties in verschillende vlakken. Rotaties zijn bewegingen rond een as, in een vlak, terwijl translaties schuivende bewegingen in een vlak zijn.",
             "image": null,
             "tag": "2.6.1"
         },
         {
             "type": "question",
-            "question": "Welke types van beweging worden geboden door de vrijheidsgraden van gewrichten?",
-            "answer": "De vrijheidsgraden van gewrichten bieden rotaties (1 punt) en translaties (1 punt) in verschillende vlakken.",
+            "question": "Wat is het verschil tussen rotaties en translaties in de context van gewrichten?",
+            "answer": "Rotaties zijn bewegingen rond een as, in een vlak (1 punt), terwijl translaties schuivende bewegingen in een vlak zijn (1 punt).",
             "tag": "2.6.1",
             "image": null
         },
         {
             "type": "theory",
             "title": "Gewrichtstypen",
-            "text": "Er bestaan verschillende **gewrichtstypen**, zoals het **kogelgewricht** dat beweging in alle richtingen toestaat, het **scharniergewricht** dat voornamelijk beweging in \u00e9\u00e9n vlak mogelijk maakt, en het **rolgewricht** dat rotatie rond \u00e9\u00e9n as toelaat.",
+            "text": "Er bestaan verschillende **gewrichtstypen** die de mate van bewegingsmogelijkheden bepalen (aantal vrijheidsgraden), zoals het **kogelgewricht** dat beweging in alle richtingen toestaat, het **scharniergewricht** dat voornamelijk beweging in \u00e9\u00e9n vlak mogelijk maakt, en het **rolgewricht** dat rotatie rond \u00e9\u00e9n as toelaat.",
             "image": null,
             "tag": "2.6.2"
         },
         {
             "type": "question",
-            "question": "Hoe verschillen een kogelgewricht, scharniergewricht en rolge-wricht van elkaar qua toegestane bewegingen?",
-            "answer": "Een kogelgewricht staat beweging in alle richtingen toe (1 punt), een scharniergewricht maakt voornamelijk beweging in \u00e9\u00e9n vlak mogelijk (1 punt), en een rolge-wricht laat rotatie rond \u00e9\u00e9n as toe (1 punt).",
+            "question": "Hoe verschillen een kogelgewricht, scharniergewricht en rolgewricht van elkaar qua toegestane bewegingen?",
+            "answer": "Een kogelgewricht staat beweging in alle richtingen toe (1 punt), een scharniergewricht maakt voornamelijk beweging in \u00e9\u00e9n vlak mogelijk (1 punt), en een rolgewricht laat rotatie rond \u00e9\u00e9n as toe (1 punt).",
             "tag": "2.6.2",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Bewegingsbeperkingen",
-            "text": "**Bewegingsbeperkingen** worden be\u00efnvloed door factoren zoals **weke delen** (spieren, ligamenten, en pezen) en de **botstructuur** van het gewricht. Deze beperkingen zijn cruciaal voor het voorkomen van letsel.",
-            "image": null,
-            "tag": "2.6.3"
-        },
-        {
-            "type": "question",
-            "question": "Welke factoren be\u00efnvloeden bewegingsbeperkingen van gewrichten en hoe dragen deze bij aan het voorkomen van letsel?",
-            "answer": "Bewegingsbeperkingen worden be\u00efnvloed door weke delen zoals spieren, ligamenten en pezen (1 punt), en door de botstructuur van het gewricht (1 punt), wat cruciaal is voor het voorkomen van letsel (1 punt).",
-            "tag": "2.6.3",
-            "image": null
-        },
-        {
-            "type": "theory",
             "title": "Specifieke bewegingen",
-            "text": "Gewrichten stellen ons in staat specifieke bewegingen uit te voeren zoals **flexie** (buigen), **extensie** (strekken), **abductie** (wegvoeren van de middenlijn), **adductie** (naar de middenlijn toe bewegen), en verschillende **rotaties**.",
+            "text": "Gewrichten stellen ons in staat specifieke bewegingen uit te voeren zoals **flexie** (buigen), **extensie** (strekken), **abductie** (wegvoeren van de middenlijn), **adductie** (naar de middenlijn toe bewegen) en extrorotaties (naar buiten draaien) en endorotaties (naar binnen draaien).",
             "image": null,
             "tag": "2.6.4"
         },
         {
+            "type": "theory",
+            "title": "Fietswiel voor relatie tussen assen en vlakken",
+            "text": "Je kunt een fietswiel gebruiken als een handige tool om de relatie tussen assen en vlakken te onthouden waarin de bewegingen plaatsvinden. Stel je voor dat de as van het wiel overeenkomt met de lichaamsas waar de beweging omheen plaatsvindt. De spaken van het wiel kunnen dan de verschillende vlakken voorstellen waarin de beweging plaatsvindt.",
+            "image": null,
+            "tag": "7.2.4"
+        },
+        {
+            "type": "theory",
+            "title": "Flexie en extensie",
+            "text": "Bewegingen om een **transversale as** in het **sagittale vlak** omvatten flexie en extensie. **Flexie** is de beweging waarbij een ledemaat buigt, terwijl **extensie** de beweging is waarbij een ledemaat strekt.",
+            "image": null,
+            "tag": "7.2.3"
+        },
+        {
             "type": "question",
-            "question": "Welke specifieke bewegingen maken gewrichten mogelijk en hoe worden ze gedefinieerd?",
-            "answer": "Gewrichten maken specifieke bewegingen mogelijk zoals flexie, wat buigen is (1 punt), extensie, wat strekken is (1 punt), abductie, wat wegvoeren van de middenlijn is (1 punt), adductie, wat naar de middenlijn toe bewegen is (1 punt), en verschillende rotaties (1 punt).",
+            "question": "Wat is het verschil tussen flexie en extensie?",
+            "answer": "Flexie is de beweging waarbij een ledemaat buigt (1 punt), en extensie is de beweging waarbij een ledemaat strekt (1 punt).",
+            "tag": "7.2.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Abductie en adductie",
+            "text": "Bewegingen om een **sagittale as** in het **frontale vlak** omvatten abductie en adductie. **Abductie** is de beweging waarbij een ledemaat weg van het lichaam wordt bewogen, terwijl **adductie** de beweging naar het lichaam toe is. Een handige tip om deze termen te onthouden: abductie (abduction) kan geassocieerd worden met ontvoering, waarbij iets van je wordt weggenomen. Adductie (adduction) kan geassocieerd worden met toevoegen (add), waarbij iets naar je toe wordt gebracht.",
+            "image": null,
+            "tag": "7.2.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen abductie en adductie?",
+            "answer": "Abductie is de beweging waarbij een ledemaat weg van het lichaam wordt bewogen (1 punt) en adductie is de beweging naar het lichaam toe (1 punt).",
+            "tag": "7.2.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Endorotatie en exorotatie",
+            "text": "Bewegingen om een **longitudinale as** in het **transversale vlak** omvatten endorotatie en exorotatie. **Endorotatie** is de beweging waarbij een ledemaat naar binnen draait, terwijl **exorotatie** de beweging naar buiten is.",
+            "image": null,
+            "tag": "7.2.2"
+        },
+        {
+            "type": "question",
+            "question": "Wat is het verschil tussen endorotatie en exorotatie en waar komen deze bewegingen voor in het lichaam?",
+            "answer": "Endorotatie is de beweging waarbij een ledemaat naar binnen draait (1 punt), en exorotatie is de beweging naar buiten (1 punt). Deze bewegingen komen voor bij gewrichten zoals de schouder- en heupgewrichten (1 punt).",
+            "tag": "7.2.2",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Welke specifieke bewegingen maken gewrichten mogelijk? Geef de naam en definitie van elke beweging.",
+            "answer": "Gewrichten maken bewegingen zoals flexie (1 punt), wat buigen is (1 punt), extensie (1 punt), wat strekken is (1 punt), abductie (1 punt), wat wegvoeren van de middenlijn is (1 punt), adductie (1 punt), wat naar de middenlijn toe bewegen is (1 punt), endorotatie (1 punt), wat naar binnen draaien is (1 punt), en exorotatie (1 punt), wat naar buiten draaien is (1 punt), mogelijk.",
             "tag": "2.6.4",
             "image": null
         },
         {
             "type": "theory",
+            "title": "Bewegingsbeperkingen",
+            "text": "**Bewegingsbeperkingen** worden be\u00efnvloed door factoren zoals **weke delen** (spieren, ligamenten, en pezen), de **botstructuur** van het gewricht (het type gewricht) en **fysieke barrieres** (andere lichaamsdelen).",
+            "image": null,
+            "tag": "2.6.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke factoren be\u00efnvloeden bewegingsbeperkingen van gewrichten?",
+            "answer": "Weke delen (1 punt) (spieren, ligamenten en pezen), de botstructuur van het gewricht / type gewricht (1 punt) en fysieke barrieres (ander lichaamsdelen) (1 punt).",
+            "tag": "2.6.3",
+            "image": null
+        },
+        {
+            "type": "theory",
             "title": "Ontwikkeling en anatomische positionering",
-            "text": "De **ontwikkeling** en **anatomische positionering** van gewrichten zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen, wat bijdraagt aan de uiteindelijke vorm en functie van het bewegingsapparaat.",
+            "text": "De ontwikkeling en **anatomische positionering van gewrichten** zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen waarbij de **bovenste ledematen (armen en handen) naar voren** en de **onderste ledematen (benen en voeten) naar achteren** draaien.",
             "image": null,
             "tag": "2.6.5"
         },
         {
             "type": "question",
-            "question": "Op welke manier be\u00efnvloeden de ontwikkeling en anatomische positionering van gewrichten de uiteindelijke vorm en functie van het bewegingsapparaat?",
-            "answer": "De ontwikkeling en anatomische positionering van gewrichten, zoals be\u00efnvloed door processen als de embryonale draaiing van ledematen, dragen bij aan de uiteindelijke vorm en functie van het bewegingsapparaat (1 punt).",
+            "question": "Hoe draaien de ledematen tijdens de embryonale ontwikkeling?",
+            "answer": "Tijdens de embryonale ontwikkeling draaien de bovenste ledematen (armen en handen) naar voren (1 punt) en de onderste ledematen (benen en voeten) naar achteren (1 punt).",
             "tag": "2.6.5",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Organen van het Cardiovasculair Systeem",
-            "text": "Het **cardiovasculair systeem** bestaat uit het **hart** en de **bloedvaten**, inclusief **arteri\u00ebn**, **venen**, en **haarvaten**. Deze organen werken samen om een continue bloedcirculatie in het lichaam te onderhouden.",
+            "title": "Verschillende soorten gewrichten",
+            "text": "Gewrichten in het menselijk lichaam kunnen worden ingedeeld in vijf hoofdtypen: **bolgewrichten**, **eigewrichten**, **zadelgewrichten**, **scharniergewrichten** en **rolgewrichten**. Elk type gewricht heeft specifieke kenmerken en bewegingsmogelijkheden.",
+            "image": null,
+            "tag": "8.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Wat zijn de vijf hoofdtypen gewrichten in het menselijk lichaam?",
+            "answer": "De vijf hoofdtypen gewrichten zijn bolgewrichten (1 punt), eigewrichten (1 punt), zadelgewrichten (1 punt), scharniergewrichten (1 punt) en rolgewrichten (1 punt).",
+            "tag": "8.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Bolgewricht",
+            "text": "Een **bolgewricht** maakt bewegingen om drie assen mogelijk en biedt het breedste scala aan bewegingen. Bewegingen vinden plaats om de **transversale as** (anteversie-retroversie), de **sagittale as** (abductie-adductie), en de **longitudinale as** (endorotatie-exorotatie). Voorbeelden zijn het **schoudergewricht** (art. humeri) en het **heupgewricht** (art. coxae).",
+            "image": null,
+            "tag": "8.1.2"
+        },
+        {
+            "type": "question",
+            "question": "Welke bewegingen zijn mogelijk bij een bolgewricht.",
+            "answer": "Een bolgewricht maakt bewegingen om drie assen mogelijk: om de transversale as (anteversie-retroversie), de sagittale as (abductie-adductie), en de longitudinale as (endorotatie-exorotatie) (1 punt).",
+            "tag": "8.1.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Eigewricht",
+            "text": "Een **eigewricht** maakt bewegingen om twee assen mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie-extensie) en de **sagittale as** (abductie-adductie). Een voorbeeld hiervan is het **polsgewricht** (art. radio-carpea).",
+            "image": null,
+            "tag": "8.1.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke bewegingen zijn mogelijk bij een eigewricht.",
+            "answer": "Een eigewricht maakt bewegingen om twee assen mogelijk: om de transversale as (flexie-extensie) (1 punt) en de sagittale as (radiaalabductie-ulnairabductie) (1 punt).",
+            "tag": "8.1.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Zadelgewricht",
+            "text": "Een **zadelgewricht** maakt bewegingen om twee assen mogelijk. Bewegingen vinden plaats om de **transversale as** (abductie-adductie) en de **longitudinale as** (oppositie-repositie). Een voorbeeld hiervan is het **basisgewricht van de duim** (art. carpo-metacarpale pollicis).",
+            "image": null,
+            "tag": "8.1.4"
+        },
+        {
+            "type": "question",
+            "question": "Welke bewegingen zijn mogelijk bij een zadelgewricht.",
+            "answer": "Een zadelgewricht maakt bewegingen om twee assen mogelijk: om de transversale as (abductie-adductie) (1 punt) en de longitudinale as (oppositie-repositie) (1 punt).",
+            "tag": "8.1.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Scharniergewricht",
+            "text": "Een **scharniergewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie en extensie). Voorbeelden hiervan zijn een deel van het **ellebooggewricht** (art. humero-ulnare), het **kniegewricht** (art. femoro-tibiale).",
+            "image": null,
+            "tag": "8.1.5"
+        },
+        {
+            "type": "question",
+            "question": "Welke bewegingen zijn mogelijk bij een scharniergewricht.",
+            "answer": "Een scharniergewricht maakt bewegingen om één as mogelijk: om de transversale as (flexie en extensie) (1 punt).",
+            "tag": "8.1.5",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Rolgewricht",
+            "text": "Een **rolgewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **longitudinale as** (supinatie en pronatie). Een voorbeeld hiervan zijn de **onderarmgewrichten** (artt. radio-ulnare prox. et dist.). Een handige tip om deze bewegingen te onthouden: **pronatie: proost beweging** en **supinatie: beweging bij soep eten**.",
+            "image": null,
+            "tag": "8.1.6"
+        },
+        {
+            "type": "question",
+            "question": "Welke bewegingen zijn mogelijk bij een rolgewricht.",
+            "answer": "Een rolgewricht maakt bewegingen om één as mogelijk: om de longitudinale as (supinatie en pronatie) (1 punt).",
+            "tag": "8.1.6",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Noem de belangrijkste kenmerken en bewegingen van de vijf hoofdtypen gewrichten.",
+            "answer": "Bolgewricht: bewegingen om drie assen (1 punt), voorbeelden: schoudergewricht (art. humeri) en heupgewricht (art. coxae) (1 punt). Eigewricht: bewegingen om twee assen (1 punt), voorbeeld: polsgewricht (art. radio-carpea) (1 punt). Zadelgewricht: bewegingen om twee assen (1 punt), voorbeeld: basisgewricht van de duim (art. carpo-metacarpale pollicis) (1 punt). Scharniergewricht: bewegingen om één as (1 punt), voorbeelden: deel van het ellebooggewricht (art. humero-ulnare), het kniegewricht (art. femoro-tibiale) en het bovenste spronggewricht (art. talocrurale), dat specifiek plantairflexie en dorsaalflexie (extensie) mogelijk maakt (1 punt). Rolgewricht: bewegingen om één as (1 punt), voorbeeld: onderarmgewrichten (artt. radio-ulnare prox. et dist.) (1 punt).",
+            "tag": "8.1.7",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Noem de belangrijkste kenmerken, bewegingen en bijbehorende assen van de vijf hoofdtypen gewrichten.",
+            "answer": "Bolgewricht: bewegingen om drie assen (transversale, sagittale, longitudinale) (1 punt). Eigewricht: bewegingen om twee assen (transversale, sagittale) (1 punt). Zadelgewricht: bewegingen om twee assen (transversale, longitudinale) (1 punt). Scharniergewricht: bewegingen om één as (transversale) (1 punt). Rolgewricht: bewegingen om één as (longitudinale) (1 punt).",
+            "tag": "8.1.7",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Translatie",
+            "text": "Translatie is een schuivende beweging in een vlak. Deze beweging vindt plaats in gewrichten zoals de intervertebrale gewrichten en bij de bewegingen van het schouderblad. Translatie zorgt ervoor dat botten langs elkaar kunnen bewegen zonder rotatie.",
+            "image": null,
+            "tag": "9.1.1"
+        },
+        {
+            "type": "theory",
+            "title": "Translatie in de wervelkolom",
+            "text": "In de wervelkolom vindt translatie plaats in de intervertebrale gewrichten. Deze gewrichten maken het mogelijk voor de wervels om langs elkaar te schuiven. De individuele bewegingen zijn klein, maar samen zorgen ze voor de flexibiliteit en beweging van de ruggengraat.",
+            "image": null,
+            "tag": "9.1.2"
+        },
+        {
+            "type": "question",
+            "question": "Wat geeft de ruggengraat de mogelijkheid om te buigen en draaien?",
+            "answer": "De intervertebrale gewrichten (1 punt) in de wervelkolom maken het mogelijk voor de wervels om langs elkaar te schuiven (translatie) (1 punt), wat de ruggengraat de mogelijkheid geeft om te buigen en draaien.",
+            "tag": "9.1.2",
+            "image": null
+        },
+         {
+            "type": "theory",
+            "title": "Translatie van het Schouderblad",
+            "text": "Het schouderblad (scapula) kan verschillende translatiebewegingen uitvoeren: **protractie** (beweging naar voren) en **retractie** (beweging naar achteren), **elevatie** (opheffing) en **depressie** (verlaging), en **laterorotatie** (draaiing naar buiten) en **mediorotatie** (draaiing naar binnen). Deze bewegingen zijn belangrijk voor de positionering van de arm en schouder, en dragen bij aan de algehele mobiliteit van het bovenlichaam.",
+            "image": null,
+            "tag": "9.1.3"
+        },
+        {
+            "type": "question",
+            "question": "Welke translatiebewegingen kan het schouderblad uitvoeren? Benoem de namen en omschrijvingen van deze bewegingen.",
+            "answer": "Het schouderblad kan de volgende translatiebewegingen uitvoeren: protractie (beweging naar voren) (1 punt), retractie (beweging naar achteren) (1 punt), elevatie (opheffing) (1 punt), depressie (verlaging) (1 punt), laterorotatie (draaiing naar buiten) (1 punt) en mediorotatie (draaiing naar binnen) (1 punt).",
+            "tag": "9.1.3",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Het Zenuwstelsel",
+            "text": "Het zenuwstelsel bestaat uit verschillende organen, waaronder de **hersenen**, het **ruggenmerg**, de **perifere zenuwen** en de **zintuigorganen**. De belangrijkste functies van het zenuwstelsel zijn de **aansturing van orgaansystemen** en de **informatieoverdracht** tussen verschillende delen van het lichaam.",
+            "image": null,
+            "tag": "10.1.1"
+        },
+        {
+            "type": "question",
+            "question": "Welke organen maken deel uit van het zenuwstelsel?",
+            "answer": "De organen die deel uitmaken van het zenuwstelsel zijn de hersenen (1 punt), het ruggenmerg (1 punt), de perifere zenuwen (1 punt) en de zintuigorganen (1 punt).",
+            "tag": "10.1.1",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Organen van het cardiovasculair systeem",
+            "text": "Het **cardiovasculair systeem** bestaat uit het **hart**, **bloedvaten** en **bloed**. Deze organen werken samen om een continue bloedcirculatie in het lichaam te onderhouden.",
             "image": null,
             "tag": "2.1.1"
         },
         {
             "type": "question",
-            "question": "Welke organen maken deel uit van het cardiovasculair systeem en wat is hun rol in de bloedcirculatie?",
-            "answer": "Het cardiovasculair systeem bestaat uit het hart (1 punt), dat fungeert als de pomp voor bloedcirculatie, en de bloedvaten (1 punt), waaronder arteri\u00ebn (1 punt), venen (1 punt), en haarvaten (1 punt), die zorgen voor het transport van bloed door het lichaam.",
+            "question": "Welke organen maken deel uit van het cardiovasculair systeem?",
+            "answer": "Het cardiovasculair systeem bestaat uit het hart (1 punt), bloedvaten (1 punt) en bloed (1 punt).",
             "tag": "2.1.1",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Functie van het Cardiovasculair Systeem",
-            "text": "De primaire functie van het **cardiovasculair systeem** is het **transport van cellen**, zoals rode en witte bloedcellen, **gassen** (zoals zuurstof en koolstofdioxide), **voedingsstoffen** (bijvoorbeeld glucose en aminozuren), en **afvalstoffen** (zoals ureum en koolstofdioxide). Deze essenti\u00eble taken zijn cruciaal voor het in stand houden van de homeostase en ondersteunen alle andere lichaamssystemen.",
+            "title": "Functie van het cardiovasculair systeem",
+            "text": "De primaire functie van het **cardiovasculair systeem** is het **transport van cellen**, zoals rode en witte bloedcellen, **gassen** (zoals zuurstof), **voedingsstoffen** (bijvoorbeeld glucose en aminozuren), en **afvalstoffen** (zoals ureum en koolstofdioxide).",
             "image": null,
             "tag": "2.1.2"
         },
         {
             "type": "question",
-            "question": "Wat zijn de primaire functies van het cardiovasculair systeem en hoe dragen deze bij aan de homeostase van het lichaam?",
-            "answer": "De primaire functies van het cardiovasculair systeem omvatten het transport van cellen zoals rode en witte bloedcellen (1 punt), gassen zoals zuurstof en koolstofdioxide (1 punt), voedingsstoffen zoals glucose en aminozuren (1 punt), en afvalstoffen zoals ureum en koolstofdioxide (1 punt), wat essentieel is voor het behouden van de homeostase en het ondersteunen van alle andere lichaamssystemen (1 punt).",
+            "question": "Wat zijn de primaire functies van het cardiovasculair systeem?",
+            "answer": "De primaire functies van het cardiovasculair systeem omvatten het transport van cellen (1 punt), gassen (1 punt), voedingsstoffen (1 punt) en afvalstoffen (1 punt).",
             "tag": "2.1.2",
             "image": null
         },
@@ -346,23 +731,9 @@
         },
         {
             "type": "question",
-            "question": "Welke typen bloedvaten maken deel uit van het vaatstelsel en wat zijn hun respectieve groottes?",
-            "answer": "Het vaatstelsel bestaat uit arteri\u00ebn of slagaders (1 punt), arteriolen of kleine slagaders (1 punt), een capillairbed of netwerk van capillairen (1 punt), venulen of kleine aders (1 punt) en venen of aders (1 punt).",
+            "question": "Welke typen bloedvaten maken deel uit van het vaatstelsel?",
+            "answer": "Het vaatstelsel bestaat uit arteri\u00ebn / slagaders (1 punt), arteriolen / kleine slagaders (1 punt), een capillairbed / netwerk van capillairen (1 punt), venulen / kleine aders (1 punt) en venen / aders (1 punt).",
             "tag": "2.2.1",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Functies van het vaatstelsel",
-            "text": "Het vaatstelsel vervult cruciale functies zoals de **uitwisseling van gassen** (zoals zuurstof en koolstofdioxide) en **voedingsstoffen**, evenals de **regulatie van de bloeddruk**.",
-            "image": null,
-            "tag": "2.2.2"
-        },
-        {
-            "type": "question",
-            "question": "Welke cruciale functies vervult het vaatstelsel?",
-            "answer": "Het vaatstelsel vervult functies zoals de uitwisseling van gassen zoals zuurstof en koolstofdioxide (1 punt) en voedingsstoffen (1 punt), evenals de regulatie van de bloeddruk (1 punt).",
-            "tag": "2.2.2",
             "image": null
         },
         {
@@ -374,113 +745,29 @@
         },
         {
             "type": "question",
-            "question": "Wat is de functie van de vasa vasorum en in welke bloedvaten komen deze voornamelijk voor?",
-            "answer": "De vasa vasorum zijn kleine bloedvaten die de bloedvoorziening van de vaatwanden zelf verzorgen (1 punt), vooral in de grotere bloedvaten zoals de arteri\u00ebn en venen (1 punt).",
+            "question": "Wat is de functie van de vasa vasorum?",
+            "answer": "De vasa vasorum zijn kleine bloedvaten die de bloedvoorziening van de vaatwanden zelf verzorgen (1 punt).",
             "tag": "2.2.3",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Aantal circulaties",
-            "text": "Er zijn **twee** hoofdcirculaties in het menselijk lichaam: de **grote bloedsomloop** en de **kleine bloedsomloop**. De grote bloedsomloop transporteert zuurstofrijk bloed van het hart naar de rest van het lichaam, terwijl de kleine bloedsomloop zuurstofarm bloed van het hart naar de longen vervoert voor gasuitwisseling.",
+            "title": "Twee circulaties",
+            "text": "Er zijn **twee** hoofdcirculaties in het menselijk lichaam: de **grote bloedsomloop** (systematische circulatie) en de **kleine bloedsomloop** (pulmonale circulatie). De grote bloedsomloop transporteert zuurstofrijk bloed van het hart naar de rest van het lichaam, terwijl de kleine bloedsomloop zuurstofarm bloed van het hart naar de longen vervoert voor gasuitwisseling.",
             "image": null,
             "tag": "2.3.1"
         },
         {
             "type": "question",
             "question": "Wat zijn de twee hoofdcirculaties in het menselijk lichaam en wat is hun primaire functie?",
-            "answer": "De twee hoofdcirculaties in het menselijk lichaam zijn de grote bloedsomloop, die zuurstofrijk bloed van het hart naar de rest van het lichaam transporteert (1 punt), en de kleine bloedsomloop, die zuurstofarm bloed van het hart naar de longen vervoert voor gasuitwisseling (1 punt).",
+            "answer": "De twee hoofdcirculaties in het menselijk lichaam zijn de grote bloedsomloop (1 punt), die zuurstofrijk bloed van het hart naar de rest van het lichaam transporteert (1 punt), en de kleine bloedsomloop (1 punt), die zuurstofarm bloed van het hart naar de longen vervoert voor gasuitwisseling (1 punt).",
             "tag": "2.3.1",
             "image": null
         },
         {
             "type": "theory",
-            "title": "Route van de bloedsomloop",
-            "text": "De route van de bloedsomloop begint in de **linkerkamer** waar zuurstofrijk bloed wordt gepompt naar de **arteri\u00ebn**. Het bloed reist door het lichaam, keert terug via de **venen** naar het **rechter atrium**, gaat naar de **rechterventrikel**, en wordt dan naar de **longen** gepompt. In de longen vindt gasuitwisseling plaats, waarna het zuurstofrijke bloed terugkeert naar het **linker atrium** en vervolgens naar de **linkerventrikel** om de cyclus opnieuw te beginnen.",
-            "image": null,
-            "tag": "2.3.2"
-        },
-        {
-            "type": "question",
-            "question": "Beschrijf de route die bloed aflegt in de bloedsomloop, beginnend en eindigend bij de linkerkamer.",
-            "answer": "De route van de bloedsomloop begint in de linkerkamer waar zuurstofrijk bloed wordt gepompt naar de arteri\u00ebn (1 punt), reist door het lichaam, keert terug via de venen naar het rechter atrium (1 punt), gaat naar de rechterventrikel (1 punt), en wordt dan naar de longen gepompt voor gasuitwisseling (1 punt). Het zuurstofrijke bloed keert daarna terug naar het linker atrium en vervolgens naar de linkerventrikel om de cyclus opnieuw te beginnen (1 punt).",
-            "tag": "2.3.2",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Positie van het hart",
-            "text": "Het **hart** is voornamelijk gepositioneerd aan de **linkerkant** van de thorax.",
-            "image": null,
-            "tag": "2.4.1"
-        },
-        {
-            "type": "question",
-            "question": "Aan welke kant van de thorax is het hart voornamelijk gepositioneerd?",
-            "answer": "Het hart is voornamelijk gepositioneerd aan de linkerkant (1 punt) van de thorax.",
-            "tag": "2.4.1",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Bloedstroom vanuit het hart",
-            "text": "De **bloedstroom** begint bij het linkerventrikel en beweegt naar het **hoofd**, de **extremiteiten**, vervolgens via de **aortaboog** en keert uiteindelijk terug naar het **hart**.",
-            "image": null,
-            "tag": "2.4.2"
-        },
-        {
-            "type": "question",
-            "question": "Beschrijf de route die de bloedstroom aflegt vanuit het linkerventrikel.",
-            "answer": "De bloedstroom begint bij het linkerventrikel (1 punt) en beweegt naar het hoofd (1 punt), de extremiteiten (1 punt), vervolgens via de aortaboog (1 punt) en keert uiteindelijk terug naar het hart (1 punt).",
-            "tag": "2.4.2",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Route van de pulmonale circulatie",
-            "text": "De **pulmonale circulatie** begint in het **rechterventrikel** van het hart, pompt bloed door de **longslagaders** naar de **longen** waar gasuitwisseling plaatsvindt, en keert terug naar het hart via de **longaders** die uitkomen in het **linker atrium**.",
-            "image": null,
-            "tag": "2.5.1"
-        },
-        {
-            "type": "question",
-            "question": "Beschrijf de route die bloed aflegt binnen de pulmonale circulatie vanaf het moment dat het het rechterventrikel verlaat tot het moment dat het terugkeert naar het hart.",
-            "answer": "De route van de pulmonale circulatie begint in het rechterventrikel (1 punt), pompt bloed door de longslagaders naar de longen voor gasuitwisseling (1 punt), en keert vervolgens terug naar het hart via de longaders die uitkomen in het linker atrium (1 punt).",
-            "tag": "2.5.1",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Zuurstofuitwisseling in de longen",
-            "text": "De belangrijkste functie van de pulmonale circulatie is **zuurstofuitwisseling** die plaatsvindt in de **alveoli**, kleine luchtzakjes in de longen.",
-            "image": null,
-            "tag": "2.5.2"
-        },
-        {
-            "type": "question",
-            "question": "Wat is de belangrijkste functie van de pulmonale circulatie en waar vindt deze functie specifiek plaats in de longen?",
-            "answer": "De belangrijkste functie van de pulmonale circulatie is zuurstofuitwisseling (1 punt), die plaatsvindt in de alveoli (1 punt), de kleine luchtzakjes in de longen (1 punt).",
-            "tag": "2.5.2",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Misvatting over kleurcodering",
-            "text": "Vaak wordt er gebruikgemaakt van kleurcodering om de **zuurstofstatus** van bloed aan te duiden: **rood** voor zuurstofrijk en **blauw** voor zuurstofarm. Dit kan echter misleidend zijn, omdat bloed dat zuurstofarm is, niet daadwerkelijk blauw is.",
-            "image": null,
-            "tag": "2.5.3"
-        },
-        {
-            "type": "question",
-            "question": "Leg uit waarom de kleurcodering van bloed met rood voor zuurstofrijk en blauw voor zuurstofarm misleidend kan zijn.",
-            "answer": "De kleurcodering van bloed met rood voor zuurstofrijk en blauw voor zuurstofarm kan misleidend zijn omdat zuurstofarm bloed in werkelijkheid niet blauw is (1 punt).",
-            "tag": "2.5.3",
-            "image": null
-        },
-        {
-            "type": "theory",
             "title": "Functie van de systemische circulatie",
-            "text": "De **systemische circulatie** heeft als hoofdfunctie het **voorzien van zuurstof** en **voedingsstoffen** aan de weefsels en organen in het lichaam.",
+            "text": "De **systemische circulatie** (grote bloedsomloop) heeft als hoofdfunctie het **voorzien van zuurstof** en **voedingsstoffen** aan de weefsels en organen in het lichaam.",
             "image": null,
             "tag": "2.6.1"
         },
@@ -493,15 +780,57 @@
         },
         {
             "type": "theory",
+            "title": "Route van de bloedsomloop",
+            "text": "De route van de bloedsomloop begint in de **linkerventrikel** waar **zuurstofrijk bloed** wordt gepompt naar de **aorta**. Het bloed reist door het lichaam, keert terug via de **venen** naar het **rechter atrium**, gaat naar de **rechterventrikel**, en wordt dan naar de **longen** gepompt. In de longen vindt **gasuitwisseling** plaats, waarna het **zuurstofrijke bloed** terugkeert naar het **linker atrium** en vervolgens naar de **linkerventrikel** om de cyclus opnieuw te beginnen.",
+            "image": null,
+            "tag": "2.3.2"
+        },        
+        {
+            "type": "question",
+            "question": "Beschrijf de route die de bloedstroom aflegt in de bloedsomloop, beginnend en eindigend bij de linkerventrikel. Benoem daarbij ook de specifieke bloedvaten.",
+            "answer": "De route van de bloedsomloop begint in de linkerventrikel waar (zuurstofrijk) bloed wordt gepompt naar de aorta (1 punt). Het bloed reist door het lichaam (1 punt), keert terug via de venen (1 punt) naar het rechter atrium (1 punt), gaat naar de rechterventrikel (1 punt), en wordt dan naar de longen gepompt (1 punt). In de longen vindt gasuitwisseling plaats, waarna het zuurstofrijke bloed terugkeert naar het linker atrium (1 punt) en vervolgens naar de linkerventrikel (1 punt) om de cyclus opnieuw te beginnen.",
+            "tag": "2.3.2",
+            "image": null
+        },        
+        {
+            "type": "theory",
+            "title": "Functie van de pulmonale circulatie",
+            "text": "De belangrijkste functie van de pulmonale circulatie (kleine bloedsomloop) is **zuurstofuitwisseling** die plaatsvindt in de **alveoli**, kleine luchtzakjes in de longen. Zuurstof wordt opgenomen in het bloed en koolstofdioxide wordt afgegeven aan de longen om te worden uitgeademd.",
+            "image": null,
+            "tag": "2.5.2"
+        },
+        {
+            "type": "question",
+            "question": "Beschrijf het proces dat plaatsvindt in de longen.",
+            "answer": "In de longen wordt zuurstof opgenomen in het bloed (1 punt) en koolstofdioxide wordt afgegeven aan de longen om te worden uitgeademd (1 punt). Dit gebeurt via alveoli.",
+            "tag": "2.5.2",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Route van de pulmonale circulatie",
+            "text": "De **pulmonale circulatie** begint in het **rechterventrikel** van het hart, pompt bloed door de **longslagaders** naar de **longen** waar gasuitwisseling plaatsvindt, en keert terug naar het hart via de **longaders** die uitkomen in het **linker atrium**.",
+            "image": null,
+            "tag": "2.5.1"
+        },
+        {
+            "type": "question",
+            "question": "Beschrijf de route die bloed aflegt binnen de pulmonale circulatie vanaf het moment dat het het rechterventrikel verlaat tot het moment dat het terugkeert naar het hart. Benoem ook de aders.",
+            "answer": "De route van de pulmonale circulatie begint in het rechterventrikel (1 punt), pompt bloed door de longslagaders (1 punt) naar de longen (1 punt) voor gasuitwisseling, en keert vervolgens terug naar het hart (1 punt) via de longaders (1 punt) die uitkomen in het linker atrium (1 punt).",
+            "tag": "2.5.1",
+            "image": null
+        },
+        {
+            "type": "theory",
             "title": "Componenten van het lymfestelsel",
-            "text": "Het **lymfestelsel** bestaat uit **lymvaten**, **lymfknopen**, **milt** en **thymus**, en speelt een cruciale rol in het onderhouden van de lichaamsvloeistofbalans en het bieden van immunologische verdediging.",
+            "text": "Het **lymfestelsel** bestaat uit **lymvaten**, **lymfknopen**, **milt** en **thymus**, en speelt een rol in het onderhouden van de lichaamsvloeistofbalans en het bieden van immunologische verdediging.",
             "image": null,
             "tag": "2.6.2"
         },
         {
             "type": "question",
-            "question": "Welke onderdelen behoren tot het lymfestelsel en wat is de overkoepelende rol van dit systeem?",
-            "answer": "Het lymfestelsel bestaat uit lymvaten (1 punt), lymfknopen (1 punt), de milt (1 punt) en de thymus (1 punt), en heeft als overkoepelende rol het onderhouden van de lichaamsvloeistofbalans (1 punt) en het bieden van immunologische verdediging (1 punt).",
+            "question": "Welke onderdelen behoren tot het lymfestelsel?",
+            "answer": "Het lymfestelsel bestaat uit lymvaten (1 punt), lymfknopen (1 punt), de milt (1 punt) en de thymus (1 punt).",
             "tag": "2.6.2",
             "image": null
         }
