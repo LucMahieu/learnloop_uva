@@ -75,9 +75,9 @@ def authorize():
 
 
 if __name__=="__main__":
-    # Initialise run settings
-    use_mongodb = True
-    surf_test_env = True
+    # Initialise run settings: set to False for deployment
+    use_mongodb = False
+    surf_test_env = False
 
     db = db_config.connect_db(use_mongodb)
     app.run(host='0.0.0.0', port=3000)
