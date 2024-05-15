@@ -1206,7 +1206,7 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Celbiologie - deel 2"
-        logo_base64 = convert_image_base64("./images/logo.png")
+        logo_base64 = convert_image_base64("./content/images/logo.png")
 
         if surf_test_env:
             href = "http://localhost:3000/"
@@ -1241,27 +1241,28 @@ def fetch_and_remove_nonce():
 
 if __name__ == "__main__":
     # ---------------------------------------------------------
-    # SETTINGS FOR TESTING:
+    # SETTINGS for DEVELOPMENT & DEPLOYMENT:
+
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    # SET ALL TO FALSE WHEN DEPLOYING
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = True
+    surf_test_env = False
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = True
+    st.session_state.use_mongodb = False
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
-    login_page = True
+    no_login_page = False
 
     # Bypass authentication when testing so flask app doesnt have to run
     skip_authentication = False
-    if skip_authentication:
-        login_page = True
-        st.session_state.username = "test_user_2"
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1277,10 +1278,13 @@ if __name__ == "__main__":
 
     fetch_and_remove_nonce()
 
+    if skip_authentication:
+        no_login_page = True
+        st.session_state.username = "test_user_2"
+
     # Only render login page if not testing
-    if login_page == True \
+    if no_login_page == False \
         and st.session_state.nonce is None \
-        and st.session_state.use_mongodb == False \
         and st.session_state.username is None:
         render_login_page()
 
