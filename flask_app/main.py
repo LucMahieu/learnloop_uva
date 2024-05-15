@@ -10,6 +10,25 @@ import db_config
 
 load_dotenv()
 
+# --------------------------------------------
+# SETTINGS for DEVELOPMENT and DEPLOYMENT
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# SET ALL TO FALSE WHEN DEPLOYING
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Test before deployment by runing in docker with the following commands:
+# - docker build -t flask-app .
+# - docker run --env-file .env -p 3000:3000 flask-app
+
+# Don't forget to re-build the image again after changing the code.
+
+use_mongodb = False
+surf_test_env = False
+# --------------------------------------------
+
+db = db_config.connect_db(use_mongodb)
+
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET')
 
@@ -27,6 +46,7 @@ auth.register(
 
 @app.route('/')
 def login():
+    global surf_test_env
     if surf_test_env:
         scheme = 'http'
     else:
@@ -37,6 +57,7 @@ def login():
 
 
 def save_id_to_db(user_id):
+    global db
     user = db.users_2.find_one({"username": user_id})
     if not user:
         db.users_2.insert_one({"username": user_id})
@@ -50,6 +71,7 @@ def generate_nonce(length=16):
 
 
 def save_nonce_to_db(user_id):
+    global db
     nonce = generate_nonce(16)
     db.users_2.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
     return nonce
@@ -57,6 +79,7 @@ def save_nonce_to_db(user_id):
 
 @app.route('/auth')
 def authorize():
+    global surf_test_env
     token = auth.surfconext.authorize_access_token()
 
     user_id = token['userinfo']['sub']
@@ -75,9 +98,4 @@ def authorize():
 
 
 if __name__=="__main__":
-    # Initialise run settings: set to False for deployment
-    use_mongodb = False
-    surf_test_env = False
-
-    db = db_config.connect_db(use_mongodb)
     app.run(host='0.0.0.0', port=3000)
