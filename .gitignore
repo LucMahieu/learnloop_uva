@@ -1,5 +1,6 @@
 **/.env
 .streamlit/secrets.toml
+secrets.toml
 .vscode/launch.json
 **.py[cod]
 __pycache__/
