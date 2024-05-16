@@ -1050,6 +1050,7 @@ def render_page_button(page_title, module, phase):
         st.session_state.selected_module = module
         st.session_state.selected_phase = phase
         st.session_state.info_page = False
+        db_dal.update_last_module()
         track_visits()
     
 
@@ -1103,7 +1104,7 @@ def initialise_database():
                     "practice": {"segment_index": -1,
                                  "ordered_segment_sequence": [],
                                 },
-                    "feedback": {"questions": [] 
+                    "feedback": {"questions": []
                                  }            
                     }
             }}
@@ -1254,15 +1255,15 @@ if __name__ == "__main__":
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = False
+    st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
-    no_login_page = False
+    no_login_page = True
 
     # Bypass authentication when testing so flask app doesnt have to run
-    skip_authentication = False
+    skip_authentication = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1281,6 +1282,8 @@ if __name__ == "__main__":
     if skip_authentication:
         no_login_page = True
         st.session_state.username = "test_user_2"
+
+    print(f"Username: {st.session_state.username}")
 
     # Only render login page if not testing
     if no_login_page == False \
@@ -1305,10 +1308,16 @@ if __name__ == "__main__":
         if st.session_state.info_page:
             render_info_page()
             exit()
-        elif st.session_state.selected_module is None:         
-            # Automatically start the first module if no module is selected           
-            st.session_state.selected_module = st.session_state.modules[0]
-            st.session_state.selected_phase = 'learning'
+        elif st.session_state.selected_module is None:     
+
+            # Automatically start the last module if no module is selected
+            st.session_state.selected_module = db_dal.fetch_last_module()
+
+            # If the user is new, the last module is not yet set
+            if db_dal.fetch_last_module() is None:
+                st.session_state.selected_module = st.session_state.modules[0]
+
+            st.session_state.selected_phase = 'overview'
             
             # Rerun to make sure the page is displayed directly after start button is clicked
             st.rerun()

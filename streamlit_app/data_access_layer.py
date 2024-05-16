@@ -122,6 +122,17 @@ class DatabaseAccess:
         self.db = db_config.connect_db(st.session_state.use_mongodb)
         self.users_collection_name = 'users_2'
 
+    def fetch_last_module(self):
+        user_doc = self.find_user_doc()
+        return user_doc.get('last_module', None)
+
+    def update_last_module(self):
+        self.db.users_2.update_one(
+            {"username": st.session_state.username},
+            {"$set": {"last_module": st.session_state.selected_module}}
+        )
+        print(f"Updated last module in db: {st.session_state.selected_module}")
+        
     def fetch_all_documents(self):
         collection = self.db[self.users_collection_name]
         return list(collection.find({}))
