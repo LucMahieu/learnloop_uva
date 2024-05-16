@@ -1272,7 +1272,7 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = True
+    use_openai_api = False
 
     no_login_page = False
 
