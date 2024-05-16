@@ -71,9 +71,9 @@ class OverviewPage:
         topic_segment_indexes = self.cont_dal.get_topic_segment_indexes(module, topic_index)
         user_doc = self.db_dal.find_user_doc()
         progress_count = self.db_dal.fetch_progress_counter(module, user_doc)
-        
+
         for index in topic_segment_indexes:
-            if progress_count.get(str(index), None) == None:
+            if progress_count != None or progress_count.get(str(index), None) == None:
                 return False
         
         return True

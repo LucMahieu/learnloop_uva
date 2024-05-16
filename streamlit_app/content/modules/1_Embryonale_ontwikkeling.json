@@ -12,7 +12,7 @@
             "type": "theory",
             "title": "Relatie anatomie en embryologie",
             "text": "Het begrijpen van de anatomie gaat hand in hand met inzicht in de embryologie. Kennis van embryologie biedt een waardevol perspectief op de **ontwikkeling van het volwassen lichaam** en de humane anatomie.",
-            "image": null,
+            "image": "embryology_and_anatomy.png",
             "tag": "2.2.2"
         },
         {
@@ -33,7 +33,7 @@
             "type": "theory",
             "title": "Vroege embryonale ontwikkeling",
             "text": "De vroege embryonale ontwikkeling begint met een **oöcyt** die na bevruchting een **zygote** vormt. De zygote ondergaat een reeks **klievingsdelingen** waardoor het aantal cellen toeneemt: eerst 2 cellen, daarna 4 cellen, gevolgd door 8 cellen. Dit proces leidt tot de vorming van een **morula** (ongeveer 32 cellen), die vervolgens een gecompacteerde morula wordt en uiteindelijk verandert in een **blastocyst**.",
-            "image": null,
+            "image": "oocyt_to_blastocyst.png",
             "tag": "3.1.1"
         },
         {
@@ -47,7 +47,7 @@
             "type": "theory",
             "title": "Vorming van de embryoblast",
             "text": "De **embryoblast** ontwikkelt zich verder door splitsing in de **hypoblast** en **epiblast**, wat resulteert in een **tweelaagse kiemschijf**.",
-            "image": null,
+            "image": "endoterium_tweelaagse_kiemschijf.png",
             "tag": "2.3.2"
         },
         {
@@ -61,7 +61,7 @@
             "type": "theory",
             "title": "Amnionholte en dooierzakholte",
             "text": "Parallel aan de vorming van de tweelaagse kiemschijf ontwikkelen zich de **amnionholte** en **dooierzak**.",
-            "image": null,
+            "image": "amnionholte_en_dooierzak.png",
             "tag": "2.3.3"
         },
         {
@@ -75,7 +75,7 @@
             "type": "theory",
             "title": "Gastrulatie",
             "text": "Gastrulatie is een proces waarbij de **tweelaagse kiemschijf** transformeert naar een **drielaagse kiemschijf** met de vorming van de drie primaire kiemlagen: **ectoderm**, **mesoderm**, en **endoderm**.",
-            "image": null,
+            "image": "ecto-meso-endoderm.png",
             "tag": "2.3.4"
         },
         {

@@ -2,7 +2,7 @@
     "module_name": "NAF_1",
     "topics": [
         {
-            "topic_title": "Systematische Anatomie en Orgaansystemen",
+            "topic_title": "Systematische anatomie en orgaansystemen",
             "segment_indexes": [
                 0,
                 1,
@@ -11,7 +11,7 @@
             ]
         },
         {
-            "topic_title": "Anatomische Terminologie en Embryologie",
+            "topic_title": "Anatomische terminologie en embryologie",
             "segment_indexes": [
                 4,
                 5,
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "topic_title": "Embryonale Ontwikkeling",
+            "topic_title": "Embryonale ontwikkeling",
             "segment_indexes": [
                 10,
                 11,
@@ -37,7 +37,7 @@
             ]
         },
         {
-            "topic_title": "Anatomische Structuren en Bewegingen",
+            "topic_title": "Anatomische structuren en bewegingen",
             "segment_indexes": [
                 20,
                 21,
@@ -50,7 +50,7 @@
             ]
         },
         {
-            "topic_title": "Specifieke Orgaansystemen en Structuren",
+            "topic_title": "Specifieke orgaansystemen en structuren",
             "segment_indexes": [
                 28,
                 29,

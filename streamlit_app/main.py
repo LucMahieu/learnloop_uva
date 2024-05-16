@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import os
 import json
 from openai import AzureOpenAI
+from openai import OpenAI
 from pymongo import MongoClient
 import base64
 from overview_page import OverviewPage
@@ -18,11 +19,16 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 load_dotenv()
 
 def connect_to_openai():
-    return AzureOpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),  
-    api_version="2024-03-01-preview",
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
-    )
+    if use_openai_api:
+        st.session_state["openai_model"] = "gpt-4o"
+        return OpenAI(api_key=os.getenv("OPENAI_API_KEY_2"))
+    else:
+        st.session_state["openai_model"] = "learnloop"
+        return AzureOpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),  
+        api_version="2024-03-01-preview",
+        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+        )
 
 def upload_progress():
     """
@@ -60,7 +66,7 @@ def evaluate_answer():
 
 
         response = openai_client.chat.completions.create(
-            model="learnloop",
+            model=st.session_state['openai_model'],
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
@@ -894,7 +900,8 @@ def render_overview_page():
     Renders the page that shows all the subjects in a lecture, which gives the 
     student insight into their progress.
     """
-    overview_page = OverviewPage(st.session_state.selected_module)
+    module_title = ' '.join(st.session_state.selected_module.split(' ')[1:])
+    overview_page = OverviewPage(module_title)
     overview_page.render_page()
 
 
@@ -1004,9 +1011,9 @@ def render_feedback_form():
     """Feedback form in the sidebar."""
     st.write("\n\n")
     st.write("\n\n")
-    st.sidebar.subheader("Denk je mee? (anoniem)")  
+    st.sidebar.subheader("Denk je mee?")  
     st.sidebar.text_area(
-        label='Wat vind je handig? Wat kan beter? etc. Voer geen persoonlijke of herkenbare gegevens in.',
+        label='Wat vind je handig? Wat kan beter? Voer geen persoonlijke of herkenbare gegevens in.',
         key='feedback_box',
     )
 
@@ -1068,13 +1075,17 @@ def render_sidebar():
         
         practice_exam_count = 0
         # Display the modules in expanders in the sidebar
-        for module in st.session_state.modules:
+        for i, module in enumerate(st.session_state.modules):
+
             # If the module is not a Oefententamen, then skip it
+            zero_width_space = "\u200B"
             if not module.startswith('Oefententamen'):
-                with st.expander(module):
+                with st.expander(f"{i + 1}.{zero_width_space} " + ' '.join(module.split(' ')[1:])):
+
                     # Display buttons for the two types of phases per module
                     render_page_button('Leren 📖', module, phase='overview')
                     render_page_button('Herhalen 🔄', module, phase='practice')
+
             elif module.startswith('Oefententamen'):
                 practice_exam_count += 1
 
@@ -1245,7 +1256,7 @@ if __name__ == "__main__":
     # SETTINGS for DEVELOPMENT & DEPLOYMENT:
 
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    # SET ALL TO FALSE WHEN DEPLOYING
+    # SET ALL TO FALSE WHEN DEPLOYING (except if it is demo: use_openai_api = True for GPT-4o)
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
@@ -1255,15 +1266,18 @@ if __name__ == "__main__":
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = True
+    st.session_state.use_mongodb = False
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
-    no_login_page = True
+    # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
+    use_openai_api = True
+
+    no_login_page = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    skip_authentication = True
+    skip_authentication = False
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1282,8 +1296,6 @@ if __name__ == "__main__":
     if skip_authentication:
         no_login_page = True
         st.session_state.username = "test_user_2"
-
-    print(f"Username: {st.session_state.username}")
 
     # Only render login page if not testing
     if no_login_page == False \

@@ -1,0 +1,46 @@
+{
+    "module_name": "NAF_2",
+    "topics": [
+        {
+            "topic_title": "Spijsverteringsstelsel",
+            "segment_indexes": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+            ]
+        },
+        {
+            "topic_title": "Ademhalingstelsel",
+            "segment_indexes": [
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
+            ]
+        },
+        {
+            "topic_title": "Lateraliteit en orgaanpositie",
+            "segment_indexes": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+            ]
+        }
+    ]
+}
