@@ -89,7 +89,7 @@
             "type": "theory",
             "title": "Ontwikkeling van orgaansystemen",
             "text": "Elk van de kiemlagen draagt bij aan de **ontwikkeling van orgaansystemen**. Het **ectoderm** is verantwoordelijk voor de vorming van het zenuwstelsel en de huid, het **mesoderm** voor botten, bindweefsel, het hart- en vaatstelsel en het urogenitaal systeem en het **endoderm** voor de vorming van het epitheel van spijsverteringsklieren, maagdarmkanaal en luchtwegen.",
-            "image": null,
+            "image": "ecto-meso-endoderm_visualisatie.png",
             "tag": "2.3.5"
         },
         {
@@ -117,7 +117,7 @@
             "type": "theory",
             "title": "Plooivorming",
             "text": "Tijdens de embryonale ontwikkeling doorlopen de kiembladen een complex proces van plooien. Aanvankelijk vormen de kiembladen een platte schijf. Het ectoderm, gelegen aan de buitenkant, begint zich over de randen te buigen omhoog, terwijl het endoderm naar binnen plooit, waardoor structuren zoals de spijsverteringsbuis beginnen te vormen. Het mesoderm, gelegen tussen ectoderm en endoderm, vouwt zich eveneens, wat uiteindelijk leidt tot de vorming van het hart, bloedvaten en spieren.",
-            "image": null,
+            "image": "plooivorming.png",
             "tag": "2.3.6"
         },
         {
@@ -145,7 +145,7 @@
             "type": "theory",
             "title": "De Anatomische stand",
             "text": "De anatomische stand is een referentiepositie die gebruikt wordt in de anatomie om de locatie van anatomische structuren te beschrijven. In deze stand staat het lichaam rechtop, met het gezicht naar voren gericht, de armen langs het lichaam, en de handpalmen naar voren. De voeten zijn eveneens naar voren gericht en plat op de grond. Deze stand wordt gebruikt om consistentie te waarborgen in de medische beschrijvingen van het lichaam en zijn onderdelen.",
-            "image": null,
+            "image": "anatomische_stand.png",
             "tag": "3.1.1"
         },
         {
@@ -157,9 +157,9 @@
         },
         {
             "type": "theory",
-            "title": "Anatomische assen en vlakken",
+            "title": "Anatomische assen",
             "text": "Het menselijk lichaam kan worden verdeeld in drie anatomische assen: de **sagittale as**, die het lichaam in linker en rechter helften verdeelt, de **frontale as**, die het lichaam in voor- en achterkant verdeelt, en de **transversale as**, die het lichaam in boven- en onderkant verdeelt.",
-            "image": null,
+            "image": "assen.png",
             "tag": "2.4.2"
         },
         {
@@ -173,7 +173,7 @@
             "type": "theory",
             "title": "Anatomische ori\u00ebntatie",
             "text": "Anatomische ori\u00ebntatie omvat termen zoals **craniaal** (richting het hoofd), **caudaal** (richting de staart), **mediaal** (richting het midden van het lichaam), **lateraal** (weg van het midden van het lichaam), **proximaal** (dichter bij de romp) en **distaal** (verder van de romp). Deze termen zijn belangrijk om nauwkeurig de locaties op het lichaam te beschrijven en voor duidelijke klinische communicatie.",
-            "image": null,
+            "image": "anatomische_posities_richtingen_1.png",
             "tag": "2.4.3"
         },
         {
@@ -187,7 +187,7 @@
             "type": "theory",
             "title": "Gebruik distaal en proximaal",
             "text": "Het is handig om de termen distaal en proximaal te gebruiken bij het beschrijven van de darmen. In plaats van elke kronkeling van de darmen te beschrijven, kun je relatief tot een bepaald punt zeggen of iets distaal of proximaal is. Dit maakt het beschrijven van de locatie van structuren veel eenvoudiger en duidelijker.",
-            "image": null,
+            "image": "anatomische_posities_richtingen_2.png",
             "tag": "2.1.1"
         },
         {
@@ -222,7 +222,7 @@
             "type": "theory",
             "title": "Skelet",
             "text": "Het skelet bestaat uit botstukken, bot, kraakbeen en beenmerg. Dit systeem vervult functies zoals bescherming en steun, aanhechting van pezen, spieren en ligamenten, bloedcelvorming, en het reguleren van de calcium- en fosfaathuishouding.",
-            "image": null,
+            "image": "skelet.png",
             "tag": "4.1.1"
         },
         {
@@ -243,7 +243,7 @@
             "type": "theory",
             "title": "Het axiaal en appendicular skelet",
             "text": "Het **skelet** kan worden verdeeld in twee hoofdonderdelen: het **axiale skelet**, waar de schedel, wervelkolom, ribben en borstbeen onder vallen en het **appendiculair skelet**, waar de extremiteiten zoals armen en benen onder vallen.",
-            "image": null,
+            "image": "axiaal_appendicular.png",
             "tag": "2.5.2"
         },
         {
@@ -257,7 +257,7 @@
             "type": "theory",
             "title": "Axiaal skelet",
             "text": "Het axiaal skelet vormt de centrale structuur van het lichaam en bestaat uit de schedel (cranium) en de wervelkolom (columna vertebralis). De wervelkolom bestaat uit 7 halswervels (vertebrae cervicales), 12 borstwervels (vertebrae thoracales), 5 lendenwervels (vertebrae lumbales) en 5 heiligbeenwervels (vertebrae sacrales). Samen ondersteunen deze structuren het lichaam en beschermen ze het ruggenmerg.",
-            "image": null,
+            "image": "axiaal_skelet.png",
             "tag": "4.2.1"
         },
         {
@@ -270,36 +270,64 @@
         {
             "type": "theory",
             "title": "Appendiculair Skelet",
-            "text": "Het appendiculair skelet omvat de botten van de bovenste en onderste extremiteiten. De botten in de bovenste extremiteiten omvatten de schoudergordel, bovenarm, onderarm en hand. De botten in de onderste extremiteiten omvatten de bekkengordel, bovenbeen, onderbeen en voet.",
-            "image": null,
+            "text": "Het appendiculair skelet omvat de botten van de bovenste en onderste extremiteiten.",
+            "image": "appendiculair_skelet.png",
             "tag": "5.1.1"
+        },
+        {
+            "type": "theory",
+            "title": "Bovenste Extremiteiten",
+            "text": "De botten in de bovenste extremiteiten omvatten de schoudergordel, bovenarm, onderarm en hand.",
+            "image": "appendiculair_skelet.png",
+            "tag": "5.1.2"
         },
         {
             "type": "question",
             "question": "Uit welke botten bestaat het appendiculair skelet van de bovenste extremiteit?",
             "answer": "Het appendiculair skelet van de bovenste extremiteit omvat de schoudergordel (1 punt), bovenarm (1 punt), onderarm (1 punt) en hand (1 punt).",
-            "tag": "5.1.1",
+            "tag": "5.1.2",
             "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Onderste Extremiteiten",
+            "text": "De botten in de onderste extremiteiten omvatten de bekkengordel, bovenbeen, onderbeen en voet.",
+            "image": "appendiculair_skelet.png",
+            "tag": "5.1.3"
         },
         {
             "type": "question",
             "question": "Uit welke botten bestaat het appendiculair skelet van de onderste extremiteit?",
             "answer": "Het appendiculair skelet van de onderste extremiteit omvat de bekkengordel (1 punt), bovenbeen (1 punt), onderbeen (1 punt) en voet (1 punt).",
-            "tag": "5.1.1",
+            "tag": "5.1.3",
             "image": null
         },
         {
             "type": "theory",
             "title": "Botten van de bovenste extremiteiten",
             "text": "De schoudergordel bestaat uit het sleutelbeen (clavicula) en het schouderblad (scapula). De bovenarm bevat het opperarmbeen (humerus). De onderarm bestaat uit het spaakbeen (radius) en de ellepijp (ulna). De hand is opgebouwd uit de handwortelbeentjes (carpalia), middenhandsbeentjes (metacarpalia) en vingerkootjes (phalangen).",
-            "image": null,
-            "tag": "5.1.2"
+            "image": "appendiculair_skelet.png",
+            "tag": "5.1.4"
         },
         {
             "type": "question",
             "question": "Noem de botten die deel uitmaken van de schoudergordel, bovenarm, onderarm en hand.",
             "answer": "De botten van de schoudergordel zijn het sleutelbeen (clavicula) (1 punt) en het schouderblad (scapula) (1 punt). Het bot van de bovenarm is het opperarmbeen (humerus) (1 punt). De botten van de onderarm zijn het spaakbeen (radius) (1 punt) en de ellepijp (ulna) (1 punt). De botten van de hand zijn de handwortelbeentjes (carpalia) (1 punt), middenhandsbeentjes (metacarpalia) (1 punt) en vingerkootjes (phalangen) (1 punt).",
-            "tag": "5.1.2",
+            "tag": "5.1.4",
+            "image": null
+        },
+        {
+            "type": "theory",
+            "title": "Botten van de onderste extremiteiten",
+            "text": "De bekkengordel bestaat uit de bekken (pelvis) en het heiligbeen (sacrum) (dat een deel is van het axiale skelet). Het bovenbeen bevat het dijbeen (femur). Het onderbeen bestaat uit het scheenbeen (tibia) en het kuitbeen (fibula). De voet is opgebouwd uit de voetwortelbeentjes (tarsalia), middenvoetsbeentjes (metatarsalia) en teenkootjes (phalangen).",
+            "image": "appendiculair_skelet.png",
+            "tag": "5.1.5"
+        },
+        {
+            "type": "question",
+            "question": "Noem de botten die deel uitmaken van de bekkengordel, bovenbeen, onderbeen en voet.",
+            "answer": "De botten van de bekkengordel zijn de heupbeenderen bekken (pelvis) (1 punt) en het heiligbeen (sacrum) (1 punt). Het bot van het bovenbeen is het dijbeen (femur) (1 punt). De botten van het onderbeen zijn het scheenbeen (tibia) (1 punt) en het kuitbeen (fibula) (1 punt). De botten van de voet zijn de voetwortelbeentjes (tarsalia) (1 punt), middenvoetsbeentjes (metatarsalia) (1 punt) en teenkootjes (phalangen) (1 punt).",
+            "tag": "5.1.5",
             "image": null
         },
         {
@@ -320,7 +348,7 @@
             "type": "theory",
             "title": "Continue gewrichten: junctura fibrosa",
             "text": "Junctura fibrosa, ook wel bindweefselverbinding genoemd, is een type continue, onbeweeglijke gewricht. Een voorbeeld van junctura fibrosa zijn de suturen (schedelnaden), die fibreuze verbindingen zijn tussen de botstukken van de schedel. Deze verbindingen bieden stabiliteit en bescherming voor de hersenen.",
-            "image": null,
+            "image": "schedelnaden.png",
             "tag": "6.1.1"
         },
         {
@@ -334,7 +362,7 @@
             "type": "theory",
             "title": "Continue gewrichten: junctura cartilaginea",
             "text": "Junctura cartilaginea, ook wel kraakbeenverbinding genoemd, is een type continue, onbeweeglijke gewricht. Een voorbeeld van junctura cartilaginea zijn synchondroses, die kraakbenige verbindingen zijn tussen botstukken. Voorbeelden hiervan zijn de verbindingen tussen de ribben en het borstbeen of tussenwervelschijven in de wervelkolom.",
-            "image": null,
+            "image": "synchondrose.png",
             "tag": "6.1.2"
         },
         {
@@ -346,9 +374,9 @@
         },
         {
             "type": "theory",
-            "title": "Discontinue Beenverbindingen: junctura synovialis",
+            "title": "Discontinue gewrichten: junctura synovialis",
             "text": "Junctura synovialis, ook wel synoviale gewrichten genoemd, zijn een type discontinue, beweeglijke gewrichten. Deze gewrichten hebben een synoviale holte gevuld met vloeistof, die beweging mogelijk maakt. Voorbeelden van synoviale gewrichten zijn de kniegewrichten, ellebooggewrichten en schoudergewrichten.",
-            "image": null,
+            "image": "synoviale_gewrichten.png",
             "tag": "6.2.1"
         },
         {
@@ -362,7 +390,7 @@
             "type": "theory",
             "title": "Synoviale Gewrichten",
             "text": "Synoviale gewrichten zijn beweeglijke gewrichten die een synoviale holte bevatten. Deze gewrichten zijn omgeven door een gewrichtskapsel dat bestaat uit twee lagen: de membrana fibrosa en de membrana synovialis. De gewrichtsspleet is gevuld met synoviaalvocht, dat zorgt voor smering en vermindering van wrijving tussen de gewrichtsoppervlakken. De gewrichtsvlakken zijn bedekt met gewrichtskraakbeen, en intra-articulaire structuren zoals ligamenten en menisci bieden extra stabiliteit en ondersteuning.",
-            "image": null,
+            "image": "synoviaal_gewricht_onderdelen.png",
             "tag": "6.2.2"
         },
         {
@@ -376,7 +404,7 @@
             "type": "theory",
             "title": "Spieren",
             "text": "Spieren zijn verantwoordelijk voor beweging, houding en warmteproductie, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft.",
-            "image": null,
+            "image": "spieren.png",
             "tag": "2.5.4"
         },
         {
@@ -418,7 +446,7 @@
             "type": "theory",
             "title": "Bewegingsvrijheid",
             "text": "**Bewegingsvrijheid** verwijst naar de mogelijkheden van **rotaties** en **translaties** binnen verschillende gewrichtstypen. Elk gewrichtstype heeft zijn eigen unieke set van **bewegingsmogelijkheden**.",
-            "image": null,
+            "image": "bewegingsmogelijkheden.png",
             "tag": "2.5.6"
         },
         {
@@ -432,7 +460,7 @@
             "type": "theory",
             "title": "Vrijheidsgraden van Gewrichten",
             "text": "De **vrijheidsgraden** van gewrichten verwijzen naar de verschillende soorten bewegingen die mogelijk zijn binnen een gewricht. Deze bewegingen omvatten rotaties en translaties in verschillende vlakken. Rotaties zijn bewegingen rond een as, in een vlak, terwijl translaties schuivende bewegingen in een vlak zijn.",
-            "image": null,
+            "image": "bewegingsaparaat_assen.png",
             "tag": "2.6.1"
         },
         {
@@ -446,7 +474,7 @@
             "type": "theory",
             "title": "Gewrichtstypen",
             "text": "Er bestaan verschillende **gewrichtstypen** die de mate van bewegingsmogelijkheden bepalen (aantal vrijheidsgraden), zoals het **kogelgewricht** dat beweging in alle richtingen toestaat, het **scharniergewricht** dat voornamelijk beweging in \u00e9\u00e9n vlak mogelijk maakt, en het **rolgewricht** dat rotatie rond \u00e9\u00e9n as toelaat.",
-            "image": null,
+            "image": "bewegingsmogelijkheden.png",
             "tag": "2.6.2"
         },
         {
@@ -467,20 +495,20 @@
             "type": "theory",
             "title": "Fietswiel voor relatie tussen assen en vlakken",
             "text": "Je kunt een fietswiel gebruiken als een handige tool om de relatie tussen assen en vlakken te onthouden waarin de bewegingen plaatsvinden. Stel je voor dat de as van het wiel overeenkomt met de lichaamsas waar de beweging omheen plaatsvindt. De spaken van het wiel kunnen dan de verschillende vlakken voorstellen waarin de beweging plaatsvindt.",
-            "image": null,
+            "image": "fietswiel.png",
             "tag": "7.2.4"
         },
         {
             "type": "theory",
             "title": "Flexie en extensie",
             "text": "Bewegingen om een **transversale as** in het **sagittale vlak** omvatten flexie en extensie. **Flexie** is de beweging waarbij een ledemaat buigt, terwijl **extensie** de beweging is waarbij een ledemaat strekt.",
-            "image": null,
+            "image": "flexie_extensie.png",
             "tag": "7.2.3"
         },
         {
             "type": "question",
             "question": "Wat is het verschil tussen flexie en extensie?",
-            "answer": "Flexie is de beweging waarbij een ledemaat buigt (1 punt), en extensie is de beweging waarbij een ledemaat strekt (1 punt).",
+            "answer": "Flexie is de beweging waarbij een ledemaat buigt (1 punt) en extensie is de beweging waarbij een ledemaat strekt (1 punt).",
             "tag": "7.2.3",
             "image": null
         },
@@ -488,7 +516,7 @@
             "type": "theory",
             "title": "Abductie en adductie",
             "text": "Bewegingen om een **sagittale as** in het **frontale vlak** omvatten abductie en adductie. **Abductie** is de beweging waarbij een ledemaat weg van het lichaam wordt bewogen, terwijl **adductie** de beweging naar het lichaam toe is. Een handige tip om deze termen te onthouden: abductie (abduction) kan geassocieerd worden met ontvoering, waarbij iets van je wordt weggenomen. Adductie (adduction) kan geassocieerd worden met toevoegen (add), waarbij iets naar je toe wordt gebracht.",
-            "image": null,
+            "image": "abductie_adductie.png",
             "tag": "7.2.1"
         },
         {
@@ -502,7 +530,7 @@
             "type": "theory",
             "title": "Endorotatie en exorotatie",
             "text": "Bewegingen om een **longitudinale as** in het **transversale vlak** omvatten endorotatie en exorotatie. **Endorotatie** is de beweging waarbij een ledemaat naar binnen draait, terwijl **exorotatie** de beweging naar buiten is.",
-            "image": null,
+            "image": "endo_exorotatie.png",
             "tag": "7.2.2"
         },
         {
@@ -565,7 +593,7 @@
             "type": "theory",
             "title": "Bolgewricht",
             "text": "Een **bolgewricht** maakt bewegingen om drie assen mogelijk en biedt het breedste scala aan bewegingen. Bewegingen vinden plaats om de **transversale as** (anteversie-retroversie), de **sagittale as** (abductie-adductie), en de **longitudinale as** (endorotatie-exorotatie). Voorbeelden zijn het **schoudergewricht** (art. humeri) en het **heupgewricht** (art. coxae).",
-            "image": null,
+            "image": "bolgewricht_assen.png",
             "tag": "8.1.2"
         },
         {
@@ -579,7 +607,7 @@
             "type": "theory",
             "title": "Eigewricht",
             "text": "Een **eigewricht** maakt bewegingen om twee assen mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie-extensie) en de **sagittale as** (abductie-adductie). Een voorbeeld hiervan is het **polsgewricht** (art. radio-carpea).",
-            "image": null,
+            "image": "pols_flexie_extensie_abductie_adductie.png",
             "tag": "8.1.3"
         },
         {
@@ -593,7 +621,7 @@
             "type": "theory",
             "title": "Zadelgewricht",
             "text": "Een **zadelgewricht** maakt bewegingen om twee assen mogelijk. Bewegingen vinden plaats om de **transversale as** (abductie-adductie) en de **longitudinale as** (oppositie-repositie). Een voorbeeld hiervan is het **basisgewricht van de duim** (art. carpo-metacarpale pollicis).",
-            "image": null,
+            "image": "zadelgewricht.png",
             "tag": "8.1.4"
         },
         {
@@ -606,8 +634,8 @@
         {
             "type": "theory",
             "title": "Scharniergewricht",
-            "text": "Een **scharniergewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie en extensie). Voorbeelden hiervan zijn een deel van het **ellebooggewricht** (art. humero-ulnare), het **kniegewricht** (art. femoro-tibiale).",
-            "image": null,
+            "text": "Een **scharniergewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie en extensie). Voorbeelden hiervan zijn een deel van het **ellebooggewricht** (art. humero-ulnare), het **kniegewricht** (art. femoro-tibiale) en het bovenste spronggewricht (art. talocrurale).",
+            "image": "ellebooggewricht_flexie.png",
             "tag": "8.1.5"
         },
         {
@@ -621,7 +649,7 @@
             "type": "theory",
             "title": "Rolgewricht",
             "text": "Een **rolgewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **longitudinale as** (supinatie en pronatie). Een voorbeeld hiervan zijn de **onderarmgewrichten** (artt. radio-ulnare prox. et dist.). Een handige tip om deze bewegingen te onthouden: **pronatie: proost beweging** en **supinatie: beweging bij soep eten**.",
-            "image": null,
+            "image": "ulna_supinatie.png",
             "tag": "8.1.6"
         },
         {
