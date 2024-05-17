@@ -565,7 +565,7 @@
             "type": "theory",
             "title": "Ontwikkeling en anatomische positionering",
             "text": "De ontwikkeling en **anatomische positionering van gewrichten** zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen waarbij de **bovenste ledematen (armen en handen) naar voren** en de **onderste ledematen (benen en voeten) naar achteren** draaien.",
-            "image": null,
+            "image": "ledematen_draaing_ontwikkeling.png",
             "tag": "2.6.5"
         },
         {
@@ -684,7 +684,7 @@
             "type": "theory",
             "title": "Translatie in de wervelkolom",
             "text": "In de wervelkolom vindt translatie plaats in de intervertebrale gewrichten. Deze gewrichten maken het mogelijk voor de wervels om langs elkaar te schuiven. De individuele bewegingen zijn klein, maar samen zorgen ze voor de flexibiliteit en beweging van de ruggengraat.",
-            "image": null,
+            "image": "intervertebrale_gewrichten.png",
             "tag": "9.1.2"
         },
         {
@@ -698,7 +698,7 @@
             "type": "theory",
             "title": "Translatie van het Schouderblad",
             "text": "Het schouderblad (scapula) kan verschillende translatiebewegingen uitvoeren: **protractie** (beweging naar voren) en **retractie** (beweging naar achteren), **elevatie** (opheffing) en **depressie** (verlaging), en **laterorotatie** (draaiing naar buiten) en **mediorotatie** (draaiing naar binnen). Deze bewegingen zijn belangrijk voor de positionering van de arm en schouder, en dragen bij aan de algehele mobiliteit van het bovenlichaam.",
-            "image": null,
+            "image": "schouderblad_bewegingen.png",
             "tag": "9.1.3"
         },
         {
@@ -710,9 +710,9 @@
         },
         {
             "type": "theory",
-            "title": "Het Zenuwstelsel",
+            "title": "Het zenuwstelsel",
             "text": "Het zenuwstelsel bestaat uit verschillende organen, waaronder de **hersenen**, het **ruggenmerg**, de **perifere zenuwen** en de **zintuigorganen**. De belangrijkste functies van het zenuwstelsel zijn de **aansturing van orgaansystemen** en de **informatieoverdracht** tussen verschillende delen van het lichaam.",
-            "image": null,
+            "image": "zenuwstelsel.png",
             "tag": "10.1.1"
         },
         {
@@ -726,7 +726,7 @@
             "type": "theory",
             "title": "Organen van het cardiovasculair systeem",
             "text": "Het **cardiovasculair systeem** bestaat uit het **hart**, **bloedvaten** en **bloed**. Deze organen werken samen om een continue bloedcirculatie in het lichaam te onderhouden.",
-            "image": null,
+            "image": "cardiovasculair_systeem.png",
             "tag": "2.1.1"
         },
         {
@@ -754,7 +754,7 @@
             "type": "theory",
             "title": "Structuur van het vaatstelsel",
             "text": "Het **vaatstelsel** bestaat uit verschillende soorten bloedvaten: **arteri\u00ebn** (slagaders), **arteriolen** (kleine slagaders), **capillairbed** (netwerk van capillairen), **venulen** (kleine aders) en **venen** (aders).",
-            "image": null,
+            "image": "bouw_vatenstelsel.png",
             "tag": "2.2.1"
         },
         {
@@ -782,7 +782,7 @@
             "type": "theory",
             "title": "Twee circulaties",
             "text": "Er zijn **twee** hoofdcirculaties in het menselijk lichaam: de **grote bloedsomloop** (systematische circulatie) en de **kleine bloedsomloop** (pulmonale circulatie). De grote bloedsomloop transporteert zuurstofrijk bloed van het hart naar de rest van het lichaam, terwijl de kleine bloedsomloop zuurstofarm bloed van het hart naar de longen vervoert voor gasuitwisseling.",
-            "image": null,
+            "image": "bloed_circulaties.png",
             "tag": "2.3.1"
         },
         {
@@ -796,7 +796,7 @@
             "type": "theory",
             "title": "Functie van de systemische circulatie",
             "text": "De **systemische circulatie** (grote bloedsomloop) heeft als hoofdfunctie het **voorzien van zuurstof** en **voedingsstoffen** aan de weefsels en organen in het lichaam.",
-            "image": null,
+            "image": "systemische_circulatie.png",
             "tag": "2.6.1"
         },
         {
@@ -810,7 +810,7 @@
             "type": "theory",
             "title": "Route van de bloedsomloop",
             "text": "De route van de bloedsomloop begint in de **linkerventrikel** waar **zuurstofrijk bloed** wordt gepompt naar de **aorta**. Het bloed reist door het lichaam, keert terug via de **venen** naar het **rechter atrium**, gaat naar de **rechterventrikel**, en wordt dan naar de **longen** gepompt. In de longen vindt **gasuitwisseling** plaats, waarna het **zuurstofrijke bloed** terugkeert naar het **linker atrium** en vervolgens naar de **linkerventrikel** om de cyclus opnieuw te beginnen.",
-            "image": null,
+            "image": "bloed_circulaties.png",
             "tag": "2.3.2"
         },        
         {
@@ -824,7 +824,7 @@
             "type": "theory",
             "title": "Functie van de pulmonale circulatie",
             "text": "De belangrijkste functie van de pulmonale circulatie (kleine bloedsomloop) is **zuurstofuitwisseling** die plaatsvindt in de **alveoli**, kleine luchtzakjes in de longen. Zuurstof wordt opgenomen in het bloed en koolstofdioxide wordt afgegeven aan de longen om te worden uitgeademd.",
-            "image": null,
+            "image": "pulmonale_circulatie.png",
             "tag": "2.5.2"
         },
         {
@@ -852,7 +852,7 @@
             "type": "theory",
             "title": "Componenten van het lymfestelsel",
             "text": "Het **lymfestelsel** bestaat uit **lymvaten**, **lymfknopen**, **milt** en **thymus**, en speelt een rol in het onderhouden van de lichaamsvloeistofbalans en het bieden van immunologische verdediging.",
-            "image": null,
+            "image": "lymfestelsel.png",
             "tag": "2.6.2"
         },
         {

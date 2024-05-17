@@ -65,16 +65,33 @@ def evaluate_answer():
             role_prompt = f.read()
 
 
-        response = openai_client.chat.completions.create(
+        stream = openai_client.chat.completions.create(
             model=st.session_state['openai_model'],
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=500
+            max_tokens=500,
+            stream=True
         )
 
-        split_response = response.choices[0].message.content.split(";;")
+        st.write_stream(stream)
+
+        response = ""
+        for chunk in stream:
+            st.write(chunk.choices[0]['delta']['content'])
+            if "choices" in chunk:
+                choice = chunk["choices"][0]
+                if "delta" in choice:
+                    st.write(choice["delta"].get("content", ""))
+                    response += choice["delta"].get("content", "")
+
+        st.write(response)
+
+        # split_response = response.choices[0].message.content.split(";;")
+        split_response = response.split(";;")
+        print(split_response)
+        
 
         if len(split_response) != 2:
             raise ValueError("Server response is not in the correct format. Please retry.")
@@ -1266,18 +1283,18 @@ if __name__ == "__main__":
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = False
+    st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = False
+    use_openai_api = True
 
-    no_login_page = False
+    no_login_page = True
 
     # Bypass authentication when testing so flask app doesnt have to run
-    skip_authentication = False
+    skip_authentication = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
