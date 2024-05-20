@@ -25,7 +25,6 @@ class ContentAccess:
             
             # Sort the modules based on the number in the name except for the practice exams
             modules.sort(key=lambda module: int(module.split(" ")[0]) if module.split(" ")[0].isdigit() else 1000)
-            print(modules)
             st.session_state.modules = modules
 
 
@@ -132,7 +131,6 @@ class DatabaseAccess:
             {"username": st.session_state.username},
             {"$set": {"last_module": st.session_state.selected_module}}
         )
-        print(f"Updated last module in db: {st.session_state.selected_module}")
         
     def fetch_all_documents(self):
         collection = self.db[self.users_collection_name]

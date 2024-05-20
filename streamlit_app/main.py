@@ -71,27 +71,26 @@ def evaluate_answer():
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=500,
-            stream=True
+            max_tokens=500
+            # stream=True
         )
 
-        st.write_stream(stream)
+        # st.write_stream(stream)
 
-        response = ""
-        for chunk in stream:
-            st.write(chunk.choices[0]['delta']['content'])
-            if "choices" in chunk:
-                choice = chunk["choices"][0]
-                if "delta" in choice:
-                    st.write(choice["delta"].get("content", ""))
-                    response += choice["delta"].get("content", "")
+        # response = ""
+        # for chunk in stream:
+        #     st.write(chunk.choices[0]['delta']['content'])
+        #     if "choices" in chunk:
+        #         choice = chunk["choices"][0]
+        #         if "delta" in choice:
+        #             st.write(choice["delta"].get("content", ""))
+        #             response += choice["delta"].get("content", "")
 
-        st.write(response)
+        # st.write(response)
 
-        # split_response = response.choices[0].message.content.split(";;")
-        split_response = response.split(";;")
-        print(split_response)
+        split_response = stream.choices[0].message.content.split(";;")
         
+        # split_response = response.split(";;")        
 
         if len(split_response) != 2:
             raise ValueError("Server response is not in the correct format. Please retry.")
@@ -140,7 +139,7 @@ def render_mc_feedback(question):
         
     st.markdown(result_html, unsafe_allow_html=True)
 
-def render_feedback(feedback_field):
+def render_feedback():
     """Renders the feedback box with the score and feedback."""
     # Calculate the score percentage
     score_percentage = score_to_percentage()
@@ -515,7 +514,7 @@ def show_feedback_overview():
     for question in questions:
         st.subheader(f"{question['question']}")
         if 'feedback' in question:
-            render_feedback(question['feedback'])            
+            render_feedback()            
         else:
             render_mc_feedback(question)
         st.markdown("---")
@@ -633,7 +632,7 @@ def render_learning_page():
                     evaluate_answer()
                     add_date_to_progress_counter()
                                 
-                render_feedback(st.session_state.feedback)
+                render_feedback()
                 save_feedback_on_open_question()
                 add_to_practice_phase()
                 render_explanation()
@@ -1125,18 +1124,24 @@ def initialise_database():
     for module in st.session_state.modules:
         db.users_2.update_one(
             {"username": st.session_state.username},
-            {"$set":
-             {"warned": False,
-              f"progress.{module}": {
-                    "learning": {"segment_index": -1}, # Set to -1 so an explanation displays when phase is first opened
-                    "practice": {"segment_index": -1,
-                                 "ordered_segment_sequence": [],
-                                },
-                    "feedback": {"questions": []
-                                 }            
+            {"$set": {
+                "warned": False,
+                f"progress.{module}": {
+                    "learning": {
+                        "segment_index": -1,  # Set to -1 so an explanation displays when phase is first opened
+                        "progress_counter": None
+                    },
+                    "practice": {
+                        "segment_index": -1,
+                        "ordered_segment_sequence": []
+                    },
+                    "feedback": {
+                        "questions": []
                     }
+                }
             }}
         )
+
 
 
 def initialise_module_in_database(module):
@@ -1178,11 +1183,11 @@ def determine_if_to_initialise_database():
     Determine if currently testing, if the progress is saved, or if all modules are included
     and if so, reset db when reloading webapp.
     """
-    user_exists = db.users_2.find_one({"username": st.session_state.username})
-
-    if not user_exists:
+    user_doc = db_dal.find_user_doc()
+    if not user_doc:
         db.users_2.insert_one({"username": st.session_state.username})
 
+    user_doc = db_dal.find_user_doc()
     if reset_user_doc:
         if 'reset_db' not in st.session_state:
             st.session_state.reset_db = True
@@ -1190,24 +1195,24 @@ def determine_if_to_initialise_database():
         if st.session_state.reset_db:
             st.session_state.reset_db = False
             initialise_database()
-            return
 
 
-    user = db.users_2.find_one({"username": st.session_state.username})
-    
-    if "progress" not in user:
+    user_doc = db_dal.find_user_doc()
+    if "progress" not in user_doc:
         initialise_database()
-        return
     
     for module in st.session_state.modules:
-        if module not in user["progress"]:
+
+        user_doc = db_dal.find_user_doc()
+        if module not in user_doc["progress"]:
             initialise_module_in_database(module)
-            return
 
         # Check if the user doc contains the dict in which the
         # is saved how many times a question is made by user
         user_doc = db_dal.find_user_doc()
-        if db_dal.fetch_progress_counter(module, user_doc) is None:
+        progresss_counter = db_dal.fetch_progress_counter(module, user_doc)
+
+        if progresss_counter is None:
             empty_dict = create_empty_progress_dict(module)
             db_dal.add_progress_counter(module, empty_dict)
 
@@ -1312,7 +1317,7 @@ if __name__ == "__main__":
 
     if skip_authentication:
         no_login_page = True
-        st.session_state.username = "test_user_2"
+        st.session_state.username = "test_user_1"
 
     # Only render login page if not testing
     if no_login_page == False \
