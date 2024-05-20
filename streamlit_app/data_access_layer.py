@@ -20,7 +20,6 @@ class ContentAccess:
 
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-        print(f"Modules: {modules}")
         
         # Sort the modules based on the number in the name except for the practice exams
         modules.sort(key=lambda module: int(module.split(" ")[0]) if module.split(" ")[0].isdigit() else 1000)

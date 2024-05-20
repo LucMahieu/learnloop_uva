@@ -18,7 +18,7 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 load_dotenv()
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def connect_to_openai():
     if use_openai_api:
         st.session_state.openai_model = "gpt-4o"
@@ -1278,7 +1278,7 @@ def render_login_page():
 
         st.markdown(html_content, unsafe_allow_html=True)
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def initialise_data_access_layer():
     db_dal = DatabaseAccess()
     cont_dal = ContentAccess()
@@ -1306,19 +1306,19 @@ if __name__ == "__main__":
     surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
-    reset_user_doc = True
+    reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
     st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
-    use_dummy_openai_calls = True
+    use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = True
+    use_openai_api = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = True
+    st.session_state.skip_authentication = False
     
     no_login_page = False
     # ---------------------------------------------------------
