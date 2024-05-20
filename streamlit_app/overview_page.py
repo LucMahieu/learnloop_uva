@@ -78,7 +78,7 @@ class OverviewPage:
         
         return True
     
-    @st.cache_data(persist=True, show_spinner=False)
+    @st.cache_data(show_spinner=False)
     def get_module_data(_self, module_name_underscored):
         _self.cont_dal.get_topics_list(module_name_underscored)
         topics_data = []
