@@ -444,13 +444,13 @@ def reset_segment_index_and_feedback():
     When the user wants to go back to the beginning of the phase, the feedback progress
     is reset.
     """
-    print("Set st.session_state.submitted to False")
-
+    # Make sure that everything is reset
     st.session_state.submitted = False
     st.session_state.student_answer = None
     st.session_state.shuffled_answers = None
     st.session_state.segment_index = 0
     upload_progress()
+    
     user_query = {"username": st.session_state.username}
     set_empty_array = {
         "$set": {
@@ -513,7 +513,6 @@ def get_feedback_questions_from_db():
     user_document = db.users_2.find_one(query, projection)
 
     if user_document is None:
-        print(f"No document found for user: {st.session_state.username}")
         return []
     
     questions = user_document.get('progress', {})\
@@ -872,7 +871,6 @@ def render_practice_page():
             image_path = fetch_image_path()
             if image_path:
                 render_image(image_path)
-            print(st.session_state.submitted)
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
@@ -894,7 +892,6 @@ def render_practice_page():
                     render_answerbox()
                     # Becomes True if user presses ctrl + enter to evaluate answer (instead of pressing "check")
                     if st.session_state.student_answer:
-                        print("Set st.session_state.submitted to True")
                         set_submitted_true()
                         st.rerun()
                     render_check_and_nav_buttons()
