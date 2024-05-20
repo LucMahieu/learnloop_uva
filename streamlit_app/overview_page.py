@@ -70,11 +70,9 @@ class OverviewPage:
         """
         topic_segment_indexes = self.cont_dal.get_topic_segment_indexes(module, topic_index)
         user_doc = self.db_dal.find_user_doc()
-        print(f"\n\ntopic_segment_indexes: {topic_segment_indexes}, user_doc: {user_doc}")
         progress_count = self.db_dal.fetch_progress_counter(module, user_doc)
         
         for index in topic_segment_indexes:
-            print(f"segment_index: {index}, progress_count: {progress_count.get(str(index), None)}")
             if progress_count.get(str(index), None) == None:
                 return False
         

@@ -13,19 +13,18 @@ class ContentAccess:
     def determine_modules(self):
         """	
         Function to determine which names of modules to display in the sidebar 
-        based on the JSON module files.	
+        based on the JSON module files.
         """
-        # Determine the modules to display in the sidebar
-        if st.session_state.modules == []:
-            # Read the modules from the modules directory
-            modules = os.listdir("./content/modules")
+        # Read the modules from the modules directory
+        modules = os.listdir("./content/modules")
 
-            # Remove the json extension and replace the underscores with spaces
-            modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-            
-            # Sort the modules based on the number in the name except for the practice exams
-            modules.sort(key=lambda module: int(module.split(" ")[0]) if module.split(" ")[0].isdigit() else 1000)
-            st.session_state.modules = modules
+        # Remove the json extension and replace the underscores with spaces
+        modules = [module.replace(".json", "").replace("_", " ") for module in modules]
+        
+        # Sort the modules based on the number in the name except for the practice exams
+        modules.sort(key=lambda module: int(module.split(" ")[0]) if module.split(" ")[0].isdigit() else 1000)
+        
+        return modules
 
 
     def get_segment_type(self):
@@ -122,8 +121,17 @@ class DatabaseAccess:
         self.db = db_config.connect_db(st.session_state.use_mongodb)
         self.users_collection_name = 'users_2'
 
+    def fetch_if_warned(self):
+        """Fetches from database if the user has been warned about LLM."""
+        user_doc = self.db.users_2.find_one({"username": st.session_state.username})
+        if user_doc is None:
+            return None
+        return user_doc.get("warned", None)
+
     def fetch_last_module(self):
         user_doc = self.find_user_doc()
+        if user_doc is None:
+            return None
         return user_doc.get('last_module', None)
 
     def update_last_module(self):
@@ -131,6 +139,19 @@ class DatabaseAccess:
             {"username": st.session_state.username},
             {"$set": {"last_module": st.session_state.selected_module}}
         )
+        print(f'Updated last module to {st.session_state.selected_module} in the database.')
+
+    def fetch_username(self):
+        user_doc = self.db.users_2.find_one({'nonce': st.session_state.nonce})
+        if user_doc is not None:
+            st.session_state.username = user_doc['username']
+        else:
+            st.session_state.username = None
+            print("No user found with the nonce.")
+
+    def invalidate_nonce(self):
+        self.db.users_2.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
+        st.session_state.nonce = None
         
     def fetch_all_documents(self):
         collection = self.db[self.users_collection_name]

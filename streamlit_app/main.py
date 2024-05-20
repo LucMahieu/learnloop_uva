@@ -928,27 +928,38 @@ def render_selected_page():
     cont_dal.load_page_content_of_module_in_session_state(st.session_state.selected_module)
     
     # Determine what type of page to display
-    if st.session_state.selected_phase == 'overview':
+    if st.session_state.info_page:
+        render_info_page()
+        exit()
+    elif st.session_state.selected_phase == 'overview':
         render_overview_page()
-    if st.session_state.selected_phase == 'learning':
+    elif st.session_state.selected_phase == 'learning':
         render_learning_page()
-    if st.session_state.selected_phase == 'practice':
+    elif st.session_state.selected_phase == 'practice':
         render_practice_page()
 
 
-def initialise_session_states():
+def initialise_session_states():        
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
 
+    if 'nonce' not in st.session_state:
+        st.session_state.nonce = st.query_params.get('nonce', None)
+        st.query_params.pop('nonce', None) # Remove the nonce from the url
+
+    if 'username' not in st.session_state:
+        st.session_state.username = db_dal.fetch_username()
+        if st.session_state.username is not None:
+            db_dal.invalidate_nonce()
+        elif st.session_state.skip_authentication:
+            st.session_state.username = "test_user_1"
+        
     if 'warned' not in st.session_state:
-        st.session_state.warned = None
+        st.session_state.warned = db_dal.fetch_if_warned()
 
     if 'feedback_submitted' not in st.session_state:
         st.session_state.feedback_submitted = False
 
-    if 'username' not in st.session_state:
-        st.session_state.username = None
-    
     if 'old_page' not in st.session_state:
         st.session_state.old_page = None
 
@@ -962,31 +973,21 @@ def initialise_session_states():
         st.session_state.ordered_segment_sequence = []
 
     if 'selected_phase' not in st.session_state:
-        st.session_state.selected_phase = None
-
-    if 'easy_count' not in st.session_state:
-        st.session_state.easy_count = {}
+        st.session_state.selected_phase = 'overview'
 
     if 'page_content' not in st.session_state:
         st.session_state.page_content = None
 
-    if 'indices' not in st.session_state:
-        st.session_state.indices = []
-
     if 'segment_index' not in st.session_state:
         st.session_state.segment_index = 0
 
-    if 'authentication_status' not in st.session_state:
-        st.session_state.authentication_status = None
-
-    if 'selected_module' not in st.session_state:
-        st.session_state.selected_module = None
-    
     if 'modules' not in st.session_state:
-        st.session_state.modules = []
-
-    if 'segments' not in st.session_state:
-        st.session_state.segments = None
+        st.session_state.modules = cont_dal.determine_modules()
+    
+    if 'selected_module' not in st.session_state:
+        st.session_state.selected_module = db_dal.fetch_last_module()
+        if st.session_state.selected_module is None:
+            st.session_state.selected_module = st.session_state.modules[0]
     
     if 'segment_content' not in st.session_state:
         st.session_state.segment_content = None
@@ -1002,9 +1003,6 @@ def initialise_session_states():
 
     if 'feedback' not in st.session_state:
         st.session_state.feedback = ""
-
-    if 'difficulty' not in st.session_state:
-        st.session_state.difficulty = ""
 
     if 'shuffled_answers' not in st.session_state:
         st.session_state.shuffled_answers = None
@@ -1126,6 +1124,7 @@ def initialise_database():
             {"username": st.session_state.username},
             {"$set": {
                 "warned": False,
+                "last_module": st.session_state.modules[0], # Open the first module by default
                 f"progress.{module}": {
                     "learning": {
                         "segment_index": -1,  # Set to -1 so an explanation displays when phase is first opened
@@ -1217,16 +1216,6 @@ def determine_if_to_initialise_database():
             db_dal.add_progress_counter(module, empty_dict)
 
 
-def fetch_username():
-    user_doc = db.users_2.find_one({'nonce': st.session_state.nonce})
-    st.session_state.username = user_doc['username']
-
-
-def invalidate_nonce():
-    db.users_2.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
-    st.session_state.nonce = None
-
-
 def convert_image_base64(image_path):
     """Converts image in working dir to base64 format so it is 
     compatible with html."""
@@ -1261,18 +1250,6 @@ def render_login_page():
         st.markdown(html_content, unsafe_allow_html=True)
 
 
-def fetch_if_warned():
-    """Fetches from database if the user has been warned about LLM."""
-    user_doc = db.users_2.find_one({"username": st.session_state.username})
-    return user_doc["warned"]
-
-
-def fetch_and_remove_nonce():
-    if 'nonce' not in st.session_state:
-        st.session_state.nonce = st.query_params.get('nonce', None)
-        st.query_params.pop('nonce', None) # Remove the nonce from the url
-
-
 if __name__ == "__main__":
     # ---------------------------------------------------------
     # SETTINGS for DEVELOPMENT & DEPLOYMENT:
@@ -1296,10 +1273,10 @@ if __name__ == "__main__":
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     use_openai_api = True
 
-    no_login_page = True
-
     # Bypass authentication when testing so flask app doesnt have to run
-    skip_authentication = True
+    st.session_state.skip_authentication = True
+    
+    no_login_page = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1309,57 +1286,18 @@ if __name__ == "__main__":
     db_dal = DatabaseAccess()
     cont_dal = ContentAccess()
     db = db_config.connect_db(st.session_state.use_mongodb)
-
+    
     initialise_session_states()
+    determine_if_to_initialise_database()
     openai_client = connect_to_openai()
-
-    fetch_and_remove_nonce()
-
-    if skip_authentication:
-        no_login_page = True
-        st.session_state.username = "test_user_1"
-
+    
     # Only render login page if not testing
     if no_login_page == False \
         and st.session_state.nonce is None \
         and st.session_state.username is None:
         render_login_page()
 
-    # Fetch username through query param and invalidate nonce
-    elif st.session_state.username is None:
-        fetch_username()
-        invalidate_nonce()
-        st.rerun() # Needed, else it seems to get stuck here
-
     # Render the actual app
-    else:
-        # Determine the modules of the current course
-        if st.session_state.modules == []:
-            cont_dal.determine_modules()
-        
+    else:    
         render_sidebar()
-
-        if st.session_state.info_page:
-            render_info_page()
-            exit()
-        elif st.session_state.selected_module is None:     
-
-            # Automatically start the last module if no module is selected
-            st.session_state.selected_module = db_dal.fetch_last_module()
-
-            # If the user is new, the last module is not yet set
-            if db_dal.fetch_last_module() is None:
-                st.session_state.selected_module = st.session_state.modules[0]
-
-            st.session_state.selected_phase = 'overview'
-            
-            # Rerun to make sure the page is displayed directly after start button is clicked
-            st.rerun()
-        else:
-            # Only (re-)initialise if user is new or when testing is on
-            determine_if_to_initialise_database()
-
-            if st.session_state.warned == None:
-                st.session_state.warned = fetch_if_warned()
-
-            render_selected_page()
+        render_selected_page()
