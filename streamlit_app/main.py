@@ -1203,7 +1203,7 @@ def create_empty_progress_dict(module):
     
     return empty_dict
 
-@st.cache_data(persist=True, show_spinner=False)
+@st.cache_data(show_spinner=False)
 def determine_if_to_initialise_database():
     """
     Determine if currently testing, if the progress is saved, or if all modules are included
@@ -1316,9 +1316,9 @@ if __name__ == "__main__":
     use_openai_api = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = False
+    st.session_state.skip_authentication = True
     
-    no_login_page = False
+    no_login_page = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
