@@ -18,7 +18,6 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 load_dotenv()
 
-@st.cache_resource(show_spinner=False)
 def connect_to_openai():
     if use_openai_api:
         st.session_state.openai_model = "gpt-4o"
@@ -167,7 +166,6 @@ def render_feedback():
     </div>
     """
     st.markdown(result_html, unsafe_allow_html=True)
-    st.write(f"Student answer: {st.session_state.student_answer}")
 
 def render_progress_bar():
     # Change style of progressbar
