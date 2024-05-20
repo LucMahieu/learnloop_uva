@@ -3,9 +3,11 @@ from dotenv import load_dotenv
 import os
 import certifi
 from pymongo.server_api import ServerApi
+import streamlit as st
 
 load_dotenv()
 
+@st.cache_resource
 def connect_db(use_mongodb):
     """
     Connect to either MongoDB or CosmosDB and ping to check connection.

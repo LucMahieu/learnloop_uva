@@ -18,12 +18,13 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 
 load_dotenv()
 
+@st.cache_resource
 def connect_to_openai():
     if use_openai_api:
-        st.session_state["openai_model"] = "gpt-4o"
+        st.session_state.openai_model = "gpt-4o"
         return OpenAI(api_key=os.getenv("OPENAI_API_KEY_2"))
     else:
-        st.session_state["openai_model"] = "learnloop"
+        st.session_state.openai_model = "learnloop"
         return AzureOpenAI(
         api_key=os.getenv("OPENAI_API_KEY"),  
         api_version="2024-03-01-preview",
@@ -66,7 +67,7 @@ def evaluate_answer():
 
 
         stream = openai_client.chat.completions.create(
-            model=st.session_state['openai_model'],
+            model=st.session_state.openai_model,
             messages=[
                 {"role": "system", "content": role_prompt},
                 {"role": "user", "content": prompt}
@@ -412,7 +413,7 @@ def render_learning_explanation():
 
 def render_oefententamen_explanation():
     with mid_col:
-        st.markdown('<p style="font-size: 30px;"><strong>Oefententamen ✍🏽</strong></p>', unsafe_allow_html=True)
+        st.markdown(f'<p style="font-size: 30px;"><strong>{st.session_state.practice_exam_name}</strong></p>', unsafe_allow_html=True)
         # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
         st.write("Dit oefententamen bevat een willekeurige selectie aan tentamenvragen over de stof uit de colleges.")
         render_start_button()
@@ -453,7 +454,7 @@ def reset_segment_index_and_feedback():
         }
     }
 
-    db.users.update_one(user_query, set_empty_array)
+    db.users_2.update_one(user_query, set_empty_array)
     
 
 # render the page at the end of the learning phase (after the last question)
@@ -500,7 +501,7 @@ def get_feedback_questions_from_db():
         "_id": 0  
     }
 
-    user_document = db.users.find_one(query, projection)
+    user_document = db.users_2.find_one(query, projection)
 
     questions = user_document.get('progress', {})\
                             .get(st.session_state.selected_module, {})\
@@ -721,7 +722,7 @@ def save_feedback_on_open_question():
     }
 
     # Execute the pull operation
-    db.users.update_one(user_query, pull_query)
+    db.users_2.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -739,7 +740,7 @@ def save_feedback_on_open_question():
     }
 
     # Execute the push operation
-    db.users.update_one(user_query, push_query)
+    db.users_2.update_one(user_query, push_query)
 
 def save_feedback_on_mc_question():
     """
@@ -759,7 +760,7 @@ def save_feedback_on_mc_question():
     }
 
     # Execute the pull operation
-    db.users.update_one(user_query, pull_query)
+    db.users_2.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -777,7 +778,7 @@ def save_feedback_on_mc_question():
     }
 
     # Execute the push operation
-    db.users.update_one(user_query, push_query)
+    db.users_2.update_one(user_query, push_query)
 
     
 def reset_submitted_if_page_changed():
@@ -825,7 +826,6 @@ def initialise_practice_page():
         st.session_state.segment_content = st.session_state.page_content['segments'][json_index]
         
         reset_submitted_if_page_changed()
-
 
 
 def render_practice_page():
@@ -932,7 +932,6 @@ def render_selected_page():
     # Determine what type of page to display
     if st.session_state.info_page:
         render_info_page()
-        exit()
     elif st.session_state.selected_phase == 'overview':
         render_overview_page()
     elif st.session_state.selected_phase == 'learning':
@@ -941,7 +940,13 @@ def render_selected_page():
         render_practice_page()
 
 
-def initialise_session_states():        
+def initialise_session_states():
+    if 'openai_model' not in st.session_state:
+        st.session_state.openai_model = 'gpt-4o'
+
+    if 'practice_exam_name' not in st.session_state:
+        st.session_state.practice_exam_name = 'Samenvattende vragen'
+
     if 'info_page' not in st.session_state:
         st.session_state.info_page = False
 
@@ -954,7 +959,7 @@ def initialise_session_states():
         if st.session_state.username is not None:
             db_dal.invalidate_nonce()
         elif st.session_state.skip_authentication:
-            st.session_state.username = "test_user_1"
+            st.session_state.username = "test_user_2"
         
     if 'warned' not in st.session_state:
         st.session_state.warned = db_dal.fetch_if_warned()
@@ -974,9 +979,6 @@ def initialise_session_states():
     if 'ordered_segment_sequence' not in st.session_state:
         st.session_state.ordered_segment_sequence = []
 
-    if 'selected_phase' not in st.session_state:
-        st.session_state.selected_phase = 'overview'
-
     if 'page_content' not in st.session_state:
         st.session_state.page_content = None
 
@@ -990,6 +992,12 @@ def initialise_session_states():
         st.session_state.selected_module = db_dal.fetch_last_module()
         if st.session_state.selected_module is None:
             st.session_state.selected_module = st.session_state.modules[0]
+    
+    if 'selected_phase' not in st.session_state:
+        if st.session_state.selected_module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
+            st.session_state.selected_phase = 'learning'
+        else:
+            st.session_state.selected_phase = 'overview'
     
     if 'segment_content' not in st.session_state:
         st.session_state.segment_content = None
@@ -1073,7 +1081,6 @@ def render_page_button(page_title, module, phase):
         st.session_state.selected_module = module
         st.session_state.selected_phase = phase
         st.session_state.info_page = False
-        db_dal.update_last_module()
         track_visits()
     
 
@@ -1094,22 +1101,24 @@ def render_sidebar():
         for i, module in enumerate(st.session_state.modules):
 
             # If the module is not a Oefententamen, then skip it
-            zero_width_space = "\u200B"
-            if not module.startswith('Oefententamen'):
+            if not module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
+                zero_width_space = "\u200B"
                 with st.expander(f"{i + 1}.{zero_width_space} " + ' '.join(module.split(' ')[1:])):
 
                     # Display buttons for the two types of phases per module
                     render_page_button('Leren 📖', module, phase='overview')
                     render_page_button('Herhalen 🔄', module, phase='practice')
 
-            elif module.startswith('Oefententamen'):
+            elif module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
                 practice_exam_count += 1
 
-        st.sidebar.title("Oefententamens")
+        st.sidebar.title(st.session_state.practice_exam_name)
         
         # Render the practice exam buttons
         for i in range(practice_exam_count):
-            render_page_button(f'Oefententamen {i + 1} ✍🏽', f'Oefententamen {i + 1}', 'learning')
+            practice_exam_name = st.session_state.practice_exam_name
+            # render_page_button(f'{practice_exam_name} {i + 1} ✍🏽', f'{practice_exam_name} {i + 1}', 'learning')
+            render_page_button(f'{practice_exam_name} ✍🏽', f'{practice_exam_name}', 'learning')
 
         render_feedback_form() # So users can give feedback
 
@@ -1178,7 +1187,7 @@ def create_empty_progress_dict(module):
     
     return empty_dict
 
-
+@st.cache_data(persist=True, show_spinner=False)
 def determine_if_to_initialise_database():
     """
     Determine if currently testing, if the progress is saved, or if all modules are included
@@ -1230,7 +1239,7 @@ def render_login_page():
     prompts the user to login via SURFconext."""
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
-        welcome_title = "Celbiologie - deel 2"
+        welcome_title = "Neuroanatomie- en fysiologie - deel 2"
         logo_base64 = convert_image_base64("./content/images/logo.png")
 
         if surf_test_env:
@@ -1250,6 +1259,21 @@ def render_login_page():
         </div>"""
 
         st.markdown(html_content, unsafe_allow_html=True)
+
+@st.cache_resource
+def initialise_data_access_layer():
+    db_dal = DatabaseAccess()
+    cont_dal = ContentAccess()
+    return db_dal, cont_dal
+
+
+def fetch_nonce_from_query():
+    """Fetches the nonce from the query parameters."""
+    st.session_state.nonce = st.query_params.get('nonce', None)
+
+def remove_nonce_from_query():
+    """Removes the nonce from the query parameters."""
+    st.query_params.pop('nonce', None) # Remove the nonce from the url
 
 
 if __name__ == "__main__":
@@ -1273,7 +1297,7 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = False
+    use_openai_api = True
 
     # Bypass authentication when testing so flask app doesnt have to run
     st.session_state.skip_authentication = False
@@ -1285,12 +1309,12 @@ if __name__ == "__main__":
     # page is displayed (referenced to mid_col in functions)
     left_col, mid_col, right_col = st.columns([1, 3, 1])
     
-    db_dal = DatabaseAccess()
-    cont_dal = ContentAccess()
+    db_dal, cont_dal = initialise_data_access_layer()
     db = db_config.connect_db(st.session_state.use_mongodb)
-    
-    initialise_session_states()
+
+    initialise_session_states()  
     determine_if_to_initialise_database()
+
     openai_client = connect_to_openai()
     
     # Only render login page if not testing

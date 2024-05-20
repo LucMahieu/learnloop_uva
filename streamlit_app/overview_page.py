@@ -78,16 +78,54 @@ class OverviewPage:
         
         return True
     
+    @st.cache_data(persist=True, show_spinner=False)
+    def get_module_data(_self, module_name_underscored):
+        _self.cont_dal.get_topics_list(module_name_underscored)
+        topics_data = []
+
+        for topic in _self.cont_dal.topics_list:
+            topic_data = {
+                'topic_title': topic['topic_title'],
+                'segment_indexes': topic['segment_indexes'],
+                'segments': []
+            }
+
+            _self.cont_dal.get_segments_list(module_name_underscored)
+            for segment_index in topic['segment_indexes']:
+                _self.cont_dal.get_segments_list(module_name_underscored)
+                segment_type = _self.cont_dal.get_segment_type()
+                segment_title = _self.cont_dal.get_segment_title()
+                segment_text = _self.cont_dal.get_segment_text()
+                segment_image_file_name = _self.cont_dal.get_segment_image_file_name()
+                segment_image_path = _self.cont_dal.get_image_path() if segment_image_file_name else None
+                segment_question = _self.cont_dal.get_segment_question()
+                segment_answers = _self.cont_dal.get_segment_mc_answers() if segment_type == "question" else None
+
+                segment_data = {
+                    'segment_type': segment_type,
+                    'segment_title': segment_title,
+                    'segment_text': segment_text,
+                    'segment_image_path': segment_image_path,
+                    'segment_question': segment_question,
+                    'segment_answers': segment_answers
+                }
+
+                topic_data['segments'].append(segment_data)
+
+            topics_data.append(topic_data)
+
+        return topics_data
+
 
     def render_topic_containers(self):
         """
         Renders the container that contains the topic title, start button,
         and theory and questions for one topic of the lecture.
         """
-        module_name_underscored = st.session_state.selected_module.replace(' ', '_')        
-        self.cont_dal.get_topics_list(module_name_underscored)
+        module_name_underscored = st.session_state.selected_module.replace(' ', '_')
+        topics_data = self.get_module_data(module_name_underscored)
 
-        for topic_index, topic in enumerate(self.cont_dal.topics_list):
+        for topic_index, topic in enumerate(topics_data):
             container = st.container(border=True)
             cols = container.columns([0.02, 6, 2])
 
@@ -103,51 +141,46 @@ class OverviewPage:
 
             with cols[2]:
                 # Button that starts the learning phase at the first segment of this topic
-                st.button("Start", key=f"start_{topic_index + 1}", on_click=self.start_learning_page, args=(topic_index, ), use_container_width=True)
-
+                st.button("Start", key=f"start_{topic_index + 1}", on_click=self.start_learning_page, args=(topic_index,), use_container_width=True)
 
             with container.expander("Theorie & vragen"):
-                for st.session_state.segment_index in topic['segment_indexes']:
-
-                    self.cont_dal.get_segments_list(module_name_underscored)
-                    if self.cont_dal.get_segment_type() == "theory":
-
+                for segment in topic['segments']:
+                    if segment['segment_type'] == "theory":
                         # Create invisible container to cluster each infosegment with the corresponding question segment(s) and image
                         content_container = st.container()
                         content_cols = content_container.columns([1, 1])
 
                         with content_cols[0]:
-                            title = self.cont_dal.get_segment_title()
-                            text = self.cont_dal.get_segment_text()
+                            title = segment['segment_title']
+                            text = segment['segment_text']
                             # Write the theory contents
                             st.markdown(f'<p class="size-4">{title}</p>', unsafe_allow_html=True)
                             st.write(text)
 
                         with content_cols[1]:
-                            self.cont_dal.get_segment_image_file_name()
-                            if self.cont_dal.image_file_name != None:
-                                image_path = self.cont_dal.get_image_path()
+                            if segment['segment_image_path'] is not None:
+                                image_path = segment['segment_image_path']
                                 image_base64 = self.convert_image_base64(image_path)
                                 image_html = f"""
                                     <div style='text-align: center; margin: 10px;'>
                                         <img src='data:image/png;base64,{image_base64}' alt='image can't load' style='max-width: 100%; max-height: 500px'>
                                     </div>"""
                                 st.markdown(image_html, unsafe_allow_html=True)
-                    
-                    elif self.cont_dal.get_segment_type() == "question":
+
+                    elif segment['segment_type'] == "question":
                         with content_cols[0]:
-                            question = self.cont_dal.get_segment_question()
+                            question = segment['segment_question']
                             st.markdown(f'<p class="size-4-question">{question}</p>', unsafe_allow_html=True)
                             
                             # Render normal or MC answer
-                            answer = self.cont_dal.get_segment_answer()
-                            if answer != None:
+                            answer = segment['segment_answers']
+                            if answer is not None:
                                 st.write(f"_{answer}_")
                             else:
-                                answers = self.cont_dal.get_segment_mc_answers()
+                                answers = segment['segment_answers']
                                 st.write(f"_{answers['correct_answer']}._")
 
-        
+
     def render_page(self):
         """
         Renders the overview page with the lecture title and the topics from the 
@@ -160,4 +193,4 @@ class OverviewPage:
         # Spacing
         st.write("\n")
 
-        self.render_topic_containers()
+        self.render_topic_containers() # Module given for 
