@@ -23,8 +23,8 @@ load_dotenv()
 
 # Don't forget to re-build the image again after changing the code.
 
-use_mongodb = False
-surf_test_env = False
+use_mongodb = True
+surf_test_env = True
 # --------------------------------------------
 
 db = db_config.connect_db(use_mongodb)

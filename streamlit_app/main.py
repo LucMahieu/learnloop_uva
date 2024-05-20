@@ -452,7 +452,8 @@ def reset_segment_index_and_feedback():
             f"progress.{st.session_state.selected_module}.feedback.questions": []
         }
     }
-    result = db.users.update_one(user_query, set_empty_array)
+
+    db.users.update_one(user_query, set_empty_array)
     
 
 # render the page at the end of the learning phase (after the last question)
@@ -514,7 +515,8 @@ def show_feedback_overview():
     for question in questions:
         st.subheader(f"{question['question']}")
         if 'feedback' in question:
-            render_feedback()            
+            st.session_state.feedback = question['feedback']
+            render_feedback()
         else:
             render_mc_feedback(question)
         st.markdown("---")
@@ -1259,7 +1261,7 @@ if __name__ == "__main__":
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = False
+    surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
@@ -1271,12 +1273,12 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = True
+    use_openai_api = False
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = True
+    st.session_state.skip_authentication = False
     
-    no_login_page = True
+    no_login_page = False
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
