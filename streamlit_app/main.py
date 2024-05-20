@@ -167,7 +167,7 @@ def render_feedback():
     </div>
     """
     st.markdown(result_html, unsafe_allow_html=True)
-
+    st.write(f"Student answer: {st.session_state.student_answer}")
 
 def render_progress_bar():
     # Change style of progressbar
@@ -248,7 +248,6 @@ def determine_phase_length():
 def change_segment_index(step_direction):
     """Change the segment index based on the direction of step (previous or next)."""
     phase_length = determine_phase_length()
-
     while True:
         # Update segment index based on direction
         st.session_state.segment_index += step_direction
@@ -257,10 +256,11 @@ def change_segment_index(step_direction):
         if st.session_state.segment_index < 0:
             st.session_state.segment_index = 0
             break
-        if st.session_state.segment_index >= phase_length:
+        if st.session_state.segment_index > phase_length:
             st.session_state.segment_index = phase_length - 1
             break
-        if st.session_state.segment_index == phase_length - 1:
+        # if st.session_state.segment_index == phase_length - 1:
+        if st.session_state.segment_index == phase_length:
             st.session_state.segment_index = 100_000
             break
 
@@ -445,8 +445,13 @@ def reset_segment_index_and_feedback():
     When the user wants to go back to the beginning of the phase, the feedback progress
     is reset.
     """
+    # Make sure that everything is reset
+    st.session_state.submitted = False
+    st.session_state.student_answer = None
+    st.session_state.shuffled_answers = None
     st.session_state.segment_index = 0
     upload_progress()
+    
     user_query = {"username": st.session_state.username}
     set_empty_array = {
         "$set": {
@@ -456,7 +461,6 @@ def reset_segment_index_and_feedback():
 
     db.users_2.update_one(user_query, set_empty_array)
     
-
 # render the page at the end of the learning phase (after the last question)
 def render_final_page():
     questions = get_feedback_questions_from_db()
@@ -481,6 +485,12 @@ def render_final_page():
 
         # otherwise the progress bar and everything will get rendered
         exit()
+    
+def render_final_page_practice():
+    with mid_col:
+        st.subheader("Je bent klaar met herhalen")
+        st.button("Terug naar begin", on_click=reset_segment_index_and_feedback, use_container_width=True)
+    exit()
 
 def calculate_score():
     questions = get_feedback_questions_from_db()
@@ -500,9 +510,12 @@ def get_feedback_questions_from_db():
         f"progress.{st.session_state.selected_module}.feedback.questions": 1,
         "_id": 0  
     }
-
+    
     user_document = db.users_2.find_one(query, projection)
 
+    if user_document is None:
+        return []
+    
     questions = user_document.get('progress', {})\
                             .get(st.session_state.selected_module, {})\
                             .get('feedback', {})\
@@ -517,6 +530,7 @@ def show_feedback_overview():
         st.subheader(f"{question['question']}")
         if 'feedback' in question:
             st.session_state.feedback = question['feedback']
+            st.session_state.student_answer = question['student_answer']
             render_feedback()
         else:
             render_mc_feedback(question)
@@ -618,7 +632,7 @@ def render_learning_page():
         'answer' in st.session_state.segment_content):
                 
             if st.session_state.submitted:
-                
+
                 # Render image if present in the feedback
                 image_path = fetch_image_path()
                 if image_path:
@@ -723,6 +737,7 @@ def save_feedback_on_open_question():
 
     # Execute the pull operation
     db.users_2.update_one(user_query, pull_query)
+    db.users_2.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -732,6 +747,7 @@ def save_feedback_on_open_question():
         'score': st.session_state.score
     }
 
+
     # Push the new question data
     push_query = {
         "$push": {
@@ -740,6 +756,8 @@ def save_feedback_on_open_question():
     }
 
     # Execute the push operation
+    db.users_2.update_one(user_query, push_query)
+    
     db.users_2.update_one(user_query, push_query)
 
 def save_feedback_on_mc_question():
@@ -855,7 +873,6 @@ def render_practice_page():
             image_path = fetch_image_path()
             if image_path:
                 render_image(image_path)
-
             render_question()
             if st.session_state.submitted:
                 # Spinner that displays during evaluating answer
@@ -865,8 +882,9 @@ def render_practice_page():
                                 het kopje 'Extra info' in de sidebar."):
                     render_student_answer()
                     evaluate_answer()
-                
+
                 render_feedback()
+                save_feedback_on_open_question()
                 render_explanation()
                 render_SR_nav_buttons()
             else:
@@ -1288,19 +1306,19 @@ if __name__ == "__main__":
     surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
-    reset_user_doc = False
+    reset_user_doc = True
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
     st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
-    use_dummy_openai_calls = False
+    use_dummy_openai_calls = True
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     use_openai_api = True
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = False
+    st.session_state.skip_authentication = True
     
     no_login_page = False
     # ---------------------------------------------------------
