@@ -423,11 +423,10 @@ def render_learning_explanation():
         render_start_button()
     exit()
 
-def render_oefententamen_explanation():
+def render_practice_exam_explanation():
     with mid_col:
-        st.markdown(f'<p style="font-size: 30px;"><strong>{st.session_state.practice_exam_name}</strong></p>', unsafe_allow_html=True)
-        # st.write("The learning phase **guides you through the concepts of a lecture** in an interactive way with **personalized feedback**. Incorrectly answered questions are automatically added to the practice phase.")
-        st.write("Dit oefententamen bevat een willekeurige selectie aan tentamenvragen over de stof uit de colleges.")
+        st.markdown('<p style="font-size: 30px;"><strong>Samenvattende vragen ✍🏽</strong></p>', unsafe_allow_html=True)
+        st.write("Hier kun je oefenen met samenvattende vragen over elk onderwerp uit de colleges.")
         render_start_button()
     exit()
 
@@ -440,8 +439,8 @@ def initialise_learning_page():
     st.session_state.segment_index = cont_dal.fetch_segment_index()
 
     if st.session_state.segment_index == -1: # If user never started this phase
-        if st.session_state.selected_module.startswith("Oefententamen"):
-            render_oefententamen_explanation()
+        if st.session_state.selected_module.startswith("Samenvattende"):
+            render_practice_exam_explanation()
         else:
             render_learning_explanation()
     elif st.session_state.segment_index == 100_000: # if we are at the final screen
@@ -1297,7 +1296,7 @@ def initialise_session_states():
 def fetch_nonce_from_query():
     return st.query_params.get('nonce', None)
 
-@st.cache_data(show_spinner=False)
+
 def determine_username_from_nonce():
     """
     Fetches the username from the database using the nonce in the query parameters.
