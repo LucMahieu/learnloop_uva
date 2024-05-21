@@ -426,7 +426,7 @@ def render_learning_explanation():
 def render_practice_exam_explanation():
     with mid_col:
         st.markdown('<p style="font-size: 30px;"><strong>Samenvattende vragen ✍🏽</strong></p>', unsafe_allow_html=True)
-        st.write("Hier kun je oefenen met samenvattende vragen over elk onderwerp uit de colleges.")
+        st.write("Hier kun je oefenen met samenvattende vragen over de onderwerpen uit de colleges.")
         render_start_button()
     exit()
 
