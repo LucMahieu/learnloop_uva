@@ -27,8 +27,8 @@ class ContentAccess:
         return modules
 
 
-    def get_segment_type(self):
-        return self.get_segments_list(self.get_module_name_underscored())[st.session_state.segment_index].get('type', None)
+    def get_segment_type(self, segment_index):
+        return self.get_segments_list(self.get_module_name_underscored())[segment_index].get('type', None)
     
     def get_module_name_underscored(self):
         return st.session_state.selected_module.replace(' ', '_')
@@ -44,7 +44,6 @@ class ContentAccess:
     
     def fetch_segment_index(self):
         """Fetch the last segment index from db"""
-
         # Switch the phase from overview to learning when fetching the segment index
         phase = st.session_state.selected_phase
         if phase == 'overview':
@@ -53,26 +52,26 @@ class ContentAccess:
         user_doc = self.db.users_2.find_one({"username": st.session_state.username})
         return user_doc["progress"][st.session_state.selected_module][phase]["segment_index"]
 
-    def get_segment_question(self):
-        return self.segments_list[st.session_state.segment_index].get('question', None)
+    def get_segment_question(self, segment_index):
+        return self.segments_list[segment_index].get('question', None)
         
-    def get_segment_answer(self):
-        return self.segments_list[st.session_state.segment_index].get('answer', None)
+    def get_segment_answer(self, segment_index):
+        return self.segments_list[segment_index].get('answer', None)
 
-    def get_segment_title(self):
-        return self.segments_list[st.session_state.segment_index]['title']
+    def get_segment_title(self, segment_index):
+        return self.segments_list[segment_index]['title']
     
-    def get_segment_text(self):
-        return self.segments_list[st.session_state.segment_index]['text']
+    def get_segment_text(self, segment_index):
+        return self.segments_list[segment_index]['text']
 
-    def get_segment_image_file_name(self):
-        self.image_file_name= self.segments_list[st.session_state.segment_index].get('image', None)
+    def get_segment_image_file_name(self, segment_index):
+        return self.segments_list[segment_index].get('image', None)
         
-    def get_image_path(self):
-        return f"./content/images/{self.image_file_name}"
+    def get_image_path(self, image_file_name):
+        return f"./content/images/{image_file_name}"
 
-    def get_segment_mc_answers(self):
-        return self.segments_list[st.session_state.segment_index]['answers']
+    def get_segment_mc_answers(self, segment_index):
+        return self.segments_list[segment_index].get('answers', None)
 
     def load_page_content_of_module_in_session_state(self, module):
         file_name = self.fetch_json_file_name_of_module(module)
@@ -120,6 +119,13 @@ class DatabaseAccess:
     def __init__(self):
         self.db = db_config.connect_db(st.session_state.use_mongodb)
         self.users_collection_name = 'users_2'
+    
+    def update_if_warned(self, boolean):
+        """Callback function for a button that turns of the LLM warning message."""
+        self.db.users_2.update_one(
+            {"username": st.session_state.username},
+            {"$set": {"warned": boolean}}
+        )
 
     def fetch_if_warned(self):
         """Fetches from database if the user has been warned about LLM."""
@@ -140,7 +146,7 @@ class DatabaseAccess:
             {"$set": {"last_module": st.session_state.selected_module}}
         )
 
-    def fetch_username(self):
+    def fetch_username_with_nonce(self):
         user_doc = self.db.users_2.find_one({'nonce': st.session_state.nonce})
         if user_doc is not None:
             st.session_state.username = user_doc['username']

@@ -78,7 +78,7 @@ class OverviewPage:
         
         return True
     
-    @st.cache_data(show_spinner=False)
+    
     def get_module_data(_self, module_name_underscored):
         _self.cont_dal.get_topics_list(module_name_underscored)
         topics_data = []
@@ -93,13 +93,14 @@ class OverviewPage:
             _self.cont_dal.get_segments_list(module_name_underscored)
             for segment_index in topic['segment_indexes']:
                 _self.cont_dal.get_segments_list(module_name_underscored)
-                segment_type = _self.cont_dal.get_segment_type()
-                segment_title = _self.cont_dal.get_segment_title()
-                segment_text = _self.cont_dal.get_segment_text()
-                segment_image_file_name = _self.cont_dal.get_segment_image_file_name()
-                segment_image_path = _self.cont_dal.get_image_path() if segment_image_file_name else None
-                segment_question = _self.cont_dal.get_segment_question()
-                segment_answers = _self.cont_dal.get_segment_mc_answers() if segment_type == "question" else None
+                segment_type = _self.cont_dal.get_segment_type(segment_index)
+                segment_title = _self.cont_dal.get_segment_title(segment_index) if segment_type == "theory" else None
+                segment_text = _self.cont_dal.get_segment_text(segment_index) if segment_type == "theory" else None
+                segment_question = _self.cont_dal.get_segment_question(segment_index) if segment_type == "question" else None
+                segment_answers = _self.cont_dal.get_segment_mc_answers(segment_index) if segment_type == "question" else None
+                segment_answer = _self.cont_dal.get_segment_answer(segment_index) if segment_type == "question" else None
+                segment_image_file_name = _self.cont_dal.get_segment_image_file_name(segment_index)
+                segment_image_path = _self.cont_dal.get_image_path(segment_image_file_name) if segment_image_file_name else None
 
                 segment_data = {
                     'segment_type': segment_type,
@@ -107,7 +108,8 @@ class OverviewPage:
                     'segment_text': segment_text,
                     'segment_image_path': segment_image_path,
                     'segment_question': segment_question,
-                    'segment_answers': segment_answers
+                    'segment_answers': segment_answers,
+                    'segment_answer': segment_answer,
                 }
 
                 topic_data['segments'].append(segment_data)
@@ -158,8 +160,7 @@ class OverviewPage:
                             st.write(text)
 
                         with content_cols[1]:
-                            if segment['segment_image_path'] is not None:
-                                image_path = segment['segment_image_path']
+                            if (image_path := segment['segment_image_path']) is not None:
                                 image_base64 = self.convert_image_base64(image_path)
                                 image_html = f"""
                                     <div style='text-align: center; margin: 10px;'>
@@ -173,12 +174,11 @@ class OverviewPage:
                             st.markdown(f'<p class="size-4-question">{question}</p>', unsafe_allow_html=True)
                             
                             # Render normal or MC answer
-                            answer = segment['segment_answers']
-                            if answer is not None:
-                                st.write(f"_{answer}_")
+                            if (answer := segment['segment_answer']) is None:
+                                mc_answers = segment['segment_answers']
+                                st.write(f"_{mc_answers['correct_answer']}._")
                             else:
-                                answers = segment['segment_answers']
-                                st.write(f"_{answers['correct_answer']}._")
+                                st.write(f"_{answer}_")
 
 
     def render_page(self):

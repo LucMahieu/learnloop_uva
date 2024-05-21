@@ -18,8 +18,8 @@ load_dotenv()
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # Test before deployment by runing in docker with the following commands:
-# - docker build -t flask-app .
-# - docker run --env-file .env -p 3000:3000 flask-app
+# docker build -t flask-app .
+# docker run --env-file .env -p 3000:3000 flask-app
 
 # Don't forget to re-build the image again after changing the code.
 

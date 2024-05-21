@@ -19,15 +19,27 @@ st.set_page_config(page_title="LearnLoop", layout="wide")
 load_dotenv()
 
 def connect_to_openai():
-    if use_openai_api:
+    if llm_model == 'gpt-4o':
+        print("Using OpenAI GPT-4o")
         st.session_state.openai_model = "gpt-4o"
         return OpenAI(api_key=os.getenv("OPENAI_API_KEY_2"))
-    else:
+    
+    elif llm_model == 'azure_gpt-4':
+        print("Using Azure GPT-4")
         st.session_state.openai_model = "learnloop"
         return AzureOpenAI(
-        api_key=os.getenv("OPENAI_API_KEY"),  
-        api_version="2024-03-01-preview",
-        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+            api_key=os.getenv("OPENAI_API_KEY"),  
+            api_version="2024-03-01-preview",
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+        )
+
+    elif llm_model == 'azure_gpt-4_Turbo':
+        print("Using Azure GPT-4 Turbo")
+        st.session_state.openai_model = "learnloop"
+        return AzureOpenAI(
+            api_key=os.getenv("OPENAI_API_KEY_TURBO"),  
+            api_version="2024-03-01-preview",
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT_TURBO")
         )
 
 def upload_progress():
@@ -214,7 +226,7 @@ def re_insert_question(interval):
     # Insert the segment in new position
     st.session_state.ordered_segment_sequence.insert(new_pos, json_index)
 
-    change_segment_index(1)    
+    change_segment_index(1)
 
 
 def render_SR_nav_buttons():
@@ -543,15 +555,6 @@ def render_oefententamen_final_page():
     exit()
 
 
-def set_warned_true():
-    """Callback function for a button that turns of the LLM warning message."""
-    db.users_2.update_one(
-        {"username": st.session_state.username},
-        {"$set": {"warned": True}}
-    )
-    st.session_state.warned = True
-
-
 def reset_progress():
     """Resets the progress of the user in the current phase to the database."""
     db.users_2.update_one(
@@ -559,6 +562,11 @@ def reset_progress():
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
 
+
+def set_if_warned_true():
+    """Sets the warned variable in the database and session state to True."""
+    db_dal.update_if_warned(True)
+    st.session_state.warned = True
 
 def render_warning():
     st.markdown("""
@@ -569,7 +577,7 @@ def render_warning():
         unsafe_allow_html=True
     )
     st.button("Nee", on_click=reset_progress, use_container_width=True)
-    st.button("Ja", use_container_width=True, on_click=set_warned_true)
+    st.button("Ja", use_container_width=True, on_click=set_if_warned_true)
     st.button("Leer meer over mogelijkheden & limitaties van LLM's", on_click=set_info_page_true, use_container_width=True)
 
 
@@ -580,7 +588,7 @@ def progress_date_tracking_format():
     It also adds the first entry directly.
     """
     date = datetime.utcnow().date()
-    return {"type": cont_dal.get_segment_type(), "entries": [date.isoformat()]}
+    return {"type": cont_dal.get_segment_type(st.session_state.segment_index), "entries": [date.isoformat()]}
 
 
 def add_date_to_progress_counter():
@@ -659,7 +667,7 @@ def render_learning_page():
                 
                 render_question()
 
-                if st.session_state.warned == False:
+                if st.session_state.warned is False or st.session_state.warned is None:
                     render_warning()
                 else:
                     render_answerbox()
@@ -956,87 +964,6 @@ def render_selected_page():
         render_practice_page()
 
 
-def initialise_session_states():
-    if 'openai_model' not in st.session_state:
-        st.session_state.openai_model = 'gpt-4o'
-
-    if 'practice_exam_name' not in st.session_state:
-        st.session_state.practice_exam_name = 'Samenvattende vragen'
-
-    if 'info_page' not in st.session_state:
-        st.session_state.info_page = False
-
-    if 'nonce' not in st.session_state:
-        st.session_state.nonce = st.query_params.get('nonce', None)
-        st.query_params.pop('nonce', None) # Remove the nonce from the url
-
-    if 'username' not in st.session_state:
-        st.session_state.username = db_dal.fetch_username()
-        if st.session_state.username is not None:
-            db_dal.invalidate_nonce()
-        elif st.session_state.skip_authentication:
-            st.session_state.username = "test_user_2"
-        
-    if 'warned' not in st.session_state:
-        st.session_state.warned = db_dal.fetch_if_warned()
-
-    if 'feedback_submitted' not in st.session_state:
-        st.session_state.feedback_submitted = False
-
-    if 'old_page' not in st.session_state:
-        st.session_state.old_page = None
-
-    if 'current_page' not in st.session_state:
-        st.session_state.current_page = None
-
-    if 'ordered_segment_sequence' not in st.session_state:
-        st.session_state.ordered_segment_sequence = []
-
-    if 'ordered_segment_sequence' not in st.session_state:
-        st.session_state.ordered_segment_sequence = []
-
-    if 'page_content' not in st.session_state:
-        st.session_state.page_content = None
-
-    if 'segment_index' not in st.session_state:
-        st.session_state.segment_index = 0
-
-    if 'modules' not in st.session_state:
-        st.session_state.modules = cont_dal.determine_modules()
-    
-    if 'selected_module' not in st.session_state:
-        st.session_state.selected_module = db_dal.fetch_last_module()
-        if st.session_state.selected_module is None:
-            st.session_state.selected_module = st.session_state.modules[0]
-    
-    if 'selected_phase' not in st.session_state:
-        if st.session_state.selected_module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
-            st.session_state.selected_phase = 'learning'
-        else:
-            st.session_state.selected_phase = 'overview'
-    
-    if 'segment_content' not in st.session_state:
-        st.session_state.segment_content = None
-
-    if 'submitted' not in st.session_state:
-        st.session_state.submitted = False
-    
-    if 'student_answer' not in st.session_state:
-        st.session_state.student_answer = ""
-        
-    if 'score' not in st.session_state:
-        st.session_state.score = ""
-
-    if 'feedback' not in st.session_state:
-        st.session_state.feedback = ""
-
-    if 'shuffled_answers' not in st.session_state:
-        st.session_state.shuffled_answers = None
-
-    if 'questions_only' not in st.session_state:
-        st.session_state.questions_only = False
-
-
 def render_logo():
     st.image('./content/images/logo.png', width=100)
 
@@ -1283,13 +1210,104 @@ def initialise_data_access_layer():
     return db_dal, cont_dal
 
 
-def fetch_nonce_from_query():
-    """Fetches the nonce from the query parameters."""
-    st.session_state.nonce = st.query_params.get('nonce', None)
+def determine_selected_module():
+    st.session_state.selected_module = db_dal.fetch_last_module()
+    if st.session_state.selected_module is None:
+        st.session_state.selected_module = st.session_state.modules[0]
 
-def remove_nonce_from_query():
-    """Removes the nonce from the query parameters."""
-    st.query_params.pop('nonce', None) # Remove the nonce from the url
+def determine_selected_phase():
+    if st.session_state.selected_module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
+        st.session_state.selected_phase = 'learning'
+    else:
+        st.session_state.selected_phase = 'overview'
+
+def initialise_session_states():
+    if 'openai_model' not in st.session_state:
+        st.session_state.openai_model = 'gpt-4o'
+
+    if 'practice_exam_name' not in st.session_state:
+        st.session_state.practice_exam_name = 'Samenvattende vragen'
+
+    if 'info_page' not in st.session_state:
+        st.session_state.info_page = False
+
+    if 'nonce' not in st.session_state:
+        st.session_state.nonce = None
+
+    if 'username' not in st.session_state:
+        st.session_state.username = None
+        
+    if 'warned' not in st.session_state:
+        st.session_state.warned = None
+
+    if 'feedback_submitted' not in st.session_state:
+        st.session_state.feedback_submitted = False
+
+    if 'old_page' not in st.session_state:
+        st.session_state.old_page = None
+
+    if 'current_page' not in st.session_state:
+        st.session_state.current_page = None
+
+    if 'ordered_segment_sequence' not in st.session_state:
+        st.session_state.ordered_segment_sequence = []
+
+    if 'ordered_segment_sequence' not in st.session_state:
+        st.session_state.ordered_segment_sequence = []
+
+    if 'page_content' not in st.session_state:
+        st.session_state.page_content = None
+
+    if 'segment_index' not in st.session_state:
+        st.session_state.segment_index = 0
+
+    if 'modules' not in st.session_state:
+        st.session_state.modules = cont_dal.determine_modules()
+    
+    if 'selected_module' not in st.session_state:
+        st.session_state.selected_module = None
+    
+    if 'selected_phase' not in st.session_state:
+        st.session_state.selected_phase = None
+    
+    if 'segment_content' not in st.session_state:
+        st.session_state.segment_content = None
+
+    if 'submitted' not in st.session_state:
+        st.session_state.submitted = False
+    
+    if 'student_answer' not in st.session_state:
+        st.session_state.student_answer = ""
+        
+    if 'score' not in st.session_state:
+        st.session_state.score = ""
+
+    if 'feedback' not in st.session_state:
+        st.session_state.feedback = ""
+
+    if 'shuffled_answers' not in st.session_state:
+        st.session_state.shuffled_answers = None
+
+    if 'questions_only' not in st.session_state:
+        st.session_state.questions_only = False
+
+
+def fetch_nonce_from_query():
+    return st.query_params.get('nonce', None)
+
+@st.cache_data(show_spinner=False)
+def determine_username_from_nonce():
+    """
+    Fetches the username from the database using the nonce in the query parameters.
+    """
+    st.session_state.nonce = fetch_nonce_from_query()
+    db_dal.fetch_username_with_nonce()
+
+
+def remove_nonce_from_memories():
+    """Removes the nonce from the query parameters and session state."""
+    st.query_params.pop('nonce', None)
+    st.session_state.nonce = None
 
 
 if __name__ == "__main__":
@@ -1297,7 +1315,7 @@ if __name__ == "__main__":
     # SETTINGS for DEVELOPMENT & DEPLOYMENT:
 
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    # SET ALL TO FALSE WHEN DEPLOYING (except if it is demo: use_openai_api = True for GPT-4o)
+    # SET ALL TO FALSE WHEN DEPLOYING
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
@@ -1313,12 +1331,13 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
-    use_openai_api = False
+    models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
+    llm_model = models[2]
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = True
+    st.session_state.skip_authentication = False
     
-    no_login_page = True
+    no_login_page = False
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
@@ -1328,18 +1347,37 @@ if __name__ == "__main__":
     db_dal, cont_dal = initialise_data_access_layer()
     db = db_config.connect_db(st.session_state.use_mongodb)
 
-    initialise_session_states()  
-    determine_if_to_initialise_database()
+    initialise_session_states()
 
     openai_client = connect_to_openai()
-    
-    # Only render login page if not testing
+
+    if (nonce := fetch_nonce_from_query()) is not None:
+        determine_username_from_nonce()
+        remove_nonce_from_memories()
+
+    # Only render login page if main doesn't know the user
     if no_login_page == False \
-        and st.session_state.nonce is None \
+        and fetch_nonce_from_query() is None \
         and st.session_state.username is None:
         render_login_page()
 
     # Render the actual app
-    else:    
+    else:
+        determine_if_to_initialise_database()
+
+        if st.session_state.warned == None:
+            if warned := db_dal.fetch_if_warned() is True:
+                st.session_state.warned = True
+            else:
+                st.session_state.warned = False
+
+            db_dal.update_if_warned(warned)
+
+        if st.session_state.selected_module is None:
+            determine_selected_module()
+        
+        if st.session_state.selected_phase is None:
+            determine_selected_phase()
+
         render_sidebar()
         render_selected_page()
