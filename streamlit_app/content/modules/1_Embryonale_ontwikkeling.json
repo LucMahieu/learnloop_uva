@@ -18,21 +18,32 @@
         {
             "type": "theory",
             "title": "Kenmerken van gewervelde diersoorten",
-            "text": "Gewervelde dieren worden gekenmerkt door verschillende structurele eigenschappen: \n 1) **Bilaterale symmetrie**: houdt in dat het lichaam spiegelbeeldig verdeeld kan worden in gelijke linker en rechter helften. \n 2) **Polariteit**: verwijst naar de duidelijke voor- en achterkant van het lichaam. \n 3) **Kiembladen**: de drie cellagen die tijdens de embryonale ontwikkeling vormen en uitgroeien tot alle lichaamsweefsels. \n 4) **Lichaamsholten**: zijn ruimtes binnen het lichaam die organen beschermen en toestaan onafhankelijk te bewegen. \n 5) **Segmentatie**: betekent dat het lichaam is opgebouwd uit herhaalde eenheden zoals ruggenwervels. \n 6) **Chorda**: een steunstructuur aan de rugzijde van het embryo zoals de ruggengraat. \n 7) **kieuwbogen**: bot- en kraakbeenstructuren in de keelregio van embryo's, die zich ontwikkelen tot verschillende gezichts- en nekstructuren.",
+            "text": "Gewervelde dieren worden gekenmerkt door verschillende structurele eigenschappen: \n 1) **Bilaterale symmetrie**: houdt in dat het lichaam spiegelbeeldig verdeeld kan worden in gelijke linker en rechter helften. \n 2) **Polariteit**: verwijst naar de duidelijke voor- en achterkant van het lichaam. \n 3) **Kiembladen**: de drie cellagen die tijdens de embryonale ontwikkeling vormen en uitgroeien tot alle lichaamsweefsels. \n 4) **Lichaamsholten**: zijn ruimtes binnen het lichaam die organen beschermen en toestaan onafhankelijk te bewegen. \n 5) **Segmentatie**: betekent dat het lichaam is opgebouwd uit herhaalde eenheden zoals ruggenwervels. \n 6) **Chorda**: een steunstructuur aan de rugzijde van het embryo zoals de ruggengraat. \n 7) **Kieuwbogen**: bot- en kraakbeenstructuren in de keelregio van embryo's, die zich ontwikkelen tot verschillende gezichts- en nekstructuren.",
             "image": null,
             "tag": "2.4.1"
         },
         {
             "type": "question",
-            "question": "Welke lichamelijke elementen zijn typerend voor gewervelde dieren?",
-            "answer": "Kenmerken van gewervelde dieren zijn bilaterale symmetrie (1 punt), polariteit (1 punt), kiembladen (1 punt), lichaamsholten (1 punt), segmentatie (1 punt), chorda (1 punt), en kieuwbogen (1 punt).",
-            "tag": "2.4.1",
+            "question": "Wat is g\u00e9\u00e9n lichamelijk kenmerk van gewervelde diersoorten?",
+            "answers": {
+                "correct_answer": "Exoskelet",
+                "wrong_answers": [
+                    "Bilaterale symmetrie",
+                    "Polariteit",
+                    "Kiembladen",
+                    "Lichaamsholten",
+                    "Segmentatie",
+                    "Chorda",
+                    "Kieuwbogen"
+                ]
+            },
+            "tag": "2.8.4",
             "image": null
         },
         {
             "type": "theory",
             "title": "De Anatomische stand",
-            "text": "De anatomische stand is een referentiepositie die gebruikt wordt in de anatomie om de locatie van anatomische structuren te beschrijven. In deze stand staat het lichaam rechtop, met het gezicht naar voren gericht, de armen langs het lichaam, en de handpalmen naar voren. De voeten zijn eveneens naar voren gericht en plat op de grond. Deze stand wordt gebruikt om consistentie te waarborgen in de medische beschrijvingen van het lichaam en zijn onderdelen.",
+            "text": "De **anatomische stand** is een referentiepositie die gebruikt wordt in de anatomie om de locatie van anatomische structuren te beschrijven. In deze stand staat het lichaam rechtop, met het gezicht naar voren gericht, de armen langs het lichaam, en de handpalmen naar voren. De voeten zijn eveneens naar voren gericht en plat op de grond. Deze stand wordt gebruikt om consistentie te waarborgen in de medische beschrijvingen van het lichaam en zijn onderdelen.",
             "image": "anatomische_stand.png",
             "tag": "3.1.1"
         },
@@ -45,7 +56,7 @@
         },
         {
             "type": "theory",
-            "title": "Anatomische assen",
+            "title": "Anatomische vlakken",
             "text": "Het menselijk lichaam kan worden verdeeld in drie anatomische vlakken: het **sagittale vlak**, die het lichaam in linker en rechter helften verdeelt, het **frontale vlak**, die het lichaam in voor- en achterkant verdeelt, en het **transversale vlak**, die het lichaam in boven- en onderkant verdeelt.",
             "image": "assen.png",
             "tag": "2.4.2"
@@ -66,8 +77,8 @@
         },
         {
             "type": "question",
-            "question": "Leg de anatomische termen craniaal, caudaal, mediaal, lateraal, proximaal, en distaal uitleggen?",
-            "answer": "Anatomische ori\u00ebntatietermen zoals craniaal (1 punt) (richting het hoofd (1 punt)) , caudaal (1 punt) (richting de staart (1 punt)), mediaal (1 punt) (richting het midden van het lichaam (1 punt)), lateraal (1 punt) (weg van het midden van het lichaam (1 punt)), proximaal (1 punt) (dichter bij de romp (1 punt)), en distaal (1 punt) (verder van de romp (1 punt)).",
+            "question": "Leg de anatomische termen craniaal, caudaal, mediaal, lateraal, proximaal en distaal uit.",
+            "answer": "Craniaal  is richting het hoofd (1 punt) , caudaal is richting de staart (1 punt), mediaal is richting het midden van het lichaam (1 punt), lateraal is weg van het midden van het lichaam (1 punt), proximaal is dichter bij de romp (1 punt), en distaal is verder van de romp (1 punt).",
             "tag": "2.4.3",
             "image": null
         },
@@ -81,14 +92,14 @@
         {
             "type": "theory",
             "title": "Overzicht van orgaansystemen",
-            "text": "Het menselijk lichaam bestaat uit verschillende orgaansystemen die specifieke functies vervullen. De **huid (integumentum)** beschermt tegen externe invloeden. Het **skelet** en **gewrichten** vormen het steun- en bewegingsapparaat, terwijl **spieren** beweging mogelijk maken. Het **zenuwstelsel** reguleert en coördineert lichaamsactiviteiten, het **cardiovasculair systeem** verzorgt transport van bloed, zuurstof, en voedingsstoffen. Het **spijsverteringsstelsel** zet voedsel om in bruikbare energie en het **ademhalingsstelsel** zorgt voor de opname van zuurstof. De **nieren en urinewegen** filteren afvalstoffen uit het bloed. Het **voortplantingssysteem** zorgt voor voortplanting en het **hormonaal systeem** regelt diverse lichaamsprocessen via hormonen.",
+            "text": "Het menselijk lichaam bestaat uit verschillende orgaansystemen die specifieke functies vervullen. De **huid (integumentum)** beschermt tegen externe invloeden. Het **skelet** en **gewrichten** vormen het steun- en bewegingsapparaat, terwijl **spieren** beweging mogelijk maken. Het **zenuwstelsel** reguleert en coördineert lichaamsactiviteiten, het **cardiovasculair systeem** verzorgt transport van bloed, zuurstof, en voedingsstoffen. Het **lymfestelsel** verwijdert overtollig vocht en afvalstoffen uit weefsels en ondersteunt het immuunsysteem. Het **spijsverteringsstelsel** zet voedsel om in bruikbare energie en het **ademhalingsstelsel** zorgt voor de opname van zuurstof. De **nieren en urinewegen** filteren afvalstoffen uit het bloed. Het **voortplantingssysteem** zorgt voor voortplanting en het **hormonaal systeem** regelt diverse lichaamsprocessen via hormonen.",
             "image": null,
             "tag": "4.1.1"
         },
         {
             "type": "question",
             "question": "Noem de elf orgaansystemen van het menselijk lichaam",
-            "answer": "De orgaansystemen van het menselijk lichaam zijn de huid (integumentum) (1 punt), skelet en gewrichten (1 punt), spieren (1 punt), zenuwstelsel (1 punt), cardiovasculair systeem (1 punt), spijsverteringsstelsel (1 punt), ademhalingsstelsel (1 punt), nieren en urinewegen (1 punt), voortplantingssysteem (1 punt), en hormonaal systeem (1 punt).",
+            "answer": "De orgaansystemen van het menselijk lichaam zijn de huid (integumentum) (1 punt), skelet en gewrichten (1 punt), spieren (1 punt), zenuwstelsel (1 punt), cardiovasculair systeem (1 punt), lymfesysteem (1 punt), spijsverteringsstelsel (1 punt), ademhalingsstelsel (1 punt), nieren en urinewegen (1 punt), voortplantingssysteem (1 punt), en hormonaal systeem (1 punt).",
             "image": null,
             "tag": "4.1.1"
         },
@@ -109,7 +120,7 @@
         {
             "type": "theory",
             "title": "Skelet",
-            "text": "Het skelet bestaat uit bot, kraakbeen en beenmerg. Dit systeem vervult functies zoals bescherming en steun, aanhechting van pezen, spieren en ligamenten, bloedcelvorming, en het reguleren van de calcium- en fosfaathuishouding.",
+            "text": "Het **skelet** bestaat uit bot, kraakbeen en beenmerg. Dit systeem vervult functies zoals bescherming en steun, aanhechting van pezen, spieren en ligamenten, bloedcelvorming, en het reguleren van de calcium- en fosfaathuishouding.",
             "image": "skelet.png",
             "tag": "4.1.1"
         },
@@ -136,8 +147,20 @@
         },
         {
             "type": "question",
-            "question": "Hoe wordt het skelet verdeeld en onder welk deel van het skelet valt een teenkootje (teen botje)?",
+            "question": "Hoe wordt het skelet verdeeld?",
             "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt). Een teenkootje valt onder het appendiculair skelet (1 punt).",
+            "tag": "2.5.2",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Onder welk skelet valt een teenkootje (teen botje)?",
+            "answers": {
+                "correct_answer": "Appendiculair skelet",
+                "wrong_answers": [
+                    "Axiaal skelet"
+                ]
+            },
             "tag": "2.5.2",
             "image": null
         },
@@ -193,7 +216,7 @@
         {
             "type": "theory",
             "title": "Botten van de bovenste extremiteiten",
-            "text": "De schoudergordel bestaat uit het sleutelbeen (clavicula) en het schouderblad (scapula). De bovenarm bevat het opperarmbeen (humerus). De onderarm bestaat uit het spaakbeen (radius) en de ellepijp (ulna). De hand is opgebouwd uit de handwortelbeentjes (carpalia), middenhandsbeentjes (metacarpalia) en vingerkootjes (phalangen).",
+            "text": "De **schoudergordel** bestaat uit het sleutelbeen (clavicula) en het schouderblad (scapula). De bovenarm bevat het opperarmbeen (humerus). De onderarm bestaat uit het spaakbeen (radius) en de ellepijp (ulna). De hand is opgebouwd uit de handwortelbeentjes (carpalia), middenhandsbeentjes (metacarpalia) en vingerkootjes (phalangen).",
             "image": "appendiculair_skelet.png",
             "tag": "5.1.4"
         },
@@ -221,21 +244,21 @@
         {
             "type": "theory",
             "title": "Gewrichten",
-            "text": "Er zijn twee hoofdtypen gewrichten: continue ((relatief) onbeweeglijke) gewrichten en discontinue (beweeglijke) gewrichten. Continue gewrichten zijn onderverdeeld in junctura fibrosa (bindweefselverbinding) en junctura cartilaginea (kraakbeenverbinding). Deze verbindingen zorgen voor stabiliteit en beperkte beweging. Discontinue gewrichten, ook bekend als junctura synovialis (synoviale gewrichten), zijn beweeglijke verbindingen die een breed scala aan bewegingen mogelijk maken dankzij de aanwezigheid van een synoviale holte gevuld met vloeistof.",
+            "text": "Er zijn twee hoofdtypen **gewrichten**: continue ((relatief) onbeweeglijke) gewrichten en discontinue (beweeglijke) gewrichten. Continue gewrichten zijn onderverdeeld in junctura fibrosa (bindweefselverbinding) en junctura cartilaginea (kraakbeenverbinding). Deze verbindingen zorgen voor stabiliteit en beperkte beweging. Discontinue gewrichten, ook bekend als junctura synovialis (synoviale gewrichten), zijn beweeglijke verbindingen die een breed scala aan bewegingen mogelijk maken dankzij de aanwezigheid van een synoviale holte gevuld met vloeistof.",
             "image": null,
             "tag": "6.1.1"
         },
         {
             "type": "question",
             "question": "Wat is het verschil tussen continue en discontinue gewrichten?",
-            "answer": "Continue gewrichten zijn (relatief) onbeweeglijk en omvatten junctura fibrosa (bindweefselverbinding) en junctura cartilaginea (kraakbeenverbinding) (1 punt). Discontinue gewrichten zijn beweeglijk en staan bekend als junctura synovialis (synoviale gewrichten) (1 punt).",
+            "answer": "Continue gewrichten zijn (relatief) onbeweeglijk (1 punt). Discontinue gewrichten zijn beweeglijk (1 punt).",
             "tag": "6.1.1",
             "image": null
         },
         {
             "type": "theory",
             "title": "Continue gewrichten: junctura fibrosa",
-            "text": "Junctura fibrosa, ook wel bindweefselverbinding genoemd, is een type continue, (relatief) onbeweeglijke gewricht. Een voorbeeld van junctura fibrosa zijn de suturen (schedelnaden), die fibreuze verbindingen zijn tussen de botstukken van de schedel. Deze verbindingen bieden stabiliteit en bescherming voor de hersenen.",
+            "text": "**Junctura fibrosa**, ook wel bindweefselverbinding genoemd, is een type continue, (relatief) onbeweeglijke gewricht. Een voorbeeld van junctura fibrosa zijn de **suturen** (schedelnaden), die fibreuze verbindingen zijn tussen de botstukken van de schedel. Deze verbindingen bieden stabiliteit en bescherming voor de hersenen.",
             "image": "schedelnaden.png",
             "tag": "6.1.1"
         },
@@ -249,7 +272,7 @@
         {
             "type": "theory",
             "title": "Continue gewrichten: junctura cartilaginea",
-            "text": "Junctura cartilaginea, ook wel kraakbeenverbinding genoemd, is een type continue, onbeweeglijke gewricht. Een voorbeeld van junctura cartilaginea zijn synchondroses, die kraakbenige verbindingen zijn tussen botstukken. Voorbeelden hiervan zijn de verbindingen tussen de ribben en het borstbeen of tussenwervelschijven in de wervelkolom.",
+            "text": "**Junctura cartilaginea**, ook wel kraakbeenverbinding genoemd, is een type continue, (relatief) onbeweeglijke gewricht. Een voorbeeld van junctura cartilaginea zijn synchondroses, die kraakbenige verbindingen zijn tussen botstukken. Voorbeelden hiervan zijn de verbindingen tussen de ribben en het borstbeen of tussenwervelschijven in de wervelkolom.",
             "image": "synchondrose.png",
             "tag": "6.1.2"
         },
@@ -263,7 +286,7 @@
         {
             "type": "theory",
             "title": "Discontinue gewrichten: junctura synovialis",
-            "text": "Junctura synovialis, ook wel synoviale gewrichten genoemd, zijn een type discontinue, beweeglijke gewrichten. Deze gewrichten hebben een synoviale holte gevuld met vloeistof, die beweging mogelijk maakt. Voorbeelden van synoviale gewrichten zijn de kniegewrichten, ellebooggewrichten en schoudergewrichten.",
+            "text": "**Junctura synovialis**, ook wel synoviale gewrichten genoemd, zijn een type discontinue, beweeglijke gewrichten. Deze gewrichten hebben een synoviale holte gevuld met vloeistof, die beweging mogelijk maakt. Voorbeelden van synoviale gewrichten zijn de kniegewrichten, ellebooggewrichten en schoudergewrichten.",
             "image": "synoviale_gewrichten.png",
             "tag": "6.2.1"
         },
@@ -276,36 +299,22 @@
         },
         {
             "type": "theory",
-            "title": "Synoviale Gewrichten",
-            "text": "Synoviale gewrichten zijn beweeglijke gewrichten die een synoviale holte bevatten. Deze gewrichten zijn omgeven door een gewrichtskapsel dat bestaat uit twee lagen: de membrana fibrosa en de membrana synovialis. De gewrichtsspleet is gevuld met synoviaalvocht, dat zorgt voor smering en vermindering van wrijving tussen de gewrichtsoppervlakken. De gewrichtsvlakken zijn bedekt met gewrichtskraakbeen, en intra-articulaire structuren zoals ligamenten en menisci bieden extra stabiliteit en ondersteuning.",
-            "image": "synoviaal_gewricht_onderdelen.png",
-            "tag": "6.2.2"
-        },
-        {
-            "type": "question",
-            "question": "Wat zijn de belangrijkste componenten van een synoviaal gewricht?",
-            "answer": "De belangrijkste componenten van een synoviaal gewricht zijn het gewrichtskapsel (1 punt), bestaande uit de membrana fibrosa (1 punt) en de membrana synovialis (1 punt), de gewrichtsspleet gevuld met synoviaalvocht (1 punt), gewrichtskraakbeen (1 punt), en intra-articulaire structuren zoals ligamenten en menisci (1 punt).",
-            "tag": "6.2.2",
-            "image": null
-        },
-        {
-            "type": "theory",
             "title": "Spieren",
-            "text": "Spieren zijn verantwoordelijk voor beweging, houding en warmteproductie, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft.",
+            "text": "**Spieren** zijn verantwoordelijk voor beweging, houding en warmteproductie, waarbij elke spier een **origo** (beginpunt) en een **insertie** (eindpunt) heeft.",
             "image": "spieren.png",
             "tag": "2.5.4"
         },
         {
             "type": "question",
-            "question": "Wat zijn de functies van spieren?",
-            "answer": "Spieren zijn verantwoordelijk voor beweging en houding (1 punt), en elke spier heeft een origo (beginpunt) en een insertie (eindpunt) (1 punt). Spieren werken samen als agonisten, synergisten of antagonisten om bewegingen uit te voeren (1 punt).",
+            "question": "Noem drie functies van spieren",
+            "answer": "Spieren zijn verantwoordelijk voor beweging (1 punt), houding (1 punt) en warmteproductie (1 punt).",
             "tag": "2.5.4",
             "image": null
         },
         {
             "type": "theory",
             "title": "Samenwerking van Spieren",
-            "text": "Spieren werken samen in groepen om bewegingen uit te voeren. De belangrijkste rollen die spieren aannemen zijn die van agonisten, synergisten en antagonisten. Een agonist is de spier die een beweging initieert en wordt ook wel de prime mover genoemd. Een synergist ondersteunt de beweging door de agonist te helpen en extra kracht of stabiliteit te bieden. Een antagonist werkt tegengesteld aan de agonist en helpt bij het gecontroleerd terugkeren naar de oorspronkelijke positie of het afremmen van de beweging.",
+            "text": "Spieren werken samen in groepen om bewegingen uit te voeren. De belangrijkste rollen die spieren aannemen zijn die van **agonisten**, **synergisten** en **antagonisten**. Een agonist is de spier die een beweging initieert en wordt ook wel de prime mover genoemd. Een synergist ondersteunt de beweging door de agonist te helpen en extra kracht of stabiliteit te bieden. Een antagonist werkt tegengesteld aan de agonist en helpt bij het gecontroleerd terugkeren naar de oorspronkelijke positie of het afremmen van de beweging.",
             "image": null,
             "tag": "7.1.1"
         },
@@ -325,8 +334,8 @@
         },
         {
             "type": "question",
-            "question": "Wat betekent bewegingsvrijheid in de context van gewrichten?",
-            "answer": "Bewegingsvrijheid verwijst naar de mogelijkheden van rotaties (1 punt) en translaties (1 punt) binnen verschillende gewrichtstypen (1 punt).",
+            "question": "Wat betekent bewegingsvrijheid?",
+            "answer": "Bewegingsvrijheid verwijst naar de mogelijkheden van rotaties en translaties binnen verschillende gewrichtstypen (1 punt).",
             "tag": "2.5.6",
             "image": null
         },
@@ -342,20 +351,6 @@
             "question": "Wat is het verschil tussen rotaties en translaties in de context van gewrichten?",
             "answer": "Rotaties zijn bewegingen rond een as, in een vlak (1 punt), terwijl translaties schuivende bewegingen in een vlak zijn (1 punt).",
             "tag": "2.6.1",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Gewrichtstypen",
-            "text": "Er bestaan verschillende **gewrichtstypen** die de mate van bewegingsmogelijkheden bepalen (aantal vrijheidsgraden), zoals het **kogelgewricht** dat beweging toestaat rondom alle drie de anatomische assen, het **scharniergewricht** dat voornamelijk beweging in \u00e9\u00e9n vlak mogelijk maakt, en het **rolgewricht** dat rotatie rond \u00e9\u00e9n as toelaat.",
-            "image": "bewegingsmogelijkheden.png",
-            "tag": "2.6.2"
-        },
-        {
-            "type": "question",
-            "question": "Hoe verschillen een kogelgewricht, scharniergewricht en rolgewricht van elkaar qua toegestane bewegingen?",
-            "answer": "Een kogelgewricht staat beweging toe rondom alle drie de anatomische assen (1 punt), een scharniergewricht maakt voornamelijk beweging in \u00e9\u00e9n vlak mogelijk (1 punt), en een rolgewricht laat rotatie rond \u00e9\u00e9n as toe (1 punt).",
-            "tag": "2.6.2",
             "image": null
         },
         {
@@ -409,8 +404,8 @@
         },
         {
             "type": "question",
-            "question": "Wat is het verschil tussen endorotatie en exorotatie en waar komen deze bewegingen voor in het lichaam?",
-            "answer": "Endorotatie is de beweging waarbij een ledemaat naar binnen draait (1 punt), en exorotatie is de beweging naar buiten (1 punt). Deze bewegingen komen voor bij gewrichten zoals de schouder- en heupgewrichten (1 punt).",
+            "question": "Wat is het verschil tussen endorotatie en exorotatie?",
+            "answer": "Endorotatie is de beweging waarbij een ledemaat naar binnen draait (1 punt), en exorotatie is de beweging naar buiten (1 punt).",
             "tag": "7.2.2",
             "image": null
         },
@@ -424,14 +419,14 @@
         {
             "type": "question",
             "question": "Welke factoren be\u00efnvloeden bewegingsbeperkingen van gewrichten?",
-            "answer": "Weke delen (1 punt) (spieren, ligamenten en pezen), de botstructuur van het gewricht / type gewricht (1 punt) en fysieke barrieres (ander lichaamsdelen) (1 punt).",
+            "answer": "Welke delen (spieren, ligamenten en pezen) (1 punt), de botstructuur van het gewricht / type gewricht (1 punt) en fysieke barri\u00e8res (ander lichaamsdelen) (1 punt).",
             "tag": "2.6.3",
             "image": null
         },
         {
             "type": "theory",
             "title": "Ontwikkeling en anatomische positionering",
-            "text": "De ontwikkeling en **anatomische positionering van gewrichten** zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen waarbij de **bovenste ledematen (armen en handen) naar voren** en de **onderste ledematen (benen en voeten) naar achteren** draaien.",
+            "text": "De ontwikkeling en **anatomische positionering van gewrichten** zijn be\u00efnvloed door processen zoals de **embryonale draaiing** van ledematen waarbij de bovenste ledematen (armen en handen) naar voren en de onderste ledematen (benen en voeten) naar achteren draaien.",
             "image": "ledematen_draaing_ontwikkeling.png",
             "tag": "2.6.5"
         },
@@ -502,7 +497,7 @@
             "type": "theory",
             "title": "Scharniergewricht",
             "text": "Een **scharniergewricht** maakt bewegingen om één as mogelijk. Bewegingen vinden plaats om de **transversale as** (flexie en extensie). Voorbeelden hiervan zijn een deel van het **ellebooggewricht** (art. humero-ulnare), het **kniegewricht** (art. femoro-tibiale) en het bovenste spronggewricht (art. talocrurale).",
-            "image": "ellebooggewricht_flexie.png",
+            "image": "scharniergewricht.png",
             "tag": "8.1.5"
         },
         {
@@ -527,39 +522,11 @@
             "image": null
         },
         {
-            "type": "question",
-            "question": "Noem de belangrijkste kenmerken en bewegingen van de vijf hoofdtypen gewrichten.",
-            "answer": "Bolgewricht: bewegingen om drie assen (1 punt), voorbeelden: schoudergewricht (art. humeri) en heupgewricht (art. coxae) (1 punt). Eigewricht: bewegingen om twee assen (1 punt), voorbeeld: polsgewricht (art. radio-carpea) (1 punt). Zadelgewricht: bewegingen om twee assen (1 punt), voorbeeld: basisgewricht van de duim (art. carpo-metacarpale pollicis) (1 punt). Scharniergewricht: bewegingen om één as (1 punt), voorbeelden: deel van het ellebooggewricht (art. humero-ulnare), het kniegewricht (art. femoro-tibiale) en het bovenste spronggewricht (art. talocrurale), dat specifiek plantairflexie en dorsaalflexie (extensie) mogelijk maakt (1 punt). Rolgewricht: bewegingen om één as (1 punt), voorbeeld: onderarmgewrichten (artt. radio-ulnare prox. et dist.) (1 punt).",
-            "tag": "8.1.7",
-            "image": null
-        },
-        {
-            "type": "question",
-            "question": "Noem de belangrijkste kenmerken, bewegingen en bijbehorende assen van de vijf hoofdtypen gewrichten.",
-            "answer": "Bolgewricht: bewegingen om drie assen (transversale, sagittale, longitudinale) (1 punt). Eigewricht: bewegingen om twee assen (transversale, sagittale) (1 punt). Zadelgewricht: bewegingen om twee assen (transversale, longitudinale) (1 punt). Scharniergewricht: bewegingen om één as (transversale) (1 punt). Rolgewricht: bewegingen om één as (longitudinale) (1 punt).",
-            "tag": "8.1.7",
-            "image": null
-        },
-        {
-            "type": "theory",
-            "title": "Translatie",
-            "text": "Translatie is een schuivende beweging in een vlak. Deze beweging vindt plaats in gewrichten zoals de intervertebrale gewrichten en bij de bewegingen van het schouderblad. Translatie zorgt ervoor dat botten langs elkaar kunnen bewegen zonder rotatie.",
-            "image": null,
-            "tag": "9.1.1"
-        },
-        {
             "type": "theory",
             "title": "Translatie in de wervelkolom",
             "text": "In de wervelkolom vindt translatie plaats in de intervertebrale gewrichten. Deze gewrichten maken het mogelijk voor de wervels om langs elkaar te schuiven. De individuele bewegingen zijn klein, maar samen zorgen ze voor de flexibiliteit en beweging van de ruggengraat.",
             "image": "intervertebrale_gewrichten.png",
             "tag": "9.1.2"
-        },
-        {
-            "type": "question",
-            "question": "Wat geeft de ruggengraat de mogelijkheid om te buigen en draaien?",
-            "answer": "De intervertebrale gewrichten (1 punt) in de wervelkolom maken het mogelijk voor de wervels om langs elkaar te schuiven (translatie) (1 punt), wat de ruggengraat de mogelijkheid geeft om te buigen en draaien.",
-            "tag": "9.1.2",
-            "image": null
         },
         {
             "type": "theory",
@@ -570,9 +537,26 @@
         },
         {
             "type": "question",
-            "question": "Welke translatiebewegingen kan het schouderblad uitvoeren? Benoem de namen en omschrijvingen van deze bewegingen.",
-            "answer": "Het schouderblad kan de volgende translatiebewegingen uitvoeren: protractie (beweging naar voren) (1 punt), retractie (beweging naar achteren) (1 punt), elevatie (opheffing) (1 punt), depressie (verlaging) (1 punt), laterorotatie (draaiing naar buiten) (1 punt) en mediorotatie (draaiing naar binnen) (1 punt).",
-            "tag": "9.1.3",
+            "question": "Wat geeft de ruggengraat de mogelijkheid om te buigen en draaien?",
+            "answer": "De intervertebrale gewrichten (1 punt) in de wervelkolom maken het mogelijk voor de wervels om langs elkaar te schuiven (translatie) (1 punt), wat de ruggengraat de mogelijkheid geeft om te buigen en draaien.",
+            "tag": "9.1.2",
+            "image": null
+        },
+        {
+            "type": "question",
+            "question": "Welke translatiebewegingen kan het NIET schouderblad uitvoeren?",
+            "answers": {
+                "correct_answer": "Axiale rotatie (rotatie om lengteas)",
+                "wrong_answers": [
+                    "Protractie (beweging naar voren)",
+                    "Retractie (beweging naar achteren)",
+                    "Elevatie (opheffing)",
+                    "Depressie (verlaging)",
+                    "Laterorotatie (draaiing naar buiten)",
+                    "Mediorotatie (draaiing naar binnen)"
+                ]
+            },
+            "tag": "2.8.4",
             "image": null
         },
         {
@@ -635,7 +619,7 @@
             "type": "theory",
             "title": "Vasa vasorum",
             "text": "De **vasa vasorum** zijn kleine bloedvaten die de **bloedvoorziening van de vaatwanden** zelf verzorgen, vooral in de grotere bloedvaten zoals de arteri\u00ebn en venen.",
-            "image": null,
+            "image": "vasa_vasorum.png",
             "tag": "2.2.3"
         },
         {
