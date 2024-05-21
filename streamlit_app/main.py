@@ -37,9 +37,11 @@ def connect_to_openai():
         print("Using Azure GPT-4 Turbo")
         st.session_state.openai_model = "learnloop"
         return AzureOpenAI(
-            api_key=os.getenv("OPENAI_API_KEY_TURBO"),  
+            # api_key=os.getenv("OPENAI_API_KEY_TURBO"), #TODO: ask Gerrit to put key in Azure secrets
+            api_key=os.getenv("OPENAI_API_KEY"),
             api_version="2024-03-01-preview",
-            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT_TURBO")
+            # azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT_TURBO")
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT") #TODO: ask Gerrit to put key in Azure secrets
         )
 
 def upload_progress():
@@ -1319,13 +1321,13 @@ if __name__ == "__main__":
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = True
+    surf_test_env = False
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = True
+    st.session_state.use_mongodb = False
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
