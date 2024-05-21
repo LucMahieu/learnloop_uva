@@ -42,14 +42,14 @@
         },
         {
             "type": "theory",
-            "title": "De Anatomische stand",
+            "title": "De anatomische stand",
             "text": "De **anatomische stand** is een referentiepositie die gebruikt wordt in de anatomie om de locatie van anatomische structuren te beschrijven. In deze stand staat het lichaam rechtop, met het gezicht naar voren gericht, de armen langs het lichaam, en de handpalmen naar voren. De voeten zijn eveneens naar voren gericht en plat op de grond. Deze stand wordt gebruikt om consistentie te waarborgen in de medische beschrijvingen van het lichaam en zijn onderdelen.",
             "image": "anatomische_stand.png",
             "tag": "3.1.1"
         },
         {
             "type": "question",
-            "question": "Hoe staan de handen en voeten georiënteerd in de anatomische stand?",
+            "question": "Hoe staan de handen en voeten geori\u00EBnteerd in de anatomische stand?",
             "answer": "In deze stand zijn de handpalmen naar voren gericht (1 punt) en de voeten plat op de grond en naar voren gericht (1 punt).",
             "tag": "3.1.1",
             "image": null
@@ -92,7 +92,7 @@
         {
             "type": "theory",
             "title": "Overzicht van orgaansystemen",
-            "text": "Het menselijk lichaam bestaat uit verschillende orgaansystemen die specifieke functies vervullen. De **huid (integumentum)** beschermt tegen externe invloeden. Het **skelet** en **gewrichten** vormen het steun- en bewegingsapparaat, terwijl **spieren** beweging mogelijk maken. Het **zenuwstelsel** reguleert en coördineert lichaamsactiviteiten, het **cardiovasculair systeem** verzorgt transport van bloed, zuurstof, en voedingsstoffen. Het **lymfestelsel** verwijdert overtollig vocht en afvalstoffen uit weefsels en ondersteunt het immuunsysteem. Het **spijsverteringsstelsel** zet voedsel om in bruikbare energie en het **ademhalingsstelsel** zorgt voor de opname van zuurstof. De **nieren en urinewegen** filteren afvalstoffen uit het bloed. Het **voortplantingssysteem** zorgt voor voortplanting en het **hormonaal systeem** regelt diverse lichaamsprocessen via hormonen.",
+            "text": "Het menselijk lichaam bestaat uit verschillende orgaansystemen die specifieke functies vervullen. De **huid (integumentum)** beschermt tegen externe invloeden. Het **skelet** en **gewrichten** vormen het steun- en bewegingsapparaat, terwijl **spieren** beweging mogelijk maken. Het **zenuwstelsel** reguleert en co\u00F6rdineert lichaamsactiviteiten, het **cardiovasculair systeem** verzorgt transport van bloed, zuurstof, en voedingsstoffen. Het **lymfestelsel** verwijdert overtollig vocht en afvalstoffen uit weefsels en ondersteunt het immuunsysteem. Het **spijsverteringsstelsel** zet voedsel om in bruikbare energie en het **ademhalingsstelsel** zorgt voor de opname van zuurstof. De **nieren en urinewegen** filteren afvalstoffen uit het bloed. Het **voortplantingssysteem** zorgt voor voortplanting en het **hormonaal systeem** regelt diverse lichaamsprocessen via hormonen.",
             "image": null,
             "tag": "4.1.1"
         },
@@ -321,7 +321,7 @@
         {
             "type": "question",
             "question": "Wat zijn de rollen van agonisten, synergisten en antagonisten in spierbewegingen?",
-            "answer": "Agonisten initiëren een beweging (prime mover) (1 punt), synergisten ondersteunen een beweging (1 punt), en antagonisten gaan een beweging tegen (1 punt).",
+            "answer": "Agonisten initi\u00EBren een beweging (prime mover) (1 punt), synergisten ondersteunen een beweging (1 punt), en antagonisten gaan een beweging tegen (1 punt).",
             "tag": "7.1.1",
             "image": null
         },

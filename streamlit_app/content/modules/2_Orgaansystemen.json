@@ -60,7 +60,7 @@
         {
             "type": "theory",
             "title": "Het peritoneum",
-            "text": "Het **peritoneum** is een groot en dun membraan dat de binnenwand van de buikholte bekleedt en de meeste buikorganen omhult. Het bestaat uit twee lagen: het **pariëtale peritoneum**, dat de binnenmuren van de buikholte bekleedt, en het **viscerale peritoneum**, dat de externe oppervlakken van de meeste buikorganen bedekt. Tussen deze twee lagen bevindt zich de peritoneale holte. Het peritoneum speelt een rol in bescherming tegen infecties, opslag van vet, de immuunrespons, en het transport van voedingsstoffen en afvalstoffen tussen de bloedbaan en de buikorganen.",
+            "text": "Het **peritoneum** is een groot en dun membraan dat de binnenwand van de buikholte bekleedt en de meeste buikorganen omhult. Het bestaat uit twee lagen: het **pari\u00EBtale peritoneum**, dat de binnenmuren van de buikholte bekleedt, en het **viscerale peritoneum**, dat de externe oppervlakken van de meeste buikorganen bedekt. Tussen deze twee lagen bevindt zich de peritoneale holte. Het peritoneum speelt een rol in bescherming tegen infecties, opslag van vet, de immuunrespons, en het transport van voedingsstoffen en afvalstoffen tussen de bloedbaan en de buikorganen.",
             "image": "peritoneum.png",
             "tag": "3.1.1"
         },
@@ -143,7 +143,7 @@
         {
             "type": "question",
             "question": "Wat is het grootste doel van de vertakkingen van de bronchiaalboom?",
-            "answer": "Het grootste doel van de vertakkingen van de bronchiaalboom is het creëren van een zo groot mogelijk oppervlak voor gasuitwisseling (1 punt).",
+            "answer": "Het grootste doel van de vertakkingen van de bronchiaalboom is het cre\u00EBren van een zo groot mogelijk oppervlak voor gasuitwisseling (1 punt).",
             "tag": "3.2.2",
             "image": "bronchiaalboom.png"
         },
@@ -246,8 +246,8 @@
         },
         {
             "type": "theory",
-            "title": "Embryonale ontwikkeling van genitaliën",
-            "text": "De embryonale ontwikkeling van mannelijke en vrouwelijke genitaliën start vanuit een gemeenschappelijke, ongedifferentieerde toestand. Rond de zesde week van de zwangerschap beginnen de geslachtsorganen te differentiëren door de invloed van hormonale signalen. Bij mannelijke embryo's leiden **hormonen** zoals testosteron tot de ontwikkeling van de mannelijke reproductieve structuren, terwijl bij vrouwelijke embryo's de **afwezigheid van deze hormonen** resulteert in de ontwikkeling van vrouwelijke reproductieve structuren. Dit proces bepaalt de vorming van de interne en externe genitaliën van elk geslacht.",
+            "title": "Embryonale ontwikkeling van genitali\u00EBn",
+            "text": "De embryonale ontwikkeling van mannelijke en vrouwelijke genitali\u00EBn start vanuit een gemeenschappelijke, ongedifferentieerde toestand. Rond de zesde week van de zwangerschap beginnen de geslachtsorganen te differenti\u00EBren door de invloed van hormonale signalen. Bij mannelijke embryo's leiden **hormonen** zoals testosteron tot de ontwikkeling van de mannelijke reproductieve structuren, terwijl bij vrouwelijke embryo's de **afwezigheid van deze hormonen** resulteert in de ontwikkeling van vrouwelijke reproductieve structuren. Dit proces bepaalt de vorming van de interne en externe genitali\u00EBn van elk geslacht.",
             "image": "voortplanting_ontwikkeling.png",
             "tag": "3.4.1"
         },
