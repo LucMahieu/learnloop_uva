@@ -510,8 +510,13 @@ def calculate_score():
     for question in questions:
         score_str = question.get('score', '0/1')  # Default to "0/1" if score is missing
         parts = score_str.split('/')
-        total_score += int(parts[0])
+        total_score += float(parts[0])
         possible_score += int(parts[1])
+
+        # If the total score is an integer, convert it to one
+    if total_score.is_integer():
+        total_score = int(total_score)
+
     return total_score, possible_score
 
 def get_feedback_questions_from_db():
@@ -542,6 +547,7 @@ def show_feedback_overview():
         if 'feedback' in question:
             st.session_state.feedback = question['feedback']
             st.session_state.student_answer = question['student_answer']
+            st.session_state.score = question['score']
             render_feedback()
         else:
             render_mc_feedback(question)
@@ -744,7 +750,6 @@ def save_feedback_on_open_question():
 
     # Execute the pull operation
     db.users_2.update_one(user_query, pull_query)
-    db.users_2.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -765,8 +770,6 @@ def save_feedback_on_open_question():
     # Execute the push operation
     db.users_2.update_one(user_query, push_query)
     
-    db.users_2.update_one(user_query, push_query)
-
 def save_feedback_on_mc_question():
     """
     Makes sure that the feedback to a MC question is saved to the database. First it checks if
@@ -1331,6 +1334,9 @@ if __name__ == "__main__":
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
+    # Give the name of the test user when giving one. !! If not using a test username, set to None
+    test_username = None
+
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
     llm_model = models[2]
@@ -1351,10 +1357,14 @@ if __name__ == "__main__":
     initialise_session_states()
 
     openai_client = connect_to_openai()
-
+        
     if (nonce := fetch_nonce_from_query()) is not None:
         determine_username_from_nonce()
         remove_nonce_from_memories()
+    
+    # If there is a test_username specified, overwrite the st.session_state
+    if test_username:
+        st.session_state.username = test_username
 
     # Only render login page if main doesn't know the user
     if no_login_page == False \
