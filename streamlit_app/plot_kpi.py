@@ -8,6 +8,7 @@ import streamlit as st
 class PlotUsage:
     def __init__(self) -> None:
         st.session_state.modules = []
+        st.session_state.use_mongodb = False
         self.cont_dal = ContentAccess()
         self.db_dal = DatabaseAccess()
         
@@ -91,7 +92,6 @@ class PlotUsage:
         all_percentages = []
         
         for individual_data in all_progress_data:
-            print(individual_data)
             individual_question_dates = self.extract_question_dates(individual_data, self.start_date, self.end_date)
             if individual_question_dates != []:
                 individual_percentage = self.calculate_percentage(individual_question_dates, numb_of_questions)
