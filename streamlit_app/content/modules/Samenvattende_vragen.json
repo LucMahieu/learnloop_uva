@@ -3,12 +3,6 @@
     "segments": [
         {
             "type": "question",
-            "question": "Beschrijf kort de stappen in de fosfolipase C-route.",
-            "answer": "Fosfolipase C wordt geactiveerd door G-prote\u00EFnegekoppelde receptoren (1 punt) en zet PIP2 om in IP3 (1 punt), dat calciumvrijgave induceert (1 punt), en DAG (1 punt), dat PKC activeert (1 punt).",
-            "image": null
-        },
-        {
-            "type": "question",
             "question": "Hoe kunnen de termen 'proximaal' en 'distaal' worden gebruikt om de locatie van structuren in het menselijk lichaam te beschrijven, en waarom zijn deze termen nuttig in de klinische praktijk?",
             "answer": "Voor de extremiteiten worden de termen proximaal en distaal gebruikt om aan te geven of iets dichter of verder van de romp gelegen is (1 punt). Omdat de extremiteiten zo bewegelijk zijn, zijn deze termen in de praktijk handiger dan superior/inferior (1 punt). De termen proximaal en distaal worden ook bij het spijsverteringsstelsel gebruikt. Daar is het ondoenlijk om de andere termen, zoals lateraal, mediaal, dorsaal etc., te gebruiken om de weg van het voedsel te gebruiken (1 punt)."
         },
