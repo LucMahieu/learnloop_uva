@@ -1146,6 +1146,32 @@ def create_empty_progress_dict(module):
     
     return empty_dict
 
+
+def initialise_practice_in_database(module):
+    """
+    Adds a new module to the database without resetting the rest of the database.
+    """
+    db.users_2.update_one(
+        {"username": st.session_state.username},
+        {"$set":
+         {f"progress.{module}.practice": {"segment_index": -1,
+                                          "ordered_segment_sequence": []}}
+        }
+    )
+
+
+def initialise_learning_in_database(module):
+    """
+    Adds a new module to the database without resetting the rest of the database.
+    """
+    db.users_2.update_one(
+        {"username": st.session_state.username},
+        {"$set":
+         {f"progress.{module}.learning": {"segment_index": -1}}
+        }
+    )
+
+
 # @st.cache_data(show_spinner=False)
 def determine_if_to_initialise_database():
     """
@@ -1173,8 +1199,14 @@ def determine_if_to_initialise_database():
     for module in st.session_state.modules:
 
         user_doc = db_dal.find_user_doc()
-        if module not in user_doc["progress"]:
+        if module not in user_doc["progress"]:                
             initialise_module_in_database(module)
+
+        if 'practice' not in user_doc["progress"][module]:
+            initialise_practice_in_database(module)
+
+        if 'learning' not in user_doc["progress"][module]:
+            initialise_learning_in_database(module)
 
         # Check if the user doc contains the dict in which the
         # is saved how many times a question is made by user
@@ -1347,6 +1379,7 @@ if __name__ == "__main__":
 
     # Give the name of the test user when giving one. !! If not using a test username, set to None
     test_username = False
+
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
     llm_model = models[2]

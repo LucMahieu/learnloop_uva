@@ -17,15 +17,12 @@ class ContentAccess:
         """
         # Read the modules from the modules directory
         modules = os.listdir("./content/modules")
-        print(f'Modules in a list from dir: {modules}')
 
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
-        print(f'Modules after removing json and replacing underscores: {modules}')
         
         # Sort the modules based on the number in the name except for the practice exams
         modules.sort(key=lambda module: int(module.split(" ")[0]) if module.split(" ")[0].isdigit() else 1000)
-        print(f'Modules: {modules}')
 
         st.session_state.modules = modules
         

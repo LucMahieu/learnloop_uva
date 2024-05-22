@@ -79,7 +79,6 @@ class PlotUsage:
         for user_doc in documents:
             for module in st.session_state.modules:
                 progress_counter = self.db_dal.fetch_progress_counter(module, user_doc)
-                print(progress_counter)
                 if progress_counter is not None:
                     all_progress_data.append(progress_counter)
         return all_progress_data
