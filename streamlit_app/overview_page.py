@@ -63,6 +63,22 @@ class OverviewPage:
         # Change the 'phase' from overview to learning to render the learning page
         st.session_state.selected_phase = 'learning'
     
+    def create_empty_progress_dict(self, module):
+        """
+        Creates an empty dictionary that contains the JSON
+        index of the segment as key and the number of times  
+        the user answered a question.
+        """
+        empty_dict = {}
+
+        self.cont_dal.load_page_content_of_module_in_session_state(module)
+
+        number_of_segments = len(st.session_state.page_content['segments'])
+        
+        # Create a dictionary with indexes (strings) as key and None as value
+        empty_dict = {str(i): None for i in range(number_of_segments)}
+        
+        return empty_dict
     
     def is_topic_completed(self, topic_index, module):
         """
@@ -71,6 +87,12 @@ class OverviewPage:
         topic_segment_indexes = self.cont_dal.get_topic_segment_indexes(module, topic_index)
         user_doc = self.db_dal.find_user_doc()
         progress_count = self.db_dal.fetch_progress_counter(module, user_doc)
+        
+        # If the progress_count is None, then it needs to be added
+        if progress_count is None:
+            empty_dict = self.create_empty_progress_dict(module)
+            self.db_dal.add_progress_counter(module, empty_dict)
+            return False
         
         for index in topic_segment_indexes:
             if progress_count.get(str(index), None) == None:
