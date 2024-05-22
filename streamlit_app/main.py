@@ -715,12 +715,14 @@ def render_learning_page():
                 st.success("✅ Correct!")
                 st.session_state.score = '1/1'
                 save_feedback_on_mc_question()
+                add_date_to_progress_counter()
             # if the score is not correct, the questions is added to the practice phase
             elif st.session_state.submitted:
                 st.error("❌ Incorrect. Try again.")
                 st.session_state.score = '0/1'
                 add_to_practice_phase()
                 save_feedback_on_mc_question()
+                add_date_to_progress_counter()
 
             #render the nav buttons
             render_navigation_buttons()
@@ -1322,7 +1324,7 @@ if __name__ == "__main__":
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = True
+    surf_test_env = False
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
@@ -1334,7 +1336,8 @@ if __name__ == "__main__":
     use_dummy_openai_calls = False
 
     # Give the name of the test user when giving one. !! If not using a test username, set to None
-    test_username = None
+    test_username = False
+    
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
     llm_model = models[2]
@@ -1359,8 +1362,6 @@ if __name__ == "__main__":
     # Directly after logging in via SURF, the nonce is fetched from the query parameters
     if fetch_nonce_from_query() is not None:
         # The username is fetched from the database with this nonce
-        
-    if (nonce := fetch_nonce_from_query()) is not None:
         determine_username_from_nonce()
         # The nonce is removed from the query params, the session state and the database
         remove_nonce_from_memories()
