@@ -393,7 +393,7 @@ def add_to_practice_phase():
 
         if segment_index not in ordered_segment_sequence:
             ordered_segment_sequence.append(segment_index)
-
+        
         # Update practice segments in db
         update_ordered_segment_sequence(ordered_segment_sequence)
 
@@ -463,6 +463,9 @@ def reset_segment_index_and_feedback():
     st.session_state.segment_index = 0
     upload_progress()
     
+    reset_feedback()
+
+def reset_feedback():
     user_query = {"username": st.session_state.username}
     set_empty_array = {
         "$set": {
@@ -935,10 +938,13 @@ def render_practice_page():
             
             if st.session_state.choosen_answer == correct_answer and st.session_state.submitted:
                 st.success("✅ Correct!")
+                st.session_state.score = "1/1"
+                save_feedback_on_mc_question()
             # if the score is not correct, the questions is added to the practice phase
             elif st.session_state.submitted:
                 st.error("❌ Incorrect. Try again.")
-
+                st.session_state.score = '0/1'
+                save_feedback_on_mc_question()
             #render the nav buttons
             render_navigation_buttons()
 
@@ -1028,6 +1034,10 @@ def render_page_button(page_title, module, phase):
     """
     if st.button(page_title, key=f'{module} {phase}', use_container_width=True):
         st.session_state.selected_module = module
+
+        # If the state is changed, then the feedback will be reset
+        if st.session_state.selected_phase != phase:
+            reset_feedback()
         st.session_state.selected_phase = phase
         st.session_state.info_page = False
         track_visits()
@@ -1337,7 +1347,6 @@ if __name__ == "__main__":
 
     # Give the name of the test user when giving one. !! If not using a test username, set to None
     test_username = False
-    
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
     llm_model = models[2]
