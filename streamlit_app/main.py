@@ -1131,7 +1131,7 @@ def create_empty_progress_dict(module):
     
     return empty_dict
 
-@st.cache_data(show_spinner=False)
+# @st.cache_data(show_spinner=False)
 def determine_if_to_initialise_database():
     """
     Determine if currently testing, if the progress is saved, or if all modules are included
@@ -1304,10 +1304,10 @@ def determine_username_from_nonce():
     st.session_state.nonce = fetch_nonce_from_query()
     db_dal.fetch_username_with_nonce()
 
-
 def remove_nonce_from_memories():
     """Removes the nonce from the query parameters and session state."""
     st.query_params.pop('nonce', None)
+    db_dal.invalidate_nonce()
     st.session_state.nonce = None
 
 
@@ -1320,7 +1320,7 @@ if __name__ == "__main__":
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # Turn on 'testing' to use localhost instead of learnloop.datanose.nl for authentication
-    surf_test_env = False
+    surf_test_env = True
 
     # Reset db for current user every time the webapp is loaded
     reset_user_doc = False
@@ -1352,17 +1352,20 @@ if __name__ == "__main__":
 
     openai_client = connect_to_openai()
 
-    if (nonce := fetch_nonce_from_query()) is not None:
+    # Directly after logging in via SURF, the nonce is fetched from the query parameters
+    if fetch_nonce_from_query() is not None:
+        # The username is fetched from the database with this nonce
         determine_username_from_nonce()
+        # The nonce is removed from the query params, the session state and the database
         remove_nonce_from_memories()
 
-    # Only render login page if main doesn't know the user
+    # Login page reners if only if the user is not logged in
     if no_login_page == False \
         and fetch_nonce_from_query() is None \
         and st.session_state.username is None:
         render_login_page()
 
-    # Render the actual app
+    # Render the actual app when the username is determined
     else:
         determine_if_to_initialise_database()
 
