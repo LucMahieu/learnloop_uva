@@ -140,7 +140,7 @@
         },
         {
             "type": "theory",
-            "title": "Het axiaal en appendicular skelet",
+            "title": "Het axiaal en appendiculair skelet",
             "text": "Het **skelet** kan worden verdeeld in twee hoofdonderdelen: het **axiale skelet**, waar de schedel, wervelkolom, ribben en borstbeen onder vallen en het **appendiculair skelet**, waar de extremiteiten zoals armen en benen onder vallen.",
             "image": "axiaal_appendicular.png",
             "tag": "2.5.2"
@@ -148,7 +148,7 @@
         {
             "type": "question",
             "question": "Hoe wordt het skelet verdeeld?",
-            "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt). Een teenkootje valt onder het appendiculair skelet (1 punt).",
+            "answer": "Het skelet kan worden verdeeld in het axiale skelet (1 punt) en het appendiculair skelet (1 punt).",
             "tag": "2.5.2",
             "image": null
         },
@@ -182,14 +182,14 @@
             "type": "theory",
             "title": "Appendiculair Skelet",
             "text": "Het appendiculair skelet omvat de botten van de bovenste en onderste extremiteiten.",
-            "image": "appendiculair_skelet.png",
+            "image": null,
             "tag": "5.1.1"
         },
         {
             "type": "theory",
             "title": "Bovenste Extremiteiten",
             "text": "De botten in de bovenste extremiteiten omvatten de schoudergordel, bovenarm, onderarm en hand.",
-            "image": "appendiculair_skelet.png",
+            "image": "appendiculair_skelet_boven.png",
             "tag": "5.1.2"
         },
         {
@@ -203,7 +203,7 @@
             "type": "theory",
             "title": "Onderste Extremiteiten",
             "text": "De botten in de onderste extremiteiten omvatten de bekkengordel, bovenbeen, onderbeen en voet.",
-            "image": "appendiculair_skelet.png",
+            "image": "appendiculair_skelet_onderste.png",
             "tag": "5.1.3"
         },
         {
@@ -217,7 +217,7 @@
             "type": "theory",
             "title": "Botten van de bovenste extremiteiten",
             "text": "De **schoudergordel** bestaat uit het sleutelbeen (clavicula) en het schouderblad (scapula). De bovenarm bevat het opperarmbeen (humerus). De onderarm bestaat uit het spaakbeen (radius) en de ellepijp (ulna). De hand is opgebouwd uit de handwortelbeentjes (carpalia), middenhandsbeentjes (metacarpalia) en vingerkootjes (phalangen).",
-            "image": "appendiculair_skelet.png",
+            "image": "appendiculair_skelet_boven.png",
             "tag": "5.1.4"
         },
         {
@@ -231,7 +231,7 @@
             "type": "theory",
             "title": "Botten van de onderste extremiteiten",
             "text": "De bekkengordel bestaat uit de bekken (pelvis) en het heiligbeen (sacrum) (dat een deel is van het axiale skelet). Het bovenbeen bevat het dijbeen (femur). Het onderbeen bestaat uit het scheenbeen (tibia) en het kuitbeen (fibula). De voet is opgebouwd uit de voetwortelbeentjes (tarsalia), middenvoetsbeentjes (metatarsalia) en teenkootjes (phalangen).",
-            "image": "appendiculair_skelet.png",
+            "image": "appendiculair_skelet_onderste.png",
             "tag": "5.1.5"
         },
         {
@@ -433,7 +433,7 @@
         {
             "type": "question",
             "question": "Hoe draaien de ledematen tijdens de embryonale ontwikkeling?",
-            "answer": "Tijdens de embryonale ontwikkeling draaien de craniale delen van de bovenste extremiteiten naar lateraal (1 punt) en van de onderste extremiteit naar mediaal (1 punt).",
+            "answer": "Tijdens de embryonale ontwikkeling draaien de bovenste ledematen naar voren (1 punt) en de onderste ledematen naar achteren (1 punt).",
             "tag": "2.6.5",
             "image": null
         },
@@ -575,14 +575,14 @@
         },
         {
             "type": "theory",
-            "title": "Organen van het cardiovasculair systeem",
-            "text": "Het **cardiovasculair systeem** bestaat uit het **hart**, **bloedvaten** en **bloed**. Deze organen werken samen om een continue bloedcirculatie in het lichaam te onderhouden.",
+            "title": "Onderdelen van het cardiovasculair systeem",
+            "text": "Het **cardiovasculair systeem** bestaat uit het **hart**, **bloedvaten** en **bloed**. Deze onderdelen werken samen om een continue bloedcirculatie in het lichaam te onderhouden.",
             "image": "cardiovasculair_systeem.png",
             "tag": "2.1.1"
         },
         {
             "type": "question",
-            "question": "Welke organen maken deel uit van het cardiovasculair systeem?",
+            "question": "Welke delen maken deel uit van het cardiovasculair systeem?",
             "answer": "Het cardiovasculair systeem bestaat uit het hart (1 punt), bloedvaten (1 punt) en bloed (1 punt).",
             "tag": "2.1.1",
             "image": null
