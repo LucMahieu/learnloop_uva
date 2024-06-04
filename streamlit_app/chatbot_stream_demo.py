@@ -13,14 +13,19 @@ load_dotenv()
 #     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 #     )
 
+st.set_page_config(page_title="Beeckestijn", page_icon="🔵", layout='centered', initial_sidebar_state='auto')
+
+with st.sidebar:
+    st.title('Fases')
+    for phase in ["1\. Probleemstelling bepalen", "2\. College kijken", "3\. Kennis toepassen", "4\. Doel stellen", "5\. Implementeren"]:
+        st.button(phase, use_container_width=True, )
+
 def connect_to_openai():
     return OpenAI(
         api_key=os.getenv("OPENAI_API_KEY_2")
     )
 
 client = connect_to_openai()
-
-st.title("Probleemstelling bepalen")
 
 # if "openai_model" not in st.session_state:
 #     st.session_state["openai_model"] = "learnloop"
@@ -31,18 +36,21 @@ if "openai_model" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+st.title("Probleemstelling bepalen")
+
 for message in st.session_state.messages:
     with st.chat_message(message["role"], avatar='🔵' if message["role"] == "assistant" else '🔘'):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("Jouw antwoord"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user", avatar='🔘'):
         st.markdown(f"{prompt}")
 
 
     with st.chat_message("assistant", avatar='🔵'):
-        role_prompt = open("probleemstelling_prompt.txt").read()
+        # role_prompt = open("probleemstelling_prompt.txt").read()
+        role_prompt = "Help de persoon met hun probleem."
         stream = client.chat.completions.create(
             model=st.session_state.openai_model,
             messages=[
@@ -54,5 +62,6 @@ if prompt := st.chat_input("What is up?"):
         )
         response = st.write_stream(stream)
     st.session_state.messages.append({"role": "assistant", "content": response})
+    st.rerun()
 
 
