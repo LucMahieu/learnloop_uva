@@ -9,19 +9,27 @@ load_dotenv()
 st.write(f"OPENAI_API_KEY: {os.getenv('OPENAI_API_KEY')}")
 st.write(f"AZURE_OPENAI_ENDPOINT: {os.getenv('AZURE_OPENAI_ENDPOINT')}")
 
+# def connect_to_openai():
+#     return AzureOpenAI(
+#     api_key=os.getenv("OPENAI_API_KEY"),  
+#     api_version="2024-03-01-preview",
+#     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+#     )
+
 def connect_to_openai():
-    return AzureOpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),  
-    api_version="2024-03-01-preview",
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+    return OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY_2")
     )
 
 client = connect_to_openai()
 
 st.title("ChatGPT-like clone")
 
+# if "openai_model" not in st.session_state:
+#     st.session_state["openai_model"] = "learnloop"
+
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "learnloop"
+    st.session_state["openai_model"] = "gpt-4o"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
