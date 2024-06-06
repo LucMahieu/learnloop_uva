@@ -6,13 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# def connect_to_openai():
-#     return AzureOpenAI(
-#     api_key=os.getenv("OPENAI_API_KEY"),  
-#     api_version="2024-03-01-preview",
-#     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
-#     )
-
 st.set_page_config(page_title="Beeckestijn", page_icon="🔵", layout='centered', initial_sidebar_state='auto')
 
 with st.sidebar:
@@ -27,9 +20,6 @@ def connect_to_openai():
 
 client = connect_to_openai()
 
-# if "openai_model" not in st.session_state:
-#     st.session_state["openai_model"] = "learnloop"
-
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-4o"
 
@@ -37,10 +27,18 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 st.title("Probleemstelling bepalen")
+bedrijfsnaam = 'LearnLoop'
+cursus = 'AI en data in business'
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"], avatar='🔵' if message["role"] == "assistant" else '🔘'):
         st.markdown(message["content"])
+
+if st.session_state.messages == []:
+    intro_text = f"Laten we samen de probleemstelling bepalen. Wat is het probleem waar je tegenaan loopt met betrekking tot {cursus} bij {bedrijfsnaam}?"
+    st.session_state.messages.append({"role": "assistant", "content": intro_text})
+    with st.chat_message("assistant", avatar='🔵'):
+        st.markdown(intro_text)
 
 if prompt := st.chat_input("Jouw antwoord"):
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -49,8 +47,7 @@ if prompt := st.chat_input("Jouw antwoord"):
 
 
     with st.chat_message("assistant", avatar='🔵'):
-        # role_prompt = open("probleemstelling_prompt.txt").read()
-        role_prompt = "Help de persoon met hun probleem."
+        role_prompt = open("probleemstelling_prompt.txt").read() + f"\nBedrijf van persoon: {bedrijfsnaam}" + f"\nCursus van persoon: {cursus}"
         stream = client.chat.completions.create(
             model=st.session_state.openai_model,
             messages=[
@@ -62,6 +59,3 @@ if prompt := st.chat_input("Jouw antwoord"):
         )
         response = st.write_stream(stream)
     st.session_state.messages.append({"role": "assistant", "content": response})
-    st.rerun()
-
-
