@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: learnloop-ui
-          image: "{{ .Values.image }}/streamlit_app:{{ .Values.tag }}"
+          image: "{{ .Values.image }}/student_app:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
             - containerPort: 80
