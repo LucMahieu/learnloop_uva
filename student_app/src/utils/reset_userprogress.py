@@ -2,15 +2,11 @@ import os
 from dotenv import load_dotenv
 from pymongo import MongoClient
 import certifi
+import db_config
 
-
-load_dotenv()
-
-MONGO_URI = os.getenv('MONGO_DB')
-db_client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+db = db_config.connect_db(use_mongodb=True)
 
 # Access the specific database and collection
-db = db_client.LearnLoop
 users_collection = db.users
 
 # Find the user document

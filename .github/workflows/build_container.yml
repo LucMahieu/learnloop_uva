@@ -39,20 +39,29 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Flask Docker image
+      - name: Build and push Auth Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./flask_app
-          file: ./flask_app/Dockerfile
+          context: .
+          file: ./auth_app/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/flask_app:main
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/auth_app:main
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Build and push Streamlit Docker image
+      - name: Build and push Student Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./student_app
+          context: .
           file: ./student_app/Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/student_app:main
+          labels: ${{ steps.meta.outputs.labels }}
+          
+      - name: Build and push Teacher Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./teacher_app/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/teacher_app:main
           labels: ${{ steps.meta.outputs.labels }}

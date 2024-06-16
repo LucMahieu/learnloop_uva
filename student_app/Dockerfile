@@ -1,7 +1,8 @@
-FROM python:3.8-slim
+FROM python:3.12-slim
 
-WORKDIR /teacher_app
- 
+WORKDIR /student_app
+
+# Copy the requirements file first
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
@@ -13,4 +14,4 @@ ENV PYTHONUNBUFFERED=1
 
 EXPOSE 8501
 
-CMD ["streamlit", "run", "main.py"]
+CMD ["streamlit", "run", "src/main.py"]

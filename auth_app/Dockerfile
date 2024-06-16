@@ -1,9 +1,9 @@
 # Base image
-FROM python:3.8-slim
+FROM python:3.12-slim
 
-WORKDIR /app
+WORKDIR /auth_app
 
-# Copy and cache dependencies
+# Copy the requirements file first
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt

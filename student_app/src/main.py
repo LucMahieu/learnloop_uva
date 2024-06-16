@@ -8,9 +8,9 @@ from openai import AzureOpenAI
 from openai import OpenAI
 from pymongo import MongoClient
 import base64
-from overview_page import OverviewPage
-import db_config
-from data_access_layer import DatabaseAccess, ContentAccess
+from _pages.overview_page import OverviewPage
+import utils.db_config as db_config
+from data.data_access_layer import DatabaseAccess, ContentAccess
 from datetime import datetime
 
 # Must be called first
@@ -57,7 +57,7 @@ def upload_progress():
         data[f"{path}.ordered_segment_sequence"] = st.session_state.ordered_segment_sequence
     
     # The data dict contains the paths and data
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set": data}
     )
@@ -330,7 +330,7 @@ def fetch_image_path():
         if image_path is None:
             return None
         else:
-            return f"./content/images/{image_path}"
+            return f"src/data/content/images/{image_path}"
 
 
 def render_info():
@@ -369,13 +369,13 @@ def render_question():
 
 def fetch_ordered_segment_sequence():
     """Fetches the practice segments from the database."""
-    user_doc = db.users_2.find_one({"username": st.session_state.username})
+    user_doc = db.users.find_one({"username": st.session_state.username})
     st.session_state.ordered_segment_sequence = user_doc["progress"][st.session_state.selected_module]["practice"]["ordered_segment_sequence"]
 
 
 def update_ordered_segment_sequence(ordered_segment_sequence):
     """Updates the practice segments in the database."""
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.practice.ordered_segment_sequence": ordered_segment_sequence}}
     )
@@ -473,7 +473,7 @@ def reset_feedback():
         }
     }
 
-    db.users_2.update_one(user_query, set_empty_array)
+    db.users.update_one(user_query, set_empty_array)
     
 # render the page at the end of the learning phase (after the last question)
 def render_final_page():
@@ -530,7 +530,7 @@ def get_feedback_questions_from_db():
         "_id": 0  
     }
     
-    user_document = db.users_2.find_one(query, projection)
+    user_document = db.users.find_one(query, projection)
 
     if user_document is None:
         return []
@@ -567,7 +567,7 @@ def render_oefententamen_final_page():
 
 def reset_progress():
     """Resets the progress of the user in the current phase to the database."""
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set": {f"progress.{st.session_state.selected_module}.{st.session_state.selected_phase}.segment_index": -1}}
     )
@@ -754,7 +754,7 @@ def save_feedback_on_open_question():
     }
 
     # Execute the pull operation
-    db.users_2.update_one(user_query, pull_query)
+    db.users.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -773,7 +773,7 @@ def save_feedback_on_open_question():
     }
 
     # Execute the push operation
-    db.users_2.update_one(user_query, push_query)
+    db.users.update_one(user_query, push_query)
     
 def save_feedback_on_mc_question():
     """
@@ -793,7 +793,7 @@ def save_feedback_on_mc_question():
     }
 
     # Execute the pull operation
-    db.users_2.update_one(user_query, pull_query)
+    db.users.update_one(user_query, pull_query)
 
     # Prepare the new question data to be pushed
     new_question_data = {
@@ -811,7 +811,7 @@ def save_feedback_on_mc_question():
     }
 
     # Execute the push operation
-    db.users_2.update_one(user_query, push_query)
+    db.users.update_one(user_query, push_query)
 
     
 def reset_submitted_if_page_changed():
@@ -977,7 +977,7 @@ def render_selected_page():
 
 
 def render_logo():
-    st.image('./content/images/logo.png', width=100)
+    st.image('src/data/content/images/logo.png', width=100)
 
 
 def upload_feedback():
@@ -1022,7 +1022,7 @@ def set_info_page_true():
 
 def track_visits():
     """Tracks the visits to the modules."""
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$inc": {f"progress.{st.session_state.selected_module}.visits.{st.session_state.selected_phase}": 1}}
     )
@@ -1090,7 +1090,7 @@ def initialise_database():
     Initialise the progress object with the modules and phases in the database.
     """
     for module in st.session_state.modules:
-        db.users_2.update_one(
+        db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {
                 "warned": False,
@@ -1117,7 +1117,7 @@ def initialise_module_in_database(module):
     """
     Adds a new module to the database without resetting the rest of the database.
     """
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set":
          {f"progress.{module}": {
@@ -1151,7 +1151,7 @@ def initialise_practice_in_database(module):
     """
     Adds a new module to the database without resetting the rest of the database.
     """
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set":
          {f"progress.{module}.practice": {"segment_index": -1,
@@ -1164,7 +1164,7 @@ def initialise_learning_in_database(module):
     """
     Adds a new module to the database without resetting the rest of the database.
     """
-    db.users_2.update_one(
+    db.users.update_one(
         {"username": st.session_state.username},
         {"$set":
          {f"progress.{module}.learning": {"segment_index": -1}}
@@ -1180,7 +1180,7 @@ def determine_if_to_initialise_database():
     """
     user_doc = db_dal.find_user_doc()
     if not user_doc:
-        db.users_2.insert_one({"username": st.session_state.username})
+        db.users.insert_one({"username": st.session_state.username})
 
     user_doc = db_dal.find_user_doc()
     if reset_user_doc:
@@ -1230,7 +1230,7 @@ def render_login_page():
     columns = st.columns([1, 0.9, 1])
     with columns[1]:
         welcome_title = "Neuroanatomie- en fysiologie - deel 2"
-        logo_base64 = convert_image_base64("./content/images/logo.png")
+        logo_base64 = convert_image_base64("src/data/content/images/logo.png")
 
         if surf_test_env:
             href = "http://localhost:3000/"

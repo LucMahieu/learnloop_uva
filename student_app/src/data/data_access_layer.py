@@ -1,6 +1,6 @@
 import json
 import streamlit as st
-import db_config as db_config
+import utils.db_config as db_config
 import os
 
 class ContentAccess:
@@ -16,7 +16,7 @@ class ContentAccess:
         based on the JSON module files.
         """
         # Read the modules from the modules directory
-        modules = os.listdir("./content/modules")
+        modules = os.listdir("src/data/content/modules")
 
         # Remove the json extension and replace the underscores with spaces
         modules = [module.replace(".json", "").replace("_", " ") for module in modules]
@@ -51,7 +51,7 @@ class ContentAccess:
         if phase == 'overview':
             phase = 'learning'
 
-        user_doc = self.db.users_2.find_one({"username": st.session_state.username})
+        user_doc = self.db.users.find_one({"username": st.session_state.username})
         return user_doc["progress"][st.session_state.selected_module][phase]["segment_index"]
 
     def get_segment_question(self, segment_index):
@@ -70,7 +70,7 @@ class ContentAccess:
         return self.segments_list[segment_index].get('image', None)
         
     def get_image_path(self, image_file_name):
-        return f"./content/images/{image_file_name}"
+        return f"src/data/content/images/{image_file_name}"
 
     def get_segment_mc_answers(self, segment_index):
         return self.segments_list[segment_index].get('answers', None)
@@ -86,7 +86,7 @@ class ContentAccess:
         return module.replace(" ", "_") + ".json"
 
     def generate_json_path(self, json_name):
-        return f"./content/modules/{json_name}"
+        return f"src/data/content/modules/{json_name}"
 
     def load_json_content(self, path): #TODO: This might result in a lot of memory usage, which is costly and slow
         """Load all the contents from the current JSON into memory."""
@@ -102,7 +102,7 @@ class ContentAccess:
         one that stores how the segments are divided into topics. This function
         gets the last (topics) one.
         """
-        topics_json_path = f"./content/topics/{module}_topics.json"
+        topics_json_path = f"src/data/content/topics/{module}_topics.json"
         self.topics_list = self.load_json_content(topics_json_path)['topics']   
         return self.topics_list
 
@@ -112,7 +112,7 @@ class ContentAccess:
         one that stores how the segments are divided into topics. This function
         gets the first (content segments) one.
         """
-        content_json_path = f"./content/modules/{module}.json"
+        content_json_path = f"src/data/content/modules/{module}.json"
         self.segments_list = self.load_json_content(content_json_path)['segments']
         return self.segments_list
 
@@ -120,18 +120,18 @@ class ContentAccess:
 class DatabaseAccess:
     def __init__(self):
         self.db = db_config.connect_db(st.session_state.use_mongodb)
-        self.users_collection_name = 'users_2'
+        self.users_collection_name = 'users'
     
     def update_if_warned(self, boolean):
         """Callback function for a button that turns of the LLM warning message."""
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {"warned": boolean}}
         )
 
     def fetch_if_warned(self):
         """Fetches from database if the user has been warned about LLM."""
-        user_doc = self.db.users_2.find_one({"username": st.session_state.username})
+        user_doc = self.db.users.find_one({"username": st.session_state.username})
         if user_doc is None:
             return None
         return user_doc.get("warned", None)
@@ -143,13 +143,13 @@ class DatabaseAccess:
         return user_doc.get('last_module', None)
 
     def update_last_module(self):
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {"last_module": st.session_state.selected_module}}
         )
 
     def fetch_username_with_nonce(self):
-        user_doc = self.db.users_2.find_one({'nonce': st.session_state.nonce})
+        user_doc = self.db.users.find_one({'nonce': st.session_state.nonce})
         if user_doc is not None:
             st.session_state.username = user_doc['username']
         else:
@@ -157,7 +157,7 @@ class DatabaseAccess:
             print("No user found with the nonce.")
 
     def invalidate_nonce(self):
-        self.db.users_2.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
+        self.db.users.update_one({'username': st.session_state.username}, {'$set': {'nonce': None}})
         st.session_state.nonce = None
         
     def fetch_all_documents(self):
@@ -165,7 +165,7 @@ class DatabaseAccess:
         return list(collection.find({}))
 
     def find_user_doc(self):
-        return self.db.users_2.find_one({"username": st.session_state.username})
+        return self.db.users.find_one({"username": st.session_state.username})
 
     def fetch_progress_counter(self, module, user_doc):
         module = module.replace('_', ' ')
@@ -173,7 +173,7 @@ class DatabaseAccess:
         return progress_counter
     
     def update_progress_counter_for_segment(self, module, new_progress_count):
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {f"progress.{module}.learning.progress_counter.{str(st.session_state.segment_index)}": new_progress_count}}
         )
@@ -183,7 +183,7 @@ class DatabaseAccess:
         Add the json to the database that contains the count of how
         many times the user answered a certain question.
         """
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username}, 
             {"$set": {f"progress.{module}.learning.progress_counter": empty_dict}}
         )  

@@ -17,7 +17,7 @@ def connect_db(use_mongodb):
         MONGO_URI = os.getenv('MONGO_DB')
         db_client = MongoClient(MONGO_URI, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
-    db = db_client.LearnLoop
+    db = db_client.UvA_NAF
 
     # Ping database to check if it's connected
     try:

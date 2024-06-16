@@ -3,8 +3,8 @@ from PIL import Image
 import base64
 from io import BytesIO
 import json
-import db_config as db_config
-from data_access_layer import DatabaseAccess, ContentAccess
+import utils.db_config as db_config
+from data.data_access_layer import DatabaseAccess, ContentAccess
 
 class OverviewPage:
     def __init__(self, module_title) -> None:
@@ -56,7 +56,7 @@ class OverviewPage:
         segment_index = self.cont_dal.get_index_first_segment_in_topic(topic_index)
 
         # Change the segment index to the index corresponding to the selected topic
-        self.db.users_2.update_one(
+        self.db.users.update_one(
             {"username": st.session_state.username},
             {"$set": {f"progress.{st.session_state.selected_module}.learning.segment_index": segment_index}}
         )

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from collections import defaultdict
 from matplotlib.ticker import MaxNLocator
-from data_access_layer import DatabaseAccess, ContentAccess
+from data.data_access_layer import DatabaseAccess, ContentAccess
 import streamlit as st
 
 
