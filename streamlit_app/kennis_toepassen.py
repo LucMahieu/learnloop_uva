@@ -9,8 +9,8 @@ class KennisToepassen:
         load_dotenv()
         st.set_page_config(page_title="Beeckestijn", page_icon="🔵", layout='centered', initial_sidebar_state='auto')
         self.client = self.connect_to_openai()
-        self.default_vraag = "Wat zijn de belangrijkste stadia in het signaaltransductieproces en wat gebeurt er in elk van deze stadia?"
-        self.default_rubric = "De belangrijkste stadia van het signaaltransductieproces zijn perceptie (1 punt), waarbij het signaal wordt waargenomen (1 punt), transductie (1 punt), waarbij het signaal wordt doorgegeven (1 punt) en respons (1 punt), de actie of reactie van de cel op het signaal (1 punt)."
+        self.default_vraag = "Leg uit welk model je zou kiezen (bijv. COBIT of ITIL) en hoe dit model zal bijdragen aan betere controle en efficiëntie binnen het bedrijf."
+        self.default_rubric = "Ik zou het [gekozen IT Governance model, bijvoorbeeld COBIT of ITIL] kiezen omdat het duidelijke richtlijnen en principes biedt voor IT Governance (1 punt). De implementatiestappen omvatten het definiëren van governance-doelen, het in kaart brengen van huidige processen, en het toewijzen van verantwoordelijkheden (1 punt). Rollen zoals [specifieke rollen, bijvoorbeeld IT Governance Board en Risk Manager] zorgen voor een duidelijke verdeling van verantwoordelijkheden (1 punt). De effectiviteit wordt gemeten door KPI’s zoals [specifieke KPI’s, bijvoorbeeld IT-prestatiemetingen, compliance rates] (1 punt)."
         self.setup_sidebar()
         self.setup_session_state()
         self.render_app()
@@ -50,11 +50,13 @@ class KennisToepassen:
         self.start_conversation()
 
     def render_app(self):
-        self.render_title()
-        self.user_input()
-        st.success(f"\n\nDe huidige vraag is: **{st.session_state.vraag}** \n\n De rubric voor de vraag is: **{st.session_state.rubric}**")
+        # self.render_title()
+        # self.user_input()
+        st.title("IT governance modellen")
+        st.write("""**Context**\n\n Stel je voor dat je werkt als IT-manager bij een middelgroot bedrijf dat recentelijk een significante groei heeft doorgemaakt. Het management heeft geconstateerd dat de huidige IT-processen en -structuren niet langer effectief zijn en vraagt jou om een IT Governance model te implementeren dat kan helpen bij het verbeteren van de efficiëntie en controle over IT-activiteiten.""")
+        # st.success(f"\n\nDe huidige vraag is: **{st.session_state.vraag}** \n\n De rubric voor de vraag is: **{st.session_state.rubric}**")
         
-        st.button("Reset chat", on_click=self.reset_chat, use_container_width=True)
+        # st.button("Reset chat", on_click=self.reset_chat, use_container_width=True)
 
         if not st.session_state.messages:
             self.start_conversation()

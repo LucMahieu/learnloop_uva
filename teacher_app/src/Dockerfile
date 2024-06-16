@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-WORKDIR /streamlit_app
+WORKDIR /teacher_app
  
 COPY requirements.txt .
 

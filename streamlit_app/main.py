@@ -1372,22 +1372,22 @@ if __name__ == "__main__":
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = False
+    st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
     # Give the name of the test user when giving one. !! If not using a test username, set to None
-    test_username = False
+    test_username = 'test_user_6'
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
-    llm_model = models[2]
+    llm_model = models[0]
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = False
+    st.session_state.skip_authentication = True
     
-    no_login_page = False
+    no_login_page = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 

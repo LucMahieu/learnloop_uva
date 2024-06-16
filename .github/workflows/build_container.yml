@@ -51,8 +51,8 @@ jobs:
       - name: Build and push Streamlit Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./streamlit_app
-          file: ./streamlit_app/Dockerfile
+          context: ./student_app
+          file: ./student_app/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/streamlit_app:main
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/student_app:main
           labels: ${{ steps.meta.outputs.labels }}
