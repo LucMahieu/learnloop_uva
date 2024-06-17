@@ -1,5 +1,3 @@
-Here's the modified README with the updated run commands for all apps to use `streamlit run .\src\main.py`:
-
 # LearnLoop README
 
 This repository contains three distinct applications: authentication app, student app, and teacher app. Each app has its own Dockerfile and setup instructions. Follow the instructions below to set up and run each app.
