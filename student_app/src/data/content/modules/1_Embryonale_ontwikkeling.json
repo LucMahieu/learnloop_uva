@@ -6,7 +6,9 @@
             "title": "Inleiding tot systematische anatomie",
             "text": "Systematische anatomie is de discipline die zich richt op de indeling van het lichaam in systemen zoals het skelet, spieren, zenuwen, bloedvaten en organen.",
             "image": null,
-            "tag": "2.1.1"
+            "tag": "2.1.1",
+            "source_book": "Boek 1",
+            "source_slide": "Lecture 5"
         },
         {
             "type": "theory",
