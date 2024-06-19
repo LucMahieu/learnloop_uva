@@ -1,14 +1,14 @@
 import matplotlib.pyplot as plt
 from collections import defaultdict
 from matplotlib.ticker import MaxNLocator
-from data.data_access_layer import DatabaseAccess, ContentAccess
+from data_access_layer import DatabaseAccess, ContentAccess
 import streamlit as st
 
 
 class PlotUsage:
     def __init__(self) -> None:
         st.session_state.modules = []
-        st.session_state.use_mongodb = False
+        st.session_state.use_mongodb = True
         self.cont_dal = ContentAccess()
         self.db_dal = DatabaseAccess()
         

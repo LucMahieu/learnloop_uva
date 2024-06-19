@@ -12,6 +12,7 @@ from _pages.overview_page import OverviewPage
 import utils.db_config as db_config
 from data.data_access_layer import DatabaseAccess, ContentAccess
 from datetime import datetime
+from utils.kennis_toepassen import KennisToepassen
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -641,10 +642,16 @@ def render_learning_page():
             add_date_to_progress_counter()
             render_navigation_buttons()
 
+        if st.session_state.segment_content['type'] == 'question':
+            if st.session_state.segment_content.get('type_specific', None) == 'adaptive':
+                adaptive_chat = KennisToepassen(st.session_state.segment_content['question'], st.session_state.segment_content['answer'])
+
+                render_check_and_nav_buttons()
+
 
         # Open question
         if (st.session_state.segment_content['type'] == 'question' and 
-        'answer' in st.session_state.segment_content):
+        'answer' in st.session_state.segment_content and not st.session_state.segment_content.get('type_specific', None) == 'adaptive'):
                 
             if st.session_state.submitted:
 
@@ -693,6 +700,7 @@ def render_learning_page():
         # Multiple choice question
         if (st.session_state.segment_content['type'] == 'question' and
              'answers' in st.session_state.segment_content):
+            
             render_question()
 
             correct_answer = st.session_state.segment_content['answers']['correct_answer']
@@ -1371,22 +1379,22 @@ if __name__ == "__main__":
     reset_user_doc = False
 
     # Your current IP has to be accepted by Gerrit to use CosmosDB (Gerrit controls this)
-    st.session_state.use_mongodb = False
+    st.session_state.use_mongodb = True
 
     # Use dummy LLM feedback as response to save openai costs and time during testing
     use_dummy_openai_calls = False
 
     # Give the name of the test user when giving one. !! If not using a test username, set to None
-    test_username = False
+    test_username = 'test_user_6'
 
     # Use the Azure Openai API or the Openai API (GPT-4o) for the feedback
     models = ['gpt-4o', 'azure_gpt-4', 'azure_gpt-4_Turbo']
     llm_model = models[0]
 
     # Bypass authentication when testing so flask app doesnt have to run
-    st.session_state.skip_authentication = False
+    st.session_state.skip_authentication = True
     
-    no_login_page = False
+    no_login_page = True
     # ---------------------------------------------------------
 
     # Create a mid column with margins in which everything one a 
