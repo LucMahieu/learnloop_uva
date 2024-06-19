@@ -8,7 +8,7 @@ import streamlit as st
 class PlotUsage:
     def __init__(self) -> None:
         st.session_state.modules = []
-        st.session_state.use_mongodb = False
+        st.session_state.use_mongodb = True
         self.cont_dal = ContentAccess()
         self.db_dal = DatabaseAccess()
         
@@ -68,33 +68,39 @@ class PlotUsage:
         total = 0
         for module in st.session_state.modules:
             self.cont_dal.load_page_content_of_module_in_session_state(module)
-            total += len(st.session_state.page_content['segments'])
+            total += len([segment for segment in st.session_state.page_content['segments'] if segment['type'] == 'question'])
 
         return total
 
     
     def collect_all_progress_data(self):
-        all_progress_data = []
+        all_progress_data_per_user = {}
         documents = self.db_dal.fetch_all_documents()
         for user_doc in documents:
+            progress_data = []
             for module in st.session_state.modules:
                 progress_counter = self.db_dal.fetch_progress_counter(module, user_doc)
                 if progress_counter is not None:
-                    all_progress_data.append(progress_counter)
-        return all_progress_data
+                    progress_data.append(progress_counter)
+            
+            all_progress_data_per_user[user_doc["username"]] = progress_data
+        return all_progress_data_per_user
     
     def render_plot(self):
         self.cont_dal.determine_modules() # To know from which modules to fetch the data
         numb_of_questions = self.count_all_questions()
-        all_progress_data = self.collect_all_progress_data()
+        all_progress_data_per_user = self.collect_all_progress_data()
 
         all_percentages = []
         
-        for individual_data in all_progress_data:
-            individual_question_dates = self.extract_question_dates(individual_data, self.start_date, self.end_date)
-            if individual_question_dates != []:
-                individual_percentage = self.calculate_percentage(individual_question_dates, numb_of_questions)
-                all_percentages.append(individual_percentage)
+        for user_data_pcs_list in all_progress_data_per_user.values():
+            question_dates = []
+            for pcs in user_data_pcs_list:
+                module_question_dates = self.extract_question_dates(pcs, self.start_date, self.end_date)
+                question_dates.extend(module_question_dates)
+            
+            individual_percentage = self.calculate_percentage(question_dates, numb_of_questions)
+            all_percentages.append(individual_percentage)
 
         clusters = self.cluster_percentages(all_percentages)
         self.plot_clusters(clusters)
