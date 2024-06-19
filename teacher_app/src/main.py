@@ -1,5 +1,3 @@
-
-
 from utils.utils import *
 
 
@@ -8,6 +6,7 @@ class QualityCheck:
         self.module = module
         self.lecture_number = module.split('_')[0]
         self.lecture_name = module.split("_", 1)[1].replace("_"," ")
+        self.utils = Utils()
     
     def run(self):
         st.title(f"Kwaliteitscheck college {self.lecture_number}:")
@@ -43,7 +42,7 @@ class QualityCheck:
                     if segment_id+"-answers-correct_answer" not in st.session_state:
                         st.session_state[segment_id+"-answers-correct_answer" ] = segment["answers"]["correct_answer"]
                     if segment_id+"-answers-wrong_answers" not in st.session_state:
-                        wrong_answers_enumeration = list_to_enumeration( segment["answers"]["wrong_answers"])
+                        wrong_answers_enumeration = self.utils.list_to_enumeration( segment["answers"]["wrong_answers"])
                         st.session_state[segment_id+"-answers-wrong_answers" ] = wrong_answers_enumeration
                     if "new-"+segment_id+"-answers-correct_answer" not in st.session_state:
                         st.session_state[ "new-"+segment_id+"-answers-correct_answer" ] = ""
@@ -67,18 +66,18 @@ class QualityCheck:
 
                 if segment_type == "theory":
                     st.markdown(f"**Theorie: {segment["title"]}**")
-                    st.text_area( "Theorie", height=200, key=segment_id, on_change=save_st_change( "new-"+segment_id, segment_id), label_visibility="collapsed")
+                    st.text_area( "Theorie", height=200, key=segment_id, on_change=self.utils.save_st_change( "new-"+segment_id, segment_id), label_visibility="collapsed")
                 elif segment_type == "question":
                     st.markdown("**Vraag:**")
-                    st.text_area( "Vraag", height=200,key=segment_id,   on_change=save_st_change( "new-"+segment_id, segment_id), label_visibility="collapsed")
+                    st.text_area( "Vraag", height=200,key=segment_id,   on_change=self.utils.save_st_change( "new-"+segment_id, segment_id), label_visibility="collapsed")
                     if "answers" in segment:
                         st.markdown("*Correct antwoord:*")
-                        st.text_area(  "Correct antwoord:"  , height=200, key=segment_id+"-answers-correct_answer", on_change=save_st_change("new-"+segment_id+"-answers-correct_answer", segment_id+"-answers-correct_answer"), label_visibility="collapsed")
+                        st.text_area(  "Correct antwoord:"  , height=200, key=segment_id+"-answers-correct_answer", on_change=self.utils.save_st_change("new-"+segment_id+"-answers-correct_answer", segment_id+"-answers-correct_answer"), label_visibility="collapsed")
                         st.markdown("*Onjuiste antwoorden:*")
-                        st.text_area( "Onjuiste antwoorden:", height=200, key=segment_id+"-answers-wrong_answers", on_change=save_st_change("new-"+segment_id+"-answers-wrong_answers", segment_id+"-answers-wrong_answers"), label_visibility="collapsed" )
+                        st.text_area( "Onjuiste antwoorden:", height=200, key=segment_id+"-answers-wrong_answers", on_change=self.utils.save_st_change("new-"+segment_id+"-answers-wrong_answers", segment_id+"-answers-wrong_answers"), label_visibility="collapsed" )
                     elif "answer" in segment:
                         st.markdown("*Antwoord:*")
-                        st.text_area( "Antwoord:", height=200, key= segment_id+"-answer", on_change=save_st_change("new-"+segment_id+"-answer", segment_id+"-answer"), label_visibility="collapsed")
+                        st.text_area( "Antwoord:", height=200, key= segment_id+"-answer", on_change=self.utils.save_st_change("new-"+segment_id+"-answer", segment_id+"-answer"), label_visibility="collapsed")
             
             if topic_segment_id == len(topics[topic_id]["segment_indexes"])-1:
                 topic_id += 1
@@ -87,7 +86,7 @@ class QualityCheck:
                 topic_segment_id += 1
 
         if st.button("Opslaan"):
-            upload_json( self.module)
+            self.utils.upload_json(self.module)
 
 
 if __name__=="__main__":
