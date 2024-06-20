@@ -748,7 +748,8 @@ def save_feedback_on_open_question():
     pull_query = {
         "$pull": {
             f"progress.{st.session_state.selected_module}.feedback.questions": {
-                "question": st.session_state.segment_content['question']
+                "segment_index": st.session_state.segment_index
+                # "question": st.session_state.segment_content['question']
             }
         }
     }
@@ -758,7 +759,7 @@ def save_feedback_on_open_question():
 
     # Prepare the new question data to be pushed
     new_question_data = {
-        'question': st.session_state.segment_content['question'],
+        # 'question': st.session_state.segment_content['question'],
         'student_answer': st.session_state.student_answer,
         'feedback': st.session_state.feedback,
         'score': st.session_state.score
@@ -797,9 +798,9 @@ def save_feedback_on_mc_question():
 
     # Prepare the new question data to be pushed
     new_question_data = {
-        'question': st.session_state.segment_content['question'],
+        # 'question': st.session_state.segment_content['question'],
         'student_answer': st.session_state.choosen_answer,
-        'correct_answer': st.session_state.segment_content['answers']['correct_answer'],
+        # 'correct_answer': st.session_state.segment_content['answers']['correct_answer'],
         'score': st.session_state.score
     }
 
