@@ -28,6 +28,8 @@ class QualityCheck:
 
         for segment_id, segment in enumerate(segments):
             segment_id=str(segment_id)
+            if 'button_state'+segment_id not in st.session_state:
+                st.session_state['button_state'+segment_id] = 'no'
             segment_type = segment["type"]
             if segment_type == "theory":
                 if segment_id not in st.session_state:
@@ -79,7 +81,15 @@ class QualityCheck:
                     elif "answer" in segment:
                         st.markdown("*Antwoord:*")
                         st.text_area( "Antwoord:", height=200, key= segment_id+"-answer", on_change=save_st_change("new-"+segment_id+"-answer", segment_id+"-answer"), label_visibility="collapsed")
-            
+
+                col1, col2 = st.columns([0.9, 0.1])
+                with col2:
+                    button_icon = "❌" if st.session_state['button_state'+segment_id]=="no" else "➕"
+                    button_help = "Verwijderen" if st.session_state['button_state'+segment_id]=="no" else "Toevoegen"
+                    if st.button(label=button_icon, key='toggle_button'+segment_id, help=button_help):
+                        toggle_button(segment_id)
+                        st.rerun()
+
             if topic_segment_id == len(topics[topic_id]["segment_indexes"])-1:
                 topic_id += 1
                 topic_segment_id = 0
@@ -87,7 +97,9 @@ class QualityCheck:
                 topic_segment_id += 1
 
         if st.button("Opslaan"):
-            upload_json( self.module)
+            segments_list = preprocessed_segments(self.module)
+            upload_modules_json(self.module, segments_list)
+            upload_modules_topics_json(self.module, segments_list)
 
 
 if __name__=="__main__":
