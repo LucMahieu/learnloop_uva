@@ -1356,8 +1356,8 @@ def determine_username_from_nonce():
     """
     Fetches the username from the database using the nonce in the query parameters.
     """
-    st.session_state.nonce = fetch_nonce_from_query()
-    db_dal.fetch_username_with_nonce()
+    st.session_state.nonce = fetch_nonce_from_query() #? Why save nonce in session state? Pass a param?
+    db_dal.fetch_info()
 
 def remove_nonce_from_memories():
     """Removes the nonce from the query parameters and session state."""
