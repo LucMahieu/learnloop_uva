@@ -38,15 +38,10 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push Auth Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./auth_app/Dockerfile
-          push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/auth_app:main
-          labels: ${{ steps.meta.outputs.labels }}
+    
+      - name: List files in the directory
+        run: ls -la
+        working-directory: ./auth_app
 
       - name: Build and push Student Docker image
         uses: docker/build-push-action@v5
@@ -55,6 +50,15 @@ jobs:
           file: ./student_app/Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/student_app:main
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Auth Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./auth_app/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/auth_app:main
           labels: ${{ steps.meta.outputs.labels }}
           
       - name: Build and push Teacher Docker image
