@@ -38,5 +38,6 @@ jobs:
 
       - name: Deploy latest version
         run: |
-          VERSION=$(grep version charts/learnloop/Chart.yaml | cut -d " " -f2)
+          VERSION=$(grep "^version: " charts/learnloop/Chart.yaml | cut -d " " -f2)
+          echo "Extracted version: ${VERSION}"
           curl "https://k8s.datanose.nl/gitops-updater?name=learnloop&secret=${UPDATER_SECRET}&version=${VERSION}"
