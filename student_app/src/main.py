@@ -172,6 +172,9 @@ def render_feedback():
     feedback_html = f"<ul style='padding-left: 0px; list-style-type: none;'>{''.join(feedback_items)}</ul>"
 
     result_html = f"""
+    <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Jouw antwoord:</h1>
+    <p>{st.session_state.student_answer}</p>
+    
     <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
     {feedback_html}
     <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
@@ -531,6 +534,7 @@ def calculate_score():
 
     return total_score, possible_score
 
+#TODO move to db access class
 def get_feedback_questions_from_db():
     query = {"username": st.session_state.username}
 
@@ -555,8 +559,8 @@ def get_feedback_questions_from_db():
 def show_feedback_overview():
     questions = get_feedback_questions_from_db()
     for question in questions:
-        st.subheader(f"{question['question']}")
-        if 'feedback' in question:
+        st.subheader(f"{question['question']}") #TODO get question content not from DB but from ContentAccess
+        if 'feedback' in question: 
             st.session_state.feedback = question['feedback']
             st.session_state.student_answer = question['student_answer']
             st.session_state.score = question['score']
@@ -1045,7 +1049,7 @@ def render_page_button(page_title, module, phase):
         st.session_state.selected_module = module
 
         # If the state is changed, then the feedback will be reset
-        if st.session_state.selected_phase != phase:
+        if st.session_state.selected_phase != phase and phase == "practice":
             reset_feedback()
         st.session_state.selected_phase = phase
         st.session_state.info_page = False
@@ -1444,6 +1448,7 @@ if __name__ == "__main__":
         
         if st.session_state.selected_phase is None:
             determine_selected_phase()
-
+        
+        # st.session_state.selected_phase = "overview"
         render_sidebar()
         render_selected_page()
