@@ -46,7 +46,6 @@ class LectureOverview:
         """
         Sets the selected page and lecture to the one that the student clicked on.
         """
-        print(f"dit is de lecture title in go_to_lecture: {lecture_title}")
         st.session_state.selected_phase = 'topics'
         st.session_state.selected_module = lecture_title
         self.db_dal.update_last_module()

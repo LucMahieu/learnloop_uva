@@ -78,7 +78,7 @@ def evaluate_answer():
         Output:\n"""
 
         # Read the role prompt from a file
-        with open("./direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
+        with open("./src/assets/prompts/direct_feedback_prompt.txt", "r", encoding="utf-8") as f:
             role_prompt = f.read()
 
 
@@ -175,14 +175,11 @@ def render_feedback():
     feedback_html = f"<ul style='padding-left: 0px; list-style-type: none;'>{''.join(feedback_items)}</ul>"
 
     result_html = f"""
-    <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Jouw antwoord:</h1>
-    <p>{st.session_state.student_answer}</p>
-    
     <h1 style='font-size: 20px; margin: 25px 0 10px 10px; padding: 0;'>Feedback:</h1>
     {feedback_html}
     <div style='background-color: {color}; padding: 10px; margin-bottom: 15px; margin-top: 28px; border-radius: 7px; display: flex; align-items: center;'> <!-- Verhoogd naar 50px voor meer ruimte -->
         <h1 style='font-size: 20px; margin: 8px 0 8px 10px; padding: 0;'>Score: {st.session_state.score}</h1>
-        <p style='margin: -30px; padding: 0;'>⚠️ Kan afwijken</p>
+        <p style='margin: -20px; padding: 0;'>⚠️ Kan afwijken</p>
     </div>
     """
     st.markdown(result_html, unsafe_allow_html=True)
@@ -567,6 +564,7 @@ def show_feedback_overview():
             st.session_state.feedback = question['feedback']
             st.session_state.student_answer = question['student_answer']
             st.session_state.score = question['score']
+            render_student_answer()
             render_feedback()
         else:
             render_mc_feedback(question)
@@ -1362,7 +1360,6 @@ def initialise_data_access_layer():
 
 def determine_selected_module():
     st.session_state.selected_module = db_dal.fetch_last_module()
-    print(f'determine_selected_module sesh: {st.session_state.selected_module}')
     if st.session_state.selected_module is None:
         st.session_state.selected_module = st.session_state.modules[0]
 

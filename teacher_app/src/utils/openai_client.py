@@ -40,8 +40,6 @@ def openai_call(client, system_message, user_message, json_response=False):
         {"role": "system", "content": system_message},
         {"role": "user", "content": user_message}
     ]
-    print(f"Started generation with prompt: {system_message[:30]}")
-
     response = None
     if (json_response):
         response = client.chat.completions.create(
@@ -58,7 +56,6 @@ def openai_call(client, system_message, user_message, json_response=False):
             messages=messages
         )
 
-    print(f"Generation succesfull")
     content = response.choices[0].message.content
     if json_response:
         try:

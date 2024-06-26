@@ -1,4 +1,5 @@
 from utils.utils import *
+from utils.openai_client import connect_to_openai
 import time
 import random
 import streamlit as st
@@ -26,7 +27,6 @@ def render_overview_page():
     module_title = ' '.join(st.session_state.selected_module.split(' ')[1:])
     overview_page = QuestionsFeedbackPage(module_title)
     overview_page.render_page()
-
 
 class QualityCheck:
     def __init__(self, module):
