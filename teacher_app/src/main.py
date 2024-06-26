@@ -90,7 +90,7 @@ class QualityCheck:
             with st.container(border=True):
                 if segment["image"]:
                     st.image(f'src/data/images/{segment["image"]}')
-
+                
                 if segment_type == "theory":
                     st.markdown(f"**Theorie: {segment["title"]}**")
                     st.text_area( "Theorie", height=200, key=segment_id, on_change=self.utils.save_st_change( "new-"+segment_id, segment_id), label_visibility="collapsed")

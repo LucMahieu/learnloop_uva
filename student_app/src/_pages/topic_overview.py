@@ -6,12 +6,12 @@ import json
 import utils.db_config as db_config
 from data.data_access_layer import DatabaseAccess, ContentAccess
 
-class OverviewPage:
-    def __init__(self, module_title) -> None:
-        self.db = db_config.connect_db(st.session_state.use_mongodb) # database connection
+class TopicOverview:
+    def __init__(self) -> None:
+        self.db = db_config.connect_db(st.session_state.use_mongodb)
         self.db_dal = DatabaseAccess()
         self.cont_dal = ContentAccess()
-        self.module_title = module_title
+        self.module_title = self.db_dal.fetch_last_module()[1:]
 
         
     def convert_image_base64(self, image_path):
@@ -210,6 +210,7 @@ class OverviewPage:
         and to select the topics they want to learn.
         """
         self.set_styling() # for texts
+        self.db_dal.update_last_phase('topics')
 
         self.render_title()
         # Spacing

@@ -25,14 +25,16 @@ class Utils:
             MONGO_URI = os.getenv('MONGO_DB')
             db_client = MongoClient(MONGO_URI, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
-        _self.db = db_client.Uva_NAF
+        db = db_client.UvA_NAF
 
         # Ping database to check if it's connected
         try:
-            _self.db.command("ping")
+            db.command("ping")
             print("Connected to database")
         except Exception as e:
             print(f"Error: {e}")
+
+        return db
 
 
     def save_st_change(self, key1, key2):
@@ -84,8 +86,8 @@ class Utils:
                         segment["answers"]["wrong_answers"] = self.enumeration_to_list(value)
                 segments_list.append(segment)
         segments_list  = sorted(segments_list, key=self.key_func)
-        data = { "module_name": "NAF_1", 
-                "updated": "yes",
+        data = { "module_name": "NAF_1",
+                "status": "corrected",
                 "segments": original_segments}
         for segment_id, segment in enumerate(data["segments"]):
             if segment["type"]== "theory":
@@ -99,10 +101,10 @@ class Utils:
                     data["segments"][segment_id]["wrong_answers"] = [x for x in segments_list if x["segment_id"] == segment_id and  x.get("answers") is not None and "wrong_answers" in x.get("answers")][0]["answers"]["wrong_answers"]
     
         # Upload the updated json file to database
-        if self.db.content.find_one({"module_name": "1_Embryonale_ontwikkeling"}):
-            self.db.content.update_one({"module_name": "1_Embryonale_ontwikkeling"}, {"$set": data})
+        if self.db.content.find_one({"module_name": "NAF_1"}):
+            self.db.content.update_one({"module_name": "NAF_1"}, {"$set": {"segments": data["segments"]}})
         else:
-            self.db.content.insert_one({"module_name": "1_Embryonale_ontwikkeling"}, {"$set": data})
+            self.db.content.insert_one(data)
 
         with open(f"src/data/modules/{module}_updated.json",'w', encoding='utf-8') as f:
             json.dump( data , f, ensure_ascii=False, indent=4)

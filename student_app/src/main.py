@@ -8,10 +8,13 @@ from openai import AzureOpenAI
 from openai import OpenAI
 from pymongo import MongoClient
 import base64
-from _pages.overview_page import OverviewPage
+from _pages.topic_overview import TopicOverview
 import utils.db_config as db_config
 from data.data_access_layer import DatabaseAccess, ContentAccess
 from datetime import datetime
+from _pages.lecture_overview import LectureOverview
+from _pages.courses_overview import CoursesOverview
+import streamlit_antd_components as sac
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
@@ -620,6 +623,7 @@ def add_date_to_progress_counter():
     """
     module = st.session_state.selected_module.replace('_', ' ')
     user_doc = db_dal.find_user_doc()
+
     segment_progress_count = db_dal.fetch_progress_counter(module, user_doc)[str(st.session_state.segment_index)]
     
     # Initialise or update date format
@@ -966,14 +970,29 @@ def render_practice_page():
             render_navigation_buttons()
 
 
-def render_overview_page():
+def render_topics_page():
     """
     Renders the page that shows all the subjects in a lecture, which gives the 
     student insight into their progress.
     """
-    module_title = ' '.join(st.session_state.selected_module.split(' ')[1:])
-    overview_page = OverviewPage(module_title)
-    overview_page.render_page()
+    topics_page = TopicOverview()
+    topics_page.render_page()
+
+
+def render_lectures_page():
+    """
+    Renders the page that renders the lectures of the course.
+    """
+    lectures_page = LectureOverview()
+    lectures_page.run()
+
+
+def render_courses_page():
+    """
+    Renders the page that shows the courses that the student can choose from.
+    """
+    courses_page = CoursesOverview()
+    courses_page.run()
 
 
 def render_selected_page():
@@ -981,12 +1000,16 @@ def render_selected_page():
     Determines what type of page to display based on which module the user selected.
     """
     cont_dal.load_page_content_of_module_in_session_state(st.session_state.selected_module)
-    
+
     # Determine what type of page to display
     if st.session_state.info_page:
         render_info_page()
-    elif st.session_state.selected_phase == 'overview':
-        render_overview_page()
+    elif st.session_state.selected_phase == 'courses':
+        render_courses_page()
+    elif st.session_state.selected_phase == 'lectures':
+        render_lectures_page()
+    elif st.session_state.selected_phase == 'topics':
+        render_topics_page()
     elif st.session_state.selected_phase == 'learning':
         render_learning_page()
     elif st.session_state.selected_phase == 'practice':
@@ -1005,22 +1028,20 @@ def upload_feedback():
 
 def render_feedback_form():
     """Feedback form in the sidebar."""
-    st.write("\n\n")
-    st.write("\n\n")
-    st.sidebar.subheader("Denk je mee?")  
-    st.sidebar.text_area(
-        label='Wat vind je handig? Wat kan beter? Voer geen persoonlijke of herkenbare gegevens in.',
-        key='feedback_box',
-    )
+    with st.sidebar:
+        st.subheader("Denk je mee?")
+        st.text_area(
+            label='Wat vind je handig? Wat kan beter? Voer geen persoonlijke of herkenbare gegevens in.',
+            key='feedback_box',
+        )
+        st.button("Verstuur", on_click=upload_feedback, use_container_width=True)
 
-    st.sidebar.button("Verstuur", on_click=upload_feedback, use_container_width=True)
-
-    if st.session_state.feedback_submitted:
-        st.sidebar.success("Bedankt voor je feedback!")
-        st.balloons()
-        time.sleep(2)
-        st.session_state.feedback_submitted = False
-        st.rerun()
+        if st.session_state.get('feedback_submitted', False):
+            st.success("Bedankt voor je feedback!")
+            st.balloons()
+            time.sleep(2)
+            st.session_state.feedback_submitted = False
+            st.experimental_rerun()
 
 
 def render_info_page():
@@ -1058,18 +1079,83 @@ def render_page_button(page_title, module, phase):
         st.session_state.selected_phase = phase
         st.session_state.info_page = False
         track_visits()
+
+
+def set_selected_phase(phase):
+    st.session_state.selected_phase = phase
     
 
 def render_sidebar():
     """	
     Function to render the sidebar with the modules and login module.	
     """
+    # st.session_state.courses = cont_dal.fetch_courses()
+    # st.session_state.lectures = cont_dal.fetch_lectures()
+    
+    # flat_list = []
+
+    # def flatten_items(items, parent_label=None):
+    #     """
+    #     Adds the paths of the menu items to a list, so that the selected phase can be determined
+    #     by the index of the selected item.
+    #     """
+    #     for item in items:
+    #         current_label = f"{parent_label}/{item.label}" if parent_label else item.label
+    #         flat_list.append(current_label)
+    #         if item.children:
+    #             flatten_items(item.children, current_label)
+
+    # def flatten_items(menu, path=None):
+    #     if path is None:
+    #         path = []
+    #     flat_list = []
+    #     for item in menu:
+    #         current_path = path + [item.label]
+    #         flat_list.append(tuple(current_path))
+    #         if item.children:
+    #             flat_list.extend(flatten_items(item.children, current_path))
+    #     return flat_list
+
+    # # Build the menu items structure
+    # menu_items = [
+    #     sac.MenuItem('Courses', icon='box-fill', children=[
+    #         sac.MenuItem(course[0], icon='book', children=[
+    #             sac.MenuItem(lecture[0], icon='book', children=[
+    #                 sac.MenuItem('learning', icon='book'),
+    #                 sac.MenuItem('practice', icon='book')
+    #             ]) for lecture in st.session_state.lectures
+    #         ]) for course in st.session_state.courses
+    #     ]),
+    #     sac.MenuItem('log_out', icon='box')
+    # ]
+
+    # flat_list = flatten_items(menu_items)
+
+    # with st.sidebar:
+    #     selected_index = sac.menu(menu_items, return_index=True, open_all=False)
+    #     print(selected_index)
+
+    # print(flat_list[selected_index])
+    
+    # # if flat_list[selected_index] == 'Courses':
+    # #     st.session_state.selected_course = flat_list[selected_index][1]
+    # #     st.session_state.selected_module = flat_list[selected_index][2]
+    # #     st.session_state.selected_phase = flat_list[selected_index][-1]
+
+    # print(st.session_state.selected_phase)
+
     with st.sidebar:
         spacer, image_col = st.columns([0.4, 1])
         with image_col:
             render_logo()
-        st.sidebar.title("Colleges")
 
+        st.title("Navigatie")
+        st.button("Vakken", on_click=set_selected_phase, args=('courses',), use_container_width=True)
+        st.button("Colleges", on_click=set_selected_phase, args=('lectures',), use_container_width=True)
+        
+        st.title("Colleges")
+
+        # Toggle to show only questions during learning phase
         st.session_state.questions_only = st.toggle("Alleen vragen tonen")
         
         practice_exam_count = 0
@@ -1082,13 +1168,13 @@ def render_sidebar():
                 with st.expander(f"{i + 1}.{zero_width_space} " + ' '.join(module.split(' ')[1:])):
 
                     # Display buttons for the two types of phases per module
-                    render_page_button('Leren 📖', module, phase='overview')
+                    render_page_button('Leren 📖', module, phase='topics')
                     render_page_button('Herhalen 🔄', module, phase='practice')
 
             elif module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
                 practice_exam_count += 1
 
-        st.sidebar.title(st.session_state.practice_exam_name)
+        st.title(st.session_state.practice_exam_name)
         
         # Render the practice exam buttons
         for i in range(practice_exam_count):
@@ -1098,7 +1184,7 @@ def render_sidebar():
 
         render_feedback_form() # So users can give feedback
 
-        st.sidebar.subheader("Extra Info")
+        st.subheader("Extra Info")
         st.button("Uitleg mogelijkheden & limitaties LLM's", on_click=set_info_page_true, use_container_width=True, key="info_button_sidebar")
 
 
@@ -1276,14 +1362,15 @@ def initialise_data_access_layer():
 
 def determine_selected_module():
     st.session_state.selected_module = db_dal.fetch_last_module()
+    print(f'determine_selected_module sesh: {st.session_state.selected_module}')
     if st.session_state.selected_module is None:
         st.session_state.selected_module = st.session_state.modules[0]
 
-def determine_selected_phase():
-    if st.session_state.selected_module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
-        st.session_state.selected_phase = 'learning'
-    else:
-        st.session_state.selected_phase = 'overview'
+# def determine_selected_phase():
+#     if st.session_state.selected_module.startswith(st.session_state.practice_exam_name.split(' ')[0]):
+#         st.session_state.selected_phase = 'learning'
+#     else:
+#         st.session_state.selected_phase = 'topics'
 
 def initialise_session_states():
     if 'openai_model' not in st.session_state:
@@ -1449,10 +1536,9 @@ if __name__ == "__main__":
 
         if st.session_state.selected_module is None:
             determine_selected_module()
-        
+
         if st.session_state.selected_phase is None:
-            determine_selected_phase()
-        
-        # st.session_state.selected_phase = "overview"
+            st.session_state.selected_phase = db_dal.fetch_last_phase()
+
         render_sidebar()
         render_selected_page()

@@ -48,7 +48,7 @@ class ContentAccess:
         """Fetch the last segment index from db"""
         # Switch the phase from overview to learning when fetching the segment index
         phase = st.session_state.selected_phase
-        if phase == 'overview':
+        if phase == 'topics':
             phase = 'learning'
 
         user_doc = self.db.users.find_one({"username": st.session_state.username})
@@ -115,7 +115,29 @@ class ContentAccess:
         content_json_path = f"src/data/content/modules/{module}.json"
         self.segments_list = self.load_json_content(content_json_path)['segments']
         return self.segments_list
+    
+    def fetch_courses(self):
+        """
+        Determines which courses are available for this student by querying 
+        the database of the university.
+        """
+        # TODO: This is a placeholder for the actual implementation
+        return [("AI & Data Science", "Leer over de toepassing van AI in bedrijfsstrategieën en -operaties en verdiep je in de fundamenten van AI. "),
+                ("Business Analytics", "Leer hoe je data kunt analyseren en visualiseren om er waardevolle inzichten uit te halen en beslissingen te ondersteunen."),
+                ("Ethical AI", "Leer over de ethische implicaties van AI en hoe je AI-projecten kunt ontwerpen en implementeren op een ethisch verantwoorde en duurzame manier.")
+        ]
 
+    def fetch_lectures(self):
+        """
+        Determines which lectures are available for this student for the given course
+        by querying the database of the university.
+        """
+        # TODO: This is a placeholder for the actual implementation
+        return [("1_Embryonale_ontwikkeling", "De ontwikkeling van een embryo van bevruchting tot geboorte en de invloed van externe factoren."),
+                ("2_Machine_Learning", "De fundamentele principes achter machine learning en hoe je die kunt implementern om bedrijfsprocessen te verbeteren."),
+                ("3_Data_analytics", "Hoe je data kunt analyseren en visualiseren om er waardevolle inzichten uit te halen en beslissingen te ondersteunen."),
+                ("4_Data_engineering", "Hoe je data pipelines kunt bouwen om data te verzamelen en te verwerkem van verschillende bronnen op grote schaal.")]
+    
 
 class DatabaseAccess:
     def __init__(self):
@@ -188,3 +210,19 @@ class DatabaseAccess:
             {"username": st.session_state.username}, 
             {"$set": {f"progress.{module}.learning.progress_counter": empty_dict}}
         )  
+
+    def fetch_last_phase(self):
+        """
+        Fetches the phase that the user last visited, such as 'courses', 'practice' etc.
+        """
+        user_doc = self.find_user_doc()
+        return user_doc['last_phase']
+    
+    def update_last_phase(self, phase):
+        """
+        Update the last phase the user visitied, such as 'courses', 'practice' etc.
+        """
+        self.db.users.update_one(
+            {"username": st.session_state.username},
+            {"$set": {"last_phase": phase}}
+        )
