@@ -8,3 +8,4 @@ __pycache__/database.cpython-311.pyc
 .idea
 .DS_Store
 .venv/
+learnloop/learnloop.egg-info/

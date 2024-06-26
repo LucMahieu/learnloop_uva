@@ -73,9 +73,26 @@ SURFCONEXT_METADATA_URL=<learnloops-surfconext-metadata-url>
 
 Before running any of the applications in producten, ensure that all test settings in the `main.py` files are set to `False`.
 
+### Install utils
+For the three projects: teacher_app, student_app and auth_app we have shared utility function that are the same accross these three. For example open_ai wrapper calls. To install:
+
+1. Change directory to the learnloop utils:
+    
+    ```
+    cd learnloop
+    ```
+    
+2. Install:
+    
+    ```
+    pip install -e .
+    ```
+
+Now learnloop is installed as a module and you can "from learnloop import somde_module"
+
 ### Authentication app
 
-### Running without Docker
+#### Running without Docker
 
 1. Change directory to the authentication app:
     
@@ -86,17 +103,17 @@ Before running any of the applications in producten, ensure that all test settin
 2. Run `main.py`:
     
     ```
-    python src/main.py
+    python main.py
     ```
     
 
-### Running with Docker
+#### Running with Docker
 
 1. Start Docker Desktop to run the Docker daemon.
 2. Build the Docker image for the authentication app:
     
     ```
-    docker build -t auth-app .
+    docker build -t auth_app -f .\auth_app\Dockerfile . 
     ```
     
 3. Run the Docker container for the authentication app:
@@ -108,7 +125,7 @@ Before running any of the applications in producten, ensure that all test settin
 
 ### Student app
 
-### Running without Docker
+#### Running without Docker
 
 1. Change directory to the student app:
     
@@ -123,13 +140,13 @@ Before running any of the applications in producten, ensure that all test settin
     ```
     
 
-### Running with Docker
+#### Running with Docker
 
 1. Start Docker Desktop to run the Docker daemon.
 2. Build the Docker image for the student app:
     
     ```
-    docker build -t student-app .
+    docker build -t student_app -f .\student_app\Dockerfile .
     ```
     
 3. Run the Docker container for the student app:
@@ -141,7 +158,7 @@ Before running any of the applications in producten, ensure that all test settin
 
 ### Teacher app
 
-### Running without Docker
+#### Running without Docker
 
 1. Change directory to the teacher app:
     
@@ -156,13 +173,13 @@ Before running any of the applications in producten, ensure that all test settin
     ```
     
 
-### Running with Docker
+#### Running with Docker
 
 1. Start Docker Desktop to run the Docker daemon.
 2. Build the Docker image for the teacher app:
     
     ```
-    docker build -t teacher-app .
+    docker build -t teacher_app -f .\teacher_app\Dockerfile .
     ```
     
 3. Run the Docker container for the teacher app:

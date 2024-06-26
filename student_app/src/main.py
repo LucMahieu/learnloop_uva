@@ -14,7 +14,9 @@ from data.data_access_layer import DatabaseAccess, ContentAccess
 from datetime import datetime
 from _pages.lecture_overview import LectureOverview
 from _pages.courses_overview import CoursesOverview
-import streamlit_antd_components as sac
+# import streamlit_antd_components as sac
+from learnloop import question
+print(question.QuestionType.OPEN_QUESTION.value)
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
