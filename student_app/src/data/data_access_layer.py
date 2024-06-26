@@ -148,10 +148,11 @@ class DatabaseAccess:
             {"$set": {"last_module": st.session_state.selected_module}}
         )
 
-    def fetch_username_with_nonce(self):
+    def fetch_info(self):
         user_doc = self.db.users.find_one({'nonce': st.session_state.nonce})
         if user_doc is not None:
             st.session_state.username = user_doc['username']
+            st.session_state.courses = user_doc['courses']
         else:
             st.session_state.username = None
             print("No user found with the nonce.")

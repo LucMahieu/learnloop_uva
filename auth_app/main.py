@@ -76,6 +76,19 @@ def save_nonce_to_db(user_id):
     db.users.update_one({'username': user_id}, {'$set': {'nonce': nonce}})
     return nonce
 
+def get_info(user_id):
+    def fetch_info_from_UVA(user_id):
+        #TODO: make call to UVA API
+        return {
+            "user_description": "teacher",
+            "courses": ["course1", "course2", "course3"],
+        }
+    info = fetch_info_from_UVA(user_id)
+    return info
+
+def save_info_and_nonce(user_id, info, nonce):
+    global db
+    db.users.update_one({'username': user_id}, {'$set': {"user_description": info["user_description"], "courses": info["courses"], 'nonce': nonce}})
 
 @app.route('/auth')
 def authorize():
@@ -84,13 +97,25 @@ def authorize():
 
     user_id = token['userinfo']['sub']
     save_id_to_db(user_id)
-    nonce = save_nonce_to_db(user_id)
+    
+    nonce = generate_nonce(16)
+    info = get_info(user_id)
+    
+    save_info_and_nonce(user_id, info, nonce)
+    
+    # nonce = save_nonce_to_db(user_id)
 
     # Redirect to streamlit app
     if surf_test_env:
-        url = 'http://localhost:8501/'
+        if info["user_description"] == "student":
+            url = 'http://localhost:8501/'
+        elif info["user_description"] == "teacher":
+            url = 'http://localhost:8502/'
     else:
-        url = 'https://learnloop.datanose.nl/'
+        if info["user_description"] == "student":
+            url = 'https://learnloop-student.datanose.nl/'
+        elif info["user_description"] == "teacher":
+            url = 'https://learnloop.datanose.nl/'
     
     redirect_url = f'{url}app?nonce={nonce}'
 
