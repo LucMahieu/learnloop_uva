@@ -12,6 +12,8 @@ from _pages.overview_page import OverviewPage
 import utils.db_config as db_config
 from data.data_access_layer import DatabaseAccess, ContentAccess
 from datetime import datetime
+from learnloop import question
+print(question.QuestionType.OPEN_QUESTION.value)
 
 # Must be called first
 st.set_page_config(page_title="LearnLoop", layout="wide")
