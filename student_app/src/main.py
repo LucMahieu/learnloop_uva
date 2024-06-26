@@ -290,10 +290,19 @@ def change_segment_index(step_direction):
 
 def render_navigation_buttons():
     """Render the navigation buttons that allows users to move between segments."""
-    prev_col, next_col = st.columns(2)
+    prev_col, source_col, next_col = st.columns(3)
     if st.session_state.segment_index != 0:
         with prev_col:
             st.button("Vorige", on_click=change_segment_index, args=(-1,), use_container_width=True)
+    
+    with source_col:
+        with st.popover("Bron", use_container_width=True):
+            source_book = "**Boek:** " + st.session_state.segment_content.get("source_book", "")
+            st.markdown(source_book)
+            
+            source_slide = "**Side:** " + st.session_state.segment_content.get("source_slide", "")
+            st.markdown(source_slide)
+              
     with next_col:
         st.button("Volgende", on_click=change_segment_index, args=(1,), use_container_width=True)
 
